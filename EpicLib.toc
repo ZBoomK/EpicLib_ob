@@ -106,6 +106,11 @@ Extras\BoEx\RestoShaman.lua
 
 
 # Rage
+Extras\Rage\DemonHunter\Havoc.lua
+Extras\Rage\DemonHunter\Vengeance.lua
+Extras\Rage\Mage\Arcane.lua
+Extras\Rage\Mage\Fire.lua
+Extras\Rage\Mage\Frost.lua
 Extras\Rage\Paladin\Protection.lua
 Extras\Rage\Paladin\Retribution.lua
 Extras\Rage\Shaman\Elemental.lua
