@@ -1,0 +1,118 @@
+## Interface: 100107
+## Title: |cFF40E0D0Epic|r|cFF00FF00Lib|r
+## Notes: Epic Library for extra features.
+
+# EpicDBC Files
+EpicDBC_Core.lua
+DBC\Meta.lua
+DBC\ItemRange.lua
+DBC\ItemSpell.lua
+DBC\SpellAuraStat.lua
+DBC\SpellAuraStat2.lua
+DBC\SpellConduits.lua
+DBC\SpellDuration.lua
+DBC\SpellEnchants.lua
+DBC\SpellGCD.lua
+DBC\SpellMeleeRange.lua
+DBC\SpellMeleeRange2.lua
+DBC\SpellProjectileSpeed.lua
+DBC\SpellRPPM.lua
+DBC\SpellTickTime.lua
+
+Utils.lua
+# EpicCache Files
+EpicCache_Main.lua
+# EpicLib Files
+# Utils
+Utils.lua
+
+# API
+Settings.lua
+EpicLib_Core.lua
+# Classes
+Class\Main.lua
+Class\Unit\Main.lua
+Class\Unit\Power.lua
+Class\Unit\Range.lua
+Class\Unit\Cast.lua
+Class\Unit\Aura.lua
+Class\Unit\Control.lua
+Class\Unit\TimeToDie.lua
+Class\Unit\List.lua
+Class\Unit\Player\Main.lua
+Class\Unit\Player\Power.lua
+Class\Unit\Player\Aura.lua
+Class\Unit\Player\Enemies.lua
+Class\Unit\Player\Equipment.lua
+Class\Unit\Player\Stat.lua
+Class\Unit\Player\Instance.lua
+Class\Unit\Player\Tank.lua
+Class\Unit\Player\Totem.lua
+Class\Unit\Pet\Main.lua
+Class\Spell\Main.lua
+Class\Spell\Book.lua
+Class\Spell\Cooldown.lua
+Class\Item.lua
+# Events
+Events\Main.lua
+Events\Unit.lua
+Events\Player.lua
+Events\SplashEnemies.lua
+Events\Aura.lua
+Events\PMultiplier.lua
+Events\Spell.lua
+Events\Prev_Spell.lua
+Events\InFlight.lua
+Events\Action.lua
+# Misc
+Misc\ToSort.lua
+Misc\Overrides.lua
+EpicLib_Main.lua
+Class\Core.lua
+Class\Commons.lua
+
+#APLs
+Extras\APLs\Priest.lua
+Extras\APLs\Hunter.lua
+Extras\APLs\Druid.lua
+Extras\APLs\Evoker.lua
+Extras\APLs\Paladin.lua
+Extras\APLs\Shaman.lua
+Extras\APLs\Monk.lua
+Extras\APLs\Warrior.lua
+Extras\APLs\Warlock.lua
+Extras\APLs\Mage.lua
+Extras\APLs\Rogue.lua
+Extras\APLs\DemonHunter.lua
+#Extras\APLs\Deathknight.lua
+
+#PetSum
+Extras\PetSum\BeastMastery.lua
+
+# BoEx
+Extras\BoEx\Shadow.lua
+Extras\BoEx\Holy.lua
+Extras\BoEx\Discipline.lua
+Extras\BoEx\RestoDruid.lua
+Extras\BoEx\Feral.lua
+Extras\BoEx\Guardian.lua
+Extras\BoEx\Augmentation.lua
+Extras\BoEx\Devastation.lua
+Extras\BoEx\Preservation.lua
+Extras\BoEx\HolyPal.lua
+Extras\BoEx\Brewmaster.lua
+Extras\BoEx\Windwalker.lua
+Extras\BoEx\RestoShaman.lua
+
+
+# Rage
+Extras\Rage\Paladin\Protection.lua
+Extras\Rage\Paladin\Retribution.lua
+Extras\Rage\Shaman\Elemental.lua
+Extras\Rage\Shaman\Enhancement.lua
+Extras\Rage\Warrior\Arms.lua
+Extras\Rage\Warrior\Fury.lua
+Extras\Rage\Warrior\Protection.lua
+
+Main.lua
+Events.lua
