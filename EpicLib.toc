@@ -84,26 +84,21 @@ Extras\APLs\Warlock.lua
 Extras\APLs\Mage.lua
 Extras\APLs\Rogue.lua
 Extras\APLs\DemonHunter.lua
-#Extras\APLs\Deathknight.lua
+Extras\APLs\Deathknight.lua
 
 #PetSum
-Extras\PetSum\Hunter.lua
 Extras\PetSum\BeastMastery.lua
 Extras\PetSum\Marksmanship.lua
 Extras\PetSum\Survival.lua
-Extras\PetSum\DeathKnight.lua
 Extras\PetSum\Unholy.lua
 Extras\PetSum\Frost.lua
 Extras\PetSum\Blood.lua
-Extras\PetSum\Warlock.lua
 Extras\PetSum\Demonology.lua
 Extras\PetSum\Destruction.lua
 Extras\PetSum\Affliction.lua
-Extras\PetSum\Rogue.lua
 Extras\PetSum\Assassination.lua
 Extras\PetSum\Subtlety.lua
 Extras\PetSum\Outlaw.lua
-Extras\PetSum\Druid.lua
 Extras\PetSum\Balance.lua
 
 # BoEx
