@@ -1,5 +1,5 @@
 -- Generated using WoW 10.1.7.51536 client data on 2023-10-12T00:04:15.900409.
-EpicDBC.DBC..SpellAuraStat = {
+EpicDBC.DBC.SpellAuraStat = {
   [13] = false,
   [17] = false,
   [25] = false,

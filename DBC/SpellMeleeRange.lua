@@ -1,6 +1,6 @@
 -- Generated using WoW 10.1.7.51536 client data on 2023-10-12T00:04:15.900409.
 -- { [SpellID] = { [1] = IsMelee, [2] = MinRange, [3] = MaxRange } }
-EpicDBC.DBC..SpellMeleeRange = {
+EpicDBC.DBC.SpellMeleeRange = {
   [11] = { false, 0, 100 },
   [17] = { false, 0, 40 },
   [25] = { true, 0, 5 },
