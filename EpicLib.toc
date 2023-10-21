@@ -91,7 +91,7 @@ Extras\PetSum\BeastMastery.lua
 Extras\PetSum\Marksmanship.lua
 Extras\PetSum\Survival.lua
 Extras\PetSum\Unholy.lua
-Extras\PetSum\Frost.lua
+Extras\PetSum\FrostDK.lua
 Extras\PetSum\Blood.lua
 Extras\PetSum\Demonology.lua
 Extras\PetSum\Destruction.lua
