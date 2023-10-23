@@ -1,0 +1,16 @@
+## Interface: 100107
+
+## Author: Epic
+
+## DefaultState: Enabled
+## LoadOnDemand: 1
+## Dependencies: EpicLib
+
+
+
+Evoker.lua
+
+Augmentation.lua
+Devastation.lua
+Preservation.lua
+

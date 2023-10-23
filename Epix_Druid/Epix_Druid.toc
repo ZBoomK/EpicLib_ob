@@ -1,0 +1,16 @@
+## Interface: 100107
+
+## Author: Epic
+
+## DefaultState: Enabled
+## LoadOnDemand: 1
+## Dependencies: EpicLib
+
+
+Druid.lua
+
+Balance.lua
+Feral.lua
+Guardian.lua
+RestoDruid.lua
+
