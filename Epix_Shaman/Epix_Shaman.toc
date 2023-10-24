@@ -11,5 +11,5 @@ Shaman.lua
 
 Enhancement.lua
 Elemental.lua
-RestorShaman.lua
+RestoShaman.lua
 
