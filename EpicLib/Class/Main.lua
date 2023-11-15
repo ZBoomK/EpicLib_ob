@@ -81,6 +81,7 @@ do
   Unit.Player = Unit("player", true)
   Unit.Pet = Unit("pet")
   Unit.Target = Unit("target", true)
+  Unit.TargetTarget = Unit("targettarget", true)
   Unit.Focus = Unit("focus", true)
   Unit.MouseOver = Unit("mouseover")
   Unit.Vehicle = Unit("vehicle")
