@@ -75,7 +75,7 @@ do
         if #Radiuses >= 2 then tablesort(Radiuses, Utils.SortASC) end
         -- Take the closest range from the Radius and filter from it
         for _, ThisUnit in pairs(Enemies[Radiuses[1]]) do
-          if ThisUnit:IsInRange(Radius) then tableinsert(EnemiesTable, Unit) end
+          if ThisUnit:IsInRange(Radius) and ThisUnit:AffectingCombat() then tableinsert(EnemiesTable, Unit) end
         end
 
         return EnemiesTable
@@ -112,7 +112,7 @@ do
     -- Build from all the available units.
     local RangeCheck = RangeCheckByRadius[Radius]
     if not RangeCheck then
-      RangeCheck = function (ThisUnit) return ThisUnit:IsInMeleeRange(Radius) end
+      RangeCheck = function (ThisUnit) return ThisUnit:IsInMeleeRange(Radius) and ThisUnit:AffectingCombat() end
       RangeCheckByRadius[Radius] = RangeCheck
     end
     InsertAvailableUnits(EnemiesTable, RangeCheck)
@@ -140,7 +140,7 @@ do
     -- Build from all the available units.
     local RangeCheck = RangeCheckByIdentifier[Identifier]
     if not RangeCheck then
-      RangeCheck = function (ThisUnit) return ThisUnit:IsInSpellRange(ThisSpell) end
+      RangeCheck = function (ThisUnit) return ThisUnit:IsInSpellRange(ThisSpell) and ThisUnit:AffectingCombat() end
       RangeCheckByIdentifier[Identifier] = RangeCheck
     end
     InsertAvailableUnits(EnemiesTable, RangeCheck)
@@ -169,7 +169,7 @@ do
     -- Build from all the available units.
     local RangeCheck = RangeCheckByIdentifier[Identifier]
     if not RangeCheck then
-      RangeCheck = function (ThisUnit) return ThisUnit:IsItemInActionRange(ThisItem) end
+      RangeCheck = function (ThisUnit) return ThisUnit:IsItemInActionRange(ThisItem) and ThisUnit:AffectingCombat() end
       RangeCheckByIdentifier[Identifier] = RangeCheck
     end
     InsertAvailableUnits(EnemiesTable, RangeCheck)
@@ -198,7 +198,7 @@ do
     -- Build from all the available units.
     local RangeCheck = RangeCheckByIdentifier[Identifier]
     if not RangeCheck then
-      RangeCheck = function (ThisUnit) return ThisUnit:IsSpellInActionRange(ThisSpell) end
+      RangeCheck = function (ThisUnit) return ThisUnit:IsSpellInActionRange(ThisSpell) and ThisUnit:AffectingCombat() end
       RangeCheckByIdentifier[Identifier] = RangeCheck
     end
     InsertAvailableUnits(EnemiesTable, RangeCheck)
