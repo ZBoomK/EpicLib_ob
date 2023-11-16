@@ -21,7 +21,6 @@ local type = type
 local unpack = unpack
 -- WoW API
 local IsActionInRange = IsActionInRange
-local IsItemInRange = IsItemInRange
 local IsSpellInRange = IsSpellInRange
 -- File Locals
 
@@ -118,9 +117,6 @@ function Unit:IsInRange(Distance)
         end
       end
     end
-
-    IsInRange = IsItemInRange(ItemRange[Distance], self:ID())
-    UnitInfoIsInRange[Identifier] = IsInRange
   end
 
   return IsInRange
@@ -148,7 +144,7 @@ function Unit:IsInMeleeRange(Distance)
   local RangeTable = Player:CanAttack(self) and RangeTableByReaction.Hostile or RangeTableByReaction.Friendly
   local ItemRange = RangeTable.ItemRange
 
-  return IsItemInRange(ItemRange[Distance], self:ID())
+  return self:IsInRange(5)
 end
 
 -- Get if the unit is in range, distance check through IsSpellInRange (works only for targeted spells only)
