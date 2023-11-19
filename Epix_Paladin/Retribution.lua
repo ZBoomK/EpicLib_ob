@@ -1,1 +1,1 @@
-{"errors":[{"message":"Obfuscation job not found."}]}
+{"errors":[{"message":"This obfuscation job has expired, or otherwise is not available."}]}
