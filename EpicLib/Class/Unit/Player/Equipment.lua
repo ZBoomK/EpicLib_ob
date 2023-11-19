@@ -176,7 +176,7 @@ do
     end
 
     if ItemID == CustomItems.SoulIgniter:ID() then
-      return not (Player:BuffDown(CustomItemSpells.SoulIgniterBuff) and Target:IsInRange(40))
+      return not (Player:BuffDown(CustomItemSpells.SoulIgniterBuff))
     end
 
     if ItemID == CustomItems.DarkmoonDeckIndomitable:ID() then
