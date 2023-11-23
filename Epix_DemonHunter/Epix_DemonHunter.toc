@@ -1,0 +1,15 @@
+## Interface: 100200
+
+## Author: Epic
+
+## DefaultState: Enabled
+## LoadOnDemand: 1
+## Dependencies: EpicLib
+
+
+
+DemonHunter.lua
+
+Havoc.lua
+Vengeance.lua
+

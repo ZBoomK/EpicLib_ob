@@ -1,0 +1,14 @@
+## Interface: 100200
+
+## Author: Epic
+
+## DefaultState: Enabled
+## LoadOnDemand: 1
+## Dependencies: EpicLib
+
+Warrior.lua
+
+Arms.lua
+Fury.lua
+Protection.lua
+

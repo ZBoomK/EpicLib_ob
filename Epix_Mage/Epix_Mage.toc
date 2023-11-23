@@ -1,0 +1,15 @@
+## Interface: 100200
+
+## Author: Epic
+
+## DefaultState: Enabled
+## LoadOnDemand: 1
+## Dependencies: EpicLib
+
+
+
+Mage.lua
+
+Arcane.lua
+Fire.lua
+Frost.lua

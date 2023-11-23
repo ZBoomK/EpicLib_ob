@@ -1,0 +1,197 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="Frame.lua" />
+	<Frame name="FrameToggles" movable="true" clampedToScreen="true">
+		<Size x="90" y="266" />
+		<Anchors>
+			<Anchor x="14" y="-106" point="TOPLEFT" />
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Frames>
+			<Button name="ToggleButton5" inherits="UIPanelButtonTemplate" hidden="true" id="5" text="Cooldowns">
+				<Size x="83" y="25" />
+				<Anchors>
+					<Anchor x="3" y="-128" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="ToggleButton4" inherits="UIPanelButtonTemplate" hidden="true" id="4" text="Cooldowns">
+				<Size x="83" y="25" />
+				<Anchors>
+					<Anchor x="3" y="-103" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="ToggleButton6" inherits="UIPanelButtonTemplate" hidden="true" id="6" text="Cooldowns">
+				<Size x="83" y="25" />
+				<Anchors>
+					<Anchor x="3" y="-153" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="ToggleButton7" inherits="UIPanelButtonTemplate" hidden="true" id="7" text="Cooldowns">
+				<Size x="83" y="25" />
+				<Anchors>
+					<Anchor x="3" y="-178" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="ToggleButton3" inherits="UIPanelButtonTemplate" hidden="true" id="3" text="Cooldowns">
+				<Size x="83" y="25" />
+				<Anchors>
+					<Anchor x="3" y="-78" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="ToggleButton1" inherits="UIPanelButtonTemplate" hidden="true" id="1" text="Cooldowns">
+				<Size x="83" y="25" />
+				<Anchors>
+					<Anchor x="3" y="-28" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="ToggleButton2" inherits="UIPanelButtonTemplate" hidden="true" id="2" text="Cooldowns">
+				<Size x="83" y="25" />
+				<Anchors>
+					<Anchor x="3" y="-53" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad inherit="prepend">
+				self:RegisterForDrag("LeftButton")
+			</OnLoad>
+			<OnDragStart>
+				self:StartMoving()
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing()
+			</OnDragStop>
+		</Scripts>
+	</Frame>
+	<Button name="HideButton" inherits="UIPanelButtonTemplate" movable="true" clampedToScreen="true" text="ET">
+		<Size x="23" y="23" />
+		<Anchors>
+			<Anchor x="14" y="-3" point="TOPLEFT" />
+		</Anchors>
+		<Scripts>
+			<OnClick>
+				HideButton_OnClick()
+			</OnClick>
+			<OnLoad inherit="prepend">
+				self:RegisterForDrag("LeftButton")
+			</OnLoad>
+			<OnDragStart>
+				MiniButtons_OnDragStart(self, args)
+			</OnDragStart>
+			<OnDragStop>
+				MiniButtons_OnDragStop(self, args)
+			</OnDragStop>
+		</Scripts>
+	</Button>
+	<Button name="SettingsButton" inherits="UIPanelButtonTemplate" movable="true" clampedToScreen="true" text="ES">
+		<Size x="23" y="23" />
+		<Anchors>
+			<Anchor x="14" y="-32" point="TOPLEFT" />
+		</Anchors>
+		<Scripts>
+			<OnClick>
+				SettingsButton_OnClick()
+			</OnClick>
+			<OnLoad inherit="prepend">
+				self:RegisterForDrag("LeftButton")
+			</OnLoad>
+			<OnDragStart>
+				MiniButtons_OnDragStart(self, args)
+			</OnDragStart>
+			<OnDragStop>
+				MiniButtons_OnDragStop(self, args)
+			</OnDragStop>
+		</Scripts>
+	</Button>
+	<Frame name="SettingsFrame" inherits="BackdropTemplate" hidden="true">
+		<Size x="916" y="496" />
+		<Anchors>
+			<Anchor x="171" y="-97" point="TOPLEFT" />
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+			<KeyValue key="backdropBorderColor" value="EDIT_MODE_GRID_CENTER_LINE_COLOR" keyType="string" type="global" />
+			<KeyValue key="backdropColor" value="SCENARIO_STAGE_COLOR" keyType="string" type="global" />
+		</KeyValues>
+		<Frames>
+			<Frame name="SettingsFrameTabProfiles" inherits="BackdropTemplate" hidden="true">
+				<Size x="776" y="406" />
+				<Anchors>
+					<Anchor x="-10" y="10" point="BOTTOMRIGHT" />
+				</Anchors>
+			</Frame>
+			<Frame name="SettingsFrameTabs" inherits="BackdropTemplate">
+				<Size x="128" y="356" />
+				<Anchors>
+					<Anchor x="10" y="10" point="BOTTOMLEFT" />
+				</Anchors>
+				<Frames>
+					<Button name="LoadSaveButton" inherits="UIPanelButtonTemplate" text="Load/Save">
+						<Size x="62" y="25" />
+						<Anchors>
+							<Anchor y="-354" point="TOPLEFT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								LoadSaveButton_OnClick()
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="CommandsButton" inherits="UIPanelButtonTemplate" text="Button1">
+						<Size x="75" y="23" />
+						<Anchors>
+							<Anchor x="4" y="-317" point="TOPLEFT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								CommandsButton_OnClick()
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>
+			</Frame>
+			<Frame name="SettingsFrameIconHeader" inherits="BackdropTemplate">
+				<Size x="128" y="122" />
+				<Anchors>
+					<Anchor x="10" y="-10" point="TOPLEFT" />
+				</Anchors>
+			</Frame>
+		</Frames>
+	</Frame>
+</Ui>
