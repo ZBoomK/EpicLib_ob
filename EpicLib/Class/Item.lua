@@ -81,7 +81,7 @@ function Item:Exists()
   return GetItemCount(self:ID()) > 0
 end
 
--- Get wether an item is usable currently.
+-- Get wether an item is usable currently .
 function Item:IsUsable()
   return IsUsableItem(self:ID())
 end
