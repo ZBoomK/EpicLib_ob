@@ -1,5 +1,5 @@
 -- Generated using WoW 10.2.0.52129 client data on 2023-11-14T13:10:55.555801.
-HeroDBC.DBC.ItemSpell = {
+EpicDBC.DBC.ItemSpell = {
   [17] = 7,
   [117] = 433,
   [118] = 439,

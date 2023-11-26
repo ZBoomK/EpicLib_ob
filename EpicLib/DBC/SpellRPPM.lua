@@ -1,5 +1,5 @@
 -- Generated using WoW 10.2.0.52129 client data on 2023-11-14T13:10:55.555801.
-HeroDBC.DBC.SpellRPPM = {
+EpicDBC.DBC.SpellRPPM = {
   [5301] = {
     [0] = 3.0,
     [1] = true,

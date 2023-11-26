@@ -1,5 +1,5 @@
 -- Generated using WoW 10.2.0.52129 client data on 2023-11-14T13:10:55.555801.
-HeroDBC.DBC.SpellTickTime = {
+EpicDBC.DBC.SpellTickTime = {
   [17] = { 1000, true },
   [66] = { 1000, true },
   [96] = { 2000, true },

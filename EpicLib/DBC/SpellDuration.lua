@@ -1,5 +1,5 @@
 -- Generated using WoW 10.2.0.52129 client data on 2023-11-14T13:10:55.555801.
-HeroDBC.DBC.SpellDuration = {
+EpicDBC.DBC.SpellDuration = {
   [13] = {30000, 39000},
   [17] = {15000, 19500},
   [25] = {5000, 6500},
