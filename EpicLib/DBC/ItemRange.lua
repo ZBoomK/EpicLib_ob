@@ -1,5 +1,5 @@
 -- Generated using WoW 9.0.2.36710 client data on 2020-11-22T22:22:18.011209.
-EpicDBC.DBC.ItemRange = {
+HeroDBC.DBC.ItemRange = {
   Melee = {
     Hostile = {
       RangeIndex = {
