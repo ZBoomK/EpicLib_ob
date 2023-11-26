@@ -1,2 +1,2 @@
-EpicDBC.DBC.metaVersion = "10.1.5.51130"
-EpicDBC.DBC.metaTime = "2023-09-02T14:51:52.119932"
+HeroDBC.DBC.metaVersion = "10.2.0.52129"
+HeroDBC.DBC.metaTime = "2023-11-14T13:10:55.671828"
