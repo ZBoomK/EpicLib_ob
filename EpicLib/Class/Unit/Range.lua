@@ -95,6 +95,7 @@ RangeTableBySpell = {
          [8] = {
           53395,           -- Hammer of the Righteous
           96231,           -- Rebuke
+          35395,           -- Crusader Strike Holy
         },
         [10] = {
           853,             -- Hammer of Justice
@@ -117,7 +118,18 @@ RangeTableBySpell = {
         },
       },
     },
-    Friendly = {}
+    Friendly = {
+      RangeIndex = {
+        40
+      },
+      SpellRange = {
+       [40] = {
+         20473,           -- Holy Shock
+         4987,            -- Cleanse
+         82326,            -- Holy Light
+       },
+     },
+    }
   },
   HUNTER = {
     Hostile = {
@@ -189,16 +201,36 @@ RangeTableBySpell = {
   PRIEST = {
     Hostile = {
       RangeIndex = {
-        40
+        30, 40
       },
       SpellRange = {
+        [30] = {
+          528,             -- Dispel Magic
+          205364,            -- Dominate Mind
+          605,            -- Mind Control
+        },
         [40] = {
           589,             -- Shadow Word: Pain
           8092,            -- Mind Blast
         },
       },
     },
-    Friendly = {}
+    Friendly = {
+      RangeIndex = {
+        30, 40
+      },
+      SpellRange = {
+        [30] = {
+          1706,             -- Levitate
+        },
+        [40] = {
+          139,             -- Renew
+          2061,             -- Flash Heal
+          10060,            -- Power Infusion
+          17,            -- Power Word Shield
+        },
+      },
+    }
   },
   DEATHKNIGHT = {
     Hostile = {
@@ -247,7 +279,17 @@ RangeTableBySpell = {
         },
       },
     },
-    Friendly = {}
+    Friendly = {
+      RangeIndex = {
+        40
+      },
+      SpellRange = {
+        [40] = {
+          61295,          -- Riptide
+          77130,          -- Purify Spirit
+        },
+      },
+    }
   },
   MAGE = {
     Hostile = {
@@ -351,7 +393,22 @@ RangeTableBySpell = {
         },
       },
     },
-    Friendly = {}
+    Friendly = {
+      RangeIndex = {
+        40
+      },
+      SpellRange = {
+    
+        [40] = {
+          88423,            -- Nature Cure
+          391888,            -- Adaptive Swarm
+          102342,          -- Ironbark
+          102351,          -- Cenarion Ward
+          8936,          -- Regrowth
+          774,          -- Rejuvenation
+        },
+      },
+    }
   },
   DEMONHUNTER = {
     Hostile = {
@@ -396,11 +453,22 @@ RangeTableBySpell = {
     },
     Friendly = {
       RangeIndex = {
-        25
+        25, 30
       },
       SpellRange = {
         [25] = {
           361469,                                   -- Living Flame
+          365585,                                   -- Expunge
+          409311,                                   -- Prescience
+          360995,                                   -- Verdant Embrace
+          355913,                                   -- Emerald Blossom
+        },
+        [30] = {
+          361469,                                   -- Living Flame
+          365585,                                   -- Expunge
+          409311,                                   -- Prescience
+          360995,                                   -- Verdant Embrace
+          355913,                                   -- Emerald Blossom
         },
       },
     },
