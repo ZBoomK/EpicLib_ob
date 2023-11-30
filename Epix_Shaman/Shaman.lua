@@ -24,7 +24,7 @@ local Macro      = ER.Macro
 -- Spells
 if not Spell.Shaman then Spell.Shaman = {} end
 Spell.Shaman.Commons = {
-  -- Racials
+  -- Racialstest
   AncestralCall                         = Spell(274738, nil, 1),
   BagofTricks                           = Spell(312411, nil, 2),
   Berserking                            = Spell(26297, nil, 3),
