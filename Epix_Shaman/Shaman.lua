@@ -21,7 +21,7 @@ local Macro      = ER.Macro
 
 --- ============================ CONTENT ============================
 
--- Spells
+-- Spells ok
 if not Spell.Shaman then Spell.Shaman = {} end
 Spell.Shaman.Commons = {
   -- Racialstest
