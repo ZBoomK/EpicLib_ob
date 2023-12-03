@@ -1,4 +1,4 @@
--- Generated using WoW 10.2.0.52129 client data on 2023-11-14T13:10:55.555801.
+-- Generated using WoW 10.2.0.52301 client data on 2023-12-02T16:17:00.682143.
 EpicDBC.DBC.SpellConduits = {
   [5] = 334993,
   [7] = 335010,

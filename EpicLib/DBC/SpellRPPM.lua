@@ -1,4 +1,4 @@
--- Generated using WoW 10.2.0.52129 client data on 2023-11-14T13:10:55.555801.
+-- Generated using WoW 10.2.0.52301 client data on 2023-12-02T16:17:00.682143.
 EpicDBC.DBC.SpellRPPM = {
   [5301] = {
     [0] = 3.0,
@@ -5647,7 +5647,7 @@ EpicDBC.DBC.SpellRPPM = {
     [0] = 2.0,
   },
   [422891] = {
-    [0] = 1.5,
+    [0] = 2.5,
     [1] = true,
   },
   [422923] = {
@@ -5655,7 +5655,7 @@ EpicDBC.DBC.SpellRPPM = {
     [1] = true,
   },
   [423124] = {
-    [0] = 1.0,
+    [0] = 1.5,
     [1] = true,
   },
   [423880] = {
