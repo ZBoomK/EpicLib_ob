@@ -1,50 +1,50 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 0;
+	local v5 = 1619 - (1427 + 192);
 	local v6;
 	while true do
-		if ((3126 == 3126) and (v5 == 0)) then
+		if ((v5 == (0 + 0)) or ((5499 - 3130) == (383 + 43))) then
 			v6 = v0[v4];
-			if (not v6 or (2187 >= 4954)) then
+			if (not v6 or ((1394 + 1682) > (3509 - (192 + 134)))) then
 				return v1(v4, ...);
 			end
-			v5 = 1;
+			v5 = 1277 - (316 + 960);
 		end
-		if ((v5 == 1) or (3877 == 3575)) then
+		if (((669 + 533) > (817 + 241)) and (v5 == (1 + 0))) then
 			return v6(...);
 		end
 	end
 end
 v0["Epix_DemonHunter_Vengeance.lua"] = function(...)
 	local v7, v8 = ...;
-	local v9 = EpicDBC['DBC'];
+	local v9 = EpicDBC.DBC;
 	local v10 = EpicLib;
 	local v11 = EpicCache;
-	local v12 = v10['Utils'];
-	local v13 = v10['Unit'];
-	local v14 = v13['Player'];
-	local v15 = v13['Target'];
-	local v16 = v13['MouseOver'];
-	local v17 = v13['Pet'];
-	local v18 = v10['Spell'];
-	local v19 = v10['Item'];
+	local v12 = v10.Utils;
+	local v13 = v10.Unit;
+	local v14 = v13.Player;
+	local v15 = v13.Target;
+	local v16 = v13.MouseOver;
+	local v17 = v13.Pet;
+	local v18 = v10.Spell;
+	local v19 = v10.Item;
 	local v20 = EpicLib;
-	local v21 = v20['Bind'];
-	local v22 = v20['Cast'];
-	local v23 = v20['CastSuggested'];
-	local v24 = v20['CastAnnotated'];
-	local v25 = v20['Press'];
-	local v26 = v20['Macro'];
-	local v27 = v20['Commons']['Everyone'];
-	local v28 = v10['Utils']['MergeTableByKey'];
-	local v29 = v27['num'];
-	local v30 = v27['bool'];
+	local v21 = v20.Bind;
+	local v22 = v20.Cast;
+	local v23 = v20.CastSuggested;
+	local v24 = v20.CastAnnotated;
+	local v25 = v20.Press;
+	local v26 = v20.Macro;
+	local v27 = v20.Commons.Everyone;
+	local v28 = v10.Utils.MergeTableByKey;
+	local v29 = v27.num;
+	local v30 = v27.bool;
 	local v31 = GetTime;
-	local v32 = math['max'];
-	local v33 = math['ceil'];
-	local v34 = math['min'];
-	local v35 = 5;
+	local v32 = math.max;
+	local v33 = math.ceil;
+	local v34 = math.min;
+	local v35 = 18 - 13;
 	local v36;
 	local v37 = false;
 	local v38 = false;
@@ -99,1098 +99,895 @@ v0["Epix_DemonHunter_Vengeance.lua"] = function(...)
 	local v87;
 	local v88;
 	local v89;
-	local v90 = v18['DemonHunter']['Vengeance'];
-	local v91 = v19['DemonHunter']['Vengeance'];
-	local v92 = v26['DemonHunter']['Vengeance'];
+	local v90 = v18.DemonHunter.Vengeance;
+	local v91 = v19.DemonHunter.Vengeance;
+	local v92 = v26.DemonHunter.Vengeance;
 	local v93 = {};
 	local v94, v95;
-	local v96 = 0;
+	local v96 = 551 - (83 + 468);
 	local v97, v98;
 	local v99;
 	local v100;
 	local v101;
 	local v102;
 	local v103 = true;
-	local v104 = 11111;
-	local v105 = 11111;
-	local v106 = {169421,169425,168932,169426,169429,169428,169430};
+	local v104 = 12917 - (1202 + 604);
+	local v105 = 51868 - 40757;
+	local v106 = {(469082 - 299661),(163528 + 5897),(61684 + 107248),(29801 + 139625),(171340 - (340 + 1571)),(171200 - (1733 + 39)),(170464 - (125 + 909))};
 	v10:RegisterForEvent(function()
-		local v124 = 0;
+		local v124 = 1948 - (1096 + 852);
 		while true do
-			if ((707 > 632) and (v124 == 0)) then
-				v104 = 11111;
-				v105 = 11111;
+			if (((1665 + 2046) > (4790 - 1435)) and (v124 == (0 + 0))) then
+				v104 = 11623 - (409 + 103);
+				v105 = 11347 - (46 + 190);
 				break;
 			end
 		end
 	end, "PLAYER_REGEN_ENABLED");
 	local function v107()
-		local v125 = 0;
+		local v125 = 95 - (51 + 44);
 		while true do
-			if ((v125 == 1) or (546 >= 2684)) then
-				if ((1465 <= 4301) and (v96 == 0)) then
-					local v187 = 0;
-					local v188;
+			if (((1 + 0) == v125) or ((2223 - (1114 + 203)) >= (2955 - (228 + 498)))) then
+				if (((280 + 1008) > (692 + 559)) and (v96 == (663 - (174 + 489)))) then
+					local v183 = 0 - 0;
+					local v184;
 					while true do
-						if ((1704 > 1425) and (v187 == 0)) then
-							v188 = ((v14:BuffUp(v90.MetamorphosisBuff)) and 1) or 0;
-							if ((v90['SoulCarver']:IsAvailable() and (v90['SoulCarver']:TimeSinceLastCast() < v14:GCD()) and (v90['SoulCarver']['LastCastTime'] ~= v95)) or (687 == 4234)) then
-								local v201 = 0;
+						if ((v183 == (1905 - (830 + 1075))) or ((5037 - (303 + 221)) < (4621 - (231 + 1038)))) then
+							v184 = ((v14:BuffUp(v90.MetamorphosisBuff)) and (1 + 0)) or (1162 - (171 + 991));
+							if ((v90.SoulCarver:IsAvailable() and (v90.SoulCarver:TimeSinceLastCast() < v14:GCD()) and (v90.SoulCarver.LastCastTime ~= v95)) or ((8510 - 6445) >= (8581 - 5385))) then
+								local v198 = 0 - 0;
 								while true do
-									if ((0 == v201) or (3330 < 1429)) then
-										v96 = v34(v94 + 2, 5);
-										v95 = v90['SoulCarver']['LastCastTime'];
+									if ((v198 == (0 + 0)) or ((15339 - 10963) <= (4272 - 2791))) then
+										v96 = v34(v94 + (2 - 0), 15 - 10);
+										v95 = v90.SoulCarver.LastCastTime;
 										break;
 									end
 								end
-							elseif ((1147 >= 335) and v90['Fracture']:IsAvailable() and (v90['Fracture']:TimeSinceLastCast() < v14:GCD()) and (v90['Fracture']['LastCastTime'] ~= v95)) then
-								local v213 = 0;
+							elseif ((v90.Fracture:IsAvailable() and (v90.Fracture:TimeSinceLastCast() < v14:GCD()) and (v90.Fracture.LastCastTime ~= v95)) or ((4640 - (111 + 1137)) >= (4899 - (91 + 67)))) then
+								local v199 = 0 - 0;
 								while true do
-									if ((3435 > 2097) and (0 == v213)) then
-										v96 = v34(v94 + 2 + v188, 5);
-										v95 = v90['Fracture']['LastCastTime'];
+									if (((830 + 2495) >= (2677 - (423 + 100))) and ((0 + 0) == v199)) then
+										v96 = v34(v94 + (5 - 3) + v184, 3 + 2);
+										v95 = v90.Fracture.LastCastTime;
 										break;
 									end
 								end
-							elseif (((v90['Shear']:TimeSinceLastCast() < v14:GCD()) and (v90['Fracture']['Shear'] ~= v95)) or (3770 >= 4041)) then
-								local v216 = 0;
+							elseif (((v90.Shear:TimeSinceLastCast() < v14:GCD()) and (v90.Fracture.Shear ~= v95)) or ((2066 - (326 + 445)) >= (14108 - 10875))) then
+								local v201 = 0 - 0;
 								while true do
-									if ((v216 == 0) or (3791 <= 1611)) then
-										v96 = v34(v94 + 1 + v188, 5);
-										v95 = v90['Shear']['LastCastTime'];
+									if (((10216 - 5839) > (2353 - (530 + 181))) and ((881 - (614 + 267)) == v201)) then
+										v96 = v34(v94 + (33 - (19 + 13)) + v184, 7 - 2);
+										v95 = v90.Shear.LastCastTime;
 										break;
 									end
 								end
-							elseif (v90['SoulSigils']:IsAvailable() or (4578 <= 2008)) then
-								local v218 = 0;
-								local v219;
-								local v220;
+							elseif (((11005 - 6282) > (3873 - 2517)) and v90.SoulSigils:IsAvailable()) then
+								local v203 = 0 + 0;
+								local v204;
+								local v205;
 								while true do
-									if ((1125 <= 2076) and (v218 == 1)) then
-										if ((v90['ElysianDecree']:IsAvailable() and (v219 == v90['ElysianDecree']['LastCastTime']) and (v220 < v14:GCD()) and (v219 ~= v95)) or (743 >= 4399)) then
-											local v226 = 0;
-											local v227;
+									if ((v203 == (0 - 0)) or ((8577 - 4441) <= (5245 - (1293 + 519)))) then
+										v204 = v32(v90.SigilOfFlame.LastCastTime, v90.SigilOfSilence.LastCastTime, v90.SigilOfChains.LastCastTime, v90.ElysianDecree.LastCastTime);
+										v205 = v34(v90.SigilOfFlame:TimeSinceLastCast(), v90.SigilOfSilence:TimeSinceLastCast(), v90.SigilOfChains:TimeSinceLastCast(), v90.ElysianDecree:TimeSinceLastCast());
+										v203 = 1 - 0;
+									end
+									if (((11083 - 6838) <= (8855 - 4224)) and (v203 == (4 - 3))) then
+										if (((10072 - 5796) >= (2074 + 1840)) and v90.ElysianDecree:IsAvailable() and (v204 == v90.ElysianDecree.LastCastTime) and (v205 < v14:GCD()) and (v204 ~= v95)) then
+											local v211 = v34(v102, 1 + 2);
+											v96 = v34(v94 + v211, 11 - 6);
+											v95 = v204;
+										elseif (((46 + 152) <= (1451 + 2914)) and (v205 < v14:GCD()) and (v204 ~= v95)) then
+											local v212 = 0 + 0;
 											while true do
-												if ((1155 < 1673) and (v226 == 0)) then
-													v227 = v34(v102, 3);
-													v96 = v34(v94 + v227, 5);
-													v226 = 1;
-												end
-												if ((v226 == 1) or (2324 <= 578)) then
-													v95 = v219;
-													break;
-												end
-											end
-										elseif ((3767 == 3767) and (v220 < v14:GCD()) and (v219 ~= v95)) then
-											local v229 = 0;
-											while true do
-												if ((4089 == 4089) and (v229 == 0)) then
-													v96 = v34(v94 + 1, 5);
-													v95 = v219;
+												if (((5878 - (709 + 387)) > (6534 - (673 + 1185))) and ((0 - 0) == v212)) then
+													v96 = v34(v94 + (3 - 2), 8 - 3);
+													v95 = v204;
 													break;
 												end
 											end
 										end
 										break;
 									end
-									if ((4458 >= 1674) and (0 == v218)) then
-										v219 = v32(v90['SigilOfFlame'].LastCastTime, v90['SigilOfSilence'].LastCastTime, v90['SigilOfChains'].LastCastTime, v90['ElysianDecree'].LastCastTime);
-										v220 = v34(v90['SigilOfFlame']:TimeSinceLastCast(), v90['SigilOfSilence']:TimeSinceLastCast(), v90['SigilOfChains']:TimeSinceLastCast(), v90['ElysianDecree']:TimeSinceLastCast());
-										v218 = 1;
-									end
 								end
-							elseif ((972 <= 1418) and v90['Fallout']:IsAvailable() and (v90['ImmolationAura']:TimeSinceLastCast() < v14:GCD()) and (v90['ImmolationAura']['LastCastTime'] ~= v95)) then
-								local v222 = 0;
-								local v223;
-								while true do
-									if ((v222 == 0) or (4938 < 4762)) then
-										v223 = 0.6 * v34(v102, 5);
-										v96 = v34(v94 + v223, 5);
-										v222 = 1;
-									end
-									if ((v222 == 1) or (2504 > 4264)) then
-										v95 = v90['ImmolationAura']['LastCastTime'];
-										break;
-									end
-								end
-							elseif ((2153 == 2153) and v90['BulkExtraction']:IsAvailable() and (v90['BulkExtraction']:TimeSinceLastCast() < v14:GCD()) and (v90['BulkExtraction']['LastCastTime'] ~= v95)) then
-								local v224 = 0;
-								local v225;
-								while true do
-									if ((v224 == 1) or (507 >= 2591)) then
-										v95 = v90['BulkExtraction']['LastCastTime'];
-										break;
-									end
-									if ((4481 == 4481) and (v224 == 0)) then
-										v225 = v34(v102, 5);
-										v96 = v34(v94 + v225, 5);
-										v224 = 1;
-									end
-								end
+							elseif (((3480 + 1384) > (1642 + 555)) and v90.Fallout:IsAvailable() and (v90.ImmolationAura:TimeSinceLastCast() < v14:GCD()) and (v90.ImmolationAura.LastCastTime ~= v95)) then
+								local v207 = (0.6 - 0) * v34(v102, 2 + 3);
+								v96 = v34(v94 + v207, 9 - 4);
+								v95 = v90.ImmolationAura.LastCastTime;
+							elseif ((v90.BulkExtraction:IsAvailable() and (v90.BulkExtraction:TimeSinceLastCast() < v14:GCD()) and (v90.BulkExtraction.LastCastTime ~= v95)) or ((7263 - 3563) == (4387 - (446 + 1434)))) then
+								local v209 = v34(v102, 1288 - (1040 + 243));
+								v96 = v34(v94 + v209, 14 - 9);
+								v95 = v90.BulkExtraction.LastCastTime;
 							end
 							break;
 						end
 					end
 				else
-					local v189 = 0;
-					local v190;
-					local v191;
-					while true do
-						if ((v189 == 1) or (2328 < 693)) then
-							if ((4328 == 4328) and v90['SoulSigils']:IsAvailable()) then
-								local v202 = 0;
-								while true do
-									if ((1588 >= 1332) and (v202 == 1)) then
-										v28(v191, v90.SigilOfChains);
-										v28(v191, v90.ElysianDecree);
-										break;
-									end
-									if ((v202 == 0) or (4174 > 4248)) then
-										v28(v191, v90.SigilOfFlame);
-										v28(v191, v90.SigilOfSilence);
-										v202 = 1;
-									end
-								end
+					local v185 = v14:PrevGCD(1848 - (559 + 1288));
+					local v186 = {v90.SoulCarver,v90.Fracture,v90.Shear,v90.BulkExtraction};
+					if (((22282 - 17808) >= (11 + 263)) and v90.SoulSigils:IsAvailable()) then
+						local v189 = 0 - 0;
+						while true do
+							if ((v189 == (0 + 0)) or ((830 + 1064) <= (4172 - 2766))) then
+								v28(v186, v90.SigilOfFlame);
+								v28(v186, v90.SigilOfSilence);
+								v189 = 1 + 0;
 							end
-							if (v90['Fallout']:IsAvailable() or (4586 <= 82)) then
-								v28(v191, v90.ImmolationAura);
+							if (((2890 - 1318) >= (1013 + 518)) and (v189 == (1 + 0))) then
+								v28(v186, v90.SigilOfChains);
+								v28(v186, v90.ElysianDecree);
+								break;
 							end
-							v189 = 2;
 						end
-						if ((3863 == 3863) and (v189 == 2)) then
-							for v199, v200 in pairs(v191) do
-								if (((v190 == v200:ID()) and (v200:TimeSinceLastCast() >= v14:GCD())) or (282 <= 42)) then
-									v96 = 0;
-									break;
-								end
-							end
+					end
+					if (v90.Fallout:IsAvailable() or ((3368 + 1319) < (3814 + 728))) then
+						v28(v186, v90.ImmolationAura);
+					end
+					for v187, v188 in pairs(v186) do
+						if (((3220 + 71) > (2100 - (153 + 280))) and (v185 == v188:ID()) and (v188:TimeSinceLastCast() >= v14:GCD())) then
+							v96 = 0 - 0;
 							break;
-						end
-						if ((4609 >= 766) and (v189 == 0)) then
-							v190 = v14:PrevGCD(1);
-							v191 = {v90['SoulCarver'],v90['Fracture'],v90['Shear'],v90['BulkExtraction']};
-							v189 = 1;
 						end
 					end
 				end
-				if ((v96 > v94) or (1152 == 2488)) then
+				if ((v96 > v94) or ((784 + 89) == (804 + 1230))) then
 					v94 = v96;
-				elseif ((3422 > 3350) and (v96 > 0)) then
-					v96 = 0;
+				elseif ((v96 > (0 + 0)) or ((2556 + 260) < (8 + 3))) then
+					v96 = 0 - 0;
 				end
 				break;
 			end
-			if ((877 > 376) and (v125 == 0)) then
+			if (((2287 + 1412) < (5373 - (89 + 578))) and (v125 == (0 + 0))) then
 				v94 = v14:BuffStack(v90.SoulFragments);
-				if ((v90['SpiritBomb']:TimeSinceLastCast() < v14:GCD()) or (3118 <= 1851)) then
-					v96 = 0;
+				if (((5500 - 2854) >= (1925 - (572 + 477))) and (v90.SpiritBomb:TimeSinceLastCast() < v14:GCD())) then
+					v96 = 0 + 0;
 				end
-				v125 = 1;
+				v125 = 1 + 0;
 			end
 		end
 	end
 	local function v108()
-		local v126 = 0;
-		while true do
-			if ((v126 == 0) or (165 >= 3492)) then
-				if ((3949 < 4856) and ((v90['Felblade']:TimeSinceLastCast() < v14:GCD()) or (v90['InfernalStrike']:TimeSinceLastCast() < v14:GCD()))) then
-					local v192 = 0;
-					while true do
-						if ((v192 == 0) or (4276 < 3016)) then
-							v97 = true;
-							v98 = true;
-							v192 = 1;
-						end
-						if ((4690 > 4125) and (v192 == 1)) then
-							return;
-						end
-					end
+		if (((74 + 540) <= (3270 - (84 + 2))) and ((v90.Felblade:TimeSinceLastCast() < v14:GCD()) or (v90.InfernalStrike:TimeSinceLastCast() < v14:GCD()))) then
+			local v167 = 0 - 0;
+			while true do
+				if (((2253 + 873) == (3968 - (497 + 345))) and (v167 == (1 + 0))) then
+					return;
 				end
-				v97 = v15:IsInMeleeRange(5);
-				v126 = 1;
-			end
-			if ((v126 == 1) or (50 >= 896)) then
-				v98 = v97 or (v102 > 0);
-				break;
+				if (((0 + 0) == v167) or ((3520 - (605 + 728)) >= (3535 + 1419))) then
+					v97 = true;
+					v98 = true;
+					v167 = 1 - 0;
+				end
 			end
 		end
+		v97 = v15:IsInMeleeRange(1 + 4);
+		v98 = v97 or (v102 > (0 - 0));
 	end
-	local function v109(v127)
-		return (v127:DebuffRemains(v90.FieryBrandDebuff));
+	local function v109(v126)
+		return (v126:DebuffRemains(v90.FieryBrandDebuff));
 	end
-	local function v110(v128)
-		return (v128:DebuffUp(v90.FieryBrandDebuff));
+	local function v110(v127)
+		return (v127:DebuffUp(v90.FieryBrandDebuff));
 	end
 	local function v111()
-		local v129 = 0;
-		while true do
-			if ((v129 == 0) or (1714 >= 2958)) then
-				v36 = v27.HandleTopTrinket(v93, v39, 40, nil);
-				if (v36 or (1491 < 644)) then
-					return v36;
-				end
-				v129 = 1;
-			end
-			if ((704 < 987) and (v129 == 1)) then
-				v36 = v27.HandleBottomTrinket(v93, v39, 40, nil);
-				if ((3718 > 1906) and v36) then
-					return v36;
-				end
-				break;
-			end
+		v36 = v27.HandleTopTrinket(v93, v39, 37 + 3, nil);
+		if (v36 or ((10741 - 6864) == (2700 + 875))) then
+			return v36;
+		end
+		v36 = v27.HandleBottomTrinket(v93, v39, 529 - (457 + 32), nil);
+		if (((300 + 407) > (2034 - (832 + 570))) and v36) then
+			return v36;
 		end
 	end
 	local function v112()
-		local v130 = 0;
-		while true do
-			if ((v130 == 1) or (958 > 3635)) then
-				if ((3501 <= 4492) and v90['InfernalStrike']:IsCastable() and v45) then
-					if (v25(v92.InfernalStrikePlayer, not v15:IsInMeleeRange(v35)) or (3442 < 2548)) then
-						return "infernal_strike precombat 6";
-					end
+		if ((v47 and not v14:IsMoving() and v90.SigilOfFlame:IsCastable()) or ((515 + 31) >= (700 + 1984))) then
+			if (((5184 - 3719) <= (2072 + 2229)) and ((v87 == "player") or v90.ConcentratedSigils:IsAvailable())) then
+				if (((2500 - (588 + 208)) > (3840 - 2415)) and v25(v92.SigilOfFlamePlayer, not v15:IsInMeleeRange(v35))) then
+					return "sigil_of_flame precombat 2";
 				end
-				if ((2875 >= 1464) and v90['Fracture']:IsCastable() and v43 and v97) then
-					if (v25(v90.Fracture) or (4797 >= 4893)) then
-						return "fracture precombat 8";
-					end
+			elseif ((v87 == "cursor") or ((2487 - (884 + 916)) == (8863 - 4629))) then
+				if (v25(v92.SigilOfFlameCursor, not v15:IsInRange(18 + 12)) or ((3983 - (232 + 421)) < (3318 - (1569 + 320)))) then
+					return "sigil_of_flame precombat 2";
 				end
-				v130 = 2;
 			end
-			if ((2 == v130) or (551 > 2068)) then
-				if ((2114 > 944) and v90['Shear']:IsCastable() and v46 and v97) then
-					if (v25(v90.Shear) or (2262 >= 3096)) then
-						return "shear precombat 10";
-					end
-				end
-				break;
+		end
+		if (((282 + 865) >= (64 + 271)) and v90.ImmolationAura:IsCastable() and v44) then
+			if (((11575 - 8140) > (2702 - (316 + 289))) and v25(v90.ImmolationAura, not v15:IsInMeleeRange(v35))) then
+				return "immolation_aura precombat 4";
 			end
-			if ((v130 == 0) or (2255 >= 3537)) then
-				if ((v47 and not v14:IsMoving() and v90['SigilOfFlame']:IsCastable()) or (3837 < 1306)) then
-					if ((2950 == 2950) and ((v87 == "player") or v90['ConcentratedSigils']:IsAvailable())) then
-						if (v25(v92.SigilOfFlamePlayer, not v15:IsInMeleeRange(v35)) or (4723 < 3298)) then
-							return "sigil_of_flame precombat 2";
-						end
-					elseif ((1136 >= 154) and (v87 == "cursor")) then
-						if (v25(v92.SigilOfFlameCursor, not v15:IsInRange(30)) or (271 > 4748)) then
-							return "sigil_of_flame precombat 2";
-						end
-					end
-				end
-				if ((4740 >= 3152) and v90['ImmolationAura']:IsCastable() and v44) then
-					if (v25(v90.ImmolationAura, not v15:IsInMeleeRange(v35)) or (2578 >= 3390)) then
-						return "immolation_aura precombat 4";
-					end
-				end
-				v130 = 1;
+		end
+		if ((v90.InfernalStrike:IsCastable() and v45) or ((9868 - 6098) >= (187 + 3854))) then
+			if (v25(v92.InfernalStrikePlayer, not v15:IsInMeleeRange(v35)) or ((5244 - (666 + 787)) <= (2036 - (360 + 65)))) then
+				return "infernal_strike precombat 6";
+			end
+		end
+		if ((v90.Fracture:IsCastable() and v43 and v97) or ((4279 + 299) <= (2262 - (79 + 175)))) then
+			if (((1773 - 648) <= (1620 + 456)) and v25(v90.Fracture)) then
+				return "fracture precombat 8";
+			end
+		end
+		if ((v90.Shear:IsCastable() and v46 and v97) or ((2277 - 1534) >= (8471 - 4072))) then
+			if (((2054 - (503 + 396)) < (1854 - (92 + 89))) and v25(v90.Shear)) then
+				return "shear precombat 10";
 			end
 		end
 	end
 	local function v113()
-		local v131 = 0;
-		while true do
-			if ((41 <= 1661) and (v131 == 1)) then
-				if ((601 < 3560) and v90['FieryBrand']:IsCastable() and v67 and (v99 or (v14:HealthPercentage() <= v70))) then
-					if ((235 < 687) and v25(v90.FieryBrand, not v15:IsSpellInRange(v90.FieryBrand))) then
-						return "fiery_brand defensives";
-					end
+		if ((v90.DemonSpikes:IsCastable() and v66 and v14:BuffDown(v90.DemonSpikesBuff) and v14:BuffDown(v90.MetamorphosisBuff) and (((v102 == (1 - 0)) and v14:BuffDown(v90.FieryBrandDebuff)) or (v102 > (1 + 0)))) or ((1376 + 948) <= (2263 - 1685))) then
+			if (((516 + 3251) == (8589 - 4822)) and (v90.DemonSpikes:ChargesFractional() > (1.9 + 0))) then
+				if (((1954 + 2135) == (12453 - 8364)) and v25(v90.DemonSpikes)) then
+					return "demon_spikes defensives (Capped)";
 				end
-				if ((4549 > 1153) and v91['Healthstone']:IsReady() and v83 and (v14:HealthPercentage() <= v85)) then
-					if (v25(v92.Healthstone) or (4674 < 4672)) then
-						return "healthstone defensive";
-					end
+			elseif (((557 + 3901) >= (2552 - 878)) and (v99 or (v14:HealthPercentage() <= v69))) then
+				if (((2216 - (485 + 759)) <= (3280 - 1862)) and v25(v90.DemonSpikes)) then
+					return "demon_spikes defensives (Danger)";
 				end
-				v131 = 2;
 			end
-			if ((3668 < 4561) and (0 == v131)) then
-				if ((v90['DemonSpikes']:IsCastable() and v66 and v14:BuffDown(v90.DemonSpikesBuff) and v14:BuffDown(v90.MetamorphosisBuff) and (((v102 == 1) and v14:BuffDown(v90.FieryBrandDebuff)) or (v102 > 1))) or (455 == 3605)) then
-					if ((v90['DemonSpikes']:ChargesFractional() > 1.9) or (2663 == 3312)) then
-						if ((4277 <= 4475) and v25(v90.DemonSpikes)) then
-							return "demon_spikes defensives (Capped)";
-						end
-					elseif (v99 or (v14:HealthPercentage() <= v69) or (870 == 1189)) then
-						if ((1553 <= 3133) and v25(v90.DemonSpikes)) then
-							return "demon_spikes defensives (Danger)";
-						end
-					end
-				end
-				if ((v90['Metamorphosis']:IsCastable() and v68 and (v14:HealthPercentage() <= v71) and (v14:BuffDown(v90.MetamorphosisBuff) or (v15:TimeToDie() < 15))) or (2237 >= 3511)) then
-					if (v25(v92.MetamorphosisPlayer) or (1324 > 3020)) then
-						return "metamorphosis defensives";
-					end
-				end
-				v131 = 1;
+		end
+		if ((v90.Metamorphosis:IsCastable() and v68 and (v14:HealthPercentage() <= v71) and (v14:BuffDown(v90.MetamorphosisBuff) or (v15:TimeToDie() < (1204 - (442 + 747))))) or ((6073 - (832 + 303)) < (5708 - (88 + 858)))) then
+			if (v25(v92.MetamorphosisPlayer) or ((764 + 1740) > (3529 + 735))) then
+				return "metamorphosis defensives";
 			end
-			if ((v131 == 2) or (2992 == 1881)) then
-				if ((3106 > 1526) and v82 and (v14:HealthPercentage() <= v84)) then
-					local v193 = 0;
-					while true do
-						if ((3023 < 3870) and (v193 == 0)) then
-							if ((143 > 74) and (v86 == "Refreshing Healing Potion")) then
-								if ((18 < 2112) and v91['RefreshingHealingPotion']:IsReady()) then
-									if ((1097 <= 1628) and v25(v92.RefreshingHealingPotion)) then
-										return "refreshing healing potion defensive";
-									end
-								end
+		end
+		if (((89 + 2064) == (2942 - (766 + 23))) and v90.FieryBrand:IsCastable() and v67 and (v99 or (v14:HealthPercentage() <= v70))) then
+			if (v25(v90.FieryBrand, not v15:IsSpellInRange(v90.FieryBrand)) or ((2502 - 1995) >= (3543 - 952))) then
+				return "fiery_brand defensives";
+			end
+		end
+		if (((11805 - 7324) == (15208 - 10727)) and v91.Healthstone:IsReady() and v83 and (v14:HealthPercentage() <= v85)) then
+			if (v25(v92.Healthstone) or ((3401 - (1036 + 37)) < (492 + 201))) then
+				return "healthstone defensive";
+			end
+		end
+		if (((8427 - 4099) == (3405 + 923)) and v82 and (v14:HealthPercentage() <= v84)) then
+			local v168 = 1480 - (641 + 839);
+			while true do
+				if (((2501 - (910 + 3)) >= (3395 - 2063)) and (v168 == (1684 - (1466 + 218)))) then
+					if ((v86 == "Refreshing Healing Potion") or ((1919 + 2255) > (5396 - (556 + 592)))) then
+						if (v91.RefreshingHealingPotion:IsReady() or ((1631 + 2955) <= (890 - (329 + 479)))) then
+							if (((4717 - (174 + 680)) == (13273 - 9410)) and v25(v92.RefreshingHealingPotion)) then
+								return "refreshing healing potion defensive";
 							end
-							if ((4630 == 4630) and (v86 == "Dreamwalker's Healing Potion")) then
-								if ((3540 > 2683) and v91['DreamwalkersHealingPotion']:IsReady()) then
-									if ((4794 >= 3275) and v25(v92.RefreshingHealingPotion)) then
-										return "dreamwalkers healing potion defensive";
-									end
-								end
-							end
-							break;
 						end
 					end
+					if ((v86 == "Dreamwalker's Healing Potion") or ((584 - 302) <= (30 + 12))) then
+						if (((5348 - (396 + 343)) >= (68 + 698)) and v91.DreamwalkersHealingPotion:IsReady()) then
+							if (v25(v92.RefreshingHealingPotion) or ((2629 - (29 + 1448)) == (3877 - (135 + 1254)))) then
+								return "dreamwalkers healing potion defensive";
+							end
+						end
+					end
+					break;
 				end
-				break;
 			end
 		end
 	end
 	local function v114()
-		local v132 = 0;
-		while true do
-			if ((1484 == 1484) and (v132 == 1)) then
-				if ((1432 < 3555) and v90['SigilOfSilence']:IsCastable() and v53 and not v14:IsMoving() and v90['CycleofBinding']:IsAvailable() and v90['SigilOfSilence']:IsAvailable()) then
-					if ((v87 == "player") or v90['ConcentratedSigils']:IsAvailable() or (1065 > 3578)) then
-						if (v25(v92.SigilOfSilencePlayer, not v15:IsInMeleeRange(v35)) or (4795 < 1407)) then
-							return "sigil_of_silence player filler 6";
-						end
-					elseif ((1853 < 4813) and (v87 == "cursor")) then
-						if (v25(v92.SigilOfSilenceCursor, not v15:IsInRange(30)) or (2821 < 2431)) then
-							return "sigil_of_silence cursor filler 6";
-						end
-					end
+		if (((12891 - 9469) > (15641 - 12291)) and v90.SigilOfChains:IsCastable() and v54 and not v14:IsMoving() and v90.CycleofBinding:IsAvailable() and v90.SigilOfChains:IsAvailable()) then
+			if (((585 + 292) > (1903 - (389 + 1138))) and ((v87 == "player") or v90.ConcentratedSigils:IsAvailable())) then
+				if (v25(v92.SigilOfChainsPlayer, not v15:IsInMeleeRange(v35)) or ((3692 - (102 + 472)) <= (1747 + 104))) then
+					return "sigil_of_chains player filler 2";
 				end
-				if ((v90['ThrowGlaive']:IsCastable() and v50) or (2874 < 2181)) then
-					if (v25(v90.ThrowGlaive, not v15:IsSpellInRange(v90.ThrowGlaive)) or (2689 <= 343)) then
-						return "throw_glaive filler 8";
-					end
+			elseif ((v87 == "cursor") or ((92 + 73) >= (3257 + 235))) then
+				if (((5494 - (320 + 1225)) < (8644 - 3788)) and v25(v92.SigilOfChainsCursor, not v15:IsInRange(19 + 11))) then
+					return "sigil_of_chains cursor filler 2";
 				end
-				break;
 			end
-			if ((0 == v132) or (1869 == 2009)) then
-				if ((v90['SigilOfChains']:IsCastable() and v54 and not v14:IsMoving() and v90['CycleofBinding']:IsAvailable() and v90['SigilOfChains']:IsAvailable()) or (3546 < 2322)) then
-					if ((v87 == "player") or v90['ConcentratedSigils']:IsAvailable() or (2082 == 4773)) then
-						if ((3244 > 1055) and v25(v92.SigilOfChainsPlayer, not v15:IsInMeleeRange(v35))) then
-							return "sigil_of_chains player filler 2";
-						end
-					elseif ((v87 == "cursor") or (3313 <= 1778)) then
-						if (v25(v92.SigilOfChainsCursor, not v15:IsInRange(30)) or (1421 >= 2104)) then
-							return "sigil_of_chains cursor filler 2";
-						end
-					end
+		end
+		if ((v90.SigilOfMisery:IsCastable() and v55 and not v14:IsMoving() and v90.CycleofBinding:IsAvailable() and v90.SigilOfMisery:IsAvailable()) or ((5740 - (157 + 1307)) < (4875 - (821 + 1038)))) then
+			if (((11701 - 7011) > (452 + 3673)) and ((v87 == "player") or v90.ConcentratedSigils:IsAvailable())) then
+				if (v25(v92.SigilOfMiseryPlayer, not v15:IsInMeleeRange(v35)) or ((88 - 38) >= (334 + 562))) then
+					return "sigil_of_misery player filler 4";
 				end
-				if ((1812 <= 3249) and v90['SigilOfMisery']:IsCastable() and v55 and not v14:IsMoving() and v90['CycleofBinding']:IsAvailable() and v90['SigilOfMisery']:IsAvailable()) then
-					if ((1623 <= 1957) and ((v87 == "player") or v90['ConcentratedSigils']:IsAvailable())) then
-						if ((4412 == 4412) and v25(v92.SigilOfMiseryPlayer, not v15:IsInMeleeRange(v35))) then
-							return "sigil_of_misery player filler 4";
-						end
-					elseif ((1750 >= 842) and (v87 == "cursor")) then
-						if ((4372 > 1850) and v25(v92.SigilOfMiseryCursor, not v15:IsInRange(30))) then
-							return "sigil_of_misery cursor filler 4";
-						end
-					end
+			elseif ((v87 == "cursor") or ((4248 - 2534) >= (3984 - (834 + 192)))) then
+				if (v25(v92.SigilOfMiseryCursor, not v15:IsInRange(2 + 28)) or ((383 + 1108) < (14 + 630))) then
+					return "sigil_of_misery cursor filler 4";
 				end
-				v132 = 1;
+			end
+		end
+		if (((1090 - 386) < (1291 - (300 + 4))) and v90.SigilOfSilence:IsCastable() and v53 and not v14:IsMoving() and v90.CycleofBinding:IsAvailable() and v90.SigilOfSilence:IsAvailable()) then
+			if (((993 + 2725) > (4989 - 3083)) and ((v87 == "player") or v90.ConcentratedSigils:IsAvailable())) then
+				if (v25(v92.SigilOfSilencePlayer, not v15:IsInMeleeRange(v35)) or ((1320 - (112 + 250)) > (1450 + 2185))) then
+					return "sigil_of_silence player filler 6";
+				end
+			elseif (((8770 - 5269) <= (2574 + 1918)) and (v87 == "cursor")) then
+				if (v25(v92.SigilOfSilenceCursor, not v15:IsInRange(16 + 14)) or ((2575 + 867) < (1264 + 1284))) then
+					return "sigil_of_silence cursor filler 6";
+				end
+			end
+		end
+		if (((2136 + 739) >= (2878 - (1001 + 413))) and v90.ThrowGlaive:IsCastable() and v50) then
+			if (v25(v90.ThrowGlaive, not v15:IsSpellInRange(v90.ThrowGlaive)) or ((10697 - 5900) >= (5775 - (244 + 638)))) then
+				return "throw_glaive filler 8";
 			end
 		end
 	end
 	local function v115()
-		local v133 = 0;
-		local v134;
+		local v128 = 693 - (627 + 66);
+		local v129;
 		while true do
-			if ((232 < 821) and (v133 == 2)) then
-				if ((518 < 902) and v90['Fracture']:IsCastable() and v43) then
-					if ((2994 > 858) and v25(v90.Fracture, not v97)) then
+			if ((v128 == (2 - 1)) or ((1153 - (512 + 90)) > (3974 - (1665 + 241)))) then
+				if (((2831 - (373 + 344)) > (426 + 518)) and v90.SoulCarver:IsCastable() and v58) then
+					if (v25(v90.SoulCarver, not v97) or ((599 + 1663) >= (8166 - 5070))) then
+						return "soul_carver big_aoe 10";
+					end
+				end
+				if ((v90.SpiritBomb:IsReady() and (v94 >= (6 - 2)) and v49) or ((3354 - (35 + 1064)) >= (2574 + 963))) then
+					if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or ((8209 - 4372) < (6 + 1300))) then
+						return "spirit_bomb big_aoe 12";
+					end
+				end
+				if (((4186 - (298 + 938)) == (4209 - (233 + 1026))) and v90.Fracture:IsCastable() and v43) then
+					if (v25(v90.Fracture, not v97) or ((6389 - (636 + 1030)) < (1687 + 1611))) then
 						return "fracture big_aoe 14";
 					end
 				end
-				if ((v90['Shear']:IsCastable() and v46) or (3755 <= 915)) then
-					if ((3946 > 3743) and v25(v90.Shear, not v97)) then
+				if (((1110 + 26) >= (46 + 108)) and v90.Shear:IsCastable() and v46) then
+					if (v25(v90.Shear, not v97) or ((19 + 252) > (4969 - (55 + 166)))) then
 						return "shear big_aoe 16";
 					end
 				end
-				if ((v90['SoulCleave']:IsReady() and (v94 < 1) and v48) or (1335 >= 3306)) then
-					if ((4844 > 2253) and v25(v90.SoulCleave, not v97)) then
+				v128 = 1 + 1;
+			end
+			if (((477 + 4263) >= (12037 - 8885)) and (v128 == (299 - (36 + 261)))) then
+				if ((v90.SoulCleave:IsReady() and (v94 < (1 - 0)) and v48) or ((3946 - (34 + 1334)) >= (1304 + 2086))) then
+					if (((32 + 9) <= (2944 - (1035 + 248))) and v25(v90.SoulCleave, not v97)) then
 						return "soul_cleave big_aoe 18";
 					end
 				end
-				v133 = 3;
-			end
-			if ((452 == 452) and (v133 == 3)) then
-				v134 = v114();
-				if (v134 or (4557 < 2087)) then
-					return v134;
+				v129 = v114();
+				if (((622 - (20 + 1)) < (1855 + 1705)) and v129) then
+					return v129;
 				end
 				break;
 			end
-			if ((3874 == 3874) and (v133 == 0)) then
-				if ((v90['FelDevastation']:IsReady() and (v79 < v105) and v57 and ((v39 and v61) or not v61) and (v90['CollectiveAnguish']:IsAvailable() or v90['StoketheFlames']:IsAvailable())) or (1938 > 4935)) then
-					if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or (4255 < 3423)) then
+			if (((554 - (134 + 185)) < (1820 - (549 + 584))) and (v128 == (685 - (314 + 371)))) then
+				if (((15616 - 11067) > (2121 - (478 + 490))) and v90.FelDevastation:IsReady() and (v79 < v105) and v57 and ((v39 and v61) or not v61) and (v90.CollectiveAnguish:IsAvailable() or v90.StoketheFlames:IsAvailable())) then
+					if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or ((2476 + 2198) < (5844 - (786 + 386)))) then
 						return "fel_devastation big_aoe 2";
 					end
 				end
-				if ((1454 <= 2491) and v90['TheHunt']:IsCastable() and (v79 < v105) and v59 and ((v39 and v63) or not v63)) then
-					if (v25(v90.TheHunt, not v15:IsInRange(50)) or (4157 <= 2803)) then
+				if (((11880 - 8212) < (5940 - (1055 + 324))) and v90.TheHunt:IsCastable() and (v79 < v105) and v59 and ((v39 and v63) or not v63)) then
+					if (v25(v90.TheHunt, not v15:IsInRange(1390 - (1093 + 247))) or ((405 + 50) == (380 + 3225))) then
 						return "the_hunt big_aoe 4";
 					end
 				end
-				if ((4853 >= 2982) and v90['ElysianDecree']:IsCastable() and (v79 < v105) and v56 and not v14:IsMoving() and ((v39 and v60) or not v60) and (v102 > v65)) then
-					if ((4134 > 3357) and (v64 == "player")) then
-						if (v25(v92.ElysianDecreePlayer, not v15:IsInMeleeRange(v35)) or (3417 < 2534)) then
+				if ((v90.ElysianDecree:IsCastable() and (v79 < v105) and v56 and not v14:IsMoving() and ((v39 and v60) or not v60) and (v102 > v65)) or ((10572 - 7909) == (11239 - 7927))) then
+					if (((12170 - 7893) <= (11245 - 6770)) and (v64 == "player")) then
+						if (v25(v92.ElysianDecreePlayer, not v15:IsInMeleeRange(v35)) or ((310 + 560) == (4580 - 3391))) then
 							return "elysian_decree big_aoe 6 (Player)";
 						end
-					elseif ((v64 == "cursor") or (2722 <= 164)) then
-						if (v25(v92.ElysianDecreeCursor, not v15:IsInRange(30)) or (2408 < 2109)) then
+					elseif (((5352 - 3799) <= (2363 + 770)) and (v64 == "cursor")) then
+						if (v25(v92.ElysianDecreeCursor, not v15:IsInRange(76 - 46)) or ((2925 - (364 + 324)) >= (9624 - 6113))) then
 							return "elysian_decree big_aoe 6 (Cursor)";
 						end
 					end
 				end
-				v133 = 1;
-			end
-			if ((v133 == 1) or (33 == 1455)) then
-				if ((v90['FelDevastation']:IsReady() and (v79 < v105) and v57 and ((v39 and v61) or not v61)) or (443 >= 4015)) then
-					if ((3382 > 166) and v25(v90.FelDevastation, not v15:IsInMeleeRange(v35))) then
+				if ((v90.FelDevastation:IsReady() and (v79 < v105) and v57 and ((v39 and v61) or not v61)) or ((3177 - 1853) > (1001 + 2019))) then
+					if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or ((12519 - 9527) == (3012 - 1131))) then
 						return "fel_devastation big_aoe 8";
 					end
 				end
-				if ((v90['SoulCarver']:IsCastable() and v58) or (280 == 3059)) then
-					if ((1881 > 1293) and v25(v90.SoulCarver, not v97)) then
-						return "soul_carver big_aoe 10";
-					end
-				end
-				if ((2357 == 2357) and v90['SpiritBomb']:IsReady() and (v94 >= 4) and v49) then
-					if ((123 == 123) and v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35))) then
-						return "spirit_bomb big_aoe 12";
-					end
-				end
-				v133 = 2;
+				v128 = 2 - 1;
 			end
 		end
 	end
 	local function v116()
-		local v135 = 0;
-		while true do
-			if ((v135 == 1) or (1056 >= 3392)) then
-				if ((v90['FelDevastation']:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105)) or (1081 < 1075)) then
-					if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or (1049 >= 4432)) then
-						return "fel_devastation fiery_demise 8";
-					end
-				end
-				if ((v90['SoulCarver']:IsCastable() and v58) or (4768 <= 846)) then
-					if (v25(v90.SoulCarver, not v15:IsInMeleeRange(v35)) or (3358 <= 1420)) then
-						return "soul_carver fiery_demise 10";
-					end
-				end
-				if ((v90['SpiritBomb']:IsReady() and (v102 == 1) and (v94 >= 5) and v49) or (3739 <= 3005)) then
-					if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or (1659 >= 2134)) then
-						return "spirit_bomb fiery_demise 12";
-					end
-				end
-				v135 = 2;
+		if (((4374 - (1249 + 19)) > (1378 + 148)) and v90.ImmolationAura:IsCastable() and v44) then
+			if (((11766 - 8743) < (4956 - (686 + 400))) and v25(v90.ImmolationAura, not v15:IsInMeleeRange(v35))) then
+				return "immolation_aura fiery_demise 2";
 			end
-			if ((v135 == 2) or (3260 < 2355)) then
-				if ((v90['SpiritBomb']:IsReady() and (v102 > 1) and (v102 <= 5) and (v94 >= 4) and v49) or (669 == 4223)) then
-					if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or (1692 < 588)) then
-						return "spirit_bomb fiery_demise 14";
-					end
+		end
+		if (((113 + 30) > (303 - (73 + 156))) and v90.SigilOfFlame:IsCastable() and v47 and not v14:IsMoving() and (v98 or not v90.ConcentratedSigils:IsAvailable()) and v15:DebuffRefreshable(v90.SigilOfFlameDebuff)) then
+			if (((1 + 17) < (2923 - (721 + 90))) and (v90.ConcentratedSigils:IsAvailable() or (v87 == "player"))) then
+				if (((13 + 1084) <= (5285 - 3657)) and v25(v92.SigilOfFlamePlayer, not v15:IsInMeleeRange(v35))) then
+					return "sigil_of_flame fiery_demise 4 (Player)";
 				end
-				if ((v90['SpiritBomb']:IsReady() and (v102 >= 6) and (v94 >= 3) and v49) or (4797 < 3651)) then
-					if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or (4177 > 4850)) then
-						return "spirit_bomb fiery_demise 16";
-					end
+			elseif (((5100 - (224 + 246)) == (7500 - 2870)) and (v87 == "cursor")) then
+				if (((6517 - 2977) > (487 + 2196)) and v25(v92.SigilOfFlameCursor, not v15:IsInRange(1 + 29))) then
+					return "sigil_of_flame fiery_demise 4 (Cursor)";
 				end
-				if ((v90['TheHunt']:IsCastable() and v59 and ((v39 and v63) or not v63) and (v79 < v105)) or (400 > 1111)) then
-					if ((3051 > 1005) and v25(v90.TheHunt, not v15:IsInRange(30))) then
-						return "the_hunt fiery_demise 18";
-					end
-				end
-				v135 = 3;
 			end
-			if ((3693 <= 4382) and (v135 == 3)) then
-				if ((v90['ElysianDecree']:IsCastable() and v56 and not v14:IsMoving() and ((v39 and v60) or not v60) and (v79 < v105) and (v102 > v65)) or (3282 > 4100)) then
-					if ((v64 == "player") or (3580 < 2844)) then
-						if ((89 < 4490) and v25(v92.ElysianDecreePlayer, not v15:IsInMeleeRange(v35))) then
-							return "elysian_decree fiery_demise 20 (Player)";
-						end
-					elseif ((v64 == "cursor") or (4983 < 1808)) then
-						if ((3829 > 3769) and v25(v92.ElysianDecreeCursor, not v15:IsInRange(30))) then
-							return "elysian_decree fiery_demise 20 (Cursor)";
-						end
-					end
-				end
-				if ((1485 <= 2904) and v90['SoulCleave']:IsReady() and (v14:FuryDeficit() <= 30) and not v103 and v48) then
-					if ((4269 == 4269) and v25(v90.SoulCleave, not v97)) then
-						return "soul_cleave fiery_demise 22";
-					end
-				end
-				break;
+		end
+		if (((3522 + 1272) >= (6511 - 3236)) and v90.Felblade:IsCastable() and v42 and (v90.FelDevastation:CooldownRemains() <= (v90.FelDevastation:ExecuteTime() + v14:GCDRemains())) and (v14:Fury() < (166 - 116))) then
+			if (((1997 - (203 + 310)) == (3477 - (1238 + 755))) and v25(v90.Felblade, not v97)) then
+				return "felblade fiery_demise 6";
 			end
-			if ((387 <= 2782) and (v135 == 0)) then
-				if ((v90['ImmolationAura']:IsCastable() and v44) or (1899 <= 917)) then
-					if (v25(v90.ImmolationAura, not v15:IsInMeleeRange(v35)) or (4312 <= 876)) then
-						return "immolation_aura fiery_demise 2";
-					end
+		end
+		if (((101 + 1331) < (5089 - (709 + 825))) and v90.FelDevastation:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105)) then
+			if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or ((1962 - 897) > (5211 - 1633))) then
+				return "fel_devastation fiery_demise 8";
+			end
+		end
+		if ((v90.SoulCarver:IsCastable() and v58) or ((5659 - (196 + 668)) < (5555 - 4148))) then
+			if (((3838 - 1985) < (5646 - (171 + 662))) and v25(v90.SoulCarver, not v15:IsInMeleeRange(v35))) then
+				return "soul_carver fiery_demise 10";
+			end
+		end
+		if ((v90.SpiritBomb:IsReady() and (v102 == (94 - (4 + 89))) and (v94 >= (17 - 12)) and v49) or ((1028 + 1793) < (10677 - 8246))) then
+			if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or ((1128 + 1746) < (3667 - (35 + 1451)))) then
+				return "spirit_bomb fiery_demise 12";
+			end
+		end
+		if ((v90.SpiritBomb:IsReady() and (v102 > (1454 - (28 + 1425))) and (v102 <= (1998 - (941 + 1052))) and (v94 >= (4 + 0)) and v49) or ((4203 - (822 + 692)) <= (488 - 145))) then
+			if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or ((881 + 988) == (2306 - (45 + 252)))) then
+				return "spirit_bomb fiery_demise 14";
+			end
+		end
+		if ((v90.SpiritBomb:IsReady() and (v102 >= (6 + 0)) and (v94 >= (2 + 1)) and v49) or ((8629 - 5083) < (2755 - (114 + 319)))) then
+			if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or ((2988 - 906) == (6115 - 1342))) then
+				return "spirit_bomb fiery_demise 16";
+			end
+		end
+		if (((2069 + 1175) > (1571 - 516)) and v90.TheHunt:IsCastable() and v59 and ((v39 and v63) or not v63) and (v79 < v105)) then
+			if (v25(v90.TheHunt, not v15:IsInRange(62 - 32)) or ((5276 - (556 + 1407)) <= (2984 - (741 + 465)))) then
+				return "the_hunt fiery_demise 18";
+			end
+		end
+		if ((v90.ElysianDecree:IsCastable() and v56 and not v14:IsMoving() and ((v39 and v60) or not v60) and (v79 < v105) and (v102 > v65)) or ((1886 - (170 + 295)) >= (1109 + 995))) then
+			if (((1665 + 147) <= (7998 - 4749)) and (v64 == "player")) then
+				if (((1346 + 277) <= (1256 + 701)) and v25(v92.ElysianDecreePlayer, not v15:IsInMeleeRange(v35))) then
+					return "elysian_decree fiery_demise 20 (Player)";
 				end
-				if ((2232 <= 2596) and v90['SigilOfFlame']:IsCastable() and v47 and not v14:IsMoving() and (v98 or not v90['ConcentratedSigils']:IsAvailable()) and v15:DebuffRefreshable(v90.SigilOfFlameDebuff)) then
-					if ((2095 < 3686) and (v90['ConcentratedSigils']:IsAvailable() or (v87 == "player"))) then
-						if (v25(v92.SigilOfFlamePlayer, not v15:IsInMeleeRange(v35)) or (1595 >= 4474)) then
-							return "sigil_of_flame fiery_demise 4 (Player)";
-						end
-					elseif ((v87 == "cursor") or (4619 < 2882)) then
-						if (v25(v92.SigilOfFlameCursor, not v15:IsInRange(30)) or (294 >= 4831)) then
-							return "sigil_of_flame fiery_demise 4 (Cursor)";
-						end
-					end
+			elseif (((2499 + 1913) == (5642 - (957 + 273))) and (v64 == "cursor")) then
+				if (((469 + 1281) >= (338 + 504)) and v25(v92.ElysianDecreeCursor, not v15:IsInRange(114 - 84))) then
+					return "elysian_decree fiery_demise 20 (Cursor)";
 				end
-				if ((2029 <= 3084) and v90['Felblade']:IsCastable() and v42 and (v90['FelDevastation']:CooldownRemains() <= (v90['FelDevastation']:ExecuteTime() + v14:GCDRemains())) and (v14:Fury() < 50)) then
-					if (v25(v90.Felblade, not v97) or (2037 == 2420)) then
-						return "felblade fiery_demise 6";
-					end
-				end
-				v135 = 1;
+			end
+		end
+		if (((11521 - 7149) > (5650 - 3800)) and v90.SoulCleave:IsReady() and (v14:FuryDeficit() <= (148 - 118)) and not v103 and v48) then
+			if (((2012 - (389 + 1391)) < (516 + 305)) and v25(v90.SoulCleave, not v97)) then
+				return "soul_cleave fiery_demise 22";
 			end
 		end
 	end
 	local function v117()
-		local v136 = 0;
+		local v130 = 0 + 0;
 		while true do
-			if ((4458 > 3904) and (v136 == 3)) then
-				if ((436 >= 123) and v90['Fracture']:IsCastable() and v43 and (v90['FelDevastation']:CooldownRemains() <= (v90['FelDevastation']:ExecuteTime() + v14:GCDRemains())) and (v14:Fury() < 50)) then
-					if ((500 < 1816) and v25(v90.Fracture, not v97)) then
-						return "fracture maintenance 14";
+			if (((1179 - 661) < (1853 - (783 + 168))) and (v130 == (0 - 0))) then
+				if (((2945 + 49) > (1169 - (309 + 2))) and v90.FieryBrand:IsCastable() and v67 and ((v15:DebuffDown(v90.FieryBrandDebuff) and ((v90.SigilOfFlame:CooldownRemains() < (v90.SigilOfFlame:ExecuteTime() + v14:GCDRemains())) or (v90.SoulCarver:CooldownRemains() < (v90.SoulCarver:ExecuteTime() + v14:GCDRemains())) or (v90.FelDevastation:CooldownRemains() < (v90.FelDevastation:ExecuteTime() + v14:GCDRemains())))) or (v90.DownInFlames:IsAvailable() and (v90.FieryBrand:FullRechargeTime() < (v90.FieryBrand:ExecuteTime() + v14:GCDRemains()))))) then
+					if (v25(v90.FieryBrand, not v15:IsSpellInRange(v90.FieryBrand)) or ((11531 - 7776) <= (2127 - (1090 + 122)))) then
+						return "fiery_brand maintenance 2";
 					end
 				end
-				if ((3574 == 3574) and v90['Shear']:IsCastable() and v46 and (v90['FelDevastation']:CooldownRemains() <= (v90['FelDevastation']:ExecuteTime() + v14:GCDRemains())) and (v14:Fury() < 50)) then
-					if ((221 < 390) and v25(v90.Shear, not v97)) then
-						return "shear maintenance 16";
+				if (((1280 + 2666) > (12570 - 8827)) and v90.SigilOfFlame:IsCastable() and not v14:IsMoving()) then
+					if (v90.ConcentratedSigils:IsAvailable() or (v87 == "player") or ((914 + 421) >= (4424 - (628 + 490)))) then
+						if (((869 + 3975) > (5578 - 3325)) and v25(v92.SigilOfFlamePlayer, not v15:IsInMeleeRange(v35))) then
+							return "sigil_of_flame maintenance 4 (Player)";
+						end
+					elseif (((2065 - 1613) == (1226 - (431 + 343))) and (v87 == "cursor")) then
+						if (v25(v92.SigilOfFlameCursor, not v15:IsInRange(60 - 30)) or ((13182 - 8625) < (1649 + 438))) then
+							return "sigil_of_flame maintenance 4 (Cursor)";
+						end
 					end
 				end
-				v136 = 4;
+				v130 = 1 + 0;
 			end
-			if ((v136 == 4) or (2213 <= 1421)) then
-				if ((3058 < 4860) and v90['SpiritBomb']:IsReady() and (v14:FuryDeficit() < 30) and (((v102 >= 2) and (v94 >= 5)) or ((v102 >= 6) and (v94 >= 4))) and not v103 and v49) then
-					if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or (1296 >= 4446)) then
+			if (((5569 - (556 + 1139)) == (3889 - (6 + 9))) and (v130 == (1 + 1))) then
+				if ((v90.BulkExtraction:IsCastable() and v40 and v14:PrevGCD(1 + 0, v90.SpiritBomb)) or ((2107 - (28 + 141)) > (1912 + 3023))) then
+					if (v25(v90.BulkExtraction, not v97) or ((5252 - 997) < (2425 + 998))) then
+						return "bulk_extraction maintenance 10";
+					end
+				end
+				if (((2771 - (486 + 831)) <= (6482 - 3991)) and v90.Felblade:IsCastable() and v42 and (v14:FuryDeficit() >= (140 - 100))) then
+					if (v25(v90.Felblade, not v97) or ((786 + 3371) <= (8862 - 6059))) then
+						return "felblade maintenance 12";
+					end
+				end
+				v130 = 1266 - (668 + 595);
+			end
+			if (((4367 + 486) >= (602 + 2380)) and (v130 == (10 - 6))) then
+				if (((4424 - (23 + 267)) > (5301 - (1129 + 815))) and v90.SpiritBomb:IsReady() and (v14:FuryDeficit() < (417 - (371 + 16))) and (((v102 >= (1752 - (1326 + 424))) and (v94 >= (9 - 4))) or ((v102 >= (21 - 15)) and (v94 >= (122 - (88 + 30))))) and not v103 and v49) then
+					if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or ((4188 - (720 + 51)) < (5636 - 3102))) then
 						return "spirit_bomb maintenance 18";
 					end
 				end
-				if ((v90['SoulCleave']:IsReady() and (v14:FuryDeficit() < 30) and (v94 <= 3) and not v103 and v48) or (1393 > 4489)) then
-					if (v25(v90.SoulCleave, not v97) or (4424 < 27)) then
+				if ((v90.SoulCleave:IsReady() and (v14:FuryDeficit() < (1806 - (421 + 1355))) and (v94 <= (4 - 1)) and not v103 and v48) or ((1338 + 1384) <= (1247 - (286 + 797)))) then
+					if (v25(v90.SoulCleave, not v97) or ((8802 - 6394) < (3492 - 1383))) then
 						return "soul_cleave maintenance 20";
 					end
 				end
 				break;
 			end
-			if ((v136 == 0) or (1997 > 3815)) then
-				if ((3465 > 1913) and v90['FieryBrand']:IsCastable() and v67 and ((v15:DebuffDown(v90.FieryBrandDebuff) and ((v90['SigilOfFlame']:CooldownRemains() < (v90['SigilOfFlame']:ExecuteTime() + v14:GCDRemains())) or (v90['SoulCarver']:CooldownRemains() < (v90['SoulCarver']:ExecuteTime() + v14:GCDRemains())) or (v90['FelDevastation']:CooldownRemains() < (v90['FelDevastation']:ExecuteTime() + v14:GCDRemains())))) or (v90['DownInFlames']:IsAvailable() and (v90['FieryBrand']:FullRechargeTime() < (v90['FieryBrand']:ExecuteTime() + v14:GCDRemains()))))) then
-					if ((733 < 1819) and v25(v90.FieryBrand, not v15:IsSpellInRange(v90.FieryBrand))) then
-						return "fiery_brand maintenance 2";
+			if ((v130 == (442 - (397 + 42))) or ((11 + 22) == (2255 - (24 + 776)))) then
+				if ((v90.Fracture:IsCastable() and v43 and (v90.FelDevastation:CooldownRemains() <= (v90.FelDevastation:ExecuteTime() + v14:GCDRemains())) and (v14:Fury() < (77 - 27))) or ((1228 - (222 + 563)) >= (8846 - 4831))) then
+					if (((2435 + 947) > (356 - (23 + 167))) and v25(v90.Fracture, not v97)) then
+						return "fracture maintenance 14";
 					end
 				end
-				if ((v90['SigilOfFlame']:IsCastable() and not v14:IsMoving()) or (4395 == 4755)) then
-					if (v90['ConcentratedSigils']:IsAvailable() or (v87 == "player") or (3793 < 2369)) then
-						if (v25(v92.SigilOfFlamePlayer, not v15:IsInMeleeRange(v35)) or (4084 == 265)) then
-							return "sigil_of_flame maintenance 4 (Player)";
-						end
-					elseif ((4358 == 4358) and (v87 == "cursor")) then
-						if (v25(v92.SigilOfFlameCursor, not v15:IsInRange(30)) or (3138 < 993)) then
-							return "sigil_of_flame maintenance 4 (Cursor)";
-						end
+				if ((v90.Shear:IsCastable() and v46 and (v90.FelDevastation:CooldownRemains() <= (v90.FelDevastation:ExecuteTime() + v14:GCDRemains())) and (v14:Fury() < (1848 - (690 + 1108)))) or ((102 + 178) == (2524 + 535))) then
+					if (((2729 - (40 + 808)) > (213 + 1080)) and v25(v90.Shear, not v97)) then
+						return "shear maintenance 16";
 					end
 				end
-				v136 = 1;
+				v130 = 15 - 11;
 			end
-			if ((3330 > 2323) and (v136 == 2)) then
-				if ((v90['BulkExtraction']:IsCastable() and v40 and v14:PrevGCD(1, v90.SpiritBomb)) or (3626 == 3989)) then
-					if (v25(v90.BulkExtraction, not v97) or (916 == 2671)) then
-						return "bulk_extraction maintenance 10";
-					end
-				end
-				if ((272 == 272) and v90['Felblade']:IsCastable() and v42 and (v14:FuryDeficit() >= 40)) then
-					if ((4249 <= 4839) and v25(v90.Felblade, not v97)) then
-						return "felblade maintenance 12";
-					end
-				end
-				v136 = 3;
-			end
-			if ((2777 < 3200) and (v136 == 1)) then
-				if ((95 < 1957) and v90['SpiritBomb']:IsReady() and (v94 >= 5) and v49) then
-					if ((826 < 1717) and v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35))) then
+			if (((2253 + 104) == (1247 + 1110)) and (v130 == (1 + 0))) then
+				if (((694 - (47 + 524)) == (80 + 43)) and v90.SpiritBomb:IsReady() and (v94 >= (13 - 8)) and v49) then
+					if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or ((1578 - 522) >= (7735 - 4343))) then
 						return "spirit_bomb maintenance 6";
 					end
 				end
-				if ((1426 >= 1105) and v90['ImmolationAura']:IsCastable() and v44) then
-					if ((2754 <= 3379) and v25(v90.ImmolationAura, not v15:IsInMeleeRange(v35))) then
+				if ((v90.ImmolationAura:IsCastable() and v44) or ((2807 - (1165 + 561)) < (32 + 1043))) then
+					if (v25(v90.ImmolationAura, not v15:IsInMeleeRange(v35)) or ((3248 - 2199) >= (1692 + 2740))) then
 						return "immolation_aura maintenance 8";
 					end
 				end
-				v136 = 2;
+				v130 = 481 - (341 + 138);
 			end
 		end
 	end
 	local function v118()
-		local v137 = 0;
-		local v138;
-		while true do
-			if ((v137 == 0) or (3927 == 1413)) then
-				if ((v90['TheHunt']:IsCastable() and v59 and ((v39 and v63) or not v63) and (v79 < v105)) or (1154 <= 788)) then
-					if (v25(v90.TheHunt, not v15:IsInRange(30)) or (1643 > 3379)) then
-						return "the_hunt single_target 2";
-					end
-				end
-				if ((v90['SoulCarver']:IsCastable() and v58) or (2803 > 4549)) then
-					if (v25(v90.SoulCarver, not v97) or (220 >= 3022)) then
-						return "soul_carver single_target 4";
-					end
-				end
-				if ((2822 == 2822) and v90['FelDevastation']:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105) and (v90['CollectiveAnguish']:IsAvailable() or (v90['StoketheFlames']:IsAvailable() and v90['BurningBlood']:IsAvailable()))) then
-					if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or (1061 == 1857)) then
-						return "fel_devastation single_target 6";
-					end
-				end
-				if ((2760 > 1364) and v90['ElysianDecree']:IsCastable() and v56 and not v14:IsMoving() and ((v39 and v60) or not v60) and (v79 < v105) and (v102 > v65)) then
-					if ((v64 == "player") or (4902 <= 3595)) then
-						if (v25(v92.ElysianDecreePlayer, not v15:IsInMeleeRange(v35)) or (3852 == 293)) then
-							return "elysian_decree single_target 8 (Player)";
-						end
-					elseif ((v64 == "cursor") or (1559 == 4588)) then
-						if (v25(v92.ElysianDecreeCursor, not v15:IsInRange(30)) or (4484 == 788)) then
-							return "elysian_decree single_target 8 (Cursor)";
-						end
-					end
-				end
-				v137 = 1;
+		if ((v90.TheHunt:IsCastable() and v59 and ((v39 and v63) or not v63) and (v79 < v105)) or ((1288 + 3480) <= (1745 - 899))) then
+			if (v25(v90.TheHunt, not v15:IsInRange(356 - (89 + 237))) or ((10802 - 7444) <= (2989 - 1569))) then
+				return "the_hunt single_target 2";
 			end
-			if ((4568 >= 3907) and (v137 == 1)) then
-				if ((1246 < 3470) and v90['FelDevastation']:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105)) then
-					if ((4068 >= 972) and v25(v90.FelDevastation, not v15:IsInMeleeRange(v35))) then
-						return "fel_devastation single_target 10";
-					end
-				end
-				if ((493 < 3893) and v90['SoulCleave']:IsReady() and v90['FocusedCleave']:IsAvailable() and not v103 and v48) then
-					if (v25(v90.SoulCleave, not v97) or (1473 >= 3332)) then
-						return "soul_cleave single_target 12";
-					end
-				end
-				if ((v90['Fracture']:IsCastable() and v43) or (4051 <= 1157)) then
-					if ((604 < 2881) and v25(v90.Fracture, not v97)) then
-						return "fracture single_target 14";
-					end
-				end
-				if ((v90['Shear']:IsCastable() and v46) or (900 == 3377)) then
-					if ((4459 > 591) and v25(v90.Shear, not v97)) then
-						return "shear single_target 16";
-					end
-				end
-				v137 = 2;
+		end
+		if ((v90.SoulCarver:IsCastable() and v58) or ((4620 - (581 + 300)) <= (4225 - (855 + 365)))) then
+			if (v25(v90.SoulCarver, not v97) or ((3940 - 2281) >= (697 + 1437))) then
+				return "soul_carver single_target 4";
 			end
-			if ((3398 >= 2395) and (2 == v137)) then
-				if ((v90['SoulCleave']:IsReady() and not v103 and v48) or (2183 >= 2824)) then
-					if ((1936 == 1936) and v25(v90.SoulCleave, not v97)) then
-						return "soul_cleave single_target 18";
-					end
-				end
-				v138 = v114();
-				if (v138 or (4832 < 4313)) then
-					return v138;
-				end
-				break;
+		end
+		if ((v90.FelDevastation:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105) and (v90.CollectiveAnguish:IsAvailable() or (v90.StoketheFlames:IsAvailable() and v90.BurningBlood:IsAvailable()))) or ((4495 - (1030 + 205)) < (2211 + 144))) then
+			if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or ((623 + 46) == (4509 - (156 + 130)))) then
+				return "fel_devastation single_target 6";
 			end
+		end
+		if ((v90.ElysianDecree:IsCastable() and v56 and not v14:IsMoving() and ((v39 and v60) or not v60) and (v79 < v105) and (v102 > v65)) or ((3844 - 2152) < (990 - 402))) then
+			if ((v64 == "player") or ((9824 - 5027) < (963 + 2688))) then
+				if (v25(v92.ElysianDecreePlayer, not v15:IsInMeleeRange(v35)) or ((2436 + 1741) > (4919 - (10 + 59)))) then
+					return "elysian_decree single_target 8 (Player)";
+				end
+			elseif ((v64 == "cursor") or ((114 + 286) > (5471 - 4360))) then
+				if (((4214 - (671 + 492)) > (801 + 204)) and v25(v92.ElysianDecreeCursor, not v15:IsInRange(1245 - (369 + 846)))) then
+					return "elysian_decree single_target 8 (Cursor)";
+				end
+			end
+		end
+		if (((978 + 2715) <= (3740 + 642)) and v90.FelDevastation:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105)) then
+			if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or ((5227 - (1036 + 909)) > (3260 + 840))) then
+				return "fel_devastation single_target 10";
+			end
+		end
+		if ((v90.SoulCleave:IsReady() and v90.FocusedCleave:IsAvailable() and not v103 and v48) or ((6010 - 2430) < (3047 - (11 + 192)))) then
+			if (((45 + 44) < (4665 - (135 + 40))) and v25(v90.SoulCleave, not v97)) then
+				return "soul_cleave single_target 12";
+			end
+		end
+		if ((v90.Fracture:IsCastable() and v43) or ((12072 - 7089) < (1090 + 718))) then
+			if (((8435 - 4606) > (5649 - 1880)) and v25(v90.Fracture, not v97)) then
+				return "fracture single_target 14";
+			end
+		end
+		if (((1661 - (50 + 126)) <= (8086 - 5182)) and v90.Shear:IsCastable() and v46) then
+			if (((945 + 3324) == (5682 - (1233 + 180))) and v25(v90.Shear, not v97)) then
+				return "shear single_target 16";
+			end
+		end
+		if (((1356 - (522 + 447)) <= (4203 - (107 + 1314))) and v90.SoulCleave:IsReady() and not v103 and v48) then
+			if (v25(v90.SoulCleave, not v97) or ((882 + 1017) <= (2794 - 1877))) then
+				return "soul_cleave single_target 18";
+			end
+		end
+		local v131 = v114();
+		if (v131 or ((1832 + 2480) <= (1739 - 863))) then
+			return v131;
 		end
 	end
 	local function v119()
-		local v139 = 0;
-		local v140;
-		while true do
-			if ((4088 > 3874) and (v139 == 3)) then
-				if ((4332 == 4332) and v90['SoulCleave']:IsReady() and (v94 <= 2) and v48) then
-					if ((3999 >= 2900) and v25(v90.SoulCleave, not v97)) then
-						return "soul_cleave small_aoe 20";
-					end
-				end
-				v140 = v114();
-				if (v140 or (2525 > 4064)) then
-					return v140;
-				end
-				break;
+		if (((8831 - 6599) <= (4506 - (716 + 1194))) and v90.TheHunt:IsCastable() and v59 and ((v39 and v63) or not v63) and (v79 < v105)) then
+			if (((36 + 2059) < (395 + 3291)) and v25(v90.TheHunt, not v15:IsInRange(533 - (74 + 429)))) then
+				return "the_hunt small_aoe 2";
 			end
-			if ((4371 == 4371) and (v139 == 0)) then
-				if ((v90['TheHunt']:IsCastable() and v59 and ((v39 and v63) or not v63) and (v79 < v105)) or (266 > 4986)) then
-					if ((1991 >= 925) and v25(v90.TheHunt, not v15:IsInRange(30))) then
-						return "the_hunt small_aoe 2";
-					end
-				end
-				if ((455 < 2053) and v90['FelDevastation']:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105) and (v90['CollectiveAnguish']:IsAvailable() or (v90['StoketheFlames']:IsAvailable() and v90['BurningBlood']:IsAvailable()))) then
-					if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or (826 == 4851)) then
-						return "fel_devastation small_aoe 4";
-					end
-				end
-				if ((183 == 183) and v90['ElysianDecree']:IsCastable() and v56 and not v14:IsMoving() and ((v39 and v60) or not v60) and (v79 < v105) and (v102 > v65)) then
-					if ((1159 <= 1788) and (v64 == "player")) then
-						if (v25(v92.ElysianDecreePlayer, not v15:IsInMeleeRange(v35)) or (3507 > 4318)) then
-							return "elysian_decree small_aoe 6 (Player)";
-						end
-					elseif ((v64 == "cursor") or (3075 <= 2965)) then
-						if ((1365 <= 2011) and v25(v92.ElysianDecreeCursor, not v15:IsInRange(30))) then
-							return "elysian_decree small_aoe 6 (Cursor)";
-						end
-					end
-				end
-				v139 = 1;
+		end
+		if ((v90.FelDevastation:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105) and (v90.CollectiveAnguish:IsAvailable() or (v90.StoketheFlames:IsAvailable() and v90.BurningBlood:IsAvailable()))) or ((3076 - 1481) >= (2218 + 2256))) then
+			if (v25(v90.FelDevastation, not v15:IsInMeleeRange(v35)) or ((10572 - 5953) < (2039 + 843))) then
+				return "fel_devastation small_aoe 4";
 			end
-			if ((v139 == 1) or (2776 > 3575)) then
-				if ((v90['FelDevastation']:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105)) or (2554 == 4804)) then
-					if ((2577 == 2577) and v25(v90.FelDevastation, not v15:IsInMeleeRange(v35))) then
-						return "fel_devastation small_aoe 8";
-					end
+		end
+		if ((v90.ElysianDecree:IsCastable() and v56 and not v14:IsMoving() and ((v39 and v60) or not v60) and (v79 < v105) and (v102 > v65)) or ((906 - 612) >= (11944 - 7113))) then
+			if (((2462 - (279 + 154)) <= (3862 - (454 + 324))) and (v64 == "player")) then
+				if (v25(v92.ElysianDecreePlayer, not v15:IsInMeleeRange(v35)) or ((1603 + 434) == (2437 - (12 + 5)))) then
+					return "elysian_decree small_aoe 6 (Player)";
 				end
-				if ((v90['SoulCarver']:IsCastable() and v58) or (6 >= 1889)) then
-					if ((506 <= 1892) and v25(v90.SoulCarver, not v97)) then
-						return "soul_carver small_aoe 10";
-					end
+			elseif (((2404 + 2054) > (9947 - 6043)) and (v64 == "cursor")) then
+				if (((162 + 274) >= (1216 - (277 + 816))) and v25(v92.ElysianDecreeCursor, not v15:IsInRange(128 - 98))) then
+					return "elysian_decree small_aoe 6 (Cursor)";
 				end
-				if ((v90['SpiritBomb']:IsReady() and (v94 >= 5) and v49) or (2008 > 2218)) then
-					if ((379 <= 4147) and v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35))) then
-						return "spirit_bomb small_aoe 12";
-					end
-				end
-				v139 = 2;
 			end
-			if ((v139 == 2) or (4514 <= 1009)) then
-				if ((v90['SoulCleave']:IsReady() and v90['FocusedCleave']:IsAvailable() and (v94 <= 2) and v48) or (3496 == 1192)) then
-					if (v25(v90.SoulCleave, not v97) or (208 == 2959)) then
-						return "soul_cleave small_aoe 14";
-					end
-				end
-				if ((4277 >= 1313) and v90['Fracture']:IsCastable() and v43) then
-					if ((2587 < 3174) and v25(v90.Fracture, not v97)) then
-						return "fracture small_aoe 16";
-					end
-				end
-				if ((v90['Shear']:IsCastable() and v46) or (4120 <= 2198)) then
-					if (v25(v90.Shear, not v97) or (1596 == 858)) then
-						return "shear small_aoe 18";
-					end
-				end
-				v139 = 3;
+		end
+		if (((1683 - (1058 + 125)) < (341 + 1475)) and v90.FelDevastation:IsReady() and v57 and ((v39 and v61) or not v61) and (v79 < v105)) then
+			if (((4549 - (815 + 160)) == (15334 - 11760)) and v25(v90.FelDevastation, not v15:IsInMeleeRange(v35))) then
+				return "fel_devastation small_aoe 8";
 			end
+		end
+		if (((524 - 303) < (94 + 296)) and v90.SoulCarver:IsCastable() and v58) then
+			if (v25(v90.SoulCarver, not v97) or ((6468 - 4255) <= (3319 - (41 + 1857)))) then
+				return "soul_carver small_aoe 10";
+			end
+		end
+		if (((4951 - (1222 + 671)) < (12561 - 7701)) and v90.SpiritBomb:IsReady() and (v94 >= (6 - 1)) and v49) then
+			if (v25(v90.SpiritBomb, not v15:IsInMeleeRange(v35)) or ((2478 - (229 + 953)) >= (6220 - (1111 + 663)))) then
+				return "spirit_bomb small_aoe 12";
+			end
+		end
+		if ((v90.SoulCleave:IsReady() and v90.FocusedCleave:IsAvailable() and (v94 <= (1581 - (874 + 705))) and v48) or ((195 + 1198) > (3063 + 1426))) then
+			if (v25(v90.SoulCleave, not v97) or ((9195 - 4771) < (1 + 26))) then
+				return "soul_cleave small_aoe 14";
+			end
+		end
+		if ((v90.Fracture:IsCastable() and v43) or ((2676 - (642 + 37)) > (870 + 2945))) then
+			if (((555 + 2910) > (4802 - 2889)) and v25(v90.Fracture, not v97)) then
+				return "fracture small_aoe 16";
+			end
+		end
+		if (((1187 - (233 + 221)) < (4206 - 2387)) and v90.Shear:IsCastable() and v46) then
+			if (v25(v90.Shear, not v97) or ((3869 + 526) == (6296 - (718 + 823)))) then
+				return "shear small_aoe 18";
+			end
+		end
+		if ((v90.SoulCleave:IsReady() and (v94 <= (2 + 0)) and v48) or ((4598 - (266 + 539)) < (6706 - 4337))) then
+			if (v25(v90.SoulCleave, not v97) or ((5309 - (636 + 589)) == (629 - 364))) then
+				return "soul_cleave small_aoe 20";
+			end
+		end
+		local v132 = v114();
+		if (((8988 - 4630) == (3454 + 904)) and v132) then
+			return v132;
 		end
 	end
 	local function v120()
-		local v141 = 0;
-		while true do
-			if ((3220 == 3220) and (v141 == 0)) then
-				v40 = EpicSettings['Settings']['useBulkExtraction'];
-				v41 = EpicSettings['Settings']['useConsumeMagic'];
-				v42 = EpicSettings['Settings']['useFelblade'];
-				v43 = EpicSettings['Settings']['useFracture'];
-				v44 = EpicSettings['Settings']['useImmolationAura'];
-				v45 = EpicSettings['Settings']['useInfernalStrike'];
-				v141 = 1;
-			end
-			if ((v141 == 1) or (1402 > 3620)) then
-				v46 = EpicSettings['Settings']['useShear'];
-				v47 = EpicSettings['Settings']['useSigilOfFlame'];
-				v48 = EpicSettings['Settings']['useSoulCleave'];
-				v49 = EpicSettings['Settings']['useSpiritBomb'];
-				v50 = EpicSettings['Settings']['useThrowGlaive'];
-				v51 = EpicSettings['Settings']['useChaosNova'];
-				v141 = 2;
-			end
-			if ((2574 == 2574) and (v141 == 2)) then
-				v52 = EpicSettings['Settings']['useDisrupt'];
-				v53 = EpicSettings['Settings']['useSigilOfSilence'];
-				v54 = EpicSettings['Settings']['useSigilOfChains'];
-				v55 = EpicSettings['Settings']['useSigilOfMisery'];
-				v56 = EpicSettings['Settings']['useElysianDecree'];
-				v57 = EpicSettings['Settings']['useFelDevastation'];
-				v141 = 3;
-			end
-			if ((1798 < 2757) and (v141 == 5)) then
-				v87 = EpicSettings['Settings']['sigilSetting'] or "player";
-				v64 = EpicSettings['Settings']['elysianDecreeSetting'] or "player";
-				v65 = EpicSettings['Settings']['elysianDecreeSlider'] or 0;
-				v88 = EpicSettings['Settings']['fieryBrandOffensively'];
-				v89 = EpicSettings['Settings']['metamorphosisOffensively'];
-				break;
-			end
-			if ((v141 == 4) or (377 > 2604)) then
-				v66 = EpicSettings['Settings']['useDemonSpikes'];
-				v67 = EpicSettings['Settings']['useFieryBrand'];
-				v68 = EpicSettings['Settings']['useMetamorphosis'];
-				v69 = EpicSettings['Settings']['demonSpikesHP'] or 0;
-				v70 = EpicSettings['Settings']['fieryBrandHP'] or 0;
-				v71 = EpicSettings['Settings']['metamorphosisHP'] or 0;
-				v141 = 5;
-			end
-			if ((568 < 911) and (v141 == 3)) then
-				v58 = EpicSettings['Settings']['useSoulCarver'];
-				v59 = EpicSettings['Settings']['useTheHunt'];
-				v60 = EpicSettings['Settings']['elysianDecreeWithCD'];
-				v61 = EpicSettings['Settings']['felDevastationWithCD'];
-				v62 = EpicSettings['Settings']['soulCarverWithCD'];
-				v63 = EpicSettings['Settings']['theHuntWithCD'];
-				v141 = 4;
-			end
-		end
+		v40 = EpicSettings.Settings['useBulkExtraction'];
+		v41 = EpicSettings.Settings['useConsumeMagic'];
+		v42 = EpicSettings.Settings['useFelblade'];
+		v43 = EpicSettings.Settings['useFracture'];
+		v44 = EpicSettings.Settings['useImmolationAura'];
+		v45 = EpicSettings.Settings['useInfernalStrike'];
+		v46 = EpicSettings.Settings['useShear'];
+		v47 = EpicSettings.Settings['useSigilOfFlame'];
+		v48 = EpicSettings.Settings['useSoulCleave'];
+		v49 = EpicSettings.Settings['useSpiritBomb'];
+		v50 = EpicSettings.Settings['useThrowGlaive'];
+		v51 = EpicSettings.Settings['useChaosNova'];
+		v52 = EpicSettings.Settings['useDisrupt'];
+		v53 = EpicSettings.Settings['useSigilOfSilence'];
+		v54 = EpicSettings.Settings['useSigilOfChains'];
+		v55 = EpicSettings.Settings['useSigilOfMisery'];
+		v56 = EpicSettings.Settings['useElysianDecree'];
+		v57 = EpicSettings.Settings['useFelDevastation'];
+		v58 = EpicSettings.Settings['useSoulCarver'];
+		v59 = EpicSettings.Settings['useTheHunt'];
+		v60 = EpicSettings.Settings['elysianDecreeWithCD'];
+		v61 = EpicSettings.Settings['felDevastationWithCD'];
+		v62 = EpicSettings.Settings['soulCarverWithCD'];
+		v63 = EpicSettings.Settings['theHuntWithCD'];
+		v66 = EpicSettings.Settings['useDemonSpikes'];
+		v67 = EpicSettings.Settings['useFieryBrand'];
+		v68 = EpicSettings.Settings['useMetamorphosis'];
+		v69 = EpicSettings.Settings['demonSpikesHP'] or (0 + 0);
+		v70 = EpicSettings.Settings['fieryBrandHP'] or (1015 - (657 + 358));
+		v71 = EpicSettings.Settings['metamorphosisHP'] or (0 - 0);
+		v87 = EpicSettings.Settings['sigilSetting'] or "player";
+		v64 = EpicSettings.Settings['elysianDecreeSetting'] or "player";
+		v65 = EpicSettings.Settings['elysianDecreeSlider'] or (0 - 0);
+		v88 = EpicSettings.Settings['fieryBrandOffensively'];
+		v89 = EpicSettings.Settings['metamorphosisOffensively'];
 	end
 	local function v121()
-		local v142 = 0;
+		local v162 = 1187 - (1151 + 36);
 		while true do
-			if ((3285 < 4228) and (1 == v142)) then
-				v78 = EpicSettings['Settings']['InterruptThreshold'];
-				v80 = EpicSettings['Settings']['useTrinkets'];
-				v81 = EpicSettings['Settings']['trinketsWithCD'];
-				v83 = EpicSettings['Settings']['useHealthstone'];
-				v142 = 2;
+			if ((v162 == (0 + 0)) or ((825 + 2313) < (2965 - 1972))) then
+				v79 = EpicSettings.Settings['fightRemainsCheck'] or (1832 - (1552 + 280));
+				v72 = EpicSettings.Settings['dispelBuffs'];
+				v76 = EpicSettings.Settings['InterruptWithStun'];
+				v162 = 835 - (64 + 770);
 			end
-			if ((3916 > 3328) and (v142 == 2)) then
-				v82 = EpicSettings['Settings']['useHealingPotion'];
-				v85 = EpicSettings['Settings']['healthstoneHP'] or 0;
-				v84 = EpicSettings['Settings']['healingPotionHP'] or 0;
-				v86 = EpicSettings['Settings']['HealingPotionName'] or "";
-				v142 = 3;
+			if (((2261 + 1069) > (5273 - 2950)) and (v162 == (1 + 1))) then
+				v81 = EpicSettings.Settings['trinketsWithCD'];
+				v83 = EpicSettings.Settings['useHealthstone'];
+				v82 = EpicSettings.Settings['useHealingPotion'];
+				v162 = 1246 - (157 + 1086);
 			end
-			if ((2500 < 3839) and (v142 == 0)) then
-				v79 = EpicSettings['Settings']['fightRemainsCheck'] or 0;
-				v72 = EpicSettings['Settings']['dispelBuffs'];
-				v76 = EpicSettings['Settings']['InterruptWithStun'];
-				v77 = EpicSettings['Settings']['InterruptOnlyWhitelist'];
-				v142 = 1;
+			if ((v162 == (5 - 2)) or ((15880 - 12254) == (6118 - 2129))) then
+				v85 = EpicSettings.Settings['healthstoneHP'] or (0 - 0);
+				v84 = EpicSettings.Settings['healingPotionHP'] or (819 - (599 + 220));
+				v86 = EpicSettings.Settings['HealingPotionName'] or "";
+				v162 = 7 - 3;
 			end
-			if ((507 == 507) and (v142 == 3)) then
-				v75 = EpicSettings['Settings']['HandleIncorporeal'];
+			if ((v162 == (1935 - (1813 + 118))) or ((670 + 246) == (3888 - (841 + 376)))) then
+				v75 = EpicSettings.Settings['HandleIncorporeal'];
 				break;
+			end
+			if (((380 - 108) == (64 + 208)) and (v162 == (2 - 1))) then
+				v77 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v78 = EpicSettings.Settings['InterruptThreshold'];
+				v80 = EpicSettings.Settings['useTrinkets'];
+				v162 = 861 - (464 + 395);
 			end
 		end
 	end
 	local function v122()
-		local v143 = 0;
-		while true do
-			if ((240 <= 3165) and (v143 == 1)) then
-				v39 = EpicSettings['Toggles']['cds'];
-				if ((834 >= 805) and v14:IsDeadOrGhost()) then
-					return;
+		v120();
+		v121();
+		v37 = EpicSettings.Toggles['ooc'];
+		v38 = EpicSettings.Toggles['aoe'];
+		v39 = EpicSettings.Toggles['cds'];
+		if (((10904 - 6655) <= (2324 + 2515)) and v14:IsDeadOrGhost()) then
+			return;
+		end
+		if (((3614 - (467 + 370)) < (6612 - 3412)) and v90.ImprovedDisrupt:IsAvailable()) then
+			v35 = 8 + 2;
+		end
+		v101 = v14:GetEnemiesInMeleeRange(v35);
+		if (((325 - 230) < (306 + 1651)) and v38) then
+			v102 = #v101;
+		else
+			v102 = 2 - 1;
+		end
+		v107();
+		v108();
+		v99 = v14:ActiveMitigationNeeded();
+		v100 = v14:IsTankingAoE(528 - (150 + 370)) or v14:IsTanking(v15);
+		if (((2108 - (74 + 1208)) < (4222 - 2505)) and (v27.TargetIsValid() or v14:AffectingCombat())) then
+			local v169 = 0 - 0;
+			while true do
+				if (((1015 + 411) >= (1495 - (14 + 376))) and ((0 - 0) == v169)) then
+					v104 = v10.BossFightRemains(nil, true);
+					v105 = v104;
+					v169 = 1 + 0;
 				end
-				if (v90['ImprovedDisrupt']:IsAvailable() or (3812 < 2316)) then
-					v35 = 10;
+				if (((2420 + 334) <= (3223 + 156)) and (v169 == (2 - 1))) then
+					if ((v105 == (8359 + 2752)) or ((4005 - (23 + 55)) == (3348 - 1935))) then
+						v105 = v10.FightRemains(v101, false);
+					end
+					break;
 				end
-				v101 = v14:GetEnemiesInMeleeRange(v35);
-				v143 = 2;
 			end
-			if ((v143 == 0) or (2652 <= 1533)) then
-				v120();
-				v121();
-				v37 = EpicSettings['Toggles']['ooc'];
-				v38 = EpicSettings['Toggles']['aoe'];
-				v143 = 1;
+		end
+		if (v75 or ((771 + 383) <= (708 + 80))) then
+			local v170 = 0 - 0;
+			while true do
+				if (((0 + 0) == v170) or ((2544 - (652 + 249)) > (9042 - 5663))) then
+					v36 = v27.HandleIncorporeal(v90.Imprison, v92.ImprisonMouseover, 1888 - (708 + 1160));
+					if (v36 or ((7608 - 4805) > (8293 - 3744))) then
+						return v36;
+					end
+					break;
+				end
 			end
-			if ((v143 == 3) or (3598 < 1460)) then
-				v100 = v14:IsTankingAoE(8) or v14:IsTanking(v15);
-				if (v27.TargetIsValid() or v14:AffectingCombat() or (4116 < 1192)) then
-					local v194 = 0;
-					while true do
-						if ((0 == v194) or (3377 <= 903)) then
-							v104 = v10.BossFightRemains(nil, true);
-							v105 = v104;
-							v194 = 1;
-						end
-						if ((3976 >= 439) and (v194 == 1)) then
-							if ((3752 == 3752) and (v105 == 11111)) then
-								v105 = v10.FightRemains(v101, false);
+		end
+		if ((v27.TargetIsValid() and not v14:IsChanneling() and not v14:IsCasting()) or ((247 - (10 + 17)) >= (679 + 2343))) then
+			local v171 = 1732 - (1400 + 332);
+			local v172;
+			local v173;
+			while true do
+				if (((5412 - 2590) == (4730 - (242 + 1666))) and (v171 == (2 + 2))) then
+					if ((v102 >= (3 + 3)) or ((905 + 156) == (2797 - (850 + 90)))) then
+						local v190 = 0 - 0;
+						local v191;
+						while true do
+							if (((4150 - (360 + 1030)) > (1208 + 156)) and (v190 == (0 - 0))) then
+								v191 = v115();
+								if (v191 or ((6743 - 1841) <= (5256 - (909 + 752)))) then
+									return v191;
+								end
+								break;
 							end
-							break;
 						end
 					end
+					break;
 				end
-				if ((4046 > 2695) and v75) then
-					local v195 = 0;
-					while true do
-						if ((0 == v195) or (3545 == 3197)) then
-							v36 = v27.HandleIncorporeal(v90.Imprison, v92.ImprisonMouseover, 20);
-							if ((2394 > 373) and v36) then
-								return v36;
+				if ((v171 == (1226 - (109 + 1114))) or ((7051 - 3199) == (115 + 178))) then
+					v173 = v117();
+					if (v173 or ((1801 - (6 + 236)) == (2891 + 1697))) then
+						return v173;
+					end
+					if ((v102 <= (1 + 0)) or ((10574 - 6090) == (1375 - 587))) then
+						local v192 = 1133 - (1076 + 57);
+						local v193;
+						while true do
+							if (((752 + 3816) >= (4596 - (579 + 110))) and (v192 == (0 + 0))) then
+								v193 = v118();
+								if (((1102 + 144) < (1842 + 1628)) and v193) then
+									return v193;
+								end
+								break;
 							end
-							break;
 						end
 					end
-				end
-				if ((4155 <= 4232) and v27.TargetIsValid() and not v14:IsChanneling() and not v14:IsCasting()) then
-					local v196 = 0;
-					local v197;
-					local v198;
-					while true do
-						if ((v196 == 1) or (3581 == 3473)) then
-							if ((4995 > 3348) and not v14:AffectingCombat() and v37) then
-								local v203 = 0;
-								while true do
-									if ((v203 == 0) or (754 > 3724)) then
-										v198 = v112();
-										if ((217 >= 57) and v198) then
-											return v198;
-										end
-										break;
-									end
+					if (((4475 - (174 + 233)) >= (2714 - 1742)) and (v102 > (1 - 0)) and (v102 <= (3 + 2))) then
+						local v194 = 1174 - (663 + 511);
+						local v195;
+						while true do
+							if (((440 + 53) < (846 + 3047)) and ((0 - 0) == v194)) then
+								v195 = v119();
+								if (v195 or ((892 + 581) >= (7844 - 4512))) then
+									return v195;
 								end
+								break;
 							end
-							if ((v90['ConsumeMagic']:IsAvailable() and v41 and v90['ConsumeMagic']:IsReady() and v72 and not v14:IsCasting() and not v14:IsChanneling() and v27.UnitHasMagicBuff(v15)) or (2070 >= 4037)) then
-								if ((2705 == 2705) and v25(v90.ConsumeMagic, not v15:IsSpellInRange(v90.ConsumeMagic))) then
-									return "greater_purge damage";
-								end
-							end
-							if ((61 == 61) and v100) then
-								local v204 = 0;
-								while true do
-									if ((v204 == 0) or (699 >= 1296)) then
-										v198 = v113();
-										if (v198 or (1783 >= 3616)) then
-											return v198;
-										end
-										break;
-									end
-								end
-							end
-							v196 = 2;
-						end
-						if ((v196 == 0) or (3913 > 4527)) then
-							v103 = (v90['FelDevastation']:CooldownRemains() < (v90['SoulCleave']:ExecuteTime() + v14:GCDRemains())) and (v14:Fury() < 50);
-							if ((4376 > 817) and v90['ThrowGlaive']:IsCastable() and v50 and v12.ValueIsInArray(v106, v15:NPCID())) then
-								if ((4861 > 824) and v25(v90.ThrowGlaive, not v15:IsSpellInRange(v90.ThrowGlaive))) then
-									return "fodder to the flames on those filthy demons";
-								end
-							end
-							if ((v90['ThrowGlaive']:IsReady() and v50 and v12.ValueIsInArray(v106, v16:NPCID())) or (1383 >= 2131)) then
-								if (v25(v92.ThrowGlaiveMouseover, not v15:IsSpellInRange(v90.ThrowGlaive)) or (1876 >= 2541)) then
-									return "fodder to the flames react per mouseover";
-								end
-							end
-							v196 = 1;
-						end
-						if ((1782 <= 3772) and (v196 == 4)) then
-							v198 = v117();
-							if (v198 or (4700 < 813)) then
-								return v198;
-							end
-							if ((3199 < 4050) and (v102 <= 1)) then
-								local v205 = 0;
-								local v206;
-								while true do
-									if ((v205 == 0) or (4951 < 4430)) then
-										v206 = v118();
-										if ((96 == 96) and v206) then
-											return v206;
-										end
-										break;
-									end
-								end
-							end
-							v196 = 5;
-						end
-						if ((v196 == 2) or (2739 > 4008)) then
-							if ((v90['InfernalStrike']:IsCastable() and (v45 or (v90['InfernalStrike']:ChargesFractional() > 1.9)) and (v90['InfernalStrike']:TimeSinceLastCast() > 2)) or (23 == 1134)) then
-								if (v25(v92.InfernalStrikePlayer, not v15:IsInMeleeRange(v35)) or (2693 >= 4111)) then
-									return "infernal_strike main 2";
-								end
-							end
-							if (((v79 < v105) and v90['Metamorphosis']:IsCastable() and v68 and v89 and v14:BuffDown(v90.MetamorphosisBuff) and v15:DebuffDown(v90.FieryBrandDebuff)) or (4316 <= 2146)) then
-								if (v25(v92.MetamorphosisPlayer, not v97) or (3546 <= 2809)) then
-									return "metamorphosis main 4";
-								end
-							end
-							v197 = v27.HandleDPSPotion();
-							v196 = 3;
-						end
-						if ((4904 > 2166) and (v196 == 5)) then
-							if ((109 >= 90) and (v102 > 1) and (v102 <= 5)) then
-								local v207 = 0;
-								local v208;
-								while true do
-									if ((4978 > 2905) and (v207 == 0)) then
-										v208 = v119();
-										if (v208 or (3026 <= 2280)) then
-											return v208;
-										end
-										break;
-									end
-								end
-							end
-							if ((v102 >= 6) or (1653 <= 1108)) then
-								local v209 = 0;
-								local v210;
-								while true do
-									if ((2909 > 2609) and (v209 == 0)) then
-										v210 = v115();
-										if ((757 > 194) and v210) then
-											return v210;
-										end
-										break;
-									end
-								end
-							end
-							break;
-						end
-						if ((3 == v196) or (31 >= 1398)) then
-							if ((3196 <= 4872) and v197) then
-								return v197;
-							end
-							if ((3326 == 3326) and (v79 < v105)) then
-								if ((1433 <= 3878) and v80 and ((v39 and v81) or not v81)) then
-									local v214 = 0;
-									while true do
-										if ((0 == v214) or (1583 == 1735)) then
-											v198 = v111();
-											if (v198 or (2981 == 2350)) then
-												return v198;
-											end
-											break;
-										end
-									end
-								end
-							end
-							if ((v90['FieryDemise']:IsAvailable() and (v90['FieryBrandDebuff']:AuraActiveCount() > 1)) or (4466 <= 493)) then
-								local v211 = 0;
-								local v212;
-								while true do
-									if ((v211 == 0) or (2547 <= 1987)) then
-										v212 = v116();
-										if ((2961 > 2740) and v212) then
-											return v212;
-										end
-										break;
-									end
-								end
-							end
-							v196 = 4;
 						end
 					end
+					v171 = 9 - 5;
 				end
-				break;
-			end
-			if ((3696 >= 3612) and (2 == v143)) then
-				if (v38 or (2970 == 1878)) then
-					v102 = #v101;
-				else
-					v102 = 1;
+				if ((v171 == (0 + 0)) or ((7884 - 3833) <= (825 + 332))) then
+					v103 = (v90.FelDevastation:CooldownRemains() < (v90.SoulCleave:ExecuteTime() + v14:GCDRemains())) and (v14:Fury() < (5 + 45));
+					if (((1326 - (478 + 244)) < (3398 - (440 + 77))) and v90.ThrowGlaive:IsCastable() and v50 and v12.ValueIsInArray(v106, v15:NPCID())) then
+						if (v25(v90.ThrowGlaive, not v15:IsSpellInRange(v90.ThrowGlaive)) or ((410 + 490) == (12360 - 8983))) then
+							return "fodder to the flames on those filthy demons";
+						end
+					end
+					if (((6015 - (655 + 901)) > (110 + 481)) and v90.ThrowGlaive:IsReady() and v50 and v12.ValueIsInArray(v106, v16:NPCID())) then
+						if (((2602 + 796) >= (1618 + 777)) and v25(v92.ThrowGlaiveMouseover, not v15:IsSpellInRange(v90.ThrowGlaive))) then
+							return "fodder to the flames react per mouseover";
+						end
+					end
+					if ((not v14:AffectingCombat() and v37) or ((8794 - 6611) >= (4269 - (695 + 750)))) then
+						v173 = v112();
+						if (((6610 - 4674) == (2987 - 1051)) and v173) then
+							return v173;
+						end
+					end
+					v171 = 3 - 2;
 				end
-				v107();
-				v108();
-				v99 = v14:ActiveMitigationNeeded();
-				v143 = 3;
+				if ((v171 == (352 - (285 + 66))) or ((11263 - 6431) < (5623 - (682 + 628)))) then
+					if (((659 + 3429) > (4173 - (176 + 123))) and v90.ConsumeMagic:IsAvailable() and v41 and v90.ConsumeMagic:IsReady() and v72 and not v14:IsCasting() and not v14:IsChanneling() and v27.UnitHasMagicBuff(v15)) then
+						if (((1813 + 2519) == (3143 + 1189)) and v25(v90.ConsumeMagic, not v15:IsSpellInRange(v90.ConsumeMagic))) then
+							return "greater_purge damage";
+						end
+					end
+					if (((4268 - (239 + 30)) >= (789 + 2111)) and v100) then
+						v173 = v113();
+						if (v173 or ((2427 + 98) > (7192 - 3128))) then
+							return v173;
+						end
+					end
+					if (((13636 - 9265) == (4686 - (306 + 9))) and v90.InfernalStrike:IsCastable() and (v45 or (v90.InfernalStrike:ChargesFractional() > (3.9 - 2))) and (v90.InfernalStrike:TimeSinceLastCast() > (1 + 1))) then
+						if (v25(v92.InfernalStrikePlayer, not v15:IsInMeleeRange(v35)) or ((164 + 102) > (2400 + 2586))) then
+							return "infernal_strike main 2";
+						end
+					end
+					if (((5693 - 3702) >= (2300 - (1140 + 235))) and (v79 < v105) and v90.Metamorphosis:IsCastable() and v68 and v89 and v14:BuffDown(v90.MetamorphosisBuff) and v15:DebuffDown(v90.FieryBrandDebuff)) then
+						if (((290 + 165) < (1883 + 170)) and v25(v92.MetamorphosisPlayer, not v97)) then
+							return "metamorphosis main 4";
+						end
+					end
+					v171 = 1 + 1;
+				end
+				if (((54 - (33 + 19)) == v171) or ((299 + 527) == (14539 - 9688))) then
+					v172 = v27.HandleDPSPotion();
+					if (((81 + 102) == (358 - 175)) and v172) then
+						return v172;
+					end
+					if (((1087 + 72) <= (2477 - (586 + 103))) and (v79 < v105)) then
+						if ((v80 and ((v39 and v81) or not v81)) or ((320 + 3187) > (13293 - 8975))) then
+							local v197 = 1488 - (1309 + 179);
+							while true do
+								if ((v197 == (0 - 0)) or ((1339 + 1736) <= (7962 - 4997))) then
+									v173 = v111();
+									if (((1032 + 333) <= (4272 - 2261)) and v173) then
+										return v173;
+									end
+									break;
+								end
+							end
+						end
+					end
+					if ((v90.FieryDemise:IsAvailable() and (v90.FieryBrandDebuff:AuraActiveCount() > (1 - 0))) or ((3385 - (295 + 314)) > (8780 - 5205))) then
+						local v196 = v116();
+						if (v196 or ((4516 - (1300 + 662)) == (15085 - 10281))) then
+							return v196;
+						end
+					end
+					v171 = 1758 - (1178 + 577);
+				end
 			end
 		end
 	end
 	local function v123()
-		local v144 = 0;
-		while true do
-			if ((v144 == 0) or (3693 < 1977)) then
-				v20.Print("Vengeance Demon Hunter by Epic. Supported by xKaneto.");
-				v90['FieryBrandDebuff']:RegisterAuraTracking();
-				break;
-			end
-		end
+		v20.Print("Vengeance Demon Hunter by Epic. Supported by xKaneto.");
+		v90.FieryBrandDebuff:RegisterAuraTracking();
 	end
-	v20.SetAPL(581, v122, v123);
+	v20.SetAPL(302 + 279, v122, v123);
 end;
 return v0["Epix_DemonHunter_Vengeance.lua"]();
 
