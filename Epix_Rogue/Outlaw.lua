@@ -1,56 +1,34 @@
-local obf_stringchar = string.char;
-local obf_stringbyte = string.byte;
-local obf_stringsub = string.sub;
-local obf_bitlib = bit32 or bit;
-local obf_XOR = obf_bitlib.bxor;
-local obf_tableconcat = table.concat;
-local obf_tableinsert = table.insert;
-local function LUAOBFUSACTOR_DECRYPT_STR_0(LUAOBFUSACTOR_STR, LUAOBFUSACTOR_KEY)
-	local result = {};
-	for i = 1, #LUAOBFUSACTOR_STR do
-		obf_tableinsert(result, obf_stringchar(obf_XOR(obf_stringbyte(obf_stringsub(LUAOBFUSACTOR_STR, i, i + 1)), obf_stringbyte(obf_stringsub(LUAOBFUSACTOR_KEY, 1 + (i % #LUAOBFUSACTOR_KEY), 1 + (i % #LUAOBFUSACTOR_KEY) + 1))) % 256));
-	end
-	return obf_tableconcat(result);
-end
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 0;
-	local v6;
-	while true do
-		if ((2851 > 1859) and (0 == v5)) then
-			v6 = v0[v4];
-			if ((3848 > 2323) and not v6) then
-				return v1(v4, ...);
-			end
-			v5 = 1;
-		end
-		if ((2836 > 469) and (1 == v5)) then
-			return v6(...);
-		end
+	local v5 = v0[v4];
+	if (((19 + 657) == (1165 - 489)) and not v5) then
+		return v1(v4, ...);
 	end
+	return v5(...);
 end
-v0[LUAOBFUSACTOR_DECRYPT_STR_0("\244\211\210\61\217\137\200\25\196\198\228\10\243\175\203\31\198\141\215\48\231", "\126\177\163\187\69\134\219\167")] = function(...)
-	local v7, v8 = ...;
-	local v9 = EpicDBC[LUAOBFUSACTOR_DECRYPT_STR_0("\7\239\9", "\156\67\173\74\165")];
-	local v10 = EpicLib;
-	local v11 = EpicCache;
-	local v12 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\1\163\64\26\175", "\38\84\215\41\118\220\70")];
-	local v13 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\101\24\43\6", "\158\48\118\66\114")];
-	local v14 = v13[LUAOBFUSACTOR_DECRYPT_STR_0("\155\40\17\47\118\183", "\155\203\68\112\86\19\197")];
-	local v15 = v13[LUAOBFUSACTOR_DECRYPT_STR_0("\114\220\36\251\69\108", "\152\38\189\86\156\32\24\133")];
-	local v16 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\207\71\162\74\240", "\38\156\55\199")];
-	local v17 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\133\104\112\60\26\71\234\70\164\113", "\35\200\29\28\72\115\20\154")];
-	local v18 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\48\171\212\210", "\84\121\223\177\191\237\76")];
-	local v19 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\150\87\202\178\53", "\161\219\54\169\192\90\48\80")];
-	local v20 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\106\77\13\40\70\76\19", "\69\41\34\96")][LUAOBFUSACTOR_DECRYPT_STR_0("\153\213\210\24\27\36\178\198", "\75\220\163\183\106\98")][LUAOBFUSACTOR_DECRYPT_STR_0("\12\175\134", "\185\98\218\235\87")];
-	local v21 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\232\51\42\235\209\164\216", "\202\171\92\71\134\190")][LUAOBFUSACTOR_DECRYPT_STR_0("\12\215\41\154\48\206\34\141", "\232\73\161\76")][LUAOBFUSACTOR_DECRYPT_STR_0("\185\214\77\81", "\126\219\185\34\61")];
-	local v22 = math[LUAOBFUSACTOR_DECRYPT_STR_0("\1\199\80", "\135\108\174\62\18\30\23\147")];
-	local v23 = math[LUAOBFUSACTOR_DECRYPT_STR_0("\183\235\57", "\167\214\137\74\171\120\206\83")];
-	local v24 = math[LUAOBFUSACTOR_DECRYPT_STR_0("\134\241\42", "\199\235\144\82\61\152")];
+v0["Epix_Rogue_Outlaw.lua"] = function(...)
+	local v6, v7 = ...;
+	local v8 = EpicDBC.DBC;
+	local v9 = EpicLib;
+	local v10 = EpicCache;
+	local v11 = v9.Utils;
+	local v12 = v9.Unit;
+	local v13 = v12.Player;
+	local v14 = v12.Target;
+	local v15 = v9.Spell;
+	local v16 = v9.MultiSpell;
+	local v17 = v9.Item;
+	local v18 = v9.Macro;
+	local v19 = v9.Commons.Everyone.num;
+	local v20 = v9.Commons.Everyone.bool;
+	local v21 = math.min;
+	local v22 = math.abs;
+	local v23 = math.max;
+	local v24 = false;
 	local v25 = false;
 	local v26 = false;
-	local v27 = false;
+	local v27;
 	local v28;
 	local v29;
 	local v30;
@@ -100,905 +78,834 @@ v0[LUAOBFUSACTOR_DECRYPT_STR_0("\244\211\210\61\217\137\200\25\196\198\228\10\24
 	local v74;
 	local v75;
 	local v76;
-	local v77;
-	local function v78()
-		local v125 = 0;
+	local function v77()
+		local v124 = 0 - 0;
 		while true do
-			if ((v125 == 6) or (2096 <= 540)) then
-				v75 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\125\18\37\188\248\190\66\73", "\58\46\119\81\200\145\208\37")][LUAOBFUSACTOR_DECRYPT_STR_0("\14\143\56\163\160\179\49\25\137\32\190\160\176\55\37\136", "\86\75\236\80\204\201\221")];
-				v76 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\65\68\99\145\247\133\117\82", "\235\18\33\23\229\158")][LUAOBFUSACTOR_DECRYPT_STR_0("\101\169\196\136\95\182\206\141\81\180\200\168\88", "\219\48\218\161")];
-				v77 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\215\116\104\93\210\65\231\247", "\128\132\17\28\41\187\47")][LUAOBFUSACTOR_DECRYPT_STR_0("\18\55\22\41\84\18", "\61\97\82\102\90")];
+			if (((611 + 3525) > (1842 + 555)) and (v124 == (1 + 4))) then
+				v69 = EpicSettings.Settings['BladeRushGCD'];
+				v70 = EpicSettings.Settings['GhostlyStrikeGCD'];
+				v72 = EpicSettings.Settings['KeepItRollingGCD'];
+				v73 = EpicSettings.Settings['AdrenalineRushOffGCD'];
+				v124 = 2 + 4;
+			end
+			if ((v124 == (2 - 1)) or ((14452 - 10118) == (1519 + 2726))) then
+				v32 = EpicSettings.Settings['UseHealthstone'];
+				v33 = EpicSettings.Settings['HealthstoneHP'] or (0 + 0);
+				v34 = EpicSettings.Settings['InterruptWithStun'] or (0 + 0);
+				v35 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (0 + 0);
+				v124 = 1 + 1;
+			end
+			if ((v124 == (1436 - (797 + 636))) or ((20761 - 16485) <= (4650 - (1427 + 192)))) then
+				v53 = EpicSettings.Settings['ColdBloodOffGCD'];
+				v54 = EpicSettings.Settings['MarkedforDeathOffGCD'];
+				v55 = EpicSettings.Settings['CrimsonVialHP'] or (0 + 0);
+				v56 = EpicSettings.Settings['FeintHP'] or (0 - 0);
+				v124 = 4 + 0;
+			end
+			if (((3 + 3) == v124) or ((5108 - (192 + 134)) <= (2475 - (316 + 960)))) then
+				v74 = EpicSettings.Settings['EchoingReprimand'];
+				v75 = EpicSettings.Settings['UseSoloVanish'];
+				v76 = EpicSettings.Settings['sepsis'];
 				break;
 			end
-			if ((v125 == 1) or (3183 < 2645)) then
-				v33 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\225\227\37\166\175\240\12\193", "\107\178\134\81\210\198\158")][LUAOBFUSACTOR_DECRYPT_STR_0("\13\29\135\238\175\57\2\150\206\185\44\1\140\195", "\202\88\110\226\166")];
-				v34 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\240\10\150\227\195\205\8\145", "\170\163\111\226\151")][LUAOBFUSACTOR_DECRYPT_STR_0("\57\53\179\52\90\63\58\5\63\188\61\102\7", "\73\113\80\210\88\46\87")] or 0;
-				v35 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\178\41\217\6\238\143\43\222", "\135\225\76\173\114")][LUAOBFUSACTOR_DECRYPT_STR_0("\51\227\172\181\190\175\178\10\249\143\185\184\181\148\14\248\182", "\199\122\141\216\208\204\221")] or 0;
-				v36 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\158\216\4\228\113\248\170\206", "\150\205\189\112\144\24")][LUAOBFUSACTOR_DECRYPT_STR_0("\12\138\171\73\22\154\4\0\49\171\177\64\29\191\25\25\49\129\179\69\23\156", "\112\69\228\223\44\100\232\113")] or 0;
-				v125 = 2;
+			if ((v124 == (3 + 1)) or ((3754 + 1110) < (1759 + 143))) then
+				v57 = EpicSettings.Settings['StealthOOC'];
+				v62 = EpicSettings.Settings['RolltheBonesLogic'];
+				v65 = EpicSettings.Settings['UseDPSVanish'];
+				v68 = EpicSettings.Settings['BladeFlurryGCD'];
+				v124 = 18 - 13;
 			end
-			if ((3230 <= 3760) and (v125 == 5)) then
-				v70 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\75\130\58\3\113\137\41\4", "\119\24\231\78")][LUAOBFUSACTOR_DECRYPT_STR_0("\160\33\164\78\217\114\4\145\37\130\105\248", "\113\226\77\197\42\188\32")];
-				v71 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\9\19\224\161\51\24\243\166", "\213\90\118\148")][LUAOBFUSACTOR_DECRYPT_STR_0("\124\38\187\69\89\87\55\135\66\95\82\37\177\113\110\127", "\45\59\78\212\54")];
-				v73 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\35\83\151\159\143\32\170\227", "\144\112\54\227\235\230\78\205")][LUAOBFUSACTOR_DECRYPT_STR_0("\152\45\10\236\249\79\129\39\3\240\217\85\180\15\44\216", "\59\211\72\111\156\176")];
-				v74 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\125\130\247\57\71\137\228\62", "\77\46\231\131")][LUAOBFUSACTOR_DECRYPT_STR_0("\155\80\164\69\180\85\186\73\180\81\132\85\169\92\153\70\188\115\149\100", "\32\218\52\214")];
-				v125 = 6;
+			if (((5390 - (83 + 468)) >= (5506 - (1202 + 604))) and (v124 == (9 - 7))) then
+				v36 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
+				v50 = EpicSettings.Settings['VanishOffGCD'];
+				v51 = EpicSettings.Settings['ShadowDanceOffGCD'];
+				v52 = EpicSettings.Settings['ThistleTeaOffGCD'];
+				v124 = 8 - 5;
 			end
-			if ((3828 == 3828) and (v125 == 4)) then
-				v58 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\157\89\39\47\38\63\169\79", "\81\206\60\83\91\79")][LUAOBFUSACTOR_DECRYPT_STR_0("\125\191\213\115\35\215\69\139\97\136", "\196\46\203\176\18\79\163\45")];
-				v63 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\139\39\106\10\45\245\232\171", "\143\216\66\30\126\68\155")][LUAOBFUSACTOR_DECRYPT_STR_0("\152\199\1\199\209\171\210\195\165\198\8\216\233\172\208\232\169", "\129\202\168\109\171\165\195\183")];
-				v66 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\17\93\35\204\215\26\225\49", "\134\66\56\87\184\190\116")][LUAOBFUSACTOR_DECRYPT_STR_0("\9\34\12\159\41\216\23\52\50\56\26\179", "\85\92\81\105\219\121\139\65")];
-				v69 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\206\182\68\81\117\209\250\160", "\191\157\211\48\37\28")][LUAOBFUSACTOR_DECRYPT_STR_0("\253\19\245\24\63\249\19\225\14\40\198\56\215\56", "\90\191\127\148\124")];
-				v125 = 5;
-			end
-			if ((554 == 554) and (v125 == 2)) then
-				v37 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\231\26\19\199\191\114\129\199", "\230\180\127\103\179\214\28")][LUAOBFUSACTOR_DECRYPT_STR_0("\165\11\75\67\246\83\245\156\17\107\78\246\68\243\132\10\83\66", "\128\236\101\63\38\132\33")] or 0;
-				v51 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\159\172\5\80\191\229\200\191", "\175\204\201\113\36\214\139")][LUAOBFUSACTOR_DECRYPT_STR_0("\113\205\59\213\23\79\227\51\218\35\100\232", "\100\39\172\85\188")];
-				v52 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\158\125\173\148\58\163\127\170", "\83\205\24\217\224")][LUAOBFUSACTOR_DECRYPT_STR_0("\213\205\204\57\233\210\233\60\232\198\200\18\224\195\234\30\194", "\93\134\165\173")];
-				v53 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\141\247\213\214\51\192\181\109", "\30\222\146\161\162\90\174\210")][LUAOBFUSACTOR_DECRYPT_STR_0("\209\70\121\25\241\66\117\62\224\79\95\12\227\105\83\46", "\106\133\46\16")];
-				v125 = 3;
-			end
-			if ((v125 == 0) or (2563 == 172)) then
-				v28 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\52\19\173\63\14\24\190\56", "\75\103\118\217")][LUAOBFUSACTOR_DECRYPT_STR_0("\242\71\117\38\184\29\206\85\124\7", "\126\167\52\16\116\217")];
-				v30 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\251\43\52\148\189\23\251\219", "\156\168\78\64\224\212\121")][LUAOBFUSACTOR_DECRYPT_STR_0("\50\253\160\230\2\239\169\199\9\233\149\193\19\231\170\192", "\174\103\142\197")];
-				v31 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\101\45\75\44\44\80\255\69", "\152\54\72\63\88\69\62")][LUAOBFUSACTOR_DECRYPT_STR_0("\252\193\239\80\221\202\233\108\219\208\231\83\218\234\239\81\209", "\60\180\164\142")] or 0;
-				v32 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\107\91\17\61\46\227\21\75", "\114\56\62\101\73\71\141")][LUAOBFUSACTOR_DECRYPT_STR_0("\144\236\218\200\177\231\220\244\183\253\210\203\182\193\235", "\164\216\137\187")] or 0;
-				v125 = 1;
-			end
-			if ((3889 >= 131) and (v125 == 3)) then
-				v54 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\107\37\103\232\83\78\95\51", "\32\56\64\19\156\58")][LUAOBFUSACTOR_DECRYPT_STR_0("\121\199\233\82\120\254\143\85\204\202\80\92\213\163\126", "\224\58\168\133\54\58\146")];
-				v55 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\106\83\95\233\124\136\128\24", "\107\57\54\43\157\21\230\231")][LUAOBFUSACTOR_DECRYPT_STR_0("\246\138\3\254\188\216\201\212\153\53\240\184\200\199\244\141\23\210\154\248", "\175\187\235\113\149\217\188")];
-				v56 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\15\170\149\88\234\119\127\47", "\24\92\207\225\44\131\25")][LUAOBFUSACTOR_DECRYPT_STR_0("\104\193\177\65\8\114\69\229\177\77\23\85\123", "\29\43\179\216\44\123")] or 0;
-				v57 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\142\220\52\88\180\215\39\95", "\44\221\185\64")][LUAOBFUSACTOR_DECRYPT_STR_0("\39\226\65\81\103\41\215", "\19\97\135\40\63")] or 0;
-				v125 = 4;
+			if ((v124 == (325 - (45 + 280))) or ((1038 + 37) > (1676 + 242))) then
+				v27 = EpicSettings.Settings['UseRacials'];
+				v29 = EpicSettings.Settings['UseHealingPotion'];
+				v30 = EpicSettings.Settings['HealingPotionName'] or (0 + 0);
+				v31 = EpicSettings.Settings['HealingPotionHP'] or (0 + 0);
+				v124 = 1 + 0;
 			end
 		end
 	end
-	local v79 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\143\33\166\70\200\89\13", "\105\204\78\203\43\167\55\126")][LUAOBFUSACTOR_DECRYPT_STR_0("\128\188\38\12\10\11\201\84", "\49\197\202\67\126\115\100\167")];
-	local v80 = v10[LUAOBFUSACTOR_DECRYPT_STR_0("\20\84\210\36\143\88\77", "\62\87\59\191\73\224\54")][LUAOBFUSACTOR_DECRYPT_STR_0("\213\13\253\220\226", "\169\135\98\154")];
-	local v81 = v16[LUAOBFUSACTOR_DECRYPT_STR_0("\249\120\35\65\248", "\168\171\23\68\52\157\83")][LUAOBFUSACTOR_DECRYPT_STR_0("\219\100\225\161\36\58", "\231\148\17\149\205\69\77")];
-	local v82 = v18[LUAOBFUSACTOR_DECRYPT_STR_0("\178\168\192\238\82", "\159\224\199\167\155\55")][LUAOBFUSACTOR_DECRYPT_STR_0("\216\230\40\222\246\228", "\178\151\147\92")];
-	local v83 = v19[LUAOBFUSACTOR_DECRYPT_STR_0("\190\242\75\39\23", "\26\236\157\44\82\114\44")][LUAOBFUSACTOR_DECRYPT_STR_0("\5\59\193\87\43\57", "\59\74\78\181")];
-	local v84 = {v82[LUAOBFUSACTOR_DECRYPT_STR_0("\8\208\84\83\176\2\195\83\95\181\49\222\72\89\187", "\211\69\177\58\58")]:ID(),v82[LUAOBFUSACTOR_DECRYPT_STR_0("\147\247\120\242\230\197\177\236\107\240\203\196\186\231\93\252\250\219\178\235\106\240\251", "\171\215\133\25\149\137")]:ID(),v82[LUAOBFUSACTOR_DECRYPT_STR_0("\195\205\51\249\224\62\200\77\213\192\55\216\234\41\243\76\229", "\34\129\168\82\154\143\80\156")]:ID()};
-	local v85 = v14:GetEquipment();
-	local v86 = (v85[13] and v18(v85[13])) or v18(0);
-	local v87 = (v85[14] and v18(v85[14])) or v18(0);
-	v10:RegisterForEvent(function()
-		local v126 = 0;
+	local v78 = v9.Commons.Everyone;
+	local v79 = v9.Commons.Rogue;
+	local v80 = v15.Rogue.Outlaw;
+	local v81 = v17.Rogue.Outlaw;
+	local v82 = v18.Rogue.Outlaw;
+	local v83 = {v81.ManicGrieftorch:ID(),v81.DragonfireBombDispenser:ID(),v81.BeaconToTheBeyond:ID()};
+	local v84 = v13:GetEquipment();
+	local v85 = (v84[1785 - (1733 + 39)] and v17(v84[35 - 22])) or v17(1034 - (125 + 909));
+	local v86 = (v84[1962 - (1096 + 852)] and v17(v84[7 + 7])) or v17(0 - 0);
+	v9:RegisterForEvent(function()
+		local v125 = 0 + 0;
 		while true do
-			if ((v126 == 0) or (492 == 4578)) then
-				v85 = v14:GetEquipment();
-				v86 = (v85[13] and v18(v85[13])) or v18(0);
-				v126 = 1;
+			if (((908 - (409 + 103)) <= (4040 - (46 + 190))) and (v125 == (95 - (51 + 44)))) then
+				v84 = v13:GetEquipment();
+				v85 = (v84[4 + 9] and v17(v84[1330 - (1114 + 203)])) or v17(726 - (228 + 498));
+				v125 = 1 + 0;
 			end
-			if ((v126 == 1) or (4112 < 1816)) then
-				v87 = (v85[14] and v18(v85[14])) or v18(0);
+			if ((v125 == (1 + 0)) or ((4832 - (174 + 489)) == (5697 - 3510))) then
+				v86 = (v84[1919 - (830 + 1075)] and v17(v84[538 - (303 + 221)])) or v17(1269 - (231 + 1038));
 				break;
 			end
 		end
-	end, LUAOBFUSACTOR_DECRYPT_STR_0("\181\158\18\50\109\124\182\160\131\6\34\120\99\172\171\134\12\40\96\111\167\162\151\23", "\233\229\210\83\107\40\46"));
-	v81[LUAOBFUSACTOR_DECRYPT_STR_0("\229\75\33\198\4\213\65\58", "\101\161\34\82\182")]:RegisterDamageFormula(function()
-		return v14:AttackPowerDamageMod() * v80.CPSpend() * 0.3 * 1 * (1 + (v14:VersatilityDmgPct() / 100)) * ((v15:DebuffUp(v81.GhostlyStrike) and 1.1) or 1);
+	end, "PLAYER_EQUIPMENT_CHANGED");
+	v80.Dispatch:RegisterDamageFormula(function()
+		return v13:AttackPowerDamageMod() * v79.CPSpend() * (0.3 + 0) * (1163 - (171 + 991)) * ((4 - 3) + (v13:VersatilityDmgPct() / (268 - 168))) * ((v14:DebuffUp(v80.GhostlyStrike) and (2.1 - 1)) or (1 + 0));
 	end);
-	local v88, v89, v90;
-	local v91;
-	local v92 = 6;
-	local v93;
-	local v94, v95, v96;
-	local v97, v98, v99, v100, v101;
-	local v102 = {{v81[LUAOBFUSACTOR_DECRYPT_STR_0("\202\1\80\240\223", "\78\136\109\57\158\187\130\226")],LUAOBFUSACTOR_DECRYPT_STR_0("\29\62\234\229\126\29\245\248\48\59\185\185\23\49\237\244\44\45\236\225\42\118", "\145\94\95\153"),function()
+	local v87, v88, v89;
+	local v90;
+	local v91 = 20 - 14;
+	local v92;
+	local v93, v94, v95;
+	local v96, v97, v98, v99, v100;
+	local v101 = {{v80.Blind,"Cast Blind (Interrupt)",function()
 		return true;
 	end}};
-	local v103, v104 = 0, 0;
-	local function v105(v127)
-		local v128 = 0;
-		local v129;
+	local v102, v103 = 158 - (91 + 67), 0 - 0;
+	local function v104(v126)
+		local v127 = 0 + 0;
+		local v128;
 		while true do
-			if ((4525 >= 1223) and (v128 == 1)) then
-				return v103;
-			end
-			if ((1090 <= 4827) and (v128 == 0)) then
-				v129 = v14:EnergyTimeToMaxPredicted(nil, v127);
-				if ((v129 < v103) or ((v129 - v103) > 0.5) or (239 > 1345)) then
-					v103 = v129;
+			if (((1929 - (423 + 100)) == (10 + 1396)) and ((0 - 0) == v127)) then
+				v128 = v13:EnergyTimeToMaxPredicted(nil, v126);
+				if (((798 + 733) < (5042 - (326 + 445))) and ((v128 < v102) or ((v128 - v102) > (0.5 - 0)))) then
+					v102 = v128;
 				end
-				v128 = 1;
+				v127 = 2 - 1;
+			end
+			if (((1481 - 846) == (1346 - (530 + 181))) and (v127 == (882 - (614 + 267)))) then
+				return v102;
 			end
 		end
 	end
-	local function v106()
-		local v130 = 0;
-		local v131;
-		while true do
-			if ((v130 == 0) or (3710 >= 3738)) then
-				v131 = v14:EnergyPredicted();
-				if ((v131 > v104) or ((v131 - v104) > 9) or (3838 < 2061)) then
-					v104 = v131;
-				end
-				v130 = 1;
-			end
-			if ((v130 == 1) or (690 > 1172)) then
-				return v104;
-			end
+	local function v105()
+		local v129 = v13:EnergyPredicted();
+		if (((3405 - (19 + 13)) <= (5787 - 2231)) and ((v129 > v103) or ((v129 - v103) > (20 - 11)))) then
+			v103 = v129;
 		end
+		return v103;
 	end
-	local v107 = {v81[LUAOBFUSACTOR_DECRYPT_STR_0("\223\223\27\212\74\164\244\201\17", "\215\157\173\116\181\46")],v81[LUAOBFUSACTOR_DECRYPT_STR_0("\23\161\153\251\223\49\128\153\247\219\38\161\153\247", "\186\85\212\235\146")],v81[LUAOBFUSACTOR_DECRYPT_STR_0("\229\147\23\240\61\195\93\206\132\19", "\56\162\225\118\158\89\142")],v81[LUAOBFUSACTOR_DECRYPT_STR_0("\110\16\212\167\46\221\79\22\240\189\39\219\85\22\201\160\44", "\184\60\101\160\207\66")],v81[LUAOBFUSACTOR_DECRYPT_STR_0("\2\137\105\176\61\131\114\184\18\144\115\175\34\128\115\178\52\145", "\220\81\226\28")],v81[LUAOBFUSACTOR_DECRYPT_STR_0("\39\199\151\254\200\194\18\199\139\245\237", "\167\115\181\226\155\138")]};
-	local function v108(v132, v133)
-		local v134 = 0;
-		local v135;
+	local v106 = {v80.Broadside,v80.BuriedTreasure,v80.GrandMelee,v80.RuthlessPrecision,v80.SkullandCrossbones,v80.TrueBearing};
+	local function v107(v130, v131)
+		local v132 = 0 - 0;
+		local v133;
 		while true do
-			if ((v134 == 0) or (1592 > 2599)) then
-				if ((3574 <= 4397) and not v11[LUAOBFUSACTOR_DECRYPT_STR_0("\195\18\203\106\122\99", "\166\130\66\135\60\27\17")][LUAOBFUSACTOR_DECRYPT_STR_0("\118\94\236\74\28\77\89\218", "\80\36\42\174\21")]) then
-					v11[LUAOBFUSACTOR_DECRYPT_STR_0("\111\32\27\76\79\2", "\26\46\112\87")][LUAOBFUSACTOR_DECRYPT_STR_0("\139\55\137\75\147\182\86\160", "\212\217\67\203\20\223\223\37")] = {};
-				end
-				if ((3135 > 1330) and not v11[LUAOBFUSACTOR_DECRYPT_STR_0("\155\189\132\228\187\159", "\178\218\237\200")][LUAOBFUSACTOR_DECRYPT_STR_0("\132\161\196\239\154\188\245\196", "\176\214\213\134")][v132]) then
-					v11[LUAOBFUSACTOR_DECRYPT_STR_0("\213\157\154\226\169\68", "\57\148\205\214\180\200\54")][LUAOBFUSACTOR_DECRYPT_STR_0("\32\233\23\11\90\27\238\33", "\22\114\157\85\84")][v132] = {};
-				end
-				v134 = 1;
+			if (((3 - 1) == v132) or ((14191 - 10900) < (7726 - 4446))) then
+				return v10.APLVar.RtB_List[v130][v133];
 			end
-			if ((v134 == 2) or (3900 <= 3641)) then
-				return v11[LUAOBFUSACTOR_DECRYPT_STR_0("\165\113\116\24\133\83", "\78\228\33\56")][LUAOBFUSACTOR_DECRYPT_STR_0("\252\106\144\60\169\199\109\166", "\229\174\30\210\99")][v132][v135];
-			end
-			if ((1724 == 1724) and (v134 == 1)) then
-				v135 = table.concat(v133);
-				if ((455 <= 1282) and (v132 == LUAOBFUSACTOR_DECRYPT_STR_0("\229\199\31", "\200\164\171\115\164\61\150"))) then
-					if ((4606 < 4876) and not v11[LUAOBFUSACTOR_DECRYPT_STR_0("\159\196\47\115\130\172", "\227\222\148\99\37")][LUAOBFUSACTOR_DECRYPT_STR_0("\1\70\112\201\213\58\65\70", "\153\83\50\50\150")][v132][v135]) then
-						local v176 = 0;
-						local v177;
-						while true do
-							if ((0 == v176) or (1442 > 2640)) then
-								v177 = 0;
-								for v194 = 1, #v133 do
-									if ((136 < 3668) and v14:BuffUp(v107[v133[v194]])) then
-										v177 = v177 + 1;
-									end
-								end
-								v176 = 1;
-							end
-							if ((v176 == 1) or (1784 > 4781)) then
-								v11[LUAOBFUSACTOR_DECRYPT_STR_0("\124\70\95\42\114\185", "\45\61\22\19\124\19\203")][LUAOBFUSACTOR_DECRYPT_STR_0("\243\6\47\202\46\121\170\213", "\217\161\114\109\149\98\16")][v132][v135] = ((v177 == #v133) and true) or false;
-								break;
+			if (((2324 + 2062) >= (179 + 694)) and ((2 - 1) == v132)) then
+				v133 = table.concat(v131);
+				if (((213 + 708) <= (367 + 735)) and (v130 == "All")) then
+					if (((2941 + 1765) >= (2059 - (709 + 387))) and not v10.APLVar.RtB_List[v130][v133]) then
+						local v170 = 1858 - (673 + 1185);
+						for v175 = 2 - 1, #v131 do
+							if (v13:BuffUp(v106[v131[v175]]) or ((3082 - 2122) <= (1440 - 564))) then
+								v170 = v170 + 1 + 0;
 							end
 						end
+						v10.APLVar.RtB_List[v130][v133] = ((v170 == #v131) and true) or false;
 					end
-				elseif ((4585 > 3298) and not v11[LUAOBFUSACTOR_DECRYPT_STR_0("\51\16\20\74\189\102", "\20\114\64\88\28\220")][LUAOBFUSACTOR_DECRYPT_STR_0("\3\21\240\139\212\217\174\37", "\221\81\97\178\212\152\176")][v132][v135]) then
-					local v178 = 0;
+				elseif (not v10.APLVar.RtB_List[v130][v133] or ((1544 + 522) == (1257 - 325))) then
+					v10.APLVar.RtB_List[v130][v133] = false;
+					for v176 = 1 + 0, #v131 do
+						if (((9620 - 4795) < (9506 - 4663)) and v13:BuffUp(v106[v131[v176]])) then
+							v10.APLVar.RtB_List[v130][v133] = true;
+							break;
+						end
+					end
+				end
+				v132 = 1882 - (446 + 1434);
+			end
+			if ((v132 == (1283 - (1040 + 243))) or ((11571 - 7694) >= (6384 - (559 + 1288)))) then
+				if (not v10.APLVar.RtB_List or ((6246 - (609 + 1322)) < (2180 - (13 + 441)))) then
+					v10.APLVar.RtB_List = {};
+				end
+				if (not v10.APLVar.RtB_List[v130] or ((13747 - 10068) < (1637 - 1012))) then
+					v10.APLVar.RtB_List[v130] = {};
+				end
+				v132 = 4 - 3;
+			end
+		end
+	end
+	local function v108()
+		local v134 = 0 + 0;
+		while true do
+			if ((v134 == (0 - 0)) or ((1643 + 2982) < (277 + 355))) then
+				if (not v10.APLVar.RtB_Buffs or ((246 - 163) > (975 + 805))) then
+					local v165 = 0 - 0;
+					local v166;
 					while true do
-						if ((v178 == 0) or (1664 > 1698)) then
-							v11[LUAOBFUSACTOR_DECRYPT_STR_0("\236\215\49\205\27\223", "\122\173\135\125\155")][LUAOBFUSACTOR_DECRYPT_STR_0("\182\213\34\134\19\56\219\144", "\168\228\161\96\217\95\81")][v132][v135] = false;
-							for v195 = 1, #v133 do
-								if (v14:BuffUp(v107[v133[v195]]) or (3427 < 2849)) then
-									v11[LUAOBFUSACTOR_DECRYPT_STR_0("\250\225\2\106\46\69", "\55\187\177\78\60\79")][LUAOBFUSACTOR_DECRYPT_STR_0("\31\218\125\212\106\198\147\57", "\224\77\174\63\139\38\175")][v132][v135] = true;
-									break;
+						if (((361 + 185) <= (600 + 477)) and (v165 == (0 + 0))) then
+							v10.APLVar.RtB_Buffs = {};
+							v10.APLVar.RtB_Buffs.Total = 0 + 0;
+							v165 = 1 + 0;
+						end
+						if (((434 - (153 + 280)) == v165) or ((2875 - 1879) > (3862 + 439))) then
+							v10.APLVar.RtB_Buffs.Normal = 0 + 0;
+							v10.APLVar.RtB_Buffs.Shorter = 0 + 0;
+							v165 = 2 + 0;
+						end
+						if (((2950 + 1120) > (1045 - 358)) and (v165 == (2 + 0))) then
+							v10.APLVar.RtB_Buffs.Longer = 667 - (89 + 578);
+							v166 = v79.RtBRemains();
+							v165 = 3 + 0;
+						end
+						if ((v165 == (5 - 2)) or ((1705 - (572 + 477)) >= (450 + 2880))) then
+							for v182 = 1 + 0, #v106 do
+								local v183 = 0 + 0;
+								local v184;
+								while true do
+									if ((v183 == (86 - (84 + 2))) or ((4106 - 1614) <= (242 + 93))) then
+										v184 = v13:BuffRemains(v106[v182]);
+										if (((5164 - (497 + 345)) >= (66 + 2496)) and (v184 > (0 + 0))) then
+											v10.APLVar.RtB_Buffs.Total = v10.APLVar.RtB_Buffs.Total + (1334 - (605 + 728));
+											if ((v184 == v166) or ((2595 + 1042) >= (8381 - 4611))) then
+												v10.APLVar.RtB_Buffs.Normal = v10.APLVar.RtB_Buffs.Normal + 1 + 0;
+											elseif ((v184 > v166) or ((8795 - 6416) > (4128 + 450))) then
+												v10.APLVar.RtB_Buffs.Longer = v10.APLVar.RtB_Buffs.Longer + (2 - 1);
+											else
+												v10.APLVar.RtB_Buffs.Shorter = v10.APLVar.RtB_Buffs.Shorter + 1 + 0;
+											end
+										end
+										break;
+									end
 								end
 							end
 							break;
 						end
 					end
 				end
-				v134 = 2;
+				return v10.APLVar.RtB_Buffs.Total;
 			end
 		end
 	end
 	local function v109()
-		local v136 = 0;
+		local v135 = 489 - (457 + 32);
 		while true do
-			if ((3616 <= 4429) and (v136 == 0)) then
-				if ((3988 >= 66) and not v11[LUAOBFUSACTOR_DECRYPT_STR_0("\58\221\170\103\236\47", "\89\123\141\230\49\141\93")][LUAOBFUSACTOR_DECRYPT_STR_0("\193\101\212\51\50\95\245\119\229", "\42\147\17\150\108\112")]) then
-					local v170 = 0;
-					local v171;
-					while true do
-						if ((2 == v170) or (862 > 4644)) then
-							v11[LUAOBFUSACTOR_DECRYPT_STR_0("\210\223\116\224\36\68", "\54\147\143\56\182\69")][LUAOBFUSACTOR_DECRYPT_STR_0("\228\149\221\118\253\195\135\249\90", "\191\182\225\159\41")][LUAOBFUSACTOR_DECRYPT_STR_0("\7\29\38\82\142\149", "\162\75\114\72\53\235\231")] = 0;
-							v171 = v80.RtBRemains();
-							v170 = 3;
+			if ((v135 == (0 + 0)) or ((1885 - (832 + 570)) > (700 + 43))) then
+				if (((640 + 1814) > (2045 - 1467)) and not v10.APLVar.RtB_Reroll) then
+					if (((448 + 482) < (5254 - (588 + 208))) and (v62 == "1+ Buff")) then
+						v10.APLVar.RtB_Reroll = ((v108() <= (0 - 0)) and true) or false;
+					elseif (((2462 - (884 + 916)) <= (2034 - 1062)) and (v62 == "Broadside")) then
+						v10.APLVar.RtB_Reroll = (not v13:BuffUp(v80.Broadside) and true) or false;
+					elseif (((2534 + 1836) == (5023 - (232 + 421))) and (v62 == "Buried Treasure")) then
+						v10.APLVar.RtB_Reroll = (not v13:BuffUp(v80.BuriedTreasure) and true) or false;
+					elseif ((v62 == "Grand Melee") or ((6651 - (1569 + 320)) <= (212 + 649))) then
+						v10.APLVar.RtB_Reroll = (not v13:BuffUp(v80.GrandMelee) and true) or false;
+					elseif ((v62 == "Skull and Crossbones") or ((269 + 1143) == (14368 - 10104))) then
+						v10.APLVar.RtB_Reroll = (not v13:BuffUp(v80.SkullandCrossbones) and true) or false;
+					elseif ((v62 == "Ruthless Precision") or ((3773 - (316 + 289)) < (5635 - 3482))) then
+						v10.APLVar.RtB_Reroll = (not v13:BuffUp(v80.RuthlessPrecision) and true) or false;
+					elseif ((v62 == "True Bearing") or ((230 + 4746) < (2785 - (666 + 787)))) then
+						v10.APLVar.RtB_Reroll = (not v13:BuffUp(v80.TrueBearing) and true) or false;
+					else
+						v10.APLVar.RtB_Reroll = false;
+						v108();
+						if (((5053 - (360 + 65)) == (4326 + 302)) and (v108() <= (256 - (79 + 175))) and v13:BuffUp(v80.BuriedTreasure) and v13:BuffDown(v80.GrandMelee) and (v89 < (2 - 0))) then
+							v10.APLVar.RtB_Reroll = true;
 						end
-						if ((1221 == 1221) and (v170 == 3)) then
-							for v186 = 1, #v107 do
-								local v187 = 0;
-								local v188;
-								while true do
-									if ((0 == v187) or (45 > 1271)) then
-										v188 = v14:BuffRemains(v107[v186]);
-										if ((3877 > 1530) and (v188 > 0)) then
-											local v201 = 0;
-											while true do
-												if ((v201 == 0) or (4798 == 1255)) then
-													v11[LUAOBFUSACTOR_DECRYPT_STR_0("\173\12\104\212\82\16", "\98\236\92\36\130\51")][LUAOBFUSACTOR_DECRYPT_STR_0("\150\13\46\133\103\189\179\54\183", "\80\196\121\108\218\37\200\213")][LUAOBFUSACTOR_DECRYPT_STR_0("\52\124\22\126\71", "\234\96\19\98\31\43\110")] = v11[LUAOBFUSACTOR_DECRYPT_STR_0("\39\47\126\241\173\96", "\235\102\127\50\167\204\18")][LUAOBFUSACTOR_DECRYPT_STR_0("\98\181\215\28\102\59\86\167\230", "\78\48\193\149\67\36")][LUAOBFUSACTOR_DECRYPT_STR_0("\4\17\148\25\77", "\33\80\126\224\120")] + 1;
-													if ((v188 == v171) or (2541 > 2860)) then
-														v11[LUAOBFUSACTOR_DECRYPT_STR_0("\205\152\47\242\93\254", "\60\140\200\99\164")][LUAOBFUSACTOR_DECRYPT_STR_0("\181\224\38\25\128\146\242\2\53", "\194\231\148\100\70")][LUAOBFUSACTOR_DECRYPT_STR_0("\104\67\211\174\247\196", "\168\38\44\161\195\150")] = v11[LUAOBFUSACTOR_DECRYPT_STR_0("\161\204\174\64\49\250", "\118\224\156\226\22\80\136\214")][LUAOBFUSACTOR_DECRYPT_STR_0("\112\250\123\191\96\251\95\134\81", "\224\34\142\57")][LUAOBFUSACTOR_DECRYPT_STR_0("\240\168\215\208\114\253", "\110\190\199\165\189\19\145\61")] + 1;
-													elseif ((v188 > v171) or (2902 > 3629)) then
-														v11[LUAOBFUSACTOR_DECRYPT_STR_0("\251\219\91\222\138\213", "\167\186\139\23\136\235")][LUAOBFUSACTOR_DECRYPT_STR_0("\40\161\170\50\56\160\142\11\9", "\109\122\213\232")][LUAOBFUSACTOR_DECRYPT_STR_0("\194\248\172\55\235\229", "\80\142\151\194")] = v11[LUAOBFUSACTOR_DECRYPT_STR_0("\34\246\91\122\2\212", "\44\99\166\23")][LUAOBFUSACTOR_DECRYPT_STR_0("\78\227\11\9\17\177\122\241\58", "\196\28\151\73\86\83")][LUAOBFUSACTOR_DECRYPT_STR_0("\223\12\39\23\135\74", "\22\147\99\73\112\226\56\120")] + 1;
-													else
-														v11[LUAOBFUSACTOR_DECRYPT_STR_0("\153\69\206\195\140\170", "\237\216\21\130\149")][LUAOBFUSACTOR_DECRYPT_STR_0("\176\90\125\96\146\220\88\132\93", "\62\226\46\63\63\208\169")][LUAOBFUSACTOR_DECRYPT_STR_0("\214\17\90\145\11\8\61", "\62\133\121\53\227\127\109\79")] = v11[LUAOBFUSACTOR_DECRYPT_STR_0("\49\36\30\195\215\188", "\194\112\116\82\149\182\206")][LUAOBFUSACTOR_DECRYPT_STR_0("\11\188\110\39\226\247\8\63\187", "\110\89\200\44\120\160\130")][LUAOBFUSACTOR_DECRYPT_STR_0("\152\203\68\84\87\79\41", "\45\203\163\43\38\35\42\91")] + 1;
-													end
-													break;
-												end
-											end
-										end
-										break;
-									end
-								end
-							end
-							break;
+						if ((v80.Crackshot:IsAvailable() and v80.HiddenOpportunity:IsAvailable() and not v13:HasTier(25 + 6, 12 - 8) and ((not v13:BuffUp(v80.TrueBearing) and v80.HiddenOpportunity:IsAvailable()) or (not v13:BuffUp(v80.Broadside) and not v80.HiddenOpportunity:IsAvailable())) and (v108() <= (1 - 0))) or ((953 - (503 + 396)) == (576 - (92 + 89)))) then
+							v10.APLVar.RtB_Reroll = true;
 						end
-						if ((427 < 3468) and (v170 == 0)) then
-							v11[LUAOBFUSACTOR_DECRYPT_STR_0("\46\150\1\73\230\250", "\136\111\198\77\31\135")][LUAOBFUSACTOR_DECRYPT_STR_0("\48\29\133\105\159\241\17\175\17", "\201\98\105\199\54\221\132\119")] = {};
-							v11[LUAOBFUSACTOR_DECRYPT_STR_0("\152\60\175\23\3\39", "\204\217\108\227\65\98\85")][LUAOBFUSACTOR_DECRYPT_STR_0("\108\215\215\218\14\213\88\197\230", "\160\62\163\149\133\76")][LUAOBFUSACTOR_DECRYPT_STR_0("\226\175\25\46\207", "\163\182\192\109\79")] = 0;
-							v170 = 1;
+						if (((158 - 76) == (43 + 39)) and v80.Crackshot:IsAvailable() and v13:HasTier(19 + 12, 15 - 11) and (v108() <= (1 + 0 + v19(v13:BuffUp(v80.LoadedDiceBuff)))) and (v80.HiddenOpportunity:IsAvailable() or v13:BuffDown(v80.Broadside))) then
+							v10.APLVar.RtB_Reroll = true;
 						end
-						if ((4190 >= 2804) and (v170 == 1)) then
-							v11[LUAOBFUSACTOR_DECRYPT_STR_0("\21\22\44\246\244\38", "\149\84\70\96\160")][LUAOBFUSACTOR_DECRYPT_STR_0("\10\18\47\210\26\19\11\235\43", "\141\88\102\109")][LUAOBFUSACTOR_DECRYPT_STR_0("\157\92\216\125\27\49", "\161\211\51\170\16\122\93\53")] = 0;
-							v11[LUAOBFUSACTOR_DECRYPT_STR_0("\218\158\158\30\250\188", "\72\155\206\210")][LUAOBFUSACTOR_DECRYPT_STR_0("\116\110\118\49\17\83\124\82\29", "\83\38\26\52\110")][LUAOBFUSACTOR_DECRYPT_STR_0("\107\31\40\84\76\18\53", "\38\56\119\71")] = 0;
-							v170 = 2;
+						if ((not v80.Crackshot:IsAvailable() and v80.HiddenOpportunity:IsAvailable() and not v13:BuffUp(v80.SkullandCrossbones) and (v108() < ((4 - 2) + v19(v13:BuffUp(v80.GrandMelee)))) and (v89 < (2 + 0))) or ((278 + 303) < (858 - 576))) then
+							v10.APLVar.RtB_Reroll = true;
+						end
+						if (v10.APLVar.RtB_Reroll or ((v10.APLVar.RtB_Buffs.Normal == (0 + 0)) and (v10.APLVar.RtB_Buffs.Longer >= (1 - 0)) and (v108() < (1249 - (485 + 759))) and (v79.RtBRemains() <= (89 - 50))) or ((5798 - (442 + 747)) < (3630 - (832 + 303)))) then
+							v10.APLVar.RtB_Reroll = true;
+						end
+						if (((2098 - (88 + 858)) == (352 + 800)) and (v14:FilteredTimeToDie("<", 10 + 2) or v9.BossFilteredFightRemains("<", 1 + 11))) then
+							v10.APLVar.RtB_Reroll = false;
 						end
 					end
 				end
-				return v11[LUAOBFUSACTOR_DECRYPT_STR_0("\243\181\240\21\134\187", "\52\178\229\188\67\231\201")][LUAOBFUSACTOR_DECRYPT_STR_0("\19\85\114\59\213\73\37\39\82", "\67\65\33\48\100\151\60")][LUAOBFUSACTOR_DECRYPT_STR_0("\235\232\186\217\255", "\147\191\135\206\184")];
+				return v10.APLVar.RtB_Reroll;
 			end
 		end
 	end
 	local function v110()
-		local v137 = 0;
-		while true do
-			if ((2086 == 2086) and (v137 == 0)) then
-				if ((4148 > 2733) and not v11[LUAOBFUSACTOR_DECRYPT_STR_0("\165\24\138\247\217\65", "\210\228\72\198\161\184\51")][LUAOBFUSACTOR_DECRYPT_STR_0("\4\93\209\47\65\203\36\70\255\28", "\174\86\41\147\112\19")]) then
-					if ((3054 >= 1605) and (v63 == LUAOBFUSACTOR_DECRYPT_STR_0("\10\75\205\41\48\9\23", "\203\59\96\237\107\69\111\113"))) then
-						v11[LUAOBFUSACTOR_DECRYPT_STR_0("\5\38\128\215\48\226", "\183\68\118\204\129\81\144")][LUAOBFUSACTOR_DECRYPT_STR_0("\60\185\82\219\57\135\28\162\124\232", "\226\110\205\16\132\107")] = ((v109() <= 0) and true) or false;
-					elseif ((1044 < 1519) and (v63 == LUAOBFUSACTOR_DECRYPT_STR_0("\201\209\239\216\69\248\202\228\220", "\33\139\163\128\185"))) then
-						v11[LUAOBFUSACTOR_DECRYPT_STR_0("\118\104\40\232\86\74", "\190\55\56\100")][LUAOBFUSACTOR_DECRYPT_STR_0("\100\187\30\33\33\230\225\89\163\48", "\147\54\207\92\126\115\131")] = (not v14:BuffUp(v81.Broadside) and true) or false;
-					elseif ((1707 <= 4200) and (v63 == LUAOBFUSACTOR_DECRYPT_STR_0("\47\36\39\116\8\122\77\5\39\120\12\109\24\35\48", "\30\109\81\85\29\109"))) then
-						v11[LUAOBFUSACTOR_DECRYPT_STR_0("\222\65\120\128\55\204", "\156\159\17\52\214\86\190")][LUAOBFUSACTOR_DECRYPT_STR_0("\156\251\159\131\156\234\175\179\162\227", "\220\206\143\221")] = (not v14:BuffUp(v81.BuriedTreasure) and true) or false;
-					elseif ((580 == 580) and (v63 == LUAOBFUSACTOR_DECRYPT_STR_0("\161\111\44\25\220\140\255\131\113\40\18", "\178\230\29\77\119\184\172"))) then
-						v11[LUAOBFUSACTOR_DECRYPT_STR_0("\212\142\38\45\118\234", "\152\149\222\106\123\23")][LUAOBFUSACTOR_DECRYPT_STR_0("\239\50\212\124\135\216\52\249\79\185", "\213\189\70\150\35")] = (not v14:BuffUp(v81.GrandMelee) and true) or false;
-					elseif ((601 <= 999) and (v63 == LUAOBFUSACTOR_DECRYPT_STR_0("\124\94\97\4\67\21\117\6\75\21\87\26\64\70\103\10\64\91\113\27", "\104\47\53\20"))) then
-						v11[LUAOBFUSACTOR_DECRYPT_STR_0("\130\124\173\42\189\29", "\111\195\44\225\124\220")][LUAOBFUSACTOR_DECRYPT_STR_0("\234\82\34\76\153\174\202\73\12\127", "\203\184\38\96\19\203")] = (not v14:BuffUp(v81.SkullandCrossbones) and true) or false;
-					elseif ((3970 == 3970) and (v63 == LUAOBFUSACTOR_DECRYPT_STR_0("\11\102\109\73\194\60\96\106\1\254\43\118\122\72\221\48\124\119", "\174\89\19\25\33"))) then
-						v11[LUAOBFUSACTOR_DECRYPT_STR_0("\14\34\126\120\246\149", "\107\79\114\50\46\151\231")][LUAOBFUSACTOR_DECRYPT_STR_0("\11\178\151\22\184\60\165\207\53\170", "\160\89\198\213\73\234\89\215")] = (not v14:BuffUp(v81.RuthlessPrecision) and true) or false;
-					elseif ((v63 == LUAOBFUSACTOR_DECRYPT_STR_0("\124\99\161\251\133\106\116\181\236\204\70\118", "\165\40\17\212\158")) or (98 == 208)) then
-						v11[LUAOBFUSACTOR_DECRYPT_STR_0("\196\233\36\5\39\247", "\70\133\185\104\83")][LUAOBFUSACTOR_DECRYPT_STR_0("\54\81\102\21\251\1\87\75\38\197", "\169\100\37\36\74")] = (not v14:BuffUp(v81.TrueBearing) and true) or false;
-					else
-						local v208 = 0;
-						while true do
-							if ((2006 <= 3914) and (v208 == 3)) then
-								if (v11[LUAOBFUSACTOR_DECRYPT_STR_0("\28\228\150\235\118\92", "\50\93\180\218\189\23\46\71")][LUAOBFUSACTOR_DECRYPT_STR_0("\236\176\121\115\118\217\90\209\168\87", "\40\190\196\59\44\36\188")] or ((v11[LUAOBFUSACTOR_DECRYPT_STR_0("\29\117\240\130\251\111", "\109\92\37\188\212\154\29")][LUAOBFUSACTOR_DECRYPT_STR_0("\54\251\134\252\19\79\2\233\183", "\58\100\143\196\163\81")][LUAOBFUSACTOR_DECRYPT_STR_0("\52\77\49\174\62\69", "\110\122\34\67\195\95\41\133")] == 0) and (v11[LUAOBFUSACTOR_DECRYPT_STR_0("\84\129\119\124\215\103", "\182\21\209\59\42")][LUAOBFUSACTOR_DECRYPT_STR_0("\133\67\231\34\3\171\177\81\214", "\222\215\55\165\125\65")][LUAOBFUSACTOR_DECRYPT_STR_0("\0\222\200\29\247\211", "\42\76\177\166\122\146\161\141")] >= 1) and (v109() < 5) and (v80.RtBRemains() <= 39)) or (3101 <= 2971)) then
-									v11[LUAOBFUSACTOR_DECRYPT_STR_0("\132\186\41\248\120\100", "\22\197\234\101\174\25")][LUAOBFUSACTOR_DECRYPT_STR_0("\31\32\135\227\68\170\197\137\33\56", "\230\77\84\197\188\22\207\183")] = true;
-								end
-								if (v15:FilteredTimeToDie("<", 12) or v10.BossFilteredFightRemains("<", 12) or (2073 <= 671)) then
-									v11[LUAOBFUSACTOR_DECRYPT_STR_0("\216\36\234\202\141\179", "\85\153\116\166\156\236\193\144")][LUAOBFUSACTOR_DECRYPT_STR_0("\150\244\111\140\214\5\182\239\65\191", "\96\196\128\45\211\132")] = false;
-								end
-								break;
-							end
-							if ((3305 > 95) and (v208 == 0)) then
-								v11[LUAOBFUSACTOR_DECRYPT_STR_0("\33\183\142\102\1\149", "\48\96\231\194")][LUAOBFUSACTOR_DECRYPT_STR_0("\250\78\44\18\43\221\189\140\196\86", "\227\168\58\110\77\121\184\207")] = false;
-								v109();
-								v208 = 1;
-							end
-							if ((2727 == 2727) and (v208 == 2)) then
-								if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\229\203\130\221\37\249\206\214\151", "\138\166\185\227\190\78")]:IsAvailable() and v14:HasTier(31, 4) and (v109() <= (1 + v20(v14:BuffUp(v81.LoadedDiceBuff)))) and (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\227\125\193\51\87\45\54\219\100\202\37\70\54\23\194\96\220", "\121\171\20\165\87\50\67")]:IsAvailable() or v14:BuffDown(v81.Broadside))) or (2970 >= 4072)) then
-									v11[LUAOBFUSACTOR_DECRYPT_STR_0("\231\8\149\0\184\16", "\98\166\88\217\86\217")][LUAOBFUSACTOR_DECRYPT_STR_0("\196\226\91\62\180\217\228\249\117\13", "\188\150\150\25\97\230")] = true;
-								end
-								if ((3881 > 814) and not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\249\155\94\1\7\254\210\134\75", "\141\186\233\63\98\108")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\217\227\40\178\32\255\197\60\166\42\227\254\57\184\44\229\243", "\69\145\138\76\214")]:IsAvailable() and not v14:BuffUp(v81.SkullandCrossbones) and (v109() < (2 + v20(v14:BuffUp(v81.GrandMelee)))) and (v90 < 2)) then
-									v11[LUAOBFUSACTOR_DECRYPT_STR_0("\81\255\165\191\190\4", "\118\16\175\233\233\223")][LUAOBFUSACTOR_DECRYPT_STR_0("\185\144\23\132\220\142\111\132\136\57", "\29\235\228\85\219\142\235")] = true;
-								end
-								v208 = 3;
-							end
-							if ((v208 == 1) or (4932 < 4868)) then
-								if ((3667 <= 4802) and (v109() <= 2) and v14:BuffUp(v81.BuriedTreasure) and v14:BuffDown(v81.GrandMelee) and (v90 < 2)) then
-									v11[LUAOBFUSACTOR_DECRYPT_STR_0("\90\12\147\118\176\201", "\197\27\92\223\32\209\187\17")][LUAOBFUSACTOR_DECRYPT_STR_0("\49\75\225\196\49\90\209\244\15\83", "\155\99\63\163")] = true;
-								end
-								if ((1260 >= 858) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\161\195\160\142\178\151\138\222\181", "\228\226\177\193\237\217")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\28\185\39\226\49\190\12\246\36\191\49\242\33\190\42\242\45", "\134\84\208\67")]:IsAvailable() and not v14:HasTier(31, 4) and ((not v14:BuffUp(v81.TrueBearing) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\59\165\130\88\22\162\169\76\3\163\148\72\6\162\143\72\10", "\60\115\204\230")]:IsAvailable()) or (not v14:BuffUp(v81.Broadside) and not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\207\51\239\116\226\52\196\96\247\53\249\100\242\52\226\100\254", "\16\135\90\139")]:IsAvailable())) and (v109() <= 1)) then
-									v11[LUAOBFUSACTOR_DECRYPT_STR_0("\117\68\42\5\79\70", "\24\52\20\102\83\46\52")][LUAOBFUSACTOR_DECRYPT_STR_0("\246\59\3\27\61\193\61\46\40\3", "\111\164\79\65\68")] = true;
-								end
-								v208 = 2;
-							end
-						end
-					end
+		return v93 >= ((v79.CPMaxSpend() - (790 - (766 + 23))) - v19((v13:StealthUp(true, true)) and v80.Crackshot:IsAvailable()));
+	end
+	local function v111()
+		return (v80.HiddenOpportunity:IsAvailable() or (v95 >= ((9 - 7) + v19(v80.ImprovedAmbush:IsAvailable()) + v19(v13:BuffUp(v80.Broadside))))) and (v96 >= (68 - 18));
+	end
+	local function v112()
+		return not v25 or (v89 < (4 - 2)) or (v13:BuffRemains(v80.BladeFlurry) > ((3 - 2) + v19(v80.KillingSpree:IsAvailable())));
+	end
+	local function v113()
+		return v65 and (not v13:IsTanking(v14) or v75);
+	end
+	local function v114()
+		return not v80.ShadowDanceTalent:IsAvailable() and ((v80.FanTheHammer:TalentRank() + v19(v80.QuickDraw:IsAvailable()) + v19(v80.Audacity:IsAvailable())) < (v19(v80.CountTheOdds:IsAvailable()) + v19(v80.KeepItRolling:IsAvailable())));
+	end
+	local function v115()
+		return v13:BuffUp(v80.BetweentheEyes) and (not v80.HiddenOpportunity:IsAvailable() or (v13:BuffDown(v80.AudacityBuff) and ((v80.FanTheHammer:TalentRank() < (1075 - (1036 + 37))) or v13:BuffDown(v80.Opportunity)))) and not v80.Crackshot:IsAvailable();
+	end
+	local function v116()
+		if (((1345 + 551) <= (6663 - 3241)) and v80.Vanish:IsCastable() and v80.Vanish:IsReady() and v113() and v80.HiddenOpportunity:IsAvailable() and not v80.Crackshot:IsAvailable() and not v13:BuffUp(v80.Audacity) and (v114() or (v13:BuffStack(v80.Opportunity) < (5 + 1))) and v111()) then
+			if (v9.Cast(v80.Vanish, v65) or ((2470 - (641 + 839)) > (2533 - (910 + 3)))) then
+				return "Cast Vanish (HO)";
+			end
+		end
+		if ((v80.Vanish:IsCastable() and v80.Vanish:IsReady() and v113() and (not v80.HiddenOpportunity:IsAvailable() or v80.Crackshot:IsAvailable()) and v110()) or ((2235 - 1358) > (6379 - (1466 + 218)))) then
+			if (((1237 + 1454) >= (2999 - (556 + 592))) and v9.Cast(v80.Vanish, v65)) then
+				return "Cast Vanish (Finish)";
+			end
+		end
+		if ((v80.ShadowDance:IsAvailable() and v80.ShadowDance:IsCastable() and v80.Crackshot:IsAvailable() and v110()) or ((1062 + 1923) >= (5664 - (329 + 479)))) then
+			if (((5130 - (174 + 680)) >= (4106 - 2911)) and v9.Cast(v80.ShadowDance, v51)) then
+				return "Cast Shadow Dance";
+			end
+		end
+		if (((6698 - 3466) <= (3349 + 1341)) and v80.ShadowDance:IsAvailable() and v80.ShadowDance:IsCastable() and not v80.KeepItRolling:IsAvailable() and v115() and v13:BuffUp(v80.SliceandDice) and (v110() or v80.HiddenOpportunity:IsAvailable()) and (not v80.HiddenOpportunity:IsAvailable() or not v80.Vanish:IsReady())) then
+			if (v9.Cast(v80.ShadowDance, v51) or ((1635 - (396 + 343)) >= (279 + 2867))) then
+				return "Cast Shadow Dance";
+			end
+		end
+		if (((4538 - (29 + 1448)) >= (4347 - (135 + 1254))) and v80.ShadowDance:IsAvailable() and v80.ShadowDance:IsCastable() and v80.KeepItRolling:IsAvailable() and v115() and ((v80.KeepItRolling:CooldownRemains() <= (113 - 83)) or ((v80.KeepItRolling:CooldownRemains() >= (560 - 440)) and (v110() or v80.HiddenOpportunity:IsAvailable())))) then
+			if (((2124 + 1063) >= (2171 - (389 + 1138))) and v9.Cast(v80.ShadowDance, v51)) then
+				return "Cast Shadow Dance";
+			end
+		end
+		if (((1218 - (102 + 472)) <= (665 + 39)) and v80.Shadowmeld:IsAvailable() and v80.Shadowmeld:IsReady()) then
+			if (((532 + 426) > (884 + 63)) and ((v80.Crackshot:IsAvailable() and v110()) or (not v80.Crackshot:IsAvailable() and ((v80.CountTheOdds:IsAvailable() and v110()) or v80.HiddenOpportunity:IsAvailable())))) then
+				if (((6037 - (320 + 1225)) >= (4724 - 2070)) and v9.Cast(v80.Shadowmeld, v27)) then
+					return "Cast Shadowmeld";
 				end
-				return v11[LUAOBFUSACTOR_DECRYPT_STR_0("\20\189\87\105\211\189", "\184\85\237\27\63\178\207\212")][LUAOBFUSACTOR_DECRYPT_STR_0("\58\77\43\96\58\92\27\80\4\85", "\63\104\57\105")];
 			end
 		end
 	end
-	local function v111()
-		return v94 >= ((v80.CPMaxSpend() - 1) - v20((v14:StealthUp(true, true)) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\40\149\165\71\0\148\172\75\31", "\36\107\231\196")]:IsAvailable()));
-	end
-	local function v112()
-		return (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\117\188\166\131\88\187\141\151\77\186\176\147\72\187\171\147\68", "\231\61\213\194")]:IsAvailable() or (v96 >= (2 + v20(v81[LUAOBFUSACTOR_DECRYPT_STR_0("\32\160\45\97\6\187\56\119\40\160\63\102\26\165", "\19\105\205\93")]:IsAvailable()) + v20(v14:BuffUp(v81.Broadside))))) and (v97 >= 50);
-	end
-	local function v113()
-		return not v26 or (v90 < 2) or (v14:BuffRemains(v81.BladeFlurry) > (1 + v20(v81[LUAOBFUSACTOR_DECRYPT_STR_0("\130\1\210\141\54\167\15\237\145\45\172\13", "\95\201\104\190\225")]:IsAvailable())));
-	end
-	local function v114()
-		return v66 and (not v14:IsTanking(v15) or v76);
-	end
-	local function v115()
-		return not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\156\195\192\202\160\220\229\207\161\200\196\250\174\199\196\192\187", "\174\207\171\161")]:IsAvailable() and ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\203\255\3\199\240\210\197\255\0\254\253\197", "\183\141\158\109\147\152")]:TalentRank() + v20(v81[LUAOBFUSACTOR_DECRYPT_STR_0("\29\28\239\15\39\45\244\13\59", "\108\76\105\134")]:IsAvailable()) + v20(v81[LUAOBFUSACTOR_DECRYPT_STR_0("\202\208\181\224\205\226\209\168", "\174\139\165\209\129")]:IsAvailable())) < (v20(v81[LUAOBFUSACTOR_DECRYPT_STR_0("\128\188\247\207\210\55\120\125\140\183\230\210", "\24\195\211\130\161\166\99\16")]:IsAvailable()) + v20(v81[LUAOBFUSACTOR_DECRYPT_STR_0("\109\6\236\60\122\2\116\12\229\32\90\24\65", "\118\38\99\137\76\51")]:IsAvailable())));
-	end
-	local function v116()
-		return v14:BuffUp(v81.BetweentheEyes) and (not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\213\47\1\22\12\46\210\54\21\29\27\52\232\40\12\6\16", "\64\157\70\101\114\105")]:IsAvailable() or (v14:BuffDown(v81.AudacityBuff) and ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\102\169\169\215\24\69\128\166\238\29\69\186", "\112\32\200\199\131")]:TalentRank() < 2) or v14:BuffDown(v81.Opportunity)))) and not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\15\66\93\187\200\184\42\35\68", "\66\76\48\60\216\163\203")]:IsAvailable();
-	end
 	local function v117()
-		local v138 = 0;
-		while true do
-			if ((v138 == 1) or (3911 == 4700)) then
-				if ((3000 < 4194) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\109\201\170\34\192\73\229\170\40\204\91", "\175\62\161\203\70")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\15\213\194\23\58\43\249\194\29\54\57", "\85\92\189\163\115")]:IsCastable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\10\190\49\59\34\191\56\55\61", "\88\73\204\80")]:IsAvailable() and v111()) then
-					if ((651 < 4442) and v10.Cast(v81.ShadowDance, v52)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\13\130\3\82\105\233\38\130\20\73\62\154\10\130\30\69\44", "\186\78\227\112\38\73");
-					end
-				end
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\207\95\252\81\92\109\216\86\243\86\86", "\26\156\55\157\53\51")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\191\208\23\221\183\71\168\217\24\218\189", "\48\236\184\118\185\216")]:IsCastable() and not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\206\184\82\32\230\32\215\178\91\60\198\58\226", "\84\133\221\55\80\175")]:IsAvailable() and v116() and v14:BuffUp(v81.SliceandDice) and (v111() or v81[LUAOBFUSACTOR_DECRYPT_STR_0("\149\238\32\162\194\82\146\247\52\169\213\72\168\233\45\178\222", "\60\221\135\68\198\167")]:IsAvailable()) and (not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\198\180\252\135\71\215\193\173\232\140\80\205\251\179\241\151\91", "\185\142\221\152\227\34")]:IsAvailable() or not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\110\196\89\243\80\59", "\151\56\165\55\154\35\83")]:IsReady())) or (195 >= 1804)) then
-					if (v10.Cast(v81.ShadowDance, v52) or (1382 > 2216)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\131\66\22\250\224\112\13\239\164\76\18\174\132\66\11\237\165", "\142\192\35\101");
-					end
-				end
-				v138 = 2;
-			end
-			if ((v138 == 0) or (2861 == 2459)) then
-				if ((1903 < 4021) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\140\135\119\250\76\198", "\68\218\230\25\147\63\174")]:IsCastable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\155\43\93\69\165\165", "\214\205\74\51\44")]:IsReady() and v114() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\210\69\230\248\114\244\99\242\236\120\232\88\247\242\126\238\85", "\23\154\44\130\156")]:IsAvailable() and not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\50\180\172\173\61\0\25\169\185", "\115\113\198\205\206\86")]:IsAvailable() and not v14:BuffUp(v81.Audacity) and (v115() or (v14:BuffStack(v81.Opportunity) < 6)) and v112()) then
-					if (v10.Cast(v81.Vanish, v66) or (2270 >= 4130)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\167\86\237\78\196\97\255\84\141\68\246\26\204\127\209\19", "\58\228\55\158");
-					end
-				end
-				if ((2593 <= 3958) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\130\136\222\39\47\165", "\85\212\233\176\78\92\205")]:IsCastable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\124\89\134\235\89\80", "\130\42\56\232")]:IsReady() and v114() and (not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\194\188\32\231\69\49\197\165\52\236\82\43\255\187\45\247\89", "\95\138\213\68\131\32")]:IsAvailable() or v81[LUAOBFUSACTOR_DECRYPT_STR_0("\9\58\160\64\125\57\32\174\87", "\22\74\72\193\35")]:IsAvailable()) and v111()) then
-					if ((1176 == 1176) and v10.Cast(v81.Vanish, v66)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\15\120\247\76\108\79\229\86\37\106\236\24\100\95\237\86\37\106\236\17", "\56\76\25\132");
-					end
-				end
-				v138 = 1;
-			end
-			if ((v138 == 2) or (3062 == 1818)) then
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\229\125\40\167\232\155\136\23\216\118\44", "\118\182\21\73\195\135\236\204")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\59\52\27\68\11\26\217\9\50\25\69", "\157\104\92\122\32\100\109")]:IsCastable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\136\163\202\218\20\51\191\164\175\170\198\196\58", "\203\195\198\175\170\93\71\237")]:IsAvailable() and v116() and ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\5\78\59\197\120\5\206\33\71\50\220\95\22", "\156\78\43\94\181\49\113")]:CooldownRemains() <= 30) or ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\89\237\193\179\34\87\75\125\228\200\170\5\68", "\25\18\136\164\195\107\35")]:CooldownRemains() >= 120) and (v111() or v81[LUAOBFUSACTOR_DECRYPT_STR_0("\192\36\173\75\119\178\238\168\248\34\187\91\103\178\200\172\241", "\216\136\77\201\47\18\220\161")]:IsAvailable())))) or (3717 < 3149)) then
-					if ((3195 < 3730) and v10.Cast(v81.ShadowDance, v52)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\14\237\56\206\72\239\138\44\232\36\205\72\248\131\35\239\46", "\226\77\140\75\186\104\188");
-					end
-				end
-				if ((2797 <= 3980) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\138\198\209\59\64\174\195\213\51\75", "\47\217\174\176\95")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\139\213\119\6\189\67\117\35\180\217", "\70\216\189\22\98\210\52\24")]:IsReady()) then
-					if ((1944 <= 2368) and ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\249\205\162\132\216\201\215\172\147", "\179\186\191\195\231")]:IsAvailable() and v111()) or (not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\218\45\25\231\242\44\16\235\237", "\132\153\95\120")]:IsAvailable() and ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\146\189\27\35\227\238\168\180\157\10\41\228", "\192\209\210\110\77\151\186")]:IsAvailable() and v111()) or v81[LUAOBFUSACTOR_DECRYPT_STR_0("\200\10\38\237\250\202\207\19\50\230\237\208\245\13\43\253\230", "\164\128\99\66\137\159")]:IsAvailable())))) then
-						if ((1709 < 4248) and v10.Cast(v81.Shadowmeld, v28)) then
-							return LUAOBFUSACTOR_DECRYPT_STR_0("\35\136\250\170\64\186\225\191\4\134\254\179\5\133\237", "\222\96\233\137");
-						end
-					end
-				end
-				break;
-			end
+		v90 = v78.HandleTopTrinket(v83, v26, 25 + 15, nil);
+		if (((4906 - (157 + 1307)) >= (3362 - (821 + 1038))) and v90) then
+			return v90;
+		end
+		v90 = v78.HandleBottomTrinket(v83, v26, 99 - 59, nil);
+		if (v90 or ((347 + 2823) <= (2600 - 1136))) then
+			return v90;
 		end
 	end
 	local function v118()
-		local v139 = 0;
+		local v136 = 0 + 0;
 		while true do
-			if ((v139 == 0) or (3970 == 3202)) then
-				v91 = v79.HandleTopTrinket(v84, v27, 40, nil);
-				if (v91 or (3918 >= 4397)) then
-					return v91;
+			if ((v136 == (9 - 5)) or ((5823 - (834 + 192)) == (279 + 4109))) then
+				if (((142 + 409) <= (15 + 666)) and v80.AncestralCall:IsCastable()) then
+					if (((5075 - 1798) > (711 - (300 + 4))) and v9.Cast(v80.AncestralCall, v27)) then
+						return "Cast Ancestral Call";
+					end
 				end
-				v139 = 1;
-			end
-			if ((1 == v139) or (780 == 3185)) then
-				v91 = v79.HandleBottomTrinket(v84, v27, 40, nil);
-				if (v91 or (3202 >= 4075)) then
-					return v91;
+				v90 = v117();
+				if (((1254 + 3441) >= (3704 - 2289)) and v90) then
+					return v90;
 				end
 				break;
+			end
+			if ((v136 == (365 - (112 + 250))) or ((1281 + 1931) <= (2364 - 1420))) then
+				if (v80.BloodFury:IsCastable() or ((1774 + 1322) <= (930 + 868))) then
+					if (((2646 + 891) == (1754 + 1783)) and v9.Cast(v80.BloodFury, v27)) then
+						return "Cast Blood Fury";
+					end
+				end
+				if (((2851 + 986) >= (2984 - (1001 + 413))) and v80.Berserking:IsCastable()) then
+					if (v9.Cast(v80.Berserking, v27) or ((6578 - 3628) == (4694 - (244 + 638)))) then
+						return "Cast Berserking";
+					end
+				end
+				if (((5416 - (627 + 66)) >= (6906 - 4588)) and v80.Fireblood:IsCastable()) then
+					if (v9.Cast(v80.Fireblood, v27) or ((2629 - (512 + 90)) > (4758 - (1665 + 241)))) then
+						return "Cast Fireblood";
+					end
+				end
+				v136 = 721 - (373 + 344);
+			end
+			if ((v136 == (0 + 0)) or ((301 + 835) > (11386 - 7069))) then
+				if (((8034 - 3286) == (5847 - (35 + 1064))) and v26 and v80.AdrenalineRush:IsCastable() and (not v13:BuffUp(v80.AdrenalineRush) or (v13:StealthUp(true, true) and v80.Crackshot:IsAvailable() and v80.ImprovedAdrenalineRush:IsAvailable())) and ((v94 <= (2 + 0)) or not v80.ImprovedAdrenalineRush:IsAvailable())) then
+					if (((7993 - 4257) <= (19 + 4721)) and v9.Cast(v80.AdrenalineRush, v73)) then
+						return "Cast Adrenaline Rush";
+					end
+				end
+				if ((v80.BladeFlurry:IsReady() and (v89 >= ((1238 - (298 + 938)) - v19(v80.UnderhandedUpperhand:IsAvailable()))) and (v13:BuffRemains(v80.BladeFlurry) < v13:GCDRemains())) or (v80.DeftManeuvers:IsAvailable() and (v89 >= (1264 - (233 + 1026))) and not v110()) or ((5056 - (636 + 1030)) <= (1565 + 1495))) then
+					if (v68 or ((976 + 23) > (800 + 1893))) then
+						v9.CastSuggested(v80.BladeFlurry);
+					elseif (((32 + 431) < (822 - (55 + 166))) and v9.Cast(v80.BladeFlurry)) then
+						return "Cast Blade Flurry";
+					end
+				end
+				if (v80.RolltheBones:IsReady() or ((424 + 1759) < (70 + 617))) then
+					if (((17372 - 12823) == (4846 - (36 + 261))) and (v109() or (v79.RtBRemains() <= (v19(v13:HasTier(53 - 22, 1372 - (34 + 1334))) + (v19((v80.ShadowDance:CooldownRemains() <= (1 + 0)) or (v80.Vanish:CooldownRemains() <= (1 + 0))) * (1289 - (1035 + 248))))))) then
+						if (((4693 - (20 + 1)) == (2435 + 2237)) and v9.Cast(v80.RolltheBones)) then
+							return "Cast Roll the Bones";
+						end
+					end
+				end
+				v136 = 320 - (134 + 185);
+			end
+			if ((v136 == (1134 - (549 + 584))) or ((4353 - (314 + 371)) < (1355 - 960))) then
+				if ((v80.KeepItRolling:IsReady() and not v109() and (v108() >= ((971 - (478 + 490)) + v19(v13:HasTier(17 + 14, 1176 - (786 + 386))))) and (v13:BuffDown(v80.ShadowDance) or (v108() >= (19 - 13)))) or ((5545 - (1055 + 324)) == (1795 - (1093 + 247)))) then
+					if (v9.Cast(v80.KeepItRolling, v72) or ((3954 + 495) == (281 + 2382))) then
+						return "Cast Keep it Rolling";
+					end
+				end
+				if ((v80.GhostlyStrike:IsAvailable() and v80.GhostlyStrike:IsReady()) or ((16980 - 12703) < (10143 - 7154))) then
+					if (v9.Cast(v80.GhostlyStrike, v70) or ((2475 - 1605) >= (10425 - 6276))) then
+						return "Cast Ghostly Strike";
+					end
+				end
+				if (((787 + 1425) < (12262 - 9079)) and v26 and v80.Sepsis:IsAvailable() and v80.Sepsis:IsReady()) then
+					if (((16013 - 11367) > (2257 + 735)) and ((v80.Crackshot:IsAvailable() and v80.BetweentheEyes:IsReady() and v110() and not v13:StealthUp(true, true)) or (not v80.Crackshot:IsAvailable() and v14:FilteredTimeToDie(">", 28 - 17) and v13:BuffUp(v80.BetweentheEyes)) or v9.BossFilteredFightRemains("<", 699 - (364 + 324)))) then
+						if (((3931 - 2497) < (7452 - 4346)) and v9.Cast(v80.Sepsis, v76)) then
+							return "Cast Sepsis";
+						end
+					end
+				end
+				v136 = 1 + 1;
+			end
+			if (((3288 - 2502) < (4841 - 1818)) and (v136 == (5 - 3))) then
+				if ((v80.BladeRush:IsReady() and (v99 > (1272 - (1249 + 19))) and not v13:StealthUp(true, true)) or ((2205 + 237) < (287 - 213))) then
+					if (((5621 - (686 + 400)) == (3559 + 976)) and v9.Cast(v80.BladeRush, v69)) then
+						return "Cast Blade Rush";
+					end
+				end
+				if (not v13:StealthUp(true, true, true) or ((3238 - (73 + 156)) <= (10 + 2095))) then
+					v90 = v116();
+					if (((2641 - (721 + 90)) < (42 + 3627)) and v90) then
+						return v90;
+					end
+				end
+				if ((v26 and v80.ThistleTea:IsAvailable() and v80.ThistleTea:IsCastable() and not v13:BuffUp(v80.ThistleTea) and ((v98 >= (324 - 224)) or v9.BossFilteredFightRemains("<", v80.ThistleTea:Charges() * (476 - (224 + 246))))) or ((2316 - 886) >= (6650 - 3038))) then
+					if (((487 + 2196) >= (59 + 2401)) and v9.Cast(v80.ThistleTea)) then
+						return "Cast Thistle Tea";
+					end
+				end
+				v136 = 3 + 0;
 			end
 		end
 	end
 	local function v119()
-		local v140 = 0;
+		local v137 = 0 - 0;
 		while true do
-			if ((64 == 64) and (v140 == 0)) then
-				if ((2202 >= 694) and v27 and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\152\183\181\26\134\242\252\176\189\162\45\157\224\248", "\144\217\211\199\127\232\147")]:IsCastable() and (not v14:BuffUp(v81.AdrenalineRush) or (v14:StealthUp(true, true) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\219\61\63\43\222\86\10\75\236", "\36\152\79\94\72\181\37\98")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\254\213\87\45\216\206\66\59\246\220\85\58\217\217\75\54\217\221\117\42\196\208", "\95\183\184\39")]:IsAvailable())) and ((v95 <= 2) or not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\156\50\247\52\91\150\7\177\30\227\52\81\142\3\185\54\233\35\102\149\17\189", "\98\213\95\135\70\52\224")]:IsAvailable())) then
-					if ((3706 <= 3900) and v10.Cast(v81.AdrenalineRush, v74)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\221\162\218\99\20\223\167\219\114\90\255\175\192\121\81\190\145\220\100\92", "\52\158\195\169\23");
+			if ((v137 == (6 - 4)) or ((2317 - (203 + 310)) >= (5268 - (1238 + 755)))) then
+				if ((v80.PistolShot:IsCastable() and v14:IsSpellInRange(v80.PistolShot) and v80.Crackshot:IsAvailable() and (v80.FanTheHammer:TalentRank() >= (1 + 1)) and (v13:BuffStack(v80.Opportunity) >= (1540 - (709 + 825))) and ((v13:BuffUp(v80.Broadside) and (v94 <= (1 - 0))) or v13:BuffUp(v80.GreenskinsWickersBuff))) or ((2064 - 647) > (4493 - (196 + 668)))) then
+					if (((18932 - 14137) > (832 - 430)) and v9.Press(v80.PistolShot)) then
+						return "Cast Pistol Shot";
 					end
 				end
-				if ((2890 > 2617) and ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\88\176\51\112\131\19\119\158\104\174\43", "\235\26\220\82\20\230\85\27")]:IsReady() and (v90 >= (2 - v20(v81[LUAOBFUSACTOR_DECRYPT_STR_0("\189\175\237\199\102\128\160\231\198\113\140\148\249\210\113\154\169\232\204\112", "\20\232\193\137\162")]:IsAvailable()))) and (v14:BuffRemains(v81.BladeFlurry) < v14:GCDRemains())) or (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\6\218\195\178\202\141\25\116\55\201\192\180\244", "\17\66\191\165\198\135\236\119")]:IsAvailable() and (v90 >= 5) and not v111()))) then
-					if (v69 or (3355 > 4385)) then
-						v10.CastSuggested(v81.BladeFlurry);
-					elseif (v10.Cast(v81.BladeFlurry) or (3067 <= 2195)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\44\174\189\7\191\202\224\208\11\170\238\53\243\253\254\195\22", "\177\111\207\206\115\159\136\140");
+				if (((5646 - (171 + 662)) > (3658 - (4 + 89))) and v80.Ambush:IsCastable() and v14:IsSpellInRange(v80.Ambush) and v80.HiddenOpportunity:IsAvailable()) then
+					if (((13711 - 9799) == (1425 + 2487)) and v9.Press(v80.Ambush)) then
+						return "Cast Ambush";
 					end
-				end
-				if ((3025 >= 2813) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\55\134\28\24\192\71\90\39\134\30\17\199", "\63\101\233\112\116\180\47")]:IsReady()) then
-					if ((2412 >= 356) and (v110() or (v80.RtBRemains() <= (v20(v14:HasTier(31, 4)) + (v20((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\240\51\236\22\247\33\231\58\227\17\253", "\86\163\91\141\114\152")]:CooldownRemains() <= 1) or (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\101\10\122\122\41\91", "\90\51\107\20\19")]:CooldownRemains() <= 1)) * 6))))) then
-						if ((2070 > 1171) and v10.Cast(v81.RolltheBones)) then
-							return LUAOBFUSACTOR_DECRYPT_STR_0("\174\241\150\251\125\191\255\137\227\125\153\248\128\175\31\130\254\128\252", "\93\237\144\229\143");
-						end
-					end
-				end
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\62\243\245\9\34\82\39\249\252\21\2\72\18", "\38\117\150\144\121\107")]:IsReady() and not v110() and (v109() >= (3 + v20(v14:HasTier(31, 4)))) and (v14:BuffDown(v81.ShadowDance) or (v109() >= 6))) or (4108 < 3934)) then
-					if ((3499 >= 3439) and v10.Cast(v81.KeepItRolling, v73)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\14\186\253\46\109\144\235\63\61\251\231\46\109\137\225\54\33\178\224\61", "\90\77\219\142");
-					end
-				end
-				v140 = 1;
-			end
-			if ((876 < 3303) and (v140 == 3)) then
-				if ((2922 <= 3562) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\98\17\185\162\17\103\81\30\182\132\3\127\79", "\19\35\127\218\199\98")]:IsCastable()) then
-					if ((2619 >= 1322) and v10.Cast(v81.AncestralCall, v28)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\63\250\25\246\92\218\4\225\25\232\30\240\29\247\74\193\29\247\6", "\130\124\155\106");
-					end
-				end
-				v91 = v118();
-				if ((4133 >= 2404) and v91) then
-					return v91;
 				end
 				break;
 			end
-			if ((v140 == 1) or (1433 == 2686)) then
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\193\12\46\42\88\11\99\213\16\51\48\71\2", "\26\134\100\65\89\44\103")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\214\235\63\48\176\253\250\3\55\182\248\232\53", "\196\145\131\80\67")]:IsReady()) or (4123 == 4457)) then
-					if (v10.Cast(v81.GhostlyStrike, v71) or (3972 <= 205)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\61\177\21\28\88\207\22\191\21\28\20\241\94\131\18\26\17\227\27", "\136\126\208\102\104\120");
+			if (((12390 - 9569) <= (1892 + 2932)) and ((1487 - (35 + 1451)) == v137)) then
+				if (((3191 - (28 + 1425)) <= (4188 - (941 + 1052))) and v80.BetweentheEyes:IsCastable() and v14:IsSpellInRange(v80.BetweentheEyes) and v110() and v80.Crackshot:IsAvailable()) then
+					if (((40 + 1) <= (4532 - (822 + 692))) and v9.Press(v80.BetweentheEyes)) then
+						return "Cast Between the Eyes";
 					end
 				end
-				if ((v27 and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\75\143\222\80\166\65", "\49\24\234\174\35\207\50\93")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\63\247\237\155\120\31", "\17\108\146\157\232")]:IsReady()) or (3766 < 1004)) then
-					if ((1784 < 2184) and ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\104\209\21\238\36\187\67\204\0", "\200\43\163\116\141\79")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\157\51\41\148\181\241\237\171\62\56\166\169\241\240", "\131\223\86\93\227\208\148")]:IsReady() and v111() and not v14:StealthUp(true, true)) or (not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\192\87\183\181\22\166\235\74\162", "\213\131\37\214\214\125")]:IsAvailable() and v15:FilteredTimeToDie(">", 11) and v14:BuffUp(v81.BetweentheEyes)) or v10.BossFilteredFightRemains("<", 11))) then
-						if (v10.Cast(v81.Sepsis, v77) or (1649 > 4231)) then
-							return LUAOBFUSACTOR_DECRYPT_STR_0("\5\42\54\171\161\21\46\53\172\232\53", "\129\70\75\69\223");
-						end
+				if (((3061 - 916) <= (1934 + 2170)) and v80.Dispatch:IsCastable() and v14:IsSpellInRange(v80.Dispatch) and v110()) then
+					if (((2986 - (45 + 252)) < (4794 + 51)) and v9.Press(v80.Dispatch)) then
+						return "Cast Dispatch";
 					end
 				end
-				if ((3193 == 3193) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\100\199\242\237\121\221\83\216\251", "\143\38\171\147\137\28")]:IsReady() and (v100 > 4) and not v14:StealthUp(true, true)) then
-					if (v10.Cast(v81.BladeRush, v70) or (3495 > 4306)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\243\131\170\231\67\193\216\209\134\188\179\49\246\199\216", "\180\176\226\217\147\99\131");
-					end
-				end
-				if ((4001 > 3798) and not v14:StealthUp(true, true, true)) then
-					local v172 = 0;
-					while true do
-						if ((v172 == 0) or (4688 <= 4499)) then
-							v91 = v117();
-							if (v91 or (1567 <= 319)) then
-								return v91;
-							end
-							break;
-						end
-					end
-				end
-				v140 = 2;
+				v137 = 1 + 1;
 			end
-			if ((v140 == 2) or (4583 == 3761)) then
-				if ((3454 > 1580) and v27 and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\231\177\38\20\199\181\42\51\214\184", "\103\179\217\79")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\126\191\21\198\85\128\166\126\178\29", "\195\42\215\124\181\33\236")]:IsCastable() and not v14:BuffUp(v81.ThistleTea) and ((v99 >= 100) or v10.BossFilteredFightRemains("<", v81[LUAOBFUSACTOR_DECRYPT_STR_0("\57\81\62\45\49\244\8\109\50\63", "\152\109\57\87\94\69")]:Charges() * 6))) then
-					if (v10.Cast(v81.ThistleTea) or (1607 == 20)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\218\214\25\183\254\230\92\161\234\195\6\166\254\230\81\169", "\200\153\183\106\195\222\178\52");
+			if ((v137 == (0 - 0)) or ((2755 - (114 + 319)) > (3764 - 1142))) then
+				if ((v80.BladeFlurry:IsReady() and v80.BladeFlurry:IsCastable() and v25 and v80.Subterfuge:IsAvailable() and v80.HiddenOpportunity:IsAvailable() and (v89 >= (2 - 0)) and (v13:BuffRemains(v80.BladeFlurry) <= v13:GCDRemains())) or ((2891 + 1643) == (3101 - 1019))) then
+					if (v68 or ((3291 - 1720) > (3830 - (556 + 1407)))) then
+						v9.CastSuggested(v80.BladeFlurry);
+					elseif (v9.Cast(v80.BladeFlurry) or ((3860 - (741 + 465)) >= (3461 - (170 + 295)))) then
+						return "Cast Blade Flurry";
 					end
 				end
-				if (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\16\239\135\50\77\124\39\241\145", "\58\82\131\232\93\41")]:IsCastable() or (962 >= 4666)) then
-					if (v10.Cast(v81.BloodFury, v28) or (1896 == 1708)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\160\86\195\1\29\29\143\88\223\17\29\25\150\69\201", "\95\227\55\176\117\61");
+				if (((2096 + 1882) > (1933 + 171)) and v80.ColdBlood:IsCastable() and v13:BuffDown(v80.ColdBlood) and v14:IsSpellInRange(v80.Dispatch) and v110()) then
+					if (((7373 - 4378) > (1278 + 263)) and v9.Cast(v80.ColdBlood, v53)) then
+						return "Cast Cold Blood";
 					end
 				end
-				if ((3985 >= 1284) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\58\123\49\88\174\10\117\42\69\172", "\203\120\30\67\43")]:IsCastable()) then
-					if (v10.Cast(v81.Berserking, v28) or (1987 == 545)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\210\36\94\251\153\211\32\95\252\220\227\46\68\225\222", "\185\145\69\45\143");
-					end
-				end
-				if (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\172\22\11\163\222\134\16\22\162", "\188\234\127\121\198")]:IsCastable() or (4896 < 1261)) then
-					if ((23 < 3610) and v10.Cast(v81.Fireblood, v28)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\27\51\0\151\120\20\26\145\61\48\31\140\55\54", "\227\88\82\115");
-					end
-				end
-				v140 = 3;
+				v137 = 1 + 0;
 			end
 		end
 	end
 	local function v120()
-		local v141 = 0;
+		local v138 = 0 + 0;
 		while true do
-			if ((v141 == 2) or (3911 < 2578)) then
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\207\58\26\30\61\244\204\59\6\30", "\152\159\83\105\106\82")]:IsCastable() and v15:IsSpellInRange(v81.PistolShot) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\162\212\80\241\194\79\137\201\69", "\60\225\166\49\146\169")]:IsAvailable() and (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\9\31\33\30\9\2\7\31\34\39\4\21", "\103\79\126\79\74\97")]:TalentRank() >= 2) and (v14:BuffStack(v81.Opportunity) >= 6) and ((v14:BuffUp(v81.Broadside) and (v95 <= 1)) or v14:BuffUp(v81.GreenskinsWickersBuff))) or (4238 < 87)) then
-					if ((2538 == 2538) and v10.Press(v81.PistolShot)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\153\126\192\103\30\42\179\108\199\124\82\90\137\119\220\103", "\122\218\31\179\19\62");
+			if (((4479 - (957 + 273)) > (255 + 698)) and (v138 == (0 + 0))) then
+				if ((v80.BetweentheEyes:IsCastable() and v14:IsSpellInRange(v80.BetweentheEyes) and not v80.Crackshot:IsAvailable() and ((v13:BuffRemains(v80.BetweentheEyes) < (15 - 11)) or v80.ImprovedBetweenTheEyes:IsAvailable() or v80.GreenskinsWickers:IsAvailable() or v13:HasTier(79 - 49, 11 - 7)) and v13:BuffDown(v80.GreenskinsWickers)) or ((16206 - 12933) > (6353 - (389 + 1391)))) then
+					if (v9.Press(v80.BetweentheEyes) or ((1977 + 1174) < (134 + 1150))) then
+						return "Cast Between the Eyes";
 					end
 				end
-				if ((4122 == 4122) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\146\219\207\212\218\169", "\37\211\182\173\161\169\193")]:IsCastable() and v15:IsSpellInRange(v81.Ambush) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\223\51\73\221\45\117\150\231\42\66\203\60\110\183\254\46\84", "\217\151\90\45\185\72\27")]:IsAvailable()) then
-					if (v10.Press(v81.Ambush) or (2371 > 2654)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\224\125\244\6\22\226\113\229\7\69\203", "\54\163\28\135\114");
+				if ((v80.BetweentheEyes:IsCastable() and v14:IsSpellInRange(v80.BetweentheEyes) and v80.Crackshot:IsAvailable() and (v80.Vanish:CooldownRemains() > (102 - 57)) and (v80.ShadowDance:CooldownRemains() > (963 - (783 + 168)))) or ((6208 - 4358) == (1504 + 25))) then
+					if (((1132 - (309 + 2)) < (6519 - 4396)) and v9.Press(v80.BetweentheEyes)) then
+						return "Cast Between the Eyes";
+					end
+				end
+				v138 = 1213 - (1090 + 122);
+			end
+			if (((293 + 609) < (7808 - 5483)) and (v138 == (1 + 0))) then
+				if (((1976 - (628 + 490)) <= (532 + 2430)) and v80.SliceandDice:IsCastable() and (v9.FilteredFightRemains(v88, ">", v13:BuffRemains(v80.SliceandDice), true) or (v13:BuffRemains(v80.SliceandDice) == (0 - 0))) and (v13:BuffRemains(v80.SliceandDice) < (((4 - 3) + v94) * (775.8 - (431 + 343))))) then
+					if (v9.Press(v80.SliceandDice) or ((7969 - 4023) < (3726 - 2438))) then
+						return "Cast Slice and Dice";
+					end
+				end
+				if ((v80.KillingSpree:IsCastable() and v14:IsSpellInRange(v80.KillingSpree) and (v14:DebuffUp(v80.GhostlyStrike) or not v80.GhostlyStrike:IsAvailable())) or ((2562 + 680) == (73 + 494))) then
+					if (v9.Cast(v80.KillingSpree) or ((2542 - (556 + 1139)) >= (1278 - (6 + 9)))) then
+						return "Cast Killing Spree";
+					end
+				end
+				v138 = 1 + 1;
+			end
+			if ((v138 == (2 + 0)) or ((2422 - (28 + 141)) == (717 + 1134))) then
+				if ((v80.ColdBlood:IsCastable() and v13:BuffDown(v80.ColdBlood) and v14:IsSpellInRange(v80.Dispatch)) or ((2575 - 488) > (1680 + 692))) then
+					if (v9.Cast(v80.ColdBlood, v53) or ((5762 - (486 + 831)) < (10796 - 6647))) then
+						return "Cast Cold Blood";
+					end
+				end
+				if ((v80.Dispatch:IsCastable() and v14:IsSpellInRange(v80.Dispatch)) or ((6400 - 4582) == (17 + 68))) then
+					if (((1992 - 1362) < (3390 - (668 + 595))) and v9.Press(v80.Dispatch)) then
+						return "Cast Dispatch";
 					end
 				end
 				break;
-			end
-			if ((1 == v141) or (3466 > 4520)) then
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\60\229\97\221\239\142\23\194\22\229\80\211\239\152", "\182\126\128\21\170\138\235\121")]:IsCastable() and v15:IsSpellInRange(v81.BetweentheEyes) and v111() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\168\200\52\229\141\0\56\9\159", "\102\235\186\85\134\230\115\80")]:IsAvailable()) or (951 >= 1027)) then
-					if (v10.Press(v81.BetweentheEyes) or (1369 > 2250)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\116\13\45\75\50\246\39\67\27\59\90\124\148\54\95\9\126\122\107\209\49", "\66\55\108\94\63\18\180");
-					end
-				end
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\48\132\150\39\38\77\23\133", "\57\116\237\229\87\71")]:IsCastable() and v15:IsSpellInRange(v81.Dispatch) and v111()) or (937 > 3786)) then
-					if (v10.Press(v81.Dispatch) or (901 > 4218)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\137\176\254\243\55\202\78\185\161\236\243\116\230", "\39\202\209\141\135\23\142");
-					end
-				end
-				v141 = 2;
-			end
-			if ((4779 > 4047) and (v141 == 0)) then
-				if ((4050 > 1373) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\247\199\247\171\166\208\112\170\199\217\239", "\223\181\171\150\207\195\150\28")]:IsReady() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\110\54\226\170\12\106\54\246\188\27\85", "\105\44\90\131\206")]:IsCastable() and v26 and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\204\245\176\173\13\44\249\245\181\188", "\94\159\128\210\217\104")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\120\240\2\187\90\113\214\106\64\246\20\171\74\113\240\110\73", "\26\48\153\102\223\63\31\153")]:IsAvailable() and (v90 >= 2) and (v14:BuffRemains(v81.BladeFlurry) <= v14:GCDRemains())) then
-					if (v69 or (1037 > 4390)) then
-						v10.CastSuggested(v81.BladeFlurry);
-					elseif ((1407 <= 1919) and v10.Cast(v81.BladeFlurry)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\33\65\254\231\66\98\225\242\6\69\173\213\14\85\255\225\27", "\147\98\32\141");
-					end
-				end
-				if ((2526 >= 1717) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\59\76\239\206\36\90\68\23\71", "\43\120\35\131\170\102\54")]:IsCastable() and v14:BuffDown(v81.ColdBlood) and v15:IsSpellInRange(v81.Dispatch) and v111()) then
-					if (v10.Cast(v81.ColdBlood, v54) or (3620 <= 2094)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\119\7\148\162\229\147\139\88\2\199\148\169\191\139\80", "\228\52\102\231\214\197\208");
-					end
-				end
-				v141 = 1;
 			end
 		end
 	end
 	local function v121()
-		local v142 = 0;
+		local v139 = 0 + 0;
 		while true do
-			if ((v142 == 2) or (1723 >= 2447)) then
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\11\174\200\120\60\47\62\45\44", "\66\72\193\164\28\126\67\81")]:IsCastable() and v14:BuffDown(v81.ColdBlood) and v15:IsSpellInRange(v81.Dispatch)) or (1199 > 3543)) then
-					if ((1617 < 3271) and v10.Cast(v81.ColdBlood, v54)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\196\45\187\76\102\85\232\32\172\24\4\122\232\35\172", "\22\135\76\200\56\70");
+			if ((v139 == (0 + 0)) or ((5285 - 3347) == (2804 - (23 + 267)))) then
+				if (((6199 - (1129 + 815)) >= (442 - (371 + 16))) and v26 and v80.EchoingReprimand:IsReady()) then
+					if (((4749 - (1326 + 424)) > (2188 - 1032)) and v9.Cast(v80.EchoingReprimand, nil, v74)) then
+						return "Cast Echoing Reprimand";
 					end
 				end
-				if ((3085 > 1166) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\169\57\235\52\92\245\142\56", "\129\237\80\152\68\61")]:IsCastable() and v15:IsSpellInRange(v81.Dispatch)) then
-					if ((4493 >= 3603) and v10.Press(v81.Dispatch)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\114\169\23\231\92\51\81\66\184\5\231\31\31", "\56\49\200\100\147\124\119");
+				if (((8587 - 6237) > (1273 - (88 + 30))) and v80.Ambush:IsCastable() and v80.HiddenOpportunity:IsAvailable() and v13:BuffUp(v80.AudacityBuff)) then
+					if (((4800 - (720 + 51)) <= (10795 - 5942)) and v9.Press(v80.Ambush)) then
+						return "Cast Ambush (High-Prio Buffed)";
+					end
+				end
+				v139 = 1777 - (421 + 1355);
+			end
+			if ((v139 == (1 - 0)) or ((254 + 262) > (4517 - (286 + 797)))) then
+				if (((14790 - 10744) >= (5023 - 1990)) and v80.FanTheHammer:IsAvailable() and v80.Audacity:IsAvailable() and v80.HiddenOpportunity:IsAvailable() and v13:BuffUp(v80.Opportunity) and v13:BuffDown(v80.AudacityBuff)) then
+					if (v9.Press(v80.PistolShot) or ((3158 - (397 + 42)) <= (452 + 995))) then
+						return "Cast Pistol Shot (Audacity)";
+					end
+				end
+				if ((v13:BuffUp(v80.GreenskinsWickersBuff) and ((not v80.FanTheHammer:IsAvailable() and v13:BuffUp(v80.Opportunity)) or (v13:BuffRemains(v80.GreenskinsWickersBuff) < (801.5 - (24 + 776))))) or ((6368 - 2234) < (4711 - (222 + 563)))) then
+					if (v9.Press(v80.PistolShot) or ((360 - 196) >= (2006 + 779))) then
+						return "Cast Pistol Shot (GSW Dump)";
+					end
+				end
+				v139 = 192 - (23 + 167);
+			end
+			if (((1801 - (690 + 1108)) == v139) or ((190 + 335) == (1740 + 369))) then
+				if (((881 - (40 + 808)) == (6 + 27)) and not v80.FanTheHammer:IsAvailable() and v13:BuffUp(v80.Opportunity) and ((v99 > (3.5 - 2)) or (v95 <= (1 + 0 + v19(v13:BuffUp(v80.Broadside)))) or v80.QuickDraw:IsAvailable() or (v80.Audacity:IsAvailable() and v13:BuffDown(v80.AudacityBuff)))) then
+					if (((1616 + 1438) <= (2202 + 1813)) and v9.Press(v80.PistolShot)) then
+						return "Cast Pistol Shot";
+					end
+				end
+				if (((2442 - (47 + 524)) < (2195 + 1187)) and v80.SinisterStrike:IsCastable() and v14:IsSpellInRange(v80.SinisterStrike)) then
+					if (((3534 - 2241) <= (3238 - 1072)) and v9.Press(v80.SinisterStrike)) then
+						return "Cast Sinister Strike";
 					end
 				end
 				break;
 			end
-			if ((2843 <= 2975) and (v142 == 0)) then
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\10\222\73\149\75\122\38\207\85\135\107\102\45\200", "\31\72\187\61\226\46")]:IsCastable() and v15:IsSpellInRange(v81.BetweentheEyes) and not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\224\20\66\209\76\109\44\204\18", "\68\163\102\35\178\39\30")]:IsAvailable() and ((v14:BuffRemains(v81.BetweentheEyes) < 4) or v81[LUAOBFUSACTOR_DECRYPT_STR_0("\151\125\202\213\12\163\134\21\156\117\206\208\6\176\141\37\182\117\255\222\6\166", "\113\222\16\186\167\99\213\227")]:IsAvailable() or v81[LUAOBFUSACTOR_DECRYPT_STR_0("\9\28\254\243\32\29\240\255\32\29\204\255\45\5\254\228\61", "\150\78\110\155")]:IsAvailable() or v14:HasTier(30, 4)) and v14:BuffDown(v81.GreenskinsWickers)) or (1989 <= 174)) then
-					if (v10.Press(v81.BetweentheEyes) or (209 > 2153)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\166\196\52\245\228\60\186\84\146\192\34\239\228\10\183\69\197\224\62\228\183", "\32\229\165\71\129\196\126\223");
+			if (((4 - 2) == v139) or ((4305 - (1165 + 561)) < (4 + 119))) then
+				if ((v80.FanTheHammer:IsAvailable() and v13:BuffUp(v80.Opportunity) and ((v13:BuffStack(v80.Opportunity) >= (18 - 12)) or (v13:BuffRemains(v80.Opportunity) < (1 + 1)))) or ((1325 - (341 + 138)) >= (640 + 1728))) then
+					if (v9.Press(v80.PistolShot) or ((8279 - 4267) <= (3684 - (89 + 237)))) then
+						return "Cast Pistol Shot (FtH Dump)";
 					end
 				end
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\225\140\208\150\132\208\205\157\204\132\164\204\198\154", "\181\163\233\164\225\225")]:IsCastable() and v15:IsSpellInRange(v81.BetweentheEyes) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\115\153\63\116\91\152\54\120\68", "\23\48\235\94")]:IsAvailable() and (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\74\219\214\84\68\59", "\178\28\186\184\61\55\83")]:CooldownRemains() > 45) and (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\247\197\70\56\253\25\209\197\195\68\57", "\149\164\173\39\92\146\110")]:CooldownRemains() > 12)) or (2020 == 1974)) then
-					if (v10.Press(v81.BetweentheEyes) or (1347 == 1360)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\208\38\3\11\90\57\246\51\7\26\31\21\179\51\24\26\90\62\234\34\3", "\123\147\71\112\127\122");
+				if (((4805 - 3311) <= (6326 - 3321)) and v80.FanTheHammer:IsAvailable() and v13:BuffUp(v80.Opportunity) and (v95 > ((882 - (581 + 300)) + (v19(v80.QuickDraw:IsAvailable()) * v80.FanTheHammer:TalentRank()))) and ((not v80.Vanish:IsReady() and not v80.ShadowDance:IsReady()) or v13:StealthUp(true, true) or not v80.Crackshot:IsAvailable() or (v80.FanTheHammer:TalentRank() <= (1221 - (855 + 365))))) then
+					if (v9.Press(v80.PistolShot) or ((7389 - 4278) == (697 + 1437))) then
+						return "Cast Pistol Shot";
 					end
 				end
-				v142 = 1;
-			end
-			if ((v142 == 1) or (4461 == 3572)) then
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\255\193\139\114\67\205\195\134\85\79\207\200", "\38\172\173\226\17")]:IsCastable() and (v10.FilteredFightRemains(v89, ">", v14:BuffRemains(v81.SliceandDice), true) or (v14:BuffRemains(v81.SliceandDice) == 0)) and (v14:BuffRemains(v81.SliceandDice) < ((1 + v95) * 1.8))) or (2872 == 318)) then
-					if ((568 == 568) and v10.Press(v81.SliceandDice)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\110\16\63\251\13\34\32\230\78\20\108\238\67\21\108\203\68\18\41", "\143\45\113\76");
-					end
-				end
-				if ((4200 == 4200) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\147\177\16\48\177\182\27\15\168\170\25\57", "\92\216\216\124")]:IsCastable() and v15:IsSpellInRange(v81.KillingSpree) and (v15:DebuffUp(v81.GhostlyStrike) or not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\124\58\163\83\233\87\43\159\84\239\82\57\169", "\157\59\82\204\32")]:IsAvailable())) then
-					if (v10.Cast(v81.KillingSpree) or (4285 < 1369)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\27\63\240\238\169\193\218\189\52\55\237\253\169\217\195\163\61\59", "\209\88\94\131\154\137\138\179");
-					end
-				end
-				v142 = 2;
+				v139 = 1238 - (1030 + 205);
 			end
 		end
 	end
 	local function v122()
-		local v143 = 0;
+		local v140 = 0 + 0;
 		while true do
-			if ((v143 == 2) or (3520 > 4910)) then
-				if ((2842 <= 4353) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\165\241\164\191\213\179\171\241\167\134\216\164", "\214\227\144\202\235\189")]:IsAvailable() and v14:BuffUp(v81.Opportunity) and ((v14:BuffStack(v81.Opportunity) >= 6) or (v14:BuffRemains(v81.Opportunity) < 2))) then
-					if (v10.Press(v81.PistolShot) or (3751 < 1643)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\206\164\148\111\80\131\90\47\249\170\139\59\35\187\92\40\173\237\161\111\56\243\119\41\224\181\206", "\92\141\197\231\27\112\211\51");
-					end
-				end
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\192\254\132\151\217\227\215\139\174\220\227\237", "\177\134\159\234\195")]:IsAvailable() and v14:BuffUp(v81.Opportunity) and (v96 > (1 + (v20(v81[LUAOBFUSACTOR_DECRYPT_STR_0("\140\254\54\163\194\153\249\62\183", "\169\221\139\95\192")]:IsAvailable()) * v81[LUAOBFUSACTOR_DECRYPT_STR_0("\248\138\113\11\42\35\246\138\114\50\39\52", "\70\190\235\31\95\66")]:TalentRank()))) and ((not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\140\227\20\239\246\178", "\133\218\130\122\134")]:IsReady() and not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\15\247\226\192\211\180\28\61\241\224\193", "\88\92\159\131\164\188\195")]:IsReady()) or v14:StealthUp(true, true) or not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\163\60\190\72\220\248\213\143\58", "\189\224\78\223\43\183\139")]:IsAvailable() or (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\8\253\132\34\201\43\212\139\27\204\43\238", "\161\78\156\234\118")]:TalentRank() <= 1))) or (4911 == 3534)) then
-					if ((3001 > 16) and v10.Press(v81.PistolShot)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\132\182\218\200\231\135\192\207\179\184\197\156\148\191\198\200", "\188\199\215\169");
-					end
-				end
-				v143 = 3;
-			end
-			if ((2875 <= 3255) and (v143 == 3)) then
-				if ((368 < 4254) and not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\218\8\81\79\224\249\33\94\118\229\249\27", "\136\156\105\63\27")]:IsAvailable() and v14:BuffUp(v81.Opportunity) and ((v100 > 1.5) or (v96 <= (1 + v20(v14:BuffUp(v81.Broadside)))) or v81[LUAOBFUSACTOR_DECRYPT_STR_0("\42\153\112\55\16\168\107\53\12", "\84\123\236\25")]:IsAvailable() or (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\209\158\174\22\175\188\228\146", "\213\144\235\202\119\204")]:IsAvailable() and v14:BuffDown(v81.AudacityBuff)))) then
-					if (v10.Press(v81.PistolShot) or (4841 <= 2203)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\0\25\205\62\104\19\68\48\12\209\38\104\16\69\44\12", "\45\67\120\190\74\72\67");
-					end
-				end
-				if ((4661 > 616) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\19\43\227\172\234\156\235\251\19\54\255\172\242\141", "\137\64\66\141\197\153\232\142")]:IsCastable() and v15:IsSpellInRange(v81.SinisterStrike)) then
-					if (v10.Press(v81.SinisterStrike) or (1943 == 2712)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\32\209\49\178\200\48\217\44\175\155\23\213\48\230\187\23\194\43\173\141", "\232\99\176\66\198");
-					end
-				end
-				break;
-			end
-			if ((4219 >= 39) and (v143 == 1)) then
-				if ((3967 > 2289) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\108\255\172\118\121\36\98\255\175\79\116\51", "\65\42\158\194\34\17")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\59\50\86\13\46\228\15\247", "\142\122\71\50\108\77\141\123")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\61\171\251\28\62\27\141\239\8\52\7\182\234\22\50\1\187", "\91\117\194\159\120")]:IsAvailable() and v14:BuffUp(v81.Opportunity) and v14:BuffDown(v81.AudacityBuff)) then
-					if (v10.Press(v81.PistolShot) or (851 > 2987)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\57\28\45\12\117\193\45\9\9\49\20\117\194\44\21\9\126\80\20\228\32\27\30\55\12\44\184", "\68\122\125\94\120\85\145");
-					end
-				end
-				if ((4893 >= 135) and v14:BuffUp(v81.GreenskinsWickersBuff) and ((not v81[LUAOBFUSACTOR_DECRYPT_STR_0("\49\29\193\106\192\220\146\22\17\194\91\218", "\218\119\124\175\62\168\185")]:IsAvailable() and v14:BuffUp(v81.Opportunity)) or (v14:BuffRemains(v81.GreenskinsWickersBuff) < 1.5))) then
-					if (v10.Press(v81.PistolShot) or (3084 > 3214)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\134\241\91\208\229\192\65\215\177\255\68\132\150\248\71\208\229\184\111\247\146\176\108\209\168\224\1", "\164\197\144\40");
-					end
-				end
-				v143 = 2;
-			end
-			if ((v143 == 0) or (3426 < 2647)) then
-				if ((v27 and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\233\61\183\255\197\48\184\194\201\46\173\249\193\63\177\244", "\144\172\94\223")]:IsReady()) or (1576 == 4375)) then
-					if (v10.Cast(v81.EchoingReprimand, nil, v75) or (2920 < 2592)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\7\14\177\83\100\42\161\79\43\6\172\64\100\61\167\87\54\6\175\70\42\11", "\39\68\111\194");
-					end
-				end
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\247\171\229\210\106\191", "\215\182\198\135\167\25")]:IsCastable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\165\64\238\76\136\71\197\88\157\70\248\92\152\71\227\92\148", "\40\237\41\138")]:IsAvailable() and v14:BuffUp(v81.AudacityBuff)) or (1110 >= 2819)) then
-					if ((1824 <= 2843) and v10.Press(v81.Ambush)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\228\117\233\236\10\230\121\248\237\89\207\52\178\208\67\192\124\183\200\88\206\123\186\218\95\193\114\255\252\3", "\42\167\20\154\152");
-					end
-				end
-				v143 = 1;
-			end
-		end
-	end
-	local function v123()
-		local v144 = 0;
-		while true do
-			if ((3062 == 3062) and (v144 == 6)) then
-				if ((716 <= 4334) and v79.TargetIsValid()) then
-					local v173 = 0;
+			if (((2191 + 164) == (2641 - (156 + 130))) and (v140 == (17 - 9))) then
+				if (v78.TargetIsValid() or ((990 - 402) <= (884 - 452))) then
+					local v167 = 0 + 0;
 					while true do
-						if ((1001 < 3034) and (v173 == 0)) then
-							v91 = v119();
-							if (v91 or (977 > 1857)) then
-								return LUAOBFUSACTOR_DECRYPT_STR_0("\6\14\191\27\15", "\197\69\74\204\33\47\31") .. v91;
+						if (((2798 + 1999) >= (3964 - (10 + 59))) and (v167 == (0 + 0))) then
+							v90 = v118();
+							if (((17615 - 14038) == (4740 - (671 + 492))) and v90) then
+								return "CDs: " .. v90;
 							end
-							if (v14:StealthUp(true, true) or v14:BuffUp(v81.Shadowmeld) or (868 > 897)) then
-								local v192 = 0;
+							if (((3021 + 773) > (4908 - (369 + 846))) and (v13:StealthUp(true, true) or v13:BuffUp(v80.Shadowmeld))) then
+								local v187 = 0 + 0;
 								while true do
-									if ((v192 == 0) or (1115 == 4717)) then
-										v91 = v120();
-										if ((2740 < 4107) and v91) then
-											return LUAOBFUSACTOR_DECRYPT_STR_0("\195\91\95\134\252\91\82\221\176", "\231\144\47\58") .. v91;
+									if ((v187 == (0 + 0)) or ((3220 - (1036 + 909)) == (3260 + 840))) then
+										v90 = v119();
+										if (v90 or ((2670 - 1079) >= (3783 - (11 + 192)))) then
+											return "Stealth: " .. v90;
 										end
 										break;
 									end
 								end
 							end
-							if ((284 < 700) and v111()) then
-								local v193 = 0;
+							if (((497 + 486) <= (1983 - (135 + 40))) and v110()) then
+								local v188 = 0 - 0;
 								while true do
-									if ((386 >= 137) and (v193 == 0)) then
-										v91 = v121();
-										if ((923 == 923) and v91) then
-											return LUAOBFUSACTOR_DECRYPT_STR_0("\148\209\212\124\11\53\149\121", "\89\210\184\186\21\120\93\175") .. v91;
+									if ((v188 == (0 + 0)) or ((4736 - 2586) <= (1793 - 596))) then
+										v90 = v120();
+										if (((3945 - (50 + 126)) >= (3266 - 2093)) and v90) then
+											return "Finish: " .. v90;
 										end
 										break;
 									end
 								end
 							end
-							v173 = 1;
+							v167 = 1 + 0;
 						end
-						if ((v173 == 2) or (4173 == 359)) then
-							if ((1722 == 1722) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\43\193\114\0\172\20\226\96\12\191\10\205\123\28", "\216\103\168\21\104")]:IsCastable() and v15:IsInMeleeRange(5)) then
-								if (v10.Cast(v81.LightsJudgment, v28) or (3994 <= 3820)) then
-									return LUAOBFUSACTOR_DECRYPT_STR_0("\91\172\80\176\56\129\74\163\112\185\80\228\82\184\71\163\117\168\77\176", "\196\24\205\35");
+						if (((2898 - (1233 + 180)) == (2454 - (522 + 447))) and ((1422 - (107 + 1314)) == v167)) then
+							v90 = v121();
+							if (v90 or ((1539 + 1776) <= (8476 - 5694))) then
+								return "Build: " .. v90;
+							end
+							if ((v80.ArcaneTorrent:IsCastable() and v14:IsSpellInRange(v80.SinisterStrike) and (v98 > (7 + 8 + v97))) or ((1739 - 863) >= (11727 - 8763))) then
+								if (v9.Cast(v80.ArcaneTorrent, v27) or ((4142 - (716 + 1194)) > (43 + 2454))) then
+									return "Cast Arcane Torrent";
 								end
 							end
-							if ((1488 < 1641) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\12\138\228\9\40\191\241\15\45\128\240", "\102\78\235\131")]:IsCastable() and v15:IsInMeleeRange(5)) then
-								if ((433 <= 2235) and v10.Cast(v81.BagofTricks, v28)) then
-									return LUAOBFUSACTOR_DECRYPT_STR_0("\217\47\39\80\7\27\182\51\186\33\50\4\115\43\190\55\241\61", "\84\154\78\84\36\39\89\215");
+							if ((v80.ArcanePulse:IsCastable() and v14:IsSpellInRange(v80.SinisterStrike)) or ((227 + 1883) <= (835 - (74 + 429)))) then
+								if (((7110 - 3424) > (1573 + 1599)) and v9.Cast(v80.ArcanePulse)) then
+									return "Cast Arcane Pulse";
 								end
 							end
-							if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\205\232\69\76\10\241\210\94\87\17", "\101\157\129\54\56")]:IsCastable() and v15:IsSpellInRange(v81.PistolShot) and not v15:IsInRange(v92) and not v14:StealthUp(true, true) and (v99 < 25) and ((v96 >= 1) or (v100 <= 1.2))) or (1838 > 2471)) then
-								if ((2444 < 3313) and v10.Cast(v81.PistolShot)) then
-									return LUAOBFUSACTOR_DECRYPT_STR_0("\62\168\153\191\99\73\20\186\158\164\47\57\46\161\133\191\99\49\50\134\184\226", "\25\125\201\234\203\67");
+							v167 = 4 - 2;
+						end
+						if ((v167 == (2 + 0)) or ((13793 - 9319) < (2027 - 1207))) then
+							if (((4712 - (279 + 154)) >= (3660 - (454 + 324))) and v80.LightsJudgment:IsCastable() and v14:IsInMeleeRange(4 + 1)) then
+								if (v9.Cast(v80.LightsJudgment, v27) or ((2046 - (12 + 5)) >= (1899 + 1622))) then
+									return "Cast Lights Judgment";
 								end
 							end
-							if (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\74\253\22\10\7\51\22\107\199\12\17\29\44\22", "\115\25\148\120\99\116\71")]:IsCastable() or (3685 <= 185)) then
-								if ((738 <= 1959) and v10.Cast(v81.SinisterStrike)) then
-									return LUAOBFUSACTOR_DECRYPT_STR_0("\47\60\170\48\1\63\52\183\45\82\24\56\171\100\114\24\47\176\47\68\76\27\176\40\77\9\47", "\33\108\93\217\68");
+							if ((v80.BagofTricks:IsCastable() and v14:IsInMeleeRange(12 - 7)) or ((753 + 1284) >= (5735 - (277 + 816)))) then
+								if (((7349 - 5629) < (5641 - (1058 + 125))) and v9.Cast(v80.BagofTricks, v27)) then
+									return "Cast Bag of Tricks";
+								end
+							end
+							if ((v80.PistolShot:IsCastable() and v14:IsSpellInRange(v80.PistolShot) and not v14:IsInRange(v91) and not v13:StealthUp(true, true) and (v98 < (5 + 20)) and ((v95 >= (976 - (815 + 160))) or (v99 <= (4.2 - 3)))) or ((1034 - 598) > (721 + 2300))) then
+								if (((2084 - 1371) <= (2745 - (41 + 1857))) and v9.Cast(v80.PistolShot)) then
+									return "Cast Pistol Shot (OOR)";
+								end
+							end
+							if (((4047 - (1222 + 671)) <= (10418 - 6387)) and v80.SinisterStrike:IsCastable()) then
+								if (((6633 - 2018) == (5797 - (229 + 953))) and v9.Cast(v80.SinisterStrike)) then
+									return "Cast Sinister Strike Filler";
 								end
 							end
 							break;
-						end
-						if ((v173 == 1) or (1317 == 3093)) then
-							v91 = v122();
-							if (v91 or (2611 >= 4435)) then
-								return LUAOBFUSACTOR_DECRYPT_STR_0("\147\70\117\217\125\96\241", "\90\209\51\28\181\25") .. v91;
-							end
-							if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\241\105\84\239\177\213\79\88\252\173\213\117\67", "\223\176\27\55\142")]:IsCastable() and v15:IsSpellInRange(v81.SinisterStrike) and (v99 > (15 + v98))) or (117 > 4925)) then
-								if ((107 <= 4905) and v10.Cast(v81.ArcaneTorrent, v28)) then
-									return LUAOBFUSACTOR_DECRYPT_STR_0("\7\186\221\161\100\154\220\182\37\181\203\245\16\180\220\167\33\181\218", "\213\68\219\174");
-								end
-							end
-							if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\42\242\32\230\36\192\15\106\7\243\38", "\31\107\128\67\135\74\165\95")]:IsCastable() and v15:IsSpellInRange(v81.SinisterStrike)) or (1004 > 4035)) then
-								if (v10.Cast(v81.ArcanePulse) or (2802 < 369)) then
-									return LUAOBFUSACTOR_DECRYPT_STR_0("\251\233\239\89\1\144\202\235\253\67\68\241\232\253\240\94\68", "\209\184\136\156\45\33");
-								end
-							end
-							v173 = 2;
 						end
 					end
 				end
 				break;
 			end
-			if ((1497 <= 2561) and (v144 == 0)) then
-				v78();
-				v25 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\216\46\47\1\119\136\234", "\76\140\65\72\102\27\237\153")][LUAOBFUSACTOR_DECRYPT_STR_0("\69\213\21", "\222\42\186\118\178\183\97")];
-				v26 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\105\227\67\141\81\233\87", "\234\61\140\36")][LUAOBFUSACTOR_DECRYPT_STR_0("\32\210\191", "\111\65\189\218\18")];
-				v27 = EpicSettings[LUAOBFUSACTOR_DECRYPT_STR_0("\119\68\28\50\7\89\188", "\207\35\43\123\85\107\60")][LUAOBFUSACTOR_DECRYPT_STR_0("\115\174\179", "\25\16\202\192\138")];
-				v144 = 1;
-			end
-			if ((v144 == 3) or (816 > 1712)) then
-				v100 = v105(v101);
-				v99 = v14:EnergyDeficitPredicted(nil, v101);
-				if (v26 or (2733 == 2971)) then
-					local v174 = 0;
-					while true do
-						if ((2599 < 4050) and (v174 == 0)) then
-							v88 = v14:GetEnemiesInRange(30);
-							v89 = v14:GetEnemiesInRange(v92);
-							v174 = 1;
-						end
-						if ((2034 == 2034) and (v174 == 1)) then
-							v90 = #v89;
-							break;
-						end
-					end
-				else
-					v90 = 1;
+			if (((1779 - (1111 + 663)) == v140) or ((5369 - (874 + 705)) == (70 + 430))) then
+				v90 = v79.CrimsonVial();
+				if (((61 + 28) < (459 - 238)) and v90) then
+					return v90;
 				end
-				v91 = v80.CrimsonVial();
-				v144 = 4;
+				v79.Poisons();
+				v140 = 1 + 5;
 			end
-			if ((3040 < 4528) and (v144 == 2)) then
-				v96 = v14:ComboPointsDeficit();
-				v101 = (v14:BuffUp(v81.AdrenalineRush, nil, true) and -50) or 0;
-				v97 = v106();
-				v98 = v14:EnergyRegen();
-				v144 = 3;
-			end
-			if ((v144 == 5) or (2092 <= 2053)) then
-				if ((2120 < 4799) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\121\45\167\10\66", "\54\63\72\206\100")]:IsCastable() and (v14:HealthPercentage() <= v57) and not (v14:IsChanneling() or v14:IsCasting())) then
-					if (v10.Cast(v81.Feint) or (4538 <= 389)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\235\88\86\110\165\93\205\80\75\110\165\51\236\92\67\127\235\104\193\79\64\105\172", "\27\168\57\37\26\133");
-					end
-				end
-				if ((270 <= 1590) and not v14:AffectingCombat() and not v14:IsMounted() and v58) then
-					local v175 = 0;
+			if (((2733 - (642 + 37)) >= (325 + 1096)) and ((2 + 5) == v140)) then
+				if (((1737 - 1045) < (3512 - (233 + 221))) and not v13:AffectingCombat() and not v13:IsMounted() and v57) then
+					local v168 = 0 - 0;
 					while true do
-						if ((1625 > 1265) and (v175 == 0)) then
-							v91 = v80.Stealth(v81.Stealth2, nil);
-							if (v91 or (51 >= 920)) then
-								return LUAOBFUSACTOR_DECRYPT_STR_0("\30\190\121\169\219\57\162\60\224\248\2\137\53\242\151", "\183\77\202\28\200") .. v91;
+						if ((v168 == (0 + 0)) or ((4795 - (718 + 823)) == (1042 + 613))) then
+							v90 = v79.Stealth(v80.Stealth2, nil);
+							if (v90 or ((2101 - (266 + 539)) == (13901 - 8991))) then
+								return "Stealth (OOC): " .. v90;
 							end
 							break;
 						end
 					end
 				end
-				if ((not v14:AffectingCombat() and (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\33\50\135\1\4\59", "\104\119\83\233")]:TimeSinceLastCast() > 1) and v15:IsInRange(8) and v25) or (2968 <= 1998)) then
-					if ((v79.TargetIsValid() and v15:IsInRange(10) and not (v14:IsChanneling() or v14:IsCasting())) or (3085 <= 2742)) then
-						local v180 = 0;
+				if (((4593 - (636 + 589)) == (7994 - 4626)) and not v13:AffectingCombat() and (v80.Vanish:TimeSinceLastCast() > (1 - 0)) and v14:IsInRange(7 + 1) and v24) then
+					if (((961 + 1682) < (4830 - (657 + 358))) and v78.TargetIsValid() and v14:IsInRange(26 - 16) and not (v13:IsChanneling() or v13:IsCasting())) then
+						local v174 = 0 - 0;
 						while true do
-							if ((v180 == 0) or (376 >= 2083)) then
-								if ((4191 > 1232) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\215\244\38\38\70\211\244\50\48\81\236", "\35\149\152\71\66")]:IsReady() and v14:BuffDown(v81.BladeFlurry) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\44\230\70\181\40\17\233\76\180\63\29\221\82\160\63\11\224\67\190\62", "\90\121\136\34\208")]:IsAvailable() and not v14:StealthUp(true, true)) then
-									if (v10.Cast(v81.BladeFlurry) or (1505 > 4873)) then
-										return LUAOBFUSACTOR_DECRYPT_STR_0("\229\2\84\26\194\78\115\18\210\28\71\7\135\70\122\14\194\0\80\12\142", "\126\167\110\53");
-									end
-								end
-								if ((3880 < 4534) and not v14:StealthUp(true, false)) then
-									local v197 = 0;
+							if (((3100 - (1151 + 36)) > (477 + 16)) and (v174 == (1 + 0))) then
+								if (((14200 - 9445) > (5260 - (1552 + 280))) and v78.TargetIsValid()) then
+									local v190 = 834 - (64 + 770);
 									while true do
-										if ((v197 == 0) or (2368 >= 2541)) then
-											v91 = v80.Stealth(v80.StealthSpell());
-											if (v91 or (4733 <= 4103)) then
-												return v91;
+										if (((938 + 443) <= (5377 - 3008)) and (v190 == (1 + 1))) then
+											if (v80.SinisterStrike:IsCastable() or ((6086 - (157 + 1086)) == (8174 - 4090))) then
+												if (((20448 - 15779) > (556 - 193)) and v9.Cast(v80.SinisterStrike)) then
+													return "Cast Sinister Strike (Opener)";
+												end
 											end
 											break;
 										end
-									end
-								end
-								v180 = 1;
-							end
-							if ((v180 == 1) or (1207 == 4273)) then
-								if (v79.TargetIsValid() or (2005 == 2529)) then
-									local v198 = 0;
-									while true do
-										if ((986 < 3589) and (v198 == 0)) then
-											if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\28\20\60\253\210\62\49\25\32\253\238\42\46\24", "\95\93\112\78\152\188")]:IsReady() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\232\248\149\7\235\168\215\197\212\129\7\225\176\211\205\252\139\16\214\171\193\201", "\178\161\149\229\117\132\222")]:IsAvailable() and (v95 <= 2)) or (3119 == 430)) then
-												if ((2409 <= 3219) and v10.Cast(v81.AdrenalineRush)) then
-													return LUAOBFUSACTOR_DECRYPT_STR_0("\171\218\206\184\225\55\162\49\141\213\220\160\168\24\163\99\186\206\206\164\225\94\137\51\141\213\216\190\232", "\67\232\187\189\204\193\118\198");
+										if ((v190 == (0 - 0)) or ((2696 - (599 + 220)) >= (6248 - 3110))) then
+											if (((6673 - (1813 + 118)) >= (2651 + 975)) and v80.AdrenalineRush:IsReady() and v80.ImprovedAdrenalineRush:IsAvailable() and (v94 <= (1219 - (841 + 376)))) then
+												if (v9.Cast(v80.AdrenalineRush) or ((6361 - 1821) == (213 + 703))) then
+													return "Cast Adrenaline Rush (Opener)";
 												end
 											end
-											if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\185\33\185\44\47\10\234\169\33\187\37\40", "\143\235\78\213\64\91\98")]:IsReady() and not v14:DebuffUp(v81.Dreadblades) and ((v109() == 0) or v110())) or (898 > 2782)) then
-												if (v10.Cast(v81.RolltheBones) or (2250 <= 1764)) then
-													return LUAOBFUSACTOR_DECRYPT_STR_0("\174\73\151\253\48\132\130\68\136\169\100\190\136\8\166\230\126\179\158\8\204\198\96\179\131\77\150\160", "\214\237\40\228\137\16");
+											if ((v80.RolltheBones:IsReady() and not v13:DebuffUp(v80.Dreadblades) and ((v108() == (0 - 0)) or v109())) or ((2015 - (464 + 395)) > (11150 - 6805))) then
+												if (((1075 + 1162) < (5086 - (467 + 370))) and v9.Cast(v80.RolltheBones)) then
+													return "Cast Roll the Bones (Opener)";
 												end
 											end
-											v198 = 1;
+											v190 = 1 - 0;
 										end
-										if ((693 == 693) and (1 == v198)) then
-											if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\182\239\230\218\6\167\139\231\203\208\0\163", "\198\229\131\143\185\99")]:IsReady() and (v14:BuffRemains(v81.SliceandDice) < ((1 + v95) * 1.8))) or (2529 == 438)) then
-												if ((1751 > 1411) and v10.Press(v81.SliceandDice)) then
-													return LUAOBFUSACTOR_DECRYPT_STR_0("\114\141\187\103\17\191\164\122\82\137\232\114\95\136\232\87\88\143\173\51\25\163\184\118\95\137\186\58", "\19\49\236\200");
+										if ((v190 == (1 + 0)) or ((9197 - 6514) < (4 + 19))) then
+											if (((1621 - 924) <= (1346 - (150 + 370))) and v80.SliceandDice:IsReady() and (v13:BuffRemains(v80.SliceandDice) < (((1283 - (74 + 1208)) + v94) * (2.8 - 1)))) then
+												if (((5240 - 4135) <= (837 + 339)) and v9.Press(v80.SliceandDice)) then
+													return "Cast Slice and Dice (Opener)";
 												end
 											end
-											if ((4182 == 4182) and v14:StealthUp(true, false)) then
-												local v205 = 0;
+											if (((3769 - (14 + 376)) <= (6611 - 2799)) and v13:StealthUp(true, false)) then
+												local v197 = 0 + 0;
 												while true do
-													if ((v205 == 1) or (4666 <= 611)) then
-														if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\208\27\220\242\31\54\255\244\18\213\235\56\37", "\173\155\126\185\130\86\66")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\194\174\181\212\156\224\252\149\174\213\129\231\224", "\140\133\198\218\167\232")]:IsAvailable() and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\144\45\188\114\141\187\41\134\120\148\167\39\185\124\138\177", "\228\213\78\212\29")]:IsAvailable()) or (4737 <= 4525)) then
-															if ((4367 >= 3735) and v10.Cast(v81.GhostlyStrike)) then
-																return LUAOBFUSACTOR_DECRYPT_STR_0("\164\77\165\17\171\160\68\185\22\255\139\85\246\54\255\149\69\189\0\171\172\69\132\69\163\168\92\179\11\238\149\5", "\139\231\44\214\101");
+													if ((v197 == (0 + 0)) or ((752 + 36) >= (4735 - 3119))) then
+														v90 = v119();
+														if (((1395 + 459) <= (3457 - (23 + 55))) and v90) then
+															return "Stealth (Opener): " .. v90;
+														end
+														v197 = 2 - 1;
+													end
+													if (((3036 + 1513) == (4085 + 464)) and (v197 == (1 - 0))) then
+														if ((v80.KeepItRolling:IsAvailable() and v80.GhostlyStrike:IsAvailable() and v80.EchoingReprimand:IsAvailable()) or ((951 + 2071) >= (3925 - (652 + 249)))) then
+															if (((12899 - 8079) > (4066 - (708 + 1160))) and v9.Cast(v80.GhostlyStrike)) then
+																return "Cast Ghostly Strike KiR (Opener)";
 															end
 														end
-														if ((2426 == 2426) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\248\226\4\75\3\185", "\118\185\143\102\62\112\209\81")]:IsCastable()) then
-															if ((21 < 1971) and v10.Cast(v81.Ambush)) then
-																return LUAOBFUSACTOR_DECRYPT_STR_0("\127\113\58\242\229\52\17\58\73\99\33\166\237\58\12\61\82\117\59\175", "\88\60\16\73\134\197\117\124");
+														if (v80.Ambush:IsCastable() or ((2879 - 1818) >= (8917 - 4026))) then
+															if (((1391 - (10 + 17)) <= (1005 + 3468)) and v9.Cast(v80.Ambush)) then
+																return "Cast Ambush (Opener)";
 															end
 														end
 														break;
 													end
-													if ((v205 == 0) or (2922 <= 441)) then
-														v91 = v120();
-														if ((3624 >= 1136) and v91) then
-															return LUAOBFUSACTOR_DECRYPT_STR_0("\205\35\243\182\232\174\246\119\190\152\244\191\240\50\228\254\190\250", "\218\158\87\150\215\132") .. v91;
-														end
-														v205 = 1;
-													end
 												end
-											elseif ((2043 < 2647) and v111()) then
-												local v209 = 0;
-												while true do
-													if ((v209 == 0) or (354 >= 1534)) then
-														v91 = v121();
-														if (v91 or (3764 >= 4876)) then
-															return LUAOBFUSACTOR_DECRYPT_STR_0("\118\227\246\193\82\88\170\176\231\81\85\228\253\218\8\10\170", "\33\48\138\152\168") .. v91;
-														end
-														break;
-													end
+											elseif (v110() or ((5327 - (1400 + 332)) <= (5 - 2))) then
+												v90 = v120();
+												if (v90 or ((6580 - (242 + 1666)) == (1649 + 2203))) then
+													return "Finish (Opener): " .. v90;
 												end
 											end
-											v198 = 2;
-										end
-										if ((3676 >= 703) and (v198 == 2)) then
-											if ((3811 > 319) and v81[LUAOBFUSACTOR_DECRYPT_STR_0("\65\31\62\88\210\35\119\4\3\69\211\62\121\19", "\87\18\118\80\49\161")]:IsCastable()) then
-												if ((47 < 1090) and v10.Cast(v81.SinisterStrike)) then
-													return LUAOBFUSACTOR_DECRYPT_STR_0("\111\31\201\180\240\127\23\212\169\163\88\27\200\224\131\88\12\211\171\181\12\86\245\176\181\66\27\200\233", "\208\44\126\186\192");
-												end
-											end
-											break;
+											v190 = 1 + 1;
 										end
 									end
 								end
 								return;
 							end
+							if (((1329 + 230) == (2499 - (850 + 90))) and (v174 == (0 - 0))) then
+								if ((v80.BladeFlurry:IsReady() and v13:BuffDown(v80.BladeFlurry) and v80.UnderhandedUpperhand:IsAvailable() and not v13:StealthUp(true, true)) or ((3142 - (360 + 1030)) <= (698 + 90))) then
+									if (v9.Cast(v80.BladeFlurry) or ((11027 - 7120) == (243 - 66))) then
+										return "Blade Flurry (Opener)";
+									end
+								end
+								if (((5131 - (909 + 752)) > (1778 - (109 + 1114))) and not v13:StealthUp(true, false)) then
+									local v191 = 0 - 0;
+									while true do
+										if ((v191 == (0 + 0)) or ((1214 - (6 + 236)) == (407 + 238))) then
+											v90 = v79.Stealth(v79.StealthSpell());
+											if (((2562 + 620) >= (4988 - 2873)) and v90) then
+												return v90;
+											end
+											break;
+										end
+									end
+								end
+								v174 = 1 - 0;
+							end
 						end
 					end
 				end
-				if ((v81[LUAOBFUSACTOR_DECRYPT_STR_0("\209\27\170\242\28\249\225\79\250\23\161\212", "\46\151\122\196\166\116\156\169")]:IsAvailable() and (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\213\228\85\14\244\233\222\78\21\239", "\155\133\141\38\122")]:TimeSinceLastCast() < v14:GCDRemains())) or (1371 >= 2900)) then
-					v95 = v24(v95, v80.FanTheHammerCP());
+				if (((5026 - (1076 + 57)) < (729 + 3700)) and v80.FanTheHammer:IsAvailable() and (v80.PistolShot:TimeSinceLastCast() < v13:GCDRemains())) then
+					v94 = v23(v94, v79.FanTheHammerCP());
 				end
-				v144 = 6;
+				v140 = 697 - (579 + 110);
 			end
-			if ((v144 == 4) or (1126 <= 504)) then
-				if (v91 or (3732 == 193)) then
-					return v91;
+			if ((v140 == (1 + 2)) or ((2535 + 332) < (1012 + 893))) then
+				v100 = (v13:BuffUp(v80.AdrenalineRush, nil, true) and -(457 - (174 + 233))) or (0 - 0);
+				v96 = v105();
+				v97 = v13:EnergyRegen();
+				v140 = 6 - 2;
+			end
+			if ((v140 == (2 + 2)) or ((2970 - (663 + 511)) >= (3614 + 437))) then
+				v99 = v104(v100);
+				v98 = v13:EnergyDeficitPredicted(nil, v100);
+				if (((352 + 1267) <= (11579 - 7823)) and v25) then
+					local v169 = 0 + 0;
+					while true do
+						if (((1421 - 817) == (1461 - 857)) and ((0 + 0) == v169)) then
+							v87 = v13:GetEnemiesInRange(58 - 28);
+							v88 = v13:GetEnemiesInRange(v91);
+							v169 = 1 + 0;
+						end
+						if ((v169 == (1 + 0)) or ((5206 - (478 + 244)) == (1417 - (440 + 77)))) then
+							v89 = #v88;
+							break;
+						end
+					end
+				else
+					v89 = 1 + 0;
 				end
-				v80.Poisons();
-				if ((3344 >= 3305) and v82[LUAOBFUSACTOR_DECRYPT_STR_0("\165\29\27\65\153\16\9\89\130\22\31", "\45\237\120\122")]:IsReady() and (v14:HealthPercentage() < v34) and not (v14:IsChanneling() or v14:IsCasting())) then
-					if (v10.Cast(v83.Healthstone) or (2885 < 1925)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\255\237\163\32\195\224\177\56\216\230\167\108", "\76\183\136\194");
+				v140 = 18 - 13;
+			end
+			if ((v140 == (1558 - (655 + 901))) or ((827 + 3632) <= (853 + 260))) then
+				v94 = v13:ComboPoints();
+				v93 = v79.EffectiveComboPoints(v94);
+				v95 = v13:ComboPointsDeficit();
+				v140 = 3 + 0;
+			end
+			if (((14631 - 10999) > (4843 - (695 + 750))) and (v140 == (0 - 0))) then
+				v77();
+				v24 = EpicSettings.Toggles['ooc'];
+				v25 = EpicSettings.Toggles['aoe'];
+				v140 = 1 - 0;
+			end
+			if (((16416 - 12334) <= (5268 - (285 + 66))) and (v140 == (2 - 1))) then
+				v26 = EpicSettings.Toggles['cds'];
+				v91 = (v80.AcrobaticStrikes:IsAvailable() and (1319 - (682 + 628))) or (1 + 5);
+				v92 = v80.Dispatch:Damage() * (300.25 - (176 + 123));
+				v140 = 1 + 1;
+			end
+			if (((3506 + 1326) >= (1655 - (239 + 30))) and (v140 == (2 + 4))) then
+				if (((132 + 5) == (242 - 105)) and v81.Healthstone:IsReady() and (v13:HealthPercentage() < v33) and not (v13:IsChanneling() or v13:IsCasting())) then
+					if (v9.Cast(v82.Healthstone) or ((4898 - 3328) >= (4647 - (306 + 9)))) then
+						return "Healthstone ";
 					end
 				end
-				if ((v82[LUAOBFUSACTOR_DECRYPT_STR_0("\72\227\227\42\85\92\28\115\232\226\16\85\78\24\115\232\226\8\95\91\29\117\232", "\116\26\134\133\88\48\47")]:IsReady() and (v14:HealthPercentage() < v32) and not (v14:IsChanneling() or v14:IsCasting())) or (4542 <= 1594)) then
-					if ((338 <= 3505) and v10.Cast(v83.RefreshingHealingPotion)) then
-						return LUAOBFUSACTOR_DECRYPT_STR_0("\44\196\166\246\184\97\22\200\174\227\149\119\31\205\169\234\186\66\17\213\169\235\179\50", "\18\126\161\192\132\221");
+				if ((v81.RefreshingHealingPotion:IsReady() and (v13:HealthPercentage() < v31) and not (v13:IsChanneling() or v13:IsCasting())) or ((14181 - 10117) <= (317 + 1502))) then
+					if (v9.Cast(v82.RefreshingHealingPotion) or ((3060 + 1926) < (758 + 816))) then
+						return "RefreshingHealingPotion ";
 					end
 				end
-				v144 = 5;
-			end
-			if ((69 == 69) and (v144 == 1)) then
-				v92 = (v81[LUAOBFUSACTOR_DECRYPT_STR_0("\220\200\191\237\171\245\233\194\174\209\189\230\244\192\168\241", "\148\157\171\205\130\201")]:IsAvailable() and 9) or 6;
-				v93 = v81[LUAOBFUSACTOR_DECRYPT_STR_0("\7\221\103\57\208\226\32\220", "\150\67\180\20\73\177")]:Damage() * 1.25;
-				v95 = v14:ComboPoints();
-				v94 = v80.EffectiveComboPoints(v95);
-				v144 = 2;
+				if (((12656 - 8230) > (1547 - (1140 + 235))) and v80.Feint:IsCastable() and (v13:HealthPercentage() <= v56) and not (v13:IsChanneling() or v13:IsCasting())) then
+					if (((373 + 213) > (418 + 37)) and v9.Cast(v80.Feint)) then
+						return "Cast Feint (Defensives)";
+					end
+				end
+				v140 = 2 + 5;
 			end
 		end
 	end
-	local function v124()
-		v10.Print(LUAOBFUSACTOR_DECRYPT_STR_0("\244\94\181\161\218\92\225\159\212\76\180\168\155\73\184\237\254\91\168\174\149\11\146\184\203\91\174\191\207\78\165\237\217\82\225\138\212\65\168\191\218", "\205\187\43\193"));
+	local function v123()
+		v9.Print("Outlaw Rogue by Epic. Supported by Gojira");
 	end
-	v10.SetAPL(260, v123, v124);
+	v9.SetAPL(312 - (33 + 19), v122, v123);
 end;
-return v0[LUAOBFUSACTOR_DECRYPT_STR_0("\219\98\12\199\193\64\10\216\235\119\58\240\235\102\9\222\233\60\9\202\255", "\191\158\18\101")]();
+return v0["Epix_Rogue_Outlaw.lua"]();
 
