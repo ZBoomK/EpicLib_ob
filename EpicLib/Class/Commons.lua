@@ -166,6 +166,38 @@ do
   end
 end
 
+-- charred-treant
+do
+  local TreantNPCID = 208849;
+  function Commons.HandleCharredTreant(Spell, Macro, Range, Immovable)
+    if not Range then Range = 40; end
+    if Target and Target:Exists() and Target:HealthPercentage() < 90 and Target:NPCID() == TreantNPCID and Target:IsSpellInRange(Spell) and Spell:IsReady() then
+      if EL.Press(Spell, not Target:IsSpellInRange(Spell), Immovable) then return "Handle Treant"; end
+    end
+    if Macro then
+      if Mouseover and Mouseover:Exists() and Mouseover:HealthPercentage() < 90 and Mouseover:NPCID() == TreantNPCID and Mouseover:IsSpellInRange(Spell) and Spell:IsReady() then
+        if EL.Press(Macro, not Mouseover:IsSpellInRange(Spell), Immovable) then return "Handle Treant Mouseover"; end
+      end
+    end
+  end
+end
+
+-- charred-brambles
+do
+  local BramblesNPCID = 209542;
+  function Commons.HandleCharredBrambles(Spell, Macro, Range, Immovable)
+    if not Range then Range = 40; end
+    if Target and Target:Exists() and Target:HealthPercentage() < 90 and Target:NPCID() == BramblesNPCID and Target:IsSpellInRange(Spell) and Spell:IsReady() then
+      if EL.Press(Spell, not Target:IsSpellInRange(Spell), Immovable) then return "Handle Brambles"; end
+    end
+    if Macro then
+      if Mouseover and Mouseover:Exists() and Mouseover:HealthPercentage() < 90 and Mouseover:NPCID() == BramblesNPCID and Mouseover:IsSpellInRange(Spell) and Spell:IsReady() then
+        if EL.Press(Macro, not Mouseover:IsSpellInRange(Spell), Immovable) then return "Handle Brambles Mouseover"; end
+      end
+    end
+  end
+end
+
 --Trinkets
 do
   function Commons.HandleTopTrinket(ExcludeList, WithCooldownsCondition, Range, Immovable)
@@ -532,6 +564,40 @@ do
     412378,
     412233,
     413427,
+    --General
+    396812, 388392, 388863, 377389, 396640, 387843, 209413, 207980, 208165, 198595, 198959, 215433, 199726, 198750, 373017, 392451, 385310, 152818,
+    -- 154327, -- Domination Manual Interrupt
+    156776, 398206, 156718, 153524, 397888, 397889, 395859, 396073, 397914, 387564, 375602, 386546, 377488, 373932, 384365, 386024, 387411, 387606, 384808, 373395, 376725, 192288,
+    -- Underrot
+    265089, 265091, 278755, 278961, 266106, 272183, 413044, 265433, 265487, 260879, 266209, 272180,
+    -- Freehold
+    257397, 281420, 257784, 259092,
+    -- Neltharions Lair
+    202108, 202075, 193585, 186269, 188587, 202181, 226296,
+    -- Uldaman
+    369400, 369365, 369411, 369675, 369823, 369399, 377500,
+    -- Brackenhide Hollow
+    367500, 367503, 382347, 372711, 374544, 385029, 382474,
+    -- Neltharus
+    378172, 395427, 372223, 372538, 384161, 383656, 396925, 372615, 378282,
+    -- Vortex
+    410870, 88170, 88186, 87779, 87761, 86331, 410760,
+    -- Halls of Infusion
+    374045, 374020, 374339, 374563, 395694, 374706, 374699, 385036, 377384, 377348, 377402, 376171,
+    -- Dawn of the Infinite
+    411994, 415770, 415435, 415437, 416256, 400165, 412922, 417481, 412378, 412233, 413427, 415439, 407124, 411300, 418200,
+    --Atal'Dazar
+    250096, 250368, 252781, 253517, 253544, 253583, 255041,
+    --Blackrook Hold
+    200248, 225573, 227913,
+    --Darkheart Thicket
+    200630, 201400, 201839, 204243, 225562,
+    --Everbloom
+    164887, 164965, 168082, 169825, 169839, 169840, 427459,
+    --Throne of Tides
+    76813, 429176,
+    --Waycrest Manor
+    263959, 264390, 265346, 265876, 266036, 271174, 278444,
   };
   Commons.StunWhitelistIDs = {
     210261,
@@ -629,6 +695,26 @@ do
     413606,
     419327,
     407535,
+    --General
+    210261, 198959, 398206, 388392, 395859, 397889, 397914, 153524, 215433, 396812, 372749, 372735, 370225, 386526, 384476, 383823, 386490, 387615, 382077, 387564, 386546, 385536, 387910, 212784, 199210, 114646, 397899, 397931,
+    -- Underrot
+    265540, 265376, 265089, 265091, 278961, 266106, 272183, 413044,
+    -- Freehold
+    257397, 272402, 281420, 257784, 257756, 257739, 257899, 258777,
+    -- Neltharions Lair
+    193941, 183526, 202108, 202075, 193803, 188587, 200154, 193585,
+    -- Uldaman
+    369400, 369365, 369423, 369411, 369674, 369675, 369823, 369465, 377486, 377500,
+    -- Brackenhide Hollow
+    367484, 367521, 372711, 385029, 385039,
+    -- Neltharus
+    378818, 371875, 372223, 384161,
+    -- Vortex
+    410870, 88170, 88186, 87779,
+    -- Halls of Infusion
+    374045, 374020, 374339, 374563, 395694, 376171, 385036, 377384, 377348,
+    -- Dawn of the Infinite
+    412012, 413606, 419327, 407535,
   };
 
   function Commons.Interrupt(Spell, Range, OffGCD, Unit, Macro)
@@ -880,8 +966,15 @@ do
     Spell(412695),
   };
   function Commons.UnitHasEnrageBuff(U)
-    for i = 1, #Commons.DispellableEnrageBuffIDs do
-      if U:BuffUp(Commons.DispellableEnrageBuffIDs[i], true) then
+    -- for i = 1, #Commons.DispellableEnrageBuffIDs do
+    --   if U:BuffUp(Commons.DispellableEnrageBuffIDs[i], true) then
+    --     return true;
+    --   end
+    -- end
+    -- return false;
+    for i=1,21 do
+      local b,_,_,type = UnitBuff(U:ID(), i);
+      if type == "" then
         return true;
       end
     end
@@ -907,8 +1000,15 @@ do
     Spell(377402),
   };
   function Commons.UnitHasMagicBuff(U)
-    for i = 1, #Commons.DispellableMagicBuffIDs do
-      if U:BuffUp(Commons.DispellableMagicBuffIDs[i], true) then
+    -- for i = 1, #Commons.DispellableMagicBuffIDs do
+    --   if U:BuffUp(Commons.DispellableMagicBuffIDs[i], true) then
+    --     return true;
+    --   end
+    -- end
+    -- return false;
+    for i=1,21 do
+      local b,_,_,type = UnitBuff(U:ID(), i);
+      if type == "Magic" then
         return true;
       end
     end
@@ -968,8 +1068,15 @@ do
     Spell(412027),
   };
   function Commons.UnitHasMagicDebuff(U)
-    for i = 1, #Commons.DispellableMagicDebuffs do
-      if U:DebuffUp(Commons.DispellableMagicDebuffs[i], true) then
+    -- for i = 1, #Commons.DispellableMagicDebuffs do
+    --   if U:DebuffUp(Commons.DispellableMagicDebuffs[i], true) then
+    --     return true;
+    --   end
+    -- end
+    -- return false;
+    for i=1,21 do
+      local b,_,_,type = UnitDebuff(U:ID(), i);
+      if type == "Magic" then
         return true;
       end
     end
@@ -992,8 +1099,15 @@ do
     Spell(382808),
   };
   function Commons.UnitHasDiseaseDebuff(U)
-    for i = 1, #Commons.DispellableDiseaseDebuffs do
-      if U:DebuffUp(Commons.DispellableDiseaseDebuffs[i], true) then
+    -- for i = 1, #Commons.DispellableDiseaseDebuffs do
+    --   if U:DebuffUp(Commons.DispellableDiseaseDebuffs[i], true) then
+    --     return true;
+    --   end
+    -- end
+    -- return false;
+    for i=1,21 do
+      local b,_,_,type = UnitDebuff(U:ID(), i);
+      if type == "Disease" then
         return true;
       end
     end
@@ -1005,8 +1119,15 @@ do
     Spell(123456), --TODO Fix Spell IDs
   };
   function Commons.UnitHasPoisonDebuff(U)
-    for i = 1, #Commons.DispellablePoisonDebuffs do
-      if U:DebuffUp(Commons.DispellablePoisonDebuffs[i], true) then
+    -- for i = 1, #Commons.DispellablePoisonDebuffs do
+    --   if U:DebuffUp(Commons.DispellablePoisonDebuffs[i], true) then
+    --     return true;
+    --   end
+    -- end
+    -- return false;
+    for i=1,21 do
+      local b,_,_,type = UnitDebuff(U:ID(), i);
+      if type == "Poison" then
         return true;
       end
     end
@@ -1022,8 +1143,15 @@ do
     Spell(413618),
   };
   function Commons.UnitHasCurseDebuff(U)
-    for i = 1, #Commons.DispellableCurseDebuffs do
-      if U:DebuffUp(Commons.DispellableCurseDebuffs[i], true) then
+    -- for i = 1, #Commons.DispellableCurseDebuffs do
+    --   if U:DebuffUp(Commons.DispellableCurseDebuffs[i], true) then
+    --     return true;
+    --   end
+    -- end
+    -- return false;
+    for i=1,21 do
+      local b,_,_,type = UnitDebuff(U:ID(), i);
+      if type == "Curse" then
         return true;
       end
     end
