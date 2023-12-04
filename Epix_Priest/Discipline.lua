@@ -2,7 +2,7 @@ local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
 	local v5 = v0[v4];
-	if (((155 + 3981) > (8705 - 6308)) and not v5) then
+	if (((8869 - 6096) == (2704 + 69)) and not v5) then
 		return v1(v4, ...);
 	end
 	return v5(...);
@@ -100,22 +100,22 @@ v0["Epix_Priest_Discipline.lua"] = function(...)
 	local v96 = false;
 	local v97 = false;
 	local v98 = false;
-	local v99 = 0 + 0;
-	local v100 = 0 + 0;
+	local v99 = 0 - 0;
+	local v100 = 0 - 0;
 	local v101 = false;
 	RampRaptureTimes = {};
-	RampRaptureTimes[7961 - 5278] = {(128 - 58),(95 + 75),(227 + 43)};
+	RampRaptureTimes[3756 - (1036 + 37)] = {(136 - 66),(1650 - (641 + 839)),(688 - 418)};
 	RampEvangelismTimes = {};
-	RampEvangelismTimes[2626 + 57] = {(389 - 254),(89 + 136),(361 + 36)};
+	RampEvangelismTimes[4367 - (1466 + 218)] = {(1283 - (556 + 592)),(1033 - (329 + 479)),(1363 - 966)};
 	RampBothTimes = {};
-	RampBothTimes[1942 + 738] = {(10 + 5),(104 + 41),(1299 - (572 + 477))};
-	RampBothTimes[362 + 2320] = {(2 + 13),(197 - 77),(1037 - (497 + 345)),(49 + 236)};
-	RampBothTimes[4017 - (605 + 728)] = {(33 - 18),(683 - 498),(969 - 619)};
-	RampBothTimes[2029 + 658] = {(3 + 2),(109 + 6),(725 - 520),(1091 - (588 + 208))};
-	RampBothTimes[7244 - 4556] = {(94 - 49),(793 - (232 + 421)),(57 + 173)};
-	RampBothTimes[511 + 2178] = {(710 - (316 + 289)),(10 + 195),(730 - (360 + 65))};
-	RampBothTimes[2517 + 176] = {(23 - 8),(382 - 257),(1084 - (503 + 396)),(474 - 229)};
-	RampBothTimes[1377 + 1308] = {(305 - 227),(399 - 224),(129 + 140),(45 + 313)};
+	RampBothTimes[5554 - 2874] = {(754 - (396 + 343)),(1622 - (29 + 1448)),(941 - 691)};
+	RampBothTimes[12522 - 9840] = {(1542 - (389 + 1138)),(114 + 6),(182 + 13),(507 - 222)};
+	RampBothTimes[1643 + 1041] = {(1874 - (821 + 1038)),(21 + 164),(131 + 219)};
+	RampBothTimes[6659 - 3972] = {(1 + 4),(3 + 112),(509 - (300 + 4)),(772 - 477)};
+	RampBothTimes[3050 - (112 + 250)] = {(112 - 67),(73 + 67),(115 + 115)};
+	RampBothTimes[1998 + 691] = {(234 - 129),(898 - (627 + 66)),(907 - (512 + 90))};
+	RampBothTimes[4599 - (1665 + 241)] = {(7 + 8),(329 - 204),(1284 - (35 + 1064)),(524 - 279)};
+	RampBothTimes[11 + 2674] = {(1337 - (233 + 1026)),(90 + 85),(80 + 189),(579 - (55 + 166))};
 	local v112 = v17.Priest.Discipline;
 	local v113 = v18.Priest.Discipline;
 	local v114 = v24.Priest.Discipline;
@@ -129,7 +129,7 @@ v0["Epix_Priest_Discipline.lua"] = function(...)
 	local v131, v132, v133;
 	local v134 = v20.Commons.Everyone;
 	local function v135()
-		if (v112.ImprovedPurify:IsAvailable() or ((6608 - 2274) == (5489 - (485 + 759)))) then
+		if (((224 + 931) <= (169 + 1504)) and v112.ImprovedPurify:IsAvailable()) then
 			v134.DispellableDebuffs = v19.MergeTable(v134.DispellableMagicDebuffs, v134.DispellableDiseaseDebuffs);
 		else
 			v134.DispellableDebuffs = v134.DispellableMagicDebuffs;
@@ -139,14 +139,14 @@ v0["Epix_Priest_Discipline.lua"] = function(...)
 		v135();
 	end, "ACTIVE_PLAYER_SPECIALIZATION_CHANGED");
 	local function v136(v156)
-		return v156:DebuffRefreshable(v112.ShadowWordPain) and (v156:TimeToDie() >= (27 - 15));
+		return v156:DebuffRefreshable(v112.ShadowWordPain) and (v156:TimeToDie() >= (45 - 33));
 	end
 	local function v137()
 		return false;
 	end
 	local function v138()
-		if ((v112.Purify:IsReady() and v96 and v134.DispellableFriendlyUnit()) or ((5465 - (442 + 747)) <= (4166 - (832 + 303)))) then
-			if (v23(v114.PurifyFocus) or ((5728 - (88 + 858)) <= (366 + 833))) then
+		if ((v112.Purify:IsReady() and v96 and v134.DispellableFriendlyUnit()) or ((2621 - (36 + 261)) <= (1010 - 432))) then
+			if (((5135 - (34 + 1334)) == (1449 + 2318)) and v23(v114.PurifyFocus)) then
 				return "purify dispel";
 			end
 		end
@@ -154,16 +154,16 @@ v0["Epix_Priest_Discipline.lua"] = function(...)
 	local function v139()
 		local v157 = 0 + 0;
 		while true do
-			if ((v157 == (1 + 0)) or ((5653 - (766 + 23)) < (9389 - 7487))) then
-				if (((6617 - 1778) >= (9748 - 6048)) and v113.Healthstone:IsReady() and v47 and (v12:HealthPercentage() <= v48)) then
-					if (v23(v114.Healthstone, nil, nil, true) or ((3648 - 2573) > (2991 - (1036 + 37)))) then
+			if (((5372 - (1035 + 248)) == (4110 - (20 + 1))) and (v157 == (1 + 0))) then
+				if (((4777 - (134 + 185)) >= (2807 - (549 + 584))) and v113.Healthstone:IsReady() and v47 and (v12:HealthPercentage() <= v48)) then
+					if (((1657 - (314 + 371)) <= (4867 - 3449)) and v23(v114.Healthstone, nil, nil, true)) then
 						return "healthstone defensive 3";
 					end
 				end
-				if (((281 + 115) <= (7407 - 3603)) and v29 and (v12:HealthPercentage() <= v31)) then
-					if ((v30 == "Refreshing Healing Potion") or ((3280 + 889) == (3667 - (641 + 839)))) then
-						if (((2319 - (910 + 3)) == (3584 - 2178)) and v113.RefreshingHealingPotion:IsReady()) then
-							if (((3215 - (1466 + 218)) < (1963 + 2308)) and v23(v114.RefreshingHealingPotion, nil, nil, true)) then
+				if ((v29 and (v12:HealthPercentage() <= v31)) or ((5906 - (478 + 490)) < (2523 + 2239))) then
+					if ((v30 == "Refreshing Healing Potion") or ((3676 - (786 + 386)) > (13811 - 9547))) then
+						if (((3532 - (1055 + 324)) == (3493 - (1093 + 247))) and v113.RefreshingHealingPotion:IsReady()) then
+							if (v23(v114.RefreshingHealingPotion, nil, nil, true) or ((451 + 56) >= (273 + 2318))) then
 								return "refreshing healing potion defensive 4";
 							end
 						end
@@ -171,52 +171,52 @@ v0["Epix_Priest_Discipline.lua"] = function(...)
 				end
 				break;
 			end
-			if (((1783 - (556 + 592)) == (226 + 409)) and (v157 == (808 - (329 + 479)))) then
-				if (((4227 - (174 + 680)) <= (12218 - 8662)) and v112.Fade:IsReady() and v45 and (v12:HealthPercentage() <= v46)) then
-					if (v23(v112.Fade, nil, nil, true) or ((6821 - 3530) < (2342 + 938))) then
+			if (((17790 - 13309) == (15207 - 10726)) and (v157 == (0 - 0))) then
+				if ((v112.Fade:IsReady() and v45 and (v12:HealthPercentage() <= v46)) or ((5849 - 3521) < (247 + 446))) then
+					if (((16673 - 12345) == (14917 - 10589)) and v23(v112.Fade, nil, nil, true)) then
 						return "fade defensive";
 					end
 				end
-				if (((5125 - (396 + 343)) >= (78 + 795)) and v112.DesperatePrayer:IsReady() and v43 and (v12:HealthPercentage() <= v44)) then
-					if (((2398 - (29 + 1448)) <= (2491 - (135 + 1254))) and v23(v112.DesperatePrayer)) then
+				if (((1198 + 390) >= (3406 - 2074)) and v112.DesperatePrayer:IsReady() and v43 and (v12:HealthPercentage() <= v44)) then
+					if (v23(v112.DesperatePrayer) or ((4862 - (364 + 324)) > (11645 - 7397))) then
 						return "desperate_prayer defensive";
 					end
 				end
-				v157 = 3 - 2;
+				v157 = 2 - 1;
 			end
 		end
 	end
 	local function v140()
-		local v158 = 0 - 0;
+		local v158 = 0 + 0;
 		while true do
-			if (((3137 + 1569) >= (2490 - (389 + 1138))) and (v158 == (575 - (102 + 472)))) then
-				ShouldReturn = v134.HandleBottomTrinket(v115, v95, 38 + 2, nil);
-				if (ShouldReturn or ((533 + 427) <= (817 + 59))) then
+			if ((v158 == (0 - 0)) or ((7344 - 2758) <= (248 - 166))) then
+				ShouldReturn = v134.HandleTopTrinket(v115, v95, 1308 - (1249 + 19), nil);
+				if (((3487 + 376) == (15036 - 11173)) and ShouldReturn) then
+					return ShouldReturn;
+				end
+				v158 = 1087 - (686 + 400);
+			end
+			if ((v158 == (1 + 0)) or ((511 - (73 + 156)) <= (1 + 41))) then
+				ShouldReturn = v134.HandleBottomTrinket(v115, v95, 851 - (721 + 90), nil);
+				if (((52 + 4557) >= (2486 - 1720)) and ShouldReturn) then
 					return ShouldReturn;
 				end
 				break;
 			end
-			if ((v158 == (1545 - (320 + 1225))) or ((3677 - 1611) == (571 + 361))) then
-				ShouldReturn = v134.HandleTopTrinket(v115, v95, 1504 - (157 + 1307), nil);
-				if (((6684 - (821 + 1038)) < (12083 - 7240)) and ShouldReturn) then
-					return ShouldReturn;
-				end
-				v158 = 1 + 0;
-			end
 		end
 	end
 	local function v141()
-		if (((GetTime() - v99) > v35) or ((6886 - 3009) >= (1689 + 2848))) then
-			local v202 = 0 - 0;
+		if (((GetTime() - v99) > v35) or ((1622 - (224 + 246)) == (4030 - 1542))) then
+			local v180 = 0 - 0;
 			while true do
-				if ((v202 == (1026 - (834 + 192))) or ((275 + 4040) < (444 + 1282))) then
-					if ((v112.BodyandSoul:IsAvailable() and v112.PowerWordShield:IsReady() and v34 and v12:BuffDown(v112.AngelicFeatherBuff) and v12:BuffDown(v112.BodyandSoulBuff)) or ((79 + 3600) < (968 - 343))) then
-						if (v23(v114.PowerWordShieldPlayer) or ((4929 - (300 + 4)) < (169 + 463))) then
+				if (((621 + 2801) > (80 + 3270)) and (v180 == (0 + 0))) then
+					if (((1742 - 865) > (1251 - 875)) and v112.BodyandSoul:IsAvailable() and v112.PowerWordShield:IsReady() and v34 and v12:BuffDown(v112.AngelicFeatherBuff) and v12:BuffDown(v112.BodyandSoulBuff)) then
+						if (v23(v114.PowerWordShieldPlayer) or ((3631 - (203 + 310)) <= (3844 - (1238 + 755)))) then
 							return "power_word_shield_player move";
 						end
 					end
-					if ((v112.AngelicFeather:IsReady() and v33 and v12:BuffDown(v112.AngelicFeatherBuff) and v12:BuffDown(v112.BodyandSoulBuff) and v12:BuffDown(v112.AngelicFeatherBuff)) or ((217 - 134) > (2142 - (112 + 250)))) then
-						if (((218 + 328) <= (2697 - 1620)) and v23(v114.AngelicFeatherPlayer)) then
+					if ((v112.AngelicFeather:IsReady() and v33 and v12:BuffDown(v112.AngelicFeatherBuff) and v12:BuffDown(v112.BodyandSoulBuff) and v12:BuffDown(v112.AngelicFeatherBuff)) or ((12 + 153) >= (5026 - (709 + 825)))) then
+						if (((7276 - 3327) < (7073 - 2217)) and v23(v114.AngelicFeatherPlayer)) then
 							return "angelic_feather_player move";
 						end
 					end
@@ -226,823 +226,892 @@ v0["Epix_Priest_Discipline.lua"] = function(...)
 		end
 	end
 	local function v142(v159)
-		if (v131:IsReady() or ((571 + 425) > (2225 + 2076))) then
-			if (((3044 + 1026) > (341 + 346)) and v14 and (v14:HealthPercentage() <= v60)) then
-				if (v12:BuffUp(v112.ShadowCovenantBuff) or ((488 + 168) >= (4744 - (1001 + 413)))) then
-					if (v23(v114.DarkReprimandFocus) or ((5556 - 3064) <= (1217 - (244 + 638)))) then
-						return "dark_reprimand_focus penance";
+		if (v131:IsReady() or ((5140 - (196 + 668)) < (11907 - 8891))) then
+			local v181 = 0 - 0;
+			while true do
+				if (((5523 - (171 + 662)) > (4218 - (4 + 89))) and (v181 == (0 - 0))) then
+					if ((v14 and (v14:HealthPercentage() <= v60)) or ((19 + 31) >= (3935 - 3039))) then
+						if (v12:BuffUp(v112.ShadowCovenantBuff) or ((673 + 1041) >= (4444 - (35 + 1451)))) then
+							if (v23(v114.DarkReprimandFocus) or ((2944 - (28 + 1425)) < (2637 - (941 + 1052)))) then
+								return "dark_reprimand_focus penance";
+							end
+						elseif (((676 + 28) < (2501 - (822 + 692))) and v23(v114.PenanceFocus)) then
+							return "penance_focus penance";
+						end
 					end
-				elseif (((5015 - (627 + 66)) >= (7633 - 5071)) and v23(v114.PenanceFocus)) then
-					return "penance_focus penance";
-				end
-			end
-			if ((not v159 and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v61, false, false) <= v62)) or ((4239 - (512 + 90)) >= (5676 - (1665 + 241)))) then
-				if (v23(v131, not v13:IsSpellInRange(v131)) or ((3096 - (373 + 344)) > (2065 + 2513))) then
-					return "penance penance";
+					if (((5307 - 1589) > (898 + 1008)) and not v159 and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v61, false, false) <= v62)) then
+						if (v23(v131, not v13:IsSpellInRange(v131)) or ((1255 - (45 + 252)) > (3597 + 38))) then
+							return "penance penance";
+						end
+					end
+					break;
 				end
 			end
 		end
 	end
 	local function v143()
-		if ((v112.PowerWordRadiance:IsReady() and v63 and v134.AreUnitsBelowHealthPercentage(v64, v65) and v12:BuffUp(v112.RadiantProvidenceBuff)) or ((128 + 355) > (1959 - 1216))) then
-			if (((4152 - 1698) > (1677 - (35 + 1064))) and v23(v114.PowerWordRadianceFocus, nil, v123)) then
-				return "power_word_radiance_instant heal_cooldown";
-			end
-		end
-		if (((677 + 253) < (9537 - 5079)) and (v68 == "Anyone")) then
-			if (((3 + 659) <= (2208 - (298 + 938))) and v112.PainSuppression:IsReady() and v14:BuffDown(v112.PainSuppression) and v66 and (v14:HealthPercentage() <= v67)) then
-				if (((5629 - (233 + 1026)) == (6036 - (636 + 1030))) and v23(v114.PainSuppressionFocus, nil, nil, true)) then
-					return "pain_suppression heal_cooldown";
+		local v160 = 0 + 0;
+		while true do
+			if (((8520 - 5019) <= (4925 - (114 + 319))) and (v160 == (1 - 0))) then
+				if ((v112.PowerWordLife:IsReady() and v69 and (v14:HealthPercentage() <= v70) and v14:Exists()) or ((4410 - 968) < (1625 + 923))) then
+					if (((4283 - 1408) >= (3067 - 1603)) and v23(v114.PowerWordLifeFocus)) then
+						return "power_word_life heal_cooldown";
+					end
 				end
-			end
-		elseif ((v68 == "Tank Only") or ((2435 + 2327) <= (841 + 20))) then
-			if ((v112.PainSuppression:IsReady() and v14:BuffDown(v112.PainSuppression) and v66 and (v14:HealthPercentage() <= v67) and (Commons.UnitGroupRole(v14) == "TANK")) or ((420 + 992) == (289 + 3975))) then
-				if (v23(v114.PainSuppressionFocus, nil, nil, true) or ((3389 - (55 + 166)) < (418 + 1735))) then
-					return "pain_suppression heal_cooldown";
+				if ((v112.LuminousBarrier:IsReady() and v71 and v134.AreUnitsBelowHealthPercentage(v72, v73)) or ((6760 - (556 + 1407)) >= (6099 - (741 + 465)))) then
+					if (v23(v112.LuminousBarrier) or ((1016 - (170 + 295)) > (1090 + 978))) then
+						return "luminous_barrier heal_cooldown";
+					end
 				end
+				break;
 			end
-		elseif ((v68 == "Tank and Self") or ((501 + 4475) < (5086 - 3754))) then
-			if (((4925 - (36 + 261)) == (8093 - 3465)) and v112.PainSuppression:IsReady() and v14:BuffDown(v112.PainSuppression) and v66 and (v14:HealthPercentage() <= v67) and ((Commons.UnitGroupRole(v14) == "TANK") or (Commons.UnitGroupRole(v14) == "HEALER"))) then
-				if (v23(v114.PainSuppressionFocus, nil, nil, true) or ((1422 - (34 + 1334)) == (152 + 243))) then
-					return "pain_suppression heal_cooldown";
+			if (((1942 + 172) > (2324 - 1380)) and (v160 == (0 + 0))) then
+				if ((v112.PowerWordRadiance:IsReady() and v63 and v134.AreUnitsBelowHealthPercentage(v64, v65) and v12:BuffUp(v112.RadiantProvidenceBuff)) or ((1451 + 811) >= (1754 + 1342))) then
+					if (v23(v114.PowerWordRadianceFocus, nil, v123) or ((3485 - (957 + 273)) >= (946 + 2591))) then
+						return "power_word_radiance_instant heal_cooldown";
+					end
 				end
-			end
-		end
-		if (((64 + 18) == (1365 - (1035 + 248))) and v112.PowerWordLife:IsReady() and v69 and (v14:HealthPercentage() <= v70) and v14:Exists()) then
-			if (v23(v114.PowerWordLifeFocus) or ((602 - (20 + 1)) < (147 + 135))) then
-				return "power_word_life heal_cooldown";
-			end
-		end
-		if ((v112.LuminousBarrier:IsReady() and v71 and v134.AreUnitsBelowHealthPercentage(v72, v73)) or ((4928 - (134 + 185)) < (3628 - (549 + 584)))) then
-			if (((1837 - (314 + 371)) == (3954 - 2802)) and v23(v112.LuminousBarrier)) then
-				return "luminous_barrier heal_cooldown";
+				if ((v68 == "Anyone") or ((1537 + 2300) < (4976 - 3670))) then
+					if (((7773 - 4823) == (9010 - 6060)) and v112.PainSuppression:IsReady() and v14:BuffDown(v112.PainSuppression) and v66 and (v14:HealthPercentage() <= v67)) then
+						if (v23(v114.PainSuppressionFocus, nil, nil, true) or ((23386 - 18663) < (5078 - (389 + 1391)))) then
+							return "pain_suppression heal_cooldown";
+						end
+					end
+				elseif (((713 + 423) >= (17 + 137)) and (v68 == "Tank Only")) then
+					if ((v112.PainSuppression:IsReady() and v14:BuffDown(v112.PainSuppression) and v66 and (v14:HealthPercentage() <= v67) and (Commons.UnitGroupRole(v14) == "TANK")) or ((616 - 345) > (5699 - (783 + 168)))) then
+						if (((15908 - 11168) >= (3101 + 51)) and v23(v114.PainSuppressionFocus, nil, nil, true)) then
+							return "pain_suppression heal_cooldown";
+						end
+					end
+				elseif ((v68 == "Tank and Self") or ((2889 - (309 + 2)) >= (10410 - 7020))) then
+					if (((1253 - (1090 + 122)) <= (539 + 1122)) and v112.PainSuppression:IsReady() and v14:BuffDown(v112.PainSuppression) and v66 and (v14:HealthPercentage() <= v67) and ((Commons.UnitGroupRole(v14) == "TANK") or (Commons.UnitGroupRole(v14) == "HEALER"))) then
+						if (((2018 - 1417) < (2437 + 1123)) and v23(v114.PainSuppressionFocus, nil, nil, true)) then
+							return "pain_suppression heal_cooldown";
+						end
+					end
+				end
+				v160 = 1119 - (628 + 490);
 			end
 		end
 	end
 	local function v144()
-		local v160 = 968 - (478 + 490);
-		while true do
-			if (((1005 + 891) <= (4594 - (786 + 386))) and ((9 - 6) == v160)) then
-				if ((v112.PowerWordShield:IsReady() and (v134.UnitGroupRole(v14) == "TANK") and (v14:HealthPercentage() < v85) and (v14:BuffDown(v112.AtonementBuff) or v14:BuffDown(v112.PowerWordShield)) and v14:Exists()) or ((2369 - (1055 + 324)) > (2960 - (1093 + 247)))) then
-					if (v23(v114.PowerWordShieldFocus) or ((780 + 97) > (494 + 4201))) then
-						return "power_word_shield_tank heal";
-					end
-				end
-				if (((10683 - 7992) >= (6281 - 4430)) and v112.FlashHeal:IsReady() and v112.BindingHeals:IsAvailable() and (v14:GUID() ~= v12:GUID()) and v14:BuffDown(v112.AtonementBuff) and v12:BuffDown(v112.AtonementBuff) and (v14:HealthPercentage() < v79) and v14:Exists()) then
-					if (v23(v114.FlashHealFocus, nil, v124) or ((8493 - 5508) >= (12202 - 7346))) then
-						return "flash_heal heal";
-					end
-				end
-				if (((1522 + 2754) >= (4603 - 3408)) and v112.PowerWordShield:IsReady() and (v14:HealthPercentage() < v84) and v14:BuffDown(v112.AtonementBuff) and v14:Exists()) then
-					if (((11139 - 7907) <= (3537 + 1153)) and v23(v114.PowerWordShieldFocus)) then
-						return "power_word_shield heal";
-					end
-				end
-				v160 = 9 - 5;
+		if (((43 + 192) < (1700 - 1013)) and v112.PowerWordRadiance:IsReady() and v63 and v134.AreUnitsBelowHealthPercentage(v64, v65) and v12:BuffUp(v112.RadiantProvidenceBuff) and v14:Exists()) then
+			if (((20788 - 16239) > (1927 - (431 + 343))) and v23(v114.PowerWordRadianceFocus, nil, v123)) then
+				return "power_word_radiance_instant heal_cooldown";
 			end
-			if ((v160 == (692 - (364 + 324))) or ((2455 - 1559) >= (7548 - 4402))) then
-				if (((1015 + 2046) >= (12377 - 9419)) and v112.Renew:IsReady() and (v14:HealthPercentage() < v83) and v14:BuffDown(v112.AtonementBuff) and v14:BuffDown(v112.Renew) and v14:Exists()) then
-					if (((5103 - 1916) >= (1955 - 1311)) and v23(v114.RenewFocus)) then
-						return "renew heal";
-					end
-				end
-				if (((1912 - (1249 + 19)) <= (636 + 68)) and v131:IsReady() and v94 and (not v12:AffectingCombat() or not v134.TargetIsValid()) and (v14:HealthPercentage() < v60) and v14:Exists()) then
+		end
+		if ((v112.PowerWordLife:IsReady() and v69 and (v14:HealthPercentage() <= v70) and v14:Exists()) or ((9439 - 4765) < (13515 - 8843))) then
+			if (((2898 + 770) < (584 + 3977)) and v23(v114.PowerWordLifeFocus)) then
+				return "power_word_life heal_cooldown";
+			end
+		end
+		if ((v112.PowerWordRadiance:IsReady() and v63 and v134.AreUnitsBelowHealthPercentage(v64, v65) and v14:BuffDown(v112.AtonementBuff) and v14:Exists()) or ((2150 - (556 + 1139)) == (3620 - (6 + 9)))) then
+			if (v23(v114.PowerWordRadianceFocus, nil, v123) or ((488 + 2175) == (1697 + 1615))) then
+				return "power_word_radiance 2 heal";
+			end
+		end
+		if (((4446 - (28 + 141)) <= (1734 + 2741)) and v133:IsReady() and v134.TargetIsValid() and v13:IsInRange(37 - 7) and v56 and v134.AreUnitsBelowHealthPercentage(v57, v58)) then
+			if (v23(v114.HaloPlayer, not v14:IsInRange(22 + 8), true) or ((2187 - (486 + 831)) == (3093 - 1904))) then
+				return "halo heal";
+			end
+		end
+		if (((5467 - 3914) <= (593 + 2540)) and v132:IsReady() and v134.TargetIsValid() and v13:IsInRange(94 - 64) and v59 and not v14:IsFacingBlacklisted()) then
+			if (v23(v114.DivineStarPlayer) or ((3500 - (668 + 595)) >= (3160 + 351))) then
+				return "divine_star heal";
+			end
+		end
+		if ((v112.UltimatePenitence:IsReady() and v95 and v12:AffectingCombat() and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v90, false, false) >= v91)) or ((267 + 1057) > (8235 - 5215))) then
+			if (v23(v112.UltimatePenitence) or ((3282 - (23 + 267)) == (3825 - (1129 + 815)))) then
+				return "ultimate_penitence heal";
+			end
+		end
+		if (((3493 - (371 + 16)) > (3276 - (1326 + 424))) and v112.Evangelism:IsReady() and v95 and v74 and v12:AffectingCombat() and (v134.FriendlyUnitsBelowHealthPercentageCount(v75) > v76) and not v12:IsInRaid() and v12:IsInParty() and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v61, false, false) <= v62)) then
+			if (((5724 - 2701) < (14141 - 10271)) and v23(v112.Evangelism)) then
+				return "evangelism heal";
+			end
+		end
+		if (((261 - (88 + 30)) > (845 - (720 + 51))) and v112.FlashHeal:IsReady() and (v14:BuffDown(v112.AtonementBuff) or (v14:BuffDown(v112.PowerWordShield) and v14:BuffDown(v112.Renew))) and (v14:HealthPercentage() < v78) and v12:BuffUp(v112.SurgeofLight) and v14:Exists()) then
+			if (((39 - 21) < (3888 - (421 + 1355))) and v23(v114.FlashHealFocus, nil, v124)) then
+				return "flash_heal_instant heal";
+			end
+		end
+		if (((1809 - 712) <= (800 + 828)) and v112.Rapture:IsReady() and not v12:IsInRaid() and v12:IsInParty() and v80 and v95 and v12:AffectingCombat() and (v14:HealthPercentage() < v81) and (v134.FriendlyUnitsWithoutBuffBelowHealthPercentageCount(v112.AtonementBuff, v61, false, false) >= v82) and v14:BuffDown(v112.AtonementBuff) and v14:Exists()) then
+			if (((5713 - (286 + 797)) == (16925 - 12295)) and v23(v114.RaptureFocus)) then
+				return "rapture heal";
+			end
+		end
+		if (((5863 - 2323) > (3122 - (397 + 42))) and v112.PowerWordShield:IsReady() and (v134.UnitGroupRole(v14) == "TANK") and (v14:HealthPercentage() < v85) and (v14:BuffDown(v112.AtonementBuff) or v14:BuffDown(v112.PowerWordShield)) and v14:Exists()) then
+			if (((1498 + 3296) >= (4075 - (24 + 776))) and v23(v114.PowerWordShieldFocus)) then
+				return "power_word_shield_tank heal";
+			end
+		end
+		if (((2285 - 801) == (2269 - (222 + 563))) and v112.FlashHeal:IsReady() and v112.BindingHeals:IsAvailable() and (v14:GUID() ~= v12:GUID()) and v14:BuffDown(v112.AtonementBuff) and v12:BuffDown(v112.AtonementBuff) and (v14:HealthPercentage() < v79) and v14:Exists()) then
+			if (((3154 - 1722) < (2560 + 995)) and v23(v114.FlashHealFocus, nil, v124)) then
+				return "flash_heal heal";
+			end
+		end
+		if ((v112.PowerWordShield:IsReady() and (v14:HealthPercentage() < v84) and v14:BuffDown(v112.AtonementBuff) and v14:Exists()) or ((1255 - (23 + 167)) > (5376 - (690 + 1108)))) then
+			if (v23(v114.PowerWordShieldFocus) or ((1731 + 3064) < (1161 + 246))) then
+				return "power_word_shield heal";
+			end
+		end
+		if (((2701 - (40 + 808)) < (793 + 4020)) and v112.Renew:IsReady() and (v14:HealthPercentage() < v83) and v14:BuffDown(v112.AtonementBuff) and v14:BuffDown(v112.Renew) and v14:Exists()) then
+			if (v23(v114.RenewFocus) or ((10787 - 7966) < (2324 + 107))) then
+				return "renew heal";
+			end
+		end
+		if ((v131:IsReady() and v94 and (not v12:AffectingCombat() or not v134.TargetIsValid()) and (v14:HealthPercentage() < v60) and v14:Exists()) or ((1521 + 1353) < (1197 + 984))) then
+			local v182 = 571 - (47 + 524);
+			while true do
+				if ((v182 == (0 + 0)) or ((7350 - 4661) <= (512 - 169))) then
 					ShouldReturn = v142(true);
-					if (((3728 - 2770) > (2033 - (686 + 400))) and ShouldReturn) then
+					if (ShouldReturn or ((4262 - 2393) == (3735 - (1165 + 561)))) then
 						return ShouldReturn;
 					end
+					break;
 				end
-				if (((3525 + 967) >= (2883 - (73 + 156))) and v112.FlashHeal:IsReady() and v94 and (not v12:AffectingCombat() or not v134.TargetIsValid()) and (v14:HealthPercentage() < v77) and v14:Exists()) then
-					if (((17 + 3425) >= (2314 - (721 + 90))) and v23(v114.FlashHealFocus, nil, true)) then
-						return "flash_heal_ooc heal";
-					end
-				end
-				break;
 			end
-			if ((v160 == (1 + 1)) or ((10292 - 7122) <= (1934 - (224 + 246)))) then
-				if ((v112.Evangelism:IsReady() and v95 and v74 and v12:AffectingCombat() and (v134.FriendlyUnitsBelowHealthPercentageCount(v75) > v76) and not v12:IsInRaid() and v12:IsInParty() and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v61, false, false) <= v62)) or ((7770 - 2973) == (8078 - 3690))) then
-					if (((100 + 451) <= (17 + 664)) and v23(v112.Evangelism)) then
-						return "evangelism heal";
-					end
-				end
-				if (((2407 + 870) > (808 - 401)) and v112.FlashHeal:IsReady() and (v14:BuffDown(v112.AtonementBuff) or (v14:BuffDown(v112.PowerWordShield) and v14:BuffDown(v112.Renew))) and (v14:HealthPercentage() < v78) and v12:BuffUp(v112.SurgeofLight) and v14:Exists()) then
-					if (((15624 - 10929) >= (1928 - (203 + 310))) and v23(v114.FlashHealFocus, nil, v124)) then
-						return "flash_heal_instant heal";
-					end
-				end
-				if ((v112.Rapture:IsReady() and not v12:IsInRaid() and v12:IsInParty() and v80 and v95 and v12:AffectingCombat() and (v14:HealthPercentage() < v81) and (v134.FriendlyUnitsWithoutBuffBelowHealthPercentageCount(v112.AtonementBuff, v61, false, false) >= v82) and v14:BuffDown(v112.AtonementBuff) and v14:Exists()) or ((5205 - (1238 + 755)) <= (66 + 878))) then
-					if (v23(v114.RaptureFocus) or ((4630 - (709 + 825)) <= (3312 - 1514))) then
-						return "rapture heal";
-					end
-				end
-				v160 = 3 - 0;
-			end
-			if (((4401 - (196 + 668)) == (13964 - 10427)) and (v160 == (0 - 0))) then
-				if (((4670 - (171 + 662)) >= (1663 - (4 + 89))) and v112.PowerWordRadiance:IsReady() and v63 and v134.AreUnitsBelowHealthPercentage(v64, v65) and v12:BuffUp(v112.RadiantProvidenceBuff) and v14:Exists()) then
-					if (v23(v114.PowerWordRadianceFocus, nil, v123) or ((10339 - 7389) == (1389 + 2423))) then
-						return "power_word_radiance_instant heal_cooldown";
-					end
-				end
-				if (((20744 - 16021) >= (910 + 1408)) and v112.PowerWordLife:IsReady() and v69 and (v14:HealthPercentage() <= v70) and v14:Exists()) then
-					if (v23(v114.PowerWordLifeFocus) or ((3513 - (35 + 1451)) > (4305 - (28 + 1425)))) then
-						return "power_word_life heal_cooldown";
-					end
-				end
-				if ((v112.PowerWordRadiance:IsReady() and v63 and v134.AreUnitsBelowHealthPercentage(v64, v65) and v14:BuffDown(v112.AtonementBuff) and v14:Exists()) or ((3129 - (941 + 1052)) > (4140 + 177))) then
-					if (((6262 - (822 + 692)) == (6778 - 2030)) and v23(v114.PowerWordRadianceFocus, nil, v123)) then
-						return "power_word_radiance 2 heal";
-					end
-				end
-				v160 = 1 + 0;
-			end
-			if (((4033 - (45 + 252)) <= (4690 + 50)) and (v160 == (1 + 0))) then
-				if ((v133:IsReady() and v134.TargetIsValid() and v13:IsInRange(73 - 43) and v56 and v134.AreUnitsBelowHealthPercentage(v57, v58)) or ((3823 - (114 + 319)) <= (4393 - 1333))) then
-					if (v23(v114.HaloPlayer, not v14:IsInRange(38 - 8), true) or ((637 + 362) > (4012 - 1319))) then
-						return "halo heal";
-					end
-				end
-				if (((969 - 506) < (2564 - (556 + 1407))) and v132:IsReady() and v134.TargetIsValid() and v13:IsInRange(1236 - (741 + 465)) and v59 and not v14:IsFacingBlacklisted()) then
-					if (v23(v114.DivineStarPlayer) or ((2648 - (170 + 295)) < (362 + 325))) then
-						return "divine_star heal";
-					end
-				end
-				if (((4179 + 370) == (11199 - 6650)) and v112.UltimatePenitence:IsReady() and v95 and v12:AffectingCombat() and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v90, false, false) >= v91)) then
-					if (((3873 + 799) == (2997 + 1675)) and v23(v112.UltimatePenitence)) then
-						return "ultimate_penitence heal";
-					end
-				end
-				v160 = 2 + 0;
+		end
+		if ((v112.FlashHeal:IsReady() and v94 and (not v12:AffectingCombat() or not v134.TargetIsValid()) and (v14:HealthPercentage() < v77) and v14:Exists()) or ((106 + 3440) < (7191 - 4869))) then
+			if (v23(v114.FlashHealFocus, nil, true) or ((795 + 1287) == (5252 - (341 + 138)))) then
+				return "flash_heal_ooc heal";
 			end
 		end
 	end
 	local function v145()
-		ShouldReturn = v134.InterruptWithStun(v112.PsychicScream, 1238 - (957 + 273));
-		if (ShouldReturn or ((982 + 2686) < (159 + 236))) then
-			return ShouldReturn;
-		end
-		if ((v112.DispelMagic:IsReady() and v96 and v37 and not v12:IsCasting() and not v12:IsChanneling() and v134.UnitHasMagicBuff(v13)) or ((15874 - 11708) == (1199 - 744))) then
-			if (v23(v112.DispelMagic, not v13:IsSpellInRange(v112.DispelMagic)) or ((13589 - 9140) == (13186 - 10523))) then
-				return "dispel_magic damage";
+		local v161 = 0 + 0;
+		while true do
+			if (((6694 - 3450) > (1381 - (89 + 237))) and (v161 == (3 - 2))) then
+				if ((v112.Shadowfiend:IsReady() and v95 and (v12:ManaPercentage() < (189 - 99)) and not v112.Mindbender:IsAvailable() and not v12:BuffUp(v112.ShadowCovenantBuff) and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v92, false, false) >= v93)) or ((4194 - (581 + 300)) <= (2998 - (855 + 365)))) then
+					if (v23(v112.Shadowfiend) or ((3375 - 1954) >= (687 + 1417))) then
+						return "shadowfiend damage";
+					end
+				end
+				if (((3047 - (1030 + 205)) <= (3051 + 198)) and v112.Mindbender:IsReady() and v95 and not v12:BuffUp(v112.ShadowCovenantBuff) and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v92, false, false) >= v93)) then
+					if (((1510 + 113) <= (2243 - (156 + 130))) and v23(v112.Mindbender)) then
+						return "mindbender damage";
+					end
+				end
+				if (((10024 - 5612) == (7435 - 3023)) and v112.MindBlast:IsReady()) then
+					if (((3584 - 1834) >= (222 + 620)) and v23(v112.MindBlast, not v13:IsSpellInRange(v112.MindBlast), true)) then
+						return "mind_blast 10 long_scov";
+					end
+				end
+				if (((2550 + 1822) > (1919 - (10 + 59))) and v112.ShadowWordDeath:IsReady() and ((v13:HealthPercentage() < (6 + 14)) or v12:BuffUp(v112.ShadowCovenantBuff))) then
+					if (((1142 - 910) < (1984 - (671 + 492))) and v23(v112.ShadowWordDeath, not v13:IsSpellInRange(v112.ShadowWordDeath))) then
+						return "shadow_word_death 1 long_scov";
+					end
+				end
+				v161 = 2 + 0;
 			end
-		end
-		if ((v112.ArcaneTorrent:IsReady() and v28 and v95 and (v12:ManaPercentage() <= (1865 - (389 + 1391)))) or ((2684 + 1593) < (312 + 2677))) then
-			if (v23(v112.ArcaneTorrent) or ((1980 - 1110) >= (5100 - (783 + 168)))) then
-				return "arcane_torrent damage";
-			end
-		end
-		if (((7423 - 5211) < (3131 + 52)) and v112.Shadowfiend:IsReady() and v95 and (v12:ManaPercentage() < (401 - (309 + 2))) and not v112.Mindbender:IsAvailable() and not v12:BuffUp(v112.ShadowCovenantBuff) and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v92, false, false) >= v93)) then
-			if (((14267 - 9621) > (4204 - (1090 + 122))) and v23(v112.Shadowfiend)) then
-				return "shadowfiend damage";
-			end
-		end
-		if (((465 + 969) < (10431 - 7325)) and v112.Mindbender:IsReady() and v95 and not v12:BuffUp(v112.ShadowCovenantBuff) and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v92, false, false) >= v93)) then
-			if (((538 + 248) < (4141 - (628 + 490))) and v23(v112.Mindbender)) then
-				return "mindbender damage";
-			end
-		end
-		if (v112.MindBlast:IsReady() or ((438 + 2004) < (182 - 108))) then
-			if (((20724 - 16189) == (5309 - (431 + 343))) and v23(v112.MindBlast, not v13:IsSpellInRange(v112.MindBlast), true)) then
-				return "mind_blast 10 long_scov";
-			end
-		end
-		if ((v112.ShadowWordDeath:IsReady() and ((v13:HealthPercentage() < (40 - 20)) or v12:BuffUp(v112.ShadowCovenantBuff))) or ((8704 - 5695) <= (1663 + 442))) then
-			if (((235 + 1595) < (5364 - (556 + 1139))) and v23(v112.ShadowWordDeath, not v13:IsSpellInRange(v112.ShadowWordDeath))) then
-				return "shadow_word_death 1 long_scov";
-			end
-		end
-		if ((v95 and v12:BuffUp(v112.PowerInfusionBuff)) or ((1445 - (6 + 9)) >= (662 + 2950))) then
-			ShouldReturn = v140();
-			if (((1375 + 1308) >= (2629 - (28 + 141))) and ShouldReturn) then
-				return ShouldReturn;
-			end
-		end
-		if ((v112.PurgeTheWicked:IsReady() and (v13:TimeToDie() > ((0.3 + 0) * v112.PurgeTheWicked:BaseDuration())) and v13:DebuffRefreshable(v112.PurgeTheWickedDebuff)) or ((2225 - 421) >= (2320 + 955))) then
-			if (v23(v112.PurgeTheWicked, not v13:IsSpellInRange(v112.PurgeTheWicked)) or ((2734 - (486 + 831)) > (9443 - 5814))) then
-				return "purge_the_wicked damage";
-			end
-		end
-		if (((16881 - 12086) > (76 + 326)) and v112.ShadowWordPain:IsReady() and not v112.PurgeTheWicked:IsAvailable() and (v13:TimeToDie() > ((0.3 - 0) * v112.ShadowWordPain:BaseDuration())) and v13:DebuffRefreshable(v112.ShadowWordPain)) then
-			if (((6076 - (668 + 595)) > (3208 + 357)) and v23(v112.ShadowWordPain, not v13:IsSpellInRange(v112.ShadowWordPain))) then
-				return "shadow_word_pain damage";
-			end
-		end
-		if (((789 + 3123) == (10668 - 6756)) and v112.ShadowWordDeath:IsReady() and (v13:HealthPercentage() < (310 - (23 + 267)))) then
-			if (((4765 - (1129 + 815)) <= (5211 - (371 + 16))) and v23(v112.ShadowWordDeath, not v13:IsSpellInRange(v112.ShadowWordDeath))) then
-				return "shadow_word_death 1 damage";
-			end
-		end
-		if (((3488 - (1326 + 424)) <= (4156 - 1961)) and v131:IsReady() and (v134.FriendlyUnitsWithoutBuffBelowHealthPercentageCount(v112.AtonementBuff, v61, false, false) < v62)) then
-			if (((149 - 108) <= (3136 - (88 + 30))) and v23(v131, not v13:IsSpellInRange(v131))) then
-				return "penance damage";
-			end
-		end
-		if (((2916 - (720 + 51)) <= (9129 - 5025)) and ((v112.Mindbender:CooldownRemains() > v131:Cooldown()) or (v112.Shadowfiend:CooldownRemains() > v131:Cooldown())) and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v92, false, false) >= v93)) then
-			local v203 = 1776 - (421 + 1355);
-			while true do
-				if (((4435 - 1746) < (2380 + 2465)) and (v203 == (1083 - (286 + 797)))) then
-					ShouldReturn = v142();
-					if (ShouldReturn or ((8488 - 6166) > (4342 - 1720))) then
+			if (((1733 - (369 + 846)) < (239 + 663)) and (v161 == (3 + 0))) then
+				if (((4939 - (1036 + 909)) > (683 + 175)) and v131:IsReady() and (v134.FriendlyUnitsWithoutBuffBelowHealthPercentageCount(v112.AtonementBuff, v61, false, false) < v62)) then
+					if (v23(v131, not v13:IsSpellInRange(v131)) or ((6304 - 2549) <= (1118 - (11 + 192)))) then
 						return "penance damage";
 					end
-					break;
 				end
+				if (((1995 + 1951) > (3918 - (135 + 40))) and ((v112.Mindbender:CooldownRemains() > v131:Cooldown()) or (v112.Shadowfiend:CooldownRemains() > v131:Cooldown())) and (v134.FriendlyUnitsWithBuffBelowHealthPercentageCount(v112.AtonementBuff, v92, false, false) >= v93)) then
+					local v219 = 0 - 0;
+					while true do
+						if ((v219 == (0 + 0)) or ((2940 - 1605) >= (4955 - 1649))) then
+							ShouldReturn = v142();
+							if (((5020 - (50 + 126)) > (6273 - 4020)) and ShouldReturn) then
+								return "penance damage";
+							end
+							break;
+						end
+					end
+				end
+				if (((101 + 351) == (1865 - (1233 + 180))) and v112.MindBlast:IsReady() and ((v112.Mindbender:CooldownRemains() > v112.MindBlast:Cooldown()) or (v112.Shadowfiend:CooldownRemains() > v112.MindBlast:Cooldown()))) then
+					if (v23(v112.MindBlast, not v13:IsSpellInRange(v112.MindBlast), true) or ((5526 - (522 + 447)) < (3508 - (107 + 1314)))) then
+						return "mind_blast damage";
+					end
+				end
+				if (((1798 + 2076) == (11804 - 7930)) and v112.Mindgames:IsReady() and ((v112.Mindbender:CooldownRemains() > v112.Mindgames:Cooldown()) or (v112.ShadowFiend:CooldownRemains() > v112.Mindgames:Cooldown())) and v112.ShatteredPerceptions:IsAvailable()) then
+					if (v23(v112.Mindgames, not v13:IsSpellInRange(v112.Mindgames), true) or ((824 + 1114) > (9799 - 4864))) then
+						return "mindgames 1 damage";
+					end
+				end
+				v161 = 15 - 11;
 			end
-		end
-		if ((v112.MindBlast:IsReady() and ((v112.Mindbender:CooldownRemains() > v112.MindBlast:Cooldown()) or (v112.Shadowfiend:CooldownRemains() > v112.MindBlast:Cooldown()))) or ((4973 - (397 + 42)) == (651 + 1431))) then
-			if (v23(v112.MindBlast, not v13:IsSpellInRange(v112.MindBlast), true) or ((2371 - (24 + 776)) > (2875 - 1008))) then
-				return "mind_blast damage";
+			if ((v161 == (1914 - (716 + 1194))) or ((73 + 4182) < (367 + 3056))) then
+				if (((1957 - (74 + 429)) <= (4805 - 2314)) and v133:IsReady() and v134.TargetIsValid() and v13:IsInRange(15 + 15)) then
+					if (v23(v114.HaloPlayer, not v13:IsInRange(68 - 38), true) or ((2941 + 1216) <= (8641 - 5838))) then
+						return "halo damage";
+					end
+				end
+				if (((11999 - 7146) >= (3415 - (279 + 154))) and v132:IsReady() and v134.TargetIsValid() and v13:IsInRange(808 - (454 + 324)) and not v13:IsFacingBlacklisted()) then
+					if (((3253 + 881) > (3374 - (12 + 5))) and v23(v114.DivineStarPlayer, not v13:IsInRange(17 + 13))) then
+						return "divine_star damage";
+					end
+				end
+				if ((v112.ShadowWordDeath:IsReady() and (v13:TimeToX(50 - 30) > ((0.5 + 0) * v112.ShadowWordDeath:Cooldown()))) or ((4510 - (277 + 816)) < (10827 - 8293))) then
+					if (v23(v112.ShadowWordDeath, not v13:IsSpellInRange(v112.ShadowWordDeath)) or ((3905 - (1058 + 125)) <= (31 + 133))) then
+						return "shadow_word_death 3 damage";
+					end
+				end
+				if ((v112.HolyNova:IsReady() and (v12:BuffStack(v112.RhapsodyBuff) == (995 - (815 + 160)))) or ((10331 - 7923) < (5006 - 2897))) then
+					if (v23(v112.HolyNova) or ((8 + 25) == (4253 - 2798))) then
+						return "holy_nova 1 damage";
+					end
+				end
+				v161 = 1903 - (41 + 1857);
 			end
-		end
-		if ((v112.Mindgames:IsReady() and ((v112.Mindbender:CooldownRemains() > v112.Mindgames:Cooldown()) or (v112.ShadowFiend:CooldownRemains() > v112.Mindgames:Cooldown())) and v112.ShatteredPerceptions:IsAvailable()) or ((3439 - (222 + 563)) >= (6600 - 3604))) then
-			if (((2865 + 1113) > (2294 - (23 + 167))) and v23(v112.Mindgames, not v13:IsSpellInRange(v112.Mindgames), true)) then
-				return "mindgames 1 damage";
+			if ((v161 == (1895 - (1222 + 671))) or ((1144 - 701) >= (5770 - 1755))) then
+				if (((4564 - (229 + 953)) > (1940 - (1111 + 663))) and v95 and v12:BuffUp(v112.PowerInfusionBuff)) then
+					local v220 = 1579 - (874 + 705);
+					while true do
+						if ((v220 == (0 + 0)) or ((192 + 88) == (6358 - 3299))) then
+							ShouldReturn = v140();
+							if (((53 + 1828) > (1972 - (642 + 37))) and ShouldReturn) then
+								return ShouldReturn;
+							end
+							break;
+						end
+					end
+				end
+				if (((538 + 1819) == (378 + 1979)) and v112.PurgeTheWicked:IsReady() and (v13:TimeToDie() > ((0.3 - 0) * v112.PurgeTheWicked:BaseDuration())) and v13:DebuffRefreshable(v112.PurgeTheWickedDebuff)) then
+					if (((577 - (233 + 221)) == (284 - 161)) and v23(v112.PurgeTheWicked, not v13:IsSpellInRange(v112.PurgeTheWicked))) then
+						return "purge_the_wicked damage";
+					end
+				end
+				if ((v112.ShadowWordPain:IsReady() and not v112.PurgeTheWicked:IsAvailable() and (v13:TimeToDie() > ((0.3 + 0) * v112.ShadowWordPain:BaseDuration())) and v13:DebuffRefreshable(v112.ShadowWordPain)) or ((2597 - (718 + 823)) >= (2135 + 1257))) then
+					if (v23(v112.ShadowWordPain, not v13:IsSpellInRange(v112.ShadowWordPain)) or ((1886 - (266 + 539)) < (3043 - 1968))) then
+						return "shadow_word_pain damage";
+					end
+				end
+				if ((v112.ShadowWordDeath:IsReady() and (v13:HealthPercentage() < (1245 - (636 + 589)))) or ((2489 - 1440) >= (9140 - 4708))) then
+					if (v23(v112.ShadowWordDeath, not v13:IsSpellInRange(v112.ShadowWordDeath)) or ((3779 + 989) <= (308 + 538))) then
+						return "shadow_word_death 1 damage";
+					end
+				end
+				v161 = 1018 - (657 + 358);
 			end
-		end
-		if (((4793 - (690 + 1108)) > (556 + 985)) and v133:IsReady() and v134.TargetIsValid() and v13:IsInRange(25 + 5)) then
-			if (((4097 - (40 + 808)) > (157 + 796)) and v23(v114.HaloPlayer, not v13:IsInRange(114 - 84), true)) then
-				return "halo damage";
-			end
-		end
-		if ((v132:IsReady() and v134.TargetIsValid() and v13:IsInRange(29 + 1) and not v13:IsFacingBlacklisted()) or ((1732 + 1541) > (2508 + 2065))) then
-			if (v23(v114.DivineStarPlayer, not v13:IsInRange(601 - (47 + 524))) or ((2045 + 1106) < (3509 - 2225))) then
-				return "divine_star damage";
-			end
-		end
-		if ((v112.ShadowWordDeath:IsReady() and (v13:TimeToX(29 - 9) > ((0.5 - 0) * v112.ShadowWordDeath:Cooldown()))) or ((3576 - (1165 + 561)) == (46 + 1483))) then
-			if (((2542 - 1721) < (811 + 1312)) and v23(v112.ShadowWordDeath, not v13:IsSpellInRange(v112.ShadowWordDeath))) then
-				return "shadow_word_death 3 damage";
-			end
-		end
-		if (((1381 - (341 + 138)) < (628 + 1697)) and v112.HolyNova:IsReady() and (v12:BuffStack(v112.RhapsodyBuff) == (41 - 21))) then
-			if (((1184 - (89 + 237)) <= (9528 - 6566)) and v23(v112.HolyNova)) then
-				return "holy_nova 1 damage";
-			end
-		end
-		if (v112.Smite:IsReady() or ((8307 - 4361) < (2169 - (581 + 300)))) then
-			if (v23(v112.Smite, not v13:IsSpellInRange(v112.Smite), true) or ((4462 - (855 + 365)) == (1346 - 779))) then
-				return "smite damage";
-			end
-		end
-		if (v12:IsMoving() or ((277 + 570) >= (2498 - (1030 + 205)))) then
-			local v204 = 0 + 0;
-			while true do
-				if ((v204 == (0 + 0)) or ((2539 - (156 + 130)) == (4205 - 2354))) then
+			if ((v161 == (13 - 8)) or ((7650 - 4292) <= (2607 - (1151 + 36)))) then
+				if (v112.Smite:IsReady() or ((3611 + 128) <= (791 + 2214))) then
+					if (v23(v112.Smite, not v13:IsSpellInRange(v112.Smite), true) or ((4954 - 3295) >= (3966 - (1552 + 280)))) then
+						return "smite damage";
+					end
+				end
+				if (v12:IsMoving() or ((4094 - (64 + 770)) < (1599 + 756))) then
 					ShouldReturn = v141();
-					if (ShouldReturn or ((3516 - 1429) > (4857 - 2485))) then
+					if (ShouldReturn or ((1518 - 849) == (750 + 3473))) then
 						return ShouldReturn;
 					end
-					break;
 				end
+				if ((v112.PurgeTheWicked:IsReady() and v13:DebuffRefreshable(v112.PurgeTheWickedDebuff)) or ((2935 - (157 + 1086)) < (1176 - 588))) then
+					if (v23(v112.PurgeTheWicked, not v13:IsSpellInRange(v112.PurgeTheWicked)) or ((21009 - 16212) < (5600 - 1949))) then
+						return "purge_the_wicked_movement damage";
+					end
+				end
+				if (v112.ShadowWordPain:IsReady() or ((5701 - 1524) > (5669 - (599 + 220)))) then
+					if (v23(v112.ShadowWordPain, not v13:IsSpellInRange(v112.ShadowWordPain)) or ((796 - 396) > (3042 - (1813 + 118)))) then
+						return "shadow_word_pain_movement damage";
+					end
+				end
+				break;
 			end
-		end
-		if ((v112.PurgeTheWicked:IsReady() and v13:DebuffRefreshable(v112.PurgeTheWickedDebuff)) or ((1172 + 3273) < (2420 + 1729))) then
-			if (v23(v112.PurgeTheWicked, not v13:IsSpellInRange(v112.PurgeTheWicked)) or ((1887 - (10 + 59)) == (25 + 60))) then
-				return "purge_the_wicked_movement damage";
-			end
-		end
-		if (((3102 - 2472) < (3290 - (671 + 492))) and v112.ShadowWordPain:IsReady()) then
-			if (v23(v112.ShadowWordPain, not v13:IsSpellInRange(v112.ShadowWordPain)) or ((1543 + 395) == (3729 - (369 + 846)))) then
-				return "shadow_word_pain_movement damage";
+			if (((2231 + 820) > (2222 - (841 + 376))) and (v161 == (0 - 0))) then
+				ShouldReturn = v134.InterruptWithStun(v112.PsychicScream, 2 + 6);
+				if (((10080 - 6387) <= (5241 - (464 + 395))) and ShouldReturn) then
+					return ShouldReturn;
+				end
+				if ((v112.DispelMagic:IsReady() and v96 and v37 and not v12:IsCasting() and not v12:IsChanneling() and v134.UnitHasMagicBuff(v13)) or ((8422 - 5140) > (1969 + 2131))) then
+					if (v23(v112.DispelMagic, not v13:IsSpellInRange(v112.DispelMagic)) or ((4417 - (467 + 370)) < (5877 - 3033))) then
+						return "dispel_magic damage";
+					end
+				end
+				if (((66 + 23) < (15391 - 10901)) and v112.ArcaneTorrent:IsReady() and v28 and v95 and (v12:ManaPercentage() <= (14 + 71))) then
+					if (v23(v112.ArcaneTorrent) or ((11592 - 6609) < (2328 - (150 + 370)))) then
+						return "arcane_torrent damage";
+					end
+				end
+				v161 = 1283 - (74 + 1208);
 			end
 		end
 	end
 	local function v146()
-		local v161 = 0 + 0;
+		local v162 = 0 - 0;
 		while true do
-			if (((3632 + 623) >= (2000 - (1036 + 909))) and (v161 == (1 + 0))) then
-				if (((5034 - 2035) > (1359 - (11 + 192))) and v14) then
-					local v213 = 0 + 0;
+			if (((18159 - 14330) > (2682 + 1087)) and (v162 == (391 - (14 + 376)))) then
+				if (((2575 - 1090) <= (1880 + 1024)) and v14) then
+					local v221 = 0 + 0;
 					while true do
-						if (((2525 - (135 + 40)) > (2798 - 1643)) and (v213 == (0 + 0))) then
-							if (((8875 - 4846) <= (7274 - 2421)) and v36) then
-								local v241 = 176 - (50 + 126);
-								while true do
-									if ((v241 == (0 - 0)) or ((115 + 401) > (4847 - (1233 + 180)))) then
-										ShouldReturn = v138();
-										if (((5015 - (522 + 447)) >= (4454 - (107 + 1314))) and ShouldReturn) then
-											return ShouldReturn;
-										end
-										break;
-									end
-								end
-							end
-							if (v95 or ((1262 + 1457) <= (4408 - 2961))) then
+						if (((4072 + 197) == (12508 - 8239)) and (v221 == (0 + 0))) then
+							if (((465 - (23 + 55)) <= (6592 - 3810)) and v36) then
 								local v242 = 0 + 0;
 								while true do
-									if ((v242 == (0 - 0)) or ((16356 - 12222) < (5836 - (716 + 1194)))) then
-										ShouldReturn = v143();
-										if (ShouldReturn or ((3 + 161) >= (299 + 2486))) then
+									if ((v242 == (0 + 0)) or ((2943 - 1044) <= (289 + 628))) then
+										ShouldReturn = v138();
+										if (ShouldReturn or ((5213 - (652 + 249)) <= (2344 - 1468))) then
 											return ShouldReturn;
 										end
 										break;
 									end
 								end
 							end
-							v213 = 504 - (74 + 429);
-						end
-						if (((1 - 0) == v213) or ((261 + 264) == (4827 - 2718))) then
-							ShouldReturn = v144();
-							if (((24 + 9) == (101 - 68)) and ShouldReturn) then
-								return ShouldReturn;
-							end
-							break;
-						end
-					end
-				end
-				if (((7550 - 4496) <= (4448 - (279 + 154))) and v134.TargetIsValid()) then
-					local v214 = 778 - (454 + 324);
-					while true do
-						if (((1473 + 398) < (3399 - (12 + 5))) and (v214 == (0 + 0))) then
-							ShouldReturn = v145();
-							if (((3294 - 2001) <= (801 + 1365)) and ShouldReturn) then
-								return ShouldReturn;
-							end
-							break;
-						end
-					end
-				elseif (v12:IsMoving() or ((3672 - (277 + 816)) < (525 - 402))) then
-					local v227 = 1183 - (1058 + 125);
-					while true do
-						if ((v227 == (0 + 0)) or ((1821 - (815 + 160)) >= (10160 - 7792))) then
-							ShouldReturn = v141();
-							if (ShouldReturn or ((9523 - 5511) <= (802 + 2556))) then
-								return ShouldReturn;
-							end
-							break;
-						end
-					end
-				end
-				break;
-			end
-			if (((4367 - 2873) <= (4903 - (41 + 1857))) and (v161 == (1893 - (1222 + 671)))) then
-				ShouldReturn = v139();
-				if (ShouldReturn or ((8040 - 4929) == (3067 - 933))) then
-					return ShouldReturn;
-				end
-				v161 = 1183 - (229 + 953);
-			end
-		end
-	end
-	local function v147()
-		if (((4129 - (1111 + 663)) == (3934 - (874 + 705))) and v112.PowerWordFortitude:IsReady() and v32 and (v12:BuffDown(v112.PowerWordFortitudeBuff, true) or v134.GroupBuffMissing(v112.PowerWordFortitudeBuff))) then
-			if (v23(v114.PowerWordFortitudePlayer) or ((83 + 505) <= (295 + 137))) then
-				return "power_word_fortitude";
-			end
-		end
-		if (((9970 - 5173) >= (110 + 3785)) and v14) then
-			local v205 = 679 - (642 + 37);
-			while true do
-				if (((816 + 2761) == (573 + 3004)) and (v205 == (0 - 0))) then
-					if (((4248 - (233 + 221)) > (8539 - 4846)) and v36) then
-						local v228 = 0 + 0;
-						while true do
-							if ((v228 == (1541 - (718 + 823))) or ((803 + 472) == (4905 - (266 + 539)))) then
-								ShouldReturn = v138();
-								if (ShouldReturn or ((4504 - 2913) >= (4805 - (636 + 589)))) then
-									return ShouldReturn;
+							if (((4100 - (708 + 1160)) <= (7046 - 4450)) and v95) then
+								local v243 = 0 - 0;
+								while true do
+									if (((2122 - (10 + 17)) < (828 + 2858)) and (v243 == (1732 - (1400 + 332)))) then
+										ShouldReturn = v143();
+										if (ShouldReturn or ((3059 - 1464) >= (6382 - (242 + 1666)))) then
+											return ShouldReturn;
+										end
+										break;
+									end
 								end
-								break;
 							end
+							v221 = 1 + 0;
 						end
-					end
-					if (((2333 - 1350) <= (3728 - 1920)) and v94) then
-						ShouldReturn = v144();
-						if (ShouldReturn or ((1704 + 446) <= (435 + 762))) then
-							return ShouldReturn;
-						end
-					end
-					break;
-				end
-			end
-		end
-		if (((4784 - (657 + 358)) >= (3105 - 1932)) and v12:IsMoving()) then
-			ShouldReturn = v141();
-			if (((3383 - 1898) == (2672 - (1151 + 36))) and ShouldReturn) then
-				return ShouldReturn;
-			end
-		end
-		if ((v13 and v13:Exists() and v13:IsAPlayer() and v13:IsDeadOrGhost() and not v12:CanAttack(v13)) or ((3202 + 113) <= (732 + 2050))) then
-			local v206 = 0 - 0;
-			local v207;
-			while true do
-				if ((v206 == (1832 - (1552 + 280))) or ((1710 - (64 + 770)) >= (2013 + 951))) then
-					v207 = v134.DeadFriendlyUnitsCount();
-					if ((v207 > (2 - 1)) or ((397 + 1835) > (3740 - (157 + 1086)))) then
-						if (v23(v112.MassResurrection, nil, true) or ((4223 - 2113) <= (1453 - 1121))) then
-							return "mass_resurrection";
-						end
-					elseif (((5653 - 1967) > (4328 - 1156)) and v23(v112.Resurrection, nil, true)) then
-						return "resurrection";
-					end
-					break;
-				end
-			end
-		end
-		if ((v112.PowerWordFortitude:IsReady() and (v12:BuffDown(v112.PowerWordFortitudeBuff, true) or v134.GroupBuffMissing(v112.PowerWordFortitudeBuff))) or ((5293 - (599 + 220)) < (1632 - 812))) then
-			if (((6210 - (1813 + 118)) >= (2107 + 775)) and v23(v114.PowerWordFortitudePlayer)) then
-				return "power_word_fortitude";
-			end
-		end
-	end
-	local function v148()
-		local v162 = 1217 - (841 + 376);
-		while true do
-			if ((v162 == (1 - 0)) or ((472 + 1557) >= (9610 - 6089))) then
-				if (v14:BuffDown(v112.AtonementBuff) or (v14:BuffRemains(v112.AtonementBuff) < v86) or ((2896 - (464 + 395)) >= (11913 - 7271))) then
-					if (((827 + 893) < (5295 - (467 + 370))) and v12:BuffUp(v112.Rapture)) then
-						if (v112.PowerWordShield:IsReady() or ((900 - 464) > (2218 + 803))) then
-							if (((2444 - 1731) <= (133 + 714)) and v23(v114.PowerWordShieldFocus)) then
-								return "power_word_shield heal";
+						if ((v221 == (1 + 0)) or ((3937 + 682) < (3822 - (850 + 90)))) then
+							ShouldReturn = v144();
+							if (ShouldReturn or ((514 - 220) >= (6221 - (360 + 1030)))) then
+								return ShouldReturn;
 							end
+							break;
 						end
-					elseif (((5010 - 2856) <= (4551 - (150 + 370))) and v112.Renew:IsReady()) then
-						if (((5897 - (74 + 1208)) == (11351 - 6736)) and v23(v114.RenewFocus)) then
-							return "renew heal";
+					end
+				end
+				if (((1796 + 233) <= (8704 - 5620)) and v134.TargetIsValid()) then
+					local v222 = 0 - 0;
+					while true do
+						if ((v222 == (1661 - (909 + 752))) or ((3260 - (109 + 1114)) == (4430 - 2010))) then
+							ShouldReturn = v145();
+							if (((1736 + 2722) > (4146 - (6 + 236))) and ShouldReturn) then
+								return ShouldReturn;
+							end
+							break;
+						end
+					end
+				elseif (((275 + 161) >= (100 + 23)) and v12:IsMoving()) then
+					local v228 = 0 - 0;
+					while true do
+						if (((873 - 373) < (2949 - (1076 + 57))) and (v228 == (0 + 0))) then
+							ShouldReturn = v141();
+							if (((4263 - (579 + 110)) == (283 + 3291)) and ShouldReturn) then
+								return ShouldReturn;
+							end
+							break;
 						end
 					end
 				end
 				break;
 			end
-			if ((v162 == (0 - 0)) or ((2697 + 1093) == (890 - (14 + 376)))) then
-				ShouldReturn = v134.FocusUnitRefreshableBuff(v112.AtonementBuff, v86, nil, nil, 34 - 14);
-				if (((58 + 31) < (195 + 26)) and ShouldReturn) then
+			if (((196 + 25) < (207 + 183)) and ((407 - (174 + 233)) == v162)) then
+				ShouldReturn = v139();
+				if (ShouldReturn or ((6181 - 3968) <= (2493 - 1072))) then
 					return ShouldReturn;
 				end
 				v162 = 1 + 0;
 			end
 		end
 	end
-	local function v149()
-		local v163 = 0 - 0;
-		local v164;
-		while true do
-			if (((1546 + 508) >= (1499 - (23 + 55))) and (v163 == (2 - 1))) then
-				v125 = not v112.HarshDiscipline:IsAvailable() or (v12:BuffStack(v112.HarshDisciplineBuff) == (3 + 0));
-				ShouldReturn = v134.FocusUnitRefreshableBuff(v112.AtonementBuff, 6 + 0, nil, nil, 31 - 11);
-				v163 = 1 + 1;
+	local function v147()
+		if (((4232 - (663 + 511)) < (4336 + 524)) and v112.PowerWordFortitude:IsReady() and v32 and (v12:BuffDown(v112.PowerWordFortitudeBuff, true) or v134.GroupBuffMissing(v112.PowerWordFortitudeBuff))) then
+			if (v23(v114.PowerWordFortitudePlayer) or ((282 + 1014) >= (13706 - 9260))) then
+				return "power_word_fortitude";
 			end
-			if (((1593 - (652 + 249)) < (8183 - 5125)) and (v163 == (1871 - (708 + 1160)))) then
-				if (v14:BuffDown(v112.AtonementBuff) or (v14:BuffRemains(v112.AtonementBuff) < (16 - 10)) or ((5932 - 2678) == (1682 - (10 + 17)))) then
-					local v215 = 0 + 0;
-					while true do
-						if (((1732 - (1400 + 332)) == v215) or ((2485 - 1189) == (6818 - (242 + 1666)))) then
-							if (((1442 + 1926) == (1235 + 2133)) and v112.PowerWordShield:IsReady()) then
-								if (((2253 + 390) < (4755 - (850 + 90))) and v23(v114.PowerWordShieldFocus)) then
-									return "power_word_shield heal";
+		end
+		if (v14 or ((844 + 549) > (10568 - 6079))) then
+			local v183 = 0 - 0;
+			while true do
+				if ((v183 == (0 + 0)) or ((8610 - 4186) < (20 + 7))) then
+					if (v36 or ((183 + 1814) > (4537 - (478 + 244)))) then
+						ShouldReturn = v138();
+						if (((3982 - (440 + 77)) > (870 + 1043)) and ShouldReturn) then
+							return ShouldReturn;
+						end
+					end
+					if (((2682 - 1949) < (3375 - (655 + 901))) and v94) then
+						local v229 = 0 + 0;
+						while true do
+							if ((v229 == (0 + 0)) or ((2968 + 1427) == (19156 - 14401))) then
+								ShouldReturn = v144();
+								if (ShouldReturn or ((5238 - (695 + 750)) < (8089 - 5720))) then
+									return ShouldReturn;
 								end
+								break;
 							end
-							if (((3349 - 1436) > (1883 - (360 + 1030))) and v112.Rapture:IsReady()) then
-								if (((4209 + 546) > (9675 - 6247)) and v23(v114.RaptureFocus)) then
-									return "rapture heal";
-								end
+						end
+					end
+					break;
+				end
+			end
+		end
+		if (v12:IsMoving() or ((6302 - 2218) == (1065 - 800))) then
+			local v184 = 351 - (285 + 66);
+			while true do
+				if (((10158 - 5800) == (5668 - (682 + 628))) and (v184 == (0 + 0))) then
+					ShouldReturn = v141();
+					if (ShouldReturn or ((3437 - (176 + 123)) < (416 + 577))) then
+						return ShouldReturn;
+					end
+					break;
+				end
+			end
+		end
+		if (((2416 + 914) > (2592 - (239 + 30))) and v13 and v13:Exists() and v13:IsAPlayer() and v13:IsDeadOrGhost() and not v12:CanAttack(v13)) then
+			local v185 = 0 + 0;
+			local v186;
+			while true do
+				if ((v185 == (0 + 0)) or ((6417 - 2791) == (12444 - 8455))) then
+					v186 = v134.DeadFriendlyUnitsCount();
+					if ((v186 > (316 - (306 + 9))) or ((3196 - 2280) == (465 + 2206))) then
+						if (((167 + 105) == (131 + 141)) and v23(v112.MassResurrection, nil, true)) then
+							return "mass_resurrection";
+						end
+					elseif (((12150 - 7901) <= (6214 - (1140 + 235))) and v23(v112.Resurrection, nil, true)) then
+						return "resurrection";
+					end
+					break;
+				end
+			end
+		end
+		if (((1768 + 1009) < (2935 + 265)) and v112.PowerWordFortitude:IsReady() and (v12:BuffDown(v112.PowerWordFortitudeBuff, true) or v134.GroupBuffMissing(v112.PowerWordFortitudeBuff))) then
+			if (((25 + 70) < (2009 - (33 + 19))) and v23(v114.PowerWordFortitudePlayer)) then
+				return "power_word_fortitude";
+			end
+		end
+	end
+	local function v148()
+		local v163 = 0 + 0;
+		while true do
+			if (((2475 - 1649) < (757 + 960)) and (v163 == (1 - 0))) then
+				if (((1338 + 88) >= (1794 - (586 + 103))) and (v14:BuffDown(v112.AtonementBuff) or (v14:BuffRemains(v112.AtonementBuff) < v86))) then
+					if (((251 + 2503) <= (10402 - 7023)) and v12:BuffUp(v112.Rapture)) then
+						if (v112.PowerWordShield:IsReady() or ((5415 - (1309 + 179)) == (2550 - 1137))) then
+							if (v23(v114.PowerWordShieldFocus) or ((503 + 651) <= (2116 - 1328))) then
+								return "power_word_shield heal";
 							end
-							break;
+						end
+					elseif (v112.Renew:IsReady() or ((1242 + 401) > (7178 - 3799))) then
+						if (v23(v114.RenewFocus) or ((5585 - 2782) > (5158 - (295 + 314)))) then
+							return "renew heal";
 						end
 					end
 				end
 				break;
 			end
-			if (((1899 - 518) <= (4030 - (909 + 752))) and (v163 == (1223 - (109 + 1114)))) then
-				v164 = GetTime() - v100;
-				if ((v164 > (36 - 16)) or ((1886 + 2957) == (4326 - (6 + 236)))) then
-					ShouldRaptureRamp = false;
-					v100 = 0 + 0;
-				end
-				v163 = 1 + 0;
-			end
-			if (((11010 - 6341) > (633 - 270)) and (v163 == (1135 - (1076 + 57)))) then
-				if (ShouldReturn or ((309 + 1568) >= (3827 - (579 + 110)))) then
+			if ((v163 == (0 - 0)) or ((2182 - (1300 + 662)) >= (9489 - 6467))) then
+				ShouldReturn = v134.FocusUnitRefreshableBuff(v112.AtonementBuff, v86, nil, nil, 1775 - (1178 + 577));
+				if (((1466 + 1356) == (8342 - 5520)) and ShouldReturn) then
 					return ShouldReturn;
 				end
-				if (((375 + 4367) >= (3206 + 420)) and not v112.Rapture:IsReady() and v12:BuffDown(v112.Rapture)) then
-					if (v112.PowerWordRadiance:IsReady() or ((2410 + 2130) == (1323 - (174 + 233)))) then
-						if (v23(v114.PowerWordRadianceFocus, nil, v123) or ((3228 - 2072) > (7626 - 3281))) then
-							return "power_word_radiance_instant heal_cooldown";
+				v163 = 1406 - (851 + 554);
+			end
+		end
+	end
+	local function v149()
+		local v164 = GetTime() - v100;
+		if ((v164 > (18 + 2)) or ((2942 - 1881) == (4032 - 2175))) then
+			ShouldRaptureRamp = false;
+			v100 = 302 - (115 + 187);
+		end
+		v125 = not v112.HarshDiscipline:IsAvailable() or (v12:BuffStack(v112.HarshDisciplineBuff) == (3 + 0));
+		ShouldReturn = v134.FocusUnitRefreshableBuff(v112.AtonementBuff, 6 + 0, nil, nil, 78 - 58);
+		if (((3921 - (160 + 1001)) > (1194 + 170)) and ShouldReturn) then
+			return ShouldReturn;
+		end
+		if ((not v112.Rapture:IsReady() and v12:BuffDown(v112.Rapture)) or ((3383 + 1519) <= (7359 - 3764))) then
+			if (v112.PowerWordRadiance:IsReady() or ((4210 - (237 + 121)) == (1190 - (525 + 372)))) then
+				if (v23(v114.PowerWordRadianceFocus, nil, v123) or ((2955 - 1396) == (15074 - 10486))) then
+					return "power_word_radiance_instant heal_cooldown";
+				end
+			end
+		end
+		if (v14:BuffDown(v112.AtonementBuff) or (v14:BuffRemains(v112.AtonementBuff) < (148 - (96 + 46))) or ((5261 - (643 + 134)) == (285 + 503))) then
+			local v187 = 0 - 0;
+			while true do
+				if (((16959 - 12391) >= (3747 + 160)) and (v187 == (0 - 0))) then
+					if (((2546 - 1300) < (4189 - (316 + 403))) and v112.PowerWordShield:IsReady()) then
+						if (((2704 + 1364) >= (2672 - 1700)) and v23(v114.PowerWordShieldFocus)) then
+							return "power_word_shield heal";
 						end
 					end
+					if (((179 + 314) < (9803 - 5910)) and v112.Rapture:IsReady()) then
+						if (v23(v114.RaptureFocus) or ((1044 + 429) >= (1074 + 2258))) then
+							return "rapture heal";
+						end
+					end
+					break;
 				end
-				v163 = 2 + 1;
 			end
 		end
 	end
 	local function v150()
-		local v165 = 1174 - (663 + 511);
+		local v165 = 0 - 0;
 		local v166;
 		while true do
-			if (((1996 + 241) < (923 + 3326)) and (v165 == (0 - 0))) then
+			if ((v165 == (0 - 0)) or ((8415 - 4364) <= (67 + 1090))) then
 				v166 = GetTime() - v100;
-				if ((v166 > (13 + 7)) or ((6316 - 3633) < (55 - 32))) then
-					local v216 = 0 + 0;
+				if (((1188 - 584) < (141 + 2740)) and (v166 > (58 - 38))) then
+					local v223 = 17 - (12 + 5);
 					while true do
-						if (((1356 - 659) <= (589 + 237)) and (v216 == (0 + 0))) then
+						if ((v223 == (0 - 0)) or ((1920 - 1020) == (7178 - 3801))) then
 							ShouldEvangelismRamp = false;
-							v100 = 722 - (478 + 244);
+							v100 = 0 - 0;
 							break;
 						end
 					end
 				end
-				v165 = 518 - (440 + 77);
+				v165 = 1 + 0;
 			end
-			if (((503 + 602) <= (4303 - 3127)) and (v165 == (1557 - (655 + 901)))) then
-				v125 = not v112.HarshDiscipline:IsAvailable() or (v12:BuffStack(v112.HarshDisciplineBuff) == (1 + 2));
-				ShouldReturn = v134.FocusUnitRefreshableBuff(v112.AtonementBuff, 5 + 1, nil, nil, 14 + 6);
-				v165 = 7 - 5;
-			end
-			if (((4824 - (695 + 750)) <= (13016 - 9204)) and ((2 - 0) == v165)) then
-				if (ShouldReturn or ((3168 - 2380) >= (1967 - (285 + 66)))) then
-					return ShouldReturn;
-				end
-				if (((4321 - 2467) <= (4689 - (682 + 628))) and not v112.Evangelism:IsReady()) then
-					local v217 = 0 + 0;
-					while true do
-						if (((4848 - (176 + 123)) == (1903 + 2646)) and (v217 == (0 + 0))) then
-							ShouldReturn = v145();
-							if (ShouldReturn or ((3291 - (239 + 30)) >= (823 + 2201))) then
-								return ShouldReturn;
-							end
-							break;
-						end
-					end
-				end
-				v165 = 3 + 0;
-			end
-			if (((8531 - 3711) > (6857 - 4659)) and (v165 == (318 - (306 + 9)))) then
-				if (v14:BuffDown(v112.AtonementBuff) or (v14:BuffRemains(v112.AtonementBuff) < (20 - 14)) or ((185 + 876) >= (3001 + 1890))) then
-					if (((657 + 707) <= (12790 - 8317)) and v112.PowerWordShield:IsReady()) then
-						if (v23(v114.PowerWordShieldFocus) or ((4970 - (1140 + 235)) <= (2 + 1))) then
+			if (((6432 - (1656 + 317)) > (527 + 64)) and (v165 == (3 + 0))) then
+				if (((9035 - 5637) >= (11787 - 9392)) and (v14:BuffDown(v112.AtonementBuff) or (v14:BuffRemains(v112.AtonementBuff) < (360 - (5 + 349))))) then
+					if (v112.PowerWordShield:IsReady() or ((10368 - 8185) >= (4095 - (266 + 1005)))) then
+						if (((1276 + 660) == (6605 - 4669)) and v23(v114.PowerWordShieldFocus)) then
 							return "power_word_shield heal";
 						end
 					end
-					if ((v166 > (7 + 0)) or ((1200 + 3472) == (3904 - (33 + 19)))) then
-						if (((563 + 996) == (4672 - 3113)) and v112.PowerWordRadiance:IsReady()) then
-							if (v23(v114.PowerWordRadianceFocus, nil, v123) or ((772 + 980) <= (1545 - 757))) then
+					if ((v166 > (8 - 1)) or ((6528 - (561 + 1135)) < (5619 - 1306))) then
+						if (((13437 - 9349) > (4940 - (507 + 559))) and v112.PowerWordRadiance:IsReady()) then
+							if (((10870 - 6538) == (13397 - 9065)) and v23(v114.PowerWordRadianceFocus, nil, v123)) then
 								return "power_word_radiance_instant heal_cooldown";
 							end
-						elseif (v112.Evangelism:IsReady() or ((3664 + 243) == (866 - (586 + 103)))) then
-							if (((316 + 3154) > (1708 - 1153)) and v23(v112.Evangelism)) then
+						elseif (((4387 - (212 + 176)) >= (3805 - (250 + 655))) and v112.Evangelism:IsReady()) then
+							if (v23(v112.Evangelism) or ((6885 - 4360) > (7100 - 3036))) then
 								return "evangelism heal";
 							end
 						end
 					end
-					if (v112.Renew:IsReady() or ((2460 - (1309 + 179)) == (1164 - 519))) then
-						if (((1385 + 1797) >= (5679 - 3564)) and v23(v114.RenewFocus)) then
+					if (((6838 - 2467) == (6327 - (1869 + 87))) and v112.Renew:IsReady()) then
+						if (v23(v114.RenewFocus) or ((922 - 656) > (6887 - (484 + 1417)))) then
 							return "renew heal";
 						end
 					end
 				end
 				break;
+			end
+			if (((4267 - 2276) >= (1549 - 624)) and ((775 - (48 + 725)) == v165)) then
+				if (((743 - 288) < (5507 - 3454)) and ShouldReturn) then
+					return ShouldReturn;
+				end
+				if (not v112.Evangelism:IsReady() or ((481 + 345) == (12963 - 8112))) then
+					ShouldReturn = v145();
+					if (((52 + 131) == (54 + 129)) and ShouldReturn) then
+						return ShouldReturn;
+					end
+				end
+				v165 = 856 - (152 + 701);
+			end
+			if (((2470 - (430 + 881)) <= (685 + 1103)) and (v165 == (896 - (557 + 338)))) then
+				v125 = not v112.HarshDiscipline:IsAvailable() or (v12:BuffStack(v112.HarshDisciplineBuff) == (1 + 2));
+				ShouldReturn = v134.FocusUnitRefreshableBuff(v112.AtonementBuff, 16 - 10, nil, nil, 70 - 50);
+				v165 = 4 - 2;
 			end
 		end
 	end
 	local function v151()
-		local v167 = 0 + 0;
-		local v168;
-		while true do
-			if (((8270 - 4377) < (8824 - 4395)) and (v167 == (609 - (295 + 314)))) then
-				v168 = GetTime() - v100;
-				if ((v168 > (61 - 36)) or ((4829 - (1300 + 662)) < (5981 - 4076))) then
-					ShouldBothRamp = false;
-					v100 = 1755 - (1178 + 577);
+		local v167 = GetTime() - v100;
+		if ((v167 > (53 - 28)) or ((4308 - (499 + 302)) > (5184 - (39 + 827)))) then
+			ShouldBothRamp = false;
+			v100 = 0 - 0;
+		end
+		v125 = not v112.HarshDiscipline:IsAvailable() or (v12:BuffStack(v112.HarshDisciplineBuff) == (6 - 3));
+		ShouldReturn = v134.FocusUnitRefreshableBuff(v112.AtonementBuff, 23 - 17, nil, nil, 30 - 10);
+		if (ShouldReturn or ((264 + 2811) <= (8678 - 5713))) then
+			return ShouldReturn;
+		end
+		if (((219 + 1146) <= (3181 - 1170)) and not v112.Evangelism:IsReady()) then
+			local v188 = 104 - (103 + 1);
+			while true do
+				if ((v188 == (554 - (475 + 79))) or ((6001 - 3225) > (11440 - 7865))) then
+					ShouldReturn = v145();
+					if (ShouldReturn or ((331 + 2223) == (4228 + 576))) then
+						return ShouldReturn;
+					end
+					break;
 				end
-				v167 = 1 + 0;
 			end
-			if ((v167 == (5 - 3)) or ((3201 - (851 + 554)) >= (3583 + 468))) then
-				if (((4489 - 2870) <= (8157 - 4401)) and ShouldReturn) then
-					return ShouldReturn;
-				end
-				if (((906 - (115 + 187)) == (463 + 141)) and not v112.Evangelism:IsReady()) then
-					local v218 = 0 + 0;
-					while true do
-						if (((0 - 0) == v218) or ((5645 - (160 + 1001)) == (788 + 112))) then
-							ShouldReturn = v145();
-							if (ShouldReturn or ((3077 + 1382) <= (2278 - 1165))) then
-								return ShouldReturn;
-							end
-							break;
-						end
+		end
+		if (((4080 - (1395 + 108)) == (7498 - 4921)) and not v112.Rapture:IsReady() and v12:BuffDown(v112.Rapture)) then
+			if ((v167 > (1214 - (7 + 1197))) or ((3 + 3) >= (660 + 1229))) then
+				if (((825 - (27 + 292)) <= (5543 - 3651)) and v112.PowerWordRadiance:IsReady()) then
+					if (v23(v114.PowerWordRadianceFocus, nil, v123) or ((2560 - 552) > (9301 - 7083))) then
+						return "power_word_radiance_instant heal_cooldown";
+					end
+				elseif (((746 - 367) <= (7897 - 3750)) and v112.Evangelism:IsReady()) then
+					if (v23(v112.Evangelism) or ((4653 - (43 + 96)) <= (4115 - 3106))) then
+						return "evangelism heal";
 					end
 				end
-				v167 = 361 - (237 + 121);
 			end
-			if (((4529 - (525 + 372)) > (6441 - 3043)) and ((9 - 6) == v167)) then
-				if (((4224 - (96 + 46)) <= (5694 - (643 + 134))) and not v112.Rapture:IsReady() and v12:BuffDown(v112.Rapture)) then
-					if (((1745 + 3087) >= (3323 - 1937)) and (v168 > (37 - 27))) then
-						if (((132 + 5) == (268 - 131)) and v112.PowerWordRadiance:IsReady()) then
-							if (v23(v114.PowerWordRadianceFocus, nil, v123) or ((3209 - 1639) >= (5051 - (316 + 403)))) then
-								return "power_word_radiance_instant heal_cooldown";
-							end
-						elseif (v112.Evangelism:IsReady() or ((2702 + 1362) <= (5001 - 3182))) then
-							if (v23(v112.Evangelism) or ((1802 + 3184) < (3963 - 2389))) then
-								return "evangelism heal";
-							end
-						end
-					end
-					if (((3137 + 1289) > (56 + 116)) and v112.Renew:IsReady()) then
-						if (((2030 - 1444) > (2173 - 1718)) and v23(v114.RenewFocus)) then
-							return "renew heal";
-						end
-					end
+			if (v112.Renew:IsReady() or ((7903 - 4407) == (990 + 202))) then
+				if (v23(v114.RenewFocus) or ((59 + 149) == (5848 - 2889))) then
+					return "renew heal";
 				end
-				if (((1715 - 889) == (48 + 778)) and (v14:BuffDown(v112.AtonementBuff) or (v14:BuffRemains(v112.AtonementBuff) < (11 - 5)))) then
-					if (v112.PowerWordShield:IsReady() or ((197 + 3822) > (13065 - 8624))) then
-						if (((2034 - (12 + 5)) < (16549 - 12288)) and v23(v114.PowerWordShieldFocus)) then
+			end
+		end
+		if (((1640 + 2637) >= (2460 - 1147)) and (v14:BuffDown(v112.AtonementBuff) or (v14:BuffRemains(v112.AtonementBuff) < (2 + 4)))) then
+			local v189 = 0 + 0;
+			while true do
+				if (((4338 - (1414 + 337)) < (5114 - (1642 + 298))) and (v189 == (0 - 0))) then
+					if (v112.PowerWordShield:IsReady() or ((11852 - 7732) <= (6522 - 4324))) then
+						if (v23(v114.PowerWordShieldFocus) or ((526 + 1070) == (668 + 190))) then
 							return "power_word_shield heal";
 						end
 					end
-					if (((10061 - 5345) > (170 - 90)) and v112.Rapture:IsReady()) then
-						if (v23(v114.RaptureFocus) or ((8696 - 5189) == (665 + 2607))) then
+					if (((4192 - (357 + 615)) == (2261 + 959)) and v112.Rapture:IsReady()) then
+						if (v23(v114.RaptureFocus) or ((3439 - 2037) > (3102 + 518))) then
 							return "rapture heal";
 						end
 					end
+					break;
 				end
-				break;
-			end
-			if (((1974 - (1656 + 317)) == v167) or ((781 + 95) >= (2465 + 610))) then
-				v125 = not v112.HarshDiscipline:IsAvailable() or (v12:BuffStack(v112.HarshDisciplineBuff) == (7 - 4));
-				ShouldReturn = v134.FocusUnitRefreshableBuff(v112.AtonementBuff, 29 - 23, nil, nil, 374 - (5 + 349));
-				v167 = 9 - 7;
 			end
 		end
 	end
 	local function v152()
-		v28 = EpicSettings.Settings['UseRacials'];
-		v29 = EpicSettings.Settings['UseHealingPotion'];
-		v30 = EpicSettings.Settings['HealingPotionName'] or "";
-		v31 = EpicSettings.Settings['HealingPotionHP'] or (1271 - (266 + 1005));
-		v32 = EpicSettings.Settings['UsePowerWordFortitude'];
-		v33 = EpicSettings.Settings['UseAngelicFeather'];
-		v34 = EpicSettings.Settings['UseBodyAndSoul'];
-		v35 = EpicSettings.Settings['MovementDelay'] or (0 + 0);
-		v36 = EpicSettings.Settings['DispelDebuffs'];
-		v37 = EpicSettings.Settings['DispelBuffs'];
-		v38 = EpicSettings.Settings['HandleAfflicted'];
-		v39 = EpicSettings.Settings['HandleIncorporeal'];
-		v40 = EpicSettings.Settings['InterruptWithStun'];
-		v41 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-		v42 = EpicSettings.Settings['InterruptThreshold'];
-		v43 = EpicSettings.Settings['UseDesperatePrayer'];
-		v44 = EpicSettings.Settings['DesperatePrayerHP'] or (0 - 0);
-		v45 = EpicSettings.Settings['UseFade'];
-		v46 = EpicSettings.Settings['FadeHP'] or (0 - 0);
-		v47 = EpicSettings.Settings['UseHealthstone'];
-		v48 = EpicSettings.Settings['HealthstoneHP'] or (1696 - (561 + 1135));
-		v49 = EpicSettings.Settings['PowerInfusionUsage'] or "";
-		v50 = EpicSettings.Settings['PowerInfusionTarget'] or "";
-		v51 = EpicSettings.Settings['PowerInfusionHP'] or (0 - 0);
-		v52 = EpicSettings.Settings['PowerInfusionGroup'] or (0 - 0);
-		v53 = EpicSettings.Settings['PIName1'] or "";
-		v54 = EpicSettings.Settings['PIName2'] or "";
-		v55 = EpicSettings.Settings['PIName3'] or "";
+		local v168 = 0 - 0;
+		while true do
+			if (((2059 + 515) == (175 + 2399)) and (v168 == (4 + 1))) then
+				v48 = EpicSettings.Settings['HealthstoneHP'] or (1301 - (384 + 917));
+				v49 = EpicSettings.Settings['PowerInfusionUsage'] or "";
+				v50 = EpicSettings.Settings['PowerInfusionTarget'] or "";
+				v51 = EpicSettings.Settings['PowerInfusionHP'] or (697 - (128 + 569));
+				v168 = 1549 - (1407 + 136);
+			end
+			if (((3685 - (687 + 1200)) < (4467 - (556 + 1154))) and ((10 - 7) == v168)) then
+				v40 = EpicSettings.Settings['InterruptWithStun'];
+				v41 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v42 = EpicSettings.Settings['InterruptThreshold'];
+				v43 = EpicSettings.Settings['UseDesperatePrayer'];
+				v168 = 99 - (9 + 86);
+			end
+			if ((v168 == (421 - (275 + 146))) or ((62 + 315) > (2668 - (29 + 35)))) then
+				v28 = EpicSettings.Settings['UseRacials'];
+				v29 = EpicSettings.Settings['UseHealingPotion'];
+				v30 = EpicSettings.Settings['HealingPotionName'] or "";
+				v31 = EpicSettings.Settings['HealingPotionHP'] or (0 - 0);
+				v168 = 2 - 1;
+			end
+			if (((2507 - 1939) < (594 + 317)) and (v168 == (1016 - (53 + 959)))) then
+				v44 = EpicSettings.Settings['DesperatePrayerHP'] or (408 - (312 + 96));
+				v45 = EpicSettings.Settings['UseFade'];
+				v46 = EpicSettings.Settings['FadeHP'] or (0 - 0);
+				v47 = EpicSettings.Settings['UseHealthstone'];
+				v168 = 290 - (147 + 138);
+			end
+			if (((4184 - (813 + 86)) < (3821 + 407)) and (v168 == (3 - 1))) then
+				v36 = EpicSettings.Settings['DispelDebuffs'];
+				v37 = EpicSettings.Settings['DispelBuffs'];
+				v38 = EpicSettings.Settings['HandleCharredTreant'];
+				v39 = EpicSettings.Settings['HandleCharredBrambles'];
+				v168 = 495 - (18 + 474);
+			end
+			if (((1322 + 2594) > (10862 - 7534)) and (v168 == (1087 - (860 + 226)))) then
+				v32 = EpicSettings.Settings['UsePowerWordFortitude'];
+				v33 = EpicSettings.Settings['UseAngelicFeather'];
+				v34 = EpicSettings.Settings['UseBodyAndSoul'];
+				v35 = EpicSettings.Settings['MovementDelay'] or (303 - (121 + 182));
+				v168 = 1 + 1;
+			end
+			if (((3740 - (988 + 252)) < (434 + 3405)) and (v168 == (2 + 4))) then
+				v52 = EpicSettings.Settings['PowerInfusionGroup'] or (1970 - (49 + 1921));
+				v53 = EpicSettings.Settings['PIName1'] or "";
+				v54 = EpicSettings.Settings['PIName2'] or "";
+				v55 = EpicSettings.Settings['PIName3'] or "";
+				break;
+			end
+		end
 	end
 	local function v153()
-		v60 = EpicSettings.Settings['PenanceHP'] or (1066 - (507 + 559));
-		v61 = EpicSettings.Settings['AtonementHP'] or (0 - 0);
-		v62 = EpicSettings.Settings['AtonementGroup'] or (0 - 0);
-		v63 = EpicSettings.Settings['UsePowerWordRadiance'];
-		v64 = EpicSettings.Settings['PowerWordRadianceHP'] or (388 - (212 + 176));
-		v65 = EpicSettings.Settings['PowerWordRadianceGroup'] or (905 - (250 + 655));
-		v66 = EpicSettings.Settings['UsePainSuppression'];
-		v67 = EpicSettings.Settings['PainSuppressionHP'] or (0 - 0);
-		v68 = EpicSettings.Settings['PainSuppressionUsage'] or "";
-		v69 = EpicSettings.Settings['UsePowerWordLife'];
-		v70 = EpicSettings.Settings['PowerWordLifeHP'] or (0 - 0);
-		v71 = EpicSettings.Settings['UseLuminousBarrier'];
-		v72 = EpicSettings.Settings['LuminousBarrierHP'] or (0 - 0);
-		v73 = EpicSettings.Settings['LuminousBarrierGroup'] or (1956 - (1869 + 87));
-		v56 = EpicSettings.Settings['UseHalo'];
-		v57 = EpicSettings.Settings['HaloHP'] or (0 - 0);
-		v58 = EpicSettings.Settings['HaloGroup'] or (1901 - (484 + 1417));
-		v59 = EpicSettings.Settings['UseDivineStar'];
-		v74 = EpicSettings.Settings['UseEvangelism'];
-		v75 = EpicSettings.Settings['EvangelismHP'] or (0 - 0);
-		v76 = EpicSettings.Settings['EvangelismGroup'] or (0 - 0);
-		v77 = EpicSettings.Settings['FlashHealHP'] or (773 - (48 + 725));
-		v78 = EpicSettings.Settings['FlashHealSurgeHP'] or (0 - 0);
-		v79 = EpicSettings.Settings['FlashHealBindingHP'] or (0 - 0);
-		v80 = EpicSettings.Settings['UseRapture'];
-		v81 = EpicSettings.Settings['RaptureHP'] or (0 + 0);
-		v82 = EpicSettings.Settings['RaptureGroup'] or (0 - 0);
-		v83 = EpicSettings.Settings['RenewHP'] or (0 + 0);
-		v84 = EpicSettings.Settings['PowerWordShieldHP'] or (0 + 0);
-		v85 = EpicSettings.Settings['PowerWordShieldTankHP'] or (853 - (152 + 701));
-		v86 = EpicSettings.Settings['AtonementSpreadRefresh'] or (1311 - (430 + 881));
-		v87 = EpicSettings.Settings['AtonementSpreadPartyGroup'] or (0 + 0);
-		v88 = EpicSettings.Settings['AtonementSpreadRaidGroup'] or (895 - (557 + 338));
-		v89 = EpicSettings.Settings['UseUltimatePenitence'];
-		v90 = EpicSettings.Settings['UltimatePenitenceHP'] or (0 + 0);
-		v91 = EpicSettings.Settings['UltimatePenitenceGroup'] or (0 - 0);
-		v92 = EpicSettings.Settings['MindbenderHP'] or (0 - 0);
-		v93 = EpicSettings.Settings['MindbenderGroup'] or (0 - 0);
+		local v169 = 890 - (223 + 667);
+		while true do
+			if (((559 - (51 + 1)) == (872 - 365)) and ((10 - 5) == v169)) then
+				v81 = EpicSettings.Settings['RaptureHP'] or (1125 - (146 + 979));
+				v82 = EpicSettings.Settings['RaptureGroup'] or (0 + 0);
+				v83 = EpicSettings.Settings['RenewHP'] or (605 - (311 + 294));
+				v84 = EpicSettings.Settings['PowerWordShieldHP'] or (0 - 0);
+				v85 = EpicSettings.Settings['PowerWordShieldTankHP'] or (0 + 0);
+				v169 = 1449 - (496 + 947);
+			end
+			if (((1598 - (1233 + 125)) <= (1285 + 1880)) and ((6 + 0) == v169)) then
+				v86 = EpicSettings.Settings['AtonementSpreadRefresh'] or (0 + 0);
+				v87 = EpicSettings.Settings['AtonementSpreadPartyGroup'] or (1645 - (963 + 682));
+				v88 = EpicSettings.Settings['AtonementSpreadRaidGroup'] or (0 + 0);
+				v89 = EpicSettings.Settings['UseUltimatePenitence'];
+				v90 = EpicSettings.Settings['UltimatePenitenceHP'] or (1504 - (504 + 1000));
+				v169 = 5 + 2;
+			end
+			if (((760 + 74) >= (76 + 729)) and (v169 == (0 - 0))) then
+				v60 = EpicSettings.Settings['PenanceHP'] or (0 + 0);
+				v61 = EpicSettings.Settings['AtonementHP'] or (0 + 0);
+				v62 = EpicSettings.Settings['AtonementGroup'] or (182 - (156 + 26));
+				v63 = EpicSettings.Settings['UsePowerWordRadiance'];
+				v64 = EpicSettings.Settings['PowerWordRadianceHP'] or (0 + 0);
+				v169 = 1 - 0;
+			end
+			if ((v169 == (167 - (149 + 15))) or ((4772 - (890 + 70)) < (2433 - (39 + 78)))) then
+				v57 = EpicSettings.Settings['HaloHP'] or (482 - (14 + 468));
+				v58 = EpicSettings.Settings['HaloGroup'] or (0 - 0);
+				v59 = EpicSettings.Settings['UseDivineStar'];
+				v74 = EpicSettings.Settings['UseEvangelism'];
+				v75 = EpicSettings.Settings['EvangelismHP'] or (0 - 0);
+				v169 = 3 + 1;
+			end
+			if ((v169 == (2 + 0)) or ((564 + 2088) <= (693 + 840))) then
+				v70 = EpicSettings.Settings['PowerWordLifeHP'] or (0 + 0);
+				v71 = EpicSettings.Settings['UseLuminousBarrier'];
+				v72 = EpicSettings.Settings['LuminousBarrierHP'] or (0 - 0);
+				v73 = EpicSettings.Settings['LuminousBarrierGroup'] or (0 + 0);
+				v56 = EpicSettings.Settings['UseHalo'];
+				v169 = 10 - 7;
+			end
+			if (((1 + 6) == v169) or ((3649 - (12 + 39)) < (1359 + 101))) then
+				v91 = EpicSettings.Settings['UltimatePenitenceGroup'] or (0 - 0);
+				v92 = EpicSettings.Settings['MindbenderHP'] or (0 - 0);
+				v93 = EpicSettings.Settings['MindbenderGroup'] or (0 + 0);
+				break;
+			end
+			if ((v169 == (1 + 0)) or ((10437 - 6321) < (794 + 398))) then
+				v65 = EpicSettings.Settings['PowerWordRadianceGroup'] or (0 - 0);
+				v66 = EpicSettings.Settings['UsePainSuppression'];
+				v67 = EpicSettings.Settings['PainSuppressionHP'] or (1710 - (1596 + 114));
+				v68 = EpicSettings.Settings['PainSuppressionUsage'] or "";
+				v69 = EpicSettings.Settings['UsePowerWordLife'];
+				v169 = 4 - 2;
+			end
+			if (((717 - (164 + 549)) == v169) or ((4815 - (1059 + 379)) <= (1120 - 217))) then
+				v76 = EpicSettings.Settings['EvangelismGroup'] or (0 + 0);
+				v77 = EpicSettings.Settings['FlashHealHP'] or (0 + 0);
+				v78 = EpicSettings.Settings['FlashHealSurgeHP'] or (392 - (145 + 247));
+				v79 = EpicSettings.Settings['FlashHealBindingHP'] or (0 + 0);
+				v80 = EpicSettings.Settings['UseRapture'];
+				v169 = 3 + 2;
+			end
+		end
 	end
 	local function v154()
-		local v193 = 0 - 0;
-		local v194;
-		local v195;
-		local v196;
-		local v197;
-		local v198;
+		local v170 = 0 - 0;
+		local v171;
+		local v172;
+		local v173;
+		local v174;
+		local v175;
 		while true do
-			if (((5153 - (499 + 302)) > (3420 - (39 + 827))) and (v193 == (10 - 6))) then
-				v119 = v12:GetEnemiesInMeleeRange(53 - 29);
-				if (true or ((17499 - 13093) < (6206 - 2163))) then
-					local v219 = 0 + 0;
+			if (((763 + 3213) >= (379 + 60)) and ((1 - 0) == v170)) then
+				v97 = EpicSettings.Toggles['ramp'];
+				v98 = EpicSettings.Toggles['spread'];
+				v171 = v98;
+				v172 = false;
+				v173 = false;
+				v170 = 722 - (254 + 466);
+			end
+			if (((4312 - (544 + 16)) == (11923 - 8171)) and (v170 == (633 - (294 + 334)))) then
+				if (((4299 - (236 + 17)) > (1162 + 1533)) and true) then
+					v118 = #v117;
+					v120 = #v119;
+				else
+					local v224 = 0 + 0;
 					while true do
-						if (((0 - 0) == v219) or ((303 + 1586) >= (5353 - 1970))) then
-							v118 = #v117;
-							v120 = #v119;
+						if ((v224 == (0 - 0)) or ((16783 - 13238) == (1647 + 1550))) then
+							v120 = 1 + 0;
+							v118 = 795 - (413 + 381);
 							break;
 						end
 					end
-				else
-					v120 = 105 - (103 + 1);
-					v118 = 555 - (475 + 79);
 				end
 				v131 = ((v12:BuffUp(v112.ShadowCovenantBuff)) and v112.DarkReprimand) or v112.Penance;
 				v132 = ((v12:BuffUp(v112.ShadowCovenantBuff)) and v112.DivineStarShadow) or v112.DivineStar;
 				v133 = ((v12:BuffUp(v112.ShadowCovenantBuff)) and v112.HaloShadow) or v112.Halo;
 				v123 = v12:BuffDown(v112.RadiantProvidenceBuff);
-				v193 = 10 - 5;
+				v170 = 1 + 5;
 			end
-			if (((6054 - 4162) <= (354 + 2380)) and (v193 == (2 + 0))) then
-				if (((3426 - (1395 + 108)) < (6454 - 4236)) and v97) then
-					for v221, v222 in pairs(RampRaptureTimes) do
-						for v229, v230 in pairs(v222) do
-							if (((3377 - (7 + 1197)) > (166 + 213)) and ((v112.Rapture:CooldownRemains() + v9.CombatTime()) < v230)) then
-								if ((((v230 - v9.CombatTime()) < (8 + 14)) and ((v230 - v9.CombatTime()) > (319 - (27 + 292)))) or ((7592 - 5001) == (4346 - 937))) then
-									v101 = true;
-								end
-							end
-						end
-					end
-					for v223, v224 in pairs(RampEvangelismTimes) do
-						for v231, v232 in pairs(v224) do
-							if (((18930 - 14416) > (6555 - 3231)) and ((v112.Evangelism:CooldownRemains() + v9.CombatTime()) < v232)) then
-								if ((((v232 - v9.CombatTime()) < (41 - 19)) and ((v232 - v9.CombatTime()) > (139 - (43 + 96)))) or ((848 - 640) >= (10915 - 6087))) then
-									v101 = true;
-								end
-							end
-						end
-					end
-					for v225, v226 in pairs(RampBothTimes) do
-						for v233, v234 in pairs(v226) do
-							if ((((v112.Rapture:CooldownRemains() + v9.CombatTime()) < v234) and ((v112.Evangelism:CooldownRemains() + v9.CombatTime()) < v234)) or ((1314 + 269) > (1008 + 2559))) then
-								if ((((v234 - v9.CombatTime()) < (42 - 20)) and ((v234 - v9.CombatTime()) > (0 + 0))) or ((2460 - 1147) == (250 + 544))) then
-									v101 = true;
-								end
-							end
-						end
-					end
-				end
-				v198 = v88;
-				if (((233 + 2941) > (4653 - (1414 + 337))) and not v12:IsInRaid() and v12:IsInParty()) then
-					v198 = v87;
-				end
-				if (((6060 - (1642 + 298)) <= (11105 - 6845)) and not v12:IsInRaid() and not v12:IsInParty()) then
-					v198 = 2 - 1;
-				end
-				if ((v194 and (v134.FriendlyUnitsWithBuffCount(v112.AtonementBuff, false, false) >= v198)) or ((2620 - 1737) > (1573 + 3205))) then
-					v194 = false;
-				end
-				if (v97 or ((2817 + 803) >= (5863 - (357 + 615)))) then
-					local v220 = 0 + 0;
+			if (((5091 - 2697) > (968 - 595)) and (v170 == (1970 - (582 + 1388)))) then
+				v152();
+				v153();
+				v94 = EpicSettings.Toggles['ooc'];
+				v95 = EpicSettings.Toggles['cds'];
+				v96 = EpicSettings.Toggles['dispel'];
+				v170 = 1 - 0;
+			end
+			if (((2975 + 1180) <= (4596 - (326 + 38))) and (v170 == (5 - 3))) then
+				v174 = false;
+				v101 = false;
+				if (v97 or ((5111 - 1530) == (4093 - (47 + 573)))) then
+					local v225 = 0 + 0;
 					while true do
-						if (((10447 - 6189) > (803 + 134)) and (v220 == (0 - 0))) then
-							SetCVar("RampCVar", 0 + 0);
-							if ((v112.Rapture:IsReady() and not v195) or ((331 + 4538) < (570 + 336))) then
-								for v243, v244 in pairs(RampRaptureTimes) do
-									if (v134.IsItTimeToRamp(v243, v244, 1306 - (384 + 917)) or ((1922 - (128 + 569)) > (5771 - (1407 + 136)))) then
-										local v250 = 1887 - (687 + 1200);
-										while true do
-											if (((5038 - (556 + 1154)) > (7873 - 5635)) and (v250 == (95 - (9 + 86)))) then
-												v195 = true;
-												SetCVar("RampCVar", 422 - (275 + 146));
-												v250 = 1 + 0;
-											end
-											if (((3903 - (29 + 35)) > (6226 - 4821)) and (v250 == (2 - 1))) then
-												v100 = v9.CombatTime();
-												break;
-											end
+						if (((21214 - 16219) > (5433 - 2085)) and ((1665 - (1269 + 395)) == v225)) then
+							for v232, v233 in pairs(RampBothTimes) do
+								for v244, v245 in pairs(v233) do
+									if ((((v112.Rapture:CooldownRemains() + v9.CombatTime()) < v245) and ((v112.Evangelism:CooldownRemains() + v9.CombatTime()) < v245)) or ((1246 - (76 + 416)) > (4167 - (319 + 124)))) then
+										if (((495 - 278) >= (1064 - (564 + 443))) and ((v245 - v9.CombatTime()) < (60 - 38)) and ((v245 - v9.CombatTime()) > (458 - (337 + 121)))) then
+											v101 = true;
 										end
 									end
 								end
 							end
-							v220 = 4 - 3;
+							break;
 						end
-						if ((v220 == (1 + 0)) or ((2305 - (53 + 959)) <= (915 - (312 + 96)))) then
-							if ((v112.Evangelism:IsReady() and not v196) or ((5026 - 2130) < (1090 - (147 + 138)))) then
-								for v245, v246 in pairs(RampEvangelismTimes) do
-									if (((3215 - (813 + 86)) == (2093 + 223)) and v134.IsItTimeToRamp(v245, v246, 8 - 3)) then
-										v196 = true;
-										SetCVar("RampCVar", 494 - (18 + 474));
+						if ((v225 == (0 - 0)) or ((6895 - 4825) >= (5948 - (1261 + 650)))) then
+							for v234, v235 in pairs(RampRaptureTimes) do
+								for v246, v247 in pairs(v235) do
+									if (((1145 + 1560) == (4310 - 1605)) and ((v112.Rapture:CooldownRemains() + v9.CombatTime()) < v247)) then
+										if (((1878 - (772 + 1045)) == (9 + 52)) and ((v247 - v9.CombatTime()) < (166 - (102 + 42))) and ((v247 - v9.CombatTime()) > (1844 - (1524 + 320)))) then
+											v101 = true;
+										end
+									end
+								end
+							end
+							for v236, v237 in pairs(RampEvangelismTimes) do
+								for v248, v249 in pairs(v237) do
+									if (((v112.Evangelism:CooldownRemains() + v9.CombatTime()) < v249) or ((1969 - (1049 + 221)) >= (1452 - (18 + 138)))) then
+										if ((((v249 - v9.CombatTime()) < (53 - 31)) and ((v249 - v9.CombatTime()) > (1102 - (67 + 1035)))) or ((2131 - (136 + 212)) >= (15365 - 11749))) then
+											v101 = true;
+										end
+									end
+								end
+							end
+							v225 = 1 + 0;
+						end
+					end
+				end
+				v175 = v88;
+				if ((not v12:IsInRaid() and v12:IsInParty()) or ((3608 + 305) > (6131 - (240 + 1364)))) then
+					v175 = v87;
+				end
+				v170 = 1085 - (1050 + 32);
+			end
+			if (((15624 - 11248) > (484 + 333)) and ((1058 - (331 + 724)) == v170)) then
+				if (((393 + 4468) > (1468 - (269 + 375))) and not v12:IsInRaid() and not v12:IsInParty()) then
+					v175 = 726 - (267 + 458);
+				end
+				if ((v171 and (v134.FriendlyUnitsWithBuffCount(v112.AtonementBuff, false, false) >= v175)) or ((431 + 952) >= (4097 - 1966))) then
+					v171 = false;
+				end
+				if (v97 or ((2694 - (667 + 151)) >= (4038 - (1410 + 87)))) then
+					local v226 = 1897 - (1504 + 393);
+					while true do
+						if (((4816 - 3034) <= (9785 - 6013)) and (v226 == (796 - (461 + 335)))) then
+							SetCVar("RampCVar", 0 + 0);
+							if ((v112.Rapture:IsReady() and not v172) or ((6461 - (1730 + 31)) < (2480 - (728 + 939)))) then
+								for v250, v251 in pairs(RampRaptureTimes) do
+									if (((11329 - 8130) < (8215 - 4165)) and v134.IsItTimeToRamp(v250, v251, 11 - 6)) then
+										v172 = true;
+										SetCVar("RampCVar", 1069 - (138 + 930));
 										v100 = v9.CombatTime();
 									end
 								end
 							end
-							if ((v112.Evangelism:IsReady() and v112.Rapture:IsReady() and not v197) or ((868 + 1702) == (5003 - 3470))) then
-								for v247, v248 in pairs(RampBothTimes) do
-									if (v134.IsItTimeToRamp(v247, v248, 1091 - (860 + 226)) or ((1186 - (121 + 182)) == (180 + 1280))) then
-										v197 = true;
-										SetCVar("RampCVar", 1243 - (988 + 252));
+							v226 = 1 + 0;
+						end
+						if ((v226 == (1 + 0)) or ((4244 + 707) < (18088 - 13658))) then
+							if (((1862 - (459 + 1307)) == (1966 - (474 + 1396))) and v112.Evangelism:IsReady() and not v173) then
+								for v252, v253 in pairs(RampEvangelismTimes) do
+									if (v134.IsItTimeToRamp(v252, v253, 8 - 3) or ((2567 + 172) > (14 + 3994))) then
+										v173 = true;
+										SetCVar("RampCVar", 5 - 3);
+										v100 = v9.CombatTime();
+									end
+								end
+							end
+							if ((v112.Evangelism:IsReady() and v112.Rapture:IsReady() and not v174) or ((3 + 20) == (3785 - 2651))) then
+								for v254, v255 in pairs(RampBothTimes) do
+									if (v134.IsItTimeToRamp(v254, v255, 21 - 16) or ((3284 - (562 + 29)) >= (3505 + 606))) then
+										v174 = true;
+										SetCVar("RampCVar", 1422 - (374 + 1045));
 										v100 = v9.CombatTime();
 									end
 								end
@@ -1051,96 +1120,111 @@ v0["Epix_Priest_Discipline.lua"] = function(...)
 						end
 					end
 				end
-				v193 = 1 + 2;
+				if (v12:IsDeadOrGhost() or ((3416 + 900) <= (6663 - 4517))) then
+					return;
+				end
+				if (v12:IsMounted() or ((4184 - (448 + 190)) <= (907 + 1902))) then
+					return;
+				end
+				v170 = 2 + 2;
 			end
-			if ((v193 == (1 + 2)) or ((6589 - (49 + 1921)) <= (1889 - (223 + 667)))) then
-				if (v12:IsDeadOrGhost() or ((3462 - (51 + 1)) > (7084 - 2968))) then
-					return;
-				end
-				if (v12:IsMounted() or ((1933 - 1030) >= (4184 - (146 + 979)))) then
-					return;
-				end
-				if (not v12:IsMoving() or ((1123 + 2853) < (3462 - (311 + 294)))) then
+			if (((3196 + 1708) > (8327 - 6161)) and (v170 == (12 - 8))) then
+				if (((1603 - (1307 + 187)) >= (356 - 266)) and not v12:IsMoving()) then
 					v99 = GetTime();
 				end
-				if (((13748 - 8818) > (978 + 1329)) and not v194) then
-					if (v12:AffectingCombat() or v94 or v36 or ((5489 - (496 + 947)) < (2649 - (1233 + 125)))) then
-						local v235 = 0 + 0;
-						local v236;
+				if (((11655 - 6677) > (8907 - 6002)) and not v171) then
+					if (v12:AffectingCombat() or v94 or v36 or ((3709 - (232 + 451)) <= (2178 + 102))) then
+						local v230 = 0 + 0;
+						local v231;
 						while true do
-							if ((v235 == (1 + 0)) or ((806 + 3435) == (5190 - (963 + 682)))) then
-								if (ShouldReturn or ((3379 + 669) > (5736 - (504 + 1000)))) then
+							if ((v230 == (565 - (510 + 54))) or ((3330 - 1677) <= (1144 - (13 + 23)))) then
+								if (((5670 - 2761) > (3748 - 1139)) and ShouldReturn) then
 									return ShouldReturn;
 								end
 								break;
 							end
-							if ((v235 == (0 + 0)) or ((1594 + 156) >= (328 + 3145))) then
-								v236 = v36 and v112.Purify:IsReady();
-								ShouldReturn = v134.FocusUnit(v236, nil, nil, nil, 29 - 9);
-								v235 = 1 + 0;
+							if (((1375 - 618) > (1282 - (830 + 258))) and (v230 == (0 - 0))) then
+								v231 = v36 and v112.Purify:IsReady();
+								ShouldReturn = v134.FocusUnit(v231, nil, nil, nil, 13 + 7);
+								v230 = 1 + 0;
 							end
 						end
 					end
 				end
-				Enemies40y = v12:GetEnemiesInRange(24 + 16);
-				v117 = v12:GetEnemiesInMeleeRange(194 - (156 + 26));
-				v193 = 3 + 1;
+				Enemies40y = v12:GetEnemiesInRange(1481 - (860 + 581));
+				v117 = v12:GetEnemiesInMeleeRange(44 - 32);
+				v119 = v12:GetEnemiesInMeleeRange(20 + 4);
+				v170 = 246 - (237 + 4);
 			end
-			if (((4952 - 1786) == (3330 - (149 + 15))) and (v193 == (960 - (890 + 70)))) then
-				v152();
-				v153();
-				v94 = EpicSettings.Toggles['ooc'];
-				v95 = EpicSettings.Toggles['cds'];
-				v96 = EpicSettings.Toggles['dispel'];
-				v97 = EpicSettings.Toggles['ramp'];
-				v193 = 118 - (39 + 78);
-			end
-			if (((2245 - (14 + 468)) < (8188 - 4464)) and (v193 == (13 - 8))) then
+			if ((v170 == (13 - 7)) or ((78 - 47) >= (2650 - 1252))) then
 				v124 = v12:BuffDown(v112.SurgeofLight);
-				if (((30 + 27) <= (1636 + 1087)) and not v12:IsChanneling()) then
-					if (v12:AffectingCombat() or ((440 + 1630) == (201 + 242))) then
-						if (v194 or ((709 + 1996) == (2665 - 1272))) then
-							local v237 = 0 + 0;
+				if (((2616 + 580) <= (2799 + 2073)) and v38) then
+					local v227 = 0 - 0;
+					while true do
+						if (((1428 + 1898) == (1810 + 1516)) and (v227 == (1427 - (85 + 1341)))) then
+							ShouldReturn = v134.HandleCharredTreant(v112.FlashHeal, v114.FlashHealMouseover, 68 - 28, true);
+							if (((4046 - 2613) <= (4250 - (45 + 327))) and ShouldReturn) then
+								return ShouldReturn;
+							end
+							break;
+						end
+						if ((v227 == (0 - 0)) or ((2085 - (444 + 58)) == (754 + 981))) then
+							ShouldReturn = v134.HandleCharredTreant(v112.Renew, v114.RenewMouseover, 7 + 33);
+							if (ShouldReturn or ((1458 + 1523) == (6810 - 4460))) then
+								return ShouldReturn;
+							end
+							v227 = 1733 - (64 + 1668);
+						end
+					end
+				end
+				if (v39 or ((6439 - (1227 + 746)) <= (1515 - 1022))) then
+					ShouldReturn = v134.HandleCharredBrambles(v112.Renew, v114.RenewMouseover, 74 - 34);
+					if (ShouldReturn or ((3041 - (415 + 79)) <= (52 + 1935))) then
+						return ShouldReturn;
+					end
+					ShouldReturn = v134.HandleCharredBrambles(v112.FlashHeal, v114.FlashHealMouseover, 531 - (142 + 349), true);
+					if (((1269 + 1692) > (3767 - 1027)) and ShouldReturn) then
+						return ShouldReturn;
+					end
+				end
+				if (((1837 + 1859) >= (2545 + 1067)) and not v12:IsChanneling()) then
+					if (v12:AffectingCombat() or ((8088 - 5118) == (3742 - (1710 + 154)))) then
+						if (v171 or ((4011 - (200 + 118)) < (784 + 1193))) then
+							local v238 = 0 - 0;
 							while true do
-								if (((0 - 0) == v237) or ((117 + 4484) < (112 - (12 + 39)))) then
+								if ((v238 == (0 - 0)) or ((827 + 103) > (2079 + 22))) then
 									ShouldReturn = v148();
-									if (ShouldReturn or ((1294 + 96) >= (14684 - 9940))) then
+									if (((2229 + 1924) > (493 + 2593)) and ShouldReturn) then
 										return ShouldReturn;
 									end
 									break;
 								end
 							end
 						end
-						if (v195 or ((7133 - 5130) > (1137 + 2697))) then
-							local v238 = 0 + 0;
-							while true do
-								if ((v238 == (0 - 0)) or ((104 + 52) > (18910 - 14997))) then
-									ShouldReturn = v149();
-									if (((1905 - (1596 + 114)) == (508 - 313)) and ShouldReturn) then
-										return ShouldReturn;
-									end
-									break;
-								end
+						if (v172 or ((10082 - 5428) <= (5300 - (363 + 887)))) then
+							ShouldReturn = v149();
+							if (ShouldReturn or ((4542 - 1940) < (7120 - 5624))) then
+								return ShouldReturn;
 							end
 						end
-						if (((3818 - (164 + 549)) >= (3234 - (1059 + 379))) and v196) then
-							local v239 = 0 - 0;
+						if (v173 or ((158 + 862) > (5353 - 3065))) then
+							local v239 = 0 + 0;
 							while true do
-								if (((2270 + 2109) >= (360 + 1771)) and (v239 == (392 - (145 + 247)))) then
+								if (((1992 - (674 + 990)) == (95 + 233)) and (v239 == (0 + 0))) then
 									ShouldReturn = v150();
-									if (((3155 + 689) >= (945 + 1098)) and ShouldReturn) then
+									if (((2394 - 883) < (4863 - (507 + 548))) and ShouldReturn) then
 										return ShouldReturn;
 									end
 									break;
 								end
 							end
 						end
-						if (v197 or ((9581 - 6349) <= (524 + 2207))) then
-							local v240 = 0 + 0;
+						if (v174 or ((3347 - (289 + 548)) > (6737 - (821 + 997)))) then
+							local v240 = 255 - (195 + 60);
 							while true do
-								if (((7964 - 3059) == (5625 - (254 + 466))) and (v240 == (560 - (544 + 16)))) then
+								if (((1281 + 3482) == (6264 - (251 + 1250))) and (v240 == (0 - 0))) then
 									ShouldReturn = v151();
-									if (ShouldReturn or ((13144 - 9008) >= (5039 - (294 + 334)))) then
+									if (((2843 + 1294) > (2880 - (809 + 223))) and ShouldReturn) then
 										return ShouldReturn;
 									end
 									break;
@@ -1148,51 +1232,63 @@ v0["Epix_Priest_Discipline.lua"] = function(...)
 							end
 						end
 						ShouldReturn = v146();
-						if (ShouldReturn or ((3211 - (236 + 17)) == (1732 + 2285))) then
+						if (((3554 - 1118) <= (9411 - 6277)) and ShouldReturn) then
 							return ShouldReturn;
 						end
-					elseif (((956 + 272) >= (3061 - 2248)) and v94) then
-						if (v194 or ((16357 - 12902) > (2086 + 1964))) then
-							local v249 = 0 + 0;
-							while true do
-								if (((1037 - (413 + 381)) == (11 + 232)) and (v249 == (0 - 0))) then
-									ShouldReturn = v148();
-									if (ShouldReturn or ((703 - 432) > (3542 - (582 + 1388)))) then
-										return ShouldReturn;
-									end
-									break;
+					elseif (((12309 - 8586) == (2742 + 981)) and v94) then
+						local v241 = 0 + 0;
+						while true do
+							if ((v241 == (619 - (14 + 603))) or ((4175 - (118 + 11)) >= (699 + 3617))) then
+								if (ShouldReturn or ((1673 + 335) < (5621 - 3692))) then
+									return ShouldReturn;
 								end
+								break;
 							end
-						end
-						ShouldReturn = v147();
-						if (((4666 - 1927) < (2358 + 935)) and ShouldReturn) then
-							return ShouldReturn;
-						end
-						ShouldReturn = v145();
-						if (ShouldReturn or ((4306 - (326 + 38)) < (3354 - 2220))) then
-							return ShouldReturn;
+							if (((3333 - (551 + 398)) > (1122 + 653)) and (v241 == (0 + 0))) then
+								if (v171 or ((3693 + 850) <= (16274 - 11898))) then
+									local v256 = 0 - 0;
+									while true do
+										if (((236 + 492) == (2890 - 2162)) and (v256 == (0 + 0))) then
+											ShouldReturn = v148();
+											if (ShouldReturn or ((1165 - (40 + 49)) > (17787 - 13116))) then
+												return ShouldReturn;
+											end
+											break;
+										end
+									end
+								end
+								ShouldReturn = v147();
+								v241 = 491 - (99 + 391);
+							end
+							if (((1532 + 319) >= (1661 - 1283)) and (v241 == (2 - 1))) then
+								if (ShouldReturn or ((1898 + 50) >= (9146 - 5670))) then
+									return ShouldReturn;
+								end
+								ShouldReturn = v145();
+								v241 = 1606 - (1032 + 572);
+							end
 						end
 					end
 				end
 				break;
 			end
-			if (((1 - 0) == v193) or ((3313 - (47 + 573)) == (1753 + 3220))) then
-				v98 = EpicSettings.Toggles['spread'];
-				v194 = v98;
-				v195 = false;
-				v196 = false;
-				v197 = false;
-				v101 = false;
-				v193 = 8 - 6;
-			end
 		end
 	end
 	local function v155()
-		v135();
-		v20.Print("Discipline Priest by Epic BoomK");
-		EpicSettings.SetupVersion("Discipline Priest X v 10.2.00 By BoomK");
+		local v176 = 417 - (203 + 214);
+		while true do
+			if (((6611 - (568 + 1249)) >= (652 + 181)) and (v176 == (0 - 0))) then
+				v135();
+				v20.Print("Discipline Priest by Epic BoomK");
+				v176 = 3 - 2;
+			end
+			if (((5396 - (913 + 393)) == (11549 - 7459)) and (v176 == (1 - 0))) then
+				EpicSettings.SetupVersion("Discipline Priest X v 10.2.01 By BoomK");
+				break;
+			end
+		end
 	end
-	v20.SetAPL(415 - 159, v154, v155);
+	v20.SetAPL(666 - (269 + 141), v154, v155);
 end;
 return v0["Epix_Priest_Discipline.lua"]();
 

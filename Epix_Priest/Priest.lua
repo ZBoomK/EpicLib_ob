@@ -1,99 +1,94 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = v0[v4];
-	if (not v5 or ((1162 - (294 + 296)) > (8900 - 4414))) then
-		return v1(v4, ...);
+	local v5 = 0 + 0;
+	local v6;
+	while true do
+		if (((9891 - 6217) >= (935 - 419)) and (v5 == (1 + 0))) then
+			return v6(...);
+		end
+		if (((3312 - (915 + 82)) == (6555 - 4240)) and (v5 == (0 + 0))) then
+			v6 = v0[v4];
+			if (not v6 or ((4132 - 989) > (4935 - (1069 + 118)))) then
+				return v1(v4, ...);
+			end
+			v5 = 2 - 1;
+		end
 	end
-	return v5(...);
 end
 v0["Epix_Priest_Priest.lua"] = function(...)
-	local v6, v7 = ...;
-	local v8 = EpicDBC.DBC;
-	local v9 = EpicLib;
-	local v10 = EpicCache;
-	local v11 = v9.Unit;
-	local v12 = v11.Player;
-	local v13 = v11.Target;
-	local v14 = v11.Pet;
-	local v15 = v9.Spell;
-	local v16 = v9.MultiSpell;
-	local v17 = v9.Item;
-	local v18 = v9.Utils.MergeTableByKey;
-	local v19 = EpicLib;
-	local v20 = v19.Macro;
-	local v21 = UnitPower;
-	local v22 = Enum.PowerType.Insanity;
-	if (((4527 - 3123) == (1434 - (5 + 25))) and not v15.Priest) then
-		v15.Priest = {};
+	local v7, v8 = ...;
+	local v9 = EpicDBC.DBC;
+	local v10 = EpicLib;
+	local v11 = EpicCache;
+	local v12 = v10.Unit;
+	local v13 = v12.Player;
+	local v14 = v12.Target;
+	local v15 = v12.Pet;
+	local v16 = v10.Spell;
+	local v17 = v10.MultiSpell;
+	local v18 = v10.Item;
+	local v19 = v10.Utils.MergeTableByKey;
+	local v20 = EpicLib;
+	local v21 = v20.Macro;
+	local v22 = UnitPower;
+	local v23 = Enum.PowerType.Insanity;
+	if (not v16.Priest or ((3486 - 1892) > (379 + 1801))) then
+		v16.Priest = {};
 	end
-	v15.Priest.Commons = {AncestralCall=v15(275925 - (1069 + 118), nil, 2 - 1),ArcanePulse=v15(569538 - 309174, nil, 1 + 1),ArcaneTorrent=v15(413341 - 180708, nil, 3 + 0),BagofTricks=v15(313202 - (368 + 423), nil, 12 - 8),Berserking=v15(26315 - (10 + 8), nil, 19 - 14),BerserkingBuff=v15(26739 - (416 + 26), nil, 19 - 13),BloodFury=v15(8829 + 11743, nil, 12 - 5),BloodFuryBuff=v15(21010 - (145 + 293), nil, 438 - (44 + 386)),Fireblood=v15(266707 - (998 + 488), nil, 3 + 6),LightsJudgment=v15(209330 + 46317, nil, 782 - (201 + 571)),DesperatePrayer=v15(20374 - (116 + 1022), nil, 45 - 34),DispelMagic=v15(310 + 218, nil, 43 - 31),Fade=v15(2080 - 1494, nil, 872 - (814 + 45)),HolyNova=v15(325629 - 193472, nil, 1 + 13),MassDispel=v15(11440 + 20935, nil, 900 - (261 + 624)),MindBlast=v15(14379 - 6287, nil, 1096 - (1020 + 60)),MindSear=v15(49468 - (630 + 793), nil, 57 - 40),PowerInfusion=v15(47631 - 37571, nil, 8 + 10),PowerInfusionBuff=v15(34637 - 24577, nil, 1766 - (760 + 987)),PowerWordFortitude=v15(23475 - (1789 + 124), nil, 786 - (745 + 21)),PowerWordShield=v15(6 + 11, nil, 57 - 36),PsychicScream=v15(31858 - 23736, nil, 1 + 21),Purify=v15(414 + 113, nil, 1078 - (87 + 968)),ImprovedPurify=v15(1719539 - 1328907, nil, 22 + 2),ShadowWordDeath=v15(73193 - 40814, nil, 1438 - (447 + 966)),ShadowWordPain=v15(1612 - 1023, nil, 1843 - (1703 + 114)),ShadowWordPainDebuff=v15(1290 - (376 + 325), nil, 43 - 16),Smite=v15(1799 - 1214, nil, 9 + 19),Resurrection=v15(4417 - 2411, nil, 43 - (9 + 5)),Mindgames=v15(376277 - (85 + 291), nil, 1295 - (243 + 1022)),Shadowfiend=v15(131023 - 96590, nil, 26 + 5),ShackleUndead=v15(10664 - (1123 + 57), nil, 27 + 5),DominateMind=v15(205618 - (163 + 91), nil, 1963 - (1869 + 61)),BodyandSoul=v15(17916 + 46213, nil, 355 - 254),BodyandSoulBuff=v15(99960 - 34879, nil, 14 + 88),AngelicFeather=v15(167019 - 45483, nil, 92 + 5),AngelicFeatherBuff=v15(123031 - (1329 + 145), nil, 1069 - (140 + 831)),FlashHeal=v15(3911 - (1409 + 441), nil, 827 - (15 + 703)),Renew=v15(65 + 74, nil, 568 - (262 + 176)),RenewBuff=v15(1860 - (345 + 1376), nil, 819 - (198 + 490)),PowerWordFortitudeBuff=v15(95260 - 73698, nil, 81 - 47),Pool=v15(1001116 - (696 + 510), nil, 73 - 38)};
-	v15.Priest.Shadow = v18(v15.Priest.Commons, {MindFlay=v15(16669 - (1091 + 171), nil, 6 + 30),Shadowform=v15(732612 - 499914, nil, 122 - 85),VampiricTouch=v15(35288 - (123 + 251), nil, 188 - 150),VoidBolt=v15(206146 - (208 + 490), nil, 4 + 35),VoidEruption=v15(101678 + 126582, nil, 876 - (660 + 176)),AncientMadness=v15(40998 + 300242, nil, 243 - (14 + 188)),Damnation=v15(342049 - (534 + 141), nil, 17 + 25),DarkAscension=v15(345953 + 45156, nil, 42 + 1),DarkVoid=v15(553433 - 290087, nil, 69 - 25),DeathSpeaker=v15(1100999 - 708492, nil, 25 + 20),DevouringPlague=v15(213597 + 121870, nil, 442 - (115 + 281)),Dispersion=v15(110684 - 63099, nil, 39 + 8),DistortedReality=v15(988558 - 579514, nil, 175 - 127),DivineStar=v15(122988 - (550 + 317), nil, 70 - 21),FortressOfTheMind=v15(271549 - 78354, nil, 139 - 89),Halo=v15(120929 - (134 + 151), nil, 1716 - (970 + 695)),HungeringVoid=v15(658757 - 313539, nil, 2042 - (582 + 1408)),IdolOfCthun=v15(1308675 - 931326, nil, 66 - 13),IdolOfYoggSaron=v15(1406625 - 1033352, nil, 2006 - (1195 + 629)),InescapableTorment=v15(493856 - 120429, nil, 295 - (187 + 54)),InsidiousIre=v15(373992 - (162 + 618), nil, 129 + 54),MentalDecay=v15(250427 + 125567, nil, 117 - 62),Mindbender=v15(336530 - 136356, nil, 5 + 51),MindDevourer=v15(374838 - (1373 + 263), nil, 1057 - (451 + 549)),MindFlayInsanity=v15(123551 + 267852, nil, 89 - 31),MindFlayInsanityTalent=v15(657808 - 266409, nil, 1443 - (746 + 638)),MindMelt=v15(147182 + 243908, nil, 91 - 31),MindSpike=v15(73851 - (218 + 123), nil, 1642 - (1535 + 46)),MindSpikeInsanity=v15(404859 + 2607, nil, 9 + 53),Misery=v15(239118 - (306 + 254), nil, 4 + 59),PsychicLink=v15(391495 - 192011, nil, 1531 - (899 + 568)),PurifyDisease=v15(140422 + 73212, nil, 157 - 92),ScreamsOfTheVoid=v15(376370 - (268 + 335), nil, 356 - (60 + 230)),SearingNightmare=v15(341957 - (426 + 146), nil, 9 + 58),ShadowCrash=v15(206841 - (282 + 1174), nil, 879 - (569 + 242)),ShadowyInsight=v15(1083048 - 707067, nil, 4 + 65),Silence=v15(16511 - (706 + 318), nil, 1321 - (721 + 530)),SurgeOfDarkness=v15(163719 - (945 + 326), nil, 177 - 106),SurrenderToMadness=v15(284700 + 35252, nil, 772 - (271 + 429)),TwistofFate=v15(100259 + 8883, nil, 1573 - (1408 + 92)),UnfurlingDarkness=v15(342359 - (461 + 625), nil, 1362 - (993 + 295)),VoidTorrent=v15(13665 + 249500, nil, 1246 - (418 + 753)),Voidtouched=v15(155171 + 252259, nil, 8 + 68),WhisperingShadows=v15(118976 + 287801, nil, 20 + 57),VampiricEmbrace=v15(15815 - (406 + 123), nil, 1950 - (1749 + 20)),DarkAscensionBuff=v15(92899 + 298210, nil, 1400 - (1249 + 73)),DarkEvangelismBuff=v15(139532 + 251567, nil, 1224 - (466 + 679)),DarkThoughtBuff=v15(820763 - 479556, nil, 228 - 148),DeathsTormentBuff=v15(425660 - (106 + 1794), nil, 59 + 125),DeathspeakerBuff=v15(99219 + 293292, nil, 239 - 158),DevouredFearBuff=v15(1010925 - 637606, nil, 196 - (4 + 110)),DevouredPrideBuff=v15(373900 - (57 + 527), nil, 1510 - (41 + 1386)),MindDevourerBuff=v15(373307 - (17 + 86), nil, 58 + 26),MindFlayInsanityBuff=v15(872868 - 481467, nil, 246 - 161),MindSpikeInsanityBuff=v15(407634 - (122 + 44), nil, 148 - 62),ShadowformBuff=v15(771968 - 539270, nil, 71 + 16),ShadowyInsightBuff=v15(54376 + 321605, nil, 178 - 90),SurgeOfDarknessBuff=v15(87225 - (30 + 35), nil, 62 + 27),UnfurlingDarknessBuff=v15(342539 - (1043 + 214), nil, 340 - 250),VoidformBuff=v15(195461 - (323 + 889), nil, 244 - 153),DevouringPlagueDebuff=v15(336047 - (361 + 219), nil, 412 - (53 + 267)),HungeringVoidDebuff=v15(77992 + 267227, nil, 506 - (15 + 398)),VampiricTouchDebuff=v15(35896 - (18 + 964), nil, 353 - 259),DarkReveriesBuff=v15(228669 + 166294, nil, 60 + 35),GatheringShadowsBuff=v15(395811 - (20 + 830), nil, 75 + 21)});
-	v15.Priest.Discipline = v18(v15.Priest.Commons, {AtonementBuff=v15(194510 - (116 + 10), nil, 8 + 91),BindingHeals=v15(369013 - (542 + 196), nil, 214 - 114),DarkReprimand=v15(116856 + 283313, nil, 53 + 50),DivineStar=v15(39865 + 70879, nil, 273 - 169),DivineStarShadow=v15(313092 - 190971, nil, 1656 - (1126 + 425)),EmbraceShadow=v15(373390 - (118 + 287), nil, 415 - 309),Evangelism=v15(247408 - (118 + 1003), nil, 313 - 206),Expiation=v15(391209 - (142 + 235), nil, 489 - 381),Halo=v15(26224 + 94293, nil, 1087 - (553 + 424)),HaloShadow=v15(228132 - 107488, nil, 98 + 13),HarshDiscipline=v15(370188 + 2992, nil, 66 + 46),HarshDisciplineBuff=v15(158636 + 214545, nil, 65 + 48),LeapofFaith=v15(158960 - 85635, nil, 317 - 203),LightsWrath=v15(835561 - 462383, nil, 34 + 81),LuminousBarrier=v15(1311902 - 1040436, nil, 869 - (239 + 514)),MassResurrection=v15(74470 + 137566, nil, 1446 - (797 + 532)),Mindbender=v15(89403 + 33637, nil, 40 + 78),PainSuppression=v15(78075 - 44869, nil, 1321 - (373 + 829)),PainfulPunishment=v15(391417 - (476 + 255), nil, 1250 - (369 + 761)),Penance=v15(27501 + 20039, nil, 219 - 98),PurgeTheWicked=v15(386954 - 182757, nil, 360 - (64 + 174)),PurgeTheWickedDebuff=v15(29085 + 175128, nil, 181 - 58),PowerWordBarrier=v15(62954 - (144 + 192), nil, 340 - (42 + 174)),PowerWordLife=v15(280572 + 92909, nil, 104 + 21),PowerWordRadiance=v15(82636 + 111873, nil, 1630 - (363 + 1141)),PowerWordSolace=v15(130830 - (1183 + 397), nil, 386 - 259),RadiantProvidenceBuff=v15(301017 + 109621, nil, 96 + 32),Rapture=v15(49511 - (1913 + 62), nil, 82 + 47),RhapsodyBuff=v15(1034132 - 643496, nil, 2065 - (565 + 1368)),Schism=v15(807132 - 592511, nil, 1794 - (1477 + 184)),ShadowCovenant=v15(429032 - 114165, nil, 125 + 9),ShadowCovenantBuff=v15(322961 - (564 + 292), nil, 232 - 97),ShadowFiend=v15(103786 - 69353, nil, 440 - (244 + 60)),ShatteredPerceptions=v15(300731 + 90381, nil, 613 - (41 + 435)),SpiritShell=v15(110965 - (938 + 63), nil, 107 + 31),SurgeofLight=v15(115380 - (936 + 189), nil, 46 + 93),TwilightEquilibrium=v15(392318 - (1565 + 48), nil, 87 + 53),TEHolyBuff=v15(391844 - (782 + 356), nil, 408 - (176 + 91)),TEShadowBuff=v15(1017920 - 627213, nil, 208 - 66),VoidShift=v15(110060 - (975 + 117), nil, 2018 - (157 + 1718)),WrathUnleashed=v15(317140 + 73641, nil, 511 - 367),UltimatePenitence=v15(1440868 - 1019415, nil, 1203 - (697 + 321))});
-	v15.Priest.Holy = v18(v15.Priest.Commons, {CircleofHealing=v15(558127 - 353244, nil, 311 - 164),DivineHymn=v15(149487 - 84644, nil, 58 + 90),EmpyrealBlaze=v15(698154 - 325538, nil, 399 - 250),EmpyrealBlazeBuff=v15(373844 - (322 + 905), nil, 761 - (602 + 9)),GuardianSpirit=v15(48977 - (449 + 740), nil, 1024 - (826 + 46)),Heal=v15(3007 - (245 + 702), nil, 483 - 330),HolyFire=v15(4795 + 10119, nil, 2052 - (260 + 1638)),HolyFireDebuff=v15(15354 - (382 + 58), nil, 497 - 342),HolyWordChastise=v15(73644 + 14981, nil, 324 - 167),HolyWordSanctify=v15(103627 - 68766, nil, 1363 - (902 + 303)),HolyWordSerenity=v15(4501 - 2451, nil, 382 - 223),LeapofFaith=v15(6301 + 67024, nil, 1850 - (1121 + 569)),Lightweaver=v15(391206 - (22 + 192), nil, 844 - (483 + 200)),LightweaverBuff=v15(392456 - (1404 + 59), nil, 443 - 281),MassResurrection=v15(284982 - 72946, nil, 928 - (468 + 297)),SymbolofHope=v15(65463 - (334 + 228), nil, 553 - 389),SurgeofLight=v15(264832 - 150577, nil, 299 - 134),PowerWordLife=v15(106056 + 267425, nil, 402 - (141 + 95)),PrayerofHealing=v15(586 + 10, nil, 429 - 262),PrayerofMending=v15(79511 - 46435, nil, 40 + 128),PrayerofMendingBuff=v15(114074 - 72439, nil, 119 + 50),Apotheosis=v15(104241 + 95942, nil, 244 - 70),DivineStar=v15(65324 + 45420, nil, 338 - (92 + 71)),Halo=v15(59529 + 60988, nil, 295 - 119),HolyWordSalvation=v15(265967 - (574 + 191), nil, 147 + 30),PrayerCircle=v15(805147 - 483770, nil, 91 + 87),PrayerCircleBuff=v15(322228 - (254 + 595), nil, 305 - (55 + 71)),RhapsodyBuff=v15(514621 - 123985, nil, 1970 - (573 + 1217))});
-	if (not v17.Priest or ((10379 - 6631) < (169 + 2043))) then
-		v17.Priest = {};
+	v16.Priest.Commons = {AncestralCall=v16(488153 - 213415, nil, 1 + 0),ArcanePulse=v16(261155 - (368 + 423), nil, 6 - 4),ArcaneTorrent=v16(232651 - (10 + 8), nil, 11 - 8),BagofTricks=v16(312853 - (416 + 26), nil, 12 - 8),Berserking=v16(11286 + 15011, nil, 8 - 3),BerserkingBuff=v16(26735 - (145 + 293), nil, 436 - (44 + 386)),BloodFury=v16(22058 - (998 + 488), nil, 3 + 4),BloodFuryBuff=v16(16845 + 3727, nil, 780 - (201 + 571)),Fireblood=v16(266359 - (116 + 1022), nil, 37 - 28),LightsJudgment=v16(150059 + 105588, nil, 36 - 26),DesperatePrayer=v16(68308 - 49072, nil, 870 - (814 + 45)),DispelMagic=v16(1300 - 772, nil, 1 + 11),Fade=v16(208 + 378, nil, 898 - (261 + 624)),HolyNova=v16(234855 - 102698, nil, 1094 - (1020 + 60)),MassDispel=v16(33798 - (630 + 793), nil, 50 - 35),MindBlast=v16(38313 - 30221, nil, 7 + 9),MindSear=v16(165420 - 117375, nil, 1764 - (760 + 987)),PowerInfusion=v16(11973 - (1789 + 124), nil, 784 - (745 + 21)),PowerInfusionBuff=v16(3461 + 6599, nil, 51 - 32),PowerWordFortitude=v16(84577 - 63015, nil, 1 + 19),PowerWordShield=v16(14 + 3, nil, 1076 - (87 + 968)),PsychicScream=v16(35752 - 27630, nil, 20 + 2),Purify=v16(1191 - 664, nil, 1436 - (447 + 966)),ImprovedPurify=v16(1069414 - 678782, nil, 1841 - (1703 + 114)),ShadowWordDeath=v16(33080 - (376 + 325), nil, 40 - 15),ShadowWordPain=v16(1812 - 1223, nil, 8 + 18),ShadowWordPainDebuff=v16(1296 - 707, nil, 41 - (9 + 5)),Smite=v16(961 - (85 + 291), nil, 1293 - (243 + 1022)),Resurrection=v16(7633 - 5627, nil, 24 + 5),Mindgames=v16(377081 - (1123 + 57), nil, 25 + 5),Shadowfiend=v16(34687 - (163 + 91), nil, 1961 - (1869 + 61)),ShackleUndead=v16(2650 + 6834, nil, 112 - 80),DominateMind=v16(315428 - 110064, nil, 5 + 28),BodyandSoul=v16(88128 - 23999, nil, 95 + 6),BodyandSoulBuff=v16(66555 - (1329 + 145), nil, 1073 - (140 + 831)),AngelicFeather=v16(123386 - (1409 + 441), nil, 815 - (15 + 703)),AngelicFeatherBuff=v16(56294 + 65263, nil, 536 - (262 + 176)),FlashHeal=v16(3782 - (345 + 1376), nil, 797 - (198 + 490)),Renew=v16(613 - 474, nil, 311 - 181),RenewBuff=v16(1345 - (696 + 510), nil, 274 - 143),PowerWordFortitudeBuff=v16(22824 - (1091 + 171), nil, 6 + 28),Pool=v16(3148056 - 2148146, nil, 116 - 81)};
+	v16.Priest.Shadow = v19(v16.Priest.Commons, {MindFlay=v16(15781 - (123 + 251), nil, 178 - 142),Shadowform=v16(233396 - (208 + 490), nil, 4 + 33),VampiricTouch=v16(15553 + 19361, nil, 874 - (660 + 176)),VoidBolt=v16(24684 + 180764, nil, 241 - (14 + 188)),VoidEruption=v16(228935 - (534 + 141), nil, 17 + 23),AncientMadness=v16(301842 + 39398, nil, 40 + 1),Damnation=v16(717412 - 376038, nil, 65 - 23),DarkAscension=v16(1097078 - 705969, nil, 24 + 19),DarkVoid=v16(167676 + 95670, nil, 440 - (115 + 281)),DeathSpeaker=v16(912985 - 520478, nil, 38 + 7),DevouringPlague=v16(810740 - 475273, nil, 168 - 122),Dispersion=v16(48452 - (550 + 317), nil, 67 - 20),DistortedReality=v16(574941 - 165897, nil, 134 - 86),DivineStar=v16(122406 - (134 + 151), nil, 1714 - (970 + 695)),FortressOfTheMind=v16(368661 - 175466, nil, 2040 - (582 + 1408)),Halo=v16(418402 - 297758, nil, 63 - 12),HungeringVoid=v16(1300904 - 955686, nil, 1876 - (1195 + 629)),IdolOfCthun=v16(499042 - 121693, nil, 294 - (187 + 54)),IdolOfYoggSaron=v16(374053 - (162 + 618), nil, 128 + 54),InescapableTorment=v16(248718 + 124709, nil, 114 - 60),InsidiousIre=v16(627440 - 254228, nil, 15 + 168),MentalDecay=v16(377630 - (1373 + 263), nil, 1055 - (451 + 549)),Mindbender=v16(63188 + 136986, nil, 86 - 30),MindDevourer=v16(627225 - 254023, nil, 1441 - (746 + 638)),MindFlayInsanity=v16(147300 + 244103, nil, 87 - 29),MindFlayInsanityTalent=v16(391740 - (218 + 123), nil, 1640 - (1535 + 46)),MindMelt=v16(388588 + 2502, nil, 9 + 51),MindSpike=v16(74070 - (306 + 254), nil, 4 + 57),MindSpikeInsanity=v16(799668 - 392202, nil, 1529 - (899 + 568)),Misery=v16(156805 + 81753, nil, 152 - 89),PsychicLink=v16(200087 - (268 + 335), nil, 354 - (60 + 230)),PurifyDisease=v16(214206 - (426 + 146), nil, 8 + 57),ScreamsOfTheVoid=v16(377223 - (282 + 1174), nil, 877 - (569 + 242)),SearingNightmare=v16(983391 - 642006, nil, 4 + 63),ShadowCrash=v16(206409 - (706 + 318), nil, 1319 - (721 + 530)),ShadowyInsight=v16(377252 - (945 + 326), nil, 171 - 102),Silence=v16(13781 + 1706, nil, 770 - (271 + 429)),SurgeOfDarkness=v16(149226 + 13222, nil, 1571 - (1408 + 92)),SurrenderToMadness=v16(321038 - (461 + 625), nil, 1360 - (993 + 295)),TwistofFate=v16(5668 + 103474, nil, 1244 - (418 + 753)),UnfurlingDarkness=v16(129975 + 211298, nil, 8 + 66),VoidTorrent=v16(76972 + 186193, nil, 19 + 56),Voidtouched=v16(407959 - (406 + 123), nil, 1845 - (1749 + 20)),WhisperingShadows=v16(96621 + 310156, nil, 1399 - (1249 + 73)),VampiricEmbrace=v16(5454 + 9832, nil, 1326 - (466 + 679)),DarkAscensionBuff=v16(940800 - 549691, nil, 223 - 145),DarkEvangelismBuff=v16(392999 - (106 + 1794), nil, 25 + 54),DarkThoughtBuff=v16(86250 + 254957, nil, 236 - 156),DeathsTormentBuff=v16(1147517 - 723757, nil, 298 - (4 + 110)),DeathspeakerBuff=v16(393095 - (57 + 527), nil, 1508 - (41 + 1386)),DevouredFearBuff=v16(373422 - (17 + 86), nil, 56 + 26),DevouredPrideBuff=v16(832537 - 459221, nil, 240 - 157),MindDevourerBuff=v16(373370 - (122 + 44), nil, 144 - 60),MindFlayInsanityBuff=v16(1298461 - 907060, nil, 70 + 15),MindSpikeInsanityBuff=v16(58929 + 348539, nil, 173 - 87),ShadowformBuff=v16(232763 - (30 + 35), nil, 60 + 27),ShadowyInsightBuff=v16(377238 - (1043 + 214), nil, 332 - 244),SurgeOfDarknessBuff=v16(88372 - (323 + 889), nil, 239 - 150),UnfurlingDarknessBuff=v16(341862 - (361 + 219), nil, 410 - (53 + 267)),VoidformBuff=v16(43885 + 150364, nil, 504 - (15 + 398)),DevouringPlagueDebuff=v16(336449 - (18 + 964), nil, 346 - 254),HungeringVoidDebuff=v16(199869 + 145350, nil, 59 + 34),VampiricTouchDebuff=v16(35764 - (20 + 830), nil, 74 + 20),DarkReveriesBuff=v16(395089 - (116 + 10), nil, 8 + 87),GatheringShadowsBuff=v16(395699 - (542 + 196), nil, 205 - 109)});
+	v16.Priest.Discipline = v19(v16.Priest.Commons, {AtonementBuff=v16(56764 + 137620, nil, 51 + 48),BindingHeals=v16(132567 + 235708, nil, 263 - 163),DarkReprimand=v16(1025948 - 625779, nil, 1654 - (1126 + 425)),DivineStar=v16(111149 - (118 + 287), nil, 407 - 303),DivineStarShadow=v16(123242 - (118 + 1003), nil, 307 - 202),EmbraceShadow=v16(373362 - (142 + 235), nil, 480 - 374),Evangelism=v16(53590 + 192697, nil, 1084 - (553 + 424)),Expiation=v16(739046 - 348214, nil, 96 + 12),Halo=v16(119551 + 966, nil, 65 + 45),HaloShadow=v16(51285 + 69359, nil, 64 + 47),HarshDiscipline=v16(809014 - 435834, nil, 311 - 199),HarshDisciplineBuff=v16(835568 - 462387, nil, 33 + 80),LeapofFaith=v16(354354 - 281029, nil, 867 - (239 + 514)),LightsWrath=v16(131064 + 242114, nil, 1444 - (797 + 532)),LuminousBarrier=v16(197252 + 74214, nil, 40 + 76),MassResurrection=v16(498550 - 286514, nil, 1319 - (373 + 829)),Mindbender=v16(123771 - (476 + 255), nil, 1248 - (369 + 761)),PainSuppression=v16(19209 + 13997, nil, 215 - 96),PainfulPunishment=v16(740351 - 349665, nil, 358 - (64 + 174)),Penance=v16(6771 + 40769, nil, 179 - 58),PurgeTheWicked=v16(204533 - (144 + 192), nil, 338 - (42 + 174)),PurgeTheWickedDebuff=v16(153412 + 50801, nil, 102 + 21),PowerWordBarrier=v16(26603 + 36015, nil, 1628 - (363 + 1141)),PowerWordLife=v16(375061 - (1183 + 397), nil, 380 - 255),PowerWordRadiance=v16(142584 + 51925, nil, 95 + 31),PowerWordSolace=v16(131225 - (1913 + 62), nil, 80 + 47),RadiantProvidenceBuff=v16(1087083 - 676445, nil, 2061 - (565 + 1368)),Rapture=v16(178770 - 131234, nil, 1790 - (1477 + 184)),RhapsodyBuff=v16(532273 - 141637, nil, 123 + 9),Schism=v16(215477 - (564 + 292), nil, 228 - 95),ShadowCovenant=v16(949062 - 634195, nil, 438 - (244 + 60)),ShadowCovenantBuff=v16(247671 + 74434, nil, 611 - (41 + 435)),ShadowFiend=v16(35434 - (938 + 63), nil, 105 + 31),ShatteredPerceptions=v16(392237 - (936 + 189), nil, 46 + 91),SpiritShell=v16(111577 - (1565 + 48), nil, 86 + 52),SurgeofLight=v16(115393 - (782 + 356), nil, 406 - (176 + 91)),TwilightEquilibrium=v16(1017915 - 627210, nil, 206 - 66),TEHolyBuff=v16(391798 - (975 + 117), nil, 2016 - (157 + 1718)),TEShadowBuff=v16(317080 + 73627, nil, 503 - 361),VoidShift=v16(372540 - 263572, nil, 1161 - (697 + 321)),WrathUnleashed=v16(1064537 - 673756, nil, 304 - 160),UltimatePenitence=v16(971609 - 550156, nil, 73 + 112)});
+	v16.Priest.Holy = v19(v16.Priest.Commons, {CircleofHealing=v16(383880 - 178997, nil, 394 - 247),DivineHymn=v16(66070 - (322 + 905), nil, 759 - (602 + 9)),EmpyrealBlaze=v16(373805 - (449 + 740), nil, 1021 - (826 + 46)),EmpyrealBlazeBuff=v16(373564 - (245 + 702), nil, 473 - 323),GuardianSpirit=v16(15363 + 32425, nil, 2050 - (260 + 1638)),Heal=v16(2500 - (382 + 58), nil, 490 - 337),HolyFire=v16(12393 + 2521, nil, 318 - 164),HolyFireDebuff=v16(44333 - 29419, nil, 1360 - (902 + 303)),HolyWordChastise=v16(194588 - 105963, nil, 378 - 221),HolyWordSanctify=v16(2996 + 31865, nil, 1848 - (1121 + 569)),HolyWordSerenity=v16(2264 - (22 + 192), nil, 842 - (483 + 200)),LeapofFaith=v16(74788 - (1404 + 59), nil, 437 - 277),Lightweaver=v16(525504 - 134512, nil, 926 - (468 + 297)),LightweaverBuff=v16(391555 - (334 + 228), nil, 546 - 384),MassResurrection=v16(491480 - 279444, nil, 295 - 132),SymbolofHope=v16(18430 + 46471, nil, 400 - (141 + 95)),SurgeofLight=v16(112234 + 2021, nil, 424 - 259),PowerWordLife=v16(897815 - 524334, nil, 39 + 127),PrayerofHealing=v16(1632 - 1036, nil, 118 + 49),PrayerofMending=v16(17224 + 15852, nil, 236 - 68),PrayerofMendingBuff=v16(24559 + 17076, nil, 332 - (92 + 71)),Apotheosis=v16(98880 + 101303, nil, 292 - 118),DivineStar=v16(111509 - (574 + 191), nil, 145 + 30),Halo=v16(301931 - 181414, nil, 90 + 86),HolyWordSalvation=v16(266051 - (254 + 595), nil, 303 - (55 + 71)),PrayerCircle=v16(423380 - 102003, nil, 1968 - (573 + 1217)),PrayerCircleBuff=v16(890033 - 568654, nil, 14 + 165),RhapsodyBuff=v16(629469 - 238833, nil, 1119 - (714 + 225))});
+	if (((8983 - 5909) == (4285 - 1211)) and not v18.Priest) then
+		v18.Priest = {};
 	end
-	v17.Priest.Commons = {Healthstone=v17(8881 - 3369),RefreshingHealingPotion=v17(192319 - (714 + 225)),BeacontotheBeyond=v17(596061 - 392098, {(2 + 11),(820 - (118 + 688))}),BelorrelostheSuncaller=v17(207220 - (25 + 23), {(1899 - (927 + 959)),(746 - (16 + 716))}),DesperateInvokersCodex=v17(375097 - 180787, {(31 - 18),(35 - 21)}),EruptingSpearFragment=v17(955717 - 761948, {(36 - 23),(1075 - (810 + 251))}),NymuesUnravelingSpindle=v17(144775 + 63840, {(12 + 1),(747 - (711 + 22))}),VoidmendersShadowgem=v17(425529 - 315522, {(4 + 9),(1 + 13)}),Dreambinder=v17(210360 - (1344 + 400), {(13 + 3)}),Iridal=v17(111530 + 96791, {(51 - 35)})};
-	v17.Priest.Shadow = v18(v17.Priest.Commons, {});
-	v17.Priest.Discipline = v18(v17.Priest.Commons, {});
-	v17.Priest.Holy = v18(v17.Priest.Commons, {});
-	if (not v20.Priest or ((2919 - (404 + 1335)) == (2586 - (183 + 223)))) then
-		v20.Priest = {};
+	v18.Priest.Commons = {Healthstone=v18(597 + 4915),RefreshingHealingPotion=v18(277108 - 85728),BeacontotheBeyond=v18(204769 - (118 + 688), {(3 + 10),(47 - 33)}),BelorrelostheSuncaller=v18(207904 - (16 + 716), {(110 - (11 + 86)),(299 - (175 + 110))}),DesperateInvokersCodex=v18(490593 - 296283, {(1809 - (503 + 1293)),(11 + 3)}),EruptingSpearFragment=v18(194830 - (810 + 251), {(4 + 9),(547 - (43 + 490))}),NymuesUnravelingSpindle=v18(209348 - (711 + 22), {(872 - (240 + 619)),(21 - 7)}),VoidmendersShadowgem=v18(7281 + 102726, {(418 - (255 + 150)),(8 + 6)}),Dreambinder=v18(891328 - 682712, {(1755 - (404 + 1335))}),Iridal=v18(208727 - (183 + 223), {(11 + 5)})};
+	v18.Priest.Shadow = v19(v18.Priest.Commons, {});
+	v18.Priest.Discipline = v19(v18.Priest.Commons, {});
+	v18.Priest.Holy = v19(v18.Priest.Commons, {});
+	if (((134 + 236) >= (533 - (10 + 327))) and not v21.Priest) then
+		v21.Priest = {};
 	end
-	v20.Priest.Commons = {AngelicFeatherPlayer=v20(22 - 3),PowerInfusionPlayer=v20(19 + 9),PowerWordShieldPlayer=v20(11 + 18),FlashHealFocus=v20(367 - (10 + 327)),PowerInfusionFocus=v20(22 + 9),PowerWordLifeFocus=v20(370 - (118 + 220)),PurifyFocus=v20(11 + 22),RenewFocus=v20(483 - (108 + 341)),DominateMindMouseover=v20(5 + 4),LeapofFaithMouseover=v20(42 - 32),PowerWordLifeMouseover=v20(1504 - (711 + 782)),PowerWordShieldMouseover=v20(22 - 10),PurifyMouseover=v20(482 - (270 + 199)),ShadowWordDeathMouseover=v20(5 + 9),ShadowWordPainMouseover=v20(1834 - (580 + 1239)),ShackleUndeadMouseover=v20(47 - 31),MassDispelCursor=v20(17 + 0),Healthstone=v20(2 + 33),PowerWordFortitudePlayer=v20(8 + 10),RefreshingHealingPotion=v20(93 - 57),HaloPlayer=v20(187 + 113),DivineStarPlayer=v20(1468 - (645 + 522)),PowerWordShieldFocus=v20(2096 - (1010 + 780))};
-	v20.Priest.Shadow = v18(v20.Priest.Commons, {PurifyDiseaseFocus=v20(302 + 0),FlashHealPlayer=v20(1443 - 1140),RenewPlayer=v20(890 - 586),ShadowCrashCursor=v20(2141 - (1045 + 791))});
-	v20.Priest.Discipline = v18(v20.Priest.Commons, {DarkReprimandFocus=v20(95 - 57),DarkReprimandMouseover=v20(58 - 19),FlashHealMouseover=v20(546 - (351 + 154)),PainSuppressionFocus=v20(1617 - (1281 + 293)),PainSuppressionMouseover=v20(310 - (28 + 238)),PenanceFocus=v20(100 - 55),PenanceMouseover=v20(1605 - (1381 + 178)),PowerWordBarrierCursor=v20(45 + 2),PowerWordRadianceFocus=v20(41 + 9),PowerWordRadiancePlayer=v20(22 + 29),PurgeTheWickedMouseover=v20(179 - 127),RaptureFocus=v20(28 + 25),ShadowCovenantFocus=v20(525 - (381 + 89))});
-	v20.Priest.Holy = v18(v20.Priest.Commons, {CircleofHealingFocus=v20(24 + 3),GuardianSpiritFocus=v20(14 + 6),HealFocus=v20(35 - 14),HolyWordSerenityFocus=v20(1178 - (1074 + 82)),PrayerofHealingFocus=v20(50 - 27),PrayerofMendingFocus=v20(1808 - (214 + 1570)),HolyWordSerenityMouseover=v20(1480 - (990 + 465)),HolyWordSanctifyCursor=v20(11 + 15)});
-	v9.AddCoreOverride("Player.Insanity", function()
-		local v36 = 0 + 0;
-		local v37;
-		while true do
-			if (((3978 + 112) < (18311 - 13658)) and (v36 == (1726 - (1668 + 58)))) then
-				v37 = v21("Player", v22);
-				if (not v12:IsCasting() or ((3278 - (512 + 114)) < (510 - 314))) then
-					return v37;
-				elseif (((8548 - 4413) < (16761 - 11944)) and v12:IsCasting(v15.Priest.Shadow.MindBlast)) then
-					return v37 + 3 + 3;
-				elseif (((51 + 221) == (237 + 35)) and (v12:IsCasting(v15.Priest.Shadow.VampiricTouch) or v12:IsCasting(v15.Priest.Shadow.MindSpike))) then
-					return v37 + (13 - 9);
-				elseif (((2094 - (109 + 1885)) <= (4592 - (1269 + 200))) and v12:IsCasting(v15.Priest.Shadow.MindFlay)) then
-					return v37 + ((22 - 10) / v15.Priest.Shadow.MindFlay:BaseDuration());
-				elseif (v12:IsCasting(v15.Priest.Shadow.DarkVoid) or ((2184 - (98 + 717)) > (5813 - (802 + 24)))) then
-					return v37 + (25 - 10);
-				elseif (v12:IsCasting(v15.Priest.Shadow.DarkAscension) or ((1089 - 226) >= (677 + 3907))) then
-					return v37 + 24 + 6;
-				elseif (v12:IsCasting(v15.Priest.Shadow.VoidTorrent) or ((119 + 605) >= (360 + 1308))) then
-					return v37 + ((166 - 106) / v15.Priest.Shadow.VoidTorrent:BaseDuration());
-				else
-					return v37;
-				end
-				break;
-			end
+	v21.Priest.Commons = {AngelicFeatherPlayer=v21(14 + 5),PowerInfusionPlayer=v21(366 - (118 + 220)),PowerWordShieldPlayer=v21(10 + 19),FlashHealFocus=v21(479 - (108 + 341)),PowerInfusionFocus=v21(14 + 17),PowerWordLifeFocus=v21(135 - 103),PurifyFocus=v21(1526 - (711 + 782)),RenewFocus=v21(64 - 30),DominateMindMouseover=v21(478 - (270 + 199)),LeapofFaithMouseover=v21(4 + 6),PowerWordLifeMouseover=v21(1830 - (580 + 1239)),PowerWordShieldMouseover=v21(35 - 23),PurifyMouseover=v21(13 + 0),ShadowWordDeathMouseover=v21(1 + 13),ShadowWordPainMouseover=v21(7 + 8),ShackleUndeadMouseover=v21(41 - 25),MassDispelCursor=v21(11 + 6),Healthstone=v21(1202 - (645 + 522)),PowerWordFortitudePlayer=v21(1808 - (1010 + 780)),RefreshingHealingPotion=v21(36 + 0),HaloPlayer=v21(1429 - 1129),DivineStarPlayer=v21(882 - 581),PowerWordShieldFocus=v21(2142 - (1045 + 791))};
+	v21.Priest.Shadow = v19(v21.Priest.Commons, {PurifyDiseaseFocus=v21(764 - 462),FlashHealPlayer=v21(462 - 159),RenewPlayer=v21(809 - (351 + 154)),ShadowCrashCursor=v21(1879 - (1281 + 293))});
+	v21.Priest.Discipline = v19(v21.Priest.Commons, {DarkReprimandFocus=v21(304 - (28 + 238)),DarkReprimandMouseover=v21(86 - 47),FlashHealMouseover=v21(1600 - (1381 + 178)),PainSuppressionFocus=v21(41 + 2),PainSuppressionMouseover=v21(36 + 8),PenanceFocus=v21(20 + 25),PenanceMouseover=v21(158 - 112),PowerWordBarrierCursor=v21(25 + 22),PowerWordRadianceFocus=v21(520 - (381 + 89)),PowerWordRadiancePlayer=v21(46 + 5),PurgeTheWickedMouseover=v21(36 + 16),RaptureFocus=v21(90 - 37),ShadowCovenantFocus=v21(1211 - (1074 + 82)),RenewMouseover=v21(122 - 66)});
+	v21.Priest.Holy = v19(v21.Priest.Commons, {CircleofHealingFocus=v21(1811 - (214 + 1570)),GuardianSpiritFocus=v21(1475 - (990 + 465)),HealFocus=v21(9 + 12),HolyWordSerenityFocus=v21(10 + 12),PrayerofHealingFocus=v21(23 + 0),PrayerofMendingFocus=v21(94 - 70),HolyWordSerenityMouseover=v21(1751 - (1668 + 58)),HolyWordSanctifyCursor=v21(652 - (512 + 114))});
+	v10.AddCoreOverride("Player.Insanity", function()
+		local v37 = v22("Player", v23);
+		if (not v13:IsCasting() or ((8259 - 5091) < (1037 - 535))) then
+			return v37;
+		elseif (((1527 - 1088) == (205 + 234)) and v13:IsCasting(v16.Priest.Shadow.MindBlast)) then
+			return v37 + 2 + 4;
+		elseif (v13:IsCasting(v16.Priest.Shadow.VampiricTouch) or v13:IsCasting(v16.Priest.Shadow.MindSpike) or ((1099 + 165) < (917 - 645))) then
+			return v37 + (1998 - (109 + 1885));
+		elseif (((4592 - (1269 + 200)) < (7457 - 3566)) and v13:IsCasting(v16.Priest.Shadow.MindFlay)) then
+			return v37 + ((827 - (98 + 717)) / v16.Priest.Shadow.MindFlay:BaseDuration());
+		elseif (((4768 - (802 + 24)) <= (8599 - 3612)) and v13:IsCasting(v16.Priest.Shadow.DarkVoid)) then
+			return v37 + (18 - 3);
+		elseif (((677 + 3907) == (3522 + 1062)) and v13:IsCasting(v16.Priest.Shadow.DarkAscension)) then
+			return v37 + 5 + 25;
+		elseif (((859 + 3120) >= (4640 - 2972)) and v13:IsCasting(v16.Priest.Shadow.VoidTorrent)) then
+			return v37 + ((200 - 140) / v16.Priest.Shadow.VoidTorrent:BaseDuration());
+		else
+			return v37;
 		end
-	end, 860 - 602);
-	local v35;
-	v35 = v9.AddCoreOverride("Spell.IsCastable", function(v38, v39, v40, v41, v42, v43)
-		local v44 = 0 + 0;
-		local v45;
-		while true do
-			if (((175 + 253) < (1489 + 315)) and (v44 == (0 + 0))) then
-				v45 = v35(v38, v39, v40, v41, v42, v43);
-				if ((v38 == v15.Priest.Shadow.VampiricTouch) or ((1553 + 1772) > (6046 - (797 + 636)))) then
-					return v45 and not v15.Priest.Shadow.ShadowCrash:InFlight() and (v15.Priest.Shadow.UnfurlingDarkness:IsAvailable() or not v12:IsCasting(v38));
-				elseif ((v38 == v15.Priest.Shadow.MindBlast) or ((24034 - 19084) <= (6172 - (1427 + 192)))) then
-					return v45 and ((v38:Charges() >= (1 + 1)) or not v12:IsCasting(v38));
-				elseif (((6187 - 3522) <= (3536 + 397)) and (v38 == v15.Priest.Shadow.VoidEruption)) then
-					return v45 and not v12:IsCasting(v38);
-				elseif (((1484 + 1789) == (3599 - (192 + 134))) and (v38 == v15.Priest.Shadow.VoidBolt)) then
-					return v45 or v12:IsCasting(v15.Priest.Shadow.VoidEruption);
-				else
-					return v45;
-				end
-				break;
-			end
+	end, 93 + 165);
+	local v36;
+	v36 = v10.AddCoreOverride("Spell.IsCastable", function(v38, v39, v40, v41, v42, v43)
+		local v44 = v36(v38, v39, v40, v41, v42, v43);
+		if (((232 + 336) > (354 + 74)) and (v38 == v16.Priest.Shadow.VampiricTouch)) then
+			return v44 and not v16.Priest.Shadow.ShadowCrash:InFlight() and (v16.Priest.Shadow.UnfurlingDarkness:IsAvailable() or not v13:IsCasting(v38));
+		elseif (((970 + 364) <= (2154 + 2459)) and (v38 == v16.Priest.Shadow.MindBlast)) then
+			return v44 and ((v38:Charges() >= (1435 - (797 + 636))) or not v13:IsCasting(v38));
+		elseif ((v38 == v16.Priest.Shadow.VoidEruption) or ((9055 - 7190) >= (3648 - (1427 + 192)))) then
+			return v44 and not v13:IsCasting(v38);
+		elseif (((1716 + 3234) >= (3751 - 2135)) and (v38 == v16.Priest.Shadow.VoidBolt)) then
+			return v44 or v13:IsCasting(v16.Priest.Shadow.VoidEruption);
+		else
+			return v44;
 		end
-	end, 1534 - (316 + 960));
+	end, 232 + 26);
 end;
 return v0["Epix_Priest_Priest.lua"]();
 

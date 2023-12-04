@@ -1,18 +1,18 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 0 + 0;
+	local v5 = 0 - 0;
 	local v6;
 	while true do
-		if ((v5 == (0 + 0)) or ((767 + 291) >= (1829 - 627))) then
+		if ((v5 == (1 + 0)) or ((304 + 843) == (883 - 548))) then
+			return v6(...);
+		end
+		if (((5812 - 2377) > (3196 - (35 + 1064))) and (v5 == (0 + 0))) then
 			v6 = v0[v4];
-			if (((2294 + 1417) > (4022 - (89 + 578))) and not v6) then
+			if (not v6 or ((8066 - 4296) >= (17 + 4024))) then
 				return v1(v4, ...);
 			end
-			v5 = 1 + 0;
-		end
-		if ((v5 == (1 - 0)) or ((1955 - (572 + 477)) >= (301 + 1928))) then
-			return v6(...);
+			v5 = 1237 - (298 + 938);
 		end
 	end
 end
@@ -37,7 +37,7 @@ v0["Epix_Priest_Shadow.lua"] = function(...)
 	local v25 = v20.Commons.Everyone.num;
 	local v26 = v20.Commons.Everyone.bool;
 	local v27 = math.min;
-	local v28 = 0 + 0;
+	local v28 = 1259 - (233 + 1026);
 	local v29 = false;
 	local v30 = false;
 	local v31 = false;
@@ -88,470 +88,494 @@ v0["Epix_Priest_Shadow.lua"] = function(...)
 	local v76;
 	local v77;
 	local v78;
-	local v79;
-	local v80 = v18.Priest.Shadow;
-	local v81 = v19.Priest.Shadow;
-	local v82 = v21.Priest.Shadow;
-	local v83 = {};
-	local v84, v85, v86;
-	local v87, v88;
-	local v89 = v20.Commons.Everyone;
-	local v90;
-	local v91 = 1327 + 9784;
-	local v92 = 11197 - (84 + 2);
+	local v79 = v18.Priest.Shadow;
+	local v80 = v19.Priest.Shadow;
+	local v81 = v21.Priest.Shadow;
+	local v82 = {};
+	local v83, v84, v85;
+	local v86, v87;
+	local v88 = v20.Commons.Everyone;
+	local v89;
+	local v90 = 12777 - (636 + 1030);
+	local v91 = 5681 + 5430;
+	local v92 = false;
 	local v93 = false;
-	local v94 = false;
-	local v95 = 0 - 0;
+	local v94 = 0 + 0;
+	local v95 = false;
 	local v96 = false;
 	local v97 = false;
 	local v98 = false;
 	local v99 = false;
-	local v100 = false;
-	local v101 = ((v80.Mindbender:IsAvailable()) and v80.Mindbender) or v80.Shadowfiend;
-	local v102 = false;
-	local v103 = 0 + 0;
-	local v104 = false;
-	local v105 = nil;
+	local v100 = ((v79.Mindbender:IsAvailable()) and v79.Mindbender) or v79.Shadowfiend;
+	local v101 = false;
+	local v102 = 0 + 0;
+	local v103 = false;
+	local v104 = nil;
+	local v105;
 	local v106;
-	local v107;
 	v10:RegisterForEvent(function()
-		v91 = 11953 - (497 + 345);
-		v92 = 285 + 10826;
-		v93 = false;
-		v94 = false;
-		VarMindSearCutoff = 1 + 1;
-		VarPoolAmount = 1393 - (605 + 728);
-		v95 = 0 + 0;
-		v96 = false;
-		v97 = false;
-		v98 = false;
-		v99 = false;
-		v100 = false;
-		v102 = false;
-		v103 = 0 - 0;
-		v104 = false;
-		v105 = nil;
+		local v144 = 0 + 0;
+		while true do
+			if ((v144 == (224 - (55 + 166))) or ((735 + 3056) <= (163 + 1448))) then
+				v101 = false;
+				v102 = 0 - 0;
+				v103 = false;
+				v104 = nil;
+				break;
+			end
+			if ((v144 == (297 - (36 + 261))) or ((8005 - 3427) <= (3376 - (34 + 1334)))) then
+				v90 = 4272 + 6839;
+				v91 = 8634 + 2477;
+				v92 = false;
+				v93 = false;
+				v144 = 1284 - (1035 + 248);
+			end
+			if (((1146 - (20 + 1)) <= (1082 + 994)) and (v144 == (321 - (134 + 185)))) then
+				v96 = false;
+				v97 = false;
+				v98 = false;
+				v99 = false;
+				v144 = 1136 - (549 + 584);
+			end
+			if ((v144 == (686 - (314 + 371))) or ((2550 - 1807) >= (5367 - (478 + 490)))) then
+				VarMindSearCutoff = 2 + 0;
+				VarPoolAmount = 1232 - (786 + 386);
+				v94 = 0 - 0;
+				v95 = false;
+				v144 = 1381 - (1055 + 324);
+			end
+		end
 	end, "PLAYER_REGEN_ENABLED");
-	local function v108()
-		v89.DispellableDebuffs = v89.DispellableDiseaseDebuffs;
+	local function v107()
+		v88.DispellableDebuffs = v88.DispellableDiseaseDebuffs;
 	end
 	v10:RegisterForEvent(function()
-		v108();
+		v107();
 	end, "ACTIVE_PLAYER_SPECIALIZATION_CHANGED");
 	v10:RegisterForEvent(function()
-		v101 = ((v80.Mindbender:IsAvailable()) and v80.Mindbender) or v80.Shadowfiend;
+		v100 = ((v79.Mindbender:IsAvailable()) and v79.Mindbender) or v79.Shadowfiend;
 	end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
 	v10:RegisterForEvent(function()
-		v80.ShadowCrash:RegisterInFlightEffect(9413 + 195973);
-		v80.ShadowCrash:RegisterInFlight();
+		v79.ShadowCrash:RegisterInFlightEffect(206726 - (1093 + 247));
+		v79.ShadowCrash:RegisterInFlight();
 	end, "LEARNED_SPELL_IN_TAB");
-	v80.ShadowCrash:RegisterInFlightEffect(759360 - 553974);
-	v80.ShadowCrash:RegisterInFlight();
-	local function v109()
+	v79.ShadowCrash:RegisterInFlightEffect(182513 + 22873);
+	v79.ShadowCrash:RegisterInFlight();
+	local function v108()
 		local v147 = 1 + 0;
-		if (((3568 - 2280) > (945 + 306)) and v13:BuffUp(v80.DarkAscensionBuff)) then
-			v147 = v147 * (490.25 - (457 + 32));
+		if (((4585 - 3430) < (5677 - 4004)) and v13:BuffUp(v79.DarkAscensionBuff)) then
+			v147 = v147 * (2.25 - 1);
 		end
-		if (v13:BuffUp(v80.DarkEvangelismBuff) or ((1915 + 2598) < (4754 - (832 + 570)))) then
-			v147 = v147 * (1 + 0 + ((0.01 + 0) * v13:BuffStack(v80.DarkEvangelismBuff)));
+		if (v13:BuffUp(v79.DarkEvangelismBuff) or ((5839 - 3515) <= (206 + 372))) then
+			v147 = v147 * ((3 - 2) + ((0.01 - 0) * v13:BuffStack(v79.DarkEvangelismBuff)));
 		end
-		if (v13:BuffUp(v80.DevouredFearBuff) or v13:BuffUp(v80.DevouredPrideBuff) or ((7307 - 5242) >= (1540 + 1656))) then
-			v147 = v147 * (797.05 - (588 + 208));
+		if (((2841 + 926) == (9633 - 5866)) and (v13:BuffUp(v79.DevouredFearBuff) or v13:BuffUp(v79.DevouredPrideBuff))) then
+			v147 = v147 * (689.05 - (364 + 324));
 		end
-		if (v80.DistortedReality:IsAvailable() or ((11794 - 7418) <= (3281 - (884 + 916)))) then
-			v147 = v147 * (1.2 - 0);
+		if (((11209 - 7120) == (9811 - 5722)) and v79.DistortedReality:IsAvailable()) then
+			v147 = v147 * (1.2 + 0);
 		end
-		if (v13:BuffUp(v80.MindDevourerBuff) or ((1967 + 1425) >= (5394 - (232 + 421)))) then
-			v147 = v147 * (1890.2 - (1569 + 320));
+		if (((18653 - 14195) >= (2680 - 1006)) and v13:BuffUp(v79.MindDevourerBuff)) then
+			v147 = v147 * (2.2 - 1);
 		end
-		if (((816 + 2509) >= (410 + 1744)) and v80.Voidtouched:IsAvailable()) then
+		if (((2240 - (1249 + 19)) <= (1280 + 138)) and v79.Voidtouched:IsAvailable()) then
 			v147 = v147 * (3.06 - 2);
 		end
 		return v147;
 	end
-	v80.DevouringPlague:RegisterPMultiplier(v80.DevouringPlagueDebuff, v109);
-	local function v110(v148, v149)
-		if (v149 or ((1900 - (316 + 289)) >= (8462 - 5229))) then
-			return v148:DebuffUp(v80.ShadowWordPainDebuff) and v148:DebuffUp(v80.VampiricTouchDebuff) and v148:DebuffUp(v80.DevouringPlagueDebuff);
+	v79.DevouringPlague:RegisterPMultiplier(v79.DevouringPlagueDebuff, v108);
+	local function v109(v148, v149)
+		if (v149 or ((6024 - (686 + 400)) < (3737 + 1025))) then
+			return v148:DebuffUp(v79.ShadowWordPainDebuff) and v148:DebuffUp(v79.VampiricTouchDebuff) and v148:DebuffUp(v79.DevouringPlagueDebuff);
 		else
-			return v148:DebuffUp(v80.ShadowWordPainDebuff) and v148:DebuffUp(v80.VampiricTouchDebuff);
+			return v148:DebuffUp(v79.ShadowWordPainDebuff) and v148:DebuffUp(v79.VampiricTouchDebuff);
 		end
 	end
-	local function v111(v150, v151)
-		if (((203 + 4174) > (3095 - (666 + 787))) and not v150) then
+	local function v110(v150, v151)
+		if (not v150 or ((2733 - (73 + 156)) > (21 + 4243))) then
 			return nil;
 		end
-		local v152 = 425 - (360 + 65);
+		local v152 = 811 - (721 + 90);
 		local v153 = nil;
-		for v203, v204 in pairs(v150) do
-			local v205 = 0 + 0;
-			local v206;
-			while true do
-				if (((4977 - (79 + 175)) > (2138 - 782)) and (v205 == (0 + 0))) then
-					v206 = v204:TimeToDie();
-					if (v151 or ((12677 - 8541) <= (6611 - 3178))) then
-						if (((5144 - (503 + 396)) <= (4812 - (92 + 89))) and ((v206 * v25(v204:DebuffRefreshable(v80.VampiricTouchDebuff))) > v152)) then
-							v152 = v206;
-							v153 = v204;
-						end
-					elseif (((8294 - 4018) >= (2008 + 1906)) and (v206 > v152)) then
-						v152 = v206;
-						v153 = v204;
+		for v184, v185 in pairs(v150) do
+			local v186 = v185:TimeToDie();
+			if (((25 + 2128) == (6990 - 4837)) and v151) then
+				if (((v186 * v25(v185:DebuffRefreshable(v79.VampiricTouchDebuff))) > v152) or ((977 - (224 + 246)) >= (4197 - 1606))) then
+					v152 = v186;
+					v153 = v185;
+				end
+			elseif (((8250 - 3769) == (813 + 3668)) and (v186 > v152)) then
+				local v216 = 0 + 0;
+				while true do
+					if ((v216 == (0 + 0)) or ((4628 - 2300) < (2305 - 1612))) then
+						v152 = v186;
+						v153 = v185;
+						break;
 					end
-					break;
 				end
 			end
 		end
 		return v153;
 	end
-	local function v112(v154)
-		return (v154:DebuffRemains(v80.ShadowWordPainDebuff));
+	local function v111(v154)
+		return (v154:DebuffRemains(v79.ShadowWordPainDebuff));
 	end
-	local function v113(v155)
+	local function v112(v155)
 		return (v155:TimeToDie());
 	end
-	local function v114(v156)
-		return (v156:DebuffRemains(v80.VampiricTouchDebuff));
+	local function v113(v156)
+		return (v156:DebuffRemains(v79.VampiricTouchDebuff));
 	end
-	local function v115(v157)
-		return v157:DebuffRefreshable(v80.VampiricTouchDebuff) and (v157:TimeToDie() >= (8 + 4)) and (((v80.ShadowCrash:CooldownRemains() >= v157:DebuffRemains(v80.VampiricTouchDebuff)) and not v80.ShadowCrash:InFlight()) or v98 or not v80.WhisperingShadows:IsAvailable());
+	local function v114(v157)
+		return v157:DebuffRefreshable(v79.VampiricTouchDebuff) and (v157:TimeToDie() >= (525 - (203 + 310))) and (((v79.ShadowCrash:CooldownRemains() >= v157:DebuffRemains(v79.VampiricTouchDebuff)) and not v79.ShadowCrash:InFlight()) or v97 or not v79.WhisperingShadows:IsAvailable());
 	end
-	local function v116(v158)
-		return not v80.DistortedReality:IsAvailable() or (v88 == (3 - 2)) or (v158:DebuffRemains(v80.DevouringPlagueDebuff) <= v107) or (v13:InsanityDeficit() <= (3 + 13));
+	local function v115(v158)
+		return not v79.DistortedReality:IsAvailable() or (v87 == (1994 - (1238 + 755))) or (v158:DebuffRemains(v79.DevouringPlagueDebuff) <= v106) or (v13:InsanityDeficit() <= (2 + 14));
 	end
-	local function v117(v159)
-		return (v159:DebuffRemains(v80.DevouringPlagueDebuff) <= v107) or not v80.DistortedReality:IsAvailable();
+	local function v116(v159)
+		return (v159:DebuffRemains(v79.DevouringPlagueDebuff) <= v106) or not v79.DistortedReality:IsAvailable();
 	end
-	local function v118(v160)
-		return ((v160:DebuffRemains(v80.DevouringPlagueDebuff) > v80.MindBlast:ExecuteTime()) and (v80.MindBlast:FullRechargeTime() <= (v107 + v80.MindBlast:ExecuteTime()))) or (v103 <= (v80.MindBlast:ExecuteTime() + v107));
+	local function v117(v160)
+		return ((v160:DebuffRemains(v79.DevouringPlagueDebuff) > v79.MindBlast:ExecuteTime()) and (v79.MindBlast:FullRechargeTime() <= (v106 + v79.MindBlast:ExecuteTime()))) or (v102 <= (v79.MindBlast:ExecuteTime() + v106));
 	end
-	local function v119(v161)
-		return v110(v161, true) and (v161:DebuffRemains(v80.DevouringPlagueDebuff) >= v80.Mindgames:CastTime());
+	local function v118(v161)
+		return v109(v161, true) and (v161:DebuffRemains(v79.DevouringPlagueDebuff) >= v79.Mindgames:CastTime());
 	end
-	local function v120(v162)
-		return v162:DebuffRefreshable(v80.VampiricTouchDebuff) or ((v162:DebuffRemains(v80.VampiricTouchDebuff) <= v162:TimeToDie()) and v13:BuffDown(v80.VoidformBuff));
+	local function v119(v162)
+		return v162:DebuffRefreshable(v79.VampiricTouchDebuff) or ((v162:DebuffRemains(v79.VampiricTouchDebuff) <= v162:TimeToDie()) and v13:BuffDown(v79.VoidformBuff));
 	end
-	local function v121(v163)
-		return ((v163:HealthPercentage() < (45 - 25)) and ((v101:CooldownRemains() >= (9 + 1)) or not v80.InescapableTorment:IsAvailable())) or (v102 and v80.InescapableTorment:IsAvailable()) or v13:BuffUp(v80.DeathspeakerBuff);
+	local function v120(v163)
+		return ((v163:HealthPercentage() < (1554 - (709 + 825))) and ((v100:CooldownRemains() >= (18 - 8)) or not v79.InescapableTorment:IsAvailable())) or (v101 and v79.InescapableTorment:IsAvailable()) or v13:BuffUp(v79.DeathspeakerBuff);
 	end
-	local function v122(v164)
-		return (v164:HealthPercentage() < (10 + 10)) or v13:BuffUp(v80.DeathspeakerBuff) or v13:HasTier(94 - 63, 1 + 1);
+	local function v121(v164)
+		return (v164:HealthPercentage() < (29 - 9)) or v13:BuffUp(v79.DeathspeakerBuff) or v13:HasTier(895 - (196 + 668), 7 - 5);
 	end
-	local function v123(v165)
-		return v165:HealthPercentage() < (30 - 10);
+	local function v122(v165)
+		return v165:HealthPercentage() < (41 - 21);
 	end
-	local function v124(v166)
-		return v166:DebuffUp(v80.DevouringPlagueDebuff) and (v103 <= (1246 - (485 + 759))) and v102 and v80.InescapableTorment:IsAvailable() and (v88 <= (16 - 9));
+	local function v123(v166)
+		return v166:DebuffUp(v79.DevouringPlagueDebuff) and (v102 <= (835 - (171 + 662))) and v101 and v79.InescapableTorment:IsAvailable() and (v87 <= (100 - (4 + 89)));
 	end
-	local function v112(v167)
-		return (v167:DebuffRemains(v80.ShadowWordPainDebuff));
+	local function v111(v167)
+		return (v167:DebuffRemains(v79.ShadowWordPainDebuff));
 	end
-	local function v125(v168)
-		return v168:DebuffRemains(v80.DevouringPlagueDebuff) >= (1191.5 - (442 + 747));
+	local function v124(v168)
+		return v168:DebuffRemains(v79.DevouringPlagueDebuff) >= (6.5 - 4);
 	end
-	local function v126(v169)
-		return v169:DebuffRefreshable(v80.VampiricTouchDebuff) and (v169:TimeToDie() >= (1153 - (832 + 303))) and (v169:DebuffUp(v80.VampiricTouchDebuff) or not v97);
+	local function v125(v169)
+		return v169:DebuffRefreshable(v79.VampiricTouchDebuff) and (v169:TimeToDie() >= (7 + 11)) and (v169:DebuffUp(v79.VampiricTouchDebuff) or not v96);
 	end
-	local function v127(v170)
-		local v171 = 946 - (88 + 858);
+	local function v126(v170)
+		if (((19009 - 14681) == (1698 + 2630)) and ((v79.ShadowCrash:CooldownRemains() >= v170:DebuffRemains(v79.VampiricTouchDebuff)) or v97)) then
+			return v170:DebuffRefreshable(v79.VampiricTouchDebuff) and (v170:TimeToDie() >= (1504 - (35 + 1451))) and (v170:DebuffUp(v79.VampiricTouchDebuff) or not v96);
+		end
+		return nil;
+	end
+	local function v127(v171)
+		return (v109(v171, false));
+	end
+	local function v128()
+		local v172 = 1453 - (28 + 1425);
+		local v173;
 		while true do
-			if (((61 + 137) <= (3613 + 752)) and (v171 == (0 + 0))) then
-				if (((5571 - (766 + 23)) > (23084 - 18408)) and ((v80.ShadowCrash:CooldownRemains() >= v170:DebuffRemains(v80.VampiricTouchDebuff)) or v98)) then
-					return v170:DebuffRefreshable(v80.VampiricTouchDebuff) and (v170:TimeToDie() >= (24 - 6)) and (v170:DebuffUp(v80.VampiricTouchDebuff) or not v97);
-				end
-				return nil;
-			end
-		end
-	end
-	local function v128(v172)
-		return (v110(v172, false));
-	end
-	local function v129()
-		v105 = v14:GUID();
-		if (((12814 - 7950) > (7456 - 5259)) and v80.ArcaneTorrent:IsCastable() and v30) then
-			if (v23(v80.ArcaneTorrent, not v14:IsSpellInRange(v80.ArcaneTorrent)) or ((4773 - (1036 + 37)) == (1778 + 729))) then
-				return "arcane_torrent precombat 6";
-			end
-		end
-		local v173 = v13:IsInParty() and not v13:IsInRaid();
-		if (((8712 - 4238) >= (216 + 58)) and v80.ShadowCrash:IsCastable() and not v173) then
-			if ((v77 == "Confirm") or ((3374 - (641 + 839)) <= (2319 - (910 + 3)))) then
-				if (((4007 - 2435) >= (3215 - (1466 + 218))) and v23(v80.ShadowCrash, not v14:IsInRange(19 + 21))) then
-					return "shadow_crash precombat 8";
-				end
-			elseif ((v77 == "Enemy Under Cursor") or ((5835 - (556 + 592)) < (1616 + 2926))) then
-				if (((4099 - (329 + 479)) > (2521 - (174 + 680))) and v17:Exists() and v13:CanAttack(v17)) then
-					if (v23(v82.ShadowCrashCursor, not v14:IsInRange(137 - 97)) or ((1808 - 935) == (1453 + 581))) then
-						return "shadow_crash precombat 8";
+			if (((3581 - (941 + 1052)) >= (1278 + 54)) and (v172 == (1515 - (822 + 692)))) then
+				v173 = v13:IsInParty() and not v13:IsInRaid();
+				if ((v79.ShadowCrash:IsCastable() and not v173) or ((5958 - 1784) > (2001 + 2247))) then
+					if ((v76 == "Confirm") or ((4883 - (45 + 252)) <= (82 + 0))) then
+						if (((1330 + 2533) == (9401 - 5538)) and v23(v79.ShadowCrash, not v14:IsInRange(473 - (114 + 319)))) then
+							return "shadow_crash precombat 8";
+						end
+					elseif ((v76 == "Enemy Under Cursor") or ((404 - 122) <= (53 - 11))) then
+						if (((2939 + 1670) >= (1140 - 374)) and v17:Exists() and v13:CanAttack(v17)) then
+							if (v23(v81.ShadowCrashCursor, not v14:IsInRange(83 - 43)) or ((3115 - (556 + 1407)) == (3694 - (741 + 465)))) then
+								return "shadow_crash precombat 8";
+							end
+						end
+					elseif (((3887 - (170 + 295)) > (1766 + 1584)) and (v76 == "At Cursor")) then
+						if (((806 + 71) > (925 - 549)) and v23(v81.ShadowCrashCursor, not v14:IsInRange(34 + 6))) then
+							return "shadow_crash precombat 8";
+						end
 					end
 				end
-			elseif ((v77 == "At Cursor") or ((3555 - (396 + 343)) < (1 + 10))) then
-				if (((5176 - (29 + 1448)) < (6095 - (135 + 1254))) and v23(v82.ShadowCrashCursor, not v14:IsInRange(150 - 110))) then
-					return "shadow_crash precombat 8";
+				v172 = 2 + 0;
+			end
+			if (((2 + 0) == v172) or ((4348 - (957 + 273)) <= (496 + 1355))) then
+				if ((v79.VampiricTouch:IsCastable() and (not v79.ShadowCrash:IsAvailable() or (v79.ShadowCrash:CooldownDown() and not v79.ShadowCrash:InFlight()) or v173)) or ((67 + 98) >= (13306 - 9814))) then
+					if (((10406 - 6457) < (14832 - 9976)) and v23(v79.VampiricTouch, not v14:IsSpellInRange(v79.VampiricTouch), true)) then
+						return "vampiric_touch precombat 14";
+					end
 				end
+				if ((v79.ShadowWordPain:IsCastable() and not v79.Misery:IsAvailable()) or ((21173 - 16897) < (4796 - (389 + 1391)))) then
+					if (((2943 + 1747) > (430 + 3695)) and v23(v79.ShadowWordPain, not v14:IsSpellInRange(v79.ShadowWordPain))) then
+						return "shadow_word_pain precombat 16";
+					end
+				end
+				break;
+			end
+			if ((v172 == (0 - 0)) or ((1001 - (783 + 168)) >= (3006 - 2110))) then
+				v104 = v14:GUID();
+				if ((v79.ArcaneTorrent:IsCastable() and v30) or ((1686 + 28) >= (3269 - (309 + 2)))) then
+					if (v23(v79.ArcaneTorrent, not v14:IsSpellInRange(v79.ArcaneTorrent)) or ((4578 - 3087) < (1856 - (1090 + 122)))) then
+						return "arcane_torrent precombat 6";
+					end
+				end
+				v172 = 1 + 0;
 			end
 		end
-		if (((12354 - 9708) >= (584 + 292)) and v80.VampiricTouch:IsCastable() and (not v80.ShadowCrash:IsAvailable() or (v80.ShadowCrash:CooldownDown() and not v80.ShadowCrash:InFlight()) or v173)) then
-			if (((2141 - (389 + 1138)) <= (3758 - (102 + 472))) and v23(v80.VampiricTouch, not v14:IsSpellInRange(v80.VampiricTouch), true)) then
-				return "vampiric_touch precombat 14";
+	end
+	local function v129()
+		local v174 = 0 - 0;
+		while true do
+			if (((482 + 222) < (2105 - (628 + 490))) and (v174 == (0 + 0))) then
+				v92 = v109(v14, false) or (v79.ShadowCrash:InFlight() and v79.WhisperingShadows:IsAvailable());
+				v93 = v109(v14, true);
+				v174 = 2 - 1;
 			end
-		end
-		if (((2950 + 176) == (1734 + 1392)) and v80.ShadowWordPain:IsCastable() and not v80.Misery:IsAvailable()) then
-			if (v23(v80.ShadowWordPain, not v14:IsSpellInRange(v80.ShadowWordPain)) or ((2040 + 147) >= (6499 - (320 + 1225)))) then
-				return "shadow_word_pain precombat 16";
+			if (((16991 - 13273) > (2680 - (431 + 343))) and (v174 == (1 - 0))) then
+				v99 = ((v79.VoidEruption:CooldownRemains() <= (v13:GCD() * (8 - 5))) and v79.VoidEruption:IsAvailable()) or (v79.DarkAscension:CooldownUp() and v79.DarkAscension:IsAvailable()) or (v79.VoidTorrent:IsAvailable() and v79.PsychicLink:IsAvailable() and (v79.VoidTorrent:CooldownRemains() <= (4 + 0)) and v13:BuffDown(v79.VoidformBuff));
+				break;
 			end
 		end
 	end
 	local function v130()
-		local v174 = 0 - 0;
+		local v175 = 0 + 0;
+		local v176;
 		while true do
-			if ((v174 == (1 + 0)) or ((5341 - (157 + 1307)) == (5434 - (821 + 1038)))) then
-				v100 = ((v80.VoidEruption:CooldownRemains() <= (v13:GCD() * (7 - 4))) and v80.VoidEruption:IsAvailable()) or (v80.DarkAscension:CooldownUp() and v80.DarkAscension:IsAvailable()) or (v80.VoidTorrent:IsAvailable() and v80.PsychicLink:IsAvailable() and (v80.VoidTorrent:CooldownRemains() <= (1 + 3)) and v13:BuffDown(v80.VoidformBuff));
-				break;
+			if ((v175 == (1695 - (556 + 1139))) or ((973 - (6 + 9)) > (666 + 2969))) then
+				v94 = v27(v87, v78);
+				v95 = false;
+				v175 = 1 + 0;
 			end
-			if (((1255 - 548) > (236 + 396)) and (v174 == (0 - 0))) then
-				v93 = v110(v14, false) or (v80.ShadowCrash:InFlight() and v80.WhisperingShadows:IsAvailable());
-				v94 = v110(v14, true);
-				v174 = 1027 - (834 + 192);
+			if (((3670 - (28 + 141)) <= (1740 + 2752)) and (v175 == (2 - 0))) then
+				v96 = ((v79.VampiricTouchDebuff:AuraActiveCount() + ((6 + 2) * v25(v79.ShadowCrash:InFlight() and v79.WhisperingShadows:IsAvailable()))) >= v94) or not v95;
+				if ((v97 and v79.WhisperingShadows:IsAvailable()) or ((4759 - (486 + 831)) < (6630 - 4082))) then
+					v97 = (v94 - v79.VampiricTouchDebuff:AuraActiveCount()) < (13 - 9);
+				end
+				v175 = 1 + 2;
+			end
+			if (((9090 - 6215) >= (2727 - (668 + 595))) and (v175 == (1 + 0))) then
+				v176 = v110(v85, true);
+				if ((v176 and (v176:TimeToDie() >= (4 + 14))) or ((13081 - 8284) >= (5183 - (23 + 267)))) then
+					v95 = true;
+				end
+				v175 = 1946 - (1129 + 815);
+			end
+			if ((v175 == (390 - (371 + 16))) or ((2301 - (1326 + 424)) > (3916 - 1848))) then
+				v98 = ((v79.VampiricTouchDebuff:AuraActiveCount() + ((29 - 21) * v25(not v97))) >= v94) or not v95;
+				break;
 			end
 		end
 	end
 	local function v131()
-		v95 = v27(v88, v79);
-		v96 = false;
-		local v175 = v111(v86, true);
-		if ((v175 and (v175:TimeToDie() >= (2 + 16))) or ((141 + 405) >= (58 + 2626))) then
-			v96 = true;
-		end
-		v97 = ((v80.VampiricTouchDebuff:AuraActiveCount() + ((12 - 4) * v25(v80.ShadowCrash:InFlight() and v80.WhisperingShadows:IsAvailable()))) >= v95) or not v96;
-		if (((1769 - (300 + 4)) <= (1149 + 3152)) and v98 and v80.WhisperingShadows:IsAvailable()) then
-			v98 = (v95 - v80.VampiricTouchDebuff:AuraActiveCount()) < (10 - 6);
-		end
-		v99 = ((v80.VampiricTouchDebuff:AuraActiveCount() + ((370 - (112 + 250)) * v25(not v98))) >= v95) or not v96;
-	end
-	local function v132()
-		if (((680 + 1024) > (3569 - 2144)) and (v13:BuffUp(v80.VoidformBuff) or v13:BuffUp(v80.PowerInfusionBuff) or v13:BuffUp(v80.DarkAscensionBuff) or (v92 < (12 + 8)))) then
-			local v208 = 0 + 0;
+		if (((2232 - (88 + 30)) > (1715 - (720 + 51))) and (v13:BuffUp(v79.VoidformBuff) or v13:BuffUp(v79.PowerInfusionBuff) or v13:BuffUp(v79.DarkAscensionBuff) or (v91 < (44 - 24)))) then
+			local v188 = 1776 - (421 + 1355);
 			while true do
-				if ((v208 == (1 + 0)) or ((341 + 346) == (3146 + 1088))) then
-					v90 = v89.HandleBottomTrinket(v83, CDs, 1454 - (1001 + 413), nil);
-					if (v90 or ((7425 - 4095) < (2311 - (244 + 638)))) then
-						return v90;
+				if (((1 - 0) == v188) or ((1112 + 1150) >= (4179 - (286 + 797)))) then
+					v89 = v88.HandleBottomTrinket(v82, CDs, 146 - 106, nil);
+					if (v89 or ((3734 - 1479) >= (3976 - (397 + 42)))) then
+						return v89;
 					end
 					break;
 				end
-				if (((1840 - (627 + 66)) >= (998 - 663)) and ((602 - (512 + 90)) == v208)) then
-					v90 = v89.HandleTopTrinket(v83, CDs, 1946 - (1665 + 241), nil);
-					if (((4152 - (373 + 344)) > (946 + 1151)) and v90) then
-						return v90;
+				if (((0 + 0) == v188) or ((4637 - (24 + 776)) < (2011 - 705))) then
+					v89 = v88.HandleTopTrinket(v82, CDs, 825 - (222 + 563), nil);
+					if (((6499 - 3549) == (2124 + 826)) and v89) then
+						return v89;
 					end
-					v208 = 1 + 0;
+					v188 = 191 - (23 + 167);
 				end
 			end
 		end
 	end
-	local function v133()
-		if ((v80.ShadowCrash:IsCastable() and (v14:DebuffDown(v80.VampiricTouchDebuff))) or ((9944 - 6174) >= (6838 - 2797))) then
-			if ((v77 == "Confirm") or ((4890 - (35 + 1064)) <= (1173 + 438))) then
-				if (v23(v80.ShadowCrash, not v14:IsInRange(85 - 45)) or ((19 + 4559) <= (3244 - (298 + 938)))) then
+	local function v132()
+		if ((v79.ShadowCrash:IsCastable() and (v14:DebuffDown(v79.VampiricTouchDebuff))) or ((6521 - (690 + 1108)) < (1190 + 2108))) then
+			if (((938 + 198) >= (1002 - (40 + 808))) and (v76 == "Confirm")) then
+				if (v23(v79.ShadowCrash, not v14:IsInRange(7 + 33)) or ((1036 - 765) > (4539 + 209))) then
 					return "shadow_crash opener 2";
 				end
-			elseif (((2384 - (233 + 1026)) <= (3742 - (636 + 1030))) and (v77 == "Enemy Under Cursor")) then
-				if ((v17:Exists() and v13:CanAttack(v17)) or ((380 + 363) >= (4297 + 102))) then
-					if (((344 + 811) < (114 + 1559)) and v23(v82.ShadowCrashCursor, not v14:IsInRange(261 - (55 + 166)))) then
+			elseif (((2508 + 2232) >= (1729 + 1423)) and (v76 == "Enemy Under Cursor")) then
+				if ((v17:Exists() and v13:CanAttack(v17)) or ((3149 - (47 + 524)) >= (2200 + 1190))) then
+					if (((112 - 71) <= (2483 - 822)) and v23(v81.ShadowCrashCursor, not v14:IsInRange(91 - 51))) then
 						return "shadow_crash opener 2";
 					end
 				end
-			elseif ((v77 == "At Cursor") or ((451 + 1873) <= (59 + 519))) then
-				if (((14386 - 10619) == (4064 - (36 + 261))) and v23(v82.ShadowCrashCursor, not v14:IsInRange(69 - 29))) then
+			elseif (((2327 - (1165 + 561)) < (106 + 3454)) and (v76 == "At Cursor")) then
+				if (((727 - 492) < (263 + 424)) and v23(v81.ShadowCrashCursor, not v14:IsInRange(519 - (341 + 138)))) then
 					return "shadow_crash opener 2";
 				end
 			end
 		end
-		if (((5457 - (34 + 1334)) == (1572 + 2517)) and v80.VampiricTouch:IsCastable() and v14:DebuffDown(v80.VampiricTouchDebuff) and (v80.ShadowCrash:CooldownDown() or not v80.ShadowCrash:IsAvailable())) then
-			if (((3464 + 994) >= (2957 - (1035 + 248))) and v22(v80.VampiricTouch, nil, nil, not v14:IsSpellInRange(v80.VampiricTouch))) then
+		if (((1228 + 3321) > (2379 - 1226)) and v79.VampiricTouch:IsCastable() and v14:DebuffDown(v79.VampiricTouchDebuff) and (v79.ShadowCrash:CooldownDown() or not v79.ShadowCrash:IsAvailable())) then
+			if (v22(v79.VampiricTouch, nil, nil, not v14:IsSpellInRange(v79.VampiricTouch)) or ((5000 - (89 + 237)) < (15029 - 10357))) then
 				return "vampiric_touch opener 3";
 			end
 		end
-		if (((993 - (20 + 1)) <= (739 + 679)) and v101:IsCastable() and v30) then
-			if (v23(v101) or ((5257 - (134 + 185)) < (5895 - (549 + 584)))) then
+		if (((7722 - 4054) < (5442 - (581 + 300))) and v100:IsCastable() and v30) then
+			if (v23(v100) or ((1675 - (855 + 365)) == (8562 - 4957))) then
 				return "mindbender opener 4";
 			end
 		end
-		if (v80.DarkAscension:IsCastable() or ((3189 - (314 + 371)) > (14638 - 10374))) then
-			if (((3121 - (478 + 490)) == (1141 + 1012)) and v23(v80.DarkAscension)) then
+		if (v79.DarkAscension:IsCastable() or ((870 + 1793) == (4547 - (1030 + 205)))) then
+			if (((4016 + 261) <= (4163 + 312)) and v23(v79.DarkAscension)) then
 				return "dark_ascension opener 6";
 			end
 		end
-		if (v80.VoidEruption:IsAvailable() or ((1679 - (786 + 386)) >= (8392 - 5801))) then
-			local v209 = 1379 - (1055 + 324);
+		if (v79.VoidEruption:IsAvailable() or ((1156 - (156 + 130)) == (2701 - 1512))) then
+			local v189 = 0 - 0;
 			while true do
-				if (((5821 - (1093 + 247)) == (3982 + 499)) and (v209 == (1 + 0))) then
-					if (v80.VoidEruption:IsCastable() or ((9242 - 6914) < (2351 - 1658))) then
-						if (((12315 - 7987) == (10875 - 6547)) and v23(v80.VoidEruption, not v14:IsInRange(15 + 25), true)) then
+				if (((3180 - 1627) <= (826 + 2307)) and (v189 == (1 + 0))) then
+					if (v79.VoidEruption:IsCastable() or ((2306 - (10 + 59)) >= (993 + 2518))) then
+						if (v23(v79.VoidEruption, not v14:IsInRange(196 - 156), true) or ((2487 - (671 + 492)) > (2405 + 615))) then
 							return "void_eruption opener 12";
 						end
 					end
 					break;
 				end
-				if (((6117 - 4529) >= (4590 - 3258)) and (v209 == (0 + 0))) then
-					if ((v80.ShadowWordDeath:IsCastable() and v80.InescapableTorment:IsAvailable() and v13:PrevGCDP(2 - 1, v80.MindBlast) and (v80.ShadowWordDeath:TimeSinceLastCast() > (708 - (364 + 324)))) or ((11442 - 7268) > (10193 - 5945))) then
-						if (v23(v80.ShadowWordDeath, not v14:IsSpellInRange(v80.ShadowWordDeath)) or ((1520 + 3066) <= (342 - 260))) then
+				if ((v189 == (1215 - (369 + 846))) or ((793 + 2199) == (1606 + 275))) then
+					if (((5051 - (1036 + 909)) > (1214 + 312)) and v79.ShadowWordDeath:IsCastable() and v79.InescapableTorment:IsAvailable() and v13:PrevGCDP(1 - 0, v79.MindBlast) and (v79.ShadowWordDeath:TimeSinceLastCast() > (223 - (11 + 192)))) then
+						if (((1528 + 1495) < (4045 - (135 + 40))) and v23(v79.ShadowWordDeath, not v14:IsSpellInRange(v79.ShadowWordDeath))) then
 							return "shadow_word_death opener 8";
 						end
 					end
-					if (((6186 - 2323) == (11732 - 7869)) and v80.MindBlast:IsCastable()) then
-						if (v23(v80.MindBlast, not v14:IsSpellInRange(v80.MindBlast), true) or ((1550 - (1249 + 19)) <= (38 + 4))) then
+					if (((346 - 203) > (45 + 29)) and v79.MindBlast:IsCastable()) then
+						if (((39 - 21) < (3165 - 1053)) and v23(v79.MindBlast, not v14:IsSpellInRange(v79.MindBlast), true)) then
 							return "mind_blast opener 10";
 						end
 					end
-					v209 = 3 - 2;
+					v189 = 177 - (50 + 126);
 				end
 			end
 		end
-		v90 = v132();
-		if (((5695 - (686 + 400)) >= (602 + 164)) and v90) then
-			return v90;
+		v89 = v131();
+		if (((3054 - 1957) <= (361 + 1267)) and v89) then
+			return v89;
 		end
-		if (v80.VoidBolt:IsCastable() or ((1381 - (73 + 156)) == (12 + 2476))) then
-			if (((4233 - (721 + 90)) > (38 + 3312)) and v23(v80.VoidBolt, not v14:IsInRange(129 - 89))) then
+		if (((6043 - (1233 + 180)) == (5599 - (522 + 447))) and v79.VoidBolt:IsCastable()) then
+			if (((4961 - (107 + 1314)) > (1246 + 1437)) and v23(v79.VoidBolt, not v14:IsInRange(121 - 81))) then
 				return "void_bolt opener 16";
 			end
 		end
-		if (((1347 - (224 + 246)) > (608 - 232)) and v80.DevouringPlague:IsReady()) then
-			if (v23(v80.DevouringPlague, not v14:IsSpellInRange(v80.DevouringPlague)) or ((5740 - 2622) <= (336 + 1515))) then
+		if (((2037 + 2757) >= (6503 - 3228)) and v79.DevouringPlague:IsReady()) then
+			if (((5871 - 4387) == (3394 - (716 + 1194))) and v23(v79.DevouringPlague, not v14:IsSpellInRange(v79.DevouringPlague))) then
 				return "devouring_plague opener 18";
 			end
 		end
-		if (v80.MindBlast:IsCastable() or ((4 + 161) >= (2565 + 927))) then
-			if (((7850 - 3901) < (16159 - 11303)) and v23(v80.MindBlast, not v14:IsSpellInRange(v80.MindBlast), true)) then
+		if (((25 + 1407) < (381 + 3174)) and v79.MindBlast:IsCastable()) then
+			if (v23(v79.MindBlast, not v14:IsSpellInRange(v79.MindBlast), true) or ((1568 - (74 + 429)) > (6901 - 3323))) then
 				return "mind_blast opener 20";
 			end
 		end
-		if (v80.MindSpike:IsCastable() or ((4789 - (203 + 310)) < (5009 - (1238 + 755)))) then
-			if (((328 + 4362) > (5659 - (709 + 825))) and v23(v80.MindSpike, not v14:IsSpellInRange(v80.MindSpike), true)) then
+		if (v79.MindSpike:IsCastable() or ((2377 + 2418) < (3220 - 1813))) then
+			if (((1311 + 542) < (14837 - 10024)) and v23(v79.MindSpike, not v14:IsSpellInRange(v79.MindSpike), true)) then
 				return "mind_spike opener 22";
 			end
 		end
-		if (v80.MindFlay:IsCastable() or ((92 - 42) >= (1304 - 408))) then
-			if (v23(v80.MindFlay, not v14:IsSpellInRange(v80.MindFlay), true) or ((2578 - (196 + 668)) >= (11678 - 8720))) then
+		if (v79.MindFlay:IsCastable() or ((6974 - 4153) < (2864 - (279 + 154)))) then
+			if (v23(v79.MindFlay, not v14:IsSpellInRange(v79.MindFlay), true) or ((3652 - (454 + 324)) < (1716 + 465))) then
 				return "mind_flay opener 24";
 			end
 		end
 	end
-	local function v134()
-		if ((v80.VampiricTouch:IsCastable() and (v13:BuffUp(v80.UnfurlingDarknessBuff))) or ((3088 - 1597) < (1477 - (171 + 662)))) then
-			if (((797 - (4 + 89)) < (3459 - 2472)) and v89.CastTargetIf(v80.VampiricTouch, v85, "min", v114, nil, not v14:IsSpellInRange(v80.VampiricTouch), nil, nil, nil, true)) then
+	local function v133()
+		if ((v79.VampiricTouch:IsCastable() and (v13:BuffUp(v79.UnfurlingDarknessBuff))) or ((2706 - (12 + 5)) <= (185 + 158))) then
+			if (v88.CastTargetIf(v79.VampiricTouch, v84, "min", v113, nil, not v14:IsSpellInRange(v79.VampiricTouch), nil, nil, nil, true) or ((4761 - 2892) == (743 + 1266))) then
 				return "vampiric_touch filler 2";
 			end
 		end
-		if (((1354 + 2364) > (8371 - 6465)) and v80.ShadowWordDeath:IsReady()) then
-			if (v89.CastCycle(v80.ShadowWordDeath, v85, v122, not v14:IsSpellInRange(v80.ShadowWordDeath), nil, nil, v82.ShadowWordDeathMouseover) or ((376 + 582) > (5121 - (35 + 1451)))) then
+		if (v79.ShadowWordDeath:IsReady() or ((4639 - (277 + 816)) < (9921 - 7599))) then
+			if (v88.CastCycle(v79.ShadowWordDeath, v84, v121, not v14:IsSpellInRange(v79.ShadowWordDeath), nil, nil, v81.ShadowWordDeathMouseover) or ((3265 - (1058 + 125)) == (895 + 3878))) then
 				return "shadow_word_death filler 4";
 			end
 		end
-		if (((4954 - (28 + 1425)) <= (6485 - (941 + 1052))) and v80.MindSpikeInsanity:IsReady()) then
-			if (v23(v80.MindSpikeInsanity, not v14:IsSpellInRange(v80.MindSpikeInsanity), true) or ((3301 + 141) < (4062 - (822 + 692)))) then
+		if (((4219 - (815 + 160)) > (4526 - 3471)) and v79.MindSpikeInsanity:IsReady()) then
+			if (v23(v79.MindSpikeInsanity, not v14:IsSpellInRange(v79.MindSpikeInsanity), true) or ((7864 - 4551) <= (425 + 1353))) then
 				return "mind_spike_insanity filler 6";
 			end
 		end
-		if (((4104 - 1229) >= (690 + 774)) and v80.MindFlay:IsCastable() and (v13:BuffUp(v80.MindFlayInsanityBuff))) then
-			if (v23(v80.MindSpike, not v14:IsSpellInRange(v80.MindSpike), true) or ((5094 - (45 + 252)) >= (4842 + 51))) then
+		if ((v79.MindFlay:IsCastable() and (v13:BuffUp(v79.MindFlayInsanityBuff))) or ((4153 - 2732) >= (4002 - (41 + 1857)))) then
+			if (((3705 - (1222 + 671)) <= (8397 - 5148)) and v23(v79.MindSpike, not v14:IsSpellInRange(v79.MindSpike), true)) then
 				return "mind_flay filler 8";
 			end
 		end
-		if (v80.Mindgames:IsReady() or ((190 + 361) > (5032 - 2964))) then
-			if (((2547 - (114 + 319)) > (1355 - 411)) and v23(v80.Mindgames, not v14:IsInRange(51 - 11), true)) then
+		if (((2332 - 709) <= (3139 - (229 + 953))) and v79.Mindgames:IsReady()) then
+			if (((6186 - (1111 + 663)) == (5991 - (874 + 705))) and v23(v79.Mindgames, not v14:IsInRange(6 + 34), true)) then
 				return "mindgames filler 10";
 			end
 		end
-		if ((v80.ShadowWordDeath:IsReady() and v80.InescapableTorment:IsAvailable() and v102) or ((1442 + 820) >= (4612 - 1516))) then
-			if (v89.CastTargetIf(v80.ShadowWordDeath, v85, "min", v113, nil, not v14:IsSpellInRange(v80.ShadowWordDeath), nil, nil, v82.ShadowWordDeathMouseover) or ((4724 - 2469) >= (5500 - (556 + 1407)))) then
+		if (((1194 + 556) >= (1749 - 907)) and v79.ShadowWordDeath:IsReady() and v79.InescapableTorment:IsAvailable() and v101) then
+			if (((124 + 4248) > (2529 - (642 + 37))) and v88.CastTargetIf(v79.ShadowWordDeath, v84, "min", v112, nil, not v14:IsSpellInRange(v79.ShadowWordDeath), nil, nil, v81.ShadowWordDeathMouseover)) then
 				return "shadow_word_death filler 12";
 			end
 		end
-		if ((v80.DivineStar:IsReady() and (v16:HealthPercentage() < DivineStarHP) and v66) or ((5043 - (741 + 465)) < (1771 - (170 + 295)))) then
-			if (((1555 + 1395) == (2710 + 240)) and v23(v82.DivineStarPlayer, not v16:IsInRange(73 - 43))) then
+		if (((53 + 179) < (132 + 689)) and v79.DivineStar:IsReady() and (v16:HealthPercentage() < v65) and v64) then
+			if (((1300 - 782) < (1356 - (233 + 221))) and v23(v81.DivineStarPlayer, not v16:IsInRange(69 - 39))) then
 				return "divine_star heal";
 			end
 		end
-		if ((v80.Halo:IsReady() and v89.TargetIsValid() and v14:IsInRange(25 + 5) and v63 and v89.AreUnitsBelowHealthPercentage(v64, v65)) or ((3029 + 1694) < (1868 + 1430))) then
-			if (((2366 - (957 + 273)) >= (42 + 112)) and v23(v80.Halo, nil, true)) then
+		if (((2636 + 358) > (2399 - (718 + 823))) and v79.Halo:IsReady() and v88.TargetIsValid() and v14:IsInRange(19 + 11) and v61 and v88.AreUnitsBelowHealthPercentage(v62, v63)) then
+			if (v23(v79.Halo, nil, true) or ((4560 - (266 + 539)) <= (2590 - 1675))) then
 				return "halo heal";
 			end
 		end
-		if (v80.MindSpike:IsCastable() or ((109 + 162) > (18091 - 13343))) then
-			if (((12490 - 7750) >= (9627 - 6475)) and v23(v80.MindSpike, not v14:IsSpellInRange(v80.MindSpike), true)) then
+		if (((5171 - (636 + 589)) > (8884 - 5141)) and v79.MindSpike:IsCastable()) then
+			if (v23(v79.MindSpike, not v14:IsSpellInRange(v79.MindSpike), true) or ((2753 - 1418) >= (2620 + 686))) then
 				return "mind_spike filler 16";
 			end
 		end
-		if (v106:IsCastable() or ((12765 - 10187) >= (5170 - (389 + 1391)))) then
-			if (((26 + 15) <= (173 + 1488)) and v23(v106, not v14:IsSpellInRange(v106), true)) then
+		if (((1760 + 3084) > (3268 - (657 + 358))) and v105:IsCastable()) then
+			if (((1196 - 744) == (1029 - 577)) and v23(v105, not v14:IsSpellInRange(v105), true)) then
 				return "mind_flay filler 18";
 			end
 		end
-		if (((1368 - 767) < (4511 - (783 + 168))) and v80.ShadowCrash:IsCastable()) then
-			if (((788 - 553) < (676 + 11)) and (v77 == "Confirm")) then
-				if (((4860 - (309 + 2)) > (3540 - 2387)) and v23(v80.ShadowCrash, not v14:IsInRange(1252 - (1090 + 122)))) then
+		if (v79.ShadowCrash:IsCastable() or ((5744 - (1151 + 36)) < (2016 + 71))) then
+			if (((1019 + 2855) == (11569 - 7695)) and (v76 == "Confirm")) then
+				if (v23(v79.ShadowCrash, not v14:IsInRange(1872 - (1552 + 280))) or ((2772 - (64 + 770)) > (3351 + 1584))) then
 					return "shadow_crash filler 20";
 				end
-			elseif ((v77 == "Enemy Under Cursor") or ((1516 + 3158) < (15690 - 11018))) then
-				if (((2511 + 1157) < (5679 - (628 + 490))) and v17:Exists() and v13:CanAttack(v17)) then
-					if (v23(v82.ShadowCrashCursor, not v14:IsInRange(8 + 32)) or ((1126 - 671) == (16474 - 12869))) then
+			elseif ((v76 == "Enemy Under Cursor") or ((9659 - 5404) < (608 + 2815))) then
+				if (((2697 - (157 + 1086)) <= (4985 - 2494)) and v17:Exists() and v13:CanAttack(v17)) then
+					if (v23(v81.ShadowCrashCursor, not v14:IsInRange(175 - 135)) or ((6376 - 2219) <= (3824 - 1021))) then
 						return "shadow_crash filler 20";
 					end
 				end
-			elseif ((v77 == "At Cursor") or ((3437 - (431 + 343)) == (6688 - 3376))) then
-				if (((12372 - 8095) <= (3536 + 939)) and v23(v82.ShadowCrashCursor, not v14:IsInRange(6 + 34))) then
+			elseif (((5672 - (599 + 220)) >= (5937 - 2955)) and (v76 == "At Cursor")) then
+				if (((6065 - (1813 + 118)) > (2454 + 903)) and v23(v81.ShadowCrashCursor, not v14:IsInRange(1257 - (841 + 376)))) then
 					return "shadow_crash filler 20";
 				end
 			end
 		end
-		if (v80.ShadowWordDeath:IsReady() or ((2565 - (556 + 1139)) == (1204 - (6 + 9)))) then
-			if (((285 + 1268) <= (1605 + 1528)) and v89.CastCycle(v80.ShadowWordDeath, v85, v123, not v14:IsSpellInRange(v80.ShadowWordDeath), nil, nil, v82.ShadowWordDeathMouseover)) then
+		if (v79.ShadowWordDeath:IsReady() or ((4787 - 1370) < (589 + 1945))) then
+			if (v88.CastCycle(v79.ShadowWordDeath, v84, v122, not v14:IsSpellInRange(v79.ShadowWordDeath), nil, nil, v81.ShadowWordDeathMouseover) or ((7429 - 4707) <= (1023 - (464 + 395)))) then
 				return "shadow_word_death filler 22";
 			end
 		end
-		if ((v80.ShadowWordDeath:IsReady() and v13:IsMoving()) or ((2406 - (28 + 141)) >= (1360 + 2151))) then
-			if (v23(v80.ShadowWordDeath, not v14:IsSpellInRange(v80.ShadowWordDeath)) or ((1633 - 309) > (2139 + 881))) then
+		if ((v79.ShadowWordDeath:IsReady() and v13:IsMoving()) or ((6179 - 3771) < (1013 + 1096))) then
+			if (v23(v79.ShadowWordDeath, not v14:IsSpellInRange(v79.ShadowWordDeath)) or ((870 - (467 + 370)) == (3006 - 1551))) then
 				return "shadow_word_death movement filler 26";
 			end
 		end
-		if ((v80.ShadowWordPain:IsReady() and v13:IsMoving()) or ((4309 - (486 + 831)) == (4894 - 3013))) then
-			if (((10935 - 7829) > (289 + 1237)) and v89.CastTargetIf(v80.ShadowWordPain, v85, "min", v112, nil, not v14:IsSpellInRange(v80.ShadowWordPain))) then
+		if ((v79.ShadowWordPain:IsReady() and v13:IsMoving()) or ((326 + 117) >= (13763 - 9748))) then
+			if (((528 + 2854) > (386 - 220)) and v88.CastTargetIf(v79.ShadowWordPain, v84, "min", v111, nil, not v14:IsSpellInRange(v79.ShadowWordPain))) then
 				return "shadow_word_pain filler 28";
 			end
 		end
 	end
-	local function v135()
-		local v176 = 0 - 0;
+	local function v134()
+		local v177 = 520 - (150 + 370);
 		while true do
-			if (((4286 - (668 + 595)) < (3483 + 387)) and (v176 == (1 + 0))) then
-				if (((389 - 246) > (364 - (23 + 267))) and v80.BloodFury:IsCastable() and (v13:BuffUp(v80.PowerInfusionBuff) or (v92 <= (1959 - (1129 + 815))))) then
-					if (((405 - (371 + 16)) < (3862 - (1326 + 424))) and v23(v80.BloodFury)) then
-						return "blood_fury cds 8";
-					end
-				end
-				if (((2077 - 980) <= (5949 - 4321)) and v80.AncestralCall:IsCastable() and (v13:BuffUp(v80.PowerInfusionBuff) or (v92 <= (133 - (88 + 30))))) then
-					if (((5401 - (720 + 51)) == (10299 - 5669)) and v23(v80.AncestralCall)) then
-						return "ancestral_call cds 10";
-					end
-				end
-				v176 = 1778 - (421 + 1355);
-			end
-			if (((5840 - 2300) > (1318 + 1365)) and (v176 == (1086 - (286 + 797)))) then
-				if (((17525 - 12731) >= (5424 - 2149)) and v80.DarkAscension:IsCastable() and not v13:IsCasting(v80.DarkAscension) and ((v102 and (v101:CooldownRemains() >= (443 - (397 + 42)))) or (not v80.Mindbender:IsAvailable() and v101:CooldownDown()) or ((v88 > (1 + 1)) and not v80.InescapableTorment:IsAvailable()))) then
-					if (((2284 - (24 + 776)) == (2285 - 801)) and v23(v80.DarkAscension)) then
+			if ((v177 == (1285 - (74 + 1208))) or ((688 - 408) == (14507 - 11448))) then
+				if (((1339 + 542) > (1683 - (14 + 376))) and v79.DarkAscension:IsCastable() and not v13:IsCasting(v79.DarkAscension) and ((v101 and (v100:CooldownRemains() >= (6 - 2))) or (not v79.Mindbender:IsAvailable() and v100:CooldownDown()) or ((v87 > (2 + 0)) and not v79.InescapableTorment:IsAvailable()))) then
+					if (((2071 + 286) == (2248 + 109)) and v23(v79.DarkAscension)) then
 						return "dark_ascension cds 22";
 					end
 				end
-				if (((2217 - (222 + 563)) < (7832 - 4277)) and v30) then
-					local v214 = 0 + 0;
+				if (((360 - 237) == (93 + 30)) and v30) then
+					local v217 = 78 - (23 + 55);
 					while true do
-						if (((190 - (23 + 167)) == v214) or ((2863 - (690 + 1108)) > (1291 + 2287))) then
-							v90 = v132();
-							if (v90 or ((3956 + 839) < (2255 - (40 + 808)))) then
-								return v90;
+						if ((v217 == (0 - 0)) or ((705 + 351) >= (3047 + 345))) then
+							v89 = v131();
+							if (v89 or ((1675 - 594) < (339 + 736))) then
+								return v89;
 							end
 							break;
 						end
@@ -559,319 +583,331 @@ v0["Epix_Priest_Shadow.lua"] = function(...)
 				end
 				break;
 			end
-			if (((306 + 1547) < (18404 - 13591)) and (v176 == (2 + 0))) then
-				if ((v80.DivineStar:IsReady() and (v88 > (1 + 0)) and v81.BelorrelostheSuncaller:IsEquipped() and (v81.BelorrelostheSuncaller:CooldownRemains() <= v107)) or ((1547 + 1274) < (3002 - (47 + 524)))) then
-					if (v23(v82.DivineStarPlayer, not v16:IsInRange(20 + 10)) or ((7856 - 4982) < (3260 - 1079))) then
-						return "divine_star cds 16";
-					end
-				end
-				if ((v80.VoidEruption:IsCastable() and v101:CooldownDown() and ((v102 and (v101:CooldownRemains() >= (8 - 4))) or not v80.Mindbender:IsAvailable() or ((v88 > (1728 - (1165 + 561))) and not v80.InescapableTorment:IsAvailable())) and ((v80.MindBlast:Charges() == (0 + 0)) or (v10.CombatTime() > (46 - 31)))) or ((1026 + 1663) <= (822 - (341 + 138)))) then
-					if (v23(v80.VoidEruption) or ((505 + 1364) == (4145 - 2136))) then
-						return "void_eruption cds 20";
-					end
-				end
-				v176 = 329 - (89 + 237);
-			end
-			if ((v176 == (0 - 0)) or ((7465 - 3919) < (3203 - (581 + 300)))) then
-				if ((v80.Fireblood:IsCastable() and (v13:BuffUp(v80.PowerInfusionBuff) or (v92 <= (1228 - (855 + 365))))) or ((4944 - 2862) == (1559 + 3214))) then
-					if (((4479 - (1030 + 205)) > (991 + 64)) and v23(v80.Fireblood)) then
+			if (((901 - (652 + 249)) == v177) or ((2807 - 1758) >= (6300 - (708 + 1160)))) then
+				if ((v79.Fireblood:IsCastable() and (v13:BuffUp(v79.PowerInfusionBuff) or (v91 <= (21 - 13)))) or ((8692 - 3924) <= (873 - (10 + 17)))) then
+					if (v23(v79.Fireblood) or ((755 + 2603) <= (3152 - (1400 + 332)))) then
 						return "fireblood cds 4";
 					end
 				end
-				if ((v80.Berserking:IsCastable() and (v13:BuffUp(v80.PowerInfusionBuff) or (v92 <= (12 + 0)))) or ((3599 - (156 + 130)) <= (4039 - 2261))) then
-					if (v23(v80.Berserking) or ((2394 - 973) >= (4308 - 2204))) then
+				if ((v79.Berserking:IsCastable() and (v13:BuffUp(v79.PowerInfusionBuff) or (v91 <= (22 - 10)))) or ((5647 - (242 + 1666)) <= (1286 + 1719))) then
+					if (v23(v79.Berserking) or ((609 + 1050) >= (1819 + 315))) then
 						return "berserking cds 6";
 					end
 				end
-				v176 = 1 + 0;
+				v177 = 941 - (850 + 90);
 			end
-		end
-	end
-	local function v136()
-		local v177 = 0 + 0;
-		while true do
-			if (((1881 - (10 + 59)) <= (919 + 2330)) and (v177 == (19 - 15))) then
-				if (((2786 - (671 + 492)) <= (1558 + 399)) and v80.ShadowWordDeath:IsReady() and (v13:BuffStack(v80.DeathsTormentBuff) > (1224 - (369 + 846))) and v13:HasTier(9 + 22, 4 + 0) and (not v98 or not v80.ShadowCrash:IsAvailable())) then
-					if (((6357 - (1036 + 909)) == (3508 + 904)) and v23(v80.ShadowWordDeath, not v14:IsSpellInRange(v80.ShadowWordDeath))) then
-						return "shadow_word_death main 22";
+			if ((v177 == (3 - 1)) or ((4650 - (360 + 1030)) < (2085 + 270))) then
+				if ((v79.DivineStar:IsReady() and (v87 > (2 - 1)) and v80.BelorrelostheSuncaller:IsEquipped() and (v80.BelorrelostheSuncaller:CooldownRemains() <= v106)) or ((919 - 250) == (5884 - (909 + 752)))) then
+					if (v23(v81.DivineStarPlayer, not v16:IsInRange(1253 - (109 + 1114))) or ((3097 - 1405) < (229 + 359))) then
+						return "divine_star cds 16";
 					end
 				end
-				if (((2938 - 1188) >= (1045 - (11 + 192))) and v80.ShadowWordDeath:IsReady() and v93 and v80.InescapableTorment:IsAvailable() and v102 and ((not v80.InsidiousIre:IsAvailable() and not v80.IdolOfYoggSaron:IsAvailable()) or v13:BuffUp(v80.DeathspeakerBuff)) and not v13:HasTier(16 + 15, 177 - (135 + 40))) then
-					if (((10592 - 6220) > (1116 + 734)) and v23(v80.ShadowWordDeath, not v14:IsSpellInRange(v80.ShadowWordDeath))) then
-						return "shadow_word_death main 24";
-					end
-				end
-				if (((510 - 278) < (1230 - 409)) and v80.VampiricTouch:IsCastable()) then
-					if (((694 - (50 + 126)) < (2511 - 1609)) and v89.CastTargetIf(v80.VampiricTouch, v85, "min", v114, v115, not v14:IsSpellInRange(v80.VampiricTouch))) then
-						return "vampiric_touch main 26";
-					end
-				end
-				v177 = 2 + 3;
-			end
-			if (((4407 - (1233 + 180)) > (1827 - (522 + 447))) and (v177 == (1427 - (107 + 1314)))) then
-				if (v90 or ((1743 + 2012) <= (2788 - 1873))) then
-					return v90;
-				end
-				break;
-			end
-			if (((1676 + 2270) > (7432 - 3689)) and (v177 == (11 - 8))) then
-				if ((v80.DevouringPlague:IsReady() and ((v13:InsanityDeficit() <= (1930 - (716 + 1194))) or (v13:BuffUp(v80.VoidformBuff) and (v80.VoidBolt:CooldownRemains() > v13:BuffRemains(v80.VoidformBuff)) and (v80.VoidBolt:CooldownRemains() <= (v13:BuffRemains(v80.VoidformBuff) + 1 + 1))) or (v13:BuffUp(v80.MindDevourerBuff) and (v13:PMultiplier(v80.DevouringPlague) < (1.2 + 0))))) or ((1838 - (74 + 429)) >= (6377 - 3071))) then
-					if (((2401 + 2443) > (5157 - 2904)) and v89.CastCycle(v80.DevouringPlague, v85, v116, not v14:IsSpellInRange(v80.DevouringPlague), nil, nil, v82.DevouringPlagueMouseover)) then
-						return "devouring_plague main 16";
-					end
-				end
-				if (((320 + 132) == (1393 - 941)) and v80.ShadowWordDeath:IsReady() and (v13:HasTier(76 - 45, 435 - (279 + 154)))) then
-					if (v23(v80.ShadowWordDeath, not v14:IsSpellInRange(v80.ShadowWordDeath)) or ((5335 - (454 + 324)) < (1642 + 445))) then
-						return "shadow_word_death main 18";
-					end
-				end
-				if (((3891 - (12 + 5)) == (2089 + 1785)) and v80.ShadowCrash:IsCastable() and not v98 and (v14:DebuffRefreshable(v80.VampiricTouchDebuff) or ((v13:BuffStack(v80.DeathsTormentBuff) > (22 - 13)) and v13:HasTier(12 + 19, 1097 - (277 + 816))))) then
-					if ((v77 == "Confirm") or ((8281 - 6343) > (6118 - (1058 + 125)))) then
-						if (v23(v80.ShadowCrash, not v14:IsInRange(8 + 32)) or ((5230 - (815 + 160)) < (14686 - 11263))) then
-							return "shadow_crash main 20";
-						end
-					elseif (((3451 - 1997) <= (595 + 1896)) and (v77 == "Enemy Under Cursor")) then
-						if ((v17:Exists() and v13:CanAttack(v17)) or ((12151 - 7994) <= (4701 - (41 + 1857)))) then
-							if (((6746 - (1222 + 671)) >= (7707 - 4725)) and v23(v82.ShadowCrashCursor, not v14:IsInRange(57 - 17))) then
-								return "shadow_crash main 20";
-							end
-						end
-					elseif (((5316 - (229 + 953)) > (5131 - (1111 + 663))) and (v77 == "At Cursor")) then
-						if (v23(v82.ShadowCrashCursor, not v14:IsInRange(1619 - (874 + 705))) or ((479 + 2938) < (1729 + 805))) then
-							return "shadow_crash main 20";
-						end
-					end
-				end
-				v177 = 7 - 3;
-			end
-			if ((v177 == (0 + 0)) or ((3401 - (642 + 37)) <= (38 + 126))) then
-				v130();
-				if ((v30 and ((v92 < (5 + 25)) or ((v14:TimeToDie() > (37 - 22)) and (not v98 or (v88 > (456 - (233 + 221))))))) or ((5568 - 3160) < (1857 + 252))) then
-					v90 = v135();
-					if (v90 or ((1574 - (718 + 823)) == (916 + 539))) then
-						return v90;
-					end
-				end
-				if ((v101:IsCastable() and v93 and ((v92 < (835 - (266 + 539))) or (v14:TimeToDie() > (42 - 27))) and (not v80.DarkAscension:IsAvailable() or (v80.DarkAscension:CooldownRemains() < v107) or (v92 < (1240 - (636 + 589))))) or ((1051 - 608) >= (8280 - 4265))) then
-					if (((2681 + 701) > (61 + 105)) and v23(v101)) then
-						return "mindbender main 2";
-					end
-				end
-				v177 = 1016 - (657 + 358);
-			end
-			if ((v177 == (13 - 8)) or ((637 - 357) == (4246 - (1151 + 36)))) then
-				if (((1817 + 64) > (340 + 953)) and v80.MindBlast:IsCastable() and (v13:BuffDown(v80.MindDevourerBuff) or (v80.VoidEruption:CooldownUp() and v80.VoidEruption:IsAvailable()))) then
-					if (((7038 - 4681) == (4189 - (1552 + 280))) and v23(v80.MindBlast, not v14:IsSpellInRange(v80.MindBlast), true)) then
-						return "mind_blast main 26";
-					end
-				end
-				if (((957 - (64 + 770)) == (84 + 39)) and v80.VoidTorrent:IsCastable() and not v98) then
-					if (v89.CastCycle(v80.VoidTorrent, v85, v125, not v14:IsSpellInRange(v80.VoidTorrent), nil, nil, v82.VoidTorrentMouseover, true) or ((2397 - 1341) >= (603 + 2789))) then
-						return "void_torrent main 28";
-					end
-				end
-				v90 = v134();
-				v177 = 1249 - (157 + 1086);
-			end
-			if ((v177 == (1 - 0)) or ((4734 - 3653) < (1648 - 573))) then
-				if (v80.DevouringPlague:IsReady() or ((1431 - 382) >= (5251 - (599 + 220)))) then
-					if (v89.CastCycle(v80.DevouringPlague, v85, v116, not v14:IsSpellInRange(v80.DevouringPlague)) or ((9494 - 4726) <= (2777 - (1813 + 118)))) then
-						return "devouring_plague main 4";
-					end
-				end
-				if ((v80.ShadowWordDeath:IsReady() and (v13:HasTier(23 + 8, 1221 - (841 + 376)) or (v102 and v80.InescapableTorment:IsAvailable() and v13:HasTier(43 - 12, 1 + 1))) and v14:DebuffUp(v80.DevouringPlagueDebuff)) or ((9165 - 5807) <= (2279 - (464 + 395)))) then
-					if (v23(v80.ShadowWordDeath, not v14:IsSpellInRange(v80.ShadowWordDeath)) or ((9595 - 5856) <= (1444 + 1561))) then
-						return "shadow_word_death main 6";
-					end
-				end
-				if ((v80.MindBlast:IsCastable() and v102 and v80.InescapableTorment:IsAvailable() and (v103 > v80.MindBlast:ExecuteTime()) and (v88 <= (844 - (467 + 370)))) or ((3427 - 1768) >= (1567 + 567))) then
-					if (v89.CastCycle(v80.MindBlast, v85, v118, not v14:IsSpellInRange(v80.MindBlast), nil, nil, v82.MindBlastMouseover, true) or ((11175 - 7915) < (368 + 1987))) then
-						return "mind_blast main 8";
-					end
-				end
-				v177 = 4 - 2;
-			end
-			if ((v177 == (522 - (150 + 370))) or ((1951 - (74 + 1208)) == (10386 - 6163))) then
-				if (v80.ShadowWordDeath:IsReady() or ((8024 - 6332) < (419 + 169))) then
-					if (v89.CastCycle(v80.ShadowWordDeath, v85, v124, not v14:IsSpellInRange(v80.ShadowWordDeath), nil, nil, v82.ShadowWordDeathMouseover) or ((5187 - (14 + 376)) < (6332 - 2681))) then
-						return "shadow_word_death main 10";
-					end
-				end
-				if ((v80.VoidBolt:IsCastable() and v93) or ((2703 + 1474) > (4261 + 589))) then
-					if (v23(v80.VoidBolt, not v14:IsInRange(39 + 1)) or ((1172 - 772) > (836 + 275))) then
-						return "void_bolt main 12";
-					end
-				end
-				if (((3129 - (23 + 55)) > (2381 - 1376)) and v80.DevouringPlague:IsReady() and (v92 <= (v80.DevouringPlagueDebuff:BaseDuration() + 3 + 1))) then
-					if (((3317 + 376) <= (6794 - 2412)) and v23(v80.DevouringPlague, not v14:IsSpellInRange(v80.DevouringPlague))) then
-						return "devouring_plague main 14";
+				if ((v79.VoidEruption:IsCastable() and v100:CooldownDown() and ((v101 and (v100:CooldownRemains() >= (246 - (6 + 236)))) or not v79.Mindbender:IsAvailable() or ((v87 > (2 + 0)) and not v79.InescapableTorment:IsAvailable())) and ((v79.MindBlast:Charges() == (0 + 0)) or (v10.CombatTime() > (35 - 20)))) or ((8378 - 3581) < (4784 - (1076 + 57)))) then
+					if (v23(v79.VoidEruption) or ((687 + 3490) > (5539 - (579 + 110)))) then
+						return "void_eruption cds 20";
 					end
 				end
 				v177 = 1 + 2;
 			end
+			if ((v177 == (1 + 0)) or ((213 + 187) > (1518 - (174 + 233)))) then
+				if (((8522 - 5471) > (1763 - 758)) and v79.BloodFury:IsCastable() and (v13:BuffUp(v79.PowerInfusionBuff) or (v91 <= (7 + 8)))) then
+					if (((4867 - (663 + 511)) <= (3910 + 472)) and v23(v79.BloodFury)) then
+						return "blood_fury cds 8";
+					end
+				end
+				if ((v79.AncestralCall:IsCastable() and (v13:BuffUp(v79.PowerInfusionBuff) or (v91 <= (4 + 11)))) or ((10118 - 6836) > (2483 + 1617))) then
+					if (v23(v79.AncestralCall) or ((8428 - 4848) < (6884 - 4040))) then
+						return "ancestral_call cds 10";
+					end
+				end
+				v177 = 1 + 1;
+			end
 		end
 	end
-	local function v137()
-		local v178 = 901 - (652 + 249);
+	local function v135()
+		v129();
+		if (((172 - 83) < (3200 + 1290)) and v30 and ((v91 < (3 + 27)) or ((v14:TimeToDie() > (737 - (478 + 244))) and (not v97 or (v87 > (519 - (440 + 77))))))) then
+			local v190 = 0 + 0;
+			while true do
+				if (((0 - 0) == v190) or ((6539 - (655 + 901)) < (336 + 1472))) then
+					v89 = v134();
+					if (((2932 + 897) > (2545 + 1224)) and v89) then
+						return v89;
+					end
+					break;
+				end
+			end
+		end
+		if (((5982 - 4497) <= (4349 - (695 + 750))) and v100:IsCastable() and v92 and ((v91 < (102 - 72)) or (v14:TimeToDie() > (22 - 7))) and (not v79.DarkAscension:IsAvailable() or (v79.DarkAscension:CooldownRemains() < v106) or (v91 < (60 - 45)))) then
+			if (((4620 - (285 + 66)) == (9951 - 5682)) and v23(v100)) then
+				return "mindbender main 2";
+			end
+		end
+		if (((1697 - (682 + 628)) <= (449 + 2333)) and v79.DevouringPlague:IsReady()) then
+			if (v88.CastCycle(v79.DevouringPlague, v84, v115, not v14:IsSpellInRange(v79.DevouringPlague)) or ((2198 - (176 + 123)) <= (384 + 533))) then
+				return "devouring_plague main 4";
+			end
+		end
+		if ((v79.ShadowWordDeath:IsReady() and (v13:HasTier(23 + 8, 273 - (239 + 30)) or (v101 and v79.InescapableTorment:IsAvailable() and v13:HasTier(9 + 22, 2 + 0))) and v14:DebuffUp(v79.DevouringPlagueDebuff)) or ((7631 - 3319) <= (2732 - 1856))) then
+			if (((2547 - (306 + 9)) <= (9058 - 6462)) and v23(v79.ShadowWordDeath, not v14:IsSpellInRange(v79.ShadowWordDeath))) then
+				return "shadow_word_death main 6";
+			end
+		end
+		if (((365 + 1730) < (2262 + 1424)) and v79.MindBlast:IsCastable() and v101 and v79.InescapableTorment:IsAvailable() and (v102 > v79.MindBlast:ExecuteTime()) and (v87 <= (4 + 3))) then
+			if (v88.CastCycle(v79.MindBlast, v84, v117, not v14:IsSpellInRange(v79.MindBlast), nil, nil, v81.MindBlastMouseover, true) or ((4561 - 2966) >= (5849 - (1140 + 235)))) then
+				return "mind_blast main 8";
+			end
+		end
+		if (v79.ShadowWordDeath:IsReady() or ((2940 + 1679) < (2643 + 239))) then
+			if (v88.CastCycle(v79.ShadowWordDeath, v84, v123, not v14:IsSpellInRange(v79.ShadowWordDeath), nil, nil, v81.ShadowWordDeathMouseover) or ((76 + 218) >= (4883 - (33 + 19)))) then
+				return "shadow_word_death main 10";
+			end
+		end
+		if (((733 + 1296) <= (9243 - 6159)) and v79.VoidBolt:IsCastable() and v92) then
+			if (v23(v79.VoidBolt, not v14:IsInRange(18 + 22)) or ((3994 - 1957) == (2270 + 150))) then
+				return "void_bolt main 12";
+			end
+		end
+		if (((5147 - (586 + 103)) > (356 + 3548)) and v79.DevouringPlague:IsReady() and (v91 <= (v79.DevouringPlagueDebuff:BaseDuration() + (12 - 8)))) then
+			if (((1924 - (1309 + 179)) >= (221 - 98)) and v23(v79.DevouringPlague, not v14:IsSpellInRange(v79.DevouringPlague))) then
+				return "devouring_plague main 14";
+			end
+		end
+		if (((218 + 282) < (4876 - 3060)) and v79.DevouringPlague:IsReady() and ((v13:InsanityDeficit() <= (16 + 4)) or (v13:BuffUp(v79.VoidformBuff) and (v79.VoidBolt:CooldownRemains() > v13:BuffRemains(v79.VoidformBuff)) and (v79.VoidBolt:CooldownRemains() <= (v13:BuffRemains(v79.VoidformBuff) + (3 - 1)))) or (v13:BuffUp(v79.MindDevourerBuff) and (v13:PMultiplier(v79.DevouringPlague) < (1.2 - 0))))) then
+			if (((4183 - (295 + 314)) == (8777 - 5203)) and v88.CastCycle(v79.DevouringPlague, v84, v115, not v14:IsSpellInRange(v79.DevouringPlague), nil, nil, v81.DevouringPlagueMouseover)) then
+				return "devouring_plague main 16";
+			end
+		end
+		if (((2183 - (1300 + 662)) < (1224 - 834)) and v79.ShadowWordDeath:IsReady() and (v13:HasTier(1786 - (1178 + 577), 2 + 0))) then
+			if (v23(v79.ShadowWordDeath, not v14:IsSpellInRange(v79.ShadowWordDeath)) or ((6541 - 4328) <= (2826 - (851 + 554)))) then
+				return "shadow_word_death main 18";
+			end
+		end
+		if (((2705 + 353) < (13478 - 8618)) and v79.ShadowCrash:IsCastable() and not v97 and (v14:DebuffRefreshable(v79.VampiricTouchDebuff) or ((v13:BuffStack(v79.DeathsTormentBuff) > (19 - 10)) and v13:HasTier(333 - (115 + 187), 4 + 0)))) then
+			if ((v76 == "Confirm") or ((1227 + 69) >= (17520 - 13074))) then
+				if (v23(v79.ShadowCrash, not v14:IsInRange(1201 - (160 + 1001))) or ((1219 + 174) > (3098 + 1391))) then
+					return "shadow_crash main 20";
+				end
+			elseif ((v76 == "Enemy Under Cursor") or ((9056 - 4632) < (385 - (237 + 121)))) then
+				if ((v17:Exists() and v13:CanAttack(v17)) or ((2894 - (525 + 372)) > (7232 - 3417))) then
+					if (((11384 - 7919) > (2055 - (96 + 46))) and v23(v81.ShadowCrashCursor, not v14:IsInRange(817 - (643 + 134)))) then
+						return "shadow_crash main 20";
+					end
+				end
+			elseif (((265 + 468) < (4361 - 2542)) and (v76 == "At Cursor")) then
+				if (v23(v81.ShadowCrashCursor, not v14:IsInRange(148 - 108)) or ((4215 + 180) == (9331 - 4576))) then
+					return "shadow_crash main 20";
+				end
+			end
+		end
+		if ((v79.ShadowWordDeath:IsReady() and (v13:BuffStack(v79.DeathsTormentBuff) > (17 - 8)) and v13:HasTier(750 - (316 + 403), 3 + 1) and (not v97 or not v79.ShadowCrash:IsAvailable())) or ((10428 - 6635) < (857 + 1512))) then
+			if (v23(v79.ShadowWordDeath, not v14:IsSpellInRange(v79.ShadowWordDeath)) or ((10284 - 6200) == (188 + 77))) then
+				return "shadow_word_death main 22";
+			end
+		end
+		if (((1405 + 2953) == (15100 - 10742)) and v79.ShadowWordDeath:IsReady() and v92 and v79.InescapableTorment:IsAvailable() and v101 and ((not v79.InsidiousIre:IsAvailable() and not v79.IdolOfYoggSaron:IsAvailable()) or v13:BuffUp(v79.DeathspeakerBuff)) and not v13:HasTier(148 - 117, 3 - 1)) then
+			if (v23(v79.ShadowWordDeath, not v14:IsSpellInRange(v79.ShadowWordDeath)) or ((180 + 2958) < (1954 - 961))) then
+				return "shadow_word_death main 24";
+			end
+		end
+		if (((163 + 3167) > (6834 - 4511)) and v79.VampiricTouch:IsCastable()) then
+			if (v88.CastTargetIf(v79.VampiricTouch, v84, "min", v113, v114, not v14:IsSpellInRange(v79.VampiricTouch)) or ((3643 - (12 + 5)) == (15493 - 11504))) then
+				return "vampiric_touch main 26";
+			end
+		end
+		if ((v79.MindBlast:IsCastable() and (v13:BuffDown(v79.MindDevourerBuff) or (v79.VoidEruption:CooldownUp() and v79.VoidEruption:IsAvailable()))) or ((1953 - 1037) == (5677 - 3006))) then
+			if (((674 - 402) == (56 + 216)) and v23(v79.MindBlast, not v14:IsSpellInRange(v79.MindBlast), true)) then
+				return "mind_blast main 26";
+			end
+		end
+		if (((6222 - (1656 + 317)) <= (4313 + 526)) and v79.VoidTorrent:IsCastable() and not v97) then
+			if (((2226 + 551) < (8508 - 5308)) and v88.CastCycle(v79.VoidTorrent, v84, v124, not v14:IsSpellInRange(v79.VoidTorrent), nil, nil, v81.VoidTorrentMouseover, true)) then
+				return "void_torrent main 28";
+			end
+		end
+		v89 = v133();
+		if (((467 - 372) < (2311 - (5 + 349))) and v89) then
+			return v89;
+		end
+	end
+	local function v136()
+		local v178 = 0 - 0;
 		while true do
-			if ((v178 == (2 - 1)) or ((5150 - (708 + 1160)) > (11129 - 7029))) then
-				if ((v80.DevouringPlague:IsReady() and (v14:DebuffRemains(v80.DevouringPlagueDebuff) <= (6 - 2)) and (v80.VoidTorrent:CooldownRemains() < (v13:GCD() * (29 - (10 + 17))))) or ((805 + 2775) < (4576 - (1400 + 332)))) then
-					if (((170 - 81) < (6398 - (242 + 1666))) and v23(v80.DevouringPlague, not v14:IsSpellInRange(v80.DevouringPlague))) then
-						return "devouring_plague pl_torrent 6";
-					end
-				end
-				if ((v80.MindBlast:IsCastable() and not v13:PrevGCD(1 + 0, v80.MindBlast)) or ((1827 + 3156) < (1541 + 267))) then
-					if (((4769 - (850 + 90)) > (6600 - 2831)) and v23(v80.MindBlast, not v14:IsSpellInRange(v80.MindBlast), true)) then
-						return "mind_blast pl_torrent 8";
-					end
-				end
-				v178 = 1392 - (360 + 1030);
-			end
-			if (((1315 + 170) <= (8196 - 5292)) and (v178 == (0 - 0))) then
-				if (((5930 - (909 + 752)) == (5492 - (109 + 1114))) and v80.VoidBolt:IsCastable()) then
-					if (((707 - 320) <= (1083 + 1699)) and v23(v80.VoidBolt, not v14:IsInRange(282 - (6 + 236)))) then
-						return "void_bolt pl_torrent 2";
-					end
-				end
-				if ((v80.VampiricTouch:IsCastable() and (v14:DebuffRemains(v80.VampiricTouchDebuff) <= (4 + 2)) and (v80.VoidTorrent:CooldownRemains() < (v13:GCD() * (2 + 0)))) or ((4478 - 2579) <= (1601 - 684))) then
-					if (v23(v80.VampiricTouch, not v14:IsSpellInRange(v80.VampiricTouch), true) or ((5445 - (1076 + 57)) <= (145 + 731))) then
-						return "vampiric_touch pl_torrent 4";
-					end
-				end
-				v178 = 690 - (579 + 110);
-			end
-			if (((177 + 2055) <= (2296 + 300)) and (v178 == (2 + 0))) then
-				if (((2502 - (174 + 233)) < (10295 - 6609)) and v80.VoidTorrent:IsCastable() and (v110(v14, false) or v13:BuffUp(v80.VoidformBuff))) then
-					if (v23(v80.VoidTorrent, not v14:IsSpellInRange(v80.VoidTorrent), true) or ((2799 - 1204) >= (1990 + 2484))) then
+			if (((2097 - (266 + 1005)) < (1132 + 585)) and (v178 == (6 - 4))) then
+				if (((1877 - 451) >= (2801 - (561 + 1135))) and v79.VoidTorrent:IsCastable() and (v109(v14, false) or v13:BuffUp(v79.VoidformBuff))) then
+					if (((3588 - 834) <= (11107 - 7728)) and v23(v79.VoidTorrent, not v14:IsSpellInRange(v79.VoidTorrent), true)) then
 						return "void_torrent pl_torrent 10";
 					end
 				end
 				break;
 			end
-		end
-	end
-	local function v138()
-		v131();
-		if ((v80.VampiricTouch:IsCastable() and (((v95 > (1174 - (663 + 511))) and not v99 and not v80.ShadowCrash:InFlight()) or not v80.WhisperingShadows:IsAvailable())) or ((4121 + 498) < (626 + 2256))) then
-			if (v89.CastCycle(v80.VampiricTouch, v85, v126, not v14:IsSpellInRange(v80.VampiricTouch), nil, nil, v82.VampiricTouchMouseover, true) or ((906 - 612) >= (2926 + 1905))) then
-				return "vampiric_touch aoe 2";
-			end
-		end
-		if (((4776 - 2747) <= (7465 - 4381)) and v80.ShadowCrash:IsCastable() and not v98) then
-			if ((v77 == "Confirm") or ((973 + 1064) == (4710 - 2290))) then
-				if (((3178 + 1280) > (357 + 3547)) and v23(v80.ShadowCrash, not v14:IsInRange(762 - (478 + 244)))) then
-					return "shadow_crash aoe 4";
-				end
-			elseif (((953 - (440 + 77)) >= (56 + 67)) and (v77 == "Enemy Under Cursor")) then
-				if (((1830 - 1330) < (3372 - (655 + 901))) and v17:Exists() and v13:CanAttack(v17)) then
-					if (((663 + 2911) == (2737 + 837)) and v23(v82.ShadowCrashCursor, not v14:IsInRange(28 + 12))) then
-						return "shadow_crash aoe 4";
+			if ((v178 == (1067 - (507 + 559))) or ((9853 - 5926) == (4369 - 2956))) then
+				if ((v79.DevouringPlague:IsReady() and (v14:DebuffRemains(v79.DevouringPlagueDebuff) <= (392 - (212 + 176))) and (v79.VoidTorrent:CooldownRemains() < (v13:GCD() * (907 - (250 + 655))))) or ((3146 - 1992) <= (1376 - 588))) then
+					if (v23(v79.DevouringPlague, not v14:IsSpellInRange(v79.DevouringPlague)) or ((2570 - 927) > (5335 - (1869 + 87)))) then
+						return "devouring_plague pl_torrent 6";
 					end
 				end
-			elseif (((890 - 669) < (1835 - (695 + 750))) and (v77 == "At Cursor")) then
-				if (v23(v82.ShadowCrashCursor, not v14:IsInRange(136 - 96)) or ((3414 - 1201) <= (5714 - 4293))) then
-					return "shadow_crash aoe 4";
+				if ((v79.MindBlast:IsCastable() and not v13:PrevGCD(3 - 2, v79.MindBlast)) or ((4704 - (484 + 1417)) > (9749 - 5200))) then
+					if (v23(v79.MindBlast, not v14:IsSpellInRange(v79.MindBlast), true) or ((368 - 148) >= (3795 - (48 + 725)))) then
+						return "mind_blast pl_torrent 8";
+					end
 				end
+				v178 = 2 - 0;
 			end
-		end
-		if (((3409 - (285 + 66)) < (11329 - 6469)) and v30 and ((v92 < (1340 - (682 + 628))) or ((v14:TimeToDie() > (3 + 12)) and (not v98 or (v88 > (301 - (176 + 123))))))) then
-			v90 = v135();
-			if (v90 or ((543 + 753) >= (3226 + 1220))) then
-				return v90;
+			if (((7570 - 4748) == (1641 + 1181)) and (v178 == (0 - 0))) then
+				if (v79.VoidBolt:IsCastable() or ((297 + 764) == (542 + 1315))) then
+					if (((3613 - (152 + 701)) > (2675 - (430 + 881))) and v23(v79.VoidBolt, not v14:IsInRange(16 + 24))) then
+						return "void_bolt pl_torrent 2";
+					end
+				end
+				if ((v79.VampiricTouch:IsCastable() and (v14:DebuffRemains(v79.VampiricTouchDebuff) <= (901 - (557 + 338))) and (v79.VoidTorrent:CooldownRemains() < (v13:GCD() * (1 + 1)))) or ((13813 - 8911) <= (12588 - 8993))) then
+					if (v23(v79.VampiricTouch, not v14:IsSpellInRange(v79.VampiricTouch), true) or ((10233 - 6381) == (631 - 338))) then
+						return "vampiric_touch pl_torrent 4";
+					end
+				end
+				v178 = 802 - (499 + 302);
 			end
-		end
-		if ((v101:IsCastable() and ((v14:DebuffUp(v80.ShadowWordPainDebuff) and v97) or (v80.ShadowCrash:InFlight() and v80.WhisperingShadows:IsAvailable())) and ((v92 < (299 - (239 + 30))) or (v14:TimeToDie() > (5 + 10))) and (not v80.DarkAscension:IsAvailable() or (v80.DarkAscension:CooldownRemains() < v107) or (v92 < (15 + 0)))) or ((2464 - 1071) > (14004 - 9515))) then
-			if (v23(v101) or ((4739 - (306 + 9)) < (94 - 67))) then
-				return "mindbender aoe 6";
-			end
-		end
-		if ((v80.MindBlast:IsCastable() and ((v80.MindBlast:FullRechargeTime() <= (v107 + v80.MindBlast:CastTime())) or (v103 <= (v80.MindBlast:CastTime() + v107))) and v102 and v80.InescapableTorment:IsAvailable() and (v103 > v80.MindBlast:CastTime()) and (v88 <= (2 + 5)) and v13:BuffDown(v80.MindDevourerBuff)) or ((1226 + 771) > (1837 + 1978))) then
-			if (((9908 - 6443) > (3288 - (1140 + 235))) and v23(v80.MindBlast, not v14:IsSpellInRange(v80.MindBlast), true)) then
-				return "mind_blast aoe 8";
-			end
-		end
-		if (((467 + 266) < (1669 + 150)) and v80.ShadowWordDeath:IsReady() and (v103 <= (1 + 1)) and v102 and v80.InescapableTorment:IsAvailable() and (v88 <= (59 - (33 + 19)))) then
-			if (v23(v80.ShadowWordDeath, not v14:IsSpellInRange(v80.ShadowWordDeath)) or ((1587 + 2808) == (14251 - 9496))) then
-				return "shadow_word_death aoe 10";
-			end
-		end
-		if (v80.VoidBolt:IsCastable() or ((1671 + 2122) < (4645 - 2276))) then
-			if (v23(v80.VoidBolt, not v14:IsInRange(38 + 2)) or ((4773 - (586 + 103)) == (25 + 240))) then
-				return "void_bolt aoe 12";
-			end
-		end
-		if (((13416 - 9058) == (5846 - (1309 + 179))) and v80.DevouringPlague:IsReady() and (not v100 or (v13:InsanityDeficit() <= (36 - 16)) or (v13:BuffUp(v80.VoidformBuff) and (v80.VoidBolt:CooldownRemains() > v13:BuffRemains(v80.VoidformBuff)) and (v80.VoidBolt:CooldownRemains() <= (v13:BuffRemains(v80.VoidformBuff) + 1 + 1))))) then
-			if (v89.CastCycle(v80.DevouringPlague, v85, v117, not v14:IsSpellInRange(v80.DevouringPlague), nil, nil, v82.DevouringPlagueMouseover) or ((8427 - 5289) < (751 + 242))) then
-				return "devouring_plague aoe 14";
-			end
-		end
-		if (((7075 - 3745) > (4628 - 2305)) and v80.VampiricTouch:IsCastable() and (((v95 > (609 - (295 + 314))) and not v80.ShadowCrash:InFlight()) or not v80.WhisperingShadows:IsAvailable())) then
-			if (v89.CastCycle(v80.VampiricTouch, v85, v127, not v14:IsSpellInRange(v80.VampiricTouch), nil, nil, v82.VampiricTouchMouseover, true) or ((8906 - 5280) == (5951 - (1300 + 662)))) then
-				return "vampiric_touch aoe 16";
-			end
-		end
-		if ((v80.ShadowWordDeath:IsReady() and v97 and v80.InescapableTorment:IsAvailable() and v102 and ((not v80.InsidiousIre:IsAvailable() and not v80.IdolOfYoggSaron:IsAvailable()) or v13:BuffUp(v80.DeathspeakerBuff))) or ((2876 - 1960) == (4426 - (1178 + 577)))) then
-			if (((142 + 130) == (803 - 531)) and v23(v80.ShadowWordDeath, not v14:IsSpellInRange(v80.ShadowWordDeath))) then
-				return "shadow_word_death aoe 18";
-			end
-		end
-		if (((5654 - (851 + 554)) <= (4280 + 559)) and v80.MindSpikeInsanity:IsReady() and v93 and (v80.MindBlast:FullRechargeTime() >= (v13:GCD() * (8 - 5))) and v80.IdolOfCthun:IsAvailable() and (v80.VoidTorrent:CooldownDown() or not v80.VoidTorrent:IsAvailable())) then
-			if (((6030 - 3253) < (3502 - (115 + 187))) and v23(v80.MindSpikeInsanity, not v14:IsInRange(31 + 9), true)) then
-				return "mind_spike_insanity aoe 20";
-			end
-		end
-		if (((90 + 5) < (7711 - 5754)) and v106:IsCastable() and v13:BuffUp(v80.MindFlayInsanityBuff) and v93 and (v80.MindBlast:FullRechargeTime() >= (v13:GCD() * (1164 - (160 + 1001)))) and v80.IdolOfCthun:IsAvailable() and (v80.VoidTorrent:CooldownDown() or not v80.VoidTorrent:IsAvailable())) then
-			if (((723 + 103) < (1185 + 532)) and v23(v106, not v14:IsSpellInRange(v106), true)) then
-				return "mind_flay aoe 22";
-			end
-		end
-		if (((2918 - 1492) >= (1463 - (237 + 121))) and v80.MindBlast:IsCastable() and v97 and (v13:BuffDown(v80.MindDevourerBuff) or (v80.VoidEruption:CooldownUp() and v80.VoidEruption:IsAvailable()))) then
-			if (((3651 - (525 + 372)) <= (6405 - 3026)) and v23(v80.MindBlast, not v14:IsSpellInRange(v80.MindBlast), true)) then
-				return "mind_blast aoe 24";
-			end
-		end
-		if ((v80.VoidTorrent:IsAvailable() and v80.PsychicLink:IsAvailable() and (v80.VoidTorrent:CooldownRemains() <= (9 - 6)) and (not v98 or ((v88 / (v80.VampiricTouchDebuff:AuraActiveCount() + v88)) < (143.5 - (96 + 46)))) and ((v13:Insanity() >= (827 - (643 + 134))) or v14:DebuffUp(v80.DevouringPlagueDebuff) or v13:BuffUp(v80.DarkReveriesBuff) or v13:BuffUp(v80.VoidformBuff) or v13:BuffUp(v80.DarkAscensionBuff))) or ((1418 + 2509) == (3387 - 1974))) then
-			v90 = v137();
-			if (v90 or ((4284 - 3130) <= (756 + 32))) then
-				return v90;
-			end
-		end
-		if ((v80.VoidTorrent:IsCastable() and not v80.PsychicLink:IsAvailable()) or ((3223 - 1580) > (6906 - 3527))) then
-			if (v89.CastCycle(v80.VoidTorrent, v85, v128, not v14:IsSpellInRange(v80.VoidTorrent), nil, nil, v82.VoidTorrentMouseover, true) or ((3522 - (316 + 403)) > (3024 + 1525))) then
-				return "void_torrent aoe 26";
-			end
-		end
-		if ((v106:IsCastable() and v13:BuffUp(v80.MindFlayInsanityBuff) and v80.IdolOfCthun:IsAvailable()) or ((604 - 384) >= (1093 + 1929))) then
-			if (((7106 - 4284) == (2000 + 822)) and v23(v106, not v14:IsSpellInRange(v106), true)) then
-				return "mind_flay aoe 28";
-			end
-		end
-		v90 = v134();
-		if (v90 or ((342 + 719) == (6434 - 4577))) then
-			return v90;
 		end
 	end
-	local function v139()
-		local v179 = 0 - 0;
+	local function v137()
+		local v179 = 866 - (39 + 827);
 		while true do
-			if (((5733 - 2973) > (79 + 1285)) and (v179 == (1 - 0))) then
-				if ((v80.DesperatePrayer:IsCastable() and (v13:HealthPercentage() <= v49) and v48) or ((240 + 4662) <= (10576 - 6981))) then
-					if (v23(v80.DesperatePrayer) or ((3869 - (12 + 5)) == (1137 - 844))) then
-						return "desperate_prayer defensive";
+			if ((v179 == (7 - 4)) or ((3481 - 1922) == (18222 - 13634))) then
+				if ((v79.VampiricTouch:IsCastable() and (((v94 > (0 - 0)) and not v79.ShadowCrash:InFlight()) or not v79.WhisperingShadows:IsAvailable())) or ((384 + 4100) == (2306 - 1518))) then
+					if (((731 + 3837) >= (6181 - 2274)) and v88.CastCycle(v79.VampiricTouch, v84, v126, not v14:IsSpellInRange(v79.VampiricTouch), nil, nil, v81.VampiricTouchMouseover, true)) then
+						return "vampiric_touch aoe 16";
 					end
 				end
-				if ((v80.VampiricEmbrace:IsReady() and v89.TargetIsValid() and v14:IsInRange(64 - 34) and v74 and v89.AreUnitsBelowHealthPercentage(v75, v76)) or ((3313 - 1754) == (11377 - 6789))) then
-					if (v23(v80.VampiricEmbrace, nil, true) or ((911 + 3573) == (2761 - (1656 + 317)))) then
-						return "vampiric_embrace defensive";
+				if (((1350 - (103 + 1)) < (4024 - (475 + 79))) and v79.ShadowWordDeath:IsReady() and v96 and v79.InescapableTorment:IsAvailable() and v101 and ((not v79.InsidiousIre:IsAvailable() and not v79.IdolOfYoggSaron:IsAvailable()) or v13:BuffUp(v79.DeathspeakerBuff))) then
+					if (((8793 - 4725) >= (3110 - 2138)) and v23(v79.ShadowWordDeath, not v14:IsSpellInRange(v79.ShadowWordDeath))) then
+						return "shadow_word_death aoe 18";
+					end
+				end
+				if (((64 + 429) < (3427 + 466)) and v79.MindSpikeInsanity:IsReady() and v92 and (v79.MindBlast:FullRechargeTime() >= (v13:GCD() * (1506 - (1395 + 108)))) and v79.IdolOfCthun:IsAvailable() and (v79.VoidTorrent:CooldownDown() or not v79.VoidTorrent:IsAvailable())) then
+					if (v23(v79.MindSpikeInsanity, not v14:IsInRange(116 - 76), true) or ((2677 - (7 + 1197)) >= (1453 + 1879))) then
+						return "mind_spike_insanity aoe 20";
+					end
+				end
+				v179 = 2 + 2;
+			end
+			if ((v179 == (319 - (27 + 292))) or ((11870 - 7819) <= (1475 - 318))) then
+				v130();
+				if (((2532 - 1928) < (5681 - 2800)) and v79.VampiricTouch:IsCastable() and (((v94 > (0 - 0)) and not v98 and not v79.ShadowCrash:InFlight()) or not v79.WhisperingShadows:IsAvailable())) then
+					if (v88.CastCycle(v79.VampiricTouch, v84, v125, not v14:IsSpellInRange(v79.VampiricTouch), nil, nil, v81.VampiricTouchMouseover, true) or ((1039 - (43 + 96)) == (13775 - 10398))) then
+						return "vampiric_touch aoe 2";
+					end
+				end
+				if (((10080 - 5621) > (491 + 100)) and v79.ShadowCrash:IsCastable() and not v97) then
+					if (((960 + 2438) >= (4733 - 2338)) and (v76 == "Confirm")) then
+						if (v23(v79.ShadowCrash, not v14:IsInRange(16 + 24)) or ((4091 - 1908) >= (890 + 1934))) then
+							return "shadow_crash aoe 4";
+						end
+					elseif (((142 + 1794) == (3687 - (1414 + 337))) and (v76 == "Enemy Under Cursor")) then
+						if ((v17:Exists() and v13:CanAttack(v17)) or ((6772 - (1642 + 298)) < (11242 - 6929))) then
+							if (((11760 - 7672) > (11496 - 7622)) and v23(v81.ShadowCrashCursor, not v14:IsInRange(14 + 26))) then
+								return "shadow_crash aoe 4";
+							end
+						end
+					elseif (((3371 + 961) == (5304 - (357 + 615))) and (v76 == "At Cursor")) then
+						if (((2808 + 1191) >= (7115 - 4215)) and v23(v81.ShadowCrashCursor, not v14:IsInRange(35 + 5))) then
+							return "shadow_crash aoe 4";
+						end
+					end
+				end
+				v179 = 2 - 1;
+			end
+			if ((v179 == (5 + 1)) or ((172 + 2353) > (2555 + 1509))) then
+				if (((5672 - (384 + 917)) == (5068 - (128 + 569))) and v89) then
+					return v89;
+				end
+				break;
+			end
+			if ((v179 == (1547 - (1407 + 136))) or ((2153 - (687 + 1200)) > (6696 - (556 + 1154)))) then
+				if (((7004 - 5013) >= (1020 - (9 + 86))) and v105:IsCastable() and v13:BuffUp(v79.MindFlayInsanityBuff) and v92 and (v79.MindBlast:FullRechargeTime() >= (v13:GCD() * (424 - (275 + 146)))) and v79.IdolOfCthun:IsAvailable() and (v79.VoidTorrent:CooldownDown() or not v79.VoidTorrent:IsAvailable())) then
+					if (((74 + 381) < (2117 - (29 + 35))) and v23(v105, not v14:IsSpellInRange(v105), true)) then
+						return "mind_flay aoe 22";
+					end
+				end
+				if ((v79.MindBlast:IsCastable() and v96 and (v13:BuffDown(v79.MindDevourerBuff) or (v79.VoidEruption:CooldownUp() and v79.VoidEruption:IsAvailable()))) or ((3660 - 2834) == (14489 - 9638))) then
+					if (((807 - 624) == (120 + 63)) and v23(v79.MindBlast, not v14:IsSpellInRange(v79.MindBlast), true)) then
+						return "mind_blast aoe 24";
+					end
+				end
+				if (((2171 - (53 + 959)) <= (2196 - (312 + 96))) and v79.VoidTorrent:IsAvailable() and v79.PsychicLink:IsAvailable() and (v79.VoidTorrent:CooldownRemains() <= (4 - 1)) and (not v97 or ((v87 / (v79.VampiricTouchDebuff:AuraActiveCount() + v87)) < (286.5 - (147 + 138)))) and ((v13:Insanity() >= (949 - (813 + 86))) or v14:DebuffUp(v79.DevouringPlagueDebuff) or v13:BuffUp(v79.DarkReveriesBuff) or v13:BuffUp(v79.VoidformBuff) or v13:BuffUp(v79.DarkAscensionBuff))) then
+					local v218 = 0 + 0;
+					while true do
+						if ((v218 == (0 - 0)) or ((3999 - (18 + 474)) > (1457 + 2861))) then
+							v89 = v136();
+							if (v89 or ((10036 - 6961) <= (4051 - (860 + 226)))) then
+								return v89;
+							end
+							break;
+						end
+					end
+				end
+				v179 = 308 - (121 + 182);
+			end
+			if (((169 + 1196) <= (3251 - (988 + 252))) and (v179 == (1 + 0))) then
+				if ((v30 and ((v91 < (10 + 20)) or ((v14:TimeToDie() > (1985 - (49 + 1921))) and (not v97 or (v87 > (892 - (223 + 667))))))) or ((2828 - (51 + 1)) > (6153 - 2578))) then
+					v89 = v134();
+					if (v89 or ((5468 - 2914) == (5929 - (146 + 979)))) then
+						return v89;
+					end
+				end
+				if (((728 + 1849) == (3182 - (311 + 294))) and v100:IsCastable() and ((v14:DebuffUp(v79.ShadowWordPainDebuff) and v96) or (v79.ShadowCrash:InFlight() and v79.WhisperingShadows:IsAvailable())) and ((v91 < (83 - 53)) or (v14:TimeToDie() > (7 + 8))) and (not v79.DarkAscension:IsAvailable() or (v79.DarkAscension:CooldownRemains() < v106) or (v91 < (1458 - (496 + 947))))) then
+					if (v23(v100) or ((1364 - (1233 + 125)) >= (767 + 1122))) then
+						return "mindbender aoe 6";
+					end
+				end
+				if (((454 + 52) <= (360 + 1532)) and v79.MindBlast:IsCastable() and ((v79.MindBlast:FullRechargeTime() <= (v106 + v79.MindBlast:CastTime())) or (v102 <= (v79.MindBlast:CastTime() + v106))) and v101 and v79.InescapableTorment:IsAvailable() and (v102 > v79.MindBlast:CastTime()) and (v87 <= (1652 - (963 + 682))) and v13:BuffDown(v79.MindDevourerBuff)) then
+					if (v23(v79.MindBlast, not v14:IsSpellInRange(v79.MindBlast), true) or ((1676 + 332) > (3722 - (504 + 1000)))) then
+						return "mind_blast aoe 8";
 					end
 				end
 				v179 = 2 + 0;
 			end
-			if (((3661 + 907) >= (10388 - 6481)) and (v179 == (14 - 11))) then
-				if (((1600 - (5 + 349)) < (16481 - 13011)) and v34 and (v13:HealthPercentage() <= v36)) then
-					if (((5339 - (266 + 1005)) >= (641 + 331)) and (v35 == "Refreshing Healing Potion")) then
-						if (((1681 - 1188) < (5124 - 1231)) and v81.RefreshingHealingPotion:IsReady()) then
-							if (v23(v82.RefreshingHealingPotion, nil, nil, true) or ((3169 - (561 + 1135)) >= (4341 - 1009))) then
+			if (((346 + 33) <= (392 + 3755)) and (v179 == (2 - 0))) then
+				if ((v79.ShadowWordDeath:IsReady() and (v102 <= (2 + 0)) and v101 and v79.InescapableTorment:IsAvailable() and (v87 <= (5 + 2))) or ((4696 - (156 + 26)) <= (582 + 427))) then
+					if (v23(v79.ShadowWordDeath, not v14:IsSpellInRange(v79.ShadowWordDeath)) or ((5468 - 1972) == (1356 - (149 + 15)))) then
+						return "shadow_word_death aoe 10";
+					end
+				end
+				if (v79.VoidBolt:IsCastable() or ((1168 - (890 + 70)) == (3076 - (39 + 78)))) then
+					if (((4759 - (14 + 468)) >= (2887 - 1574)) and v23(v79.VoidBolt, not v14:IsInRange(111 - 71))) then
+						return "void_bolt aoe 12";
+					end
+				end
+				if (((1335 + 1252) < (1906 + 1268)) and v79.DevouringPlague:IsReady() and (not v99 or (v13:InsanityDeficit() <= (5 + 15)) or (v13:BuffUp(v79.VoidformBuff) and (v79.VoidBolt:CooldownRemains() > v13:BuffRemains(v79.VoidformBuff)) and (v79.VoidBolt:CooldownRemains() <= (v13:BuffRemains(v79.VoidformBuff) + 1 + 1))))) then
+					if (v88.CastCycle(v79.DevouringPlague, v84, v116, not v14:IsSpellInRange(v79.DevouringPlague), nil, nil, v81.DevouringPlagueMouseover) or ((1080 + 3040) <= (4206 - 2008))) then
+						return "devouring_plague aoe 14";
+					end
+				end
+				v179 = 3 + 0;
+			end
+			if ((v179 == (17 - 12)) or ((41 + 1555) == (909 - (12 + 39)))) then
+				if (((2996 + 224) == (9966 - 6746)) and v79.VoidTorrent:IsCastable() and not v79.PsychicLink:IsAvailable()) then
+					if (v88.CastCycle(v79.VoidTorrent, v84, v127, not v14:IsSpellInRange(v79.VoidTorrent), nil, nil, v81.VoidTorrentMouseover, true) or ((4993 - 3591) > (1074 + 2546))) then
+						return "void_torrent aoe 26";
+					end
+				end
+				if (((1355 + 1219) == (6526 - 3952)) and v105:IsCastable() and v13:BuffUp(v79.MindFlayInsanityBuff) and v79.IdolOfCthun:IsAvailable()) then
+					if (((1198 + 600) < (13323 - 10566)) and v23(v105, not v14:IsSpellInRange(v105), true)) then
+						return "mind_flay aoe 28";
+					end
+				end
+				v89 = v133();
+				v179 = 1716 - (1596 + 114);
+			end
+		end
+	end
+	local function v138()
+		local v180 = 0 - 0;
+		while true do
+			if ((v180 == (716 - (164 + 549))) or ((1815 - (1059 + 379)) > (3232 - 628))) then
+				if (((295 + 273) < (154 + 757)) and v34 and (v13:HealthPercentage() <= v36)) then
+					if (((3677 - (145 + 247)) < (3470 + 758)) and (v35 == "Refreshing Healing Potion")) then
+						if (((1810 + 2106) > (9866 - 6538)) and v80.RefreshingHealingPotion:IsReady()) then
+							if (((480 + 2020) < (3307 + 532)) and v23(v81.RefreshingHealingPotion, nil, nil, true)) then
 								return "refreshing healing potion defensive 4";
 							end
 						end
@@ -879,360 +915,452 @@ v0["Epix_Priest_Shadow.lua"] = function(...)
 				end
 				break;
 			end
-			if ((v179 == (6 - 4)) or ((5117 - (507 + 559)) <= (2903 - 1746))) then
-				if (((1867 - 1263) < (3269 - (212 + 176))) and v32) then
-					local v215 = 905 - (250 + 655);
-					while true do
-						if ((v215 == (2 - 1)) or ((1572 - 672) == (5283 - 1906))) then
-							if (((6415 - (1869 + 87)) > (2049 - 1458)) and v80.PowerWordShield:IsCastable() and (v13:HealthPercentage() <= v72) and v71) then
-								if (((5299 - (484 + 1417)) >= (5133 - 2738)) and v23(v82.PowerWordShieldPlayer)) then
-									return "power_word_shield defensive";
-								end
-							end
-							break;
+			if (((823 - 316) == (1227 - (254 + 466))) and (v180 == (562 - (544 + 16)))) then
+				if (((762 - 522) <= (3793 - (294 + 334))) and v32) then
+					if (((1087 - (236 + 17)) >= (348 + 457)) and v79.FlashHeal:IsCastable() and (v13:HealthPercentage() <= v67) and v66) then
+						if (v23(v81.FlashHealPlayer) or ((2968 + 844) < (8722 - 6406))) then
+							return "flash_heal defensive";
 						end
-						if ((v215 == (0 - 0)) or ((2956 - (48 + 725)) >= (4612 - 1788))) then
-							if (((5193 - 3257) == (1126 + 810)) and v80.FlashHeal:IsCastable() and (v13:HealthPercentage() <= v68) and v67) then
-								if (v23(v82.FlashHealPlayer) or ((12912 - 8080) < (1208 + 3105))) then
-									return "flash_heal defensive";
-								end
-							end
-							if (((1192 + 2896) > (4727 - (152 + 701))) and v80.Renew:IsCastable() and (v13:HealthPercentage() <= v70) and v69) then
-								if (((5643 - (430 + 881)) == (1659 + 2673)) and v23(v82.RenewPlayer)) then
-									return "renew defensive";
-								end
-							end
-							v215 = 896 - (557 + 338);
+					end
+					if ((v79.Renew:IsCastable() and (v13:HealthPercentage() <= v69) and v68) or ((12555 - 9903) <= (790 + 743))) then
+						if (v23(v81.RenewPlayer) or ((2964 + 634) < (2254 - (413 + 381)))) then
+							return "renew defensive";
+						end
+					end
+					if ((v79.PowerWordShield:IsCastable() and (v13:HealthPercentage() <= v71) and v70) or ((174 + 3942) < (2534 - 1342))) then
+						if (v23(v81.PowerWordShieldPlayer) or ((8771 - 5394) <= (2873 - (582 + 1388)))) then
+							return "power_word_shield defensive";
 						end
 					end
 				end
-				if (((1182 + 2817) >= (8172 - 5272)) and v81.Healthstone:IsReady() and v54 and (v13:HealthPercentage() <= v55)) then
-					if (v23(v82.Healthstone, nil, nil, true) or ((8841 - 6316) > (10796 - 6732))) then
+				if (((6773 - 2797) >= (315 + 124)) and v80.Healthstone:IsReady() and v52 and (v13:HealthPercentage() <= v53)) then
+					if (((4116 - (326 + 38)) == (11099 - 7347)) and v23(v81.Healthstone, nil, nil, true)) then
 						return "healthstone defensive 3";
 					end
 				end
-				v179 = 6 - 3;
+				v180 = 3 - 0;
 			end
-			if (((5172 - (499 + 302)) == (5237 - (39 + 827))) and (v179 == (0 - 0))) then
-				if ((v80.Fade:IsReady() and v52 and (v13:HealthPercentage() <= v53)) or ((593 - 327) > (19803 - 14817))) then
-					if (((3056 - 1065) >= (80 + 845)) and v23(v80.Fade, nil, nil, true)) then
+			if (((4666 - (47 + 573)) > (950 + 1745)) and (v180 == (0 - 0))) then
+				if ((v79.Fade:IsReady() and v50 and (v13:HealthPercentage() <= v51)) or ((5753 - 2208) == (4861 - (1269 + 395)))) then
+					if (((2886 - (76 + 416)) > (816 - (319 + 124))) and v23(v79.Fade, nil, nil, true)) then
 						return "fade defensive";
 					end
 				end
-				if (((1331 - 876) < (329 + 1724)) and v80.Dispersion:IsCastable() and (v13:HealthPercentage() < v50) and v51) then
-					if (v23(v80.Dispersion) or ((1306 - 480) == (4955 - (103 + 1)))) then
+				if (((9497 - 5342) <= (5239 - (564 + 443))) and v79.Dispersion:IsCastable() and (v13:HealthPercentage() < v48) and v49) then
+					if (v23(v79.Dispersion) or ((9913 - 6332) == (3931 - (337 + 121)))) then
 						return "dispersion defensive";
 					end
 				end
-				v179 = 555 - (475 + 79);
+				v180 = 2 - 1;
+			end
+			if (((16638 - 11643) > (5259 - (1261 + 650))) and (v180 == (1 + 0))) then
+				if ((v79.DesperatePrayer:IsCastable() and (v13:HealthPercentage() <= v47) and v46) or ((1201 - 447) > (5541 - (772 + 1045)))) then
+					if (((31 + 186) >= (201 - (102 + 42))) and v23(v79.DesperatePrayer)) then
+						return "desperate_prayer defensive";
+					end
+				end
+				if ((v79.VampiricEmbrace:IsReady() and v88.TargetIsValid() and v14:IsInRange(1874 - (1524 + 320)) and v73 and v88.AreUnitsBelowHealthPercentage(v74, v75)) or ((3340 - (1049 + 221)) >= (4193 - (18 + 138)))) then
+					if (((6621 - 3916) == (3807 - (67 + 1035))) and v23(v79.VampiricEmbrace, nil, true)) then
+						return "vampiric_embrace defensive";
+					end
+				end
+				v180 = 350 - (136 + 212);
+			end
+		end
+	end
+	local function v139()
+		if (((259 - 198) == (49 + 12)) and ((GetTime() - v28) > v40)) then
+			local v191 = 0 + 0;
+			while true do
+				if ((v191 == (1604 - (240 + 1364))) or ((1781 - (1050 + 32)) >= (4627 - 3331))) then
+					if ((v79.BodyandSoul:IsAvailable() and v79.PowerWordShield:IsReady() and v39 and v13:BuffDown(v79.AngelicFeatherBuff) and v13:BuffDown(v79.BodyandSoulBuff)) or ((1055 + 728) >= (4671 - (331 + 724)))) then
+						if (v23(v81.PowerWordShieldPlayer) or ((316 + 3597) > (5171 - (269 + 375)))) then
+							return "power_word_shield_player move";
+						end
+					end
+					if (((5101 - (267 + 458)) > (255 + 562)) and v79.AngelicFeather:IsReady() and v38 and v13:BuffDown(v79.AngelicFeatherBuff) and v13:BuffDown(v79.BodyandSoulBuff) and v13:BuffDown(v79.AngelicFeatherBuff)) then
+						if (((9347 - 4486) > (1642 - (667 + 151))) and v23(v81.AngelicFeatherPlayer)) then
+							return "angelic_feather_player move";
+						end
+					end
+					break;
+				end
 			end
 		end
 	end
 	local function v140()
-		if (((395 - 212) == (585 - 402)) and ((GetTime() - v28) > v40)) then
-			if (((150 + 1009) <= (1574 + 214)) and v80.BodyandSoul:IsAvailable() and v80.PowerWordShield:IsReady() and v39 and v13:BuffDown(v80.AngelicFeatherBuff) and v13:BuffDown(v80.BodyandSoulBuff)) then
-				if (v23(v82.PowerWordShieldPlayer) or ((5010 - (1395 + 108)) > (12565 - 8247))) then
-					return "power_word_shield_player move";
-				end
-			end
-			if ((v80.AngelicFeather:IsReady() and v38 and v13:BuffDown(v80.AngelicFeatherBuff) and v13:BuffDown(v80.BodyandSoulBuff) and v13:BuffDown(v80.AngelicFeatherBuff)) or ((4279 - (7 + 1197)) <= (1293 + 1672))) then
-				if (((477 + 888) <= (2330 - (27 + 292))) and v23(v82.AngelicFeatherPlayer)) then
-					return "angelic_feather_player move";
-				end
-			end
-		end
-	end
-	local function v141()
-		if ((v80.PurifyDisease:IsReady() and v31 and v89.DispellableFriendlyUnit()) or ((8134 - 5358) > (4559 - 984))) then
-			if (v23(v82.PurifyDiseaseFocus) or ((10710 - 8156) == (9473 - 4669))) then
+		if ((v79.PurifyDisease:IsReady() and v31 and v88.DispellableFriendlyUnit()) or ((2880 - (1410 + 87)) >= (4028 - (1504 + 393)))) then
+			if (v23(v81.PurifyDiseaseFocus) or ((5070 - 3194) >= (6592 - 4051))) then
 				return "purify_disease dispel";
 			end
 		end
 	end
-	local function v142()
-		v33 = EpicSettings.Settings['UseRacials'];
-		v34 = EpicSettings.Settings['UseHealingPotion'];
-		v35 = EpicSettings.Settings['HealingPotionName'] or "";
-		v36 = EpicSettings.Settings['HealingPotionHP'] or (0 - 0);
-		v37 = EpicSettings.Settings['UsePowerWordFortitude'];
-		v38 = EpicSettings.Settings['UseAngelicFeather'];
-		v39 = EpicSettings.Settings['UseBodyAndSoul'];
-		v40 = EpicSettings.Settings['MovementDelay'] or (139 - (43 + 96));
-		v41 = EpicSettings.Settings['DispelDebuffs'];
-		v42 = EpicSettings.Settings['DispelBuffs'];
-		v43 = EpicSettings.Settings['HandleAfflicted'];
-		v44 = EpicSettings.Settings['HandleIncorporeal'];
-		v45 = EpicSettings.Settings['InterruptWithStun'];
-		v46 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-		v47 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
-		v48 = EpicSettings.Settings['UseDesperatePrayer'];
-		v49 = EpicSettings.Settings['DesperatePrayerHP'] or (0 - 0);
-		v50 = EpicSettings.Settings['DispersionHP'] or (0 + 0);
-		v51 = EpicSettings.Settings['UseDispersion'];
-		v52 = EpicSettings.Settings['UseFade'];
-		v53 = EpicSettings.Settings['FadeHP'] or (0 + 0);
-		v54 = EpicSettings.Settings['UseHealthstone'];
-		v55 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
-		v56 = EpicSettings.Settings['PowerInfusionUsage'] or "";
-		v57 = EpicSettings.Settings['PowerInfusionTarget'] or "";
-		v58 = EpicSettings.Settings['PowerInfusionHP'] or (0 + 0);
-		v59 = EpicSettings.Settings['PowerInfusionGroup'] or (0 - 0);
-		v60 = EpicSettings.Settings['PIName1'] or "";
-		v61 = EpicSettings.Settings['PIName2'] or "";
-		v62 = EpicSettings.Settings['PIName3'] or "";
-		v63 = EpicSettings.Settings['UseHalo'];
-		v64 = EpicSettings.Settings['HaloHP'] or (0 + 0);
-		v65 = EpicSettings.Settings['HaloGroup'] or (0 + 0);
-		v66 = EpicSettings.Settings['UseDivineStar'];
-		v67 = EpicSettings.Settings['UseFlashHeal'];
-		v68 = EpicSettings.Settings['FlashHealHP'] or (1751 - (1414 + 337));
-		v69 = EpicSettings.Settings['UseRenew'];
-		v70 = EpicSettings.Settings['RenewHP'] or (1940 - (1642 + 298));
-		v71 = EpicSettings.Settings['UsePowerWordShield'];
-		v72 = EpicSettings.Settings['PowerWordShieldHP'] or (0 - 0);
-		v73 = EpicSettings.Settings['UseShadowform'];
-		v74 = EpicSettings.Settings['UseVampiricEmbrace'];
-		v75 = EpicSettings.Settings['VampiricEmbraceHP'] or (0 - 0);
-		v76 = EpicSettings.Settings['VampiricEmbraceGroup'] or (0 - 0);
-		v77 = EpicSettings.Settings['ShadowCrashUsage'] or "";
-		v78 = EpicSettings.Settings['VampiricTouchUsage'] or "";
-		v79 = EpicSettings.Settings['VampiricTouchMax'] or (0 + 0);
-	end
-	local function v143()
-		local v202 = 0 + 0;
+	local function v141()
+		local v181 = 796 - (461 + 335);
 		while true do
-			if (((3549 - (357 + 615)) == (1809 + 768)) and (v202 == (0 - 0))) then
-				v142();
+			if (((228 + 1554) <= (5533 - (1730 + 31))) and (v181 == (1671 - (728 + 939)))) then
+				v53 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
+				v54 = EpicSettings.Settings['PowerInfusionUsage'] or "";
+				v55 = EpicSettings.Settings['PowerInfusionTarget'] or "";
+				v56 = EpicSettings.Settings['PowerInfusionHP'] or (0 - 0);
+				v57 = EpicSettings.Settings['PowerInfusionGroup'] or (0 - 0);
+				v181 = 1073 - (138 + 930);
+			end
+			if ((v181 == (7 + 0)) or ((3675 + 1025) < (697 + 116))) then
+				v68 = EpicSettings.Settings['UseRenew'];
+				v69 = EpicSettings.Settings['RenewHP'] or (0 - 0);
+				v70 = EpicSettings.Settings['UsePowerWordShield'];
+				v71 = EpicSettings.Settings['PowerWordShieldHP'] or (1766 - (459 + 1307));
+				v72 = EpicSettings.Settings['UseShadowform'];
+				v181 = 1878 - (474 + 1396);
+			end
+			if (((5585 - 2386) < (3796 + 254)) and ((1 + 5) == v181)) then
+				v63 = EpicSettings.Settings['HaloGroup'] or (0 - 0);
+				v64 = EpicSettings.Settings['UseDivineStar'];
+				v65 = EpicSettings.Settings['DivineStarHP'] or (0 + 0);
+				v66 = EpicSettings.Settings['UseFlashHeal'];
+				v67 = EpicSettings.Settings['FlashHealHP'] or (0 - 0);
+				v181 = 30 - 23;
+			end
+			if ((v181 == (594 - (562 + 29))) or ((4221 + 730) < (5849 - (374 + 1045)))) then
+				v48 = EpicSettings.Settings['DispersionHP'] or (0 + 0);
+				v49 = EpicSettings.Settings['UseDispersion'];
+				v50 = EpicSettings.Settings['UseFade'];
+				v51 = EpicSettings.Settings['FadeHP'] or (0 - 0);
+				v52 = EpicSettings.Settings['UseHealthstone'];
+				v181 = 642 - (448 + 190);
+			end
+			if (((31 + 65) == (44 + 52)) and (v181 == (6 + 2))) then
+				v73 = EpicSettings.Settings['UseVampiricEmbrace'];
+				v74 = EpicSettings.Settings['VampiricEmbraceHP'] or (0 - 0);
+				v75 = EpicSettings.Settings['VampiricEmbraceGroup'] or (0 - 0);
+				v76 = EpicSettings.Settings['ShadowCrashUsage'] or "";
+				v77 = EpicSettings.Settings['VampiricTouchUsage'] or "";
+				v181 = 1503 - (1307 + 187);
+			end
+			if ((v181 == (35 - 26)) or ((6412 - 3673) > (12289 - 8281))) then
+				v78 = EpicSettings.Settings['VampiricTouchMax'] or (683 - (232 + 451));
+				break;
+			end
+			if (((1 + 0) == v181) or ((21 + 2) == (1698 - (510 + 54)))) then
+				v38 = EpicSettings.Settings['UseAngelicFeather'];
+				v39 = EpicSettings.Settings['UseBodyAndSoul'];
+				v40 = EpicSettings.Settings['MovementDelay'] or (0 - 0);
+				v41 = EpicSettings.Settings['DispelDebuffs'];
+				v42 = EpicSettings.Settings['DispelBuffs'];
+				v181 = 38 - (13 + 23);
+			end
+			if ((v181 == (0 - 0)) or ((3868 - 1175) >= (7469 - 3358))) then
+				v33 = EpicSettings.Settings['UseRacials'];
+				v34 = EpicSettings.Settings['UseHealingPotion'];
+				v35 = EpicSettings.Settings['HealingPotionName'] or "";
+				v36 = EpicSettings.Settings['HealingPotionHP'] or (1088 - (830 + 258));
+				v37 = EpicSettings.Settings['UsePowerWordFortitude'];
+				v181 = 3 - 2;
+			end
+			if ((v181 == (4 + 1)) or ((3673 + 643) <= (3587 - (860 + 581)))) then
+				v58 = EpicSettings.Settings['PIName1'] or "";
+				v59 = EpicSettings.Settings['PIName2'] or "";
+				v60 = EpicSettings.Settings['PIName3'] or "";
+				v61 = EpicSettings.Settings['UseHalo'];
+				v62 = EpicSettings.Settings['HaloHP'] or (0 - 0);
+				v181 = 5 + 1;
+			end
+			if ((v181 == (243 - (237 + 4))) or ((8333 - 4787) <= (7106 - 4297))) then
+				v43 = EpicSettings.Settings['InterruptWithStun'];
+				v44 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v45 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
+				v46 = EpicSettings.Settings['UseDesperatePrayer'];
+				v47 = EpicSettings.Settings['DesperatePrayerHP'] or (0 + 0);
+				v181 = 2 + 1;
+			end
+		end
+	end
+	local function v142()
+		local v182 = 0 - 0;
+		while true do
+			if (((2105 + 2799) > (1179 + 987)) and ((1426 - (85 + 1341)) == v182)) then
+				v141();
 				v29 = EpicSettings.Toggles['ooc'];
 				v30 = EpicSettings.Toggles['cds'];
-				v31 = EpicSettings.Toggles['dispel'];
-				v202 = 1 + 0;
+				v182 = 1 - 0;
 			end
-			if (((2 - 1) == v202) or ((5 + 1) >= (129 + 1760))) then
-				v32 = EpicSettings.Toggles['heal'];
-				v84 = v13:GetEnemiesInRange(19 + 11);
-				v85 = v13:GetEnemiesInRange(1341 - (384 + 917));
-				v86 = v14:GetEnemiesInSplashRange(707 - (128 + 569));
-				v202 = 1545 - (1407 + 136);
-			end
-			if (((2393 - (687 + 1200)) <= (3602 - (556 + 1154))) and ((10 - 7) == v202)) then
-				if ((not v13:AffectingCombat() and v29) or ((2103 - (9 + 86)) > (2639 - (275 + 146)))) then
-					if (((62 + 317) <= (4211 - (29 + 35))) and v80.PowerWordFortitude:IsCastable() and v37 and (v13:BuffDown(v80.PowerWordFortitudeBuff, true) or v89.GroupBuffMissing(v80.PowerWordFortitudeBuff))) then
-						if (v23(v82.PowerWordFortitudePlayer) or ((20005 - 15491) <= (3013 - 2004))) then
-							return "power_word_fortitude";
-						end
-					end
-					if (v43 or ((15433 - 11937) == (777 + 415))) then
-						v90 = v89.HandleAfflicted(v80.PurifyDisease, v82.PurifyDiseaseMouseover, 1052 - (53 + 959));
-						if (v90 or ((616 - (312 + 96)) == (5135 - 2176))) then
-							return v90;
-						end
-					end
-					if (((4562 - (147 + 138)) >= (2212 - (813 + 86))) and v80.PowerWordFortitude:IsCastable() and (v13:BuffDown(v80.PowerWordFortitudeBuff, true) or v89.GroupBuffMissing(v80.PowerWordFortitudeBuff))) then
-						if (((2338 + 249) < (5880 - 2706)) and v23(v82.PowerWordFortitudePlayer)) then
-							return "power_word_fortitude";
-						end
-					end
-					if ((v80.Shadowform:IsCastable() and (v13:BuffDown(v80.ShadowformBuff)) and v73) or ((4612 - (18 + 474)) <= (742 + 1456))) then
-						if (v23(v80.Shadowform) or ((5209 - 3613) == (1944 - (860 + 226)))) then
-							return "shadowform";
-						end
-					end
-					if (((3523 - (121 + 182)) == (397 + 2823)) and v14 and v14:Exists() and v14:IsAPlayer() and v14:IsDeadOrGhost() and not v13:CanAttack(v14)) then
-						if (v23(v80.Resurrection, nil, true) or ((2642 - (988 + 252)) > (409 + 3211))) then
-							return "resurrection";
-						end
-					end
-				end
-				if (((807 + 1767) == (4544 - (49 + 1921))) and v13:IsMoving() and (v13:AffectingCombat() or v29)) then
-					local v216 = 890 - (223 + 667);
+			if (((307 - 198) >= (462 - (45 + 327))) and (v182 == (7 - 3))) then
+				if (((5480 - (444 + 58)) > (1263 + 1642)) and not v13:AffectingCombat() and v29) then
+					local v219 = 0 + 0;
 					while true do
-						if (((1850 - (51 + 1)) < (4744 - 1987)) and (v216 == (0 - 0))) then
-							v90 = v140();
-							if (v90 or ((1502 - (146 + 979)) > (735 + 1869))) then
-								return v90;
+						if ((v219 == (0 + 0)) or ((8769 - 5743) <= (4012 - (64 + 1668)))) then
+							if ((v79.PowerWordFortitude:IsCastable() and v37 and (v13:BuffDown(v79.PowerWordFortitudeBuff, true) or v88.GroupBuffMissing(v79.PowerWordFortitudeBuff))) or ((3626 - (1227 + 746)) <= (3405 - 2297))) then
+								if (((5398 - 2489) > (3103 - (415 + 79))) and v23(v81.PowerWordFortitudePlayer)) then
+									return "power_word_fortitude";
+								end
+							end
+							if (((20 + 737) > (685 - (142 + 349))) and HandleAfflicted) then
+								v89 = v88.HandleAfflicted(v79.PurifyDisease, v81.PurifyDiseaseMouseover, 18 + 22);
+								if (v89 or ((42 - 11) >= (695 + 703))) then
+									return v89;
+								end
+							end
+							v219 = 1 + 0;
+						end
+						if (((8703 - 5507) <= (6736 - (1710 + 154))) and (v219 == (319 - (200 + 118)))) then
+							if (((1318 + 2008) == (5814 - 2488)) and v79.PowerWordFortitude:IsCastable() and (v13:BuffDown(v79.PowerWordFortitudeBuff, true) or v88.GroupBuffMissing(v79.PowerWordFortitudeBuff))) then
+								if (((2125 - 692) <= (3446 + 432)) and v23(v81.PowerWordFortitudePlayer)) then
+									return "power_word_fortitude";
+								end
+							end
+							if ((v79.Shadowform:IsCastable() and (v13:BuffDown(v79.ShadowformBuff)) and v72) or ((1566 + 17) == (932 + 803))) then
+								if (v23(v79.Shadowform) or ((477 + 2504) == (5091 - 2741))) then
+									return "shadowform";
+								end
+							end
+							v219 = 1252 - (363 + 887);
+						end
+						if ((v219 == (2 - 0)) or ((21257 - 16791) <= (77 + 416))) then
+							if ((v14 and v14:Exists() and v14:IsAPlayer() and v14:IsDeadOrGhost() and not v13:CanAttack(v14)) or ((5959 - 3412) <= (1358 + 629))) then
+								if (((4625 - (674 + 990)) > (786 + 1954)) and v23(v79.Resurrection, nil, true)) then
+									return "resurrection";
+								end
 							end
 							break;
 						end
 					end
 				end
-				if (((1173 - (311 + 294)) < (2540 - 1629)) and (v89.TargetIsValid() or v13:AffectingCombat())) then
-					v91 = v10.BossFightRemains(nil, true);
-					v92 = v91;
-					if (((1392 + 1893) < (5671 - (496 + 947))) and (v92 == (12469 - (1233 + 125)))) then
-						v92 = v10.FightRemains(v86, false);
+				if (((1513 + 2183) >= (5724 - 2112)) and v13:IsMoving() and (v13:AffectingCombat() or v29)) then
+					local v220 = 1055 - (507 + 548);
+					while true do
+						if ((v220 == (837 - (289 + 548))) or ((4788 - (821 + 997)) == (2133 - (195 + 60)))) then
+							v89 = v139();
+							if (v89 or ((994 + 2699) < (3478 - (251 + 1250)))) then
+								return v89;
+							end
+							break;
+						end
 					end
-					v102 = v101:TimeSinceLastCast() <= (7 + 8);
-					v103 = (14 + 1) - v101:TimeSinceLastCast();
-					if (((745 + 3171) > (4973 - (963 + 682))) and (v103 < (0 + 0))) then
-						v103 = 1504 - (504 + 1000);
-					end
-					v106 = ((v13:BuffUp(v80.MindFlayInsanityBuff)) and v80.MindFlayInsanity) or v80.MindFlay;
-					v107 = v13:GCD() + 0.25 + 0;
 				end
-				if (((2277 + 223) < (363 + 3476)) and v89.TargetIsValid()) then
-					if (((746 - 239) == (434 + 73)) and not v13:AffectingCombat() and v29) then
-						local v219 = 0 + 0;
-						while true do
-							if (((422 - (156 + 26)) <= (1824 + 1341)) and (v219 == (0 - 0))) then
-								v90 = v129();
-								if (((998 - (149 + 15)) >= (1765 - (890 + 70))) and v90) then
-									return v90;
-								end
-								break;
+				if (v88.TargetIsValid() or v13:AffectingCombat() or ((2724 - 1794) > (1444 + 657))) then
+					local v221 = 1032 - (809 + 223);
+					while true do
+						if (((6059 - 1906) > (9267 - 6181)) and (v221 == (0 - 0))) then
+							v90 = v10.BossFightRemains(nil, true);
+							v91 = v90;
+							v221 = 1 + 0;
+						end
+						if ((v221 == (1 + 0)) or ((5271 - (14 + 603)) <= (4179 - (118 + 11)))) then
+							if ((v91 == (1798 + 9313)) or ((2168 + 434) < (4359 - 2863))) then
+								v91 = v10.FightRemains(v85, false);
 							end
+							v101 = v100:TimeSinceLastCast() <= (964 - (551 + 398));
+							v221 = 2 + 0;
+						end
+						if ((v221 == (2 + 1)) or ((829 + 191) > (8509 - 6221))) then
+							v105 = ((v13:BuffUp(v79.MindFlayInsanityBuff)) and v79.MindFlayInsanity) or v79.MindFlay;
+							v106 = v13:GCD() + (0.25 - 0);
+							break;
+						end
+						if (((107 + 221) == (1302 - 974)) and (v221 == (1 + 1))) then
+							v102 = (104 - (40 + 49)) - v100:TimeSinceLastCast();
+							if (((5754 - 4243) < (4298 - (99 + 391))) and (v102 < (0 + 0))) then
+								v102 = 0 - 0;
+							end
+							v221 = 7 - 4;
 						end
 					end
-					if (v13:AffectingCombat() or v29 or ((3929 - (39 + 78)) < (2798 - (14 + 468)))) then
-						local v220 = 0 - 0;
-						while true do
-							if ((v220 == (11 - 7)) or ((1369 + 1283) <= (921 + 612))) then
-								v90 = v136();
-								if (v90 or ((765 + 2833) < (660 + 800))) then
-									return v90;
-								end
-								break;
+				end
+				v182 = 5 + 0;
+			end
+			if ((v182 == (2 - 1)) or ((4114 - (1032 + 572)) > (5336 - (203 + 214)))) then
+				v31 = EpicSettings.Toggles['dispel'];
+				v32 = EpicSettings.Toggles['heal'];
+				v83 = v13:GetEnemiesInRange(1847 - (568 + 1249));
+				v182 = 2 + 0;
+			end
+			if (((11439 - 6676) == (18397 - 13634)) and (v182 == (1309 - (913 + 393)))) then
+				if (((11682 - 7545) > (2610 - 762)) and v13:IsDeadOrGhost()) then
+					return;
+				end
+				if (((2846 - (269 + 141)) <= (6970 - 3836)) and not v13:IsMoving()) then
+					v28 = GetTime();
+				end
+				if (((5704 - (362 + 1619)) == (5348 - (950 + 675))) and (v13:AffectingCombat() or v41)) then
+					local v222 = 0 + 0;
+					local v223;
+					while true do
+						if ((v222 == (1180 - (216 + 963))) or ((5333 - (485 + 802)) >= (4875 - (432 + 127)))) then
+							if (v89 or ((3081 - (1065 + 8)) < (1072 + 857))) then
+								return v89;
 							end
-							if ((v220 == (0 + 0)) or ((7878 - 3762) < (1179 + 13))) then
-								v90 = v139();
-								if (v90 or ((11866 - 8489) <= (23 + 880))) then
-									return v90;
-								end
-								if (((4027 - (12 + 39)) >= (409 + 30)) and not v13:IsCasting() and not v13:IsChanneling()) then
-									v90 = v89.Interrupt(v80.Silence, 92 - 62, true);
-									if (((13362 - 9610) == (1113 + 2639)) and v90) then
-										return v90;
-									end
-									v90 = v89.Interrupt(v80.Silence, 16 + 14, true, v17, v82.SilenceMouseover);
-									if (((10259 - 6213) > (1796 + 899)) and v90) then
-										return v90;
-									end
-									v90 = v89.InterruptWithStun(v80.PsychicScream, 38 - 30);
-									if (v90 or ((5255 - (1596 + 114)) == (8346 - 5149))) then
-										return v90;
-									end
-								end
-								v220 = 714 - (164 + 549);
+							break;
+						end
+						if (((3985 - (635 + 966)) > (1277 + 498)) and ((42 - (5 + 37)) == v222)) then
+							v223 = v41 and v79.Purify:IsReady();
+							v89 = v88.FocusUnit(v223, nil, nil, nil);
+							v222 = 2 - 1;
+						end
+					end
+				end
+				v182 = 2 + 2;
+			end
+			if ((v182 == (7 - 2)) or ((2126 + 2417) <= (9092 - 4716))) then
+				if (((2760 - 2032) == (1372 - 644)) and v88.TargetIsValid()) then
+					local v224 = 0 - 0;
+					while true do
+						if ((v224 == (1 + 0)) or ((1605 - (318 + 211)) > (22983 - 18312))) then
+							if (((3438 - (963 + 624)) >= (162 + 216)) and v23(v79.Pool)) then
+								return "Pool for Main()";
 							end
-							if (((3832 - (1059 + 379)) > (462 - 89)) and ((2 + 0) == v220)) then
-								v100 = ((v80.VoidEruption:CooldownRemains() <= (v13:GCD() * (1 + 2))) and v80.VoidEruption:IsAvailable()) or (v80.DarkAscension:CooldownUp() and v80.DarkAscension:IsAvailable()) or (v80.VoidTorrent:IsAvailable() and v80.PsychicLink:IsAvailable() and (v80.VoidTorrent:CooldownRemains() <= (396 - (145 + 247))) and v13:BuffDown(v80.VoidformBuff));
-								if (((3410 + 745) <= (1956 + 2276)) and (v105 == nil)) then
-									v105 = v14:GUID();
+							break;
+						end
+						if ((v224 == (846 - (518 + 328))) or ((4540 - 2592) >= (5555 - 2079))) then
+							if (((5111 - (301 + 16)) >= (2441 - 1608)) and not v13:AffectingCombat() and v29) then
+								v89 = v128();
+								if (((11486 - 7396) == (10672 - 6582)) and v89) then
+									return v89;
 								end
-								if (((v104 == false) and v29 and (v14:GUID() == v105) and not v110(v14, true)) or ((10616 - 7035) == (667 + 2806))) then
-									v90 = v133();
-									if (((4303 + 692) > (5435 - 2087)) and v90) then
-										return v90;
-									end
-									if (v23(v80.Pool) or ((1474 - (254 + 466)) > (4284 - (544 + 16)))) then
-										return "Pool for Opener()";
-									end
-								else
-									v104 = true;
-								end
-								v220 = 9 - 6;
 							end
-							if (((845 - (294 + 334)) >= (310 - (236 + 17))) and (v220 == (2 + 1))) then
-								if (v16 or ((1612 + 458) >= (15203 - 11166))) then
-									if (((12806 - 10101) == (1393 + 1312)) and v41) then
-										v90 = v141();
-										if (((51 + 10) == (855 - (413 + 381))) and v90) then
-											return v90;
+							if (v13:AffectingCombat() or v29 or ((3404 + 354) == (1419 + 1079))) then
+								local v227 = 0 - 0;
+								while true do
+									if ((v227 == (1 + 0)) or ((255 + 2418) < (5007 - 3432))) then
+										v97 = false;
+										v99 = ((v79.VoidEruption:CooldownRemains() <= (v13:GCD() * (1 + 2))) and v79.VoidEruption:IsAvailable()) or (v79.DarkAscension:CooldownUp() and v79.DarkAscension:IsAvailable()) or (v79.VoidTorrent:IsAvailable() and v79.PsychicLink:IsAvailable() and (v79.VoidTorrent:CooldownRemains() <= (1023 - (829 + 190))) and v13:BuffDown(v79.VoidformBuff));
+										if ((v104 == nil) or ((13276 - 9555) <= (1841 - 386))) then
+											v104 = v14:GUID();
 										end
+										v227 = 2 - 0;
 									end
-								end
-								if ((v80.DispelMagic:IsReady() and v31 and v42 and not v13:IsCasting() and not v13:IsChanneling() and v89.UnitHasMagicBuff(v14)) or ((30 + 669) >= (2755 - 1459))) then
-									if (v23(v80.DispelMagic, not v14:IsSpellInRange(v80.DispelMagic)) or ((4631 - 2848) >= (5586 - (582 + 1388)))) then
-										return "dispel_magic damage";
-									end
-								end
-								if ((v88 > (2 - 0)) or (v87 > (3 + 0)) or ((4277 - (326 + 38)) > (13391 - 8864))) then
-									v90 = v138();
-									if (((6246 - 1870) > (1437 - (47 + 573))) and v90) then
-										return v90;
-									end
-									if (((1714 + 3147) > (3499 - 2675)) and v23(v80.Pool)) then
-										return "Pool for AoE()";
-									end
-								end
-								v220 = 5 - 1;
-							end
-							if (((1665 - (1269 + 395)) == v220) or ((1875 - (76 + 416)) >= (2574 - (319 + 124)))) then
-								if (v43 or ((4288 - 2412) >= (3548 - (564 + 443)))) then
-									local v221 = 0 - 0;
-									while true do
-										if (((2240 - (337 + 121)) <= (11052 - 7280)) and (v221 == (0 - 0))) then
-											v90 = v89.HandleAfflicted(v80.PurifyDisease, v82.PurifyDiseaseMouseover, 1951 - (1261 + 650));
-											if (v90 or ((1989 + 2711) < (1294 - 481))) then
-												return v90;
+									if (((2319 - 1385) < (538 + 1732)) and (v227 == (1 + 1))) then
+										if (((v103 == false) and v29 and (v14:GUID() == v104) and not v109(v14, true)) or ((4892 - 3280) == (1185 + 70))) then
+											v89 = v132();
+											if (v89 or ((4965 - (520 + 93)) < (4482 - (259 + 17)))) then
+												return v89;
 											end
-											break;
+											if (v23(v79.Pool) or ((165 + 2695) <= (66 + 115))) then
+												return "Pool for Opener()";
+											end
+										else
+											v103 = true;
 										end
+										if (((10907 - 7685) >= (2118 - (396 + 195))) and v16) then
+											if (((4366 - 2861) <= (3882 - (440 + 1321))) and v41) then
+												local v229 = 1829 - (1059 + 770);
+												while true do
+													if (((3440 - 2696) == (1289 - (424 + 121))) and (v229 == (0 + 0))) then
+														v89 = v140();
+														if (v89 or ((3326 - (641 + 706)) >= (1124 + 1712))) then
+															return v89;
+														end
+														break;
+													end
+												end
+											end
+										end
+										if (((2273 - (249 + 191)) <= (11622 - 8954)) and v79.DispelMagic:IsReady() and v31 and v42 and not v13:IsCasting() and not v13:IsChanneling() and v88.UnitHasMagicBuff(v14)) then
+											if (((1647 + 2039) == (14206 - 10520)) and v23(v79.DispelMagic, not v14:IsSpellInRange(v79.DispelMagic))) then
+												return "dispel_magic damage";
+											end
+										end
+										v227 = 430 - (183 + 244);
+									end
+									if (((171 + 3296) > (1207 - (434 + 296))) and (v227 == (0 - 0))) then
+										v89 = v138();
+										if (v89 or ((3800 - (169 + 343)) >= (3105 + 436))) then
+											return v89;
+										end
+										if ((not v13:IsCasting() and not v13:IsChanneling()) or ((6258 - 2701) == (13326 - 8786))) then
+											local v228 = 0 + 0;
+											while true do
+												if ((v228 == (2 - 1)) or ((1384 - (651 + 472)) > (958 + 309))) then
+													v89 = v88.Interrupt(v79.Silence, 13 + 17, true, v17, v81.SilenceMouseover);
+													if (((1552 - 280) < (4341 - (397 + 86))) and v89) then
+														return v89;
+													end
+													v228 = 878 - (423 + 453);
+												end
+												if (((373 + 3291) == (483 + 3181)) and ((2 + 0) == v228)) then
+													v89 = v88.InterruptWithStun(v79.PsychicScream, 7 + 1);
+													if (((1734 + 207) >= (1640 - (50 + 1140))) and v89) then
+														return v89;
+													end
+													break;
+												end
+												if ((v228 == (0 + 0)) or ((2744 + 1902) < (21 + 303))) then
+													v89 = v88.Interrupt(v79.Silence, 43 - 13, true);
+													if (((2774 + 1059) == (4429 - (157 + 439))) and v89) then
+														return v89;
+													end
+													v228 = 1 - 0;
+												end
+											end
+										end
+										v227 = 3 - 2;
+									end
+									if ((v227 == (8 - 5)) or ((2158 - (782 + 136)) > (4225 - (112 + 743)))) then
+										if ((v87 > (1173 - (1026 + 145))) or (v86 > (1 + 2)) or ((3199 - (493 + 225)) == (17209 - 12527))) then
+											v89 = v137();
+											if (((2876 + 1851) >= (557 - 349)) and v89) then
+												return v89;
+											end
+											if (((6 + 274) < (11005 - 7154)) and v23(v79.Pool)) then
+												return "Pool for AoE()";
+											end
+										end
+										v89 = v135();
+										if (v89 or ((876 + 2131) > (5336 - 2142))) then
+											return v89;
+										end
+										break;
 									end
 								end
-								if (((5016 - (772 + 1045)) < (572 + 3478)) and v44) then
-									v90 = v89.HandleIncorporeal(v80.DominateMind, v82.DominateMindMouseover, 174 - (102 + 42), true);
-									if (v90 or ((6795 - (1524 + 320)) < (5700 - (1049 + 221)))) then
-										return v90;
-									end
-									v90 = v89.HandleIncorporeal(v80.ShackleUndead, v82.ShackleUndeadMouseover, 186 - (18 + 138), true);
-									if (((234 - 138) == (1198 - (67 + 1035))) and v90) then
-										return v90;
-									end
-								end
-								v98 = false;
-								v220 = 350 - (136 + 212);
 							end
+							v224 = 1596 - (210 + 1385);
 						end
-					end
-					if (v23(v80.Pool) or ((11638 - 8899) > (3211 + 797))) then
-						return "Pool for Main()";
 					end
 				end
 				break;
 			end
-			if (((2 + 0) == v202) or ((1627 - (240 + 1364)) == (2216 - (1050 + 32)))) then
-				if (AOE or ((9615 - 6922) >= (2432 + 1679))) then
-					v87 = #v84;
-					v88 = v14:GetEnemiesInSplashRangeCount(1065 - (331 + 724));
-				else
-					v87 = 1 + 0;
-					v88 = 645 - (269 + 375);
-				end
-				if (v13:IsDeadOrGhost() or ((5041 - (267 + 458)) <= (668 + 1478))) then
-					return;
-				end
-				if (not v13:IsMoving() or ((6818 - 3272) <= (3627 - (667 + 151)))) then
-					v28 = GetTime();
-				end
-				if (((6401 - (1410 + 87)) > (4063 - (1504 + 393))) and (v13:AffectingCombat() or v41)) then
-					local v217 = 0 - 0;
-					local v218;
+			if ((v182 == (1691 - (1201 + 488))) or ((1324 + 812) >= (5239 - 2293))) then
+				v84 = v13:GetEnemiesInRange(71 - 31);
+				v85 = v14:GetEnemiesInSplashRange(595 - (352 + 233));
+				if (((5232 - 3067) <= (1372 + 1149)) and AOE) then
+					local v225 = 0 - 0;
 					while true do
-						if (((282 - 173) >= (886 - (461 + 335))) and ((0 + 0) == v217)) then
-							v218 = v41 and v80.Purify:IsReady();
-							v90 = v89.FocusUnit(v218, nil, nil, nil);
-							v217 = 1762 - (1730 + 31);
+						if (((3435 - (489 + 85)) > (2162 - (277 + 1224))) and (v225 == (1493 - (663 + 830)))) then
+							v86 = #v83;
+							v87 = v14:GetEnemiesInSplashRangeCount(9 + 1);
+							break;
 						end
-						if (((6645 - (728 + 939)) > (10288 - 7383)) and (v217 == (1 - 0))) then
-							if (v90 or ((6932 - 3906) <= (3348 - (138 + 930)))) then
-								return v90;
-							end
+					end
+				else
+					local v226 = 0 - 0;
+					while true do
+						if (((5400 - (461 + 414)) > (758 + 3761)) and (v226 == (0 + 0))) then
+							v86 = 1 + 0;
+							v87 = 1 + 0;
 							break;
 						end
 					end
 				end
-				v202 = 3 + 0;
+				v182 = 253 - (172 + 78);
 			end
 		end
 	end
-	local function v144()
-		v108();
-		v80.VampiricTouchDebuff:RegisterAuraTracking();
-		v20.Print("Shadow Priest by Epic BoomK");
-		EpicSettings.SetupVersion("Shadow Priest X v 10.2.00 By BoomK");
+	local function v143()
+		local v183 = 0 - 0;
+		while true do
+			if (((1170 + 2008) > (1402 - 430)) and (v183 == (1 + 0))) then
+				v20.Print("Shadow Priest by Epic BoomK");
+				EpicSettings.SetupVersion("Shadow Priest X v 10.2.01 By BoomK");
+				break;
+			end
+			if (((1592 + 3174) == (7984 - 3218)) and ((0 - 0) == v183)) then
+				v107();
+				v79.VampiricTouchDebuff:RegisterAuraTracking();
+				v183 = 1 + 0;
+			end
+		end
 	end
-	v20.SetAPL(202 + 56, v143, v144);
+	v20.SetAPL(143 + 115, v142, v143);
 end;
 return v0["Epix_Priest_Shadow.lua"]();
 
