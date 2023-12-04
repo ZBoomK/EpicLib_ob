@@ -1,301 +1,48 @@
---- ============================ HEADER ============================
--- repush7
---- ======= LOCALIZE =======
--- Addon
-local addonName, addonTable = ...
--- EpicDBC
-local DBC = EpicDBC.DBC
--- EpicLib
-local EL         = EpicLib
-local Cache      = EpicCache
-local Unit       = EL.Unit
-local Player     = Unit.Player
-local Target     = Unit.Target
-local Pet        = Unit.Pet
-local Spell      = EL.Spell
-local MultiSpell = EL.MultiSpell
-local Item       = EL.Item
-local MergeTableByKey = EL.Utils.MergeTableByKey
--- EpicLib
-local ER         = EpicLib
-local Macro      = ER.Macro
+local v0 = {};
+local v1 = require;
+local function v2(v4, ...)
+	local v5 = v0[v4];
+	if (not v5 or ((3923 + 670) <= (2064 + 608))) then
+		return v1(v4, ...);
+	end
+	return v5(...);
+end
+v0["Epix_Shaman_Shaman.lua"] = function(...)
+	local v6, v7 = ...;
+	local v8 = EpicDBC.DBC;
+	local v9 = EpicLib;
+	local v10 = EpicCache;
+	local v11 = v9.Unit;
+	local v12 = v11.Player;
+	local v13 = v11.Target;
+	local v14 = v11.Pet;
+	local v15 = v9.Spell;
+	local v16 = v9.MultiSpell;
+	local v17 = v9.Item;
+	local v18 = v9.Utils.MergeTableByKey;
+	local v19 = EpicLib;
+	local v20 = v19.Macro;
+	if (not v15.Shaman or ((293 + 875) > (497 + 2659))) then
+		v15.Shaman = {};
+	end
+	v15.Shaman.Commons = {AncestralCall=v15(275615 - (282 + 595), nil, 1638 - (1523 + 114)),BagofTricks=v15(280752 + 31659, nil, 2 - 0),Berserking=v15(27362 - (68 + 997), nil, 1273 - (226 + 1044)),BloodFury=v15(146730 - 113033, nil, 121 - (32 + 85)),Fireblood=v15(259919 + 5302, nil, 2 + 3),AncestralSpirit=v15(2965 - (892 + 65), nil, 14 - 8),AncestralGuidance=v15(200150 - 91869, nil, 370 - 168),Bloodlust=v15(3175 - (87 + 263), nil, 187 - (67 + 113)),FlameShock=v15(138141 + 50248, nil, 19 - 11),FlamentongueWeapon=v15(233902 + 84136, nil, 35 - 26),FrostShock=v15(197792 - (802 + 150), nil, 26 - 16),HealingSurge=v15(14518 - 6514, nil, 147 + 54),HealingStreamTotem=v15(6391 - (915 + 82), nil, 574 - 371),Heroism=v15(18748 + 13434, nil, 263 - 63),LightningBolt=v15(189383 - (1069 + 118), nil, 24 - 13),LightningShield=v15(420226 - 228120, nil, 3 + 9),Purge=v15(452037 - 197626, nil, 13 + 0),GreaterPurge=v15(379564 - (368 + 423), nil, 43 - 29),AstralShift=v15(108289 - (10 + 8), nil, 57 - 42),CapacitorTotem=v15(192500 - (416 + 26), nil, 51 - 35),ChainLightning=v15(80871 + 107572, nil, 29 - 12),CleanseSpirit=v15(52324 - (145 + 293), nil, 448 - (44 + 386)),DeeplyRootedElements=v15(379756 - (998 + 488), nil, 7 + 12),EarthElemental=v15(162211 + 35892, nil, 792 - (201 + 571)),EarthShield=v15(2112 - (116 + 1022), nil, 87 - 66),ElementalBlast=v15(68685 + 48329, nil, 80 - 58),ElementalOrbit=v15(1360102 - 977092, nil, 1064 - (814 + 45)),Hex=v15(126928 - 75414, nil, 2 + 21),LavaBurst=v15(18199 + 33306, nil, 909 - (261 + 624)),NaturesSwiftness=v15(671886 - 293805, nil, 1105 - (1020 + 60)),PoisonCleansingTotem=v15(384436 - (630 + 793), nil, 87 - 61),PrimordialWave=v15(1780183 - 1404201, nil, 11 + 16),SpiritwalkersGrace=v15(272709 - 193503, nil, 1775 - (760 + 987)),Thundershock=v15(380692 - (1789 + 124), nil, 795 - (745 + 21)),Thunderstorm=v15(17711 + 33779, nil, 82 - 52),TremorTotem=v15(31940 - 23797, nil, 1 + 30),TotemicProjection=v15(85019 + 23268, nil, 1262 - (87 + 968)),TotemicRecall=v15(476664 - 368379, nil, 30 + 2),WindShear=v15(131097 - 73103, nil, 1446 - (447 + 966)),ImprovedPurifySpirit=v15(1048564 - 665548, nil, 1969 - (1703 + 114)),EarthShieldBuff=v15(384349 - (376 + 325), nil, 337 - 131),LightningShieldBuff=v15(591105 - 398999, nil, 10 + 24),PrimordialWaveBuff=v15(828102 - 452116, nil, 49 - (9 + 5)),SpiritwalkersGraceBuff=v15(79582 - (85 + 291), nil, 1301 - (243 + 1022)),SplinteredElementsBuff=v15(1453741 - 1071698, nil, 31 + 6),FlameShockDebuff=v15(189569 - (1123 + 57), nil, 31 + 7),AcquiredSwordBuff=v15(368911 - (163 + 91), nil, 1969 - (1869 + 61)),ScarsofFraternalStrifeBuff4=v15(102988 + 265650, nil, 140 - 100),Pool=v15(1535814 - 535904, nil, 6 + 35)};
+	v15.Shaman.Elemental = v18(v15.Shaman.Commons, {EarthShock=v15(11051 - 3009, nil, 80 + 5),Earthquake=v15(63356 - (1329 + 145), nil, 1057 - (140 + 831)),FireElemental=v15(199917 - (1409 + 441), nil, 805 - (15 + 703)),Aftershock=v15(126530 + 146691, nil, 526 - (262 + 176)),Ascendance=v15(115771 - (345 + 1376), nil, 777 - (198 + 490)),EarthenRage=v15(752705 - 582331, nil, 215 - 125),EchooftheElements=v15(335125 - (696 + 510), nil, 190 - 99),EchoesofGreatSundering=v15(385349 - (1091 + 171), nil, 15 + 77),EchoingShock=v15(1007862 - 687737, nil, 308 - 215),EchoingShockBuff=v15(320499 - (123 + 251), nil, 467 - 373),ElectrifiedShocks=v15(382784 - (208 + 490), nil, 9 + 86),EyeoftheStorm=v15(170031 + 211677, nil, 932 - (660 + 176)),FlowofPower=v15(46367 + 339556, nil, 299 - (14 + 188)),FluxMelting=v15(382451 - (534 + 141), nil, 40 + 58),Icefury=v15(186386 + 24328, nil, 96 + 3),IcefuryBuff=v15(442824 - 232110, nil, 158 - 58),ImprovedFlametongueWeapon=v15(1071602 - 689575, nil, 55 + 46),LavaBeam=v15(72633 + 41441, nil, 497 - (115 + 281)),LavaSurge=v15(180863 - 103107, nil, 85 + 17),LightningRod=v15(509183 - 298494, nil, 377 - 274),LiquidMagmaTotem=v15(193089 - (550 + 317), nil, 149 - 45),MagmaChamber=v15(536833 - 154901, nil, 293 - 188),MasteroftheElements=v15(16451 - (134 + 151), nil, 1771 - (970 + 695)),MountainsWillFall=v15(728423 - 346697, nil, 2153 - (582 + 1408)),PrimalElementalist=v15(405810 - 288797, nil, 134 - 27),PrimordialSurge=v15(1456372 - 1069898, nil, 2028 - (1195 + 629)),SearingFlames=v15(504905 - 123123, nil, 349 - (187 + 54)),SkybreakersFieryDemise=v15(379090 - (162 + 618), nil, 77 + 32),StaticDischarge=v15(227948 + 114295, nil, 234 - 124),StormElemental=v15(323206 - 130957, nil, 9 + 102),Stormkeeper=v15(193270 - (1373 + 263), nil, 1112 - (451 + 549)),StormkeeperBuff=v15(60492 + 131142, nil, 175 - 62),SurgeofPower=v15(440842 - 178539, nil, 1498 - (746 + 638)),SwellingMaelstrom=v15(144649 + 239710, nil, 174 - 59),UnlimitedPower=v15(261236 - (218 + 123), nil, 1697 - (1535 + 46)),UnrelentingCalamity=v15(380236 + 2449, nil, 17 + 100),WindGustBuff=v15(264366 - (306 + 254), nil, 8 + 110),Meteor=v15(230771 - 113183, "pet", 1586 - (899 + 568)),CallLightning=v15(103425 + 53923, "pet", 290 - 170),CallLightningBuff=v15(157951 - (268 + 335), "pet", 411 - (60 + 230)),Tempest=v15(157947 - (426 + 146), "pet", 15 + 107),AscendanceBuff=v15(115506 - (282 + 1174), nil, 933 - (569 + 242)),EchoesofGreatSunderingBuff=v15(1106401 - 722313, nil, 8 + 115),FluxMeltingBuff=v15(382801 - (706 + 318), nil, 1375 - (721 + 530)),LavaSurgeBuff=v15(79033 - (945 + 326), nil, 312 - 187),MasteroftheElementsBuff=v15(232006 + 28728, nil, 826 - (271 + 429)),PoweroftheMaelstromBuff=v15(176259 + 15618, nil, 1627 - (1408 + 92)),SurgeofPowerBuff=v15(286600 - (461 + 625), nil, 1416 - (993 + 295)),WindspeakersLavaResurgenceBuff=v15(19642 + 358627, nil, 1300 - (418 + 753)),ElectrifiedShocksDebuff=v15(145520 + 236569, nil, 14 + 116),LightningRodDebuff=v15(57681 + 139528, nil, 34 + 97)});
+	v15.Shaman.Enhancement = v18(v15.Shaman.Commons, {Windstrike=v15(115885 - (406 + 123), nil, 1811 - (1749 + 20)),AlphaWolf=v15(47134 + 151300, nil, 1484 - (1249 + 73)),Ascendance=v15(40690 + 73361, nil, 1188 - (466 + 679)),AshenCatalyst=v15(939023 - 548653, nil, 125 - 81),CrashLightning=v15(189774 - (106 + 1794), nil, 15 + 30),CrashingStorms=v15(84506 + 249802, nil, 135 - 89),DoomWinds=v15(1040802 - 656450, nil, 161 - (4 + 110)),ElementalAssault=v15(211437 - (57 + 527), nil, 1588 - (41 + 1386)),ElementalSpirits=v15(262727 - (17 + 86), nil, 33 + 15),FeralSpirit=v15(114924 - 63391, nil, 141 - 92),FireNova=v15(334140 - (122 + 44), nil, 86 - 36),Hailstorm=v15(1108682 - 774487, nil, 42 + 9),HotHand=v15(29200 + 172700, nil, 104 - 52),IceStrike=v15(342305 - (30 + 35), nil, 37 + 16),LashingFlames=v15(335303 - (1043 + 214), nil, 204 - 150),LavaLash=v15(61315 - (323 + 889), nil, 147 - 92),OverflowingMaelstrom=v15(384729 - (361 + 219), nil, 376 - (53 + 267)),StaticAccumulation=v15(86847 + 297564, nil, 572 - (15 + 398)),Stormblast=v15(320912 - (18 + 964), nil, 602 - 442),Stormflurry=v15(199370 + 144987, nil, 36 + 21),Stormstrike=v15(18214 - (20 + 830), nil, 46 + 12),Sundering=v15(197340 - (116 + 10), nil, 5 + 54),SwirlingMaelstrom=v15(385097 - (542 + 196), nil, 128 - 68),ThorimsInvocation=v15(112264 + 272180, nil, 31 + 30),UnrulyWinds=v15(140491 + 249797, nil, 410 - 254),WindfuryTotem=v15(21822 - 13310, nil, 1613 - (1126 + 425)),WindfuryWeapon=v15(34162 - (118 + 287), nil, 246 - 183),MoltenAssault=v15(335154 - (118 + 1003), nil, 187 - 123),ConvergingStorms=v15(384740 - (142 + 235), nil, 294 - 229),AscendanceBuff=v15(24817 + 89234, nil, 1043 - (553 + 424)),AshenCatalystBuff=v15(738174 - 347803, nil, 60 + 7),ConvergingStormsBuff=v15(196710 + 1590, nil, 92 + 66),CracklingThunderBuff=v15(174217 + 235617, nil, 88 + 66),CrashLightningBuff=v15(407299 - 219421, nil, 189 - 121),CLCrashLightningBuff=v15(747759 - 413795, nil, 21 + 48),DoomWindsBuff=v15(1857442 - 1473090, nil, 823 - (239 + 514)),FeralSpiritBuff=v15(117290 + 216667, nil, 1400 - (797 + 532)),GatheringStormsBuff=v15(144088 + 54212, nil, 25 + 47),HailstormBuff=v15(785779 - 451583, nil, 1275 - (373 + 829)),HotHandBuff=v15(216516 - (476 + 255), nil, 1204 - (369 + 761)),IceStrikeBuff=v15(222340 + 162017, nil, 281 - 126),MaelstromWeaponBuff=v15(652220 - 308041, nil, 313 - (64 + 174)),StormbringerBuff=v15(28748 + 173098, nil, 112 - 36),WindfuryTotemBuff=v15(328278 - (144 + 192), nil, 293 - (42 + 174)),LashingFlamesDebuff=v15(251039 + 83129, nil, 65 + 13),CracklingSurgeBuff=v15(95219 + 128908, nil, 1583 - (363 + 1141)),EarthenWeaponBuff=v15(393955 - (1183 + 397), nil, 243 - 163),LegacyoftheFrostWitch=v15(246231 + 89670, nil, 61 + 20),IcyEdgeBuff=v15(226101 - (1913 + 62), nil, 52 + 30),MoltenWeaponBuff=v15(593327 - 369202, nil, 2016 - (565 + 1368)),MaelstromofElementsBuff=v15(1484275 - 1089598, nil, 1745 - (1477 + 184))});
+	v15.Shaman.Restoration = v18(v15.Shaman.Commons, {WaterShield=v15(71027 - 18900, nil, 123 + 9),AncestralVision=v15(212904 - (564 + 292), nil, 228 - 95),Riptide=v15(184753 - 123458, nil, 438 - (244 + 60)),PurifySpirit=v15(59307 + 17823, nil, 611 - (41 + 435)),HealingWave=v15(78473 - (938 + 63), nil, 106 + 31),UnleashLife=v15(74810 - (936 + 189), nil, 46 + 92),HealingRain=v15(75533 - (1565 + 48), nil, 86 + 53),ChainHeal=v15(2202 - (782 + 356), nil, 407 - (176 + 91)),SpiritLinkTotem=v15(255343 - 157335, nil, 208 - 66),HealingTideTotem=v15(109372 - (975 + 117), nil, 2018 - (157 + 1718)),EarthenWallTotem=v15(161368 + 37470, nil, 511 - 367),Downpour=v15(710353 - 502575, nil, 1163 - (697 + 321)),AncestralProtectionTotem=v15(564981 - 357582, nil, 308 - 162),CloudburstTotem=v15(362297 - 205144, nil, 58 + 89),Wellspring=v15(370974 - 172979, nil, 396 - 248),AncestralGuidance=v15(109508 - (322 + 905), nil, 760 - (602 + 9)),Ascendance=v15(115241 - (449 + 740), nil, 1022 - (826 + 46)),ManaTideTotem=v15(17138 - (245 + 702), nil, 477 - 326),Stormkeeper=v15(123126 + 259883, nil, 2051 - (260 + 1638))});
+	if (not v17.Shaman or ((1012 - (382 + 58)) > (14391 - 9905))) then
+		v17.Shaman = {};
+	end
+	v17.Shaman.Commons = {CacheofAcquiredTreasures=v17(156440 + 31825, {(38 - 25),(30 - 16)}),ScarsofFraternalStrife=v17(453407 - 265154, {(1703 - (1121 + 569)),(697 - (483 + 200))}),TheFirstSigil=v17(189734 - (1404 + 59), {(16 - 3),(576 - (334 + 228))}),Healthstone=v17(18591 - 13079),RefreshingHealingPotion=v17(443601 - 252221),DreamwalkersHealingPotion=v17(375465 - 168442)};
+	v17.Shaman.Enhancement = v18(v17.Shaman.Commons, {});
+	v17.Shaman.Elemental = v18(v17.Shaman.Commons, {});
+	v17.Shaman.Restoration = v18(v17.Shaman.Commons, {});
+	if (((399 + 1005) == (1640 - (141 + 95))) and not v20.Shaman) then
+		v20.Shaman = {};
+	end
+	v20.Shaman.Commons = {Healthstone=v20(9 + 0),RefreshingHealingPotion=v20(25 - 15),CleanseSpiritFocus=v20(26 - 15),CleanseSpiritMouseover=v20(3 + 9),CapacitorTotemCursor=v20(35 - 22),WindShearMouseover=v20(10 + 4),HexMouseOver=v20(8 + 7),AncestralSpiritMouseover=v20(35 - 10),PurifyMouseover=v20(10 + 6),HealingSurgeFocus=v20(206 - (92 + 71)),HealingSurgeMouseover=v20(22 + 22)};
+	v20.Shaman.Elemental = v18(v20.Shaman.Commons, {EarthquakePlayer=v20(27 - 10),EarthquakeCursor=v20(783 - (574 + 191)),LiquidMagmaTotemPlayer=v20(16 + 3),LiquidMagmaTotemCursor=v20(50 - 30),FireElementalMeteor=v20(11 + 10),StormElementalTempest=v20(871 - (254 + 595))});
+	v20.Shaman.Enhancement = v18(v20.Shaman.Commons, {HealingSurgeFocus=v20(149 - (55 + 71)),HealingSurgeMouseover=v20(31 - 7),TotemicProjectionPlayer=v20(1836 - (573 + 1217))});
+	v20.Shaman.Restoration = v18(v20.Shaman.Commons, {EarthShieldFocus=v20(124 - 79),HealingWaveFocus=v20(2 + 24),HealingRainPlayer=v20(42 - 15),HealingRainCursor=v20(967 - (714 + 225)),ChainHealFocus=v20(84 - 55),SpiritLinkTotemPlayer=v20(41 - 11),SpiritLinkTotemCursor=v20(4 + 27),EarthenWallTotemPlayer=v20(45 - 13),EarthenWallTotemCursor=v20(839 - (118 + 688)),DownpourPlayer=v20(82 - (25 + 23)),DownpourCursor=v20(7 + 28),AncestralProtectionTotemPlayer=v20(1922 - (927 + 959)),AncestralProtectionTotemCursor=v20(124 - 87),PurifySpiritMouseover=v20(770 - (16 + 716)),RiptideMouseover=v20(74 - 35),HealingWaveMouseover=v20(137 - (11 + 86)),RiptideFocus=v20(99 - 58),PrimordialWaveFocus=v20(327 - (175 + 110))});
+end;
+return v0["Epix_Shaman_Shaman.lua"]();
 
---- ============================ CONTENT ============================
-
--- Spells ok
-if not Spell.Shaman then Spell.Shaman = {} end
-Spell.Shaman.Commons = {
-  -- Racialstest
-  AncestralCall                         = Spell(274738, nil, 1),
-  BagofTricks                           = Spell(312411, nil, 2),
-  Berserking                            = Spell(26297, nil, 3),
-  BloodFury                             = Spell(33697, nil, 4),
-  Fireblood                             = Spell(265221, nil, 5),
-  -- Abilities
-  AncestralSpirit                       = Spell(2008, nil, 6),
-  AncestralGuidance                     = Spell(108281, nil, 202),
-  Bloodlust                             = Spell(2825, nil, 7), 
-  FlameShock                            = Spell(188389, nil, 8),
-  FlamentongueWeapon                    = Spell(318038, nil, 9),
-  FrostShock                            = Spell(196840, nil, 10),
-  HealingSurge                          = Spell(8004, nil, 201),
-  HealingStreamTotem                    = Spell(5394, nil, 203),
-  Heroism                               = Spell(32182, nil, 200), 
-  LightningBolt                         = Spell(188196, nil, 11),
-  LightningShield                       = Spell(192106, nil, 12),
-  Purge                                 = Spell(254411, nil, 13),
-  GreaterPurge                          = Spell(378773, nil, 14),
-  -- Talents
-  AstralShift                           = Spell(108271, nil, 15),
-  CapacitorTotem                        = Spell(192058, nil, 16),
-  ChainLightning                        = Spell(188443, nil, 17),
-  CleanseSpirit                         = Spell(51886, nil, 18),
-  DeeplyRootedElements                  = Spell(378270, nil, 19),
-  EarthElemental                        = Spell(198103, nil, 20),
-  EarthShield                           = Spell(974, nil, 21),
-  ElementalBlast                        = Spell(117014, nil, 22),
-  ElementalOrbit                        = Spell(383010, nil, 205),
-  Hex                                   = Spell(51514, nil, 23),
-  LavaBurst                             = Spell(51505, nil, 24),
-  NaturesSwiftness                      = Spell(378081, nil, 25),
-  PoisonCleansingTotem                  = Spell(383013, nil, 26),
-  PrimordialWave                        = Spell(375982, nil, 27),
-  SpiritwalkersGrace                    = Spell(79206, nil, 28),
-  Thundershock                          = Spell(378779, nil, 29),
-  Thunderstorm                          = Spell(51490, nil, 30),
-  TremorTotem                           = Spell(8143, nil, 31),
-  TotemicRecall                         = Spell(108285, nil, 32),
-  WindShear                             = Spell(57994, nil, 33),
-  ImprovedPurifySpirit                  = Spell(383016, nil, 152),
-  -- Buffs
-  EarthShieldBuff                       = Spell(383648, nil, 206),
-  LightningShieldBuff                   = Spell(192106, nil, 34),
-  PrimordialWaveBuff                    = Spell(375986, nil, 35),
-  SpiritwalkersGraceBuff                = Spell(79206, nil, 36),
-  SplinteredElementsBuff                = Spell(382043, nil, 37),
-  -- Debuffs
-  FlameShockDebuff                      = Spell(188389, nil, 38),
-  -- Trinket Effects
-  AcquiredSwordBuff                     = Spell(368657, nil, 39),
-  ScarsofFraternalStrifeBuff4           = Spell(368638, nil, 40),
-  -- Misc
-  Pool                                  = Spell(999910, nil, 41),
-}
-
-Spell.Shaman.Elemental = MergeTableByKey(Spell.Shaman.Commons, {
-  -- Abilities
-  EarthShock                            = Spell(8042, nil, 85),
-  Earthquake                            = Spell(61882, nil, 86),
-  FireElemental                         = Spell(198067, nil, 87),
-  -- Talents
-  Aftershock                            = Spell(273221, nil, 88),
-  Ascendance                            = Spell(114050, nil, 89),
-  EarthenRage                           = Spell(170374, nil, 90),
-  EchooftheElements                     = Spell(333919, nil, 91),
-  EchoesofGreatSundering                = Spell(384087, nil, 92),
-  EchoingShock                          = Spell(320125, nil, 93),
-  EchoingShockBuff                      = Spell(320125, nil, 94),
-  ElectrifiedShocks                     = Spell(382086, nil, 95),
-  EyeoftheStorm                         = Spell(381708, nil, 96),
-  FlowofPower                           = Spell(385923, nil, 97),
-  FluxMelting                           = Spell(381776, nil, 98),
-  Icefury                               = Spell(210714, nil, 99),
-  IcefuryBuff                           = Spell(210714, nil, 100),
-  ImprovedFlametongueWeapon             = Spell(382027, nil, 101),
-  LavaBeam                              = Spell(114074, nil, 101),
-  LavaSurge                             = Spell(77756, nil, 102),
-  LightningRod                          = Spell(210689, nil, 103),
-  LiquidMagmaTotem                      = Spell(192222, nil, 104),
-  MagmaChamber                          = Spell(381932, nil, 105),
-  MasteroftheElements                   = Spell(16166, nil, 106),
-  MountainsWillFall                     = Spell(381726, nil, 163),
-  PrimalElementalist                    = Spell(117013, nil, 107),
-  PrimordialSurge                       = Spell(386474, nil, 204),
-  SearingFlames                         = Spell(381782, nil, 108),
-  SkybreakersFieryDemise                = Spell(378310, nil, 109),
-  StaticDischarge                       = Spell(342243, nil, 110),
-  StormElemental                        = Spell(192249, nil, 111),
-  Stormkeeper                           = Spell(191634, nil, 112),
-  StormkeeperBuff                       = Spell(191634, nil, 113),
-  SurgeofPower                          = Spell(262303, nil, 114),
-  SwellingMaelstrom                     = Spell(384359, nil, 115),
-  UnlimitedPower                        = Spell(260895, nil, 116),
-  UnrelentingCalamity                   = Spell(382685, nil, 117),
-  WindGustBuff                          = Spell(263806, nil, 118),
-  -- Pets
-  Meteor                                = Spell(117588, "pet", 119),
-  CallLightning                         = Spell(157348, "pet", 120),
-  CallLightningBuff                     = Spell(157348, "pet", 121),
-  Tempest                               = Spell(157375, "pet", 122),
-  -- Buffs
-  AscendanceBuff                        = Spell(114050, nil, 122),
-  EchoesofGreatSunderingBuff            = Spell(384088, nil, 123),
-  FluxMeltingBuff                       = Spell(381777, nil, 124),
-  LavaSurgeBuff                         = Spell(77762, nil, 125),
-  MasteroftheElementsBuff               = Spell(260734, nil, 126),
-  PoweroftheMaelstromBuff               = Spell(191877, nil, 127),
-  SurgeofPowerBuff                      = Spell(285514, nil, 128),
-  WindspeakersLavaResurgenceBuff        = Spell(378269, nil, 129),
-  -- Debuffs
-  ElectrifiedShocksDebuff               = Spell(382089, nil, 130),
-  LightningRodDebuff                    = Spell(197209, nil, 131),
-})
-
-Spell.Shaman.Enhancement = MergeTableByKey(Spell.Shaman.Commons, {
-  -- Abilities
-  Windstrike                            = Spell(115356, nil, 42),
-  -- Talents
-  AlphaWolf                             = Spell(198434, nil, 162),
-  Ascendance                            = Spell(114051, nil, 43),
-  AshenCatalyst                         = Spell(390370, nil, 44),
-  CrashLightning                        = Spell(187874, nil, 45),
-  CrashingStorms                        = Spell(334308, nil, 46),
-  DoomWinds                             = Spell(384352, nil, 47),
-  ElementalAssault                      = Spell(210853, nil, 161),
-  ElementalSpirits                      = Spell(262624, nil, 48),
-  FeralSpirit                           = Spell(51533, nil, 49),
-  FireNova                              = Spell(333974, nil, 50),
-  Hailstorm                             = Spell(334195, nil, 51),
-  HotHand                               = Spell(201900, nil, 52),
-  IceStrike                             = Spell(342240, nil, 53),
-  LashingFlames                         = Spell(334046, nil, 54),
-  LavaLash                              = Spell(60103, nil, 55),
-  OverflowingMaelstrom                  = Spell(384149, nil, 56),
-  StaticAccumulation                    = Spell(384411, nil, 159),
-  Stormblast                            = Spell(319930, nil, 160),
-  Stormflurry                           = Spell(344357, nil, 57),
-  Stormstrike                           = Spell(17364, nil, 58),
-  Sundering                             = Spell(197214, nil, 59),
-  SwirlingMaelstrom                     = Spell(384359, nil, 60),
-  ThorimsInvocation                     = Spell(384444, nil, 61),
-  UnrulyWinds                           = Spell(390288, nil, 156),
-  WindfuryTotem                         = Spell(8512, nil, 62),
-  WindfuryWeapon                        = Spell(33757, nil, 63),
-  MoltenAssault							            = Spell(334033, nil, 64),
-  ConvergingStorms                      = Spell(384363, nil, 65),
-  -- Buffs
-  AscendanceBuff                        = Spell(114051, nil, 66),
-  AshenCatalystBuff                     = Spell(390371, nil, 67),
-  ConvergingStormsBuff                  = Spell(198300, nil, 158),
-  CracklingThunderBuff                  = Spell(409834, nil, 154),
-  CrashLightningBuff                    = Spell(187878, nil, 68),
-  CLCrashLightningBuff                  = Spell(333964, nil, 69),
-  DoomWindsBuff                         = Spell(384352, nil, 70),
-  FeralSpiritBuff                       = Spell(333957, nil, 71),
-  GatheringStormsBuff                   = Spell(198300, nil, 72),
-  HailstormBuff                         = Spell(334196, nil, 73),
-  HotHandBuff                           = Spell(215785, nil, 74),
-  IceStrikeBuff                         = Spell(384357, nil, 155),
-  MaelstromWeaponBuff                   = Spell(344179, nil, 75),
-  StormbringerBuff                      = Spell(201846, nil, 76),
-  WindfuryTotemBuff                     = Spell(327942, nil, 77),
-  -- Debuffs
-  LashingFlamesDebuff                   = Spell(334168, nil, 78),
-  -- Elemental Spirits Buffs
-  CracklingSurgeBuff                    = Spell(224127, nil, 79),
-  EarthenWeaponBuff                     = Spell(392375, nil, 80),
-  LegacyoftheFrostWitch                 = Spell(335901, nil, 81),
-  IcyEdgeBuff                           = Spell(224126, nil, 82),
-  MoltenWeaponBuff                      = Spell(224125, nil, 83),
-  -- Tier 29 Buffs
-  MaelstromofElementsBuff               = Spell(394677, nil, 84),
-})
-
-
-Spell.Shaman.Restoration = MergeTableByKey(Spell.Shaman.Commons, {
-WaterShield                             = Spell(52127, nil, 132),
-    AncestralVision                     = Spell(212048, nil, 133),
-    Riptide                             = Spell(61295, nil, 134),
-    PurifySpirit                        = Spell(77130, nil, 135),
-    --HealingSurge                        = Spell(8004, nil, 136),
-    HealingWave                         = Spell(77472, nil, 137),
-    UnleashLife                         = Spell(73685, nil, 138),
-    HealingRain                         = Spell(73920, nil, 139),
-    ChainHeal                           = Spell(1064, nil, 140),
-    --HealingStreamTotem                  = Spell(5394, nil, 141),
-    SpiritLinkTotem                     = Spell(98008, nil, 142),
-    HealingTideTotem                    = Spell(108280, nil, 143),
-    EarthenWallTotem                    = Spell(198838, nil, 144),
-    Downpour                            = Spell(207778, nil, 145),
-    AncestralProtectionTotem            = Spell(207399, nil, 146),
-    CloudburstTotem                     = Spell(157153, nil, 147),
-    Wellspring                          = Spell(197995, nil, 148),
-    AncestralGuidance                   = Spell(108281, nil, 149),
-    Ascendance                          = Spell(114052, nil, 150),
-    ManaTideTotem                       = Spell(16191, nil, 151),
-    Stormkeeper                           = Spell(383009, nil, 153),
-})
-
-if not Item.Shaman then Item.Shaman = {} end
-Item.Shaman.Commons = {
-  -- Trinkets
-  CacheofAcquiredTreasures              = Item(188265, {13, 14}),
-  ScarsofFraternalStrife                = Item(188253, {13, 14}),
-  TheFirstSigil                         = Item(188271, {13, 14}),
-  Healthstone                           = Item(5512),
-  RefreshingHealingPotion               = Item(191380),
-  DreamwalkersHealingPotion             = Item(207023),
-}
-Item.Shaman.Enhancement = MergeTableByKey(Item.Shaman.Commons, {
-})
-
-Item.Shaman.Elemental = MergeTableByKey(Item.Shaman.Commons, {
-})
-
-Item.Shaman.Restoration = MergeTableByKey(Item.Shaman.Commons, {
-})
-
-if not Macro.Shaman then Macro.Shaman = {} end
-Macro.Shaman.Commons = {
-  Healthstone                           = Macro(9),
-  RefreshingHealingPotion               = Macro(10),
-  CleanseSpiritFocus                    = Macro(11),
-  CleanseSpiritMouseover                = Macro(12),
-  CapacitorTotemCursor                  = Macro(13),
-  WindShearMouseover                    = Macro(14),
-  HexMouseOver                          = Macro(15),
-  AncestralSpiritMouseover              = Macro(25),
-  PurifyMouseover                       = Macro(16),
-  HealingSurgeFocus                     = Macro(43),
-  HealingSurgeMouseover                 = Macro(44),
-}
-
-Macro.Shaman.Elemental = MergeTableByKey(Macro.Shaman.Commons, {
-  EarthquakePlayer                      = Macro(17),
-  EarthquakeCursor                      = Macro(18),
-  LiquidMagmaTotemPlayer                = Macro(19),
-  LiquidMagmaTotemCursor                = Macro(20),
-  FireElementalMeteor                   = Macro(21),
-  StormElementalTempest                 = Macro(22),
-})
-
-Macro.Shaman.Enhancement = MergeTableByKey(Macro.Shaman.Commons, {
-  HealingSurgeFocus                     = Macro(23),
-  HealingSurgeMouseover                 = Macro(24),
-})
-
-Macro.Shaman.Restoration = MergeTableByKey(Macro.Shaman.Commons, {
-  EarthShieldFocus                     = Macro(45),
-  HealingWaveFocus                      = Macro(26),
-  HealingRainPlayer                      = Macro(27),
-  HealingRainCursor                      = Macro(28),
-  ChainHealFocus                       = Macro(29),
-  SpiritLinkTotemPlayer                       = Macro(30),
-  SpiritLinkTotemCursor                       = Macro(31),
-  EarthenWallTotemPlayer                       = Macro(32),
-  EarthenWallTotemCursor                       = Macro(33),
-  DownpourPlayer                      = Macro(34),
-  DownpourCursor                       = Macro(35),
-  AncestralProtectionTotemPlayer                      = Macro(36),
-  AncestralProtectionTotemCursor                       = Macro(37),
-  PurifySpiritMouseover                     = Macro(38),
-  RiptideMouseover                      = Macro(39),
-  HealingWaveMouseover                      = Macro(40),
-  RiptideFocus                      = Macro(41),
-  PrimordialWaveFocus                      = Macro(42),
-})
-
--- Overrides
--- Elemental, ID: 262
-
--- Enhancement, ID: 263
