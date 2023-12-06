@@ -1214,7 +1214,7 @@ do
   Commons.DispellableDebuffs = {};
   -- Get dispellable friendly units.
   function Commons.DispellableFriendlyUnits(maxRaid)
-    local FriendlyUnits = Commons.FriendlyUnits(maxRaid);
+    local FriendlyUnits = Commons.FriendlyUnits(false,maxRaid);
     local DispellableUnits = {};
     for i = 1, #FriendlyUnits do
       local DispellableUnit = FriendlyUnits[i];
