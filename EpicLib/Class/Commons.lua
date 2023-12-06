@@ -1058,6 +1058,10 @@ do
     Spell(385963),
     Spell(387359),
     -- Dawn of the Infinite
+    -- Spell(415554), Chronoburst which should be manually dispelled
+    -- Spell(404141), Chrono Faded which should be manually dispelled
+    Spell(416716),
+    Spell(411994),
     Spell(415436),
     Spell(415437),
     Spell(413547),
@@ -1066,6 +1070,33 @@ do
     Spell(407121),
     Spell(417030),
     Spell(412027),
+    Spell(412131),
+    Spell(411644),
+    Spell(413606),
+    Spell(418200),
+    Spell(401667),
+    Spell(412378),
+    -- Atal'Dazar
+    Spell(253562),
+    Spell(255371),
+    Spell(255041),
+    Spell(255582),
+    -- Black Rook Hold
+    Spell(200084),
+    Spell(194960),
+    Spell(225909),
+    -- Darkheart Thicket
+    Spell(200642),
+    Spell(204246),
+    Spell(200182),
+    Spell(201902),
+    -- Everbloom
+    Spell(428084),
+    Spell(427863),
+    Spell(169840),
+    Spell(164965),
+    Spell(169839),
+    Spell(426849),
   };
   function Commons.UnitHasMagicDebuff(U)
     -- for i = 1, #Commons.DispellableMagicDebuffs do
@@ -1097,6 +1128,15 @@ do
     Spell(396305),
     Spell(377864),
     Spell(382808),
+    -- Atal'Dazar
+    Spell(250372),
+    -- Darkheart Thicket
+    Spell(201365),
+    -- Throne of Tides
+    Spell(76363),
+    -- Waycrest Manor
+    Spell(261440),
+    Spell(264050),
   };
   function Commons.UnitHasDiseaseDebuff(U)
     -- for i = 1, #Commons.DispellableDiseaseDebuffs do
@@ -1117,6 +1157,19 @@ do
   Commons.DispellablePoisonDebuffs = {
     -- Dispellable Debuffs
     Spell(123456), --TODO Fix Spell IDs
+    -- Atal'Dazar
+    Spell(252687),
+    -- Darkheart Thicket
+    Spell(200684),
+    Spell(198904),
+    -- Everbloom
+    Spell(165123),
+    Spell(169658),
+    Spell(427460),
+    -- Throne of Tides
+    Spell(76516),
+    --- Waycrest Manor
+    Spell(264520),
   };
   function Commons.UnitHasPoisonDebuff(U)
     -- for i = 1, #Commons.DispellablePoisonDebuffs do
