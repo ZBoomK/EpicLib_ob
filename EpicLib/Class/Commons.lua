@@ -940,6 +940,8 @@ end
 -- Dispel Buffs
 do
   Commons.DispellableEnrageBuffIDs = {
+    -- Affix
+    Spell(228318),
     Spell(390938),
     Spell(397410),
     Spell(190225),
@@ -1097,6 +1099,15 @@ do
     Spell(164965),
     Spell(169839),
     Spell(426849),
+    -- Throne of Tides
+    Spell(75992),
+    Spell(429048),
+    Spell(428103),
+    -- Waycrest Manor
+    Spell(265881),
+    Spell(264378),
+    Spell(264390),
+    Spell(264407),
   };
   function Commons.UnitHasMagicDebuff(U)
     -- for i = 1, #Commons.DispellableMagicDebuffs do
