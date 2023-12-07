@@ -1,50 +1,42 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 0 + 0;
-	local v6;
-	while true do
-		if ((v5 == (1 + 0)) or ((367 - (20 + 27)) <= (339 - (50 + 237)))) then
-			return v6(...);
-		end
-		if (((747 + 562) <= (5691 - 2185)) and (v5 == (0 + 0))) then
-			v6 = v0[v4];
-			if (((12493 - 9538) == (4448 - (711 + 782))) and not v6) then
-				return v1(v4, ...);
-			end
-			v5 = 1 - 0;
-		end
+	local v5 = v0[v4];
+	if (not v5 or ((1470 - (428 + 722)) <= (98 - 46))) then
+		return v1(v4, ...);
 	end
+	return v5(...);
 end
 v0["Epix_DemonHunter_Havoc.lua"] = function(...)
-	local v7, v8 = ...;
-	local v9 = EpicDBC.DBC;
-	local v10 = EpicLib;
-	local v11 = EpicCache;
-	local v12 = v10.Unit;
-	local v13 = v10.Utils;
-	local v14 = v12.Player;
-	local v15 = v12.Target;
-	local v16 = v12.MouseOver;
-	local v17 = v12.Pet;
-	local v18 = v10.Spell;
-	local v19 = v10.Item;
-	local v20 = EpicLib;
-	local v21 = v20.Bind;
-	local v22 = v20.Cast;
-	local v23 = v20.CastSuggested;
-	local v24 = v20.Press;
-	local v25 = v20.Macro;
-	local v26 = v20.Commons.Everyone;
-	local v27 = v26.num;
-	local v28 = v26.bool;
-	local v29 = math.min;
-	local v30 = math.max;
-	local v31;
+	local v6, v7 = ...;
+	local v8 = EpicDBC.DBC;
+	local v9 = EpicLib;
+	local v10 = EpicCache;
+	local v11 = v9.Unit;
+	local v12 = v9.Utils;
+	local v13 = v11.Player;
+	local v14 = v11.Target;
+	local v15 = v11.MouseOver;
+	local v16 = v11.Pet;
+	local v17 = v9.Spell;
+	local v18 = v9.Item;
+	local v19 = EpicLib;
+	local v20 = v19.Bind;
+	local v21 = v19.Cast;
+	local v22 = v19.CastSuggested;
+	local v23 = v19.Press;
+	local v24 = v19.Macro;
+	local v25 = v19.Commons.Everyone;
+	local v26 = v25.num;
+	local v27 = v25.bool;
+	local v28 = math.min;
+	local v29 = math.max;
+	local v30;
+	local v31 = false;
 	local v32 = false;
 	local v33 = false;
 	local v34 = false;
-	local v35 = false;
+	local v35;
 	local v36;
 	local v37;
 	local v38;
@@ -92,701 +84,726 @@ v0["Epix_DemonHunter_Havoc.lua"] = function(...)
 	local v80;
 	local v81;
 	local v82;
-	local v83;
+	local v83 = v17.DemonHunter.Havoc;
 	local v84 = v18.DemonHunter.Havoc;
-	local v85 = v19.DemonHunter.Havoc;
-	local v86 = v25.DemonHunter.Havoc;
-	local v87 = {};
-	local v88 = v14:GetEquipment();
-	local v89 = (v88[482 - (270 + 199)] and v19(v88[5 + 8])) or v19(1819 - (580 + 1239));
-	local v90 = (v88[41 - 27] and v19(v88[14 + 0])) or v19(0 + 0);
-	local v91, v92;
-	local v93, v94;
-	local v95 = {{v84.FelEruption},{v84.ChaosNova}};
+	local v85 = v24.DemonHunter.Havoc;
+	local v86 = {};
+	local v87 = v13:GetEquipment();
+	local v88 = (v87[38 - 25] and v18(v87[13 + 0])) or v18(0 + 0);
+	local v89 = (v87[7 + 7] and v18(v87[36 - 22])) or v18(0 + 0);
+	local v90, v91;
+	local v92, v93;
+	local v94 = {{v83.FelEruption},{v83.ChaosNova}};
+	local v95 = false;
 	local v96 = false;
 	local v97 = false;
 	local v98 = false;
 	local v99 = false;
 	local v100 = false;
-	local v101 = false;
-	local v102 = ((v84.AFireInside:IsAvailable()) and (1795 - (1010 + 780))) or (1 + 0);
-	local v103 = v14:GCD() + (0.25 - 0);
-	local v104 = 0 - 0;
-	local v105 = false;
-	local v106 = 12947 - (1045 + 791);
-	local v107 = 28124 - 17013;
-	local v108 = {(169926 - (351 + 154)),(169691 - (28 + 238)),(170491 - (1381 + 178)),(136615 + 32811),(584092 - 414663),(169898 - (381 + 89)),(114584 + 54846)};
-	v10:RegisterForEvent(function()
-		local v122 = 0 - 0;
+	local v101 = ((v83.AFireInside:IsAvailable()) and (14 - 9)) or (1837 - (1045 + 791));
+	local v102 = v13:GCD() + (0.25 - 0);
+	local v103 = 0 - 0;
+	local v104 = false;
+	local v105 = 11616 - (351 + 154);
+	local v106 = 12685 - (1281 + 293);
+	local v107 = {(378566 - 209145),(158911 + 10514),(72060 + 96872),(87774 + 81652),(150248 + 19181),(290228 - 120800),(371301 - 201871)};
+	v9:RegisterForEvent(function()
+		v95 = false;
+		v96 = false;
+		v97 = false;
+		v98 = false;
+		v99 = false;
+		v105 = 12895 - (214 + 1570);
+		v106 = 12566 - (990 + 465);
+	end, "PLAYER_REGEN_ENABLED");
+	v9:RegisterForEvent(function()
+		local v121 = 0 + 0;
 		while true do
-			if ((v122 == (1159 - (1074 + 82))) or ((6361 - 3458) == (3279 - (214 + 1570)))) then
-				v107 = 12566 - (990 + 465);
+			if (((570 + 739) <= (3410 + 96)) and (v121 == (0 - 0))) then
+				v87 = v13:GetEquipment();
+				v88 = (v87[1739 - (1668 + 58)] and v18(v87[639 - (512 + 114)])) or v18(0 - 0);
+				v121 = 1 - 0;
+			end
+			if (((10282 - 7327) == (1375 + 1580)) and (v121 == (1 + 0))) then
+				v89 = (v87[13 + 1] and v18(v87[47 - 33])) or v18(1994 - (109 + 1885));
 				break;
 			end
-			if (((1875 + 2671) >= (990 + 1285)) and (v122 == (0 + 0))) then
-				v96 = false;
-				v97 = false;
-				v122 = 3 - 2;
+		end
+	end, "PLAYER_EQUIPMENT_CHANGED");
+	v9:RegisterForEvent(function()
+		v101 = ((v83.AFireInside:IsAvailable()) and (1474 - (1269 + 200))) or (1 - 0);
+	end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
+	local function v108(v122)
+		return v122:DebuffRemains(v83.BurningWoundDebuff) or v122:DebuffRemains(v83.BurningWoundLegDebuff);
+	end
+	local function v109(v123)
+		return v83.BurningWound:IsAvailable() and (v123:DebuffRemains(v83.BurningWoundDebuff) < (819 - (98 + 717))) and (v83.BurningWoundDebuff:AuraActiveCount() < v28(v92, 829 - (802 + 24)));
+	end
+	local function v110()
+		local v124 = 0 - 0;
+		while true do
+			if (((1 - 0) == v124) or ((429 + 2474) == (1149 + 346))) then
+				v30 = v25.HandleBottomTrinket(v86, v33, 7 + 33, nil);
+				if (((981 + 3565) >= (6328 - 4053)) and v30) then
+					return v30;
+				end
+				break;
 			end
-			if (((2545 - (1668 + 58)) >= (648 - (512 + 114))) and (v122 == (5 - 3))) then
-				v100 = false;
-				v106 = 22970 - 11859;
-				v122 = 10 - 7;
-			end
-			if (((1471 + 1691) == (592 + 2570)) and (v122 == (1 + 0))) then
-				v98 = false;
-				v99 = false;
-				v122 = 6 - 4;
+			if (((2730 - 1911) >= (8 + 14)) and (v124 == (0 + 0))) then
+				v30 = v25.HandleTopTrinket(v86, v33, 33 + 7, nil);
+				if (((2300 + 862) == (1477 + 1685)) and v30) then
+					return v30;
+				end
+				v124 = 1434 - (797 + 636);
 			end
 		end
-	end, "PLAYER_REGEN_ENABLED");
-	v10:RegisterForEvent(function()
-		v88 = v14:GetEquipment();
-		v89 = (v88[2007 - (109 + 1885)] and v19(v88[1482 - (1269 + 200)])) or v19(0 - 0);
-		v90 = (v88[829 - (98 + 717)] and v19(v88[840 - (802 + 24)])) or v19(0 - 0);
-	end, "PLAYER_EQUIPMENT_CHANGED");
-	v10:RegisterForEvent(function()
-		v102 = ((v84.AFireInside:IsAvailable()) and (6 - 1)) or (1 + 0);
-	end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
-	local function v109(v123)
-		return v123:DebuffRemains(v84.BurningWoundDebuff) or v123:DebuffRemains(v84.BurningWoundLegDebuff);
-	end
-	local function v110(v124)
-		return v84.BurningWound:IsAvailable() and (v124:DebuffRemains(v84.BurningWoundDebuff) < (4 + 0)) and (v84.BurningWoundDebuff:AuraActiveCount() < v29(v93, 1 + 2));
 	end
 	local function v111()
-		v31 = v26.HandleTopTrinket(v87, v34, 9 + 31, nil);
-		if (v31 or ((6590 - 4221) > (14769 - 10340))) then
-			return v31;
-		end
-		v31 = v26.HandleBottomTrinket(v87, v34, 15 + 25, nil);
-		if (((1667 + 2428) >= (2626 + 557)) and v31) then
-			return v31;
-		end
-	end
-	local function v112()
-		if ((v84.Blur:IsCastable() and v64 and (v14:HealthPercentage() <= v66)) or ((2699 + 1012) < (471 + 537))) then
-			if (v24(v84.Blur) or ((2482 - (797 + 636)) <= (4398 - 3492))) then
+		if ((v83.Blur:IsCastable() and v63 and (v13:HealthPercentage() <= v65)) or ((11502 - 9133) > (6048 - (1427 + 192)))) then
+			if (((1419 + 2676) >= (7389 - 4206)) and v23(v83.Blur)) then
 				return "blur defensive";
 			end
 		end
-		if (((6132 - (1427 + 192)) > (945 + 1781)) and v84.Netherwalk:IsCastable() and v65 and (v14:HealthPercentage() <= v67)) then
-			if (v24(v84.Netherwalk) or ((3438 - 1957) >= (2390 + 268))) then
+		if ((v83.Netherwalk:IsCastable() and v64 and (v13:HealthPercentage() <= v66)) or ((3336 + 375) < (457 + 551))) then
+			if (v23(v83.Netherwalk) or ((1375 - (192 + 134)) <= (2182 - (316 + 960)))) then
 				return "netherwalk defensive";
 			end
 		end
-		if ((v85.Healthstone:IsReady() and v79 and (v14:HealthPercentage() <= v81)) or ((1460 + 1760) == (1690 - (192 + 134)))) then
-			if (v24(v86.Healthstone) or ((2330 - (316 + 960)) > (1888 + 1504))) then
+		if (((2512 + 2001) > (2104 + 622)) and v84.Healthstone:IsReady() and v78 and (v13:HealthPercentage() <= v80)) then
+			if (v23(v85.Healthstone) or ((1369 + 112) >= (10161 - 7503))) then
 				return "healthstone defensive";
 			end
 		end
-		if ((v78 and (v14:HealthPercentage() <= v80)) or ((522 + 154) >= (1518 + 124))) then
-			if (((15811 - 11675) > (2948 - (83 + 468))) and (v82 == "Refreshing Healing Potion")) then
-				if (v85.RefreshingHealingPotion:IsReady() or ((6140 - (1202 + 604)) == (19816 - 15571))) then
-					if (v24(v86.RefreshingHealingPotion) or ((7116 - 2840) <= (8391 - 5360))) then
-						return "refreshing healing potion defensive";
+		if ((v77 and (v13:HealthPercentage() <= v79)) or ((3771 - (83 + 468)) == (3170 - (1202 + 604)))) then
+			local v133 = 0 - 0;
+			while true do
+				if ((v133 == (0 - 0)) or ((2918 - 1864) > (3717 - (45 + 280)))) then
+					if ((v81 == "Refreshing Healing Potion") or ((653 + 23) >= (1435 + 207))) then
+						if (((1511 + 2625) > (1327 + 1070)) and v84.RefreshingHealingPotion:IsReady()) then
+							if (v23(v85.RefreshingHealingPotion) or ((763 + 3571) == (7860 - 3615))) then
+								return "refreshing healing potion defensive";
+							end
+						end
 					end
-				end
-			end
-			if ((v82 == "Dreamwalker's Healing Potion") or ((5107 - (45 + 280)) <= (1158 + 41))) then
-				if (v85.DreamwalkersHealingPotion:IsReady() or ((4250 + 614) < (695 + 1207))) then
-					if (((2678 + 2161) >= (651 + 3049)) and v24(v86.RefreshingHealingPotion)) then
-						return "dreamwalkers healing potion defensive";
+					if ((v81 == "Dreamwalker's Healing Potion") or ((6187 - (340 + 1571)) <= (1196 + 1835))) then
+						if (v84.DreamwalkersHealingPotion:IsReady() or ((6554 - (1733 + 39)) <= (3294 - 2095))) then
+							if (v23(v85.RefreshingHealingPotion) or ((5898 - (125 + 909)) < (3850 - (1096 + 852)))) then
+								return "dreamwalkers healing potion defensive";
+							end
+						end
 					end
+					break;
 				end
 			end
 		end
 	end
-	local function v113()
-		if ((v84.ImmolationAura:IsCastable() and v48) or ((1990 - 915) > (3829 - (340 + 1571)))) then
-			if (((157 + 239) <= (5576 - (1733 + 39))) and v24(v84.ImmolationAura, not v15:IsInRange(21 - 13))) then
+	local function v112()
+		if (((2171 + 2668) >= (5283 - 1583)) and v83.ImmolationAura:IsCastable() and v47) then
+			if (v23(v83.ImmolationAura, not v14:IsInRange(8 + 0)) or ((1587 - (409 + 103)) > (2154 - (46 + 190)))) then
 				return "immolation_aura precombat 8";
 			end
 		end
-		if ((v49 and not v14:IsMoving() and (v93 > (1035 - (125 + 909))) and v84.SigilOfFlame:IsCastable()) or ((6117 - (1096 + 852)) == (982 + 1205))) then
-			if (((2007 - 601) == (1364 + 42)) and ((v83 == "player") or v84.ConcentratedSigils:IsAvailable())) then
-				if (((2043 - (409 + 103)) < (4507 - (46 + 190))) and v24(v86.SigilOfFlamePlayer, not v15:IsInRange(103 - (51 + 44)))) then
+		if (((491 - (51 + 44)) <= (1073 + 2731)) and v48 and not v13:IsMoving() and (v92 > (1318 - (1114 + 203))) and v83.SigilOfFlame:IsCastable()) then
+			if ((v82 == "player") or v83.ConcentratedSigils:IsAvailable() or ((4895 - (228 + 498)) == (474 + 1713))) then
+				if (((777 + 629) == (2069 - (174 + 489))) and v23(v85.SigilOfFlamePlayer, not v14:IsInRange(20 - 12))) then
 					return "sigil_of_flame precombat 9";
 				end
-			elseif (((180 + 455) == (1952 - (1114 + 203))) and (v83 == "cursor")) then
-				if (((4099 - (228 + 498)) <= (771 + 2785)) and v24(v86.SigilOfFlameCursor, not v15:IsInRange(23 + 17))) then
+			elseif (((3436 - (830 + 1075)) < (4795 - (303 + 221))) and (v82 == "cursor")) then
+				if (((1904 - (231 + 1038)) == (530 + 105)) and v23(v85.SigilOfFlameCursor, not v14:IsInRange(1202 - (171 + 991)))) then
 					return "sigil_of_flame precombat 9";
 				end
 			end
 		end
-		if ((not v15:IsInMeleeRange(668 - (174 + 489)) and v84.Felblade:IsCastable()) or ((8573 - 5282) < (5185 - (830 + 1075)))) then
-			if (((4910 - (303 + 221)) >= (2142 - (231 + 1038))) and v24(v84.Felblade, not v15:IsSpellInRange(v84.Felblade))) then
+		if (((13900 - 10527) <= (9548 - 5992)) and not v14:IsInMeleeRange(12 - 7) and v83.Felblade:IsCastable()) then
+			if (v23(v83.Felblade, not v14:IsSpellInRange(v83.Felblade)) or ((2634 + 657) < (11497 - 8217))) then
 				return "felblade precombat 9";
 			end
 		end
-		if (((768 + 153) <= (2264 - (171 + 991))) and not v15:IsInMeleeRange(20 - 15) and v84.FelRush:IsCastable() and (not v84.Felblade:IsAvailable() or (v84.Felblade:CooldownDown() and not v14:PrevGCDP(2 - 1, v84.Felblade))) and v35 and v46) then
-			if (((11743 - 7037) >= (771 + 192)) and v24(v84.FelRush, not v15:IsInRange(52 - 37))) then
+		if (((12652 - 8266) >= (1407 - 534)) and not v14:IsInMeleeRange(15 - 10) and v83.FelRush:IsCastable() and (not v83.Felblade:IsAvailable() or (v83.Felblade:CooldownDown() and not v13:PrevGCDP(1249 - (111 + 1137), v83.Felblade))) and v34 and v45) then
+			if (((1079 - (91 + 67)) <= (3279 - 2177)) and v23(v83.FelRush, not v14:IsInRange(4 + 11))) then
 				return "fel_rush precombat 10";
 			end
 		end
-		if ((v15:IsInMeleeRange(14 - 9) and v41 and (v84.DemonsBite:IsCastable() or v84.DemonBlades:IsAvailable())) or ((1547 - 587) <= (2707 - 1831))) then
-			if (v24(v84.DemonsBite, not v15:IsInMeleeRange(1253 - (111 + 1137))) or ((2224 - (91 + 67)) == (2773 - 1841))) then
+		if (((5229 - (423 + 100)) >= (7 + 956)) and v14:IsInMeleeRange(13 - 8) and v40 and (v83.DemonsBite:IsCastable() or v83.DemonBlades:IsAvailable())) then
+			if (v23(v83.DemonsBite, not v14:IsInMeleeRange(3 + 2)) or ((1731 - (326 + 445)) <= (3822 - 2946))) then
 				return "demons_bite or demon_blades precombat 12";
 			end
 		end
 	end
-	local function v114()
-		if (((1204 + 3621) < (5366 - (423 + 100))) and v14:BuffDown(v84.FelBarrage)) then
-			if ((v84.DeathSweep:IsReady() and v40) or ((28 + 3849) >= (12562 - 8025))) then
-				if (v24(v84.DeathSweep, not v15:IsInRange(5 + 3)) or ((5086 - (326 + 445)) < (7532 - 5806))) then
-					return "death_sweep meta_end 2";
+	local function v113()
+		if (v13:BuffDown(v83.FelBarrage) or ((4602 - 2536) == (2175 - 1243))) then
+			local v134 = 711 - (530 + 181);
+			while true do
+				if (((5706 - (614 + 267)) < (4875 - (19 + 13))) and (v134 == (0 - 0))) then
+					if ((v83.DeathSweep:IsReady() and v39) or ((9034 - 5157) >= (12960 - 8423))) then
+						if (v23(v83.DeathSweep, not v14:IsInRange(3 + 5)) or ((7588 - 3273) < (3579 - 1853))) then
+							return "death_sweep meta_end 2";
+						end
+					end
+					if ((v83.Annihilation:IsReady() and v35) or ((5491 - (1293 + 519)) < (1275 - 650))) then
+						if (v23(v83.Annihilation, not v14:IsSpellInRange(v83.Annihilation)) or ((12075 - 7450) < (1208 - 576))) then
+							return "annihilation meta_end 4";
+						end
+					end
+					break;
 				end
 			end
-			if ((v84.Annihilation:IsReady() and v36) or ((8195 - 4516) < (1458 - 833))) then
-				if (v24(v84.Annihilation, not v15:IsSpellInRange(v84.Annihilation)) or ((5336 - (530 + 181)) < (1513 - (614 + 267)))) then
-					return "annihilation meta_end 4";
+		end
+	end
+	local function v114()
+		if ((((v33 and v59) or not v59) and v83.Metamorphosis:IsCastable() and v56 and not v83.Demonic:IsAvailable()) or ((357 - 274) > (4193 - 2413))) then
+			if (((290 + 256) <= (220 + 857)) and v23(v85.MetamorphosisPlayer, not v14:IsInRange(18 - 10))) then
+				return "metamorphosis cooldown 4";
+			end
+		end
+		if ((((v33 and v59) or not v59) and v83.Metamorphosis:IsCastable() and v56 and v83.Demonic:IsAvailable() and ((not v83.ChaoticTransformation:IsAvailable() and v83.EyeBeam:CooldownDown()) or ((v83.EyeBeam:CooldownRemains() > (5 + 15)) and (not v95 or v13:PrevGCDP(1 + 0, v83.DeathSweep) or v13:PrevGCDP(2 + 0, v83.DeathSweep))) or ((v106 < ((1121 - (709 + 387)) + (v26(v83.ShatteredDestiny:IsAvailable()) * (1928 - (673 + 1185))))) and v83.EyeBeam:CooldownDown() and v83.BladeDance:CooldownDown())) and v13:BuffDown(v83.InnerDemonBuff)) or ((2888 - 1892) > (13811 - 9510))) then
+			if (((6696 - 2626) > (492 + 195)) and v23(v85.MetamorphosisPlayer, not v14:IsInRange(6 + 2))) then
+				return "metamorphosis cooldown 6";
+			end
+		end
+		local v125 = v25.HandleDPSPotion(v13:BuffUp(v83.MetamorphosisBuff));
+		if (v125 or ((884 - 228) >= (818 + 2512))) then
+			return v125;
+		end
+		if ((v55 and not v13:IsMoving() and ((v33 and v58) or not v58) and v83.ElysianDecree:IsCastable() and (v14:DebuffDown(v83.EssenceBreakDebuff)) and (v92 > v62)) or ((4968 - 2476) <= (657 - 322))) then
+			if (((6202 - (446 + 1434)) >= (3845 - (1040 + 243))) and (v61 == "player")) then
+				if (v23(v85.ElysianDecreePlayer, not v14:IsInRange(23 - 15)) or ((5484 - (559 + 1288)) >= (5701 - (609 + 1322)))) then
+					return "elysian_decree cooldown 8 (Player)";
+				end
+			elseif ((v61 == "cursor") or ((2833 - (13 + 441)) > (17107 - 12529))) then
+				if (v23(v85.ElysianDecreeCursor, not v14:IsInRange(78 - 48)) or ((2405 - 1922) > (28 + 715))) then
+					return "elysian_decree cooldown 8 (Cursor)";
+				end
+			end
+		end
+		if (((8912 - 6458) > (206 + 372)) and (v74 < v106)) then
+			if (((408 + 522) < (13229 - 8771)) and v75 and ((v33 and v76) or not v76)) then
+				v30 = v110();
+				if (((363 + 299) <= (1787 - 815)) and v30) then
+					return v30;
 				end
 			end
 		end
 	end
 	local function v115()
-		local v125 = 32 - (19 + 13);
-		local v126;
-		while true do
-			if ((v125 == (1 - 0)) or ((192 - 109) > (5084 - 3304))) then
-				v126 = v26.HandleDPSPotion(v14:BuffUp(v84.MetamorphosisBuff));
-				if (((142 + 404) <= (1894 - 817)) and v126) then
-					return v126;
-				end
-				v125 = 3 - 1;
+		if (((2890 + 1480) == (2431 + 1939)) and v83.EssenceBreak:IsCastable() and v41 and (v13:BuffUp(v83.MetamorphosisBuff) or (v83.EyeBeam:CooldownRemains() > (8 + 2)))) then
+			if (v23(v83.EssenceBreak, not v14:IsInRange(7 + 1)) or ((4660 + 102) <= (1294 - (153 + 280)))) then
+				return "essence_break rotation prio";
 			end
-			if ((v125 == (1812 - (1293 + 519))) or ((2031 - 1035) > (11229 - 6928))) then
-				if (((7783 - 3713) > (2962 - 2275)) and ((v34 and v60) or not v60) and v84.Metamorphosis:IsCastable() and v57 and not v84.Demonic:IsAvailable()) then
-					if (v24(v86.MetamorphosisPlayer, not v15:IsInRange(18 - 10)) or ((348 + 308) >= (680 + 2650))) then
-						return "metamorphosis cooldown 4";
-					end
-				end
-				if ((((v34 and v60) or not v60) and v84.Metamorphosis:IsCastable() and v57 and v84.Demonic:IsAvailable() and ((not v84.ChaoticTransformation:IsAvailable() and v84.EyeBeam:CooldownDown()) or ((v84.EyeBeam:CooldownRemains() > (46 - 26)) and (not v96 or v14:PrevGCDP(1 + 0, v84.DeathSweep) or v14:PrevGCDP(1 + 1, v84.DeathSweep))) or ((v107 < (16 + 9 + (v27(v84.ShatteredDestiny:IsAvailable()) * (1166 - (709 + 387))))) and v84.EyeBeam:CooldownDown() and v84.BladeDance:CooldownDown())) and v14:BuffDown(v84.InnerDemonBuff)) or ((4350 - (673 + 1185)) <= (971 - 636))) then
-					if (((13878 - 9556) >= (4214 - 1652)) and v24(v86.MetamorphosisPlayer, not v15:IsInRange(6 + 2))) then
-						return "metamorphosis cooldown 6";
-					end
-				end
-				v125 = 1 + 0;
+		end
+		if ((v83.BladeDance:IsCastable() and v36 and v13:BuffUp(v83.EssenceBreakBuff)) or ((4076 - 2664) == (3829 + 435))) then
+			if (v23(v83.BladeDance, not v14:IsInRange(4 + 4)) or ((1658 + 1510) < (1954 + 199))) then
+				return "blade_dance rotation prio";
 			end
-			if ((v125 == (2 - 0)) or ((894 + 2743) >= (7517 - 3747))) then
-				if ((v56 and not v14:IsMoving() and ((v34 and v59) or not v59) and v84.ElysianDecree:IsCastable() and (v15:DebuffDown(v84.EssenceBreakDebuff)) and (v93 > v63)) or ((4669 - 2290) > (6458 - (446 + 1434)))) then
-					if ((v62 == "player") or ((1766 - (1040 + 243)) > (2217 - 1474))) then
-						if (((4301 - (559 + 1288)) > (2509 - (609 + 1322))) and v24(v86.ElysianDecreePlayer, not v15:IsInRange(462 - (13 + 441)))) then
-							return "elysian_decree cooldown 8 (Player)";
-						end
-					elseif (((3475 - 2545) < (11676 - 7218)) and (v62 == "cursor")) then
-						if (((3297 - 2635) <= (37 + 935)) and v24(v86.ElysianDecreeCursor, not v15:IsInRange(108 - 78))) then
-							return "elysian_decree cooldown 8 (Cursor)";
-						end
-					end
+		end
+		if ((v83.DeathSweep:IsCastable() and v39 and v13:BuffUp(v83.EssenceBreakBuff)) or ((3606 + 1370) < (2027 - 695))) then
+			if (((2861 + 1767) == (5295 - (89 + 578))) and v23(v83.DeathSweep, not v14:IsInRange(6 + 2))) then
+				return "death_sweep rotation prio";
+			end
+		end
+		if ((v83.Annihilation:IsCastable() and v35 and v13:BuffUp(v83.InnerDemonBuff) and (v83.Metamorphosis:CooldownRemains() <= (v13:GCD() * (5 - 2)))) or ((1103 - (572 + 477)) == (54 + 341))) then
+			if (((50 + 32) == (10 + 72)) and v23(v83.Annihilation, not v14:IsSpellInRange(v83.Annihilation))) then
+				return "annihilation rotation 2";
+			end
+		end
+		if ((v83.VengefulRetreat:IsCastable() and v34 and v50 and v83.Felblade:CooldownDown() and (v83.EyeBeam:CooldownRemains() < (86.3 - (84 + 2))) and (v83.EssenceBreak:CooldownRemains() < (v102 * (2 - 0))) and (v9.CombatTime() > (4 + 1)) and (v13:Fury() >= (872 - (497 + 345))) and v83.Inertia:IsAvailable()) or ((15 + 566) < (48 + 234))) then
+			if (v23(v83.VengefulRetreat, not v14:IsInRange(1341 - (605 + 728)), nil, true) or ((3289 + 1320) < (5547 - 3052))) then
+				return "vengeful_retreat rotation 3";
+			end
+		end
+		if (((53 + 1099) == (4259 - 3107)) and v83.VengefulRetreat:IsCastable() and v34 and v50 and v83.Felblade:CooldownDown() and v83.Initiative:IsAvailable() and v83.EssenceBreak:IsAvailable() and (v9.CombatTime() > (1 + 0)) and ((v83.EssenceBreak:CooldownRemains() > (41 - 26)) or ((v83.EssenceBreak:CooldownRemains() < v102) and (not v83.Demonic:IsAvailable() or v13:BuffUp(v83.MetamorphosisBuff) or (v83.EyeBeam:CooldownRemains() > (12 + 3 + ((499 - (457 + 32)) * v26(v83.CycleOfHatred:IsAvailable()))))))) and ((v9.CombatTime() < (13 + 17)) or ((v13:GCDRemains() - (1403 - (832 + 570))) < (0 + 0))) and (not v83.Initiative:IsAvailable() or (v13:BuffRemains(v83.InitiativeBuff) < v102) or (v9.CombatTime() > (2 + 2)))) then
+			if (((6709 - 4813) <= (1649 + 1773)) and v23(v83.VengefulRetreat, not v14:IsInRange(804 - (588 + 208)), nil, true)) then
+				return "vengeful_retreat rotation 4";
+			end
+		end
+		if ((v83.VengefulRetreat:IsCastable() and v34 and v50 and v83.Felblade:CooldownDown() and v83.Initiative:IsAvailable() and v83.EssenceBreak:IsAvailable() and (v9.CombatTime() > (2 - 1)) and ((v83.EssenceBreak:CooldownRemains() > (1815 - (884 + 916))) or ((v83.EssenceBreak:CooldownRemains() < (v102 * (3 - 1))) and (((v13:BuffRemains(v83.InitiativeBuff) < v102) and not v100 and (v83.EyeBeam:CooldownRemains() <= v13:GCDRemains()) and (v13:Fury() > (18 + 12))) or not v83.Demonic:IsAvailable() or v13:BuffUp(v83.MetamorphosisBuff) or (v83.EyeBeam:CooldownRemains() > ((668 - (232 + 421)) + ((1899 - (1569 + 320)) * v26(v83.CycleofHatred:IsAvailable()))))))) and (v13:BuffDown(v83.UnboundChaosBuff) or v13:BuffUp(v83.InertiaBuff))) or ((243 + 747) > (308 + 1312))) then
+			if (v23(v83.VengefulRetreat, not v14:IsInRange(26 - 18), nil, true) or ((1482 - (316 + 289)) > (12290 - 7595))) then
+				return "vengeful_retreat rotation 6";
+			end
+		end
+		if (((125 + 2566) >= (3304 - (666 + 787))) and v83.VengefulRetreat:IsCastable() and v34 and v50 and v83.Felblade:CooldownDown() and v83.Initiative:IsAvailable() and not v83.EssenceBreak:IsAvailable() and (v9.CombatTime() > (426 - (360 + 65))) and (v13:BuffDown(v83.InitiativeBuff) or (v13:PrevGCDP(1 + 0, v83.DeathSweep) and v83.Metamorphosis:CooldownUp() and v83.ChaoticTransformation:IsAvailable())) and v83.Initiative:IsAvailable()) then
+			if (v23(v83.VengefulRetreat, not v14:IsInRange(262 - (79 + 175)), nil, true) or ((4706 - 1721) >= (3790 + 1066))) then
+				return "vengeful_retreat rotation 8";
+			end
+		end
+		if (((13106 - 8830) >= (2301 - 1106)) and v83.FelRush:IsCastable() and v34 and v45 and v83.Momentum:IsAvailable() and (v13:BuffRemains(v83.MomentumBuff) < (v102 * (901 - (503 + 396)))) and (v83.EyeBeam:CooldownRemains() <= v102) and v14:DebuffDown(v83.EssenceBreakDebuff) and v83.BladeDance:CooldownDown()) then
+			if (((3413 - (92 + 89)) <= (9098 - 4408)) and v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive))) then
+				return "fel_rush rotation 10";
+			end
+		end
+		if ((v83.FelRush:IsCastable() and v34 and v45 and v83.Inertia:IsAvailable() and v13:BuffDown(v83.InertiaBuff) and v13:BuffUp(v83.UnboundChaosBuff) and (v13:BuffUp(v83.MetamorphosisBuff) or ((v83.EyeBeam:CooldownRemains() > v83.ImmolationAura:Recharge()) and (v83.EyeBeam:CooldownRemains() > (3 + 1)))) and v14:DebuffDown(v83.EssenceBreakDebuff) and v83.BladeDance:CooldownDown()) or ((531 + 365) >= (12320 - 9174))) then
+			if (((419 + 2642) >= (6744 - 3786)) and v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive))) then
+				return "fel_rush rotation 11";
+			end
+		end
+		if (((2781 + 406) >= (308 + 336)) and v83.EssenceBreak:IsCastable() and v41 and ((((v13:BuffRemains(v83.MetamorphosisBuff) > (v102 * (8 - 5))) or (v83.EyeBeam:CooldownRemains() > (2 + 8))) and (not v83.TacticalRetreat:IsAvailable() or v13:BuffUp(v83.TacticalRetreatBuff) or (v9.CombatTime() < (15 - 5))) and (v83.BladeDance:CooldownRemains() <= ((1247.1 - (485 + 759)) * v102))) or (v106 < (13 - 7)))) then
+			if (((1833 - (442 + 747)) <= (1839 - (832 + 303))) and v23(v83.EssenceBreak, not v14:IsInRange(954 - (88 + 858)))) then
+				return "essence_break rotation 13";
+			end
+		end
+		if (((292 + 666) > (784 + 163)) and v83.DeathSweep:IsCastable() and v39 and v95 and (not v83.EssenceBreak:IsAvailable() or (v83.EssenceBreak:CooldownRemains() > (v102 * (1 + 1)))) and v13:BuffDown(v83.FelBarrage)) then
+			if (((5281 - (766 + 23)) >= (13102 - 10448)) and v23(v83.DeathSweep, not v14:IsInRange(10 - 2))) then
+				return "death_sweep rotation 14";
+			end
+		end
+		if (((9068 - 5626) >= (5101 - 3598)) and v83.TheHunt:IsCastable() and v34 and v57 and (v74 < v106) and ((v33 and v60) or not v60) and v14:DebuffDown(v83.EssenceBreakDebuff) and ((v9.CombatTime() < (1083 - (1036 + 37))) or (v83.Metamorphosis:CooldownRemains() > (8 + 2))) and ((v92 == (1 - 0)) or (v92 > (3 + 0)) or (v106 < (1490 - (641 + 839)))) and ((v14:DebuffDown(v83.EssenceBreakDebuff) and (not v83.FuriousGaze:IsAvailable() or v13:BuffUp(v83.FuriousGazeBuff) or v13:HasTier(944 - (910 + 3), 9 - 5))) or not v13:HasTier(1714 - (1466 + 218), 1 + 1)) and (v9.CombatTime() > (1158 - (556 + 592)))) then
+			if (v23(v83.TheHunt, not v14:IsSpellInRange(v83.TheHunt)) or ((1128 + 2042) <= (2272 - (329 + 479)))) then
+				return "the_hunt main 12";
+			end
+		end
+		if ((v83.FelBarrage:IsCastable() and v43 and ((v92 > (855 - (174 + 680))) or ((v92 == (3 - 2)) and (v13:FuryDeficit() < (41 - 21)) and v13:BuffDown(v83.MetamorphosisBuff)))) or ((3425 + 1372) == (5127 - (396 + 343)))) then
+			if (((49 + 502) <= (2158 - (29 + 1448))) and v23(v83.FelBarrage, not v14:IsInRange(1397 - (135 + 1254)))) then
+				return "fel_barrage rotation 16";
+			end
+		end
+		if (((12344 - 9067) > (1900 - 1493)) and v83.GlaiveTempest:IsReady() and v46 and (v14:DebuffDown(v83.EssenceBreakDebuff) or (v92 > (1 + 0))) and v13:BuffDown(v83.FelBarrage)) then
+			if (((6222 - (389 + 1138)) >= (1989 - (102 + 472))) and v23(v83.GlaiveTempest, not v14:IsInRange(8 + 0))) then
+				return "glaive_tempest rotation 18";
+			end
+		end
+		if ((v83.Annihilation:IsReady() and v35 and v13:BuffUp(v83.InnerDemonBuff) and (v83.EyeBeam:CooldownRemains() <= v13:GCD()) and v13:BuffDown(v83.FelBarrage)) or ((1782 + 1430) <= (881 + 63))) then
+			if (v23(v83.Annihilation, not v14:IsSpellInRange(v83.Annihilation)) or ((4641 - (320 + 1225)) <= (3200 - 1402))) then
+				return "annihilation rotation 20";
+			end
+		end
+		if (((2165 + 1372) == (5001 - (157 + 1307))) and v83.FelRush:IsReady() and v34 and v45 and v83.Momentum:IsAvailable() and (v83.EyeBeam:CooldownRemains() < (v102 * (1862 - (821 + 1038)))) and (v13:BuffRemains(v83.MomentumBuff) < (12 - 7)) and v13:BuffDown(v83.MetamorphosisBuff)) then
+			if (((420 + 3417) >= (2788 - 1218)) and v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive))) then
+				return "fel_rush rotation 22";
+			end
+		end
+		if ((v83.EyeBeam:IsCastable() and v42 and not v13:PrevGCDP(1 + 0, v83.VengefulRetreat) and ((v14:DebuffDown(v83.EssenceBreakDebuff) and ((v83.Metamorphosis:CooldownRemains() > ((74 - 44) - (v26(v83.CycleOfHatred:IsAvailable()) * (1041 - (834 + 192))))) or ((v83.Metamorphosis:CooldownRemains() < (v102 * (1 + 1))) and (not v83.EssenceBreak:IsAvailable() or (v83.EssenceBreak:CooldownRemains() < (v102 * (1.5 + 0)))))) and (v13:BuffDown(v83.MetamorphosisBuff) or (v13:BuffRemains(v83.MetamorphosisBuff) > v102) or not v83.RestlessHunter:IsAvailable()) and (v83.CycleOfHatred:IsAvailable() or not v83.Initiative:IsAvailable() or (v83.VengefulRetreat:CooldownRemains() > (1 + 4)) or not v50 or (v9.CombatTime() < (15 - 5))) and v13:BuffDown(v83.InnerDemonBuff)) or (v106 < (319 - (300 + 4))))) or ((788 + 2162) == (9978 - 6166))) then
+			if (((5085 - (112 + 250)) >= (925 + 1393)) and v23(v83.EyeBeam, not v14:IsInRange(19 - 11))) then
+				return "eye_beam rotation 26";
+			end
+		end
+		if ((v83.BladeDance:IsCastable() and v36 and v95 and ((v83.EyeBeam:CooldownRemains() > (3 + 2)) or not v83.Demonic:IsAvailable() or v13:HasTier(17 + 14, 2 + 0))) or ((1006 + 1021) > (2119 + 733))) then
+			if (v23(v83.BladeDance, not v14:IsInRange(1422 - (1001 + 413))) or ((2533 - 1397) > (5199 - (244 + 638)))) then
+				return "blade_dance rotation 28";
+			end
+		end
+		if (((5441 - (627 + 66)) == (14147 - 9399)) and v83.SigilOfFlame:IsCastable() and not v13:IsMoving() and v48 and v83.AnyMeansNecessary:IsAvailable() and v14:DebuffDown(v83.EssenceBreakDebuff) and (v92 >= (606 - (512 + 90)))) then
+			if (((5642 - (1665 + 241)) <= (5457 - (373 + 344))) and ((v82 == "player") or v83.ConcentratedSigils:IsAvailable())) then
+				if (v23(v85.SigilOfFlamePlayer, not v14:IsInRange(4 + 4)) or ((897 + 2493) <= (8071 - 5011))) then
+					return "sigil_of_flame rotation player 30";
 				end
-				if (((1553 + 2817) == (1915 + 2455)) and (v75 < v107)) then
-					if ((v76 and ((v34 and v77) or not v77)) or ((14131 - 9369) <= (472 + 389))) then
-						v31 = v111();
-						if (v31 or ((2596 - 1184) == (2819 + 1445))) then
-							return v31;
-						end
-					end
+			elseif ((v82 == "cursor") or ((1690 - 691) > (3792 - (35 + 1064)))) then
+				if (((337 + 126) < (1285 - 684)) and v23(v85.SigilOfFlameCursor, not v14:IsInRange(1 + 39))) then
+					return "sigil_of_flame rotation cursor 30";
 				end
-				break;
+			end
+		end
+		if ((v83.ThrowGlaive:IsCastable() and v49 and not v13:PrevGCDP(1237 - (298 + 938), v83.VengefulRetreat) and not v13:IsMoving() and v83.Soulscar:IsAvailable() and (v92 >= ((1261 - (233 + 1026)) - v26(v83.FuriousThrows:IsAvailable()))) and v14:DebuffDown(v83.EssenceBreakDebuff) and ((v83.ThrowGlaive:FullRechargeTime() < (v102 * (1669 - (636 + 1030)))) or (v92 > (1 + 0))) and not v13:HasTier(31 + 0, 1 + 1)) or ((148 + 2035) < (908 - (55 + 166)))) then
+			if (((882 + 3667) == (458 + 4091)) and v23(v83.ThrowGlaive, not v14:IsSpellInRange(v83.ThrowGlaive))) then
+				return "throw_glaive rotation 32";
+			end
+		end
+		if (((17842 - 13170) == (4969 - (36 + 261))) and v83.ImmolationAura:IsCastable() and v47 and (v92 >= (3 - 1)) and (v13:Fury() < (1438 - (34 + 1334))) and v14:DebuffDown(v83.EssenceBreakDebuff)) then
+			if (v23(v83.ImmolationAura, not v14:IsInRange(4 + 4)) or ((2850 + 818) < (1678 - (1035 + 248)))) then
+				return "immolation_aura rotation 34";
+			end
+		end
+		if ((v83.Annihilation:IsCastable() and v35 and not v96 and ((v83.EssenceBreak:CooldownRemains() > (21 - (20 + 1))) or not v83.EssenceBreak:IsAvailable()) and v13:BuffDown(v83.FelBarrage)) or v13:HasTier(16 + 14, 321 - (134 + 185)) or ((5299 - (549 + 584)) == (1140 - (314 + 371)))) then
+			if (v23(v83.Annihilation, not v14:IsSpellInRange(v83.Annihilation)) or ((15273 - 10824) == (3631 - (478 + 490)))) then
+				return "annihilation rotation 36";
+			end
+		end
+		if ((v83.Felblade:IsCastable() and v44 and not v13:PrevGCDP(1 + 0, v83.VengefulRetreat) and (((v13:FuryDeficit() >= (1212 - (786 + 386))) and v83.AnyMeansNecessary:IsAvailable() and v14:DebuffDown(v83.EssenceBreakDebuff)) or (v83.AnyMeansNecessary:IsAvailable() and v14:DebuffDown(v83.EssenceBreakDebuff)))) or ((13853 - 9576) < (4368 - (1055 + 324)))) then
+			if (v23(v83.Felblade, not v14:IsSpellInRange(v83.Felblade)) or ((2210 - (1093 + 247)) >= (3687 + 462))) then
+				return "felblade rotation 38";
+			end
+		end
+		if (((233 + 1979) < (12637 - 9454)) and v83.SigilOfFlame:IsCastable() and not v13:IsMoving() and v48 and v83.AnyMeansNecessary:IsAvailable() and (v13:FuryDeficit() >= (101 - 71))) then
+			if (((13220 - 8574) > (7518 - 4526)) and ((v82 == "player") or v83.ConcentratedSigils:IsAvailable())) then
+				if (((511 + 923) < (11965 - 8859)) and v23(v85.SigilOfFlamePlayer, not v14:IsInRange(27 - 19))) then
+					return "sigil_of_flame rotation player 39";
+				end
+			elseif (((593 + 193) < (7730 - 4707)) and (v82 == "cursor")) then
+				if (v23(v85.SigilOfFlameCursor, not v14:IsInRange(728 - (364 + 324))) or ((6694 - 4252) < (177 - 103))) then
+					return "sigil_of_flame rotation cursor 39";
+				end
+			end
+		end
+		if (((1504 + 3031) == (18975 - 14440)) and v83.ThrowGlaive:IsReady() and v49 and not v13:PrevGCDP(1 - 0, v83.VengefulRetreat) and not v13:IsMoving() and v83.Soulscar:IsAvailable() and (v93 >= ((5 - 3) - v26(v83.FuriousThrows:IsAvailable()))) and v14:DebuffDown(v83.EssenceBreakDebuff) and not v13:HasTier(1299 - (1249 + 19), 2 + 0)) then
+			if (v23(v83.ThrowGlaive, not v14:IsSpellInRange(v83.ThrowGlaive)) or ((11712 - 8703) <= (3191 - (686 + 400)))) then
+				return "throw_glaive rotation 40";
+			end
+		end
+		if (((1436 + 394) < (3898 - (73 + 156))) and v83.ImmolationAura:IsCastable() and v47 and (v13:BuffStack(v83.ImmolationAuraBuff) < v101) and v14:IsInRange(1 + 7) and (v13:BuffDown(v83.UnboundChaosBuff) or not v83.UnboundChaos:IsAvailable()) and ((v83.ImmolationAura:Recharge() < v83.EssenceBreak:CooldownRemains()) or (not v83.EssenceBreak:IsAvailable() and (v83.EyeBeam:CooldownRemains() > v83.ImmolationAura:Recharge())))) then
+			if (v23(v83.ImmolationAura, not v14:IsInRange(819 - (721 + 90))) or ((17 + 1413) >= (11727 - 8115))) then
+				return "immolation_aura rotation 42";
+			end
+		end
+		if (((3153 - (224 + 246)) >= (3985 - 1525)) and v83.ThrowGlaive:IsReady() and v49 and not v13:PrevGCDP(1 - 0, v83.VengefulRetreat) and not v13:IsMoving() and v83.Soulscar:IsAvailable() and (v83.ThrowGlaive:FullRechargeTime() < v83.BladeDance:CooldownRemains()) and v13:HasTier(6 + 25, 1 + 1) and v13:BuffDown(v83.FelBarrage) and not v97) then
+			if (v23(v83.ThrowGlaive, not v14:IsSpellInRange(v83.ThrowGlaive)) or ((1325 + 479) >= (6511 - 3236))) then
+				return "throw_glaive rotation 44";
+			end
+		end
+		if ((v83.ChaosStrike:IsReady() and v37 and not v96 and not v97 and v13:BuffDown(v83.FelBarrage)) or ((4715 - 3298) > (4142 - (203 + 310)))) then
+			if (((6788 - (1238 + 755)) > (29 + 373)) and v23(v83.ChaosStrike, not v14:IsSpellInRange(v83.ChaosStrike))) then
+				return "chaos_strike rotation 46";
+			end
+		end
+		if (((6347 - (709 + 825)) > (6569 - 3004)) and v83.SigilOfFlame:IsCastable() and not v13:IsMoving() and v48 and (v13:FuryDeficit() >= (43 - 13))) then
+			if (((4776 - (196 + 668)) == (15445 - 11533)) and ((v82 == "player") or v83.ConcentratedSigils:IsAvailable())) then
+				if (((5843 - 3022) <= (5657 - (171 + 662))) and v23(v85.SigilOfFlamePlayer, not v14:IsInRange(101 - (4 + 89)))) then
+					return "sigil_of_flame rotation player 48";
+				end
+			elseif (((6091 - 4353) <= (800 + 1395)) and (v82 == "cursor")) then
+				if (((180 - 139) <= (1184 + 1834)) and v23(v85.SigilOfFlameCursor, not v14:IsInRange(1516 - (35 + 1451)))) then
+					return "sigil_of_flame rotation cursor 48";
+				end
+			end
+		end
+		if (((3598 - (28 + 1425)) <= (6097 - (941 + 1052))) and v83.Felblade:IsCastable() and v44 and (v13:FuryDeficit() >= (39 + 1)) and not v13:PrevGCDP(1515 - (822 + 692), v83.VengefulRetreat)) then
+			if (((3838 - 1149) < (2283 + 2562)) and v23(v83.Felblade, not v14:IsSpellInRange(v83.Felblade))) then
+				return "felblade rotation 50";
+			end
+		end
+		if ((v83.FelRush:IsCastable() and v34 and v45 and not v83.Momentum:IsAvailable() and v83.DemonBlades:IsAvailable() and v83.EyeBeam:CooldownDown() and v13:BuffDown(v83.UnboundChaosBuff) and ((v83.FelRush:Recharge() < v83.EssenceBreak:CooldownRemains()) or not v83.EssenceBreak:IsAvailable())) or ((2619 - (45 + 252)) > (2595 + 27))) then
+			if (v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive)) or ((1561 + 2973) == (5066 - 2984))) then
+				return "fel_rush rotation 52";
+			end
+		end
+		if ((v83.DemonsBite:IsCastable() and v40 and v83.BurningWound:IsAvailable() and (v14:DebuffRemains(v83.BurningWoundDebuff) < (437 - (114 + 319)))) or ((2255 - 684) > (2391 - 524))) then
+			if (v23(v83.DemonsBite, not v14:IsSpellInRange(v83.DemonsBite)) or ((1692 + 962) >= (4463 - 1467))) then
+				return "demons_bite rotation 54";
+			end
+		end
+		if (((8334 - 4356) > (4067 - (556 + 1407))) and v83.FelRush:IsCastable() and v34 and v45 and not v83.Momentum:IsAvailable() and not v83.DemonBlades:IsAvailable() and (v92 > (1207 - (741 + 465))) and v13:BuffDown(v83.UnboundChaosBuff)) then
+			if (((3460 - (170 + 295)) > (812 + 729)) and v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive))) then
+				return "fel_rush rotation 56";
+			end
+		end
+		if (((2985 + 264) > (2346 - 1393)) and v83.SigilOfFlame:IsCastable() and not v13:IsMoving() and (v13:FuryDeficit() >= (25 + 5)) and v14:IsInRange(20 + 10)) then
+			if ((v82 == "player") or v83.ConcentratedSigils:IsAvailable() or ((1854 + 1419) > (5803 - (957 + 273)))) then
+				if (v23(v85.SigilOfFlamePlayer, not v14:IsInRange(3 + 5)) or ((1262 + 1889) < (4892 - 3608))) then
+					return "sigil_of_flame rotation player 58";
+				end
+			elseif ((v82 == "cursor") or ((4875 - 3025) == (4670 - 3141))) then
+				if (((4065 - 3244) < (3903 - (389 + 1391))) and v23(v85.SigilOfFlameCursor, not v14:IsInRange(19 + 11))) then
+					return "sigil_of_flame rotation cursor 58";
+				end
+			end
+		end
+		if (((94 + 808) < (5293 - 2968)) and v83.DemonsBite:IsCastable() and v40) then
+			if (((1809 - (783 + 168)) <= (9940 - 6978)) and v23(v83.DemonsBite, not v14:IsSpellInRange(v83.DemonsBite))) then
+				return "demons_bite rotation 57";
+			end
+		end
+		if ((v83.FelRush:IsReady() and v34 and v45 and not v83.Momentum:IsAvailable() and (v13:BuffRemains(v83.MomentumBuff) <= (20 + 0))) or ((4257 - (309 + 2)) < (3955 - 2667))) then
+			if (v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive)) or ((4454 - (1090 + 122)) == (184 + 383))) then
+				return "fel_rush rotation 58";
+			end
+		end
+		if ((v83.FelRush:IsReady() and v34 and v45 and not v14:IsInRange(26 - 18) and not v83.Momentum:IsAvailable()) or ((580 + 267) >= (2381 - (628 + 490)))) then
+			if (v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive)) or ((404 + 1849) == (4582 - 2731))) then
+				return "fel_rush rotation 59";
+			end
+		end
+		if ((v83.VengefulRetreat:IsCastable() and v34 and v50 and v83.Felblade:CooldownDown() and not v83.Initiative:IsAvailable() and not v14:IsInRange(36 - 28)) or ((2861 - (431 + 343)) > (4790 - 2418))) then
+			if (v23(v83.VengefulRetreat, not v14:IsInRange(23 - 15), nil, true) or ((3512 + 933) < (531 + 3618))) then
+				return "vengeful_retreat rotation 60";
+			end
+		end
+		if ((v83.ThrowGlaive:IsCastable() and v49 and not v13:PrevGCDP(1696 - (556 + 1139), v83.VengefulRetreat) and not v13:IsMoving() and (v83.DemonBlades:IsAvailable() or not v14:IsInRange(27 - (6 + 9))) and v14:DebuffDown(v83.EssenceBreakDebuff) and v14:IsSpellInRange(v83.ThrowGlaive) and not v13:HasTier(6 + 25, 2 + 0)) or ((1987 - (28 + 141)) == (33 + 52))) then
+			if (((777 - 147) < (1507 + 620)) and v23(v83.ThrowGlaive, not v14:IsSpellInRange(v83.ThrowGlaive))) then
+				return "throw_glaive rotation 62";
 			end
 		end
 	end
 	local function v116()
-		local v127 = 0 + 0;
+		local v126 = 1317 - (486 + 831);
 		while true do
-			if ((v127 == (6 + 1)) or ((2661 + 507) < (2107 + 46))) then
-				if ((v84.FelRush:IsCastable() and v35 and v46 and not v84.Momentum:IsAvailable() and v84.DemonBlades:IsAvailable() and v84.EyeBeam:CooldownDown() and v14:BuffDown(v84.UnboundChaosBuff) and ((v84.FelRush:Recharge() < v84.EssenceBreak:CooldownRemains()) or not v84.EssenceBreak:IsAvailable())) or ((5409 - (153 + 280)) < (3845 - 2513))) then
-					if (((4156 + 472) == (1828 + 2800)) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-						return "fel_rush rotation 52";
-					end
-				end
-				if ((v84.DemonsBite:IsCastable() and v41 and v84.BurningWound:IsAvailable() and (v15:DebuffRemains(v84.BurningWoundDebuff) < (3 + 1))) or ((50 + 4) == (287 + 108))) then
-					if (((124 - 42) == (51 + 31)) and v24(v84.DemonsBite, not v15:IsSpellInRange(v84.DemonsBite))) then
-						return "demons_bite rotation 54";
-					end
-				end
-				if ((v84.FelRush:IsCastable() and v35 and v46 and not v84.Momentum:IsAvailable() and not v84.DemonBlades:IsAvailable() and (v93 > (668 - (89 + 578))) and v14:BuffDown(v84.UnboundChaosBuff)) or ((416 + 165) < (585 - 303))) then
-					if (v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive)) or ((5658 - (572 + 477)) < (337 + 2158))) then
-						return "fel_rush rotation 56";
-					end
-				end
-				if (((692 + 460) == (138 + 1014)) and v84.SigilOfFlame:IsCastable() and not v14:IsMoving() and (v14:FuryDeficit() >= (116 - (84 + 2))) and v15:IsInRange(49 - 19)) then
-					if (((1366 + 530) <= (4264 - (497 + 345))) and ((v83 == "player") or v84.ConcentratedSigils:IsAvailable())) then
-						if (v24(v86.SigilOfFlamePlayer, not v15:IsInRange(1 + 7)) or ((168 + 822) > (2953 - (605 + 728)))) then
-							return "sigil_of_flame rotation player 58";
-						end
-					elseif ((v83 == "cursor") or ((626 + 251) > (10438 - 5743))) then
-						if (((124 + 2567) >= (6843 - 4992)) and v24(v86.SigilOfFlameCursor, not v15:IsInRange(28 + 2))) then
-							return "sigil_of_flame rotation cursor 58";
-						end
-					end
-				end
-				v127 = 21 - 13;
+			if ((v126 == (2 - 1)) or ((6822 - 4884) == (476 + 2038))) then
+				v39 = EpicSettings.Settings['useDeathSweep'];
+				v40 = EpicSettings.Settings['useDemonsBite'];
+				v41 = EpicSettings.Settings['useEssenceBreak'];
+				v42 = EpicSettings.Settings['useEyeBeam'];
+				v126 = 6 - 4;
 			end
-			if (((3 + 0) == v127) or ((3474 - (457 + 32)) >= (2061 + 2795))) then
-				if (((5678 - (832 + 570)) >= (1126 + 69)) and v84.Annihilation:IsReady() and v36 and v14:BuffUp(v84.InnerDemonBuff) and (v84.EyeBeam:CooldownRemains() <= v14:GCD()) and v14:BuffDown(v84.FelBarrage)) then
-					if (((843 + 2389) <= (16597 - 11907)) and v24(v84.Annihilation, not v15:IsSpellInRange(v84.Annihilation))) then
-						return "annihilation rotation 20";
-					end
-				end
-				if ((v84.FelRush:IsReady() and v35 and v46 and v84.Momentum:IsAvailable() and (v84.EyeBeam:CooldownRemains() < (v103 * (2 + 1))) and (v14:BuffRemains(v84.MomentumBuff) < (801 - (588 + 208))) and v14:BuffDown(v84.MetamorphosisBuff)) or ((2414 - 1518) >= (4946 - (884 + 916)))) then
-					if (((6408 - 3347) >= (1716 + 1242)) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-						return "fel_rush rotation 22";
-					end
-				end
-				if (((3840 - (232 + 421)) >= (2533 - (1569 + 320))) and v84.EyeBeam:IsCastable() and v43 and not v14:PrevGCDP(1 + 0, v84.VengefulRetreat) and ((v15:DebuffDown(v84.EssenceBreakDebuff) and ((v84.Metamorphosis:CooldownRemains() > ((6 + 24) - (v27(v84.CycleOfHatred:IsAvailable()) * (50 - 35)))) or ((v84.Metamorphosis:CooldownRemains() < (v103 * (607 - (316 + 289)))) and (not v84.EssenceBreak:IsAvailable() or (v84.EssenceBreak:CooldownRemains() < (v103 * (2.5 - 1)))))) and (v14:BuffDown(v84.MetamorphosisBuff) or (v14:BuffRemains(v84.MetamorphosisBuff) > v103) or not v84.RestlessHunter:IsAvailable()) and (v84.CycleOfHatred:IsAvailable() or not v84.Initiative:IsAvailable() or (v84.VengefulRetreat:CooldownRemains() > (1 + 4)) or not v51 or (v10.CombatTime() < (1463 - (666 + 787)))) and v14:BuffDown(v84.InnerDemonBuff)) or (v107 < (440 - (360 + 65))))) then
-					if (((602 + 42) <= (958 - (79 + 175))) and v24(v84.EyeBeam, not v15:IsInRange(12 - 4))) then
-						return "eye_beam rotation 26";
-					end
-				end
-				if (((748 + 210) > (2902 - 1955)) and v84.BladeDance:IsCastable() and v37 and v96 and ((v84.EyeBeam:CooldownRemains() > (9 - 4)) or not v84.Demonic:IsAvailable() or v14:HasTier(930 - (503 + 396), 183 - (92 + 89)))) then
-					if (((8713 - 4221) >= (1362 + 1292)) and v24(v84.BladeDance, not v15:IsInRange(5 + 3))) then
-						return "blade_dance rotation 28";
-					end
-				end
-				v127 = 15 - 11;
+			if (((5518 - (668 + 595)) >= (50 + 5)) and (v126 == (1 + 2))) then
+				v47 = EpicSettings.Settings['useImmolationAura'];
+				v48 = EpicSettings.Settings['useSigilOfFlame'];
+				v49 = EpicSettings.Settings['useThrowGlaive'];
+				v50 = EpicSettings.Settings['useVengefulRetreat'];
+				v126 = 10 - 6;
 			end
-			if (((471 + 2971) >= (3426 - 1923)) and ((8 + 1) == v127)) then
-				if ((v84.ThrowGlaive:IsCastable() and v50 and not v14:PrevGCDP(1 + 0, v84.VengefulRetreat) and not v14:IsMoving() and (v84.DemonBlades:IsAvailable() or not v15:IsInRange(36 - 24)) and v15:DebuffDown(v84.EssenceBreakDebuff) and v15:IsSpellInRange(v84.ThrowGlaive) and not v14:HasTier(4 + 27, 2 - 0)) or ((4414 - (485 + 759)) <= (3387 - 1923))) then
-					if (v24(v84.ThrowGlaive, not v15:IsSpellInRange(v84.ThrowGlaive)) or ((5986 - (442 + 747)) == (5523 - (832 + 303)))) then
-						return "throw_glaive rotation 62";
-					end
-				end
+			if (((3289 - (23 + 267)) > (3100 - (1129 + 815))) and (v126 == (391 - (371 + 16)))) then
+				v55 = EpicSettings.Settings['useElysianDecree'];
+				v56 = EpicSettings.Settings['useMetamorphosis'];
+				v57 = EpicSettings.Settings['useTheHunt'];
+				v58 = EpicSettings.Settings['elysianDecreeWithCD'];
+				v126 = 1755 - (1326 + 424);
+			end
+			if (((4450 - 2100) > (4220 - 3065)) and (v126 == (120 - (88 + 30)))) then
+				v43 = EpicSettings.Settings['useFelBarrage'];
+				v44 = EpicSettings.Settings['useFelblade'];
+				v45 = EpicSettings.Settings['useFelRush'];
+				v46 = EpicSettings.Settings['useGlaiveTempest'];
+				v126 = 774 - (720 + 51);
+			end
+			if (((8962 - 4933) <= (6629 - (421 + 1355))) and (v126 == (8 - 3))) then
+				v59 = EpicSettings.Settings['metamorphosisWithCD'];
+				v60 = EpicSettings.Settings['theHuntWithCD'];
+				v61 = EpicSettings.Settings['elysianDecreeSetting'] or "player";
+				v62 = EpicSettings.Settings['elysianDecreeSlider'] or (0 + 0);
 				break;
 			end
-			if (((1497 - (88 + 858)) <= (208 + 473)) and (v127 == (5 + 0))) then
-				if (((135 + 3142) > (1196 - (766 + 23))) and v84.Felblade:IsCastable() and v45 and not v14:PrevGCDP(4 - 3, v84.VengefulRetreat) and (((v14:FuryDeficit() >= (54 - 14)) and v84.AnyMeansNecessary:IsAvailable() and v15:DebuffDown(v84.EssenceBreakDebuff)) or (v84.AnyMeansNecessary:IsAvailable() and v15:DebuffDown(v84.EssenceBreakDebuff)))) then
-					if (((12369 - 7674) >= (4802 - 3387)) and v24(v84.Felblade, not v15:IsSpellInRange(v84.Felblade))) then
-						return "felblade rotation 38";
-					end
-				end
-				if ((v84.SigilOfFlame:IsCastable() and not v14:IsMoving() and v49 and v84.AnyMeansNecessary:IsAvailable() and (v14:FuryDeficit() >= (1103 - (1036 + 37)))) or ((2278 + 934) <= (1837 - 893))) then
-					if ((v83 == "player") or v84.ConcentratedSigils:IsAvailable() or ((2436 + 660) <= (3278 - (641 + 839)))) then
-						if (((4450 - (910 + 3)) == (9016 - 5479)) and v24(v86.SigilOfFlamePlayer, not v15:IsInRange(1692 - (1466 + 218)))) then
-							return "sigil_of_flame rotation player 39";
-						end
-					elseif (((1764 + 2073) >= (2718 - (556 + 592))) and (v83 == "cursor")) then
-						if (v24(v86.SigilOfFlameCursor, not v15:IsInRange(15 + 25)) or ((3758 - (329 + 479)) == (4666 - (174 + 680)))) then
-							return "sigil_of_flame rotation cursor 39";
-						end
-					end
-				end
-				if (((16228 - 11505) >= (4804 - 2486)) and v84.ThrowGlaive:IsReady() and v50 and not v14:PrevGCDP(1 + 0, v84.VengefulRetreat) and not v14:IsMoving() and v84.Soulscar:IsAvailable() and (v94 >= ((741 - (396 + 343)) - v27(v84.FuriousThrows:IsAvailable()))) and v15:DebuffDown(v84.EssenceBreakDebuff) and not v14:HasTier(3 + 28, 1479 - (29 + 1448))) then
-					if (v24(v84.ThrowGlaive, not v15:IsSpellInRange(v84.ThrowGlaive)) or ((3416 - (135 + 1254)) > (10743 - 7891))) then
-						return "throw_glaive rotation 40";
-					end
-				end
-				if ((v84.ImmolationAura:IsCastable() and v48 and (v14:BuffStack(v84.ImmolationAuraBuff) < v102) and v15:IsInRange(37 - 29) and (v14:BuffDown(v84.UnboundChaosBuff) or not v84.UnboundChaos:IsAvailable()) and ((v84.ImmolationAura:Recharge() < v84.EssenceBreak:CooldownRemains()) or (not v84.EssenceBreak:IsAvailable() and (v84.EyeBeam:CooldownRemains() > v84.ImmolationAura:Recharge())))) or ((758 + 378) > (5844 - (389 + 1138)))) then
-					if (((5322 - (102 + 472)) == (4481 + 267)) and v24(v84.ImmolationAura, not v15:IsInRange(5 + 3))) then
-						return "immolation_aura rotation 42";
-					end
-				end
-				v127 = 6 + 0;
-			end
-			if (((5281 - (320 + 1225)) <= (8438 - 3698)) and (v127 == (1 + 0))) then
-				if ((v84.VengefulRetreat:IsCastable() and v35 and v51 and v84.Felblade:CooldownDown() and v84.Initiative:IsAvailable() and not v84.EssenceBreak:IsAvailable() and (v10.CombatTime() > (1465 - (157 + 1307))) and (v14:BuffDown(v84.InitiativeBuff) or (v14:PrevGCDP(1860 - (821 + 1038), v84.DeathSweep) and v84.Metamorphosis:CooldownUp() and v84.ChaoticTransformation:IsAvailable())) and v84.Initiative:IsAvailable()) or ((8458 - 5068) <= (335 + 2725))) then
-					if (v24(v84.VengefulRetreat, not v15:IsInRange(13 - 5), nil, true) or ((372 + 627) > (6674 - 3981))) then
-						return "vengeful_retreat rotation 8";
-					end
-				end
-				if (((1489 - (834 + 192)) < (39 + 562)) and v84.FelRush:IsCastable() and v35 and v46 and v84.Momentum:IsAvailable() and (v14:BuffRemains(v84.MomentumBuff) < (v103 * (1 + 1))) and (v84.EyeBeam:CooldownRemains() <= v103) and v15:DebuffDown(v84.EssenceBreakDebuff) and v84.BladeDance:CooldownDown()) then
-					if (v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive)) or ((47 + 2136) < (1063 - 376))) then
-						return "fel_rush rotation 10";
-					end
-				end
-				if (((4853 - (300 + 4)) == (1215 + 3334)) and v84.FelRush:IsCastable() and v35 and v46 and v84.Inertia:IsAvailable() and v14:BuffDown(v84.InertiaBuff) and v14:BuffUp(v84.UnboundChaosBuff) and (v14:BuffUp(v84.MetamorphosisBuff) or ((v84.EyeBeam:CooldownRemains() > v84.ImmolationAura:Recharge()) and (v84.EyeBeam:CooldownRemains() > (10 - 6)))) and v15:DebuffDown(v84.EssenceBreakDebuff) and v84.BladeDance:CooldownDown()) then
-					if (((5034 - (112 + 250)) == (1863 + 2809)) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-						return "fel_rush rotation 11";
-					end
-				end
-				if ((v84.EssenceBreak:IsCastable() and v42 and ((((v14:BuffRemains(v84.MetamorphosisBuff) > (v103 * (7 - 4))) or (v84.EyeBeam:CooldownRemains() > (6 + 4))) and (not v84.TacticalRetreat:IsAvailable() or v14:BuffUp(v84.TacticalRetreatBuff) or (v10.CombatTime() < (6 + 4))) and (v84.BladeDance:CooldownRemains() <= ((3.1 + 0) * v103))) or (v107 < (3 + 3)))) or ((2725 + 943) < (1809 - (1001 + 413)))) then
-					if (v24(v84.EssenceBreak, not v15:IsInRange(17 - 9)) or ((5048 - (244 + 638)) == (1148 - (627 + 66)))) then
-						return "essence_break rotation 13";
-					end
-				end
-				v127 = 5 - 3;
-			end
-			if ((v127 == (608 - (512 + 90))) or ((6355 - (1665 + 241)) == (3380 - (373 + 344)))) then
-				if ((v84.ThrowGlaive:IsReady() and v50 and not v14:PrevGCDP(1 + 0, v84.VengefulRetreat) and not v14:IsMoving() and v84.Soulscar:IsAvailable() and (v84.ThrowGlaive:FullRechargeTime() < v84.BladeDance:CooldownRemains()) and v14:HasTier(9 + 22, 5 - 3) and v14:BuffDown(v84.FelBarrage) and not v98) or ((7237 - 2960) < (4088 - (35 + 1064)))) then
-					if (v24(v84.ThrowGlaive, not v15:IsSpellInRange(v84.ThrowGlaive)) or ((634 + 236) >= (8876 - 4727))) then
-						return "throw_glaive rotation 44";
-					end
-				end
-				if (((9 + 2203) < (4419 - (298 + 938))) and v84.ChaosStrike:IsReady() and v38 and not v97 and not v98 and v14:BuffDown(v84.FelBarrage)) then
-					if (((5905 - (233 + 1026)) > (4658 - (636 + 1030))) and v24(v84.ChaosStrike, not v15:IsSpellInRange(v84.ChaosStrike))) then
-						return "chaos_strike rotation 46";
-					end
-				end
-				if (((734 + 700) < (3034 + 72)) and v84.SigilOfFlame:IsCastable() and not v14:IsMoving() and v49 and (v14:FuryDeficit() >= (9 + 21))) then
-					if (((54 + 732) < (3244 - (55 + 166))) and ((v83 == "player") or v84.ConcentratedSigils:IsAvailable())) then
-						if (v24(v86.SigilOfFlamePlayer, not v15:IsInRange(2 + 6)) or ((246 + 2196) < (282 - 208))) then
-							return "sigil_of_flame rotation player 48";
-						end
-					elseif (((4832 - (36 + 261)) == (7930 - 3395)) and (v83 == "cursor")) then
-						if (v24(v86.SigilOfFlameCursor, not v15:IsInRange(1398 - (34 + 1334))) or ((1157 + 1852) <= (1636 + 469))) then
-							return "sigil_of_flame rotation cursor 48";
-						end
-					end
-				end
-				if (((3113 - (1035 + 248)) < (3690 - (20 + 1))) and v84.Felblade:IsCastable() and v45 and (v14:FuryDeficit() >= (21 + 19)) and not v14:PrevGCDP(320 - (134 + 185), v84.VengefulRetreat)) then
-					if (v24(v84.Felblade, not v15:IsSpellInRange(v84.Felblade)) or ((2563 - (549 + 584)) >= (4297 - (314 + 371)))) then
-						return "felblade rotation 50";
-					end
-				end
-				v127 = 24 - 17;
-			end
-			if (((3651 - (478 + 490)) >= (1304 + 1156)) and (v127 == (1180 - (786 + 386)))) then
-				if ((v84.DemonsBite:IsCastable() and v41) or ((5843 - 4039) >= (4654 - (1055 + 324)))) then
-					if (v24(v84.DemonsBite, not v15:IsSpellInRange(v84.DemonsBite)) or ((2757 - (1093 + 247)) > (3225 + 404))) then
-						return "demons_bite rotation 57";
-					end
-				end
-				if (((505 + 4290) > (1596 - 1194)) and v84.FelRush:IsReady() and v35 and v46 and not v84.Momentum:IsAvailable() and (v14:BuffRemains(v84.MomentumBuff) <= (67 - 47))) then
-					if (((13695 - 8882) > (8958 - 5393)) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-						return "fel_rush rotation 58";
-					end
-				end
-				if (((1392 + 2520) == (15070 - 11158)) and v84.FelRush:IsReady() and v35 and v46 and not v15:IsInRange(27 - 19) and not v84.Momentum:IsAvailable()) then
-					if (((2128 + 693) <= (12336 - 7512)) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-						return "fel_rush rotation 59";
-					end
-				end
-				if (((2426 - (364 + 324)) <= (6017 - 3822)) and v84.VengefulRetreat:IsCastable() and v35 and v51 and v84.Felblade:CooldownDown() and not v84.Initiative:IsAvailable() and not v15:IsInRange(19 - 11)) then
-					if (((14 + 27) <= (12628 - 9610)) and v24(v84.VengefulRetreat, not v15:IsInRange(12 - 4), nil, true)) then
-						return "vengeful_retreat rotation 60";
-					end
-				end
-				v127 = 27 - 18;
-			end
-			if (((3413 - (1249 + 19)) <= (3705 + 399)) and (v127 == (0 - 0))) then
-				if (((3775 - (686 + 400)) < (3802 + 1043)) and v84.Annihilation:IsCastable() and v36 and v14:BuffUp(v84.InnerDemonBuff) and (v84.Metamorphosis:CooldownRemains() <= (v14:GCD() * (232 - (73 + 156))))) then
-					if (v24(v84.Annihilation, not v15:IsSpellInRange(v84.Annihilation)) or ((11 + 2311) > (3433 - (721 + 90)))) then
-						return "annihilation rotation 2";
-					end
-				end
-				if ((v84.VengefulRetreat:IsCastable() and v35 and v51 and v84.Felblade:CooldownDown() and (v84.EyeBeam:CooldownRemains() < (0.3 + 0)) and (v84.EssenceBreak:CooldownRemains() < (v103 * (6 - 4))) and (v10.CombatTime() > (475 - (224 + 246))) and (v14:Fury() >= (48 - 18)) and v84.Inertia:IsAvailable()) or ((8347 - 3813) == (378 + 1704))) then
-					if (v24(v84.VengefulRetreat, not v15:IsInRange(1 + 7), nil, true) or ((1154 + 417) > (3711 - 1844))) then
-						return "vengeful_retreat rotation 3";
-					end
-				end
-				if ((v84.VengefulRetreat:IsCastable() and v35 and v51 and v84.Felblade:CooldownDown() and v84.Initiative:IsAvailable() and v84.EssenceBreak:IsAvailable() and (v10.CombatTime() > (3 - 2)) and ((v84.EssenceBreak:CooldownRemains() > (528 - (203 + 310))) or ((v84.EssenceBreak:CooldownRemains() < v103) and (not v84.Demonic:IsAvailable() or v14:BuffUp(v84.MetamorphosisBuff) or (v84.EyeBeam:CooldownRemains() > ((2008 - (1238 + 755)) + ((1 + 9) * v27(v84.CycleOfHatred:IsAvailable()))))))) and ((v10.CombatTime() < (1564 - (709 + 825))) or ((v14:GCDRemains() - (1 - 0)) < (0 - 0))) and (not v84.Initiative:IsAvailable() or (v14:BuffRemains(v84.InitiativeBuff) < v103) or (v10.CombatTime() > (868 - (196 + 668))))) or ((10478 - 7824) >= (6205 - 3209))) then
-					if (((4811 - (171 + 662)) > (2197 - (4 + 89))) and v24(v84.VengefulRetreat, not v15:IsInRange(27 - 19), nil, true)) then
-						return "vengeful_retreat rotation 4";
-					end
-				end
-				if (((1091 + 1904) > (6768 - 5227)) and v84.VengefulRetreat:IsCastable() and v35 and v51 and v84.Felblade:CooldownDown() and v84.Initiative:IsAvailable() and v84.EssenceBreak:IsAvailable() and (v10.CombatTime() > (1 + 0)) and ((v84.EssenceBreak:CooldownRemains() > (1501 - (35 + 1451))) or ((v84.EssenceBreak:CooldownRemains() < (v103 * (1455 - (28 + 1425)))) and (((v14:BuffRemains(v84.InitiativeBuff) < v103) and not v101 and (v84.EyeBeam:CooldownRemains() <= v14:GCDRemains()) and (v14:Fury() > (2023 - (941 + 1052)))) or not v84.Demonic:IsAvailable() or v14:BuffUp(v84.MetamorphosisBuff) or (v84.EyeBeam:CooldownRemains() > (15 + 0 + ((1524 - (822 + 692)) * v27(v84.CycleofHatred:IsAvailable()))))))) and (v14:BuffDown(v84.UnboundChaosBuff) or v14:BuffUp(v84.InertiaBuff))) then
-					if (((4637 - 1388) > (449 + 504)) and v24(v84.VengefulRetreat, not v15:IsInRange(305 - (45 + 252)), nil, true)) then
-						return "vengeful_retreat rotation 6";
-					end
-				end
-				v127 = 1 + 0;
-			end
-			if ((v127 == (2 + 2)) or ((7965 - 4692) > (5006 - (114 + 319)))) then
-				if ((v84.SigilOfFlame:IsCastable() and not v14:IsMoving() and v49 and v84.AnyMeansNecessary:IsAvailable() and v15:DebuffDown(v84.EssenceBreakDebuff) and (v93 >= (5 - 1))) or ((4037 - 886) < (819 + 465))) then
-					if ((v83 == "player") or v84.ConcentratedSigils:IsAvailable() or ((2756 - 906) == (3203 - 1674))) then
-						if (((2784 - (556 + 1407)) < (3329 - (741 + 465))) and v24(v86.SigilOfFlamePlayer, not v15:IsInRange(473 - (170 + 295)))) then
-							return "sigil_of_flame rotation player 30";
-						end
-					elseif (((476 + 426) < (2136 + 189)) and (v83 == "cursor")) then
-						if (((2112 - 1254) <= (2456 + 506)) and v24(v86.SigilOfFlameCursor, not v15:IsInRange(26 + 14))) then
-							return "sigil_of_flame rotation cursor 30";
-						end
-					end
-				end
-				if ((v84.ThrowGlaive:IsCastable() and v50 and not v14:PrevGCDP(1 + 0, v84.VengefulRetreat) and not v14:IsMoving() and v84.Soulscar:IsAvailable() and (v93 >= ((1232 - (957 + 273)) - v27(v84.FuriousThrows:IsAvailable()))) and v15:DebuffDown(v84.EssenceBreakDebuff) and ((v84.ThrowGlaive:FullRechargeTime() < (v103 * (1 + 2))) or (v93 > (1 + 0))) and not v14:HasTier(118 - 87, 5 - 3)) or ((12052 - 8106) < (6377 - 5089))) then
-					if (v24(v84.ThrowGlaive, not v15:IsSpellInRange(v84.ThrowGlaive)) or ((5022 - (389 + 1391)) == (356 + 211))) then
-						return "throw_glaive rotation 32";
-					end
-				end
-				if ((v84.ImmolationAura:IsCastable() and v48 and (v93 >= (1 + 1)) and (v14:Fury() < (159 - 89)) and v15:DebuffDown(v84.EssenceBreakDebuff)) or ((1798 - (783 + 168)) >= (4238 - 2975))) then
-					if (v24(v84.ImmolationAura, not v15:IsInRange(8 + 0)) or ((2564 - (309 + 2)) == (5684 - 3833))) then
-						return "immolation_aura rotation 34";
-					end
-				end
-				if ((v84.Annihilation:IsCastable() and v36 and not v97 and ((v84.EssenceBreak:CooldownRemains() > (1212 - (1090 + 122))) or not v84.EssenceBreak:IsAvailable()) and v14:BuffDown(v84.FelBarrage)) or v14:HasTier(10 + 20, 6 - 4) or ((1429 + 658) > (3490 - (628 + 490)))) then
-					if (v24(v84.Annihilation, not v15:IsSpellInRange(v84.Annihilation)) or ((798 + 3647) < (10272 - 6123))) then
-						return "annihilation rotation 36";
-					end
-				end
-				v127 = 22 - 17;
-			end
-			if ((v127 == (776 - (431 + 343))) or ((3671 - 1853) == (245 - 160))) then
-				if (((498 + 132) < (273 + 1854)) and v84.DeathSweep:IsCastable() and v40 and v96 and (not v84.EssenceBreak:IsAvailable() or (v84.EssenceBreak:CooldownRemains() > (v103 * (1697 - (556 + 1139))))) and v14:BuffDown(v84.FelBarrage)) then
-					if (v24(v84.DeathSweep, not v15:IsInRange(23 - (6 + 9))) or ((355 + 1583) == (1288 + 1226))) then
-						return "death_sweep rotation 14";
-					end
-				end
-				if (((4424 - (28 + 141)) >= (22 + 33)) and v84.TheHunt:IsCastable() and v35 and v58 and (v75 < v107) and ((v34 and v61) or not v61) and v15:DebuffDown(v84.EssenceBreakDebuff) and ((v10.CombatTime() < (12 - 2)) or (v84.Metamorphosis:CooldownRemains() > (8 + 2))) and ((v93 == (1318 - (486 + 831))) or (v93 > (7 - 4)) or (v107 < (35 - 25))) and ((v15:DebuffDown(v84.EssenceBreakDebuff) and (not v84.FuriousGaze:IsAvailable() or v14:BuffUp(v84.FuriousGazeBuff) or v14:HasTier(6 + 25, 12 - 8))) or not v14:HasTier(1293 - (668 + 595), 2 + 0)) and (v10.CombatTime() > (3 + 7))) then
-					if (((8178 - 5179) > (1446 - (23 + 267))) and v24(v84.TheHunt, not v15:IsSpellInRange(v84.TheHunt))) then
-						return "the_hunt main 12";
-					end
-				end
-				if (((4294 - (1129 + 815)) > (1542 - (371 + 16))) and v84.FelBarrage:IsCastable() and v44 and ((v93 > (1751 - (1326 + 424))) or ((v93 == (1 - 0)) and (v14:FuryDeficit() < (73 - 53)) and v14:BuffDown(v84.MetamorphosisBuff)))) then
-					if (((4147 - (88 + 30)) <= (5624 - (720 + 51))) and v24(v84.FelBarrage, not v15:IsInRange(17 - 9))) then
-						return "fel_barrage rotation 16";
-					end
-				end
-				if ((v84.GlaiveTempest:IsReady() and v47 and (v15:DebuffDown(v84.EssenceBreakDebuff) or (v93 > (1777 - (421 + 1355)))) and v14:BuffDown(v84.FelBarrage)) or ((850 - 334) > (1687 + 1747))) then
-					if (((5129 - (286 + 797)) >= (11087 - 8054)) and v24(v84.GlaiveTempest, not v15:IsInRange(12 - 4))) then
-						return "glaive_tempest rotation 18";
-					end
-				end
-				v127 = 442 - (397 + 42);
+			if ((v126 == (1083 - (286 + 797))) or ((1886 - 1370) > (5687 - 2253))) then
+				v35 = EpicSettings.Settings['useAnnihilation'];
+				v36 = EpicSettings.Settings['useBladeDance'];
+				v37 = EpicSettings.Settings['useChaosStrike'];
+				v38 = EpicSettings.Settings['useConsumeMagic'];
+				v126 = 440 - (397 + 42);
 			end
 		end
 	end
 	local function v117()
-		v36 = EpicSettings.Settings['useAnnihilation'];
-		v37 = EpicSettings.Settings['useBladeDance'];
-		v38 = EpicSettings.Settings['useChaosStrike'];
-		v39 = EpicSettings.Settings['useConsumeMagic'];
-		v40 = EpicSettings.Settings['useDeathSweep'];
-		v41 = EpicSettings.Settings['useDemonsBite'];
-		v42 = EpicSettings.Settings['useEssenceBreak'];
-		v43 = EpicSettings.Settings['useEyeBeam'];
-		v44 = EpicSettings.Settings['useFelBarrage'];
-		v45 = EpicSettings.Settings['useFelblade'];
-		v46 = EpicSettings.Settings['useFelRush'];
-		v47 = EpicSettings.Settings['useGlaiveTempest'];
-		v48 = EpicSettings.Settings['useImmolationAura'];
-		v49 = EpicSettings.Settings['useSigilOfFlame'];
-		v50 = EpicSettings.Settings['useThrowGlaive'];
-		v51 = EpicSettings.Settings['useVengefulRetreat'];
-		v56 = EpicSettings.Settings['useElysianDecree'];
-		v57 = EpicSettings.Settings['useMetamorphosis'];
-		v58 = EpicSettings.Settings['useTheHunt'];
-		v59 = EpicSettings.Settings['elysianDecreeWithCD'];
-		v60 = EpicSettings.Settings['metamorphosisWithCD'];
-		v61 = EpicSettings.Settings['theHuntWithCD'];
-		v62 = EpicSettings.Settings['elysianDecreeSetting'] or "player";
-		v63 = EpicSettings.Settings['elysianDecreeSlider'] or (0 + 0);
-	end
-	local function v118()
-		v52 = EpicSettings.Settings['useChaosNova'];
-		v53 = EpicSettings.Settings['useDisrupt'];
-		v54 = EpicSettings.Settings['useFelEruption'];
-		v55 = EpicSettings.Settings['useSigilOfMisery'];
-		v64 = EpicSettings.Settings['useBlur'];
-		v65 = EpicSettings.Settings['useNetherwalk'];
-		v66 = EpicSettings.Settings['blurHP'] or (800 - (24 + 776));
-		v67 = EpicSettings.Settings['netherwalkHP'] or (0 - 0);
-		v83 = EpicSettings.Settings['sigilSetting'] or "";
-	end
-	local function v119()
-		local v156 = 785 - (222 + 563);
+		local v127 = 0 + 0;
 		while true do
-			if ((v156 == (8 - 4)) or ((1958 + 761) <= (1637 - (23 + 167)))) then
-				v71 = EpicSettings.Settings['HandleIncorporeal'];
+			if (((4846 - (24 + 776)) >= (4672 - 1639)) and (v127 == (785 - (222 + 563)))) then
+				v51 = EpicSettings.Settings['useChaosNova'];
+				v52 = EpicSettings.Settings['useDisrupt'];
+				v127 = 1 - 0;
+			end
+			if (((2 + 0) == v127) or ((2909 - (23 + 167)) <= (3245 - (690 + 1108)))) then
+				v63 = EpicSettings.Settings['useBlur'];
+				v64 = EpicSettings.Settings['useNetherwalk'];
+				v127 = 2 + 1;
+			end
+			if ((v127 == (4 + 0)) or ((4982 - (40 + 808)) < (647 + 3279))) then
+				v82 = EpicSettings.Settings['sigilSetting'] or "";
 				break;
 			end
-			if ((v156 == (1800 - (690 + 1108))) or ((1492 + 2642) < (3239 + 687))) then
-				v77 = EpicSettings.Settings['trinketsWithCD'];
-				v79 = EpicSettings.Settings['useHealthstone'];
-				v78 = EpicSettings.Settings['useHealingPotion'];
-				v156 = 851 - (40 + 808);
+			if ((v127 == (3 - 2)) or ((157 + 7) >= (1474 + 1311))) then
+				v53 = EpicSettings.Settings['useFelEruption'];
+				v54 = EpicSettings.Settings['useSigilOfMisery'];
+				v127 = 2 + 0;
 			end
-			if ((v156 == (1 + 2)) or ((626 - 462) >= (2662 + 123))) then
-				v81 = EpicSettings.Settings['healthstoneHP'] or (0 + 0);
-				v80 = EpicSettings.Settings['healingPotionHP'] or (0 + 0);
-				v82 = EpicSettings.Settings['HealingPotionName'] or "";
-				v156 = 575 - (47 + 524);
-			end
-			if ((v156 == (0 + 0)) or ((1435 - 910) == (3153 - 1044))) then
-				v75 = EpicSettings.Settings['fightRemainsCheck'] or (0 - 0);
-				v68 = EpicSettings.Settings['dispelBuffs'];
-				v72 = EpicSettings.Settings['InterruptWithStun'];
-				v156 = 1727 - (1165 + 561);
-			end
-			if (((1 + 32) == (102 - 69)) and (v156 == (1 + 0))) then
-				v73 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-				v74 = EpicSettings.Settings['InterruptThreshold'];
-				v76 = EpicSettings.Settings['useTrinkets'];
-				v156 = 481 - (341 + 138);
+			if ((v127 == (574 - (47 + 524))) or ((341 + 184) == (5764 - 3655))) then
+				v65 = EpicSettings.Settings['blurHP'] or (0 - 0);
+				v66 = EpicSettings.Settings['netherwalkHP'] or (0 - 0);
+				v127 = 1730 - (1165 + 561);
 			end
 		end
 	end
-	local function v120()
-		v118();
+	local function v118()
+		local v128 = 0 + 0;
+		while true do
+			if (((102 - 69) == (13 + 20)) and (v128 == (480 - (341 + 138)))) then
+				v73 = EpicSettings.Settings['InterruptThreshold'];
+				v75 = EpicSettings.Settings['useTrinkets'];
+				v76 = EpicSettings.Settings['trinketsWithCD'];
+				v78 = EpicSettings.Settings['useHealthstone'];
+				v128 = 1 + 1;
+			end
+			if (((6302 - 3248) <= (4341 - (89 + 237))) and (v128 == (6 - 4))) then
+				v77 = EpicSettings.Settings['useHealingPotion'];
+				v80 = EpicSettings.Settings['healthstoneHP'] or (0 - 0);
+				v79 = EpicSettings.Settings['healingPotionHP'] or (881 - (581 + 300));
+				v81 = EpicSettings.Settings['HealingPotionName'] or "";
+				v128 = 1223 - (855 + 365);
+			end
+			if (((4443 - 2572) < (1105 + 2277)) and (v128 == (1238 - (1030 + 205)))) then
+				v70 = EpicSettings.Settings['HandleIncorporeal'];
+				break;
+			end
+			if (((1214 + 79) <= (2015 + 151)) and (v128 == (286 - (156 + 130)))) then
+				v74 = EpicSettings.Settings['fightRemainsCheck'] or (0 - 0);
+				v67 = EpicSettings.Settings['dispelBuffs'];
+				v71 = EpicSettings.Settings['InterruptWithStun'];
+				v72 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v128 = 1 - 0;
+			end
+		end
+	end
+	local function v119()
 		v117();
-		v119();
-		v32 = EpicSettings.Toggles['ooc'];
-		v33 = EpicSettings.Toggles['aoe'];
-		v34 = EpicSettings.Toggles['cds'];
-		v35 = EpicSettings.Toggles['movement'];
-		if (((825 + 2229) <= (8285 - 4270)) and v14:IsDeadOrGhost()) then
+		v116();
+		v118();
+		v31 = EpicSettings.Toggles['ooc'];
+		v32 = EpicSettings.Toggles['aoe'];
+		v33 = EpicSettings.Toggles['cds'];
+		v34 = EpicSettings.Toggles['movement'];
+		if (v13:IsDeadOrGhost() or ((5281 - 2702) < (33 + 90))) then
 			return;
 		end
-		v91 = v14:GetEnemiesInMeleeRange(334 - (89 + 237));
-		v92 = v14:GetEnemiesInMeleeRange(64 - 44);
-		if (((3938 - 2067) < (4263 - (581 + 300))) and v33) then
-			v93 = ((#v91 > (1220 - (855 + 365))) and #v91) or (2 - 1);
-			v94 = #v92;
+		v90 = v13:GetEnemiesInMeleeRange(5 + 3);
+		v91 = v13:GetEnemiesInMeleeRange(89 - (10 + 59));
+		if (v32 or ((240 + 606) >= (11661 - 9293))) then
+			v92 = ((#v90 > (1163 - (671 + 492))) and #v90) or (1 + 0);
+			v93 = #v91;
 		else
-			local v162 = 0 + 0;
-			while true do
-				if (((2528 - (1030 + 205)) <= (2034 + 132)) and (v162 == (0 + 0))) then
-					v93 = 287 - (156 + 130);
-					v94 = 2 - 1;
-					break;
-				end
+			v92 = 1216 - (369 + 846);
+			v93 = 1 + 0;
+		end
+		v102 = v13:GCD() + 0.05 + 0;
+		if (v25.TargetIsValid() or v13:AffectingCombat() or ((5957 - (1036 + 909)) <= (2670 + 688))) then
+			v105 = v9.BossFightRemains(nil, true);
+			v106 = v105;
+			if (((2507 - 1013) <= (3208 - (11 + 192))) and (v106 == (5615 + 5496))) then
+				v106 = v9.FightRemains(Enemies8y, false);
 			end
 		end
-		v103 = v14:GCD() + (0.05 - 0);
-		if (v26.TargetIsValid() or v14:AffectingCombat() or ((5281 - 2702) < (33 + 90))) then
-			v106 = v10.BossFightRemains(nil, true);
-			v107 = v106;
-			if ((v107 == (6480 + 4631)) or ((915 - (10 + 59)) >= (670 + 1698))) then
-				v107 = v10.FightRemains(Enemies8y, false);
-			end
+		v30 = v111();
+		if (v30 or ((3286 - (135 + 40)) == (5170 - 3036))) then
+			return v30;
 		end
-		v31 = v112();
-		if (v31 or ((19758 - 15746) <= (4521 - (671 + 492)))) then
-			return v31;
-		end
-		if (((1190 + 304) <= (4220 - (369 + 846))) and v71) then
-			local v163 = 0 + 0;
+		if (((1420 + 935) == (5187 - 2832)) and v70) then
+			local v135 = 0 - 0;
 			while true do
-				if ((v163 == (0 + 0)) or ((5056 - (1036 + 909)) == (1697 + 437))) then
-					v31 = v26.HandleIncorporeal(v84.Imprison, v86.ImprisonMouseover, 50 - 20, true);
-					if (((2558 - (11 + 192)) == (1191 + 1164)) and v31) then
-						return v31;
+				if ((v135 == (176 - (50 + 126))) or ((1637 - 1049) <= (96 + 336))) then
+					v30 = v25.HandleIncorporeal(v83.Imprison, v85.ImprisonMouseover, 1443 - (1233 + 180), true);
+					if (((5766 - (522 + 447)) >= (5316 - (107 + 1314))) and v30) then
+						return v30;
 					end
 					break;
 				end
 			end
 		end
-		if ((v26.TargetIsValid() and not v14:IsChanneling() and not v14:IsCasting()) or ((763 - (135 + 40)) <= (1046 - 614))) then
-			local v164 = 0 + 0;
-			local v165;
+		if (((1660 + 1917) == (10899 - 7322)) and v25.TargetIsValid() and not v13:IsChanneling() and not v13:IsCasting()) then
+			local v136 = 0 + 0;
+			local v137;
 			while true do
-				if (((10567 - 5770) >= (5839 - 1944)) and ((177 - (50 + 126)) == v164)) then
-					if (((9960 - 6383) == (792 + 2785)) and v84.ThrowGlaive:IsReady() and v50 and v13.ValueIsInArray(v108, v16:NPCID())) then
-						if (((5207 - (1233 + 180)) > (4662 - (522 + 447))) and v24(v86.ThrowGlaiveMouseover, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-							return "fodder to the flames react per mouseover";
-						end
-					end
-					v96 = v84.FirstBlood:IsAvailable() or v84.TrailofRuin:IsAvailable() or (v84.ChaosTheory:IsAvailable() and v14:BuffDown(v84.ChaosTheoryBuff)) or (v93 > (1422 - (107 + 1314)));
-					v97 = v96 and (v14:Fury() < ((35 + 40) - (v27(v84.DemonBlades:IsAvailable()) * (60 - 40)))) and (v84.BladeDance:CooldownRemains() < v103);
-					v98 = v84.Demonic:IsAvailable() and not v84.BlindFury:IsAvailable() and (v84.EyeBeam:CooldownRemains() < (v103 * (1 + 1))) and (v14:FuryDeficit() > (59 - 29));
-					v164 = 7 - 5;
-				end
-				if ((v164 == (1915 - (716 + 1194))) or ((22 + 1253) == (440 + 3660))) then
-					if (((v75 < v107) and v34) or ((2094 - (74 + 429)) >= (6906 - 3326))) then
-						v31 = v115();
-						if (((488 + 495) <= (4138 - 2330)) and v31) then
-							return v31;
-						end
-					end
-					if ((v14:BuffUp(v84.MetamorphosisBuff) and (v14:BuffRemains(v84.MetamorphosisBuff) < v103) and (v93 < (3 + 0))) or ((6628 - 4478) <= (2959 - 1762))) then
-						v31 = v114();
-						if (((4202 - (279 + 154)) >= (1951 - (454 + 324))) and v31) then
-							return v31;
-						end
-					end
-					v31 = v116();
-					if (((1169 + 316) == (1502 - (12 + 5))) and v31) then
-						return v31;
-					end
-					v164 = 4 + 2;
-				end
-				if ((v164 == (0 - 0)) or ((1225 + 2090) <= (3875 - (277 + 816)))) then
-					if (not v14:AffectingCombat() or ((3743 - 2867) >= (4147 - (1058 + 125)))) then
-						v31 = v113();
-						if (v31 or ((419 + 1813) > (3472 - (815 + 160)))) then
-							return v31;
-						end
-					end
-					if ((v84.ConsumeMagic:IsAvailable() and v39 and v84.ConsumeMagic:IsReady() and v68 and not v14:IsCasting() and not v14:IsChanneling() and v26.UnitHasMagicBuff(v15)) or ((9053 - 6943) <= (787 - 455))) then
-						if (((880 + 2806) > (9272 - 6100)) and v24(v84.ConsumeMagic, not v15:IsSpellInRange(v84.ConsumeMagic))) then
-							return "greater_purge damage";
-						end
-					end
-					if ((v84.FelRush:IsReady() and v35 and v46 and not v15:IsInRange(1906 - (41 + 1857))) or ((6367 - (1222 + 671)) < (2119 - 1299))) then
-						if (((6150 - 1871) >= (4064 - (229 + 953))) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-							return "fel_rush rotation when OOR";
-						end
-					end
-					if ((v84.ThrowGlaive:IsReady() and v50 and v13.ValueIsInArray(v108, v15:NPCID())) or ((3803 - (1111 + 663)) >= (5100 - (874 + 705)))) then
-						if (v24(v84.ThrowGlaive, not v15:IsSpellInRange(v84.ThrowGlaive)) or ((286 + 1751) >= (3168 + 1474))) then
-							return "fodder to the flames react per target";
-						end
-					end
-					v164 = 1 - 0;
-				end
-				if (((49 + 1671) < (5137 - (642 + 37))) and (v164 == (1 + 2))) then
-					if ((v84.ImmolationAura:IsCastable() and v48 and v84.AFireInside:IsAvailable() and v84.Inertia:IsAvailable() and v14:BuffDown(v84.UnboundChaosBuff) and (v84.ImmolationAura:FullRechargeTime() < (v103 * (1 + 1))) and v15:DebuffDown(v84.EssenceBreakDebuff)) or ((1094 - 658) > (3475 - (233 + 221)))) then
-						if (((1648 - 935) <= (746 + 101)) and v24(v84.ImmolationAura, not v15:IsInRange(1549 - (718 + 823)))) then
-							return "immolation_aura main 3";
-						end
-					end
-					if (((1356 + 798) <= (4836 - (266 + 539))) and v84.FelRush:IsCastable() and v35 and v46 and v14:BuffUp(v84.UnboundChaosBuff) and (((v84.ImmolationAura:Charges() == (5 - 3)) and v15:DebuffDown(v84.EssenceBreakDebuff)) or (v14:PrevGCDP(1226 - (636 + 589), v84.EyeBeam) and v14:BuffUp(v84.InertiaBuff) and (v14:BuffRemains(v84.InertiaBuff) < (6 - 3))))) then
-						if (((9518 - 4903) == (3658 + 957)) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-							return "fel_rush main 4";
-						end
-					end
-					if ((v84.TheHunt:IsCastable() and (v10.CombatTime() < (4 + 6)) and (not v84.Inertia:IsAvailable() or (v14:BuffUp(v84.MetamorphosisBuff) and v15:DebuffDown(v84.EssenceBreakDebuff)))) or ((4805 - (657 + 358)) == (1323 - 823))) then
-						if (((202 - 113) < (1408 - (1151 + 36))) and v22(v84.TheHunt, not v15:IsSpellInRange(v84.TheHunt))) then
-							return "the_hunt main 6";
-						end
-					end
-					if (((1984 + 70) >= (374 + 1047)) and v84.ImmolationAura:IsCastable() and v48 and v84.Inertia:IsAvailable() and ((v84.EyeBeam:CooldownRemains() < (v103 * (5 - 3))) or v14:BuffUp(v84.MetamorphosisBuff)) and (v84.EssenceBreak:CooldownRemains() < (v103 * (1835 - (1552 + 280)))) and v14:BuffDown(v84.UnboundChaosBuff) and v14:BuffDown(v84.InertiaBuff) and v15:DebuffDown(v84.EssenceBreakDebuff)) then
-						if (((1526 - (64 + 770)) < (2077 + 981)) and v24(v84.ImmolationAura, not v15:IsInRange(18 - 10))) then
-							return "immolation_aura main 5";
-						end
-					end
-					v164 = 1 + 3;
-				end
-				if ((v164 == (1247 - (157 + 1086))) or ((6512 - 3258) == (7248 - 5593))) then
-					if ((v84.ImmolationAura:IsCastable() and v48 and v84.Inertia:IsAvailable() and v14:BuffDown(v84.UnboundChaosBuff) and ((v84.ImmolationAura:FullRechargeTime() < v84.EssenceBreak:CooldownRemains()) or not v84.EssenceBreak:IsAvailable()) and v15:DebuffDown(v84.EssenceBreakDebuff) and (v14:BuffDown(v84.MetamorphosisBuff) or (v14:BuffRemains(v84.MetamorphosisBuff) > (8 - 2))) and v84.BladeDance:CooldownDown() and ((v14:Fury() < (101 - 26)) or (v84.BladeDance:CooldownRemains() < (v103 * (821 - (599 + 220)))))) or ((2580 - 1284) == (6841 - (1813 + 118)))) then
-						if (((2462 + 906) == (4585 - (841 + 376))) and v24(v84.ImmolationAura, not v15:IsInRange(10 - 2))) then
-							return "immolation_aura main 6";
-						end
-					end
-					if (((614 + 2029) < (10413 - 6598)) and v84.FelRush:IsCastable() and v35 and v46 and ((v14:BuffRemains(v84.UnboundChaosBuff) < (v103 * (861 - (464 + 395)))) or (v15:TimeToDie() < (v103 * (5 - 3))))) then
-						if (((919 + 994) > (1330 - (467 + 370))) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-							return "fel_rush main 8";
-						end
-					end
-					if (((9825 - 5070) > (2517 + 911)) and v84.FelRush:IsCastable() and v35 and v46 and v84.Inertia:IsAvailable() and v14:BuffDown(v84.InertiaBuff) and v14:BuffUp(v84.UnboundChaosBuff) and ((v84.EyeBeam:CooldownRemains() + (10 - 7)) > v14:BuffRemains(v84.UnboundChaosBuff)) and (v84.BladeDance:CooldownDown() or v84.EssenceBreak:CooldownUp())) then
-						if (((216 + 1165) <= (5511 - 3142)) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-							return "fel_rush main 9";
-						end
-					end
-					if ((v84.FelRush:IsCastable() and v35 and v46 and v14:BuffUp(v84.UnboundChaosBuff) and v84.Inertia:IsAvailable() and v14:BuffDown(v84.InertiaBuff) and (v14:BuffUp(v84.MetamorphosisBuff) or (v84.EssenceBreak:CooldownRemains() > (530 - (150 + 370))))) or ((6125 - (74 + 1208)) == (10044 - 5960))) then
-						if (((22143 - 17474) > (259 + 104)) and v24(v84.FelRush, not v15:IsSpellInRange(v84.ThrowGlaive))) then
-							return "fel_rush main 10";
-						end
-					end
-					v164 = 395 - (14 + 376);
-				end
-				if ((v164 == (10 - 4)) or ((1215 + 662) >= (2757 + 381))) then
-					if (((4523 + 219) >= (10624 - 6998)) and (v84.DemonBlades:IsAvailable())) then
-						if (v24(v84.Pool) or ((3416 + 1124) == (994 - (23 + 55)))) then
+				if (((7533 - 3739) > (14611 - 10918)) and (v136 == (1916 - (716 + 1194)))) then
+					if ((v83.DemonBlades:IsAvailable()) or ((22 + 1253) == (440 + 3660))) then
+						if (v23(v83.Pool) or ((2094 - (74 + 429)) >= (6906 - 3326))) then
 							return "pool demon_blades";
 						end
 					end
 					break;
 				end
-				if ((v164 == (4 - 2)) or ((772 + 384) > (3902 + 443))) then
-					v100 = (v84.Momentum:IsAvailable() and v14:BuffDown(v84.MomentumBuff)) or (v84.Inertia:IsAvailable() and v14:BuffDown(v84.InertiaBuff));
-					v165 = v30(v84.EyeBeam:BaseDuration(), v14:GCD());
-					v101 = v84.Demonic:IsAvailable() and v84.EssenceBreak:IsAvailable() and Var3MinTrinket and (v107 > (v84.Metamorphosis:CooldownRemains() + (46 - 16) + (v27(v84.ShatteredDestiny:IsAvailable()) * (19 + 41)))) and (v84.Metamorphosis:CooldownRemains() < (921 - (652 + 249))) and (v84.Metamorphosis:CooldownRemains() > (v165 + (v103 * (v27(v84.InnerDemon:IsAvailable()) + (5 - 3)))));
-					if (((4105 - (708 + 1160)) < (11533 - 7284)) and v84.ImmolationAura:IsCastable() and v48 and v84.Ragefire:IsAvailable() and (v93 >= (5 - 2)) and (v84.BladeDance:CooldownDown() or v15:DebuffDown(v84.EssenceBreakDebuff))) then
-						if (v24(v84.ImmolationAura, not v15:IsInRange(35 - (10 + 17))) or ((603 + 2080) < (1755 - (1400 + 332)))) then
+				if (((488 + 495) <= (4138 - 2330)) and (v136 == (3 + 1))) then
+					if ((v83.ImmolationAura:IsCastable() and v47 and v83.Inertia:IsAvailable() and v13:BuffDown(v83.UnboundChaosBuff) and ((v83.ImmolationAura:FullRechargeTime() < v83.EssenceBreak:CooldownRemains()) or not v83.EssenceBreak:IsAvailable()) and v14:DebuffDown(v83.EssenceBreakDebuff) and (v13:BuffDown(v83.MetamorphosisBuff) or (v13:BuffRemains(v83.MetamorphosisBuff) > (18 - 12))) and v83.BladeDance:CooldownDown() and ((v13:Fury() < (185 - 110)) or (v83.BladeDance:CooldownRemains() < (v102 * (435 - (279 + 154)))))) or ((2928 - (454 + 324)) <= (942 + 255))) then
+						if (((3786 - (12 + 5)) >= (633 + 540)) and v23(v83.ImmolationAura, not v14:IsInRange(20 - 12))) then
+							return "immolation_aura main 6";
+						end
+					end
+					if (((549 + 936) == (2578 - (277 + 816))) and v83.FelRush:IsCastable() and v34 and v45 and ((v13:BuffRemains(v83.UnboundChaosBuff) < (v102 * (8 - 6))) or (v14:TimeToDie() < (v102 * (1185 - (1058 + 125)))))) then
+						if (v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive)) or ((622 + 2693) <= (3757 - (815 + 160)))) then
+							return "fel_rush main 8";
+						end
+					end
+					if ((v83.FelRush:IsCastable() and v34 and v45 and v83.Inertia:IsAvailable() and v13:BuffDown(v83.InertiaBuff) and v13:BuffUp(v83.UnboundChaosBuff) and ((v83.EyeBeam:CooldownRemains() + (12 - 9)) > v13:BuffRemains(v83.UnboundChaosBuff)) and (v83.BladeDance:CooldownDown() or v83.EssenceBreak:CooldownUp())) or ((2079 - 1203) >= (708 + 2256))) then
+						if (v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive)) or ((6524 - 4292) > (4395 - (41 + 1857)))) then
+							return "fel_rush main 9";
+						end
+					end
+					if ((v83.FelRush:IsCastable() and v34 and v45 and v13:BuffUp(v83.UnboundChaosBuff) and v83.Inertia:IsAvailable() and v13:BuffDown(v83.InertiaBuff) and (v13:BuffUp(v83.MetamorphosisBuff) or (v83.EssenceBreak:CooldownRemains() > (1903 - (1222 + 671))))) or ((5453 - 3343) <= (476 - 144))) then
+						if (((4868 - (229 + 953)) > (4946 - (1111 + 663))) and v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive))) then
+							return "fel_rush main 10";
+						end
+					end
+					v136 = 1584 - (874 + 705);
+				end
+				if ((v136 == (1 + 1)) or ((3053 + 1421) < (1704 - 884))) then
+					v99 = (v83.Momentum:IsAvailable() and v13:BuffDown(v83.MomentumBuff)) or (v83.Inertia:IsAvailable() and v13:BuffDown(v83.InertiaBuff));
+					v137 = v29(v83.EyeBeam:BaseDuration(), v13:GCD());
+					v100 = v83.Demonic:IsAvailable() and v83.EssenceBreak:IsAvailable() and Var3MinTrinket and (v106 > (v83.Metamorphosis:CooldownRemains() + 1 + 29 + (v26(v83.ShatteredDestiny:IsAvailable()) * (739 - (642 + 37))))) and (v83.Metamorphosis:CooldownRemains() < (5 + 15)) and (v83.Metamorphosis:CooldownRemains() > (v137 + (v102 * (v26(v83.InnerDemon:IsAvailable()) + 1 + 1))));
+					if (((10743 - 6464) >= (3336 - (233 + 221))) and v83.ImmolationAura:IsCastable() and v47 and v83.Ragefire:IsAvailable() and (v92 >= (6 - 3)) and (v83.BladeDance:CooldownDown() or v14:DebuffDown(v83.EssenceBreakDebuff))) then
+						if (v23(v83.ImmolationAura, not v14:IsInRange(8 + 0)) or ((3570 - (718 + 823)) >= (2216 + 1305))) then
 							return "immolation_aura main 2";
 						end
 					end
-					v164 = 5 - 2;
+					v136 = 808 - (266 + 539);
+				end
+				if ((v136 == (0 - 0)) or ((3262 - (636 + 589)) >= (11018 - 6376))) then
+					if (((3547 - 1827) < (3533 + 925)) and not v13:AffectingCombat()) then
+						local v175 = 0 + 0;
+						while true do
+							if ((v175 == (1015 - (657 + 358))) or ((1154 - 718) > (6882 - 3861))) then
+								v30 = v112();
+								if (((1900 - (1151 + 36)) <= (818 + 29)) and v30) then
+									return v30;
+								end
+								break;
+							end
+						end
+					end
+					if (((567 + 1587) <= (12038 - 8007)) and v83.ConsumeMagic:IsAvailable() and v38 and v83.ConsumeMagic:IsReady() and v67 and not v13:IsCasting() and not v13:IsChanneling() and v25.UnitHasMagicBuff(v14)) then
+						if (((6447 - (1552 + 280)) == (5449 - (64 + 770))) and v23(v83.ConsumeMagic, not v14:IsSpellInRange(v83.ConsumeMagic))) then
+							return "greater_purge damage";
+						end
+					end
+					if ((v83.FelRush:IsReady() and v34 and v45 and not v14:IsInRange(6 + 2)) or ((8603 - 4813) == (89 + 411))) then
+						if (((1332 - (157 + 1086)) < (442 - 221)) and v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive))) then
+							return "fel_rush rotation when OOR";
+						end
+					end
+					if (((8995 - 6941) >= (2179 - 758)) and v83.ThrowGlaive:IsReady() and v49 and v12.ValueIsInArray(v107, v14:NPCID())) then
+						if (((943 - 251) < (3877 - (599 + 220))) and v23(v83.ThrowGlaive, not v14:IsSpellInRange(v83.ThrowGlaive))) then
+							return "fodder to the flames react per target";
+						end
+					end
+					v136 = 1 - 0;
+				end
+				if (((1936 - (1813 + 118)) == v136) or ((2379 + 875) == (2872 - (841 + 376)))) then
+					if (((v74 < v106) and v33) or ((1815 - 519) == (1141 + 3769))) then
+						local v176 = 0 - 0;
+						while true do
+							if (((4227 - (464 + 395)) == (8643 - 5275)) and (v176 == (0 + 0))) then
+								v30 = v114();
+								if (((3480 - (467 + 370)) < (7883 - 4068)) and v30) then
+									return v30;
+								end
+								break;
+							end
+						end
+					end
+					if (((1405 + 508) > (1689 - 1196)) and v13:BuffUp(v83.MetamorphosisBuff) and (v13:BuffRemains(v83.MetamorphosisBuff) < v102) and (v92 < (1 + 2))) then
+						v30 = v113();
+						if (((11062 - 6307) > (3948 - (150 + 370))) and v30) then
+							return v30;
+						end
+					end
+					v30 = v115();
+					if (((2663 - (74 + 1208)) <= (5826 - 3457)) and v30) then
+						return v30;
+					end
+					v136 = 28 - 22;
+				end
+				if (((3 + 0) == v136) or ((5233 - (14 + 376)) == (7083 - 2999))) then
+					if (((3022 + 1647) > (319 + 44)) and v83.ImmolationAura:IsCastable() and v47 and v83.AFireInside:IsAvailable() and v83.Inertia:IsAvailable() and v13:BuffDown(v83.UnboundChaosBuff) and (v83.ImmolationAura:FullRechargeTime() < (v102 * (2 + 0))) and v14:DebuffDown(v83.EssenceBreakDebuff)) then
+						if (v23(v83.ImmolationAura, not v14:IsInRange(23 - 15)) or ((1413 + 464) >= (3216 - (23 + 55)))) then
+							return "immolation_aura main 3";
+						end
+					end
+					if (((11237 - 6495) >= (2420 + 1206)) and v83.FelRush:IsCastable() and v34 and v45 and v13:BuffUp(v83.UnboundChaosBuff) and (((v83.ImmolationAura:Charges() == (2 + 0)) and v14:DebuffDown(v83.EssenceBreakDebuff)) or (v13:PrevGCDP(1 - 0, v83.EyeBeam) and v13:BuffUp(v83.InertiaBuff) and (v13:BuffRemains(v83.InertiaBuff) < (1 + 2))))) then
+						if (v23(v83.FelRush, not v14:IsSpellInRange(v83.ThrowGlaive)) or ((5441 - (652 + 249)) == (2451 - 1535))) then
+							return "fel_rush main 4";
+						end
+					end
+					if ((v83.TheHunt:IsCastable() and (v9.CombatTime() < (1878 - (708 + 1160))) and (not v83.Inertia:IsAvailable() or (v13:BuffUp(v83.MetamorphosisBuff) and v14:DebuffDown(v83.EssenceBreakDebuff)))) or ((3137 - 1981) > (7921 - 3576))) then
+						if (((2264 - (10 + 17)) < (955 + 3294)) and v21(v83.TheHunt, not v14:IsSpellInRange(v83.TheHunt))) then
+							return "the_hunt main 6";
+						end
+					end
+					if ((v83.ImmolationAura:IsCastable() and v47 and v83.Inertia:IsAvailable() and ((v83.EyeBeam:CooldownRemains() < (v102 * (1734 - (1400 + 332)))) or v13:BuffUp(v83.MetamorphosisBuff)) and (v83.EssenceBreak:CooldownRemains() < (v102 * (5 - 2))) and v13:BuffDown(v83.UnboundChaosBuff) and v13:BuffDown(v83.InertiaBuff) and v14:DebuffDown(v83.EssenceBreakDebuff)) or ((4591 - (242 + 1666)) < (10 + 13))) then
+						if (((256 + 441) <= (704 + 122)) and v23(v83.ImmolationAura, not v14:IsInRange(948 - (850 + 90)))) then
+							return "immolation_aura main 5";
+						end
+					end
+					v136 = 6 - 2;
+				end
+				if (((2495 - (360 + 1030)) <= (1041 + 135)) and (v136 == (2 - 1))) then
+					if (((4648 - 1269) <= (5473 - (909 + 752))) and v83.ThrowGlaive:IsReady() and v49 and v12.ValueIsInArray(v107, v15:NPCID())) then
+						if (v23(v85.ThrowGlaiveMouseover, not v14:IsSpellInRange(v83.ThrowGlaive)) or ((2011 - (109 + 1114)) >= (2958 - 1342))) then
+							return "fodder to the flames react per mouseover";
+						end
+					end
+					v95 = v83.FirstBlood:IsAvailable() or v83.TrailofRuin:IsAvailable() or (v83.ChaosTheory:IsAvailable() and v13:BuffDown(v83.ChaosTheoryBuff)) or (v92 > (1 + 0));
+					v96 = v95 and (v13:Fury() < ((317 - (6 + 236)) - (v26(v83.DemonBlades:IsAvailable()) * (13 + 7)))) and (v83.BladeDance:CooldownRemains() < v102);
+					v97 = v83.Demonic:IsAvailable() and not v83.BlindFury:IsAvailable() and (v83.EyeBeam:CooldownRemains() < (v102 * (2 + 0))) and (v13:FuryDeficit() > (70 - 40));
+					v136 = 3 - 1;
 				end
 			end
 		end
 	end
-	local function v121()
-		v84.BurningWoundDebuff:RegisterAuraTracking();
-		v20.Print("Havoc Demon Hunter by Epic. Supported by xKaneto.");
+	local function v120()
+		v83.BurningWoundDebuff:RegisterAuraTracking();
+		v19.Print("Havoc Demon Hunter by Epic. Supported by xKaneto.");
 	end
-	v20.SetAPL(2485 - (242 + 1666), v120, v121);
+	v19.SetAPL(1710 - (1076 + 57), v119, v120);
 end;
 return v0["Epix_DemonHunter_Havoc.lua"]();
 
