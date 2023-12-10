@@ -1,598 +1,562 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 0 - 0;
-	local v6;
-	while true do
-		if (((2486 + 2237) > (3263 - (957 + 950))) and (v5 == (0 + 0))) then
-			v6 = v0[v4];
-			if (not v6 or ((12294 - 8158) <= (4638 - (902 + 303)))) then
-				return v1(v4, ...);
-			end
-			v5 = 1 - 0;
-		end
-		if (((10223 - 5978) <= (398 + 4233)) and (v5 == (1691 - (1121 + 569)))) then
-			return v6(...);
-		end
+	local v5 = v0[v4];
+	if (((2889 - 1601) > (1511 - (112 + 148))) and not v5) then
+		return v1(v4, ...);
 	end
+	return v5(...);
 end
 v0["Epix_Rogue_Rogue.lua"] = function(...)
-	local v7, v8 = ...;
-	local v9 = EpicDBC.DBC;
-	local v10 = EpicLib;
-	local v11 = EpicCache;
-	local v12 = v10.Unit;
-	local v13 = v12.Player;
-	local v14 = v12.Target;
-	local v15 = v12.MouseOver;
-	local v16 = v10.Spell;
-	local v17 = v10.MultiSpell;
-	local v18 = v10.Item;
-	local v19 = v10.Utils.MergeTableByKey;
-	local v20 = v10.Commons.Everyone;
-	local v21 = v10.Macro;
-	local v22 = math.min;
-	local v23 = pairs;
-	local v24 = C_Timer;
-	local v25 = math.max;
-	local v26 = math.abs;
-	local v23 = v23;
-	local v27 = table.insert;
-	local v28 = UnitAttackSpeed;
-	local v29 = GetTime;
-	local v30 = {};
-	v10.Commons.Rogue = v30;
-	if (((4490 - (22 + 192)) >= (4597 - (483 + 200))) and not v16.Rogue) then
-		v16.Rogue = {};
+	local v6, v7 = ...;
+	local v8 = EpicDBC.DBC;
+	local v9 = EpicLib;
+	local v10 = EpicCache;
+	local v11 = v9.Unit;
+	local v12 = v11.Player;
+	local v13 = v11.Target;
+	local v14 = v11.MouseOver;
+	local v15 = v9.Spell;
+	local v16 = v9.MultiSpell;
+	local v17 = v9.Item;
+	local v18 = v9.Utils.MergeTableByKey;
+	local v19 = v9.Commons.Everyone;
+	local v20 = v9.Macro;
+	local v21 = math.min;
+	local v22 = pairs;
+	local v23 = C_Timer;
+	local v24 = math.max;
+	local v25 = math.abs;
+	local v22 = v22;
+	local v26 = table.insert;
+	local v27 = UnitAttackSpeed;
+	local v28 = GetTime;
+	local v29 = {};
+	v9.Commons.Rogue = v29;
+	if (not v15.Rogue or ((59 + 4454) < (1667 + 1685))) then
+		v15.Rogue = {};
 	end
-	v16.Rogue.Commons = {Sanguine=v16(227973 - (1404 + 59), nil, 2 - 1),AncestralCall=v16(369255 - 94517, nil, 767 - (468 + 297)),ArcanePulse=v16(260926 - (334 + 228), nil, 10 - 7),ArcaneTorrent=v16(58054 - 33008, nil, 6 - 2),BagofTricks=v16(88714 + 223697, nil, 241 - (141 + 95)),Berserking=v16(25832 + 465, nil, 15 - 9),BloodFury=v16(49453 - 28881, nil, 2 + 5),Fireblood=v16(726673 - 461452, nil, 6 + 2),LightsJudgment=v16(133122 + 122525, nil, 12 - 3),Shadowmeld=v16(34793 + 24191, nil, 173 - (92 + 71)),CloakofShadows=v16(15423 + 15801, nil, 18 - 7),CrimsonVial=v16(186076 - (574 + 191), nil, 10 + 2),Evasion=v16(13220 - 7943, nil, 7 + 6),Feint=v16(2815 - (254 + 595), nil, 140 - (55 + 71)),Blind=v16(2758 - 664, nil, 1805 - (573 + 1217)),CheapShot=v16(5076 - 3243, nil, 2 + 14),Kick=v16(2845 - 1079, nil, 956 - (714 + 225)),KidneyShot=v16(1192 - 784, nil, 24 - 6),Sap=v16(733 + 6037, nil, 26 - 7),Shiv=v16(6744 - (118 + 688), nil, 68 - (25 + 23)),SliceandDice=v16(61108 + 254388, nil, 1907 - (927 + 959)),Shadowstep=v16(123219 - 86665, nil, 754 - (16 + 716)),Sprint=v16(5758 - 2775, nil, 120 - (11 + 86)),TricksoftheTrade=v16(141310 - 83376, nil, 309 - (175 + 110)),CripplingPoison=v16(8604 - 5196, nil, 123 - 98),DeadlyPoison=v16(4619 - (503 + 1293), nil, 72 - 46),InstantPoison=v16(228219 + 87365, nil, 1088 - (810 + 251)),AmplifyingPoison=v16(264867 + 116797, nil, 9 + 19),NumbingPoison=v16(5194 + 567, nil, 562 - (43 + 490)),WoundPoison=v16(9412 - (711 + 22), nil, 116 - 86),AtrophicPoison=v16(382496 - (240 + 619), nil, 8 + 23),AcrobaticStrikes=v16(313247 - 116323, nil, 3 + 29),Alacrity=v16(195283 - (1344 + 400), nil, 438 - (255 + 150)),ColdBlood=v16(301086 + 81159, nil, 19 + 15),DeeperStratagem=v16(826876 - 633345),EchoingReprimand=v16(1245509 - 859893, nil, 1775 - (404 + 1335)),EchoingReprimand2=v16(323964 - (183 + 223), nil, 44 - 7),EchoingReprimand3=v16(214386 + 109173, nil, 14 + 24),EchoingReprimand4=v16(323897 - (10 + 327), nil, 28 + 11),EchoingReprimand5=v16(355176 - (118 + 220), nil, 14 + 26),FindWeakness=v16(91472 - (108 + 341), nil, 19 + 22),FindWeaknessDebuff=v16(1336917 - 1020697, nil, 1535 - (711 + 782)),ImprovedAmbush=v16(731578 - 349958, nil, 512 - (270 + 199)),MarkedforDeath=v16(44615 + 93004, nil, 1863 - (580 + 1239)),Nightstalker=v16(41803 - 27741, nil, 44 + 1),ResoundingClarity=v16(13710 + 367912, nil, 21 + 25),SealFate=v16(37049 - 22859, nil, 30 + 17),Sepsis=v16(386575 - (645 + 522), nil, 1838 - (1010 + 780)),SepsisBuff=v16(375753 + 186, nil, 233 - 184),ShadowDance=v16(543051 - 357738, nil, 1886 - (1045 + 791)),ShadowDanceTalent=v16(999680 - 604750, nil, 77 - 26),ShadowDanceBuff=v16(185927 - (351 + 154)),Subterfuge=v16(109782 - (1281 + 293), nil, 319 - (28 + 238)),SubterfugeBuff=v16(257393 - 142201, nil, 1613 - (1381 + 178)),ThistleTea=v16(357939 + 23684, nil, 259 + 61),Vigor=v16(6392 + 8591),Stealth=v16(6150 - 4366, nil, 30 + 27),Stealth2=v16(115661 - (381 + 89), nil, 52 + 6),Vanish=v16(1256 + 600, nil, 100 - 41),VanishBuff=v16(12483 - (1074 + 82), nil, 131 - 71),VanishBuff2=v16(116977 - (214 + 1570), nil, 1516 - (990 + 465)),PoolEnergy=v16(412205 + 587705, nil, 27 + 35)};
-	v16.Rogue.Assassination = v19(v16.Rogue.Commons, {Ambush=v16(8437 + 239, nil, 247 - 184),AmplifyingPoisonDebuff=v16(385140 - (1668 + 58), nil, 690 - (512 + 114)),AmplifyingPoisonDebuffDeathmark=v16(1028070 - 633742, nil, 134 - 69),CripplingPoisonDebuff=v16(11862 - 8453, nil, 31 + 35),DeadlyPoisonDebuff=v16(528 + 2290, nil, 59 + 8),DeadlyPoisonDebuffDeathmark=v16(1330041 - 935717, nil, 2062 - (109 + 1885)),Envenom=v16(34114 - (1269 + 200), nil, 131 - 62),FanofKnives=v16(52538 - (98 + 717), nil, 896 - (802 + 24)),Garrote=v16(1212 - 509, nil, 89 - 18),GarroteDeathmark=v16(53288 + 307542, nil, 56 + 16),Mutilate=v16(219 + 1110, nil, 16 + 57),PoisonedKnife=v16(516230 - 330665, nil, 246 - 172),Rupture=v16(695 + 1248, nil, 31 + 44),RuptureDeathmark=v16(297631 + 63195, nil, 56 + 20),WoundPoisonDebuff=v16(4053 + 4627, nil, 1510 - (797 + 636)),ArterialPrecision=v16(1945946 - 1545163, nil, 1697 - (1427 + 192)),AtrophicPoisonDebuff=v16(135959 + 256429, nil, 182 - 103),BlindsideBuff=v16(108901 + 12252, nil, 37 + 43),CrimsonTempest=v16(121737 - (192 + 134), nil, 1357 - (316 + 960)),CutToTheChase=v16(28753 + 22914, nil, 64 + 18),DashingScoundrel=v16(352899 + 28898, nil, 317 - 234),Deathmark=v16(360745 - (83 + 468), nil, 1890 - (1202 + 604)),Doomblade=v16(1781723 - 1400050, nil, 141 - 56),DragonTemperedBlades=v16(1057107 - 675306, nil, 411 - (45 + 280)),Elusiveness=v16(76258 + 2750),Exsanguinate=v16(175438 + 25368, nil, 33 + 55),ImprovedGarrote=v16(211183 + 170449, nil, 16 + 73),ImprovedGarroteBuff=v16(726637 - 334236, nil, 2001 - (340 + 1571)),ImprovedGarroteAura=v16(154773 + 237630, nil, 1863 - (1733 + 39)),IndiscriminateCarnage=v16(1049152 - 667350, nil, 1126 - (125 + 909)),IndiscriminateCarnageBuff=v16(387695 - (1096 + 852)),InternalBleeding=v16(69508 + 85445, nil, 131 - 38),Kingsbane=v16(374033 + 11594, nil, 606 - (409 + 103)),LightweightShiv=v16(395219 - (46 + 190)),MasterAssassin=v16(256084 - (51 + 44), nil, 27 + 68),MasterAssassinBuff=v16(258052 - (1114 + 203), nil, 822 - (228 + 498)),PreyontheWeak=v16(28493 + 103018, nil, 54 + 43),PreyontheWeakDebuff=v16(256572 - (174 + 489), nil, 255 - 157),SerratedBoneSpike=v16(387329 - (830 + 1075), nil, 623 - (303 + 221)),SerratedBoneSpikeDebuff=v16(395305 - (231 + 1038), nil, 84 + 16),ShivDebuff=v16(320666 - (171 + 991), nil, 416 - 315),VenomRush=v16(408558 - 256406, nil, 254 - 152),ScentOfBlood=v16(305571 + 76228, nil, 1388 - 992),ScentOfBloodBuff=v16(1136844 - 742764),ShroudedSuffocation=v16(621377 - 235899)});
-	v16.Rogue.Outlaw = v19(v16.Rogue.Commons, {AdrenalineRush=v16(42505 - 28755, nil, 1351 - (111 + 1137)),Ambush=v16(8834 - (91 + 67), nil, 309 - 205),AmbushOverride=v16(107293 + 322730),BetweentheEyes=v16(315864 - (423 + 100), nil, 1 + 104),BladeFlurry=v16(38423 - 24546, nil, 56 + 50),Dispatch=v16(2869 - (326 + 445), nil, 466 - 359),Elusiveness=v16(176015 - 97007),Opportunity=v16(456637 - 261010),PistolShot=v16(186474 - (530 + 181), nil, 991 - (614 + 267)),RolltheBones=v16(315540 - (19 + 13), nil, 180 - 69),SinisterStrike=v16(450489 - 257174, nil, 319 - 207),Audacity=v16(99169 + 282676, nil, 198 - 85),AudacityBuff=v16(801065 - 414795, nil, 1926 - (1293 + 519)),BladeRush=v16(554713 - 282836, nil, 300 - 185),CountTheOdds=v16(730472 - 348490, nil, 500 - 384),Dreadblades=v16(808352 - 465210, nil, 62 + 55),FanTheHammer=v16(77904 + 303942, nil, 273 - 155),GhostlyStrike=v16(45509 + 151428, nil, 40 + 79),GreenskinsWickers=v16(241732 + 145091, nil, 1216 - (709 + 387)),GreenskinsWickersBuff=v16(395989 - (673 + 1185), nil, 350 - 229),HiddenOpportunity=v16(1230788 - 847507, nil, 200 - 78),ImprovedAdrenalineRush=v16(282829 + 112593, nil, 92 + 31),ImprovedBetweenTheEyes=v16(317940 - 82456, nil, 31 + 93),KeepItRolling=v16(761653 - 379664, nil, 245 - 120),KillingSpree=v16(53570 - (446 + 1434), nil, 1409 - (1040 + 243)),LoadedDice=v16(764569 - 508399, nil, 1974 - (559 + 1288)),LoadedDiceBuff=v16(258102 - (609 + 1322), nil, 582 - (13 + 441)),PreyontheWeak=v16(491434 - 359923, nil, 337 - 208),PreyontheWeakDebuff=v16(1274539 - 1018630, nil, 5 + 125),QuickDraw=v16(715239 - 518301, nil, 47 + 84),SummarilyDispatched=v16(167382 + 214608, nil, 391 - 259),SwiftSlasher=v16(209028 + 172960, nil, 244 - 111),TakeEmBySurpriseBuff=v16(255128 + 130779, nil, 75 + 59),Weaponmaster=v16(144229 + 56504, nil, 114 + 21),UnderhandedUpperhand=v16(414879 + 9165),DeftManeuvers=v16(382311 - (153 + 280)),Crackshot=v16(1223485 - 799782),Gouge=v16(1595 + 181, nil, 54 + 82),Broadside=v16(101187 + 92169, nil, 125 + 12),BuriedTreasure=v16(144631 + 54969, nil, 209 - 71),GrandMelee=v16(119507 + 73851, nil, 806 - (89 + 578)),RuthlessPrecision=v16(138128 + 55229, nil, 291 - 151),SkullandCrossbones=v16(200652 - (572 + 477), nil, 20 + 121),TrueBearing=v16(116040 + 77319, nil, 17 + 125),ViciousFollowup=v16(394965 - (84 + 2), nil, 235 - 92)});
-	v16.Rogue.Subtlety = v19(v16.Rogue.Commons, {Backstab=v16(39 + 14, nil, 986 - (497 + 345)),BlackPowder=v16(8166 + 311009, nil, 25 + 120),Elusiveness=v16(80341 - (605 + 728)),Eviscerate=v16(140427 + 56392, nil, 326 - 179),Rupture=v16(90 + 1853, nil, 547 - 399),ShadowBlades=v16(109506 + 11965, nil, 412 - 263),Shadowstrike=v16(140016 + 45422, nil, 639 - (457 + 32)),ShurikenStorm=v16(83937 + 113898, nil, 1553 - (832 + 570)),ShurikenToss=v16(107412 + 6602, nil, 40 + 112),SymbolsofDeath=v16(751230 - 538947, nil, 74 + 79),DanseMacabre=v16(383324 - (588 + 208), nil, 414 - 260),DanseMacabreBuff=v16(395769 - (884 + 916), nil, 324 - 169),DeeperDaggers=v16(221790 + 160727, nil, 809 - (232 + 421)),DeeperDaggersBuff=v16(385294 - (1569 + 320), nil, 39 + 118),DarkBrew=v16(72671 + 309833, nil, 532 - 374),DarkShadow=v16(246292 - (316 + 289), nil, 415 - 256),EnvelopingShadows=v16(10997 + 227107, nil, 1613 - (666 + 787)),Finality=v16(382950 - (360 + 65), nil, 151 + 10),FinalityBlackPowderBuff=v16(386202 - (79 + 175), nil, 255 - 93),FinalityEviscerateBuff=v16(301174 + 84775, nil, 499 - 336),FinalityRuptureBuff=v16(743286 - 357335, nil, 1063 - (503 + 396)),Flagellation=v16(384812 - (92 + 89), nil, 319 - 154),FlagellationPersistBuff=v16(202448 + 192310, nil, 99 + 67),Gloomblade=v16(786196 - 585438, nil, 23 + 144),GoremawsBite=v16(972682 - 546091, nil, 165 + 24),ImprovedShadowDance=v16(188175 + 205797, nil, 511 - 343),ImprovedShurikenStorm=v16(39933 + 280018, nil, 257 - 88),InvigoratingShadowdust=v16(383767 - (485 + 759)),LingeringShadow=v16(885115 - 502591, nil, 1359 - (442 + 747)),LingeringShadowBuff=v16(387095 - (832 + 303), nil, 1117 - (88 + 858)),MasterofShadows=v16(60035 + 136941, nil, 143 + 29),PerforatedVeins=v16(15755 + 366763, nil, 962 - (766 + 23)),PerforatedVeinsBuff=v16(1946328 - 1552074, nil, 237 - 63),PreyontheWeak=v16(346492 - 214981, nil, 593 - 418),PreyontheWeakDebuff=v16(256982 - (1036 + 37), nil, 125 + 51),Premeditation=v16(668266 - 325106, nil, 140 + 37),PremeditationBuff=v16(344653 - (641 + 839), nil, 1091 - (910 + 3)),SecretStratagem=v16(1005239 - 610919, nil, 1863 - (1466 + 218)),SecretTechnique=v16(129015 + 151704, nil, 1328 - (556 + 592)),Shadowcraft=v16(151695 + 274899),ShadowFocus=v16(109017 - (329 + 479), nil, 1035 - (174 + 680)),ShurikenTornado=v16(954998 - 677073, nil, 376 - 194),SilentStorm=v16(275394 + 110328, nil, 922 - (396 + 343)),SilentStormBuff=v16(34129 + 351593, nil, 1661 - (29 + 1448)),TheFirstDance=v16(383894 - (135 + 1254), nil, 696 - 511),TheRotten=v16(1783675 - 1401660, nil, 124 + 62),TheRottenBuff=v16(395730 - (389 + 1138), nil, 761 - (102 + 472)),Weaponmaster=v16(182640 + 10897, nil, 105 + 83)});
-	if (((185 + 13) <= (5910 - (320 + 1225))) and not v18.Rogue) then
-		v18.Rogue = {};
+	v15.Rogue.Commons = {Sanguine=v15(227882 - (1168 + 204), nil, 961 - (271 + 689)),AncestralCall=v15(276342 - (963 + 641), nil, 196 - (48 + 146)),ArcanePulse=v15(260952 - (294 + 294), nil, 4 - 1),ArcaneTorrent=v15(4223 + 20823, nil, 2 + 2),BagofTricks=v15(314024 - (1565 + 48), nil, 4 + 1),Berserking=v15(27435 - (782 + 356), nil, 273 - (176 + 91)),BloodFury=v15(53596 - 33024, nil, 9 - 2),Fireblood=v15(266313 - (975 + 117), nil, 1883 - (157 + 1718)),LightsJudgment=v15(207472 + 48175, nil, 31 - 22),Shadowmeld=v15(201654 - 142670, nil, 1028 - (697 + 321)),CloakofShadows=v15(85057 - 53833, nil, 23 - 12),CrimsonVial=v15(427212 - 241901, nil, 5 + 7),Evasion=v15(9887 - 4610, nil, 34 - 21),Feint=v15(3193 - (322 + 905), nil, 625 - (602 + 9)),Blind=v15(3283 - (449 + 740), nil, 887 - (826 + 46)),CheapShot=v15(2780 - (245 + 702), nil, 50 - 34),Kick=v15(568 + 1198, nil, 1915 - (260 + 1638)),KidneyShot=v15(848 - (382 + 58), nil, 57 - 39),Sap=v15(5626 + 1144, nil, 38 - 19),Shiv=v15(17651 - 11713, nil, 1225 - (902 + 303)),SliceandDice=v15(692715 - 377219, nil, 50 - 29),Shadowstep=v15(3142 + 33412, nil, 1712 - (1121 + 569)),Sprint=v15(3197 - (22 + 192), nil, 706 - (483 + 200)),TricksoftheTrade=v15(59397 - (1404 + 59), nil, 65 - 41),CripplingPoison=v15(4579 - 1171, nil, 790 - (468 + 297)),DeadlyPoison=v15(3385 - (334 + 228), nil, 87 - 61),InstantPoison=v15(731495 - 415911, nil, 48 - 21),AmplifyingPoison=v15(108379 + 273285, nil, 264 - (141 + 95)),NumbingPoison=v15(5660 + 101, nil, 74 - 45),WoundPoison=v15(20863 - 12184, nil, 8 + 22),AtrophicPoison=v15(1045639 - 664002, nil, 22 + 9),AcrobaticStrikes=v15(102544 + 94380, nil, 44 - 12),Alacrity=v15(114161 + 79378, nil, 196 - (92 + 71)),ColdBlood=v15(188808 + 193437, nil, 56 - 22),DeeperStratagem=v15(194296 - (574 + 191)),EchoingReprimand=v15(318081 + 67535, nil, 89 - 53),EchoingReprimand2=v15(165270 + 158288, nil, 886 - (254 + 595)),EchoingReprimand3=v15(323685 - (55 + 71), nil, 49 - 11),EchoingReprimand4=v15(325350 - (573 + 1217), nil, 107 - 68),EchoingReprimand5=v15(26999 + 327839, nil, 64 - 24),FindWeakness=v15(91962 - (714 + 225), nil, 119 - 78),FindWeaknessDebuff=v15(440862 - 124642, nil, 5 + 37),ImprovedAmbush=v15(552566 - 170946, nil, 849 - (118 + 688)),MarkedforDeath=v15(137667 - (25 + 23), nil, 9 + 35),Nightstalker=v15(15948 - (927 + 959), nil, 151 - 106),ResoundingClarity=v15(382354 - (16 + 716), nil, 88 - 42),SealFate=v15(14287 - (11 + 86), nil, 114 - 67),Sepsis=v15(385693 - (175 + 110), nil, 120 - 72),SepsisBuff=v15(1854225 - 1478286, nil, 1845 - (503 + 1293)),ShadowDance=v15(517542 - 332229, nil, 37 + 13),ShadowDanceTalent=v15(395991 - (810 + 251), nil, 36 + 15),ShadowDanceBuff=v15(56907 + 128515),Subterfuge=v15(97545 + 10663, nil, 586 - (43 + 490)),SubterfugeBuff=v15(115925 - (711 + 22), nil, 208 - 154),ThistleTea=v15(382482 - (240 + 619), nil, 78 + 242),Vigor=v15(23833 - 8850),Stealth=v15(119 + 1665, nil, 1801 - (1344 + 400)),Stealth2=v15(115596 - (255 + 150), nil, 46 + 12),Vanish=v15(994 + 862, nil, 251 - 192),VanishBuff=v15(36585 - 25258, nil, 1799 - (404 + 1335)),VanishBuff2=v15(115599 - (183 + 223), nil, 74 - 13),PoolEnergy=v15(662528 + 337382, nil, 23 + 39)};
+	v15.Rogue.Assassination = v18(v15.Rogue.Commons, {Ambush=v15(9013 - (10 + 327), nil, 44 + 19),AmbushOverride=v15(430361 - (118 + 220)),AmplifyingPoisonDebuff=v15(127775 + 255639, nil, 513 - (108 + 341)),AmplifyingPoisonDebuffDeathmark=v15(177107 + 217221, nil, 274 - 209),CripplingPoisonDebuff=v15(4902 - (711 + 782), nil, 126 - 60),DeadlyPoisonDebuff=v15(3287 - (270 + 199), nil, 22 + 45),DeadlyPoisonDebuffDeathmark=v15(396143 - (580 + 1239), nil, 202 - 134),Envenom=v15(31214 + 1431, nil, 3 + 66),FanofKnives=v15(22532 + 29191, nil, 182 - 112),Garrote=v15(437 + 266, nil, 1238 - (645 + 522)),GarroteDeathmark=v15(362620 - (1010 + 780), nil, 72 + 0),Mutilate=v15(6331 - 5002, nil, 213 - 140),PoisonedKnife=v15(187401 - (1045 + 791), nil, 186 - 112),Rupture=v15(2966 - 1023, nil, 580 - (351 + 154)),RuptureDeathmark=v15(362400 - (1281 + 293), nil, 342 - (28 + 238)),WoundPoisonDebuff=v15(19395 - 10715, nil, 1636 - (1381 + 178)),ArterialPrecision=v15(375910 + 24873, nil, 63 + 15),AtrophicPoisonDebuff=v15(167377 + 225011, nil, 272 - 193),BlindsideBuff=v15(62765 + 58388, nil, 550 - (381 + 89)),CausticSpatter=v15(374203 + 47772),CausticSpatterDebuff=v15(285378 + 136598),CrimsonTempest=v15(207975 - 86564, nil, 1237 - (1074 + 82)),CutToTheChase=v15(113226 - 61559, nil, 1866 - (214 + 1570)),DashingScoundrel=v15(383252 - (990 + 465), nil, 35 + 48),Deathmark=v15(156729 + 203465, nil, 82 + 2),Doomblade=v15(1502085 - 1120412, nil, 1811 - (1668 + 58)),DragonTemperedBlades=v15(382427 - (512 + 114), nil, 224 - 138),Elusiveness=v15(163336 - 84328),Exsanguinate=v15(698736 - 497930, nil, 41 + 47),ImprovedGarrote=v15(71439 + 310193, nil, 78 + 11),ImprovedGarroteBuff=v15(1323555 - 931154, nil, 2084 - (109 + 1885)),ImprovedGarroteAura=v15(393872 - (1269 + 200), nil, 174 - 83),IndiscriminateCarnage=v15(382617 - (98 + 717), nil, 918 - (802 + 24)),IndiscriminateCarnageAura=v15(665245 - 279491),IndiscriminateCarnageBuff=v15(487180 - 101433),InternalBleeding=v15(22884 + 132069, nil, 72 + 21),Kingsbane=v15(63341 + 322286, nil, 21 + 73),LightweightShiv=v15(1098818 - 703835),MasterAssassin=v15(853662 - 597673, nil, 34 + 61),MasterAssassinBuff=v15(104507 + 152228, nil, 80 + 16),PreyontheWeak=v15(95626 + 35885, nil, 46 + 51),PreyontheWeakDebuff=v15(257342 - (797 + 636), nil, 475 - 377),SerratedBoneSpike=v15(387043 - (1427 + 192), nil, 35 + 64),SerratedBoneSpikeDebuff=v15(914863 - 520827, nil, 90 + 10),ShivDebuff=v15(144794 + 174710, nil, 427 - (192 + 134)),VenomRush=v15(153428 - (316 + 960), nil, 57 + 45),ScentOfBlood=v15(294641 + 87158, nil, 367 + 29),ScentOfBloodBuff=v15(1506570 - 1112490),ShroudedSuffocation=v15(386029 - (83 + 468))});
+	v15.Rogue.Outlaw = v18(v15.Rogue.Commons, {AdrenalineRush=v15(15556 - (1202 + 604), nil, 480 - 377),Ambush=v15(14439 - 5763, nil, 287 - 183),AmbushOverride=v15(430348 - (45 + 280)),BetweentheEyes=v15(304366 + 10975, nil, 92 + 13),BladeFlurry=v15(5068 + 8809, nil, 59 + 47),Dispatch=v15(370 + 1728, nil, 197 - 90),Elusiveness=v15(80919 - (340 + 1571)),Opportunity=v15(77160 + 118467),PistolShot=v15(187535 - (1733 + 39), nil, 302 - 192),RolltheBones=v15(316542 - (125 + 909), nil, 2059 - (1096 + 852)),SinisterStrike=v15(86717 + 106598, nil, 159 - 47),Audacity=v15(370364 + 11481, nil, 625 - (409 + 103)),AudacityBuff=v15(386506 - (46 + 190), nil, 209 - (51 + 44)),BladeRush=v15(76681 + 195196, nil, 1432 - (1114 + 203)),CountTheOdds=v15(382708 - (228 + 498), nil, 26 + 90),Dreadblades=v15(189573 + 153569, nil, 780 - (174 + 489)),FanTheHammer=v15(994821 - 612975, nil, 2023 - (830 + 1075)),GhostlyStrike=v15(197461 - (303 + 221), nil, 1388 - (231 + 1038)),GreenskinsWickers=v15(322344 + 64479, nil, 1282 - (171 + 991)),GreenskinsWickersBuff=v15(1624294 - 1230163, nil, 324 - 203),HiddenOpportunity=v15(956461 - 573180, nil, 98 + 24),ImprovedAdrenalineRush=v15(1386095 - 990673, nil, 354 - 231),ImprovedBetweenTheEyes=v15(379591 - 144107, nil, 383 - 259),KeepItRolling=v15(383237 - (111 + 1137), nil, 283 - (91 + 67)),KillingSpree=v15(153842 - 102152, nil, 32 + 94),LoadedDice=v15(256693 - (423 + 100), nil, 1 + 126),LoadedDiceBuff=v15(709300 - 453129, nil, 67 + 61),PreyontheWeak=v15(132282 - (326 + 445), nil, 562 - 433),PreyontheWeakDebuff=v15(570119 - 314210, nil, 303 - 173),QuickDraw=v15(197649 - (530 + 181), nil, 1012 - (614 + 267)),SummarilyDispatched=v15(382022 - (19 + 13), nil, 214 - 82),SwiftSlasher=v15(890162 - 508174, nil, 379 - 246),TakeEmBySurpriseBuff=v15(100224 + 285683, nil, 235 - 101),Weaponmaster=v15(416289 - 215556, nil, 1947 - (1293 + 519)),UnderhandedUpperhand=v15(865182 - 441138),DeftManeuvers=v15(997064 - 615186),Crackshot=v15(810256 - 386553),Gouge=v15(7658 - 5882, nil, 320 - 184),Broadside=v15(102410 + 90946, nil, 28 + 109),BuriedTreasure=v15(463773 - 264173, nil, 32 + 106),GrandMelee=v15(64235 + 129123, nil, 87 + 52),RuthlessPrecision=v15(194453 - (709 + 387), nil, 1998 - (673 + 1185)),SkullandCrossbones=v15(578877 - 379274, nil, 452 - 311),TrueBearing=v15(318140 - 124781, nil, 102 + 40),ViciousFollowup=v15(295054 + 99825, nil, 192 - 49)});
+	v15.Rogue.Subtlety = v18(v15.Rogue.Commons, {Backstab=v15(14 + 39, nil, 286 - 142),BlackPowder=v15(626549 - 307374, nil, 2025 - (446 + 1434)),Elusiveness=v15(80291 - (1040 + 243)),Eviscerate=v15(587429 - 390610, nil, 1994 - (559 + 1288)),Rupture=v15(3874 - (609 + 1322), nil, 602 - (13 + 441)),ShadowBlades=v15(453917 - 332446, nil, 390 - 241),Shadowstrike=v15(923562 - 738124, nil, 6 + 144),ShurikenStorm=v15(718497 - 520662, nil, 54 + 97),ShurikenToss=v15(49960 + 64054, nil, 451 - 299),SymbolsofDeath=v15(116164 + 96119, nil, 280 - 127),DanseMacabre=v15(252894 + 129634, nil, 86 + 68),DanseMacabreBuff=v15(283070 + 110899, nil, 131 + 24),DeeperDaggers=v15(374249 + 8268, nil, 589 - (153 + 280)),DeeperDaggersBuff=v15(1107120 - 723715, nil, 141 + 16),DarkBrew=v15(151029 + 231475, nil, 83 + 75),DarkShadow=v15(222957 + 22730, nil, 116 + 43),EnvelopingShadows=v15(362564 - 124460, nil, 99 + 61),Finality=v15(383192 - (89 + 578), nil, 116 + 45),FinalityBlackPowderBuff=v15(802378 - 416430, nil, 1211 - (572 + 477)),FinalityEviscerateBuff=v15(52052 + 333897, nil, 98 + 65),FinalityRuptureBuff=v15(46069 + 339882, nil, 250 - (84 + 2)),Flagellation=v15(633899 - 249268, nil, 119 + 46),FlagellationPersistBuff=v15(395600 - (497 + 345), nil, 5 + 161),Gloomblade=v15(33937 + 166821, nil, 1500 - (605 + 728)),GoremawsBite=v15(304364 + 122227, nil, 419 - 230),ImprovedShadowDance=v15(18056 + 375916, nil, 621 - 453),ImprovedShurikenStorm=v15(288435 + 31516, nil, 467 - 298),InvigoratingShadowdust=v15(288825 + 93698),LingeringShadow=v15(383013 - (457 + 32), nil, 73 + 97),LingeringShadowBuff=v15(387362 - (832 + 570), nil, 162 + 9),MasterofShadows=v15(51367 + 145609, nil, 608 - 436),PerforatedVeins=v15(184261 + 198257, nil, 969 - (588 + 208)),PerforatedVeinsBuff=v15(1062605 - 668351, nil, 1974 - (884 + 916)),PreyontheWeak=v15(275328 - 143817, nil, 102 + 73),PreyontheWeakDebuff=v15(256562 - (232 + 421), nil, 2065 - (1569 + 320)),Premeditation=v15(84192 + 258968, nil, 34 + 143),PremeditationBuff=v15(1156429 - 813256, nil, 783 - (316 + 289)),SecretStratagem=v15(1032219 - 637899, nil, 9 + 170),SecretTechnique=v15(282172 - (666 + 787), nil, 605 - (360 + 65)),Shadowcraft=v15(398680 + 27914),ShadowFocus=v15(108463 - (79 + 175), nil, 285 - 104),ShurikenTornado=v15(216878 + 61047, nil, 557 - 375),SilentStorm=v15(742845 - 357123, nil, 1082 - (503 + 396)),SilentStormBuff=v15(385903 - (92 + 89), nil, 356 - 172),TheFirstDance=v15(196165 + 186340, nil, 110 + 75),TheRotten=v15(1496025 - 1114010, nil, 26 + 160),TheRottenBuff=v15(898833 - 504630, nil, 164 + 23),Weaponmaster=v15(92440 + 101097, nil, 572 - 384)});
+	if (not v17.Rogue or ((258 + 1807) >= (4873 - 1677))) then
+		v17.Rogue = {};
 	end
-	v18.Rogue.Commons = {AlgetharPuzzleBox=v18(344824 - 151123, {(1477 - (157 + 1307)),(34 - 20)}),ManicGrieftorch=v18(21250 + 173058, {(5 + 8),(1040 - (834 + 192))}),WindscarWhetstone=v18(8741 + 128745, {(1 + 12),(318 - (300 + 4))}),Healthstone=v18(1473 + 4039),RefreshingHealingPotion=v18(500986 - 309606)};
-	v18.Rogue.Assassination = v19(v18.Rogue.Commons, {AlgetharPuzzleBox=v18(194063 - (112 + 250), {(32 - 19),(8 + 6)}),AshesoftheEmbersoul=v18(154938 + 52229, {(10 + 3),(30 - 16)}),WitherbarksBranch=v18(110881 - (244 + 638), {(38 - 25),(1920 - (1665 + 241))})});
-	v18.Rogue.Outlaw = v19(v18.Rogue.Commons, {ManicGrieftorch=v18(195025 - (373 + 344), {(4 + 9),(23 - 9)}),WindscarWhetstone=v18(138585 - (35 + 1064), {(27 - 14),(1250 - (298 + 938))}),BeaconToTheBeyond=v18(205222 - (233 + 1026), {(7 + 6),(5 + 9)}),DragonfireBombDispenser=v18(13690 + 188920, {(3 + 10),(53 - 39)})});
-	v18.Rogue.Subtlety = v19(v18.Rogue.Commons, {ManicGrieftorch=v18(194605 - (36 + 261), {(1381 - (34 + 1334)),(11 + 3)}),StormEatersBoon=v18(195585 - (1035 + 248), {(7 + 6),(1147 - (549 + 584))}),BeaconToTheBeyond=v18(204648 - (314 + 371), {(981 - (478 + 490)),(1186 - (786 + 386))}),AshesoftheEmbersoul=v18(671013 - 463846, {(1353 - (1093 + 247)),(2 + 12)}),WitherbarksBranch=v18(436715 - 326716, {(36 - 23),(5 + 9)}),BandolierOfTwistedBlades=v18(798091 - 590926, {(10 + 3),(702 - (364 + 324))}),Mirror=v18(569053 - 361472, {(5 + 8),(21 - 7)})});
-	if (((14523 - 9741) > (5944 - (1249 + 19))) and not v21.Rogue) then
-		v21.Rogue = {};
+	v17.Rogue.Commons = {AlgetharPuzzleBox=v17(194945 - (485 + 759), {(1202 - (442 + 747)),(960 - (88 + 858))}),ManicGrieftorch=v17(59222 + 135086, {(1 + 12),(69 - 55)}),WindscarWhetstone=v17(188033 - 50547, {(44 - 31),(10 + 4)}),Healthstone=v17(10733 - 5221),RefreshingHealingPotion=v17(150546 + 40834)};
+	v17.Rogue.Assassination = v18(v17.Rogue.Commons, {AlgetharPuzzleBox=v17(195181 - (641 + 839), {(32 - 19),(7 + 7)}),AshesoftheEmbersoul=v17(208315 - (556 + 592), {(821 - (329 + 479)),(47 - 33)}),WitherbarksBranch=v17(227998 - 117999, {(752 - (396 + 343)),(1491 - (29 + 1448))})});
+	v17.Rogue.Outlaw = v18(v17.Rogue.Commons, {ManicGrieftorch=v17(195697 - (135 + 1254), {(60 - 47),(1541 - (389 + 1138))}),WindscarWhetstone=v17(138060 - (102 + 472), {(8 + 5),(1559 - (320 + 1225))}),BeaconToTheBeyond=v17(363093 - 159130, {(1477 - (157 + 1307)),(34 - 20)}),DragonfireBombDispenser=v17(22158 + 180452, {(5 + 8),(1040 - (834 + 192))})});
+	v17.Rogue.Subtlety = v18(v17.Rogue.Commons, {ManicGrieftorch=v17(12354 + 181954, {(1 + 12),(318 - (300 + 4))}),StormEatersBoon=v17(51892 + 142410, {(375 - (112 + 250)),(34 - 20)}),BeaconToTheBeyond=v17(116847 + 87116, {(10 + 3),(11 + 3)}),AshesoftheEmbersoul=v17(208581 - (1001 + 413), {(895 - (244 + 638)),(41 - 27)}),WitherbarksBranch=v17(110601 - (512 + 90), {(730 - (373 + 344)),(4 + 10)}),BandolierOfTwistedBlades=v17(546444 - 339279, {(1112 - (35 + 1064)),(29 - 15)}),Mirror=v17(829 + 206752, {(1272 - (233 + 1026)),(8 + 6)})});
+	if (not v20.Rogue or ((4275 + 101) <= (440 + 1041))) then
+		v20.Rogue = {};
 	end
-	v21.Rogue.Commons = {Healthstone=v21(19 + 2),BlindMouseover=v21(34 - 25),CheapShotMouseover=v21(1096 - (686 + 400)),KickMouseover=v21(9 + 2),KidneyShotMouseover=v21(241 - (73 + 156)),TricksoftheTradeFocus=v21(1 + 12),WindscarWhetstone=v21(837 - (721 + 90))};
-	v21.Rogue.Outlaw = v19(v21.Rogue.Commons, {Dispatch=v21(1 + 13),PistolShotMouseover=v21(48 - 33),SinisterStrikeMouseover=v21(486 - (224 + 246))});
-	v21.Rogue.Subtlety = v19(v21.Rogue.Commons, {SecretTechnique=v21(25 - 9),ShadowDance=v21(30 - 13),ShadowDanceSymbol=v21(5 + 21),VanishShadowstrike=v21(1 + 17),ShurikenStormSD=v21(14 + 5),ShurikenStormVanish=v21(39 - 19),GloombladeSD=v21(73 - 51),GloombladeVanish=v21(536 - (203 + 310)),BackstabMouseover=v21(2017 - (1238 + 755)),RuptureMouseover=v21(2 + 23)});
-	v30.StealthSpell = function()
-		return (v16.Rogue.Commons.Subterfuge:IsAvailable() and v16.Rogue.Commons.Stealth2) or v16.Rogue.Commons.Stealth;
+	v20.Rogue.Commons = {Healthstone=v20(2 + 19),BlindMouseover=v20(230 - (55 + 166)),CheapShotMouseover=v20(2 + 8),KickMouseover=v20(2 + 9),KidneyShotMouseover=v20(45 - 33),TricksoftheTradeFocus=v20(310 - (36 + 261)),WindscarWhetstone=v20(44 - 18)};
+	v20.Rogue.Outlaw = v18(v20.Rogue.Commons, {Dispatch=v20(1382 - (34 + 1334)),PistolShotMouseover=v20(6 + 9),SinisterStrikeMouseover=v20(13 + 3)});
+	v20.Rogue.Subtlety = v18(v20.Rogue.Commons, {SecretTechnique=v20(1299 - (1035 + 248)),ShadowDance=v20(38 - (20 + 1)),ShadowDanceSymbol=v20(14 + 12),VanishShadowstrike=v20(337 - (134 + 185)),ShurikenStormSD=v20(1152 - (549 + 584)),ShurikenStormVanish=v20(705 - (314 + 371)),GloombladeSD=v20(75 - 53),GloombladeVanish=v20(991 - (478 + 490)),BackstabMouseover=v20(13 + 11),RuptureMouseover=v20(1197 - (786 + 386))});
+	v29.StealthSpell = function()
+		return (v15.Rogue.Commons.Subterfuge:IsAvailable() and v15.Rogue.Commons.Stealth2) or v15.Rogue.Commons.Stealth;
 	end;
-	v30.VanishBuffSpell = function()
-		return (v16.Rogue.Commons.Subterfuge:IsAvailable() and v16.Rogue.Commons.VanishBuff2) or v16.Rogue.Commons.VanishBuff;
+	v29.VanishBuffSpell = function()
+		return (v15.Rogue.Commons.Subterfuge:IsAvailable() and v15.Rogue.Commons.VanishBuff2) or v15.Rogue.Commons.VanishBuff;
 	end;
-	v30.Stealth = function(v49, v50)
-		if (((6398 - (709 + 825)) > (4048 - 1851)) and EpicSettings.Settings['StealthOOC'] and (v16.Rogue.Commons.Stealth:IsCastable() or v16.Rogue.Commons.Stealth2:IsCastable()) and v13:StealthDown()) then
-			if (v10.Press(v49, nil) or ((5389 - 1689) == (3371 - (196 + 668)))) then
-				return "Cast Stealth (OOC)";
+	v29.Stealth = function(v48, v49)
+		local v50 = 0 - 0;
+		while true do
+			if ((v50 == (1379 - (1055 + 324))) or ((4732 - (1093 + 247)) >= (4214 + 527))) then
+				if (((350 + 2975) >= (8551 - 6397)) and EpicSettings.Settings['StealthOOC'] and (v15.Rogue.Commons.Stealth:IsCastable() or v15.Rogue.Commons.Stealth2:IsCastable()) and v12:StealthDown()) then
+					if (v9.Press(v48, nil) or ((4394 - 3099) >= (9199 - 5966))) then
+						return "Cast Stealth (OOC)";
+					end
+				end
+				return false;
 			end
 		end
-		return false;
 	end;
 	do
-		local v51 = v16(731661 - 546350);
-		v30.CrimsonVial = function()
-			local v112 = EpicSettings.Settings['CrimsonVialHP'] or (0 - 0);
-			if (((5307 - (171 + 662)) >= (367 - (4 + 89))) and v51:IsCastable() and (v13:HealthPercentage() <= v112)) then
-				if (v10.Cast(v51, nil) or ((6638 - 4744) <= (512 + 894))) then
-					return "Cast Crimson Vial (Defensives)";
+		local v51 = v15(465670 - 280359);
+		v29.CrimsonVial = function()
+			local v111 = 0 + 0;
+			local v112;
+			while true do
+				if (((16862 - 12485) > (5659 - 4017)) and (v111 == (1 + 0))) then
+					return false;
+				end
+				if (((12078 - 7355) > (2044 - (364 + 324))) and (v111 == (0 - 0))) then
+					v112 = EpicSettings.Settings['CrimsonVialHP'] or (0 - 0);
+					if ((v51:IsCastable() and (v12:HealthPercentage() <= v112)) or ((1371 + 2765) <= (14364 - 10931))) then
+						if (((6798 - 2553) <= (14064 - 9433)) and v9.Cast(v51, nil)) then
+							return "Cast Crimson Vial (Defensives)";
+						end
+					end
+					v111 = 1269 - (1249 + 19);
 				end
 			end
-			return false;
 		end;
 	end
 	do
-		local v53 = 0 - 0;
-		local v54;
-		while true do
-			if (((617 + 955) >= (3017 - (35 + 1451))) and (v53 == (1453 - (28 + 1425)))) then
-				v54 = v16(3959 - (941 + 1052));
-				v30.Feint = function()
-					local v165 = 0 + 0;
-					local v166;
-					while true do
-						if ((v165 == (1514 - (822 + 692))) or ((6691 - 2004) < (2140 + 2402))) then
-							v166 = EpicSettings.Settings['FeintHP'] or (297 - (45 + 252));
-							if (((3257 + 34) > (574 + 1093)) and v54:IsCastable() and v13:BuffDown(v54) and (v13:HealthPercentage() <= v166)) then
-								if (v10.Cast(v54, nil) or ((2124 - 1251) == (2467 - (114 + 319)))) then
-									return "Cast Feint (Defensives)";
-								end
-							end
-							break;
-						end
-					end
-				end;
-				break;
-			end
-		end
-	end
-	do
-		local v55 = 0 - 0;
-		local v56;
-		local v57;
-		local v58;
-		while true do
-			if ((v55 == (0 - 0)) or ((1796 + 1020) < (16 - 5))) then
-				v56 = 0 - 0;
-				v57 = false;
-				v55 = 1964 - (556 + 1407);
-			end
-			if (((4905 - (741 + 465)) < (5171 - (170 + 295))) and (v55 == (1 + 0))) then
-				v58 = nil;
-				function v58(v167)
-					if (((2431 + 215) >= (2156 - 1280)) and not v13:AffectingCombat() and v13:BuffRefreshable(v167)) then
-						if (((509 + 105) <= (2042 + 1142)) and v10.Press(v167, nil, true)) then
-							return "poison";
-						end
-					end
-				end
-				v55 = 2 + 0;
-			end
-			if (((4356 - (957 + 273)) == (837 + 2289)) and (v55 == (1 + 1))) then
-				v30.Poisons = function()
-					v57 = v13:BuffUp(v16.Rogue.Commons.WoundPoison);
-					if (v16.Rogue.Assassination.DragonTemperedBlades:IsAvailable() or ((8333 - 6146) >= (13054 - 8100))) then
-						local v204 = v58((v57 and v16.Rogue.Commons.WoundPoison) or v16.Rogue.Commons.DeadlyPoison);
-						if (v204 or ((11841 - 7964) == (17702 - 14127))) then
-							return v204;
-						end
-						if (((2487 - (389 + 1391)) > (397 + 235)) and v16.Rogue.Commons.AmplifyingPoison:IsAvailable()) then
-							v204 = v58(v16.Rogue.Commons.AmplifyingPoison);
-							if (v204 or ((57 + 489) >= (6110 - 3426))) then
-								return v204;
-							end
-						else
-							v204 = v58(v16.Rogue.Commons.InstantPoison);
-							if (((2416 - (783 + 168)) <= (14434 - 10133)) and v204) then
-								return v204;
-							end
-						end
-					elseif (((1677 + 27) > (1736 - (309 + 2))) and v57) then
-						local v218 = 0 - 0;
-						local v219;
-						while true do
-							if ((v218 == (1212 - (1090 + 122))) or ((223 + 464) == (14219 - 9985))) then
-								v219 = v58(v16.Rogue.Commons.WoundPoison);
-								if (v219 or ((2279 + 1051) < (2547 - (628 + 490)))) then
-									return v219;
-								end
-								break;
-							end
-						end
-					elseif (((206 + 941) >= (829 - 494)) and v16.Rogue.Commons.AmplifyingPoison:IsAvailable() and v13:BuffDown(v16.Rogue.Commons.DeadlyPoison)) then
-						local v227 = 0 - 0;
-						local v228;
-						while true do
-							if (((4209 - (431 + 343)) > (4234 - 2137)) and (v227 == (0 - 0))) then
-								v228 = v58(v16.Rogue.Commons.AmplifyingPoison);
-								if (v228 or ((2979 + 791) >= (517 + 3524))) then
-									return v228;
-								end
-								break;
-							end
-						end
-					elseif (v16.Rogue.Commons.DeadlyPoison:IsAvailable() or ((5486 - (556 + 1139)) <= (1626 - (6 + 9)))) then
-						local v235 = v58(v16.Rogue.Commons.DeadlyPoison);
-						if (v235 or ((839 + 3739) <= (1029 + 979))) then
-							return v235;
-						end
-					else
-						local v236 = 169 - (28 + 141);
-						local v237;
-						while true do
-							if (((436 + 689) <= (2562 - 486)) and (v236 == (0 + 0))) then
-								v237 = v58(v16.Rogue.Commons.InstantPoison);
-								if (v237 or ((2060 - (486 + 831)) >= (11447 - 7048))) then
-									return v237;
-								end
-								break;
-							end
-						end
-					end
-					if (((4066 - 2911) < (317 + 1356)) and v13:BuffDown(v16.Rogue.Commons.CripplingPoison)) then
-						if (v16.Rogue.Commons.AtrophicPoison:IsAvailable() or ((7348 - 5024) <= (1841 - (668 + 595)))) then
-							local v220 = 0 + 0;
-							local v221;
-							while true do
-								if (((760 + 3007) == (10272 - 6505)) and ((290 - (23 + 267)) == v220)) then
-									v221 = v58(v16.Rogue.Commons.AtrophicPoison);
-									if (((6033 - (1129 + 815)) == (4476 - (371 + 16))) and v221) then
-										return v221;
-									end
-									break;
-								end
-							end
-						elseif (((6208 - (1326 + 424)) >= (3170 - 1496)) and v16.Rogue.Commons.NumbingPoison:IsAvailable()) then
-							local v229 = 0 - 0;
-							local v230;
-							while true do
-								if (((1090 - (88 + 30)) <= (2189 - (720 + 51))) and (v229 == (0 - 0))) then
-									v230 = v58(v16.Rogue.Commons.NumbingPoison);
-									if (v230 or ((6714 - (421 + 1355)) < (7855 - 3093))) then
-										return v230;
-									end
-									break;
-								end
-							end
-						else
-							local v231 = v58(v16.Rogue.Commons.CripplingPoison);
-							if (v231 or ((1231 + 1273) > (5347 - (286 + 797)))) then
-								return v231;
-							end
-						end
-					else
-						local v205 = v58(v16.Rogue.Commons.CripplingPoison);
-						if (((7870 - 5717) == (3565 - 1412)) and v205) then
-							return v205;
-						end
-					end
-				end;
-				break;
-			end
-		end
-	end
-	v30.MfDSniping = function(v59)
-		if (v59:IsCastable() or ((946 - (397 + 42)) >= (810 + 1781))) then
-			local v147 = 800 - (24 + 776);
-			local v148;
-			local v149;
-			local v150;
+		local v53 = v15(1775 + 191);
+		v29.Feint = function()
+			local v113 = 0 - 0;
+			local v114;
 			while true do
-				if (((6903 - 2422) == (5266 - (222 + 563))) and (v147 == (1 - 0))) then
-					for v206, v207 in v23(v13:GetEnemiesInRange(22 + 8)) do
-						local v208 = v207:TimeToDie();
-						if ((not v207:IsMfDBlacklisted() and (v208 < (v13:ComboPointsDeficit() * (191.5 - (23 + 167)))) and (v208 < v149)) or ((4126 - (690 + 1108)) < (251 + 442))) then
-							if (((3570 + 758) == (5176 - (40 + 808))) and ((v150 - v208) > (1 + 0))) then
-								v148, v149 = v207, v208;
-							else
-								v148, v149 = v15, v150;
-							end
+				if (((5362 - (686 + 400)) >= (3071 + 843)) and (v113 == (229 - (73 + 156)))) then
+					v114 = EpicSettings.Settings['FeintHP'] or (0 + 0);
+					if (((1009 - (721 + 90)) <= (50 + 4315)) and v53:IsCastable() and v12:BuffDown(v53) and (v12:HealthPercentage() <= v114)) then
+						if (((15526 - 10744) > (5146 - (224 + 246))) and v9.Cast(v53, nil)) then
+							return "Cast Feint (Defensives)";
 						end
-					end
-					if (((6072 - 4484) >= (1274 + 58)) and v148 and (v148:GUID() ~= v14:GUID())) then
-						v10.Press(v148, v59);
 					end
 					break;
 				end
-				if (((0 + 0) == v147) or ((2289 + 1885) > (4819 - (47 + 524)))) then
-					v148, v149 = nil, 39 + 21;
-					v150 = (v15:IsInRange(82 - 52) and v15:TimeToDie()) or (16613 - 5502);
-					v147 = 2 - 1;
-				end
 			end
-		end
-	end;
-	v30.CanDoTUnit = function(v60, v61)
-		return v20.CanDoTUnit(v60, v61);
-	end;
-	do
-		local v62 = 1726 - (1165 + 561);
-		local v63;
-		local v64;
-		local v65;
-		local v66;
-		while true do
-			if ((v62 == (1 + 2)) or ((14203 - 9617) <= (32 + 50))) then
-				v63.Rupture:RegisterPMultiplier(v65, {v64.FinalityRuptureBuff,(1.3 - 0)});
-				v63.Garrote:RegisterPMultiplier(v65, v66);
-				v62 = 330 - (89 + 237);
-			end
-			if (((12427 - 8564) == (8132 - 4269)) and (v62 == (882 - (581 + 300)))) then
-				v65 = nil;
-				function v65()
-					if ((v63.Nightstalker:IsAvailable() and v13:StealthUp(true, false, true)) or ((1502 - (855 + 365)) <= (99 - 57))) then
-						return 1 + 0 + ((1235.05 - (1030 + 205)) * v63.Nightstalker:TalentRank());
-					end
-					return 1 + 0;
-				end
-				v62 = 2 + 0;
-			end
-			if (((4895 - (156 + 130)) >= (1740 - 974)) and (v62 == (2 - 0))) then
-				v66 = nil;
-				function v66()
-					if ((v63.ImprovedGarrote:IsAvailable() and (v13:BuffUp(v63.ImprovedGarroteAura, nil, true) or v13:BuffUp(v63.ImprovedGarroteBuff, nil, true) or v13:BuffUp(v63.SepsisBuff, nil, true))) or ((2358 - 1206) == (656 + 1832))) then
-						return 1.5 + 0;
-					end
-					return 70 - (10 + 59);
-				end
-				v62 = 1 + 2;
-			end
-			if (((16852 - 13430) > (4513 - (671 + 492))) and (v62 == (0 + 0))) then
-				v63 = v16.Rogue.Assassination;
-				v64 = v16.Rogue.Subtlety;
-				v62 = 1216 - (369 + 846);
-			end
-			if (((233 + 644) > (321 + 55)) and (v62 == (1949 - (1036 + 909)))) then
-				v63.CrimsonTempest:RegisterPMultiplier(v65);
-				break;
-			end
-		end
-	end
-	do
-		local v67 = 0 + 0;
-		local v68;
-		local v69;
-		local v70;
-		while true do
-			if ((v67 == (1 - 0)) or ((3321 - (11 + 192)) <= (936 + 915))) then
-				v70 = v16(394495 - (135 + 40));
-				v30.CPMaxSpend = function()
-					return (11 - 6) + ((v68:IsAvailable() and (1 + 0)) or (0 - 0)) + ((v69:IsAvailable() and (1 - 0)) or (176 - (50 + 126))) + ((v70:IsAvailable() and (2 - 1)) or (0 + 0));
-				end;
-				break;
-			end
-			if ((v67 == (1413 - (1233 + 180))) or ((1134 - (522 + 447)) >= (4913 - (107 + 1314)))) then
-				v68 = v16(89806 + 103725);
-				v69 = v16(1201546 - 807225);
-				v67 = 1 + 0;
-			end
-		end
-	end
-	v30.CPSpend = function()
-		return v22(v13:ComboPoints(), v30.CPMaxSpend());
-	end;
-	do
-		v30.AnimachargedCP = function()
-			if (((7841 - 3892) < (19213 - 14357)) and v13:BuffUp(v16.Rogue.Commons.EchoingReprimand2)) then
-				return 1912 - (716 + 1194);
-			elseif (v13:BuffUp(v16.Rogue.Commons.EchoingReprimand3) or ((74 + 4202) < (324 + 2692))) then
-				return 506 - (74 + 429);
-			elseif (((9047 - 4357) > (2045 + 2080)) and v13:BuffUp(v16.Rogue.Commons.EchoingReprimand4)) then
-				return 8 - 4;
-			elseif (v13:BuffUp(v16.Rogue.Commons.EchoingReprimand5) or ((36 + 14) >= (2761 - 1865))) then
-				return 12 - 7;
-			end
-			return -(434 - (279 + 154));
-		end;
-		v30.EffectiveComboPoints = function(v113)
-			if (((v113 == (780 - (454 + 324))) and v13:BuffUp(v16.Rogue.Commons.EchoingReprimand2)) or ((v113 == (3 + 0)) and v13:BuffUp(v16.Rogue.Commons.EchoingReprimand3)) or ((v113 == (21 - (12 + 5))) and v13:BuffUp(v16.Rogue.Commons.EchoingReprimand4)) or ((v113 == (3 + 2)) and v13:BuffUp(v16.Rogue.Commons.EchoingReprimand5)) or ((4367 - 2653) >= (1094 + 1864))) then
-				return 1100 - (277 + 816);
-			end
-			return v113;
 		end;
 	end
 	do
-		local v73 = v16.Rogue.Assassination.DeadlyPoisonDebuff;
-		local v74 = v16.Rogue.Assassination.WoundPoisonDebuff;
-		local v75 = v16.Rogue.Assassination.AmplifyingPoisonDebuff;
-		local v76 = v16.Rogue.Assassination.CripplingPoisonDebuff;
-		local v77 = v16.Rogue.Assassination.AtrophicPoisonDebuff;
-		v30.Poisoned = function(v114)
-			return ((v114:DebuffUp(v73) or v114:DebuffUp(v75) or v114:DebuffUp(v76) or v114:DebuffUp(v74) or v114:DebuffUp(v77)) and true) or false;
-		end;
-	end
-	do
-		local v79 = v16.Rogue.Assassination.Garrote;
-		local v80 = v16.Rogue.Assassination.GarroteDeathmark;
-		local v81 = v16.Rogue.Assassination.Rupture;
-		local v82 = v16.Rogue.Assassination.RuptureDeathmark;
-		local v83 = v16.Rogue.Assassination.InternalBleeding;
-		local v84 = 0 - 0;
-		v30.PoisonedBleeds = function()
-			local v115 = 1183 - (1058 + 125);
+		local v55 = 0 - 0;
+		local v56 = false;
+		local function v57(v115)
+			if (((8955 - 4091) > (399 + 1798)) and not v12:AffectingCombat() and v12:BuffRefreshable(v115)) then
+				if (v9.Press(v115, nil, true) or ((89 + 3611) == (1842 + 665))) then
+					return "poison";
+				end
+			end
+		end
+		v29.Poisons = function()
+			local v116 = 0 - 0;
 			while true do
-				if ((v115 == (1 + 0)) or ((2466 - (815 + 160)) < (2763 - 2119))) then
-					return v84;
-				end
-				if (((1670 - 966) < (236 + 751)) and (v115 == (0 - 0))) then
-					v84 = 1898 - (41 + 1857);
-					for v200, v201 in v23(v13:GetEnemiesInRange(1943 - (1222 + 671))) do
-						if (((9609 - 5891) > (2738 - 832)) and v30.Poisoned(v201)) then
-							local v215 = 1182 - (229 + 953);
+				if (((14888 - 10414) >= (787 - (203 + 310))) and (v116 == (1994 - (1238 + 755)))) then
+					if (v12:BuffDown(v15.Rogue.Commons.CripplingPoison) or ((133 + 1761) <= (2940 - (709 + 825)))) then
+						if (((2896 - 1324) >= (2229 - 698)) and v15.Rogue.Commons.AtrophicPoison:IsAvailable()) then
+							local v224 = 864 - (196 + 668);
+							local v225;
 							while true do
-								if ((v215 == (1775 - (1111 + 663))) or ((2537 - (874 + 705)) > (509 + 3126))) then
-									if (((2389 + 1112) <= (9336 - 4844)) and v201:DebuffUp(v83)) then
-										v84 = v84 + 1 + 0;
+								if ((v224 == (0 - 0)) or ((9708 - 5021) < (5375 - (171 + 662)))) then
+									v225 = v57(v15.Rogue.Commons.AtrophicPoison);
+									if (((3384 - (4 + 89)) > (5842 - 4175)) and v225) then
+										return v225;
 									end
 									break;
 								end
-								if ((v215 == (679 - (642 + 37))) or ((785 + 2657) < (408 + 2140))) then
-									if (((7218 - 4343) >= (1918 - (233 + 221))) and v201:DebuffUp(v79)) then
-										v84 = v84 + (2 - 1);
-										if (v201:DebuffUp(v80) or ((4223 + 574) >= (6434 - (718 + 823)))) then
-											v84 = v84 + 1 + 0;
-										end
+							end
+						elseif (v15.Rogue.Commons.NumbingPoison:IsAvailable() or ((318 + 555) == (8933 - 6899))) then
+							local v233 = 0 + 0;
+							local v234;
+							while true do
+								if ((v233 == (1486 - (35 + 1451))) or ((4269 - (28 + 1425)) < (2004 - (941 + 1052)))) then
+									v234 = v57(v15.Rogue.Commons.NumbingPoison);
+									if (((3547 + 152) < (6220 - (822 + 692))) and v234) then
+										return v234;
 									end
-									if (v201:DebuffUp(v81) or ((1356 - (266 + 539)) > (5854 - 3786))) then
-										local v238 = 1225 - (636 + 589);
-										while true do
-											if (((5017 - 2903) > (1946 - 1002)) and (v238 == (0 + 0))) then
-												v84 = v84 + 1 + 0;
-												if (v201:DebuffUp(v82) or ((3277 - (657 + 358)) >= (8197 - 5101))) then
-													v84 = v84 + (2 - 1);
-												end
-												break;
-											end
-										end
+									break;
+								end
+							end
+						else
+							local v235 = 0 - 0;
+							local v236;
+							while true do
+								if (((1247 + 1399) >= (1173 - (45 + 252))) and ((0 + 0) == v235)) then
+									v236 = v57(v15.Rogue.Commons.CripplingPoison);
+									if (((212 + 402) <= (7748 - 4564)) and v236) then
+										return v236;
 									end
-									v215 = 1188 - (1151 + 36);
+									break;
 								end
 							end
 						end
+					else
+						local v206 = v57(v15.Rogue.Commons.CripplingPoison);
+						if (((3559 - (114 + 319)) == (4487 - 1361)) and v206) then
+							return v206;
+						end
 					end
-					v115 = 1 + 0;
+					break;
+				end
+				if ((v116 == (0 - 0)) or ((1395 + 792) >= (7380 - 2426))) then
+					v56 = v12:BuffUp(v15.Rogue.Commons.WoundPoison);
+					if (v15.Rogue.Assassination.DragonTemperedBlades:IsAvailable() or ((8123 - 4246) == (5538 - (556 + 1407)))) then
+						local v207 = v57((v56 and v15.Rogue.Commons.WoundPoison) or v15.Rogue.Commons.DeadlyPoison);
+						if (((1913 - (741 + 465)) > (1097 - (170 + 295))) and v207) then
+							return v207;
+						end
+						if (v15.Rogue.Commons.AmplifyingPoison:IsAvailable() or ((288 + 258) >= (2466 + 218))) then
+							local v226 = 0 - 0;
+							while true do
+								if (((1215 + 250) <= (2759 + 1542)) and (v226 == (0 + 0))) then
+									v207 = v57(v15.Rogue.Commons.AmplifyingPoison);
+									if (((2934 - (957 + 273)) > (382 + 1043)) and v207) then
+										return v207;
+									end
+									break;
+								end
+							end
+						else
+							local v227 = 0 + 0;
+							while true do
+								if ((v227 == (0 - 0)) or ((1810 - 1123) == (12932 - 8698))) then
+									v207 = v57(v15.Rogue.Commons.InstantPoison);
+									if (v207 or ((16489 - 13159) < (3209 - (389 + 1391)))) then
+										return v207;
+									end
+									break;
+								end
+							end
+						end
+					elseif (((720 + 427) >= (35 + 300)) and v56) then
+						local v228 = v57(v15.Rogue.Commons.WoundPoison);
+						if (((7820 - 4385) > (3048 - (783 + 168))) and v228) then
+							return v228;
+						end
+					elseif ((v15.Rogue.Commons.AmplifyingPoison:IsAvailable() and v12:BuffDown(v15.Rogue.Commons.DeadlyPoison)) or ((12652 - 8882) >= (3975 + 66))) then
+						local v237 = 311 - (309 + 2);
+						local v238;
+						while true do
+							if ((v237 == (0 - 0)) or ((5003 - (1090 + 122)) <= (523 + 1088))) then
+								v238 = v57(v15.Rogue.Commons.AmplifyingPoison);
+								if (v238 or ((15375 - 10797) <= (1375 + 633))) then
+									return v238;
+								end
+								break;
+							end
+						end
+					elseif (((2243 - (628 + 490)) <= (373 + 1703)) and v15.Rogue.Commons.DeadlyPoison:IsAvailable()) then
+						local v239 = v57(v15.Rogue.Commons.DeadlyPoison);
+						if (v239 or ((1839 - 1096) >= (20103 - 15704))) then
+							return v239;
+						end
+					else
+						local v240 = v57(v15.Rogue.Commons.InstantPoison);
+						if (((1929 - (431 + 343)) < (3378 - 1705)) and v240) then
+							return v240;
+						end
+					end
+					v116 = 2 - 1;
 				end
 			end
 		end;
 	end
+	v29.MfDSniping = function(v59)
+		if (v59:IsCastable() or ((1836 + 488) <= (74 + 504))) then
+			local v153 = 1695 - (556 + 1139);
+			local v154;
+			local v155;
+			local v156;
+			while true do
+				if (((3782 - (6 + 9)) == (690 + 3077)) and (v153 == (0 + 0))) then
+					v154, v155 = nil, 229 - (28 + 141);
+					v156 = (v14:IsInRange(12 + 18) and v14:TimeToDie()) or (13714 - 2603);
+					v153 = 1 + 0;
+				end
+				if (((5406 - (486 + 831)) == (10640 - 6551)) and (v153 == (3 - 2))) then
+					for v208, v209 in v22(v12:GetEnemiesInRange(6 + 24)) do
+						local v210 = 0 - 0;
+						local v211;
+						while true do
+							if (((5721 - (668 + 595)) >= (1507 + 167)) and ((0 + 0) == v210)) then
+								v211 = v209:TimeToDie();
+								if (((2650 - 1678) <= (1708 - (23 + 267))) and not v209:IsMfDBlacklisted() and (v211 < (v12:ComboPointsDeficit() * (1945.5 - (1129 + 815)))) and (v211 < v155)) then
+									if (((v156 - v211) > (388 - (371 + 16))) or ((6688 - (1326 + 424)) < (9018 - 4256))) then
+										v154, v155 = v209, v211;
+									else
+										v154, v155 = v14, v156;
+									end
+								end
+								break;
+							end
+						end
+					end
+					if ((v154 and (v154:GUID() ~= v13:GUID())) or ((9150 - 6646) > (4382 - (88 + 30)))) then
+						v9.Press(v154, v59);
+					end
+					break;
+				end
+			end
+		end
+	end;
+	v29.CanDoTUnit = function(v60, v61)
+		return v19.CanDoTUnit(v60, v61);
+	end;
 	do
-		local v86 = v29();
-		v30.RtBRemains = function(v116)
-			local v117 = (v86 - v29()) - v10.RecoveryOffset(v116);
-			return ((v117 >= (0 + 0)) and v117) or (0 - 0);
+		local v62 = v15.Rogue.Assassination;
+		local v63 = v15.Rogue.Subtlety;
+		local function v64()
+			local v117 = 771 - (720 + 51);
+			while true do
+				if (((4789 - 2636) == (3929 - (421 + 1355))) and (v117 == (0 - 0))) then
+					if ((v62.Nightstalker:IsAvailable() and v12:StealthUp(true, false, true)) or ((250 + 257) >= (3674 - (286 + 797)))) then
+						return (3 - 2) + ((0.05 - 0) * v62.Nightstalker:TalentRank());
+					end
+					return 440 - (397 + 42);
+				end
+			end
+		end
+		local function v65()
+			local v118 = 0 + 0;
+			while true do
+				if (((5281 - (24 + 776)) == (6903 - 2422)) and (v118 == (785 - (222 + 563)))) then
+					if ((v62.ImprovedGarrote:IsAvailable() and (v12:BuffUp(v62.ImprovedGarroteAura, nil, true) or v12:BuffUp(v62.ImprovedGarroteBuff, nil, true) or v12:BuffUp(v62.SepsisBuff, nil, true))) or ((5129 - 2801) < (499 + 194))) then
+						return 191.5 - (23 + 167);
+					end
+					return 1799 - (690 + 1108);
+				end
+			end
+		end
+		v62.Rupture:RegisterPMultiplier(v64, {v63.FinalityRuptureBuff,(849.3 - (40 + 808))});
+		v62.Garrote:RegisterPMultiplier(v64, v65);
+		v62.CrimsonTempest:RegisterPMultiplier(v64);
+	end
+	do
+		local v66 = v15(31864 + 161667);
+		local v67 = v15(1507885 - 1113564);
+		local v68 = v15(376882 + 17438);
+		v29.CPMaxSpend = function()
+			return 3 + 2 + ((v66:IsAvailable() and (1 + 0)) or (571 - (47 + 524))) + ((v67:IsAvailable() and (1 + 0)) or (0 - 0)) + ((v68:IsAvailable() and (1 - 0)) or (0 - 0));
 		end;
-		v10:RegisterForSelfCombatEvent(function(v118, v118, v118, v118, v118, v118, v118, v118, v118, v118, v118, v119)
-			if ((v119 == (317340 - (1552 + 280))) or ((3089 - (64 + 770)) >= (2402 + 1135))) then
-				v86 = v29() + (68 - 38);
+	end
+	v29.CPSpend = function()
+		return v21(v12:ComboPoints(), v29.CPMaxSpend());
+	end;
+	do
+		local v70 = 1726 - (1165 + 561);
+		while true do
+			if (((129 + 4199) == (13404 - 9076)) and (v70 == (0 + 0))) then
+				v29.AnimachargedCP = function()
+					local v170 = 479 - (341 + 138);
+					while true do
+						if (((429 + 1159) >= (2748 - 1416)) and (v170 == (326 - (89 + 237)))) then
+							if (v12:BuffUp(v15.Rogue.Commons.EchoingReprimand2) or ((13427 - 9253) > (8943 - 4695))) then
+								return 883 - (581 + 300);
+							elseif (v12:BuffUp(v15.Rogue.Commons.EchoingReprimand3) or ((5806 - (855 + 365)) <= (194 - 112))) then
+								return 1 + 2;
+							elseif (((5098 - (1030 + 205)) == (3627 + 236)) and v12:BuffUp(v15.Rogue.Commons.EchoingReprimand4)) then
+								return 4 + 0;
+							elseif (v12:BuffUp(v15.Rogue.Commons.EchoingReprimand5) or ((568 - (156 + 130)) <= (95 - 53))) then
+								return 8 - 3;
+							end
+							return -(1 - 0);
+						end
+					end
+				end;
+				v29.EffectiveComboPoints = function(v171)
+					local v172 = 0 + 0;
+					while true do
+						if (((2688 + 1921) >= (835 - (10 + 59))) and (v172 == (0 + 0))) then
+							if (((v171 == (9 - 7)) and v12:BuffUp(v15.Rogue.Commons.EchoingReprimand2)) or ((v171 == (1166 - (671 + 492))) and v12:BuffUp(v15.Rogue.Commons.EchoingReprimand3)) or ((v171 == (4 + 0)) and v12:BuffUp(v15.Rogue.Commons.EchoingReprimand4)) or ((v171 == (1220 - (369 + 846))) and v12:BuffUp(v15.Rogue.Commons.EchoingReprimand5)) or ((305 + 847) == (2124 + 364))) then
+								return 1952 - (1036 + 909);
+							end
+							return v171;
+						end
+					end
+				end;
+				break;
+			end
+		end
+	end
+	do
+		local v71 = v15.Rogue.Assassination.DeadlyPoisonDebuff;
+		local v72 = v15.Rogue.Assassination.WoundPoisonDebuff;
+		local v73 = v15.Rogue.Assassination.AmplifyingPoisonDebuff;
+		local v74 = v15.Rogue.Assassination.CripplingPoisonDebuff;
+		local v75 = v15.Rogue.Assassination.AtrophicPoisonDebuff;
+		v29.Poisoned = function(v119)
+			return ((v119:DebuffUp(v71) or v119:DebuffUp(v73) or v119:DebuffUp(v74) or v119:DebuffUp(v72) or v119:DebuffUp(v75)) and true) or false;
+		end;
+	end
+	do
+		local v77 = 0 + 0;
+		local v78;
+		local v79;
+		local v80;
+		local v81;
+		local v82;
+		local v83;
+		while true do
+			if (((5744 - 2322) > (3553 - (11 + 192))) and (v77 == (2 + 0))) then
+				v82 = v15.Rogue.Assassination.InternalBleeding;
+				v83 = 175 - (135 + 40);
+				v77 = 6 - 3;
+			end
+			if (((529 + 348) > (827 - 451)) and (v77 == (0 - 0))) then
+				v78 = v15.Rogue.Assassination.Garrote;
+				v79 = v15.Rogue.Assassination.GarroteDeathmark;
+				v77 = 177 - (50 + 126);
+			end
+			if ((v77 == (2 - 1)) or ((691 + 2427) <= (3264 - (1233 + 180)))) then
+				v80 = v15.Rogue.Assassination.Rupture;
+				v81 = v15.Rogue.Assassination.RuptureDeathmark;
+				v77 = 971 - (522 + 447);
+			end
+			if ((v77 == (1424 - (107 + 1314))) or ((77 + 88) >= (10640 - 7148))) then
+				v29.PoisonedBleeds = function()
+					v83 = 0 + 0;
+					for v200, v201 in v22(v12:GetEnemiesInRange(99 - 49)) do
+						if (((15624 - 11675) < (6766 - (716 + 1194))) and v29.Poisoned(v201)) then
+							if (v201:DebuffUp(v78) or ((74 + 4202) < (324 + 2692))) then
+								v83 = v83 + (504 - (74 + 429));
+								if (((9047 - 4357) > (2045 + 2080)) and v201:DebuffUp(v79)) then
+									v83 = v83 + (2 - 1);
+								end
+							end
+							if (v201:DebuffUp(v80) or ((36 + 14) >= (2761 - 1865))) then
+								local v231 = 0 - 0;
+								while true do
+									if (((433 - (279 + 154)) == v231) or ((2492 - (454 + 324)) >= (2328 + 630))) then
+										v83 = v83 + (18 - (12 + 5));
+										if (v201:DebuffUp(v81) or ((804 + 687) < (1640 - 996))) then
+											v83 = v83 + 1 + 0;
+										end
+										break;
+									end
+								end
+							end
+							if (((1797 - (277 + 816)) < (4217 - 3230)) and v201:DebuffUp(v82)) then
+								v83 = v83 + (1184 - (1058 + 125));
+							end
+						end
+					end
+					return v83;
+				end;
+				break;
+			end
+		end
+	end
+	do
+		local v84 = v28();
+		v29.RtBRemains = function(v120)
+			local v121 = 0 + 0;
+			local v122;
+			while true do
+				if (((4693 - (815 + 160)) > (8177 - 6271)) and ((0 - 0) == v121)) then
+					v122 = (v84 - v28()) - v9.RecoveryOffset(v120);
+					return ((v122 >= (0 + 0)) and v122) or (0 - 0);
+				end
+			end
+		end;
+		v9:RegisterForSelfCombatEvent(function(v123, v123, v123, v123, v123, v123, v123, v123, v123, v123, v123, v124)
+			if ((v124 == (317406 - (41 + 1857))) or ((2851 - (1222 + 671)) > (9394 - 5759))) then
+				v84 = v28() + (43 - 13);
 			end
 		end, "SPELL_AURA_APPLIED");
-		v10:RegisterForSelfCombatEvent(function(v120, v120, v120, v120, v120, v120, v120, v120, v120, v120, v120, v121)
-			if ((v121 == (56019 + 259489)) or ((5080 - (157 + 1086)) < (2613 - 1307))) then
-				v86 = v29() + v22(175 - 135, (46 - 16) + v30.RtBRemains(true));
+		v9:RegisterForSelfCombatEvent(function(v125, v125, v125, v125, v125, v125, v125, v125, v125, v125, v125, v126)
+			if (((4683 - (229 + 953)) <= (6266 - (1111 + 663))) and (v126 == (317087 - (874 + 705)))) then
+				v84 = v28() + v21(6 + 34, 21 + 9 + v29.RtBRemains(true));
 			end
 		end, "SPELL_AURA_REFRESH");
-		v10:RegisterForSelfCombatEvent(function(v122, v122, v122, v122, v122, v122, v122, v122, v122, v122, v122, v123)
-			if (((4026 - 1076) == (3769 - (599 + 220))) and (v123 == (628296 - 312788))) then
-				v86 = v29();
+		v9:RegisterForSelfCombatEvent(function(v127, v127, v127, v127, v127, v127, v127, v127, v127, v127, v127, v128)
+			if ((v128 == (655826 - 340318)) or ((97 + 3345) < (3227 - (642 + 37)))) then
+				v84 = v28();
 			end
 		end, "SPELL_AURA_REMOVED");
 	end
 	do
-		local v88 = 1931 - (1813 + 118);
-		local v89;
-		while true do
-			if ((v88 == (1 + 0)) or ((5940 - (841 + 376)) < (4620 - 1322))) then
-				v30.WillLoseExsanguinate = function(v168, v169)
-					local v170 = 0 + 0;
-					while true do
-						if (((3100 - 1964) >= (1013 - (464 + 395))) and (v170 == (0 - 0))) then
-							if (v30.Exsanguinated(v168, v169) or ((131 + 140) > (5585 - (467 + 370)))) then
-								return true;
-							end
-							return false;
-						end
-					end
-				end;
-				v30.ExsanguinatedRate = function(v171, v172)
-					local v173 = 0 - 0;
-					while true do
-						if (((3480 + 1260) >= (10804 - 7652)) and ((0 + 0) == v173)) then
-							if (v30.Exsanguinated(v171, v172) or ((5997 - 3419) >= (3910 - (150 + 370)))) then
-								return 1284 - (74 + 1208);
-							end
-							return 2 - 1;
-						end
-					end
-				end;
-				v88 = 9 - 7;
+		local v86 = {CrimsonTempest={},Garrote={},Rupture={}};
+		v29.Exsanguinated = function(v129, v130)
+			local v131 = v129:GUID();
+			if (((656 + 2219) >= (235 + 1229)) and not v131) then
+				return false;
 			end
-			if (((30 + 11) <= (2051 - (14 + 376))) and (v88 == (0 - 0))) then
-				v89 = {CrimsonTempest={},Garrote={},Rupture={}};
-				v30.Exsanguinated = function(v174, v175)
-					local v176 = 0 + 0;
-					local v177;
-					local v178;
-					while true do
-						if (((528 + 73) < (3396 + 164)) and ((5 - 3) == v176)) then
-							return false;
-						end
-						if (((177 + 58) < (765 - (23 + 55))) and (v176 == (2 - 1))) then
-							v178 = v175:ID();
-							if (((3036 + 1513) > (1036 + 117)) and (v178 == (188249 - 66838))) then
-								return v89.CrimsonTempest[v177] or false;
-							elseif ((v178 == (222 + 481)) or ((5575 - (652 + 249)) < (12502 - 7830))) then
-								return v89.Garrote[v177] or false;
-							elseif (((5536 - (708 + 1160)) < (12380 - 7819)) and (v178 == (3542 - 1599))) then
-								return v89.Rupture[v177] or false;
-							end
-							v176 = 29 - (10 + 17);
-						end
-						if ((v176 == (0 + 0)) or ((2187 - (1400 + 332)) == (6914 - 3309))) then
-							v177 = v174:GUID();
-							if (not v177 or ((4571 - (242 + 1666)) == (1418 + 1894))) then
-								return false;
-							end
-							v176 = 1 + 0;
-						end
-					end
-				end;
-				v88 = 1 + 0;
+			local v132 = v130:ID();
+			if ((v132 == (304838 - 183427)) or ((5251 - (233 + 221)) >= (11314 - 6421))) then
+				return v86.CrimsonTempest[v131] or false;
+			elseif ((v132 == (619 + 84)) or ((2092 - (718 + 823)) > (1302 + 766))) then
+				return v86.Garrote[v131] or false;
+			elseif (((2919 - (266 + 539)) > (2672 - 1728)) and (v132 == (3168 - (636 + 589)))) then
+				return v86.Rupture[v131] or false;
 			end
-			if (((5217 - (850 + 90)) <= (7837 - 3362)) and (v88 == (1392 - (360 + 1030)))) then
-				v10:RegisterForSelfCombatEvent(function(v179, v179, v179, v179, v179, v179, v179, v180, v179, v179, v179, v181)
-					if ((v181 == (177708 + 23098)) or ((2455 - 1585) == (1635 - 446))) then
-						for v216, v217 in v23(v89) do
-							for v222, v223 in v23(v217) do
-								if (((3214 - (909 + 752)) <= (4356 - (109 + 1114))) and (v222 == v180)) then
-									v217[v222] = true;
-								end
-							end
-						end
+			return false;
+		end;
+		v29.WillLoseExsanguinate = function(v133, v134)
+			local v135 = 0 - 0;
+			while true do
+				if ((v135 == (0 - 0)) or ((1793 + 469) >= (1125 + 1971))) then
+					if (v29.Exsanguinated(v133, v134) or ((3270 - (657 + 358)) >= (9364 - 5827))) then
+						return true;
 					end
-				end, "SPELL_CAST_SUCCESS");
-				v10:RegisterForSelfCombatEvent(function(v182, v182, v182, v182, v182, v182, v182, v183, v182, v182, v182, v184)
-					if ((v184 == (222283 - 100872)) or ((871 + 1366) >= (3753 - (6 + 236)))) then
-						v89.CrimsonTempest[v183] = false;
-					elseif ((v184 == (443 + 260)) or ((1066 + 258) > (7122 - 4102))) then
-						v89.Garrote[v183] = false;
-					elseif ((v184 == (3393 - 1450)) or ((4125 - (1076 + 57)) == (310 + 1571))) then
-						v89.Rupture[v183] = false;
-					end
-				end, "SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH");
-				v88 = 692 - (579 + 110);
+					return false;
+				end
 			end
-			if (((246 + 2860) > (1350 + 176)) and (v88 == (2 + 1))) then
-				v10:RegisterForSelfCombatEvent(function(v185, v185, v185, v185, v185, v185, v185, v186, v185, v185, v185, v187)
-					if (((3430 - (174 + 233)) < (10810 - 6940)) and (v187 == (213095 - 91684))) then
-						if (((64 + 79) > (1248 - (663 + 511))) and (v89.CrimsonTempest[v186] ~= nil)) then
-							v89.CrimsonTempest[v186] = nil;
-						end
-					elseif (((17 + 1) < (459 + 1653)) and (v187 == (2167 - 1464))) then
-						if (((665 + 432) <= (3832 - 2204)) and (v89.Garrote[v186] ~= nil)) then
-							v89.Garrote[v186] = nil;
-						end
-					elseif (((11208 - 6578) == (2210 + 2420)) and (v187 == (3781 - 1838))) then
-						if (((2523 + 1017) > (246 + 2437)) and (v89.Rupture[v186] ~= nil)) then
-							v89.Rupture[v186] = nil;
-						end
+		end;
+		v29.ExsanguinatedRate = function(v136, v137)
+			local v138 = 0 - 0;
+			while true do
+				if ((v138 == (1187 - (1151 + 36))) or ((3706 + 131) < (344 + 962))) then
+					if (((8809 - 5859) == (4782 - (1552 + 280))) and v29.Exsanguinated(v136, v137)) then
+						return 836 - (64 + 770);
 					end
-				end, "SPELL_AURA_REMOVED");
-				v10:RegisterForCombatEvent(function(v188, v188, v188, v188, v188, v188, v188, v189)
-					if (((5516 - (478 + 244)) >= (3792 - (440 + 77))) and (v89.CrimsonTempest[v189] ~= nil)) then
-						v89.CrimsonTempest[v189] = nil;
-					end
-					if (((675 + 809) == (5431 - 3947)) and (v89.Garrote[v189] ~= nil)) then
-						v89.Garrote[v189] = nil;
-					end
-					if (((2988 - (655 + 901)) < (660 + 2895)) and (v89.Rupture[v189] ~= nil)) then
-						v89.Rupture[v189] = nil;
-					end
-				end, "UNIT_DIED", "UNIT_DESTROYED");
-				break;
+					return 1 + 0;
+				end
 			end
-		end
+		end;
+		v9:RegisterForSelfCombatEvent(function(v139, v139, v139, v139, v139, v139, v139, v140, v139, v139, v139, v141)
+			if ((v141 == (455842 - 255036)) or ((839 + 3884) < (4541 - (157 + 1086)))) then
+				for v173, v174 in v22(v86) do
+					for v202, v203 in v22(v174) do
+						if (((2273 - 1137) >= (674 - 520)) and (v202 == v140)) then
+							v174[v202] = true;
+						end
+					end
+				end
+			end
+		end, "SPELL_CAST_SUCCESS");
+		v9:RegisterForSelfCombatEvent(function(v142, v142, v142, v142, v142, v142, v142, v143, v142, v142, v142, v144)
+			if ((v144 == (186242 - 64831)) or ((369 - 98) > (5567 - (599 + 220)))) then
+				v86.CrimsonTempest[v143] = false;
+			elseif (((9439 - 4699) >= (5083 - (1813 + 118))) and (v144 == (514 + 189))) then
+				v86.Garrote[v143] = false;
+			elseif ((v144 == (3160 - (841 + 376))) or ((3612 - 1034) >= (788 + 2602))) then
+				v86.Rupture[v143] = false;
+			end
+		end, "SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH");
+		v9:RegisterForSelfCombatEvent(function(v145, v145, v145, v145, v145, v145, v145, v146, v145, v145, v145, v147)
+			if (((111 - 70) <= (2520 - (464 + 395))) and (v147 == (311588 - 190177))) then
+				if (((289 + 312) < (4397 - (467 + 370))) and (v86.CrimsonTempest[v146] ~= nil)) then
+					v86.CrimsonTempest[v146] = nil;
+				end
+			elseif (((485 - 250) < (505 + 182)) and (v147 == (2409 - 1706))) then
+				if (((710 + 3839) > (2682 - 1529)) and (v86.Garrote[v146] ~= nil)) then
+					v86.Garrote[v146] = nil;
+				end
+			elseif ((v147 == (2463 - (150 + 370))) or ((5956 - (74 + 1208)) < (11490 - 6818))) then
+				if (((17395 - 13727) < (3246 + 1315)) and (v86.Rupture[v146] ~= nil)) then
+					v86.Rupture[v146] = nil;
+				end
+			end
+		end, "SPELL_AURA_REMOVED");
+		v9:RegisterForCombatEvent(function(v148, v148, v148, v148, v148, v148, v148, v149)
+			local v150 = 390 - (14 + 376);
+			while true do
+				if ((v150 == (1 - 0)) or ((295 + 160) == (3167 + 438))) then
+					if ((v86.Rupture[v149] ~= nil) or ((2540 + 123) == (9704 - 6392))) then
+						v86.Rupture[v149] = nil;
+					end
+					break;
+				end
+				if (((3218 + 1059) <= (4553 - (23 + 55))) and (v150 == (0 - 0))) then
+					if ((v86.CrimsonTempest[v149] ~= nil) or ((581 + 289) == (1068 + 121))) then
+						v86.CrimsonTempest[v149] = nil;
+					end
+					if (((2407 - 854) <= (986 + 2147)) and (v86.Garrote[v149] ~= nil)) then
+						v86.Garrote[v149] = nil;
+					end
+					v150 = 902 - (652 + 249);
+				end
+			end
+		end, "UNIT_DIED", "UNIT_DESTROYED");
 	end
 	do
-		local v90 = 0 + 0;
+		local v90 = 0 - 0;
 		local v91;
 		local v92;
 		local v93;
 		while true do
-			if ((v90 == (1 + 0)) or ((4290 - 3225) > (5023 - (695 + 750)))) then
-				v93 = v29();
-				v30.FanTheHammerCP = function()
-					local v190 = 0 - 0;
-					while true do
-						if ((v190 == (0 - 0)) or ((19284 - 14489) < (1758 - (285 + 66)))) then
-							if (((4319 - 2466) < (6123 - (682 + 628))) and ((v29() - v93) < (0.5 + 0)) and (v92 > (299 - (176 + 123)))) then
-								if ((v92 > v13:ComboPoints()) or ((1180 + 1641) < (1764 + 667))) then
-									return v92;
-								else
-									v92 = 269 - (239 + 30);
-								end
-							end
-							return 0 + 0;
-						end
-					end
-				end;
-				v90 = 2 + 0;
-			end
-			if ((v90 == (3 - 1)) or ((8966 - 6092) < (2496 - (306 + 9)))) then
-				v10:RegisterForSelfCombatEvent(function(v191, v191, v191, v191, v191, v191, v191, v191, v191, v191, v191, v192, v191, v191, v193, v194)
-					if ((v192 == (648238 - 462475)) or ((468 + 2221) <= (211 + 132))) then
-						if (((v29() - v93) > (0.5 + 0)) or ((5344 - 3475) == (3384 - (1140 + 235)))) then
-							local v226 = 0 + 0;
+			if (((1870 - (708 + 1160)) == v90) or ((6072 - 3835) >= (6401 - 2890))) then
+				v9:RegisterForSelfCombatEvent(function(v175, v175, v175, v175, v175, v175, v175, v175, v175, v175, v175, v176, v175, v175, v177, v178)
+					if ((v176 == (185790 - (10 + 17))) or ((298 + 1026) > (4752 - (1400 + 332)))) then
+						if (((v28() - v93) > (0.5 - 0)) or ((4900 - (242 + 1666)) == (805 + 1076))) then
+							local v229 = 0 + 0;
 							while true do
-								if (((0 + 0) == v226) or ((911 + 2635) < (2374 - (33 + 19)))) then
-									v92 = v22(v30.CPMaxSpend(), v13:ComboPoints() + v193 + (v25(0 + 0, v193 - (2 - 1)) * v22(1 + 1, v13:BuffStack(v91) - (1 - 0))));
-									v93 = v29();
+								if (((2648 + 458) > (2466 - (850 + 90))) and (v229 == (0 - 0))) then
+									v92 = v21(v29.CPMaxSpend(), v12:ComboPoints() + v177 + (v24(1390 - (360 + 1030), v177 - (1 + 0)) * v21(5 - 3, v12:BuffStack(v91) - (1 - 0))));
+									v93 = v28();
 									break;
 								end
 							end
@@ -601,223 +565,217 @@ v0["Epix_Rogue_Rogue.lua"] = function(...)
 				end, "SPELL_ENERGIZE");
 				break;
 			end
-			if ((v90 == (0 + 0)) or ((2771 - (586 + 103)) == (435 + 4338))) then
-				v91 = v16(602270 - 406643);
-				v92 = 1488 - (1309 + 179);
+			if (((4684 - (909 + 752)) < (5093 - (109 + 1114))) and (v90 == (1 - 0))) then
+				v93 = v28();
+				v29.FanTheHammerCP = function()
+					if (((56 + 87) > (316 - (6 + 236))) and ((v28() - v93) < (0.5 + 0)) and (v92 > (0 + 0))) then
+						if (((42 - 24) < (3688 - 1576)) and (v92 > v12:ComboPoints())) then
+							return v92;
+						else
+							v92 = 1133 - (1076 + 57);
+						end
+					end
+					return 0 + 0;
+				end;
+				v90 = 691 - (579 + 110);
+			end
+			if (((87 + 1010) <= (1440 + 188)) and (v90 == (0 + 0))) then
+				v91 = v15(196034 - (174 + 233));
+				v92 = 0 - 0;
 				v90 = 1 - 0;
 			end
 		end
 	end
 	do
-		local v94, v95 = 0 + 0, 0 - 0;
-		local v96 = v16(209928 + 67997);
-		v30.TimeToNextTornado = function()
-			local v124 = 0 - 0;
-			local v125;
-			while true do
-				if (((6463 - 3219) > (1664 - (295 + 314))) and (v124 == (2 - 1))) then
-					if ((v29() == v94) or ((5275 - (1300 + 662)) <= (5583 - 3805))) then
-						return 1755 - (1178 + 577);
-					elseif ((((v29() - v94) < (0.1 + 0)) and (v125 < (0.25 - 0))) or ((2826 - (851 + 554)) >= (1861 + 243))) then
-						return 2 - 1;
-					elseif (((3934 - 2122) <= (3551 - (115 + 187))) and ((v125 > (0.9 + 0)) or (v125 == (0 + 0))) and ((v29() - v94) > (0.75 - 0))) then
-						return 1161.1 - (160 + 1001);
-					end
-					return v125;
-				end
-				if (((1420 + 203) <= (1351 + 606)) and (v124 == (0 - 0))) then
-					if (((4770 - (237 + 121)) == (5309 - (525 + 372))) and not v13:BuffUp(v96, nil, true)) then
-						return 0 - 0;
-					end
-					v125 = v13:BuffRemains(v96, nil, true) % (3 - 2);
-					v124 = 143 - (96 + 46);
-				end
+		local v94 = 0 + 0;
+		local v95;
+		local v96;
+		local v97;
+		while true do
+			if (((5804 - (663 + 511)) == (4131 + 499)) and ((0 + 0) == v94)) then
+				v95, v96 = 0 - 0, 0 + 0;
+				v97 = v15(654323 - 376398);
+				v94 = 2 - 1;
 			end
-		end;
-		v10:RegisterForSelfCombatEvent(function(v126, v126, v126, v126, v126, v126, v126, v126, v126, v126, v126, v127)
-			local v128 = 777 - (643 + 134);
-			while true do
-				if (((632 + 1118) >= (2018 - 1176)) and (v128 == (0 - 0))) then
-					if (((4193 + 179) > (3630 - 1780)) and (v127 == (434873 - 222130))) then
-						v94 = v29();
-					elseif (((951 - (316 + 403)) < (546 + 275)) and (v127 == (543923 - 346088))) then
-						v95 = v29();
+			if (((1690 + 1850) > (5221 - 2538)) and (v94 == (1 + 0))) then
+				v29.TimeToNextTornado = function()
+					if (((439 + 4355) >= (3997 - (478 + 244))) and not v12:BuffUp(v97, nil, true)) then
+						return 517 - (440 + 77);
 					end
-					if (((188 + 330) < (2271 - 1369)) and (v95 == v94)) then
-						v94 = 0 + 0;
+					local v179 = v12:BuffRemains(v97, nil, true) % (1 + 0);
+					if (((5431 - 3947) == (3040 - (655 + 901))) and (v28() == v95)) then
+						return 0 + 0;
+					elseif (((1097 + 335) < (2401 + 1154)) and ((v28() - v95) < (0.1 - 0)) and (v179 < (1445.25 - (695 + 750)))) then
+						return 3 - 2;
+					elseif ((((v179 > (0.9 - 0)) or (v179 == (0 - 0))) and ((v28() - v95) > (351.75 - (285 + 66)))) or ((2482 - 1417) > (4888 - (682 + 628)))) then
+						return 0.1 + 0;
+					end
+					return v179;
+				end;
+				v9:RegisterForSelfCombatEvent(function(v180, v180, v180, v180, v180, v180, v180, v180, v180, v180, v180, v181)
+					if ((v181 == (213042 - (176 + 123))) or ((2006 + 2789) < (1021 + 386))) then
+						v95 = v28();
+					elseif (((2122 - (239 + 30)) < (1309 + 3504)) and (v181 == (190148 + 7687))) then
+						v96 = v28();
+					end
+					if ((v96 == v95) or ((4992 - 2171) < (7584 - 5153))) then
+						v95 = 315 - (306 + 9);
+					end
+				end, "SPELL_CAST_SUCCESS");
+				break;
+			end
+		end
+	end
+	do
+		local v98 = 0 - 0;
+		local v99;
+		while true do
+			if ((v98 == (0 + 0)) or ((1764 + 1110) < (1050 + 1131))) then
+				v99 = {Counter=(0 - 0),LastMH=(1375 - (1140 + 235)),LastOH=(0 + 0)};
+				v29.TimeToSht = function(v182)
+					local v183 = 0 + 0;
+					local v184;
+					local v185;
+					local v186;
+					local v187;
+					local v188;
+					local v189;
+					while true do
+						if ((v183 == (1 + 1)) or ((2741 - (33 + 19)) <= (124 + 219))) then
+							v188 = {};
+							for v230 = 0 - 0, 1 + 1 do
+								v26(v188, v186 + (v230 * v184));
+								v26(v188, v187 + (v230 * v185));
+							end
+							v183 = 5 - 2;
+						end
+						if ((v183 == (0 + 0)) or ((2558 - (586 + 103)) == (183 + 1826))) then
+							if ((v99.Counter >= v182) or ((10916 - 7370) < (3810 - (1309 + 179)))) then
+								return 0 - 0;
+							end
+							v184, v185 = v27("player");
+							v183 = 1 + 0;
+						end
+						if ((v183 == (2 - 1)) or ((1573 + 509) == (10140 - 5367))) then
+							v186 = v24(v99.LastMH + v184, v28());
+							v187 = v24(v99.LastOH + v185, v28());
+							v183 = 3 - 1;
+						end
+						if (((3853 - (295 + 314)) > (2591 - 1536)) and (v183 == (1965 - (1300 + 662)))) then
+							table.sort(v188);
+							v189 = v21(15 - 10, v24(1756 - (1178 + 577), v182 - v99.Counter));
+							v183 = 3 + 1;
+						end
+						if ((v183 == (11 - 7)) or ((4718 - (851 + 554)) <= (1573 + 205))) then
+							return v188[v189] - v28();
+						end
+					end
+				end;
+				v98 = 2 - 1;
+			end
+			if ((v98 == (3 - 1)) or ((1723 - (115 + 187)) >= (1612 + 492))) then
+				v9:RegisterForSelfCombatEvent(function(v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v190, v191)
+					v99.Counter = v99.Counter + 1 + 0;
+					if (((7140 - 5328) <= (4410 - (160 + 1001))) and v191) then
+						v99.LastOH = v28();
+					else
+						v99.LastMH = v28();
+					end
+				end, "SWING_DAMAGE");
+				v9:RegisterForSelfCombatEvent(function(v193, v193, v193, v193, v193, v193, v193, v193, v193, v193, v193, v193, v193, v193, v193, v194)
+					if (((1420 + 203) <= (1351 + 606)) and v194) then
+						v99.LastOH = v28();
+					else
+						v99.LastMH = v28();
+					end
+				end, "SWING_MISSED");
+				break;
+			end
+			if (((9031 - 4619) == (4770 - (237 + 121))) and ((898 - (525 + 372)) == v98)) then
+				v9:RegisterForSelfCombatEvent(function()
+					v99.Counter = 0 - 0;
+					v99.LastMH = v28();
+					v99.LastOH = v28();
+				end, "PLAYER_ENTERING_WORLD");
+				v9:RegisterForSelfCombatEvent(function(v198, v198, v198, v198, v198, v198, v198, v198, v198, v198, v198, v199)
+					if (((5749 - 3999) >= (984 - (96 + 46))) and (v199 == (197688 - (643 + 134)))) then
+						v99.Counter = 0 + 0;
+					end
+				end, "SPELL_ENERGIZE");
+				v98 = 4 - 2;
+			end
+		end
+	end
+	do
+		local v100 = v12:CritChancePct();
+		local v101 = 0 - 0;
+		local function v102()
+			local v151 = 0 + 0;
+			while true do
+				if (((8579 - 4207) > (3781 - 1931)) and (v151 == (720 - (316 + 403)))) then
+					if (((155 + 77) < (2257 - 1436)) and (v101 > (0 + 0))) then
+						v23.After(7 - 4, v102);
 					end
 					break;
 				end
-			end
-		end, "SPELL_CAST_SUCCESS");
-	end
-	do
-		local v98 = {Counter=(0 + 0),LastMH=(0 - 0),LastOH=(0 - 0)};
-		v30.TimeToSht = function(v129)
-			local v130 = 0 - 0;
-			local v131;
-			local v132;
-			local v133;
-			local v134;
-			local v135;
-			local v136;
-			while true do
-				if (((172 + 2822) > (1688 - 830)) and (v130 == (1 + 2))) then
-					table.sort(v135);
-					v136 = v22(14 - 9, v25(18 - (12 + 5), v129 - v98.Counter));
-					v130 = 15 - 11;
-				end
-				if ((v130 == (1 - 0)) or ((7982 - 4227) <= (2269 - 1354))) then
-					v133 = v25(v98.LastMH + v131, v29());
-					v134 = v25(v98.LastOH + v132, v29());
-					v130 = 1 + 1;
-				end
-				if (((5919 - (1656 + 317)) > (3336 + 407)) and (v130 == (2 + 0))) then
-					v135 = {};
-					for v202 = 0 - 0, 9 - 7 do
-						local v203 = 354 - (5 + 349);
+				if (((368 + 150) < (291 + 611)) and (v151 == (0 - 0))) then
+					if (((14298 - 11304) > (1782 - 924)) and not v12:AffectingCombat()) then
+						local v220 = 0 + 0;
 						while true do
-							if ((v203 == (0 - 0)) or ((2606 - (266 + 1005)) >= (2179 + 1127))) then
-								v27(v135, v133 + (v202 * v131));
-								v27(v135, v134 + (v202 * v132));
+							if ((v220 == (0 - 0)) or ((184 + 3571) <= (2692 - 1777))) then
+								v100 = v12:CritChancePct();
+								v9.Debug("Base Crit Set to: " .. v100);
 								break;
 							end
 						end
 					end
-					v130 = 10 - 7;
-				end
-				if (((6376 - 1532) > (3949 - (561 + 1135))) and (v130 == (5 - 1))) then
-					return v135[v136] - v29();
-				end
-				if (((1485 - 1033) == (1518 - (507 + 559))) and (v130 == (0 - 0))) then
-					if ((v98.Counter >= v129) or ((14093 - 9536) < (2475 - (212 + 176)))) then
-						return 905 - (250 + 655);
-					end
-					v131, v132 = v28("player");
-					v130 = 2 - 1;
-				end
-			end
-		end;
-		v10:RegisterForSelfCombatEvent(function()
-			local v137 = 0 - 0;
-			while true do
-				if (((6060 - 2186) == (5830 - (1869 + 87))) and (v137 == (0 - 0))) then
-					v98.Counter = 1901 - (484 + 1417);
-					v98.LastMH = v29();
-					v137 = 2 - 1;
-				end
-				if ((v137 == (1 - 0)) or ((2711 - (48 + 725)) > (8061 - 3126))) then
-					v98.LastOH = v29();
-					break;
-				end
-			end
-		end, "PLAYER_ENTERING_WORLD");
-		v10:RegisterForSelfCombatEvent(function(v138, v138, v138, v138, v138, v138, v138, v138, v138, v138, v138, v139)
-			if ((v139 == (528295 - 331384)) or ((2473 + 1782) < (9147 - 5724))) then
-				v98.Counter = 0 + 0;
-			end
-		end, "SPELL_ENERGIZE");
-		v10:RegisterForSelfCombatEvent(function(v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v140, v141)
-			local v142 = 0 + 0;
-			while true do
-				if (((2307 - (152 + 701)) <= (3802 - (430 + 881))) and (v142 == (0 + 0))) then
-					v98.Counter = v98.Counter + (896 - (557 + 338));
-					if (v141 or ((1229 + 2928) <= (7898 - 5095))) then
-						v98.LastOH = v29();
-					else
-						v98.LastMH = v29();
-					end
-					break;
-				end
-			end
-		end, "SWING_DAMAGE");
-		v10:RegisterForSelfCombatEvent(function(v143, v143, v143, v143, v143, v143, v143, v143, v143, v143, v143, v143, v143, v143, v143, v144)
-			if (((16993 - 12140) >= (7922 - 4940)) and v144) then
-				v98.LastOH = v29();
-			else
-				v98.LastMH = v29();
-			end
-		end, "SWING_MISSED");
-	end
-	do
-		local v100 = v13:CritChancePct();
-		local v101 = 0 - 0;
-		local function v102()
-			local v145 = 801 - (499 + 302);
-			while true do
-				if (((5000 - (39 + 827)) > (9267 - 5910)) and (v145 == (0 - 0))) then
-					if (not v13:AffectingCombat() or ((13571 - 10154) < (3890 - 1356))) then
-						v100 = v13:CritChancePct();
-						v10.Debug("Base Crit Set to: " .. v100);
-					end
-					if ((v101 == nil) or (v101 < (0 + 0)) or ((7966 - 5244) <= (27 + 137))) then
+					if (((3963 - (12 + 5)) > (14537 - 10794)) and ((v101 == nil) or (v101 < (0 - 0)))) then
 						v101 = 0 - 0;
 					else
-						v101 = v101 - (105 - (103 + 1));
+						v101 = v101 - (2 - 1);
 					end
-					v145 = 555 - (475 + 79);
-				end
-				if ((v145 == (2 - 1)) or ((7705 - 5297) < (273 + 1836))) then
-					if ((v101 > (0 + 0)) or ((1536 - (1395 + 108)) == (4234 - 2779))) then
-						v24.After(1207 - (7 + 1197), v102);
-					end
-					break;
+					v151 = 1 + 0;
 				end
 			end
 		end
-		v10:RegisterForEvent(function()
-			if ((v101 == (0 + 0)) or ((155 + 288) >= (4334 - (27 + 292)))) then
-				v24.After(8 - 5, v102);
-				v101 = 2 - 0;
+		v9:RegisterForEvent(function()
+			if ((v101 == (1973 - (1656 + 317))) or ((1190 + 145) >= (2650 + 656))) then
+				local v169 = 0 - 0;
+				while true do
+					if (((23839 - 18995) > (2607 - (5 + 349))) and (v169 == (0 - 0))) then
+						v23.After(1274 - (266 + 1005), v102);
+						v101 = 2 + 0;
+						break;
+					end
+				end
 			end
 		end, "PLAYER_EQUIPMENT_CHANGED");
-		v30.BaseAttackCrit = function()
+		v29.BaseAttackCrit = function()
 			return v100;
 		end;
 	end
 	do
-		local v104 = 0 - 0;
-		local v105;
-		local v106;
-		local v107;
-		local v108;
-		while true do
-			if (((6669 - 3287) > (315 - 149)) and (v104 == (139 - (43 + 96)))) then
-				v105 = v16.Rogue.Assassination;
-				v106 = v16.Rogue.Subtlety;
-				v104 = 4 - 3;
-			end
-			if ((v104 == (3 - 1)) or ((233 + 47) == (864 + 2195))) then
-				v108 = nil;
-				function v108()
-					if (((3717 - 1836) > (496 + 797)) and v105.ImprovedGarrote:IsAvailable() and (v13:BuffUp(v105.ImprovedGarroteAura, nil, true) or v13:BuffUp(v105.ImprovedGarroteBuff, nil, true) or v13:BuffUp(v105.SepsisBuff, nil, true))) then
-						return 1.5 - 0;
+		local v104 = v15.Rogue.Assassination;
+		local v105 = v15.Rogue.Subtlety;
+		local function v106()
+			local v152 = 0 - 0;
+			while true do
+				if (((594 - 142) == (2148 - (561 + 1135))) and (v152 == (0 - 0))) then
+					if ((v104.Nightstalker:IsAvailable() and v12:StealthUp(true, false, true)) or ((14979 - 10422) < (3153 - (507 + 559)))) then
+						return (2 - 1) + ((0.05 - 0) * v104.Nightstalker:TalentRank());
 					end
-					return 1 + 0;
+					return 389 - (212 + 176);
 				end
-				v104 = 1 + 2;
-			end
-			if (((4108 - (1414 + 337)) == (4297 - (1642 + 298))) and (v104 == (2 - 1))) then
-				v107 = nil;
-				function v107()
-					local v199 = 0 - 0;
-					while true do
-						if (((364 - 241) == (41 + 82)) and ((0 + 0) == v199)) then
-							if ((v105.Nightstalker:IsAvailable() and v13:StealthUp(true, false, true)) or ((2028 - (357 + 615)) >= (2382 + 1010))) then
-								return (2 - 1) + ((0.05 + 0) * v105.Nightstalker:TalentRank());
-							end
-							return 2 - 1;
-						end
-					end
-				end
-				v104 = 2 + 0;
-			end
-			if ((v104 == (1 + 2)) or ((680 + 401) < (2376 - (384 + 917)))) then
-				v105.Rupture:RegisterPMultiplier(v107, {v106.FinalityRuptureBuff,(1888.3 - (687 + 1200))});
-				v105.Garrote:RegisterPMultiplier(v107, v108);
-				break;
 			end
 		end
+		local function v107()
+			if (((4779 - (250 + 655)) == (10563 - 6689)) and v104.ImprovedGarrote:IsAvailable() and (v12:BuffUp(v104.ImprovedGarroteAura, nil, true) or v12:BuffUp(v104.ImprovedGarroteBuff, nil, true) or v12:BuffUp(v104.SepsisBuff, nil, true))) then
+				return 1.5 - 0;
+			end
+			return 1 - 0;
+		end
+		v104.Rupture:RegisterPMultiplier(v106, {v105.FinalityRuptureBuff,(1902.3 - (484 + 1417))});
+		v104.Garrote:RegisterPMultiplier(v106, v107);
 	end
 end;
 return v0["Epix_Rogue_Rogue.lua"]();
