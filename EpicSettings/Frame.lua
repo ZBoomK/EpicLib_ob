@@ -1,6 +1,5 @@
 -- Author      : eliea
 -- Create Date : 9/7/2023 2:43:48 PM
--- Push Date: 30/11/2023 06:12:00 PM
 
 --TODO A button to hide ES and ET
 
@@ -217,8 +216,8 @@ function frame:OnEvent(event, arg1)
 				EpicSettingsDB[ES.SpecID].Profiles[EpicSettingsDB[ES.SpecID].SelectedProfile][i] = v
 			end
 		end
---	elseif event == "ADDON_ACTION_FORBIDDEN" or event == "ADDON_ACTION_BLOCKED" then
---		print(debugstack())
+	elseif event == "ADDON_ACTION_FORBIDDEN" or event == "ADDON_ACTION_BLOCKED" then
+		print(debugstack())
 	elseif event == "PLAYER_REGEN_DISABLED" then
 		print("Entered Combat")
 	elseif event == "PLAYER_REGEN_ENABLED" then
@@ -1107,22 +1106,22 @@ function ES.AddGroupDropdown(tab, minitab, line, variable, label, includeHealers
 		--Get Current party
 		local PartyUnits = {}
 		if includePlayer then
-			table.insert(PartyUnits, EpicLib.Unit.Player);
+			table.insert(PartyUnits, "player");
 		end
 		for i = 1, 4 do
 			local PartyUnitKey = string.format("party%d", i);
-			if EpicLib.Unit.Party[PartyUnitKey]:Exists() then
-				if (UnitGroupRolesAssigned(EpicLib.Unit.Party[PartyUnitKey]:ID()) == "HEALER" and includeHealers) or (UnitGroupRolesAssigned(EpicLib.Unit.Party[PartyUnitKey]:ID()) == "DAMAGER" and includeDamagers) or (UnitGroupRolesAssigned(EpicLib.Unit.Party[PartyUnitKey]:ID()) == "TANK" and includeTanks) then
-					table.insert(PartyUnits, EpicLib.Unit.Party[PartyUnitKey]);
+			if UnitExists(PartyUnitKey) then
+				if (UnitGroupRolesAssigned(PartyUnitKey) == "HEALER" and includeHealers) or (UnitGroupRolesAssigned(PartyUnitKey) == "DAMAGER" and includeDamagers) or (UnitGroupRolesAssigned(PartyUnitKey) == "TANK" and includeTanks) then
+					table.insert(PartyUnits, PartyUnitKey);
 				end
 			end
 		end
 
-		for i = 1, 30 do
+		for i = 1, 40 do
 			local RaidUnitKey = string.format("raid%d", i);
-			if EpicLib.Unit.Raid[RaidUnitKey]:Exists() then
-				if (UnitGroupRolesAssigned(EpicLib.Unit.Raid[RaidUnitKey]:ID()) == "HEALER" and includeHealers) or (UnitGroupRolesAssigned(EpicLib.Unit.Raid[RaidUnitKey]:ID()) == "DAMAGER" and includeDamagers) or (UnitGroupRolesAssigned(EpicLib.Unit.Raid[RaidUnitKey]:ID()) == "TANK" and includeTanks) then
-					table.insert(PartyUnits, EpicLib.Unit.Raid[RaidUnitKey]);
+			if UnitExists(RaidUnitKey) then
+				if (UnitGroupRolesAssigned(RaidUnitKey) == "HEALER" and includeHealers) or (UnitGroupRolesAssigned(RaidUnitKey) == "DAMAGER" and includeDamagers) or (UnitGroupRolesAssigned(RaidUnitKey) == "TANK" and includeTanks) then
+					table.insert(PartyUnits, RaidUnitKey);
 				end
 			end
 		end
@@ -1162,13 +1161,13 @@ function ES.AddGroupDropdown(tab, minitab, line, variable, label, includeHealers
 			dropdown.optionControls[i]:SetHighlightTexture("Interface\\Addons\\EpicSettings\\Vectors\\White", "MOD")
 			dropdown.optionControls[i]:SetNormalFontObject(_G["epicFontNormal"])
 			dropdown.optionControls[i]:SetHighlightFontObject(_G["epicFontNormalAccent"])
-			dropdown.optionControls[i]:SetText(PartyUnits[i-1]:Name())
+			dropdown.optionControls[i]:SetText(UnitName(PartyUnits[i-1]))
 			dropdown.optionControls[i]:SetSize(130, 15)
 			dropdown.optionControls[i]:SetPoint("TOPLEFT", dropdown, "BOTTOMLEFT", 0, -15*(i-1))
 			
 			dropdown.optionControls[i]:SetScript("OnClick", function(self, button, down)
-				dropdown:SetText(PartyUnits[i-1]:Name())
-				ES.Settings[variable] = PartyUnits[i-1]:Name()
+				dropdown:SetText(UnitName(PartyUnits[i-1]))
+				ES.Settings[variable] = UnitName(PartyUnits[i-1])
 				for k, v in pairs(dropdown.optionControls) do
 					v:Hide()
 				end
@@ -1185,31 +1184,31 @@ function ES.AddGroupDropdown(tab, minitab, line, variable, label, includeHealers
 			--Get Current party
 			local PartyUnits = {}
 			if includePlayer then
-				if ES.Settings[variable] == EpicLib.Unit.Player:Name() then
+				if ES.Settings[variable] == UnitName("player") then
 					selectedUnitStillExits = true
 				end
-				table.insert(PartyUnits, EpicLib.Unit.Player);
+				table.insert(PartyUnits, "player");
 			end
 			for i = 1, 4 do
 				local PartyUnitKey = string.format("party%d", i);
-				if EpicLib.Unit.Party[PartyUnitKey]:Exists() then
-					if (UnitGroupRolesAssigned(EpicLib.Unit.Party[PartyUnitKey]:ID()) == "HEALER" and includeHealers) or (UnitGroupRolesAssigned(EpicLib.Unit.Party[PartyUnitKey]:ID()) == "DAMAGER" and includeDamagers) or (UnitGroupRolesAssigned(EpicLib.Unit.Party[PartyUnitKey]:ID()) == "TANK" and includeTanks) then
-						if ES.Settings[variable] == EpicLib.Unit.Party[PartyUnitKey]:Name() then
+				if UnitExists(PartyUnitKey) then
+					if (UnitGroupRolesAssigned(PartyUnitKey) == "HEALER" and includeHealers) or (UnitGroupRolesAssigned(PartyUnitKey) == "DAMAGER" and includeDamagers) or (UnitGroupRolesAssigned(PartyUnitKey) == "TANK" and includeTanks) then
+						if ES.Settings[variable] == UnitName(PartyUnitKey) then
 							selectedUnitStillExits = true
 						end
-						table.insert(PartyUnits, EpicLib.Unit.Party[PartyUnitKey]);
+						table.insert(PartyUnits, PartyUnitKey);
 					end
 				end
 			end
 
-			for i = 1, 30 do
+			for i = 1, 40 do
 				local RaidUnitKey = string.format("raid%d", i);
-				if EpicLib.Unit.Raid[RaidUnitKey]:Exists() then
-					if (UnitGroupRolesAssigned(EpicLib.Unit.Raid[RaidUnitKey]:ID()) == "HEALER" and includeHealers) or (UnitGroupRolesAssigned(EpicLib.Unit.Raid[RaidUnitKey]:ID()) == "DAMAGER" and includeDamagers) or (UnitGroupRolesAssigned(EpicLib.Unit.Raid[RaidUnitKey]:ID()) == "TANK" and includeTanks) then
-						if ES.Settings[variable] == EpicLib.Unit.Raid[RaidUnitKey]:Name() then
+				if UnitExists(RaidUnitKey) then
+					if (UnitGroupRolesAssigned(RaidUnitKey) == "HEALER" and includeHealers) or (UnitGroupRolesAssigned(RaidUnitKey) == "DAMAGER" and includeDamagers) or (UnitGroupRolesAssigned(RaidUnitKey) == "TANK" and includeTanks) then
+						if ES.Settings[variable] == UnitName(RaidUnitKey) then
 							selectedUnitStillExits = true
 						end
-						table.insert(PartyUnits, EpicLib.Unit.Raid[RaidUnitKey]);
+						table.insert(PartyUnits, RaidUnitKey);
 					end
 				end
 			end
@@ -1249,13 +1248,13 @@ function ES.AddGroupDropdown(tab, minitab, line, variable, label, includeHealers
 				dropdown.optionControls[i]:SetHighlightTexture("Interface\\Addons\\EpicSettings\\Vectors\\White", "MOD")
 				dropdown.optionControls[i]:SetNormalFontObject(_G["epicFontNormal"])
 				dropdown.optionControls[i]:SetHighlightFontObject(_G["epicFontNormalAccent"])
-				dropdown.optionControls[i]:SetText(PartyUnits[i-1]:Name())
+				dropdown.optionControls[i]:SetText(UnitName(PartyUnits[i-1]))
 				dropdown.optionControls[i]:SetSize(130, 15)
 				dropdown.optionControls[i]:SetPoint("TOPLEFT", dropdown, "BOTTOMLEFT", 0, -15*(i-1))
 				
 				dropdown.optionControls[i]:SetScript("OnClick", function(self, button, down)
-					dropdown:SetText(PartyUnits[i-1]:Name())
-					ES.Settings[variable] = PartyUnits[i-1]:Name()
+					dropdown:SetText(UnitName(PartyUnits[i-1]))
+					ES.Settings[variable] = UnitName(PartyUnits[i-1])
 					for k, v in pairs(dropdown.optionControls) do
 						v:Hide()
 					end

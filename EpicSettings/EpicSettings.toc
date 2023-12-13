@@ -4,7 +4,7 @@
 ## Interface: 100200
 
 ## DefaultState: Enabled
-## Dependencies: EpicLib
+
 ## SavedVariables: EpicSettingsDB
 
 Frame.xml
