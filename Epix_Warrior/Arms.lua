@@ -1,45 +1,37 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 0 + 0;
-	local v6;
-	while true do
-		if (((5715 - (922 + 87)) >= (2546 - 1583)) and (v5 == (1 + 0))) then
-			return v6(...);
-		end
-		if ((v5 == (0 + 0)) or ((3445 - 2485) <= (1323 - 447))) then
-			v6 = v0[v4];
-			if (not v6 or ((1237 + 829) == (1610 - (356 + 322)))) then
-				return v1(v4, ...);
-			end
-			v5 = 2 - 1;
-		end
+	local v5 = v0[v4];
+	if (((17422 - 12716) > (2909 + 1520)) and not v5) then
+		return v1(v4, ...);
 	end
+	return v5(...);
 end
 v0["Epix_Warrior_Arms.lua"] = function(...)
-	local v7, v8 = ...;
-	local v9 = EpicDBC.DBC;
-	local v10 = EpicLib;
-	local v11 = EpicCache;
-	local v12 = v10.Unit;
-	local v13 = v10.Utils;
-	local v14 = v12.Player;
-	local v15 = v12.Target;
-	local v16 = v12.TargetTarget;
-	local v17 = v12.Focus;
-	local v18 = v10.Spell;
-	local v19 = v10.Item;
-	local v20 = EpicLib;
-	local v21 = v20.Bind;
-	local v22 = v20.Cast;
-	local v23 = v20.Macro;
-	local v24 = v20.Press;
-	local v25 = v20.Commons.Everyone.num;
-	local v26 = v20.Commons.Everyone.bool;
-	local v27;
+	local v6, v7 = ...;
+	local v8 = EpicDBC.DBC;
+	local v9 = EpicLib;
+	local v10 = EpicCache;
+	local v11 = v9.Unit;
+	local v12 = v9.Utils;
+	local v13 = v11.Player;
+	local v14 = v11.Target;
+	local v15 = v11.TargetTarget;
+	local v16 = v11.Focus;
+	local v17 = v9.Spell;
+	local v18 = v9.Item;
+	local v19 = EpicLib;
+	local v20 = v19.Bind;
+	local v21 = v19.Cast;
+	local v22 = v19.Macro;
+	local v23 = v19.Press;
+	local v24 = v19.Commons.Everyone.num;
+	local v25 = v19.Commons.Everyone.bool;
+	local v26;
+	local v27 = false;
 	local v28 = false;
 	local v29 = false;
-	local v30 = false;
+	local v30;
 	local v31;
 	local v32;
 	local v33;
@@ -101,169 +93,180 @@ v0["Epix_Warrior_Arms.lua"] = function(...)
 	local v89;
 	local v90;
 	local v91;
-	local v92;
-	local v93 = v10.Commons.Everyone;
-	local v94 = v14:GetEquipment();
-	local v95 = (v94[2 + 11] and v19(v94[19 - 6])) or v19(1244 - (485 + 759));
-	local v96 = (v94[32 - 18] and v19(v94[1203 - (442 + 747)])) or v19(1135 - (832 + 303));
+	local v92 = v9.Commons.Everyone;
+	local v93 = v13:GetEquipment();
+	local v94 = (v93[13 + 0] and v18(v93[8 + 5])) or v18(0 - 0);
+	local v95 = (v93[31 - 17] and v18(v93[32 - 18])) or v18(711 - (530 + 181));
+	local v96 = v17.Warrior.Arms;
 	local v97 = v18.Warrior.Arms;
-	local v98 = v19.Warrior.Arms;
-	local v99 = v23.Warrior.Arms;
-	local v100 = {};
-	local v101;
-	local v102 = 12057 - (88 + 858);
-	local v103 = 3387 + 7724;
-	v10:RegisterForEvent(function()
-		v102 = 9196 + 1915;
-		v103 = 458 + 10653;
-	end, "PLAYER_REGEN_ENABLED");
-	v10:RegisterForEvent(function()
-		local v123 = 789 - (766 + 23);
+	local v98 = v22.Warrior.Arms;
+	local v99 = {};
+	local v100;
+	local v101 = 11992 - (614 + 267);
+	local v102 = 11143 - (19 + 13);
+	v9:RegisterForEvent(function()
+		local v122 = 0 - 0;
 		while true do
-			if (((23819 - 18994) < (6622 - 1779)) and (v123 == (0 - 0))) then
-				v94 = v14:GetEquipment();
-				v95 = (v94[44 - 31] and v19(v94[1086 - (1036 + 37)])) or v19(0 + 0);
-				v123 = 1 - 0;
-			end
-			if ((v123 == (1 + 0)) or ((5357 - (641 + 839)) >= (5450 - (910 + 3)))) then
-				v96 = (v94[35 - 21] and v19(v94[1698 - (1466 + 218)])) or v19(0 + 0);
+			if (((6650 - 3796) < (11697 - 7602)) and (v122 == (0 + 0))) then
+				v101 = 19540 - 8429;
+				v102 = 23042 - 11931;
 				break;
 			end
 		end
+	end, "PLAYER_REGEN_ENABLED");
+	v9:RegisterForEvent(function()
+		v93 = v13:GetEquipment();
+		v94 = (v93[1825 - (1293 + 519)] and v18(v93[26 - 13])) or v18(0 - 0);
+		v95 = (v93[26 - 12] and v18(v93[60 - 46])) or v18(0 - 0);
 	end, "PLAYER_EQUIPMENT_CHANGED");
+	local v103;
 	local v104;
-	local v105;
-	local function v106()
-		local v124 = UnitGetTotalAbsorbs(v15);
-		if ((v124 > (1148 - (556 + 592))) or ((1535 + 2780) < (2534 - (329 + 479)))) then
+	local function v105()
+		local v123 = UnitGetTotalAbsorbs(v14);
+		if ((v123 > (0 + 0)) or ((216 + 842) >= (2792 - 1590))) then
 			return true;
 		else
 			return false;
 		end
 	end
+	local function v106(v124)
+		return (v124:HealthPercentage() > (5 + 15)) or (v96.Massacre:IsAvailable() and (v124:HealthPercentage() < (12 + 23)));
+	end
 	local function v107(v125)
-		return (v125:HealthPercentage() > (874 - (174 + 680))) or (v97.Massacre:IsAvailable() and (v125:HealthPercentage() < (120 - 85)));
+		return (v125:DebuffStack(v96.ExecutionersPrecisionDebuff) == (2 + 0)) or (v125:DebuffRemains(v96.DeepWoundsDebuff) <= v13:GCD()) or (v96.Dreadnaught:IsAvailable() and v96.Battlelord:IsAvailable() and (v104 <= (1098 - (709 + 387))));
 	end
 	local function v108(v126)
-		return (v126:DebuffStack(v97.ExecutionersPrecisionDebuff) == (3 - 1)) or (v126:DebuffRemains(v97.DeepWoundsDebuff) <= v14:GCD()) or (v97.Dreadnaught:IsAvailable() and v97.Battlelord:IsAvailable() and (v105 <= (2 + 0)));
+		return v13:BuffUp(v96.SuddenDeathBuff) or ((v104 <= (1860 - (673 + 1185))) and ((v126:HealthPercentage() < (58 - 38)) or (v96.Massacre:IsAvailable() and (v126:HealthPercentage() < (112 - 77))))) or v13:BuffUp(v96.SweepingStrikes);
 	end
-	local function v109(v127)
-		return v14:BuffUp(v97.SuddenDeathBuff) or ((v105 <= (741 - (396 + 343))) and ((v127:HealthPercentage() < (2 + 18)) or (v97.Massacre:IsAvailable() and (v127:HealthPercentage() < (1512 - (29 + 1448)))))) or v14:BuffUp(v97.SweepingStrikes);
-	end
-	local function v110()
-		local v128 = 1389 - (135 + 1254);
+	local function v109()
+		local v127 = 0 - 0;
 		while true do
-			if ((v128 == (11 - 8)) or ((17177 - 13498) < (417 + 208))) then
-				if ((v97.BattleStance:IsCastable() and v14:BuffDown(v97.BattleStance, true) and v68 and (v14:HealthPercentage() > v81)) or ((6152 - (389 + 1138)) < (1206 - (102 + 472)))) then
-					if (v24(v97.BattleStance) or ((79 + 4) > (988 + 792))) then
-						return "battle_stance after defensive stance defensive";
-					end
-				end
-				if (((510 + 36) <= (2622 - (320 + 1225))) and v98.Healthstone:IsReady() and v69 and (v14:HealthPercentage() <= v79)) then
-					if (v24(v99.Healthstone) or ((1772 - 776) > (2632 + 1669))) then
-						return "healthstone defensive 3";
-					end
-				end
-				v128 = 1468 - (157 + 1307);
-			end
-			if (((5929 - (821 + 1038)) > (1713 - 1026)) and (v128 == (1 + 1))) then
-				if ((v97.Intervene:IsCastable() and v67 and (v17:HealthPercentage() <= v77) and (v17:UnitName() ~= v14:UnitName())) or ((1164 - 508) >= (1239 + 2091))) then
-					if (v24(v99.InterveneFocus) or ((6176 - 3684) <= (1361 - (834 + 192)))) then
+			if (((2655 + 1056) > (2507 + 848)) and (v127 == (2 - 0))) then
+				if ((v96.Intervene:IsCastable() and v66 and (v16:HealthPercentage() <= v76) and (v16:UnitName() ~= v13:UnitName())) or ((223 + 683) >= (4444 - 2215))) then
+					if (((2528 - 1240) > (3131 - (446 + 1434))) and v23(v98.InterveneFocus)) then
 						return "intervene defensive";
 					end
 				end
-				if (((275 + 4047) >= (658 + 1904)) and v97.DefensiveStance:IsCastable() and v14:BuffDown(v97.DefensiveStance, true) and v68 and (v14:HealthPercentage() <= v78)) then
-					if (v24(v97.DefensiveStance) or ((79 + 3558) >= (5840 - 2070))) then
+				if ((v96.DefensiveStance:IsCastable() and v13:BuffDown(v96.DefensiveStance, true) and v67 and (v13:HealthPercentage() <= v77)) or ((5796 - (1040 + 243)) < (10004 - 6652))) then
+					if (v23(v96.DefensiveStance) or ((3912 - (559 + 1288)) >= (5127 - (609 + 1322)))) then
 						return "defensive_stance defensive";
 					end
 				end
-				v128 = 307 - (300 + 4);
+				v127 = 457 - (13 + 441);
 			end
-			if ((v128 == (2 + 2)) or ((6227 - 3848) > (4940 - (112 + 250)))) then
-				if ((v70 and (v14:HealthPercentage() <= v80)) or ((193 + 290) > (1861 - 1118))) then
-					if (((1406 + 1048) > (299 + 279)) and (v86 == "Refreshing Healing Potion")) then
-						if (((696 + 234) < (2211 + 2247)) and v98.RefreshingHealingPotion:IsReady()) then
-							if (((492 + 170) <= (2386 - (1001 + 413))) and v24(v99.RefreshingHealingPotion)) then
-								return "refreshing healing potion defensive 4";
-							end
-						end
+			if ((v127 == (3 - 2)) or ((11462 - 7086) <= (7376 - 5895))) then
+				if ((v96.IgnorePain:IsCastable() and v64 and (v13:HealthPercentage() <= v73)) or ((127 + 3265) >= (17218 - 12477))) then
+					if (((1181 + 2144) >= (944 + 1210)) and v23(v96.IgnorePain, nil, nil, true)) then
+						return "ignore_pain defensive";
 					end
-					if (((9745 - 5375) == (5252 - (244 + 638))) and (v86 == "Dreamwalker's Healing Potion")) then
-						if (v98.DreamwalkersHealingPotion:IsReady() or ((5455 - (627 + 66)) <= (2565 - 1704))) then
-							if (v24(v99.RefreshingHealingPotion) or ((2014 - (512 + 90)) == (6170 - (1665 + 241)))) then
-								return "dreamwalkers healing potion defensive";
+				end
+				if ((v96.RallyingCry:IsCastable() and v65 and v13:BuffDown(v96.AspectsFavorBuff) and v13:BuffDown(v96.RallyingCry) and (((v13:HealthPercentage() <= v74) and v92.IsSoloMode()) or v92.AreUnitsBelowHealthPercentage(v74, v75))) or ((3842 - 2547) >= (1770 + 1463))) then
+					if (((8050 - 3673) > (1086 + 556)) and v23(v96.RallyingCry)) then
+						return "rallying_cry defensive";
+					end
+				end
+				v127 = 2 + 0;
+			end
+			if (((3394 + 1329) > (1139 + 217)) and (v127 == (4 + 0))) then
+				if ((v69 and (v13:HealthPercentage() <= v79)) or ((4569 - (153 + 280)) <= (9913 - 6480))) then
+					local v189 = 0 + 0;
+					while true do
+						if (((1677 + 2568) <= (2424 + 2207)) and (v189 == (0 + 0))) then
+							if (((3099 + 1177) >= (5959 - 2045)) and (v85 == "Refreshing Healing Potion")) then
+								if (((123 + 75) <= (5032 - (89 + 578))) and v97.RefreshingHealingPotion:IsReady()) then
+									if (((3417 + 1365) > (9720 - 5044)) and v23(v98.RefreshingHealingPotion)) then
+										return "refreshing healing potion defensive 4";
+									end
+								end
 							end
+							if (((5913 - (572 + 477)) > (297 + 1900)) and (v85 == "Dreamwalker's Healing Potion")) then
+								if (v97.DreamwalkersHealingPotion:IsReady() or ((2221 + 1479) == (300 + 2207))) then
+									if (((4560 - (84 + 2)) >= (451 - 177)) and v23(v98.RefreshingHealingPotion)) then
+										return "dreamwalkers healing potion defensive";
+									end
+								end
+							end
+							break;
 						end
 					end
 				end
 				break;
 			end
-			if (((718 - (373 + 344)) == v128) or ((1429 + 1739) < (570 + 1583))) then
-				if ((v97.IgnorePain:IsCastable() and v65 and (v14:HealthPercentage() <= v74)) or ((13125 - 8149) < (2253 - 921))) then
-					if (((5727 - (35 + 1064)) == (3368 + 1260)) and v24(v97.IgnorePain, nil, nil, true)) then
-						return "ignore_pain defensive";
-					end
-				end
-				if ((v97.RallyingCry:IsCastable() and v66 and v14:BuffDown(v97.AspectsFavorBuff) and v14:BuffDown(v97.RallyingCry) and (((v14:HealthPercentage() <= v75) and v93.IsSoloMode()) or v93.AreUnitsBelowHealthPercentage(v75, v76))) or ((115 - 61) == (2 + 393))) then
-					if (((1318 - (298 + 938)) == (1341 - (233 + 1026))) and v24(v97.RallyingCry)) then
-						return "rallying_cry defensive";
-					end
-				end
-				v128 = 1668 - (636 + 1030);
-			end
-			if ((v128 == (0 + 0)) or ((568 + 13) < (84 + 198))) then
-				if ((v97.BitterImmunity:IsReady() and v63 and (v14:HealthPercentage() <= v72)) or ((312 + 4297) < (2716 - (55 + 166)))) then
-					if (((224 + 928) == (116 + 1036)) and v24(v97.BitterImmunity)) then
+			if ((v127 == (0 + 0)) or ((2736 - (497 + 345)) <= (36 + 1370))) then
+				if (((266 + 1306) >= (2864 - (605 + 728))) and v96.BitterImmunity:IsReady() and v62 and (v13:HealthPercentage() <= v71)) then
+					if (v23(v96.BitterImmunity) or ((3345 + 1342) < (10097 - 5555))) then
 						return "bitter_immunity defensive";
 					end
 				end
-				if (((7240 - 5344) <= (3719 - (36 + 261))) and v97.DieByTheSword:IsCastable() and v64 and (v14:HealthPercentage() <= v73)) then
-					if (v24(v97.DieByTheSword) or ((1731 - 741) > (2988 - (34 + 1334)))) then
+				if (((151 + 3140) > (6163 - 4496)) and v96.DieByTheSword:IsCastable() and v63 and (v13:HealthPercentage() <= v72)) then
+					if (v23(v96.DieByTheSword) or ((788 + 85) == (5635 - 3601))) then
 						return "die_by_the_sword defensive";
 					end
 				end
+				v127 = 1 + 0;
+			end
+			if ((v127 == (492 - (457 + 32))) or ((1195 + 1621) < (1413 - (832 + 570)))) then
+				if (((3485 + 214) < (1228 + 3478)) and v96.BattleStance:IsCastable() and v13:BuffDown(v96.BattleStance, true) and v67 and (v13:HealthPercentage() > v80)) then
+					if (((9363 - 6717) >= (422 + 454)) and v23(v96.BattleStance)) then
+						return "battle_stance after defensive stance defensive";
+					end
+				end
+				if (((1410 - (588 + 208)) <= (8581 - 5397)) and v97.Healthstone:IsReady() and v68 and (v13:HealthPercentage() <= v78)) then
+					if (((4926 - (884 + 916)) == (6544 - 3418)) and v23(v98.Healthstone)) then
+						return "healthstone defensive 3";
+					end
+				end
+				v127 = 3 + 1;
+			end
+		end
+	end
+	local function v110()
+		local v128 = 653 - (232 + 421);
+		while true do
+			if ((v128 == (1889 - (1569 + 320))) or ((537 + 1650) >= (942 + 4012))) then
+				v26 = v92.HandleTopTrinket(v99, v29, 134 - 94, nil);
+				if (v26 or ((4482 - (316 + 289)) == (9358 - 5783))) then
+					return v26;
+				end
 				v128 = 1 + 0;
+			end
+			if (((2160 - (666 + 787)) > (1057 - (360 + 65))) and (v128 == (1 + 0))) then
+				v26 = v92.HandleBottomTrinket(v99, v29, 294 - (79 + 175), nil);
+				if (v26 or ((860 - 314) >= (2095 + 589))) then
+					return v26;
+				end
+				break;
 			end
 		end
 	end
 	local function v111()
-		v27 = v93.HandleTopTrinket(v100, v30, 32 + 8, nil);
-		if (v27 or ((2160 - (1035 + 248)) > (4716 - (20 + 1)))) then
-			return v27;
-		end
-		v27 = v93.HandleBottomTrinket(v100, v30, 21 + 19, nil);
-		if (((3010 - (134 + 185)) >= (2984 - (549 + 584))) and v27) then
-			return v27;
-		end
-	end
-	local function v112()
-		local v129 = 685 - (314 + 371);
+		local v129 = 0 - 0;
 		while true do
-			if ((v129 == (0 - 0)) or ((3953 - (478 + 490)) >= (2573 + 2283))) then
-				if (((5448 - (786 + 386)) >= (3870 - 2675)) and v101) then
-					if (((4611 - (1055 + 324)) <= (6030 - (1093 + 247))) and v97.Skullsplitter:IsCastable() and v44) then
-						if (v24(v97.Skullsplitter) or ((797 + 99) >= (331 + 2815))) then
+			if (((2821 - 1356) <= (5200 - (503 + 396))) and (v129 == (181 - (92 + 89)))) then
+				if (((3305 - 1601) > (731 + 694)) and v100) then
+					if ((v96.Skullsplitter:IsCastable() and v43) or ((407 + 280) == (16580 - 12346))) then
+						if (v23(v96.Skullsplitter) or ((456 + 2874) < (3257 - 1828))) then
 							return "skullsplitter precombat";
 						end
 					end
-					if (((12152 - 9091) >= (10038 - 7080)) and (v90 < v103) and v97.ColossusSmash:IsCastable() and v36 and ((v54 and v30) or not v54)) then
-						if (((9068 - 5881) >= (1618 - 974)) and v24(v97.ColossusSmash)) then
+					if (((1001 + 146) >= (161 + 174)) and (v89 < v102) and v96.ColossusSmash:IsCastable() and v35 and ((v53 and v29) or not v53)) then
+						if (((10461 - 7026) > (262 + 1835)) and v23(v96.ColossusSmash)) then
 							return "colossus_smash precombat";
 						end
 					end
-					if (((230 + 414) <= (2712 - 2008)) and (v90 < v103) and v97.Warbreaker:IsCastable() and v49 and ((v57 and v30) or not v57)) then
-						if (((3301 - 2343) > (715 + 232)) and v24(v97.Warbreaker)) then
+					if (((v89 < v102) and v96.Warbreaker:IsCastable() and v48 and ((v56 and v29) or not v56)) or ((5749 - 1979) >= (5285 - (485 + 759)))) then
+						if (v23(v96.Warbreaker) or ((8771 - 4980) <= (2800 - (442 + 747)))) then
 							return "warbreaker precombat";
 						end
 					end
-					if (((11487 - 6995) >= (3342 - (364 + 324))) and v97.Overpower:IsCastable() and v40) then
-						if (((9435 - 5993) >= (3606 - 2103)) and v24(v97.Overpower)) then
+					if ((v96.Overpower:IsCastable() and v39) or ((5713 - (832 + 303)) <= (2954 - (88 + 858)))) then
+						if (((343 + 782) <= (1719 + 357)) and v23(v96.Overpower)) then
 							return "overpower precombat";
 						end
 					end
 				end
-				if ((v34 and v97.Charge:IsCastable()) or ((1051 + 2119) <= (6125 - 4661))) then
-					if (v24(v97.Charge) or ((7681 - 2884) == (13326 - 8938))) then
+				if ((v33 and v96.Charge:IsCastable()) or ((31 + 712) >= (5188 - (766 + 23)))) then
+					if (((5701 - 4546) < (2287 - 614)) and v23(v96.Charge)) then
 						return "charge precombat";
 					end
 				end
@@ -271,838 +274,787 @@ v0["Epix_Warrior_Arms.lua"] = function(...)
 			end
 		end
 	end
-	local function v113()
-		local v130 = 1268 - (1249 + 19);
+	local function v112()
+		local v130 = 0 - 0;
 		while true do
-			if (((498 + 53) <= (2650 - 1969)) and (v130 == (1087 - (686 + 400)))) then
-				if (((2572 + 705) > (636 - (73 + 156))) and (v90 < v103) and v97.Warbreaker:IsCastable() and v49 and ((v57 and v30) or not v57) and (v105 > (1 + 0))) then
-					if (((5506 - (721 + 90)) >= (16 + 1399)) and v24(v97.Warbreaker, not v101)) then
-						return "warbreaker hac 72";
+			if ((v130 == (6 - 4)) or ((3397 - (1036 + 37)) <= (410 + 168))) then
+				if (((7335 - 3568) == (2964 + 803)) and (v89 < v102) and v32 and ((v52 and v29) or not v52) and v96.Bladestorm:IsCastable() and (((v104 > (1481 - (641 + 839))) and (v13:BuffUp(v96.TestofMightBuff) or (not v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)))) or ((v104 > (914 - (910 + 3))) and (v14:DebuffRemains(v96.DeepWoundsDebuff) > (0 - 0))))) then
+					if (((5773 - (1466 + 218)) == (1880 + 2209)) and v23(v96.Bladestorm, not v100)) then
+						return "bladestorm hac 78";
 					end
 				end
-				if (((v90 < v103) and v36 and ((v54 and v30) or not v54) and v97.ColossusSmash:IsCastable()) or ((10428 - 7216) <= (1414 - (224 + 246)))) then
-					if (v93.CastCycle(v97.ColossusSmash, v104, v107, not v101) or ((5015 - 1919) <= (3310 - 1512))) then
-						return "colossus_smash hac 73";
+				if (((5606 - (556 + 592)) >= (596 + 1078)) and v96.Cleave:IsReady() and v34 and ((v104 > (810 - (329 + 479))) or (not v96.Battlelord:IsAvailable() and v13:BuffUp(v96.MercilessBonegrinderBuff) and (v96.MortalStrike:CooldownRemains() > v13:GCD())))) then
+					if (((1826 - (174 + 680)) <= (4872 - 3454)) and v23(v96.Cleave, not v100)) then
+						return "cleave hac 79";
 					end
 				end
-				if (((642 + 2895) == (85 + 3452)) and (v90 < v103) and v36 and ((v54 and v30) or not v54) and v97.ColossusSmash:IsCastable()) then
-					if (((2819 + 1018) >= (3121 - 1551)) and v24(v97.ColossusSmash, not v101)) then
-						return "colossus_smash hac 74";
+				if ((v96.Whirlwind:IsReady() and v49 and ((v104 > (3 - 1)) or (v96.StormofSwords:IsAvailable() and (v13:BuffUp(v96.MercilessBonegrinderBuff) or v13:BuffUp(v96.HurricaneBuff))))) or ((3526 + 1412) < (5501 - (396 + 343)))) then
+					if (v23(v96.Whirlwind, not v14:IsInMeleeRange(1 + 7)) or ((3981 - (29 + 1448)) > (5653 - (135 + 1254)))) then
+						return "whirlwind hac 80";
 					end
 				end
-				if (((v90 < v103) and v48 and ((v56 and v30) or not v56) and v97.ThunderousRoar:IsCastable() and (v14:BuffUp(v97.TestofMightBuff) or (not v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)) or ((v105 > (3 - 2)) and (v15:DebuffRemains(v97.DeepWoundsDebuff) > (513 - (203 + 310)))))) or ((4943 - (1238 + 755)) == (267 + 3545))) then
-					if (((6257 - (709 + 825)) >= (4271 - 1953)) and v24(v97.ThunderousRoar, not v15:IsInMeleeRange(11 - 3))) then
-						return "thunderous_roar hac 75";
+				if (((8110 - 5957) == (10052 - 7899)) and v96.Skullsplitter:IsCastable() and v43 and ((v13:Rage() < (27 + 13)) or (v96.TideofBlood:IsAvailable() and (v14:DebuffRemains(v96.RendDebuff) > (1527 - (389 + 1138))) and ((v13:BuffUp(v96.SweepingStrikes) and (v104 > (576 - (102 + 472)))) or v14:DebuffUp(v96.ColossusSmashDebuff) or v13:BuffUp(v96.TestofMightBuff))))) then
+					if (v23(v96.Skullsplitter, not v14:IsInMeleeRange(8 + 0)) or ((282 + 225) >= (2416 + 175))) then
+						return "sweeping_strikes execute 81";
 					end
 				end
-				if (((v90 < v103) and v83 and ((v55 and v30) or not v55) and (v84 == "player") and v97.SpearofBastion:IsCastable() and (v14:BuffUp(v97.TestofMightBuff) or (not v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)))) or ((2891 - (196 + 668)) > (11260 - 8408))) then
-					if (v24(v99.SpearOfBastionPlayer, not v15:IsSpellInRange(v97.SpearofBastion)) or ((2353 - 1217) > (5150 - (171 + 662)))) then
-						return "spear_of_bastion hac 76";
+				if (((6026 - (320 + 1225)) == (7976 - 3495)) and v96.MortalStrike:IsReady() and v38 and v13:BuffUp(v96.SweepingStrikes) and (v13:BuffStack(v96.CrushingAdvanceBuff) == (2 + 1))) then
+					if (v23(v96.MortalStrike, not v100) or ((3792 - (157 + 1307)) < (2552 - (821 + 1038)))) then
+						return "mortal_strike hac 81.5";
 					end
 				end
-				v130 = 95 - (4 + 89);
+				if (((10798 - 6470) == (474 + 3854)) and v96.Overpower:IsCastable() and v39 and v13:BuffUp(v96.SweepingStrikes) and v96.Dreadnaught:IsAvailable()) then
+					if (((2820 - 1232) >= (496 + 836)) and v23(v96.Overpower, not v100)) then
+						return "overpower hac 82";
+					end
+				end
+				v130 = 7 - 4;
 			end
-			if (((16641 - 11893) == (1729 + 3019)) and (v130 == (21 - 16))) then
-				if (((1466 + 2270) <= (6226 - (35 + 1451))) and v97.ThunderClap:IsReady() and v47 and (v105 > (1455 - (28 + 1425)))) then
-					if (v24(v97.ThunderClap, not v101) or ((5383 - (941 + 1052)) <= (2935 + 125))) then
-						return "thunder_clap hac 90";
-					end
-				end
-				if ((v97.MortalStrike:IsReady() and v39) or ((2513 - (822 + 692)) > (3843 - 1150))) then
-					if (((219 + 244) < (898 - (45 + 252))) and v24(v97.MortalStrike, not v101)) then
-						return "mortal_strike hac 91";
-					end
-				end
-				if ((v97.Rend:IsReady() and v41 and (v105 == (1 + 0)) and v15:DebuffRefreshable(v97.RendDebuff)) or ((752 + 1431) < (1671 - 984))) then
-					if (((4982 - (114 + 319)) == (6530 - 1981)) and v24(v97.Rend, not v101)) then
-						return "rend hac 92";
-					end
-				end
-				if (((5986 - 1314) == (2979 + 1693)) and v97.Whirlwind:IsReady() and v50 and (v97.StormofSwords:IsAvailable() or (v97.FervorofBattle:IsAvailable() and (v105 > (1 - 0))))) then
-					if (v24(v97.Whirlwind, not v15:IsInMeleeRange(16 - 8)) or ((5631 - (556 + 1407)) < (1601 - (741 + 465)))) then
-						return "whirlwind hac 93";
-					end
-				end
-				if ((v97.Cleave:IsReady() and v35 and not v97.CrushingForce:IsAvailable()) or ((4631 - (170 + 295)) == (240 + 215))) then
-					if (v24(v97.Cleave, not v101) or ((4087 + 362) == (6556 - 3893))) then
-						return "cleave hac 94";
-					end
-				end
-				v130 = 5 + 1;
-			end
-			if ((v130 == (4 + 2)) or ((2422 + 1855) < (4219 - (957 + 273)))) then
-				if ((v97.IgnorePain:IsReady() and v65 and v97.Battlelord:IsAvailable() and v97.AngerManagement:IsAvailable() and (v14:Rage() > (9 + 21)) and ((v15:HealthPercentage() < (9 + 11)) or (v97.Massacre:IsAvailable() and (v15:HealthPercentage() < (133 - 98))))) or ((2292 - 1422) >= (12672 - 8523))) then
-					if (((10953 - 8741) < (4963 - (389 + 1391))) and v24(v97.IgnorePain, not v101)) then
+			if ((v130 == (1031 - (834 + 192))) or ((266 + 3908) > (1091 + 3157))) then
+				if ((v96.IgnorePain:IsReady() and v64 and v96.Battlelord:IsAvailable() and v96.AngerManagement:IsAvailable() and (v13:Rage() > (1 + 29)) and ((v14:HealthPercentage() < (30 - 10)) or (v96.Massacre:IsAvailable() and (v14:HealthPercentage() < (339 - (300 + 4)))))) or ((1225 + 3361) <= (214 - 132))) then
+					if (((4225 - (112 + 250)) == (1540 + 2323)) and v23(v96.IgnorePain, not v100)) then
 						return "ignore_pain hac 95";
 					end
 				end
-				if (((2915 + 1731) > (312 + 2680)) and v97.Slam:IsReady() and v45 and v97.CrushingForce:IsAvailable() and (v14:Rage() > (68 - 38)) and ((v97.FervorofBattle:IsAvailable() and (v105 == (952 - (783 + 168)))) or not v97.FervorofBattle:IsAvailable())) then
-					if (((4812 - 3378) < (3056 + 50)) and v24(v97.Slam, not v101)) then
+				if ((v96.Slam:IsReady() and v44 and v96.CrushingForce:IsAvailable() and (v13:Rage() > (75 - 45)) and ((v96.FervorofBattle:IsAvailable() and (v104 == (1 + 0))) or not v96.FervorofBattle:IsAvailable())) or ((146 + 136) <= (32 + 10))) then
+					if (((2286 + 2323) >= (570 + 196)) and v23(v96.Slam, not v100)) then
 						return "slam hac 96";
 					end
 				end
-				if (((1097 - (309 + 2)) < (9283 - 6260)) and v97.Shockwave:IsCastable() and v43 and (v97.SonicBoom:IsAvailable())) then
-					if (v24(v97.Shockwave, not v15:IsInMeleeRange(1220 - (1090 + 122))) or ((792 + 1650) < (248 - 174))) then
+				if ((v96.Shockwave:IsCastable() and v42 and (v96.SonicBoom:IsAvailable())) or ((2566 - (1001 + 413)) == (5547 - 3059))) then
+					if (((4304 - (244 + 638)) > (4043 - (627 + 66))) and v23(v96.Shockwave, not v14:IsInMeleeRange(23 - 15))) then
 						return "shockwave hac 97";
 					end
 				end
-				if (((3104 + 1431) == (5653 - (628 + 490))) and v30 and (v90 < v103) and v33 and ((v53 and v30) or not v53) and v97.Bladestorm:IsCastable()) then
-					if (v24(v97.Bladestorm, not v101) or ((540 + 2469) <= (5211 - 3106))) then
+				if (((1479 - (512 + 90)) > (2282 - (1665 + 241))) and v29 and (v89 < v102) and v32 and ((v52 and v29) or not v52) and v96.Bladestorm:IsCastable()) then
+					if (v23(v96.Bladestorm, not v100) or ((3835 - (373 + 344)) <= (835 + 1016))) then
 						return "bladestorm hac 98";
 					end
 				end
 				break;
 			end
-			if (((8363 - 6533) < (4443 - (431 + 343))) and (v130 == (0 - 0))) then
-				if ((v97.Execute:IsReady() and v37 and v14:BuffUp(v97.JuggernautBuff) and (v14:BuffRemains(v97.JuggernautBuff) < v14:GCD())) or ((4136 - 2706) >= (2854 + 758))) then
-					if (((344 + 2339) >= (4155 - (556 + 1139))) and v24(v97.Execute, not v101)) then
+			if ((v130 == (0 + 0)) or ((435 - 270) >= (5908 - 2416))) then
+				if (((5048 - (35 + 1064)) < (3534 + 1322)) and v96.Execute:IsReady() and v36 and v13:BuffUp(v96.JuggernautBuff) and (v13:BuffRemains(v96.JuggernautBuff) < v13:GCD())) then
+					if (v23(v96.Execute, not v100) or ((9148 - 4872) < (13 + 3003))) then
 						return "execute hac 67";
 					end
 				end
-				if ((v97.ThunderClap:IsReady() and v47 and (v105 > (17 - (6 + 9))) and v97.BloodandThunder:IsAvailable() and v97.Rend:IsAvailable() and v15:DebuffRefreshable(v97.RendDebuff)) or ((331 + 1473) >= (1678 + 1597))) then
-					if (v24(v97.ThunderClap, not v101) or ((1586 - (28 + 141)) > (1406 + 2223))) then
+				if (((5926 - (298 + 938)) > (5384 - (233 + 1026))) and v96.ThunderClap:IsReady() and v46 and (v104 > (1668 - (636 + 1030))) and v96.BloodandThunder:IsAvailable() and v96.Rend:IsAvailable() and v14:DebuffRefreshable(v96.RendDebuff)) then
+					if (v23(v96.ThunderClap, not v100) or ((26 + 24) >= (876 + 20))) then
 						return "thunder_clap hac 68";
 					end
 				end
-				if (((5918 - 1123) > (285 + 117)) and v97.SweepingStrikes:IsCastable() and v46 and (v105 >= (1319 - (486 + 831))) and ((v97.Bladestorm:CooldownRemains() > (38 - 23)) or not v97.Bladestorm:IsAvailable())) then
-					if (((16944 - 12131) > (674 + 2891)) and v24(v97.SweepingStrikes, not v15:IsInMeleeRange(25 - 17))) then
+				if ((v96.SweepingStrikes:IsCastable() and v45 and (v104 >= (1 + 1)) and ((v96.Bladestorm:CooldownRemains() > (2 + 13)) or not v96.Bladestorm:IsAvailable())) or ((1935 - (55 + 166)) >= (574 + 2384))) then
+					if (v23(v96.SweepingStrikes, not v14:IsInMeleeRange(1 + 7)) or ((5694 - 4203) < (941 - (36 + 261)))) then
 						return "sweeping_strikes hac 68";
 					end
 				end
-				if (((5175 - (668 + 595)) == (3521 + 391)) and ((v97.Rend:IsReady() and v41 and (v105 == (1 + 0)) and ((v15:HealthPercentage() > (54 - 34)) or (v97.Massacre:IsAvailable() and (v15:HealthPercentage() < (325 - (23 + 267)))))) or (v97.TideofBlood:IsAvailable() and (v97.Skullsplitter:CooldownRemains() <= v14:GCD()) and ((v97.ColossusSmash:CooldownRemains() < v14:GCD()) or v15:DebuffUp(v97.ColossusSmashDebuff)) and (v15:DebuffRemains(v97.RendDebuff) < ((1965 - (1129 + 815)) * (387.85 - (371 + 16))))))) then
-					if (((4571 - (1326 + 424)) <= (9136 - 4312)) and v24(v97.Rend, not v101)) then
+				if (((1231 - 527) < (2355 - (34 + 1334))) and ((v96.Rend:IsReady() and v40 and (v104 == (1 + 0)) and ((v14:HealthPercentage() > (16 + 4)) or (v96.Massacre:IsAvailable() and (v14:HealthPercentage() < (1318 - (1035 + 248)))))) or (v96.TideofBlood:IsAvailable() and (v96.Skullsplitter:CooldownRemains() <= v13:GCD()) and ((v96.ColossusSmash:CooldownRemains() < v13:GCD()) or v14:DebuffUp(v96.ColossusSmashDebuff)) and (v14:DebuffRemains(v96.RendDebuff) < ((42 - (20 + 1)) * (0.85 + 0)))))) then
+					if (((4037 - (134 + 185)) > (3039 - (549 + 584))) and v23(v96.Rend, not v100)) then
 						return "rend hac 70";
 					end
 				end
-				if (((6351 - 4613) <= (2313 - (88 + 30))) and (v90 < v103) and v31 and ((v52 and v30) or not v52) and v97.Avatar:IsCastable()) then
-					if (((812 - (720 + 51)) <= (6713 - 3695)) and v24(v97.Avatar, not v101)) then
+				if (((v89 < v102) and v30 and ((v51 and v29) or not v51) and v96.Avatar:IsCastable()) or ((1643 - (314 + 371)) > (12478 - 8843))) then
+					if (((4469 - (478 + 490)) <= (2380 + 2112)) and v23(v96.Avatar, not v100)) then
 						return "avatar hac 71";
 					end
 				end
-				v130 = 1777 - (421 + 1355);
+				if (((v89 < v102) and v96.Warbreaker:IsCastable() and v48 and ((v56 and v29) or not v56) and (v104 > (1173 - (786 + 386)))) or ((11148 - 7706) < (3927 - (1055 + 324)))) then
+					if (((4215 - (1093 + 247)) >= (1301 + 163)) and v23(v96.Warbreaker, not v100)) then
+						return "warbreaker hac 72";
+					end
+				end
+				v130 = 1 + 0;
 			end
-			if (((3538 - 1393) <= (2016 + 2088)) and (v130 == (1085 - (286 + 797)))) then
-				if (((9829 - 7140) < (8024 - 3179)) and (v90 < v103) and v83 and ((v55 and v30) or not v55) and (v84 == "cursor") and v97.SpearofBastion:IsCastable() and (v14:BuffUp(v97.TestofMightBuff) or (not v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)))) then
-					if (v24(v99.SpearOfBastionCursor, not v15:IsSpellInRange(v97.SpearofBastion)) or ((2761 - (397 + 42)) > (819 + 1803))) then
-						return "spear_of_bastion hac 76";
+			if (((11 - 8) == v130) or ((16279 - 11482) >= (13922 - 9029))) then
+				if ((v96.MortalStrike:IsReady() and v38) or ((1384 - 833) > (736 + 1332))) then
+					if (((8144 - 6030) > (3253 - 2309)) and v92.CastCycle(v96.MortalStrike, v103, v107, not v100)) then
+						return "mortal_strike hac 83";
 					end
-				end
-				if (((v90 < v103) and v33 and ((v53 and v30) or not v53) and v97.Bladestorm:IsCastable() and v97.Unhinged:IsAvailable() and (v14:BuffUp(v97.TestofMightBuff) or (not v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)))) or ((5334 - (24 + 776)) == (3206 - 1124))) then
-					if (v24(v97.Bladestorm, not v101) or ((2356 - (222 + 563)) > (4113 - 2246))) then
-						return "bladestorm hac 77";
-					end
-				end
-				if (((v90 < v103) and v33 and ((v53 and v30) or not v53) and v97.Bladestorm:IsCastable() and (((v105 > (1 + 0)) and (v14:BuffUp(v97.TestofMightBuff) or (not v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)))) or ((v105 > (191 - (23 + 167))) and (v15:DebuffRemains(v97.DeepWoundsDebuff) > (1798 - (690 + 1108)))))) or ((958 + 1696) >= (2472 + 524))) then
-					if (((4826 - (40 + 808)) > (347 + 1757)) and v24(v97.Bladestorm, not v101)) then
-						return "bladestorm hac 78";
-					end
-				end
-				if (((11452 - 8457) > (1473 + 68)) and v97.Cleave:IsReady() and v35 and ((v105 > (2 + 0)) or (not v97.Battlelord:IsAvailable() and v14:BuffUp(v97.MercilessBonegrinderBuff) and (v97.MortalStrike:CooldownRemains() > v14:GCD())))) then
-					if (((1782 + 1467) > (1524 - (47 + 524))) and v24(v97.Cleave, not v101)) then
-						return "cleave hac 79";
-					end
-				end
-				if ((v97.Whirlwind:IsReady() and v50 and ((v105 > (2 + 0)) or (v97.StormofSwords:IsAvailable() and (v14:BuffUp(v97.MercilessBonegrinderBuff) or v14:BuffUp(v97.HurricaneBuff))))) or ((8946 - 5673) > (6837 - 2264))) then
-					if (v24(v97.Whirlwind, not v15:IsInMeleeRange(17 - 9)) or ((4877 - (1165 + 561)) < (39 + 1245))) then
-						return "whirlwind hac 80";
-					end
-				end
-				v130 = 9 - 6;
-			end
-			if ((v130 == (2 + 2)) or ((2329 - (341 + 138)) == (413 + 1116))) then
-				if (((1694 - 873) < (2449 - (89 + 237))) and (v90 < v103) and v48 and ((v56 and v30) or not v56) and v97.ThunderousRoar:IsCastable()) then
-					if (((2901 - 1999) < (4894 - 2569)) and v24(v97.ThunderousRoar, not v15:IsInMeleeRange(889 - (581 + 300)))) then
-						return "thunderous_roar hac 85";
-					end
-				end
-				if (((2078 - (855 + 365)) <= (7035 - 4073)) and v97.Shockwave:IsCastable() and v43 and (v105 > (1 + 1)) and (v97.SonicBoom:IsAvailable() or v15:IsCasting())) then
-					if (v24(v97.Shockwave, not v15:IsInMeleeRange(1243 - (1030 + 205))) or ((3705 + 241) < (1199 + 89))) then
-						return "shockwave hac 86";
-					end
-				end
-				if ((v97.Overpower:IsCastable() and v40 and (v105 == (287 - (156 + 130))) and (((v97.Overpower:Charges() == (4 - 2)) and not v97.Battlelord:IsAvailable() and (v15:Debuffdown(v97.ColossusSmashDebuff) or (v14:RagePercentage() < (42 - 17)))) or v97.Battlelord:IsAvailable())) or ((6639 - 3397) == (150 + 417))) then
-					if (v24(v97.Overpower, not v101) or ((494 + 353) >= (1332 - (10 + 59)))) then
-						return "overpower hac 87";
-					end
-				end
-				if ((v97.Slam:IsReady() and v45 and (v105 == (1 + 0)) and not v97.Battlelord:IsAvailable() and (v14:RagePercentage() > (344 - 274))) or ((3416 - (671 + 492)) == (1474 + 377))) then
-					if (v24(v97.Slam, not v101) or ((3302 - (369 + 846)) > (628 + 1744))) then
-						return "slam hac 88";
-					end
-				end
-				if ((v97.Overpower:IsCastable() and v40 and (((v97.Overpower:Charges() == (2 + 0)) and (not v97.TestofMight:IsAvailable() or (v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)) or v97.Battlelord:IsAvailable())) or (v14:Rage() < (2015 - (1036 + 909))))) or ((3535 + 910) < (6965 - 2816))) then
-					if (v24(v97.Overpower, not v101) or ((2021 - (11 + 192)) == (43 + 42))) then
-						return "overpower hac 89";
-					end
-				end
-				v130 = 180 - (135 + 40);
-			end
-			if (((1526 - 896) < (1283 + 844)) and (v130 == (6 - 3))) then
-				if ((v97.Skullsplitter:IsCastable() and v44 and ((v14:Rage() < (59 - 19)) or (v97.TideofBlood:IsAvailable() and (v15:DebuffRemains(v97.RendDebuff) > (176 - (50 + 126))) and ((v14:BuffUp(v97.SweepingStrikes) and (v105 > (5 - 3))) or v15:DebuffUp(v97.ColossusSmashDebuff) or v14:BuffUp(v97.TestofMightBuff))))) or ((429 + 1509) == (3927 - (1233 + 180)))) then
-					if (((5224 - (522 + 447)) >= (1476 - (107 + 1314))) and v24(v97.Skullsplitter, not v15:IsInMeleeRange(4 + 4))) then
-						return "sweeping_strikes execute 81";
-					end
-				end
-				if (((9137 - 6138) > (491 + 665)) and v97.MortalStrike:IsReady() and v39 and v14:BuffUp(v97.SweepingStrikes) and (v14:BuffStack(v97.CrushingAdvanceBuff) == (5 - 2))) then
-					if (((9298 - 6948) > (3065 - (716 + 1194))) and v24(v97.MortalStrike, not v101)) then
-						return "mortal_strike hac 81.5";
-					end
-				end
-				if (((69 + 3960) <= (520 + 4333)) and v97.Overpower:IsCastable() and v40 and v14:BuffUp(v97.SweepingStrikes) and v97.Dreadnaught:IsAvailable()) then
-					if (v24(v97.Overpower, not v101) or ((1019 - (74 + 429)) > (6623 - 3189))) then
-						return "overpower hac 82";
-					end
-				end
-				if (((2006 + 2040) >= (6942 - 3909)) and v97.MortalStrike:IsReady() and v39) then
-					if (v93.CastCycle(v97.MortalStrike, v104, v108, not v101) or ((1924 + 795) <= (4460 - 3013))) then
+					if (v23(v96.MortalStrike, not v100) or ((1706 + 556) >= (7917 - 4821))) then
 						return "mortal_strike hac 83";
 					end
 				end
-				if ((v97.Execute:IsReady() and v37 and (v14:BuffUp(v97.SuddenDeathBuff) or ((v105 <= (4 - 2)) and ((v15:HealthPercentage() < (453 - (279 + 154))) or (v97.Massacre:IsAvailable() and (v15:HealthPercentage() < (813 - (454 + 324)))))) or v14:BuffUp(v97.SweepingStrikes))) or ((3253 + 881) < (3943 - (12 + 5)))) then
-					if (v93.CastCycle(v97.Execute, v104, v109, not v101) or ((89 + 75) >= (7096 - 4311))) then
+				if ((v96.Execute:IsReady() and v36 and (v13:BuffUp(v96.SuddenDeathBuff) or ((v104 <= (690 - (364 + 324))) and ((v14:HealthPercentage() < (54 - 34)) or (v96.Massacre:IsAvailable() and (v14:HealthPercentage() < (83 - 48))))) or v13:BuffUp(v96.SweepingStrikes))) or ((748 + 1507) >= (14799 - 11262))) then
+					if (v92.CastCycle(v96.Execute, v103, v108, not v100) or ((6144 - 2307) < (3966 - 2660))) then
+						return "execute hac 84";
+					end
+					if (((4218 - (1249 + 19)) == (2663 + 287)) and v23(v96.Execute, not v100)) then
 						return "execute hac 84";
 					end
 				end
-				v130 = 2 + 2;
+				if (((v89 < v102) and v47 and ((v55 and v29) or not v55) and v96.ThunderousRoar:IsCastable()) or ((18384 - 13661) < (4384 - (686 + 400)))) then
+					if (((892 + 244) >= (383 - (73 + 156))) and v23(v96.ThunderousRoar, not v14:IsInMeleeRange(1 + 7))) then
+						return "thunderous_roar hac 85";
+					end
+				end
+				if ((v96.Shockwave:IsCastable() and v42 and (v104 > (813 - (721 + 90))) and (v96.SonicBoom:IsAvailable() or v14:IsCasting())) or ((4 + 267) > (15416 - 10668))) then
+					if (((5210 - (224 + 246)) >= (5105 - 1953)) and v23(v96.Shockwave, not v14:IsInMeleeRange(14 - 6))) then
+						return "shockwave hac 86";
+					end
+				end
+				if ((v96.Overpower:IsCastable() and v39 and (v104 == (1 + 0)) and (((v96.Overpower:Charges() == (1 + 1)) and not v96.Battlelord:IsAvailable() and (v14:Debuffdown(v96.ColossusSmashDebuff) or (v13:RagePercentage() < (19 + 6)))) or v96.Battlelord:IsAvailable())) or ((5125 - 2547) >= (11281 - 7891))) then
+					if (((554 - (203 + 310)) <= (3654 - (1238 + 755))) and v23(v96.Overpower, not v100)) then
+						return "overpower hac 87";
+					end
+				end
+				if (((42 + 559) < (5094 - (709 + 825))) and v96.Slam:IsReady() and v44 and (v104 == (1 - 0)) and not v96.Battlelord:IsAvailable() and (v13:RagePercentage() > (101 - 31))) then
+					if (((1099 - (196 + 668)) < (2712 - 2025)) and v23(v96.Slam, not v100)) then
+						return "slam hac 88";
+					end
+				end
+				v130 = 7 - 3;
 			end
-		end
-	end
-	local function v114()
-		local v131 = 1093 - (277 + 816);
-		while true do
-			if ((v131 == (8 - 6)) or ((1708 - (1058 + 125)) == (396 + 1713))) then
-				if (((1008 - (815 + 160)) == (141 - 108)) and (v90 < v103) and v83 and ((v55 and v30) or not v55) and (v84 == "player") and v97.SpearofBastion:IsCastable() and (v15:DebuffUp(v97.ColossusSmashDebuff) or v14:BuffUp(v97.TestofMightBuff))) then
-					if (((7249 - 4195) <= (958 + 3057)) and v24(v99.SpearOfBastionPlayer, not v15:IsSpellInRange(v97.SpearofBastion))) then
-						return "spear_of_bastion execute 57";
+			if (((5382 - (171 + 662)) > (1246 - (4 + 89))) and ((13 - 9) == v130)) then
+				if ((v96.Overpower:IsCastable() and v39 and (((v96.Overpower:Charges() == (1 + 1)) and (not v96.TestofMight:IsAvailable() or (v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)) or v96.Battlelord:IsAvailable())) or (v13:Rage() < (307 - 237)))) or ((1833 + 2841) < (6158 - (35 + 1451)))) then
+					if (((5121 - (28 + 1425)) < (6554 - (941 + 1052))) and v23(v96.Overpower, not v100)) then
+						return "overpower hac 89";
 					end
 				end
-				if (((5469 - 3598) < (5280 - (41 + 1857))) and (v90 < v103) and v83 and ((v55 and v30) or not v55) and (v84 == "cursor") and v97.SpearofBastion:IsCastable() and (v15:DebuffUp(v97.ColossusSmashDebuff) or v14:BuffUp(v97.TestofMightBuff))) then
-					if (((3186 - (1222 + 671)) <= (5597 - 3431)) and v24(v99.SpearOfBastionCursor, not v15:IsSpellInRange(v97.SpearofBastion))) then
-						return "spear_of_bastion execute 57";
+				if ((v96.ThunderClap:IsReady() and v46 and (v104 > (2 + 0))) or ((1969 - (822 + 692)) == (5146 - 1541))) then
+					if (v23(v96.ThunderClap, not v100) or ((1255 + 1408) == (3609 - (45 + 252)))) then
+						return "thunder_clap hac 90";
 					end
 				end
-				if ((v97.Cleave:IsReady() and v35 and (v105 > (2 - 0)) and (v15:DebuffRemains(v97.DeepWoundsDebuff) < v14:GCD())) or ((3761 - (229 + 953)) < (1897 - (1111 + 663)))) then
-					if (v24(v97.Cleave, not v101) or ((2425 - (874 + 705)) >= (332 + 2036))) then
-						return "cleave execute 58";
+				if (((4232 + 45) <= (1541 + 2934)) and v96.MortalStrike:IsReady() and v38) then
+					if (v23(v96.MortalStrike, not v100) or ((2117 - 1247) == (1622 - (114 + 319)))) then
+						return "mortal_strike hac 91";
 					end
 				end
-				if ((v97.MortalStrike:IsReady() and v39 and ((v15:DebuffStack(v97.ExecutionersPrecisionDebuff) == (2 + 0)) or (v15:DebuffRemains(v97.DeepWoundsDebuff) <= v14:GCD()))) or ((8338 - 4326) <= (95 + 3263))) then
-					if (((2173 - (642 + 37)) <= (686 + 2319)) and v24(v97.MortalStrike, not v101)) then
-						return "mortal_strike execute 59";
+				if (((2228 - 675) <= (4014 - 881)) and v96.Rend:IsReady() and v40 and (v104 == (1 + 0)) and v14:DebuffRefreshable(v96.RendDebuff)) then
+					if (v23(v96.Rend, not v100) or ((3332 - 1095) >= (7356 - 3845))) then
+						return "rend hac 92";
 					end
 				end
-				v131 = 1 + 2;
+				if ((v96.Whirlwind:IsReady() and v49 and (v96.StormofSwords:IsAvailable() or (v96.FervorofBattle:IsAvailable() and (v104 > (1964 - (556 + 1407)))))) or ((2530 - (741 + 465)) > (3485 - (170 + 295)))) then
+					if (v23(v96.Whirlwind, not v14:IsInMeleeRange(5 + 3)) or ((2749 + 243) == (4631 - 2750))) then
+						return "whirlwind hac 93";
+					end
+				end
+				if (((2575 + 531) > (979 + 547)) and v96.Cleave:IsReady() and v34 and not v96.CrushingForce:IsAvailable()) then
+					if (((1712 + 1311) < (5100 - (957 + 273))) and v23(v96.Cleave, not v100)) then
+						return "cleave hac 94";
+					end
+				end
+				v130 = 2 + 3;
 			end
-			if (((2 - 1) == v131) or ((3565 - (233 + 221)) == (4934 - 2800))) then
-				if (((2073 + 282) == (3896 - (718 + 823))) and (v90 < v103) and v36 and ((v54 and v30) or not v54) and v97.ColossusSmash:IsCastable()) then
-					if (v24(v97.ColossusSmash, not v101) or ((371 + 217) <= (1237 - (266 + 539)))) then
-						return "colossus_smash execute 55";
-					end
-				end
-				if (((13581 - 8784) >= (5120 - (636 + 589))) and v97.Execute:IsReady() and v37 and v14:BuffUp(v97.SuddenDeathBuff) and (v15:DebuffRemains(v97.DeepWoundsDebuff) > (0 - 0))) then
-					if (((7377 - 3800) == (2835 + 742)) and v24(v97.Execute, not v101)) then
-						return "execute execute 56";
-					end
-				end
-				if (((1379 + 2415) > (4708 - (657 + 358))) and v97.Skullsplitter:IsCastable() and v44 and ((v97.TestofMight:IsAvailable() and (v14:RagePercentage() <= (79 - 49))) or (not v97.TestofMight:IsAvailable() and (v15:DebuffUp(v97.ColossusSmashDebuff) or (v97.ColossusSmash:CooldownRemains() > (11 - 6))) and (v14:RagePercentage() <= (1217 - (1151 + 36)))))) then
-					if (v24(v97.Skullsplitter, not v15:IsInMeleeRange(8 + 0)) or ((336 + 939) == (12244 - 8144))) then
-						return "skullsplitter execute 57";
-					end
-				end
-				if (((v90 < v103) and v48 and ((v56 and v30) or not v56) and v97.ThunderousRoar:IsCastable() and (v14:BuffUp(v97.TestofMightBuff) or (not v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)))) or ((3423 - (1552 + 280)) >= (4414 - (64 + 770)))) then
-					if (((668 + 315) <= (4104 - 2296)) and v24(v97.ThunderousRoar, not v15:IsInMeleeRange(2 + 6))) then
-						return "thunderous_roar execute 57";
-					end
-				end
-				v131 = 1245 - (157 + 1086);
-			end
-			if ((v131 == (7 - 3)) or ((9416 - 7266) <= (1836 - 639))) then
-				if (((5143 - 1374) >= (1992 - (599 + 220))) and (v90 < v103) and v33 and ((v53 and v30) or not v53) and v97.Bladestorm:IsCastable()) then
-					if (((2956 - 1471) == (3416 - (1813 + 118))) and v24(v97.Bladestorm, not v101)) then
-						return "bladestorm execute 65";
-					end
-				end
-				break;
-			end
-			if ((v131 == (0 + 0)) or ((4532 - (841 + 376)) <= (3897 - 1115))) then
-				if (((v90 < v103) and v46 and v97.SweepingStrikes:IsCastable() and (v105 > (1 + 0))) or ((2391 - 1515) >= (3823 - (464 + 395)))) then
-					if (v24(v97.SweepingStrikes, not v15:IsInMeleeRange(20 - 12)) or ((1072 + 1160) > (3334 - (467 + 370)))) then
-						return "sweeping_strikes execute 51";
-					end
-				end
-				if ((v97.Rend:IsReady() and v41 and (v15:DebuffRemains(v97.RendDebuff) <= v14:GCD()) and not v97.Bloodletting:IsAvailable() and ((not v97.Warbreaker:IsAvailable() and (v97.ColossusSmash:CooldownRemains() < (8 - 4))) or (v97.Warbreaker:IsAvailable() and (v97.Warbreaker:CooldownRemains() < (3 + 1)))) and (v15:TimeToDie() > (40 - 28))) or ((330 + 1780) <= (772 - 440))) then
-					if (((4206 - (150 + 370)) > (4454 - (74 + 1208))) and v24(v97.Rend, not v101)) then
-						return "rend execute 52";
-					end
-				end
-				if (((v90 < v103) and v31 and ((v52 and v30) or not v52) and v97.Avatar:IsCastable() and (v97.ColossusSmash:CooldownUp() or v15:DebuffUp(v97.ColossusSmashDebuff) or (v103 < (49 - 29)))) or ((21218 - 16744) < (584 + 236))) then
-					if (((4669 - (14 + 376)) >= (4998 - 2116)) and v24(v97.Avatar, not v101)) then
-						return "avatar execute 53";
-					end
-				end
-				if (((v90 < v103) and v49 and ((v57 and v30) or not v57) and v97.Warbreaker:IsCastable()) or ((1313 + 716) >= (3094 + 427))) then
-					if (v24(v97.Warbreaker, not v101) or ((1943 + 94) >= (13601 - 8959))) then
-						return "warbreaker execute 54";
-					end
-				end
-				v131 = 1 + 0;
-			end
-			if (((1798 - (23 + 55)) < (10565 - 6107)) and (v131 == (3 + 0))) then
-				if ((v97.Overpower:IsCastable() and v40 and (v14:Rage() < (36 + 4)) and (v14:BuffStack(v97.MartialProwessBuff) < (2 - 0))) or ((138 + 298) > (3922 - (652 + 249)))) then
-					if (((1908 - 1195) <= (2715 - (708 + 1160))) and v24(v97.Overpower, not v101)) then
-						return "overpower execute 60";
-					end
-				end
-				if (((5846 - 3692) <= (7349 - 3318)) and v97.Execute:IsReady() and v37) then
-					if (((4642 - (10 + 17)) == (1037 + 3578)) and v24(v97.Execute, not v101)) then
-						return "execute execute 62";
-					end
-				end
-				if ((v97.Shockwave:IsCastable() and v43 and (v97.SonicBoom:IsAvailable() or v15:IsCasting())) or ((5522 - (1400 + 332)) == (959 - 459))) then
-					if (((1997 - (242 + 1666)) < (95 + 126)) and v24(v97.Shockwave, not v15:IsInMeleeRange(3 + 5))) then
-						return "shockwave execute 63";
-					end
-				end
-				if (((1751 + 303) >= (2361 - (850 + 90))) and v97.Overpower:IsCastable() and v40) then
-					if (((1211 - 519) < (4448 - (360 + 1030))) and v24(v97.Overpower, not v101)) then
-						return "overpower execute 64";
-					end
-				end
-				v131 = 4 + 0;
-			end
-		end
-	end
-	local function v115()
-		local v132 = 0 - 0;
-		while true do
-			if ((v132 == (0 - 0)) or ((4915 - (909 + 752)) == (2878 - (109 + 1114)))) then
-				if (((v90 < v103) and v46 and v97.SweepingStrikes:IsCastable() and (v105 > (1 - 0))) or ((505 + 791) == (5152 - (6 + 236)))) then
-					if (((2122 + 1246) == (2711 + 657)) and v24(v97.SweepingStrikes, not v15:IsInMeleeRange(18 - 10))) then
-						return "sweeping_strikes single_target 97";
-					end
-				end
-				if (((4616 - 1973) < (4948 - (1076 + 57))) and v97.Execute:IsReady() and (v14:BuffUp(v97.SuddenDeathBuff))) then
-					if (((315 + 1598) > (1182 - (579 + 110))) and v24(v97.Execute, not v101)) then
-						return "execute single_target 98";
-					end
-				end
-				if (((376 + 4379) > (3031 + 397)) and v97.MortalStrike:IsReady() and v39) then
-					if (((733 + 648) <= (2776 - (174 + 233))) and v24(v97.MortalStrike, not v101)) then
-						return "mortal_strike single_target 99";
-					end
-				end
-				v132 = 2 - 1;
-			end
-			if ((v132 == (1 - 0)) or ((2154 + 2689) == (5258 - (663 + 511)))) then
-				if (((4166 + 503) > (79 + 284)) and v97.Rend:IsReady() and v41 and ((v15:DebuffRemains(v97.RendDebuff) <= v14:GCD()) or (v97.TideofBlood:IsAvailable() and (v97.Skullsplitter:CooldownRemains() <= v14:GCD()) and ((v97.ColossusSmash:CooldownRemains() <= v14:GCD()) or v15:DebuffUp(v97.ColossusSmashDebuff)) and (v15:DebuffRemains(v97.RendDebuff) < (v97.RendDebuff:BaseDuration() * (0.85 - 0)))))) then
-					if (v24(v97.Rend, not v101) or ((1137 + 740) >= (7387 - 4249))) then
-						return "rend single_target 100";
-					end
-				end
-				if (((11479 - 6737) >= (1731 + 1895)) and (v90 < v103) and v31 and ((v52 and v30) or not v52) and v97.Avatar:IsCastable() and ((v97.WarlordsTorment:IsAvailable() and (v14:RagePercentage() < (63 - 30)) and (v97.ColossusSmash:CooldownUp() or v15:DebuffUp(v97.ColossusSmashDebuff) or v14:BuffUp(v97.TestofMightBuff))) or (not v97.WarlordsTorment:IsAvailable() and (v97.ColossusSmash:CooldownUp() or v15:DebuffUp(v97.ColossusSmashDebuff))))) then
-					if (v24(v97.Avatar, not v101) or ((3236 + 1304) == (84 + 832))) then
-						return "avatar single_target 101";
-					end
-				end
-				if (((v90 < v103) and v83 and ((v55 and v30) or not v55) and (v84 == "player") and v97.SpearofBastion:IsCastable() and ((v97.ColossusSmash:CooldownRemains() <= v14:GCD()) or (v97.Warbreaker:CooldownRemains() <= v14:GCD()))) or ((1878 - (478 + 244)) > (4862 - (440 + 77)))) then
-					if (((1018 + 1219) < (15551 - 11302)) and v24(v99.SpearOfBastionPlayer, not v15:IsSpellInRange(v97.SpearofBastion))) then
-						return "spear_of_bastion single_target 102";
-					end
-				end
-				v132 = 1558 - (655 + 901);
-			end
-			if ((v132 == (1 + 3)) or ((2055 + 628) < (16 + 7))) then
-				if (((2807 - 2110) <= (2271 - (695 + 750))) and v97.Whirlwind:IsReady() and v50 and v97.StormofSwords:IsAvailable() and v97.TestofMight:IsAvailable() and (v14:RagePercentage() > (273 - 193)) and v15:DebuffUp(v97.ColossusSmashDebuff)) then
-					if (((1704 - 599) <= (4729 - 3553)) and v24(v97.Whirlwind, not v15:IsInMeleeRange(359 - (285 + 66)))) then
-						return "whirlwind single_target 108";
-					end
-				end
-				if (((7876 - 4497) <= (5122 - (682 + 628))) and v97.ThunderClap:IsReady() and v47 and (v15:DebuffRemains(v97.RendDebuff) <= v14:GCD()) and not v97.TideofBlood:IsAvailable()) then
-					if (v24(v97.ThunderClap, not v101) or ((128 + 660) >= (1915 - (176 + 123)))) then
-						return "thunder_clap single_target 109";
-					end
-				end
-				if (((776 + 1078) <= (2452 + 927)) and (v90 < v103) and v33 and ((v53 and v30) or not v53) and v97.Bladestorm:IsCastable() and ((v97.Hurricane:IsAvailable() and (v14:BuffUp(v97.TestofMightBuff) or (not v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)))) or (v97.Unhinged:IsAvailable() and (v14:BuffUp(v97.TestofMightBuff) or (not v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)))))) then
-					if (((4818 - (239 + 30)) == (1237 + 3312)) and v24(v97.Bladestorm, not v101)) then
-						return "bladestorm single_target 110";
-					end
-				end
-				v132 = 5 + 0;
-			end
-			if ((v132 == (13 - 5)) or ((9428 - 6406) >= (3339 - (306 + 9)))) then
-				if (((16819 - 11999) > (383 + 1815)) and v97.Cleave:IsReady() and v35 and v14:HasTier(18 + 11, 1 + 1) and not v97.CrushingForce:IsAvailable()) then
-					if (v24(v97.Cleave, not v101) or ((3033 - 1972) >= (6266 - (1140 + 235)))) then
-						return "cleave single_target 121";
-					end
-				end
-				if (((869 + 495) <= (4102 + 371)) and (v90 < v103) and v33 and ((v53 and v30) or not v53) and v97.Bladestorm:IsCastable()) then
-					if (v24(v97.Bladestorm, not v101) or ((923 + 2672) <= (55 - (33 + 19)))) then
-						return "bladestorm single_target 122";
-					end
-				end
-				if ((v97.Cleave:IsReady() and v35) or ((1687 + 2985) == (11545 - 7693))) then
-					if (((687 + 872) == (3056 - 1497)) and v24(v97.Cleave, not v101)) then
-						return "cleave single_target 123";
-					end
-				end
-				v132 = 9 + 0;
-			end
-			if ((v132 == (695 - (586 + 103))) or ((160 + 1592) <= (2425 - 1637))) then
-				if ((v97.Slam:IsReady() and v45 and ((v97.CrushingForce:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff) and (v14:Rage() >= (1548 - (1309 + 179))) and v97.TestofMight:IsAvailable()) or v97.ImprovedSlam:IsAvailable()) and (not v97.FervorofBattle:IsAvailable() or (v97.FervorofBattle:IsAvailable() and (v105 == (1 - 0))))) or ((1701 + 2206) == (475 - 298))) then
-					if (((2622 + 848) > (1179 - 624)) and v24(v97.Slam, not v101)) then
-						return "slam single_target 115";
-					end
-				end
-				if ((v97.Whirlwind:IsReady() and v50 and (v97.StormofSwords:IsAvailable() or (v97.FervorofBattle:IsAvailable() and (v105 > (1 - 0))))) or ((1581 - (295 + 314)) == (1584 - 939))) then
-					if (((5144 - (1300 + 662)) >= (6641 - 4526)) and v24(v97.Whirlwind, not v15:IsInMeleeRange(1763 - (1178 + 577)))) then
-						return "whirlwind single_target 116";
-					end
-				end
-				if (((2022 + 1871) < (13092 - 8663)) and v97.Slam:IsReady() and v45 and (v97.CrushingForce:IsAvailable() or (not v97.CrushingForce:IsAvailable() and (v14:Rage() >= (1435 - (851 + 554))))) and (not v97.FervorofBattle:IsAvailable() or (v97.FervorofBattle:IsAvailable() and (v105 == (1 + 0))))) then
-					if (v24(v97.Slam, not v101) or ((7950 - 5083) < (4137 - 2232))) then
-						return "slam single_target 117";
-					end
-				end
-				v132 = 309 - (115 + 187);
-			end
-			if ((v132 == (2 + 0)) or ((1701 + 95) >= (15963 - 11912))) then
-				if (((2780 - (160 + 1001)) <= (3286 + 470)) and (v90 < v103) and v83 and ((v55 and v30) or not v55) and (v84 == "cursor") and v97.SpearofBastion:IsCastable() and ((v97.ColossusSmash:CooldownRemains() <= v14:GCD()) or (v97.Warbreaker:CooldownRemains() <= v14:GCD()))) then
-					if (((417 + 187) == (1235 - 631)) and v24(v99.SpearOfBastionCursor, not v15:IsSpellInRange(v97.SpearofBastion))) then
-						return "spear_of_bastion single_target 102";
-					end
-				end
-				if (((v90 < v103) and v49 and ((v57 and v30) or not v57) and v97.Warbreaker:IsCastable()) or ((4842 - (237 + 121)) == (1797 - (525 + 372)))) then
-					if (v24(v97.Warbreaker, not v15:IsInRange(14 - 6)) or ((14650 - 10191) <= (1255 - (96 + 46)))) then
-						return "warbreaker single_target 103";
-					end
-				end
-				if (((4409 - (643 + 134)) > (1227 + 2171)) and (v90 < v103) and v36 and ((v54 and v30) or not v54) and v97.ColossusSmash:IsCastable()) then
-					if (((9787 - 5705) <= (18255 - 13338)) and v24(v97.ColossusSmash, not v101)) then
-						return "colossus_smash single_target 104";
-					end
-				end
-				v132 = 3 + 0;
-			end
-			if (((9482 - 4650) >= (2833 - 1447)) and (v132 == (728 - (316 + 403)))) then
-				if (((92 + 45) == (376 - 239)) and v97.Rend:IsReady() and v41 and v15:DebuffRefreshable(v97.RendDebuff) and not v97.CrushingForce:IsAvailable()) then
-					if (v24(v97.Rend, not v101) or ((568 + 1002) >= (10909 - 6577))) then
-						return "rend single_target 124";
-					end
-				end
-				break;
-			end
-			if ((v132 == (4 + 1)) or ((1310 + 2754) <= (6302 - 4483))) then
-				if ((v97.Shockwave:IsCastable() and v43 and (v97.SonicBoom:IsAvailable() or v15:IsCasting())) or ((23812 - 18826) < (3269 - 1695))) then
-					if (((254 + 4172) > (338 - 166)) and v24(v97.Shockwave, not v15:IsInMeleeRange(1 + 7))) then
-						return "shockwave single_target 111";
-					end
-				end
-				if (((1724 - 1138) > (472 - (12 + 5))) and v97.Whirlwind:IsReady() and v50 and v97.StormofSwords:IsAvailable() and v97.TestofMight:IsAvailable() and (v97.ColossusSmash:CooldownRemains() > (v14:GCD() * (27 - 20)))) then
-					if (((1761 - 935) == (1755 - 929)) and v24(v97.Whirlwind, not v15:IsInMeleeRange(19 - 11))) then
-						return "whirlwind single_target 113";
-					end
-				end
-				if ((v97.Overpower:IsCastable() and v40 and (((v97.Overpower:Charges() == (1 + 1)) and not v97.Battlelord:IsAvailable() and (v15:DebuffUp(v97.ColossusSmashDebuff) or (v14:RagePercentage() < (1998 - (1656 + 317))))) or v97.Battlelord:IsAvailable())) or ((3582 + 437) > (3559 + 882))) then
-					if (((5362 - 3345) < (20970 - 16709)) and v24(v97.Overpower, not v101)) then
-						return "overpower single_target 114";
-					end
-				end
-				v132 = 360 - (5 + 349);
-			end
-			if (((22400 - 17684) > (1351 - (266 + 1005))) and (v132 == (2 + 1))) then
-				if ((v97.Skullsplitter:IsCastable() and v44 and not v97.TestofMight:IsAvailable() and (v15:DebuffRemains(v97.DeepWoundsDebuff) > (0 - 0)) and (v15:DebuffUp(v97.ColossusSmashDebuff) or (v97.ColossusSmash:CooldownRemains() > (3 - 0)))) or ((5203 - (561 + 1135)) == (4263 - 991))) then
-					if (v24(v97.Skullsplitter, not v101) or ((2879 - 2003) >= (4141 - (507 + 559)))) then
-						return "skullsplitter single_target 105";
-					end
-				end
-				if (((10920 - 6568) > (7898 - 5344)) and v97.Skullsplitter:IsCastable() and v44 and v97.TestofMight:IsAvailable() and (v15:DebuffRemains(v97.DeepWoundsDebuff) > (388 - (212 + 176)))) then
-					if (v24(v97.Skullsplitter, not v101) or ((5311 - (250 + 655)) < (11024 - 6981))) then
-						return "skullsplitter single_target 106";
-					end
-				end
-				if (((v90 < v103) and v48 and ((v56 and v30) or not v56) and v97.ThunderousRoar:IsCastable() and (v14:BuffUp(v97.TestofMightBuff) or (v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff) and (v14:RagePercentage() < (57 - 24))) or (not v97.TestofMight:IsAvailable() and v15:DebuffUp(v97.ColossusSmashDebuff)))) or ((2954 - 1065) >= (5339 - (1869 + 87)))) then
-					if (((6562 - 4670) <= (4635 - (484 + 1417))) and v24(v97.ThunderousRoar, not v15:IsInMeleeRange(16 - 8))) then
-						return "thunderous_roar single_target 107";
-					end
-				end
-				v132 = 6 - 2;
-			end
-			if (((2696 - (48 + 725)) < (3622 - 1404)) and (v132 == (18 - 11))) then
-				if (((1263 + 910) > (1012 - 633)) and v97.ThunderClap:IsReady() and v47 and v97.Battlelord:IsAvailable() and v97.BloodandThunder:IsAvailable()) then
-					if (v24(v97.ThunderClap, not v101) or ((726 + 1865) == (994 + 2415))) then
-						return "thunder_clap single_target 118";
-					end
-				end
-				if (((5367 - (152 + 701)) > (4635 - (430 + 881))) and v97.Overpower:IsCastable() and v40 and ((v15:DebuffDown(v97.ColossusSmashDebuff) and (v14:RagePercentage() < (20 + 30)) and not v97.Battlelord:IsAvailable()) or (v14:RagePercentage() < (920 - (557 + 338))))) then
-					if (v24(v97.Overpower, not v101) or ((62 + 146) >= (13605 - 8777))) then
-						return "overpower single_target 119";
-					end
-				end
-				if ((v97.Whirlwind:IsReady() and v50 and v14:BuffUp(v97.MercilessBonegrinderBuff)) or ((5542 - 3959) > (9476 - 5909))) then
-					if (v24(v97.Whirlwind, not v15:IsInRange(17 - 9)) or ((2114 - (499 + 302)) == (1660 - (39 + 827)))) then
-						return "whirlwind single_target 120";
-					end
-				end
-				v132 = 21 - 13;
-			end
-		end
-	end
-	local function v116()
-		local v133 = 0 - 0;
-		while true do
-			if (((12606 - 9432) > (4454 - 1552)) and (v133 == (0 + 0))) then
-				if (((12058 - 7938) <= (682 + 3578)) and not v14:AffectingCombat()) then
-					local v190 = 0 - 0;
+			if (((58 + 85) > (281 - 207)) and (v130 == (2 - 1))) then
+				if (((54 - 36) < (10457 - 8345)) and (v89 < v102) and v35 and ((v53 and v29) or not v53) and v96.ColossusSmash:IsCastable()) then
+					local v190 = 1780 - (389 + 1391);
 					while true do
-						if (((104 - (103 + 1)) == v190) or ((1437 - (475 + 79)) > (10328 - 5550))) then
-							if ((v97.BattleStance:IsCastable() and v14:BuffDown(v97.BattleStance, true)) or ((11584 - 7964) >= (633 + 4258))) then
-								if (((3748 + 510) > (2440 - (1395 + 108))) and v24(v97.BattleStance)) then
-									return "battle_stance";
-								end
+						if (((689 + 408) <= (170 + 1458)) and (v190 == (0 - 0))) then
+							if (((5581 - (783 + 168)) == (15539 - 10909)) and v92.CastCycle(v96.ColossusSmash, v103, v106, not v100)) then
+								return "colossus_smash hac 73";
 							end
-							if ((v97.BattleShout:IsCastable() and v32 and (v14:BuffDown(v97.BattleShoutBuff, true) or v93.GroupBuffMissing(v97.BattleShoutBuff))) or ((14168 - 9299) < (2110 - (7 + 1197)))) then
-								if (v24(v97.BattleShout) or ((535 + 690) > (1476 + 2752))) then
-									return "battle_shout precombat";
-								end
+							if (((3483 + 57) > (2994 - (309 + 2))) and v23(v96.ColossusSmash, not v100)) then
+								return "colossus_smash hac 73";
 							end
 							break;
 						end
 					end
 				end
-				if (((3647 - (27 + 292)) > (6557 - 4319)) and v93.TargetIsValid() and v28) then
-					if (((4894 - 1055) > (5892 - 4487)) and not v14:AffectingCombat()) then
-						local v192 = 0 - 0;
-						while true do
-							if ((v192 == (0 - 0)) or ((1432 - (43 + 96)) <= (2068 - 1561))) then
-								v27 = v112();
-								if (v27 or ((6547 - 3651) < (668 + 137))) then
-									return v27;
-								end
-								break;
-							end
-						end
+				if (((14721 - 9927) >= (4487 - (1090 + 122))) and (v89 < v102) and v35 and ((v53 and v29) or not v53) and v96.ColossusSmash:IsCastable()) then
+					if (((482 + 1002) == (4983 - 3499)) and v23(v96.ColossusSmash, not v100)) then
+						return "colossus_smash hac 74";
 					end
 				end
-				break;
+				if (((981 + 451) < (4673 - (628 + 490))) and (v89 < v102) and v47 and ((v55 and v29) or not v55) and v96.ThunderousRoar:IsCastable() and (v13:BuffUp(v96.TestofMightBuff) or (not v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)) or ((v104 > (1 + 0)) and (v14:DebuffRemains(v96.DeepWoundsDebuff) > (0 - 0))))) then
+					if (v23(v96.ThunderousRoar, not v14:IsInMeleeRange(36 - 28)) or ((1839 - (431 + 343)) > (7226 - 3648))) then
+						return "thunderous_roar hac 75";
+					end
+				end
+				if (((v89 < v102) and v82 and ((v54 and v29) or not v54) and (v83 == "player") and v96.SpearofBastion:IsCastable() and (v13:BuffUp(v96.TestofMightBuff) or (not v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)))) or ((13871 - 9076) < (1112 + 295))) then
+					if (((238 + 1615) < (6508 - (556 + 1139))) and v23(v98.SpearOfBastionPlayer, not v14:IsSpellInRange(v96.SpearofBastion))) then
+						return "spear_of_bastion hac 76";
+					end
+				end
+				if (((v89 < v102) and v82 and ((v54 and v29) or not v54) and (v83 == "cursor") and v96.SpearofBastion:IsCastable() and (v13:BuffUp(v96.TestofMightBuff) or (not v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)))) or ((2836 - (6 + 9)) < (446 + 1985))) then
+					if (v23(v98.SpearOfBastionCursor, not v14:IsSpellInRange(v96.SpearofBastion)) or ((1473 + 1401) < (2350 - (28 + 141)))) then
+						return "spear_of_bastion hac 76";
+					end
+				end
+				if (((v89 < v102) and v32 and ((v52 and v29) or not v52) and v96.Bladestorm:IsCastable() and v96.Unhinged:IsAvailable() and (v13:BuffUp(v96.TestofMightBuff) or (not v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)))) or ((1042 + 1647) <= (422 - 79))) then
+					if (v23(v96.Bladestorm, not v100) or ((1324 + 545) == (3326 - (486 + 831)))) then
+						return "bladestorm hac 77";
+					end
+				end
+				v130 = 5 - 3;
 			end
 		end
 	end
-	local function v117()
-		v27 = v110();
-		if (((654 + 1662) == (4577 - 2261)) and v27) then
-			return v27;
+	local function v113()
+		if (((v89 < v102) and v45 and v96.SweepingStrikes:IsCastable() and (v104 > (3 - 2))) or ((671 + 2875) < (7341 - 5019))) then
+			if (v23(v96.SweepingStrikes, not v14:IsInMeleeRange(1271 - (668 + 595))) or ((1874 + 208) == (963 + 3810))) then
+				return "sweeping_strikes execute 51";
+			end
 		end
-		if (v85 or ((985 + 1585) == (2872 - 1339))) then
-			local v174 = 0 + 0;
+		if (((8846 - 5602) > (1345 - (23 + 267))) and v96.Rend:IsReady() and v40 and (v14:DebuffRemains(v96.RendDebuff) <= v13:GCD()) and not v96.Bloodletting:IsAvailable() and ((not v96.Warbreaker:IsAvailable() and (v96.ColossusSmash:CooldownRemains() < (1948 - (1129 + 815)))) or (v96.Warbreaker:IsAvailable() and (v96.Warbreaker:CooldownRemains() < (391 - (371 + 16))))) and (v14:TimeToDie() > (1762 - (1326 + 424)))) then
+			if (v23(v96.Rend, not v100) or ((6274 - 2961) <= (6497 - 4719))) then
+				return "rend execute 52";
+			end
+		end
+		if (((v89 < v102) and v30 and ((v51 and v29) or not v51) and v96.Avatar:IsCastable() and (v96.ColossusSmash:CooldownUp() or v14:DebuffUp(v96.ColossusSmashDebuff) or (v102 < (138 - (88 + 30))))) or ((2192 - (720 + 51)) >= (4680 - 2576))) then
+			if (((3588 - (421 + 1355)) <= (5359 - 2110)) and v23(v96.Avatar, not v100)) then
+				return "avatar execute 53";
+			end
+		end
+		if (((798 + 825) <= (3040 - (286 + 797))) and (v89 < v102) and v48 and ((v56 and v29) or not v56) and v96.Warbreaker:IsCastable()) then
+			if (((16128 - 11716) == (7307 - 2895)) and v23(v96.Warbreaker, not v100)) then
+				return "warbreaker execute 54";
+			end
+		end
+		if (((2189 - (397 + 42)) >= (263 + 579)) and (v89 < v102) and v35 and ((v53 and v29) or not v53) and v96.ColossusSmash:IsCastable()) then
+			if (((5172 - (24 + 776)) > (2850 - 1000)) and v23(v96.ColossusSmash, not v100)) then
+				return "colossus_smash execute 55";
+			end
+		end
+		if (((1017 - (222 + 563)) < (1808 - 987)) and v96.Execute:IsReady() and v36 and v13:BuffUp(v96.SuddenDeathBuff) and (v14:DebuffRemains(v96.DeepWoundsDebuff) > (0 + 0))) then
+			if (((708 - (23 + 167)) < (2700 - (690 + 1108))) and v23(v96.Execute, not v100)) then
+				return "execute execute 56";
+			end
+		end
+		if (((1081 + 1913) > (708 + 150)) and v96.Skullsplitter:IsCastable() and v43 and ((v96.TestofMight:IsAvailable() and (v13:RagePercentage() <= (878 - (40 + 808)))) or (not v96.TestofMight:IsAvailable() and (v14:DebuffUp(v96.ColossusSmashDebuff) or (v96.ColossusSmash:CooldownRemains() > (1 + 4))) and (v13:RagePercentage() <= (114 - 84))))) then
+			if (v23(v96.Skullsplitter, not v14:IsInMeleeRange(8 + 0)) or ((1987 + 1768) <= (502 + 413))) then
+				return "skullsplitter execute 57";
+			end
+		end
+		if (((4517 - (47 + 524)) > (2430 + 1313)) and (v89 < v102) and v47 and ((v55 and v29) or not v55) and v96.ThunderousRoar:IsCastable() and (v13:BuffUp(v96.TestofMightBuff) or (not v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)))) then
+			if (v23(v96.ThunderousRoar, not v14:IsInMeleeRange(21 - 13)) or ((1996 - 661) >= (7539 - 4233))) then
+				return "thunderous_roar execute 57";
+			end
+		end
+		if (((6570 - (1165 + 561)) > (67 + 2186)) and (v89 < v102) and v82 and ((v54 and v29) or not v54) and (v83 == "player") and v96.SpearofBastion:IsCastable() and (v14:DebuffUp(v96.ColossusSmashDebuff) or v13:BuffUp(v96.TestofMightBuff))) then
+			if (((1399 - 947) == (173 + 279)) and v23(v98.SpearOfBastionPlayer, not v14:IsSpellInRange(v96.SpearofBastion))) then
+				return "spear_of_bastion execute 57";
+			end
+		end
+		if (((v89 < v102) and v82 and ((v54 and v29) or not v54) and (v83 == "cursor") and v96.SpearofBastion:IsCastable() and (v14:DebuffUp(v96.ColossusSmashDebuff) or v13:BuffUp(v96.TestofMightBuff))) or ((5036 - (341 + 138)) < (564 + 1523))) then
+			if (((7994 - 4120) == (4200 - (89 + 237))) and v23(v98.SpearOfBastionCursor, not v14:IsSpellInRange(v96.SpearofBastion))) then
+				return "spear_of_bastion execute 57";
+			end
+		end
+		if ((v96.Cleave:IsReady() and v34 and (v104 > (6 - 4)) and (v14:DebuffRemains(v96.DeepWoundsDebuff) < v13:GCD())) or ((4080 - 2142) > (5816 - (581 + 300)))) then
+			if (v23(v96.Cleave, not v100) or ((5475 - (855 + 365)) < (8130 - 4707))) then
+				return "cleave execute 58";
+			end
+		end
+		if (((475 + 979) <= (3726 - (1030 + 205))) and v96.MortalStrike:IsReady() and v38 and ((v14:DebuffStack(v96.ExecutionersPrecisionDebuff) == (2 + 0)) or (v14:DebuffRemains(v96.DeepWoundsDebuff) <= v13:GCD()))) then
+			if (v23(v96.MortalStrike, not v100) or ((3868 + 289) <= (3089 - (156 + 130)))) then
+				return "mortal_strike execute 59";
+			end
+		end
+		if (((11026 - 6173) >= (5025 - 2043)) and v96.Overpower:IsCastable() and v39 and (v13:Rage() < (81 - 41)) and (v13:BuffStack(v96.MartialProwessBuff) < (1 + 1))) then
+			if (((2411 + 1723) > (3426 - (10 + 59))) and v23(v96.Overpower, not v100)) then
+				return "overpower execute 60";
+			end
+		end
+		if ((v96.Execute:IsReady() and v36) or ((967 + 2450) < (12479 - 9945))) then
+			if (v23(v96.Execute, not v100) or ((3885 - (671 + 492)) <= (131 + 33))) then
+				return "execute execute 62";
+			end
+		end
+		if ((v96.Shockwave:IsCastable() and v42 and (v96.SonicBoom:IsAvailable() or v14:IsCasting())) or ((3623 - (369 + 846)) < (559 + 1550))) then
+			if (v23(v96.Shockwave, not v14:IsInMeleeRange(7 + 1)) or ((1978 - (1036 + 909)) == (1157 + 298))) then
+				return "shockwave execute 63";
+			end
+		end
+		if ((v96.Overpower:IsCastable() and v39) or ((743 - 300) >= (4218 - (11 + 192)))) then
+			if (((1710 + 1672) > (341 - (135 + 40))) and v23(v96.Overpower, not v100)) then
+				return "overpower execute 64";
+			end
+		end
+		if (((v89 < v102) and v32 and ((v52 and v29) or not v52) and v96.Bladestorm:IsCastable()) or ((678 - 398) == (1844 + 1215))) then
+			if (((4143 - 2262) > (1938 - 645)) and v23(v96.Bladestorm, not v100)) then
+				return "bladestorm execute 65";
+			end
+		end
+	end
+	local function v114()
+		if (((2533 - (50 + 126)) == (6563 - 4206)) and (v89 < v102) and v45 and v96.SweepingStrikes:IsCastable() and (v104 > (1 + 0))) then
+			if (((1536 - (1233 + 180)) == (1092 - (522 + 447))) and v23(v96.SweepingStrikes, not v14:IsInMeleeRange(1429 - (107 + 1314)))) then
+				return "sweeping_strikes single_target 97";
+			end
+		end
+		if ((v96.Execute:IsReady() and (v13:BuffUp(v96.SuddenDeathBuff))) or ((491 + 565) >= (10335 - 6943))) then
+			if (v23(v96.Execute, not v100) or ((460 + 621) < (2134 - 1059))) then
+				return "execute single_target 98";
+			end
+		end
+		if ((v96.MortalStrike:IsReady() and v38) or ((4150 - 3101) >= (6342 - (716 + 1194)))) then
+			if (v23(v96.MortalStrike, not v100) or ((82 + 4686) <= (91 + 755))) then
+				return "mortal_strike single_target 99";
+			end
+		end
+		if ((v96.Rend:IsReady() and v40 and ((v14:DebuffRemains(v96.RendDebuff) <= v13:GCD()) or (v96.TideofBlood:IsAvailable() and (v96.Skullsplitter:CooldownRemains() <= v13:GCD()) and ((v96.ColossusSmash:CooldownRemains() <= v13:GCD()) or v14:DebuffUp(v96.ColossusSmashDebuff)) and (v14:DebuffRemains(v96.RendDebuff) < (v96.RendDebuff:BaseDuration() * (503.85 - (74 + 429))))))) or ((6477 - 3119) <= (704 + 716))) then
+			if (v23(v96.Rend, not v100) or ((8558 - 4819) <= (2126 + 879))) then
+				return "rend single_target 100";
+			end
+		end
+		if (((v89 < v102) and v30 and ((v51 and v29) or not v51) and v96.Avatar:IsCastable() and ((v96.WarlordsTorment:IsAvailable() and (v13:RagePercentage() < (101 - 68)) and (v96.ColossusSmash:CooldownUp() or v14:DebuffUp(v96.ColossusSmashDebuff) or v13:BuffUp(v96.TestofMightBuff))) or (not v96.WarlordsTorment:IsAvailable() and (v96.ColossusSmash:CooldownUp() or v14:DebuffUp(v96.ColossusSmashDebuff))))) or ((4101 - 2442) >= (2567 - (279 + 154)))) then
+			if (v23(v96.Avatar, not v100) or ((4038 - (454 + 324)) < (1853 + 502))) then
+				return "avatar single_target 101";
+			end
+		end
+		if (((v89 < v102) and v82 and ((v54 and v29) or not v54) and (v83 == "player") and v96.SpearofBastion:IsCastable() and ((v96.ColossusSmash:CooldownRemains() <= v13:GCD()) or (v96.Warbreaker:CooldownRemains() <= v13:GCD()))) or ((686 - (12 + 5)) == (2277 + 1946))) then
+			if (v23(v98.SpearOfBastionPlayer, not v14:IsSpellInRange(v96.SpearofBastion)) or ((4310 - 2618) < (218 + 370))) then
+				return "spear_of_bastion single_target 102";
+			end
+		end
+		if (((v89 < v102) and v82 and ((v54 and v29) or not v54) and (v83 == "cursor") and v96.SpearofBastion:IsCastable() and ((v96.ColossusSmash:CooldownRemains() <= v13:GCD()) or (v96.Warbreaker:CooldownRemains() <= v13:GCD()))) or ((5890 - (277 + 816)) < (15600 - 11949))) then
+			if (v23(v98.SpearOfBastionCursor, not v14:IsSpellInRange(v96.SpearofBastion)) or ((5360 - (1058 + 125)) > (910 + 3940))) then
+				return "spear_of_bastion single_target 102";
+			end
+		end
+		if (((v89 < v102) and v48 and ((v56 and v29) or not v56) and v96.Warbreaker:IsCastable()) or ((1375 - (815 + 160)) > (4766 - 3655))) then
+			if (((7242 - 4191) > (240 + 765)) and v23(v96.Warbreaker, not v14:IsInRange(23 - 15))) then
+				return "warbreaker single_target 103";
+			end
+		end
+		if (((5591 - (41 + 1857)) <= (6275 - (1222 + 671))) and (v89 < v102) and v35 and ((v53 and v29) or not v53) and v96.ColossusSmash:IsCastable()) then
+			if (v23(v96.ColossusSmash, not v100) or ((8482 - 5200) > (5893 - 1793))) then
+				return "colossus_smash single_target 104";
+			end
+		end
+		if ((v96.Skullsplitter:IsCastable() and v43 and not v96.TestofMight:IsAvailable() and (v14:DebuffRemains(v96.DeepWoundsDebuff) > (1182 - (229 + 953))) and (v14:DebuffUp(v96.ColossusSmashDebuff) or (v96.ColossusSmash:CooldownRemains() > (1777 - (1111 + 663))))) or ((5159 - (874 + 705)) < (399 + 2445))) then
+			if (((61 + 28) < (9333 - 4843)) and v23(v96.Skullsplitter, not v100)) then
+				return "skullsplitter single_target 105";
+			end
+		end
+		if ((v96.Skullsplitter:IsCastable() and v43 and v96.TestofMight:IsAvailable() and (v14:DebuffRemains(v96.DeepWoundsDebuff) > (0 + 0))) or ((5662 - (642 + 37)) < (413 + 1395))) then
+			if (((613 + 3216) > (9462 - 5693)) and v23(v96.Skullsplitter, not v100)) then
+				return "skullsplitter single_target 106";
+			end
+		end
+		if (((1939 - (233 + 221)) <= (6714 - 3810)) and (v89 < v102) and v47 and ((v55 and v29) or not v55) and v96.ThunderousRoar:IsCastable() and (v13:BuffUp(v96.TestofMightBuff) or (v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff) and (v13:RagePercentage() < (30 + 3))) or (not v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)))) then
+			if (((5810 - (718 + 823)) == (2687 + 1582)) and v23(v96.ThunderousRoar, not v14:IsInMeleeRange(813 - (266 + 539)))) then
+				return "thunderous_roar single_target 107";
+			end
+		end
+		if (((1095 - 708) <= (4007 - (636 + 589))) and v96.Whirlwind:IsReady() and v49 and v96.StormofSwords:IsAvailable() and v96.TestofMight:IsAvailable() and (v13:RagePercentage() > (189 - 109)) and v14:DebuffUp(v96.ColossusSmashDebuff)) then
+			if (v23(v96.Whirlwind, not v14:IsInMeleeRange(16 - 8)) or ((1505 + 394) <= (334 + 583))) then
+				return "whirlwind single_target 108";
+			end
+		end
+		if ((v96.ThunderClap:IsReady() and v46 and (v14:DebuffRemains(v96.RendDebuff) <= v13:GCD()) and not v96.TideofBlood:IsAvailable()) or ((5327 - (657 + 358)) <= (2319 - 1443))) then
+			if (((5084 - 2852) <= (3783 - (1151 + 36))) and v23(v96.ThunderClap, not v100)) then
+				return "thunder_clap single_target 109";
+			end
+		end
+		if (((2024 + 71) < (970 + 2716)) and (v89 < v102) and v32 and ((v52 and v29) or not v52) and v96.Bladestorm:IsCastable() and ((v96.Hurricane:IsAvailable() and (v13:BuffUp(v96.TestofMightBuff) or (not v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)))) or (v96.Unhinged:IsAvailable() and (v13:BuffUp(v96.TestofMightBuff) or (not v96.TestofMight:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff)))))) then
+			if (v23(v96.Bladestorm, not v100) or ((4763 - 3168) >= (6306 - (1552 + 280)))) then
+				return "bladestorm single_target 110";
+			end
+		end
+		if ((v96.Shockwave:IsCastable() and v42 and (v96.SonicBoom:IsAvailable() or v14:IsCasting())) or ((5453 - (64 + 770)) < (1957 + 925))) then
+			if (v23(v96.Shockwave, not v14:IsInMeleeRange(18 - 10)) or ((53 + 241) >= (6074 - (157 + 1086)))) then
+				return "shockwave single_target 111";
+			end
+		end
+		if (((4060 - 2031) <= (13507 - 10423)) and v96.Whirlwind:IsReady() and v49 and v96.StormofSwords:IsAvailable() and v96.TestofMight:IsAvailable() and (v96.ColossusSmash:CooldownRemains() > (v13:GCD() * (10 - 3)))) then
+			if (v23(v96.Whirlwind, not v14:IsInMeleeRange(10 - 2)) or ((2856 - (599 + 220)) == (4819 - 2399))) then
+				return "whirlwind single_target 113";
+			end
+		end
+		if (((6389 - (1813 + 118)) > (2854 + 1050)) and v96.Overpower:IsCastable() and v39 and (((v96.Overpower:Charges() == (1219 - (841 + 376))) and not v96.Battlelord:IsAvailable() and (v14:DebuffUp(v96.ColossusSmashDebuff) or (v13:RagePercentage() < (34 - 9)))) or v96.Battlelord:IsAvailable())) then
+			if (((102 + 334) >= (335 - 212)) and v23(v96.Overpower, not v100)) then
+				return "overpower single_target 114";
+			end
+		end
+		if (((1359 - (464 + 395)) < (4660 - 2844)) and v96.Slam:IsReady() and v44 and ((v96.CrushingForce:IsAvailable() and v14:DebuffUp(v96.ColossusSmashDebuff) and (v13:Rage() >= (29 + 31)) and v96.TestofMight:IsAvailable()) or v96.ImprovedSlam:IsAvailable()) and (not v96.FervorofBattle:IsAvailable() or (v96.FervorofBattle:IsAvailable() and (v104 == (838 - (467 + 370)))))) then
+			if (((7385 - 3811) == (2624 + 950)) and v23(v96.Slam, not v100)) then
+				return "slam single_target 115";
+			end
+		end
+		if (((757 - 536) < (61 + 329)) and v96.Whirlwind:IsReady() and v49 and (v96.StormofSwords:IsAvailable() or (v96.FervorofBattle:IsAvailable() and (v104 > (2 - 1))))) then
+			if (v23(v96.Whirlwind, not v14:IsInMeleeRange(528 - (150 + 370))) or ((3495 - (74 + 1208)) <= (3494 - 2073))) then
+				return "whirlwind single_target 116";
+			end
+		end
+		if (((14502 - 11444) < (3459 + 1401)) and v96.Slam:IsReady() and v44 and (v96.CrushingForce:IsAvailable() or (not v96.CrushingForce:IsAvailable() and (v13:Rage() >= (420 - (14 + 376))))) and (not v96.FervorofBattle:IsAvailable() or (v96.FervorofBattle:IsAvailable() and (v104 == (1 - 0))))) then
+			if (v23(v96.Slam, not v100) or ((839 + 457) >= (3906 + 540))) then
+				return "slam single_target 117";
+			end
+		end
+		if ((v96.ThunderClap:IsReady() and v46 and v96.Battlelord:IsAvailable() and v96.BloodandThunder:IsAvailable()) or ((1329 + 64) > (13153 - 8664))) then
+			if (v23(v96.ThunderClap, not v100) or ((3329 + 1095) < (105 - (23 + 55)))) then
+				return "thunder_clap single_target 118";
+			end
+		end
+		if ((v96.Overpower:IsCastable() and v39 and ((v14:DebuffDown(v96.ColossusSmashDebuff) and (v13:RagePercentage() < (118 - 68)) and not v96.Battlelord:IsAvailable()) or (v13:RagePercentage() < (17 + 8)))) or ((1794 + 203) > (5915 - 2100))) then
+			if (((1090 + 2375) > (2814 - (652 + 249))) and v23(v96.Overpower, not v100)) then
+				return "overpower single_target 119";
+			end
+		end
+		if (((1961 - 1228) < (3687 - (708 + 1160))) and v96.Whirlwind:IsReady() and v49 and v13:BuffUp(v96.MercilessBonegrinderBuff)) then
+			if (v23(v96.Whirlwind, not v14:IsInRange(21 - 13)) or ((8013 - 3618) == (4782 - (10 + 17)))) then
+				return "whirlwind single_target 120";
+			end
+		end
+		if ((v96.Cleave:IsReady() and v34 and v13:HasTier(7 + 22, 1734 - (1400 + 332)) and not v96.CrushingForce:IsAvailable()) or ((7275 - 3482) < (4277 - (242 + 1666)))) then
+			if (v23(v96.Cleave, not v100) or ((1748 + 2336) == (98 + 167))) then
+				return "cleave single_target 121";
+			end
+		end
+		if (((3715 + 643) == (5298 - (850 + 90))) and (v89 < v102) and v32 and ((v52 and v29) or not v52) and v96.Bladestorm:IsCastable()) then
+			if (v23(v96.Bladestorm, not v100) or ((5495 - 2357) < (2383 - (360 + 1030)))) then
+				return "bladestorm single_target 122";
+			end
+		end
+		if (((2947 + 383) > (6556 - 4233)) and v96.Cleave:IsReady() and v34) then
+			if (v23(v96.Cleave, not v100) or ((4988 - 1362) == (5650 - (909 + 752)))) then
+				return "cleave single_target 123";
+			end
+		end
+		if ((v96.Rend:IsReady() and v40 and v14:DebuffRefreshable(v96.RendDebuff) and not v96.CrushingForce:IsAvailable()) or ((2139 - (109 + 1114)) == (4889 - 2218))) then
+			if (((106 + 166) == (514 - (6 + 236))) and v23(v96.Rend, not v100)) then
+				return "rend single_target 124";
+			end
+		end
+	end
+	local function v115()
+		if (((2678 + 1571) <= (3896 + 943)) and not v13:AffectingCombat()) then
+			local v163 = 0 - 0;
 			while true do
-				if ((v174 == (0 + 0)) or ((2634 - (1414 + 337)) == (3400 - (1642 + 298)))) then
-					v27 = v93.HandleIncorporeal(v97.StormBolt, v99.StormBoltMouseover, 52 - 32, true);
-					if (v27 or ((13287 - 8668) <= (2964 - 1965))) then
-						return v27;
+				if (((4850 - 2073) < (4333 - (1076 + 57))) and (v163 == (0 + 0))) then
+					if (((784 - (579 + 110)) < (155 + 1802)) and v96.BattleStance:IsCastable() and v13:BuffDown(v96.BattleStance, true)) then
+						if (((731 + 95) < (912 + 805)) and v23(v96.BattleStance)) then
+							return "battle_stance";
+						end
 					end
-					v174 = 1 + 0;
-				end
-				if ((v174 == (1 + 0)) or ((4382 - (357 + 615)) > (2890 + 1226))) then
-					v27 = v93.HandleIncorporeal(v97.IntimidatingShout, v99.IntimidatingShoutMouseover, 19 - 11, true);
-					if (v27 or ((774 + 129) >= (6555 - 3496))) then
-						return v27;
+					if (((1833 - (174 + 233)) >= (3086 - 1981)) and v96.BattleShout:IsCastable() and v31 and (v13:BuffDown(v96.BattleShoutBuff, true) or v92.GroupBuffMissing(v96.BattleShoutBuff))) then
+						if (((4833 - 2079) <= (1503 + 1876)) and v23(v96.BattleShout)) then
+							return "battle_shout precombat";
+						end
 					end
 					break;
 				end
 			end
 		end
-		if (v93.TargetIsValid() or ((3180 + 796) < (195 + 2662))) then
-			local v175 = 0 + 0;
-			local v176;
+		if ((v92.TargetIsValid() and v27) or ((5101 - (663 + 511)) == (1261 + 152))) then
+			if (not v13:AffectingCombat() or ((251 + 903) <= (2429 - 1641))) then
+				v26 = v111();
+				if (v26 or ((995 + 648) > (7954 - 4575))) then
+					return v26;
+				end
+			end
+		end
+	end
+	local function v116()
+		v26 = v109();
+		if (v26 or ((6785 - 3982) > (2171 + 2378))) then
+			return v26;
+		end
+		if (v84 or ((428 - 208) >= (2154 + 868))) then
+			local v164 = 0 + 0;
 			while true do
-				if (((6231 - (384 + 917)) > (3004 - (128 + 569))) and (v175 == (1544 - (1407 + 136)))) then
-					if ((v90 < v103) or ((5933 - (687 + 1200)) < (3001 - (556 + 1154)))) then
-						if ((v92 and ((v30 and v58) or not v58)) or ((14920 - 10679) == (3640 - (9 + 86)))) then
-							local v197 = 421 - (275 + 146);
+				if (((3544 - (478 + 244)) == (3339 - (440 + 77))) and (v164 == (0 + 0))) then
+					v26 = v92.HandleIncorporeal(v96.StormBolt, v98.StormBoltMouseover, 73 - 53, true);
+					if (v26 or ((2617 - (655 + 901)) == (345 + 1512))) then
+						return v26;
+					end
+					v164 = 1 + 0;
+				end
+				if (((1864 + 896) > (5494 - 4130)) and (v164 == (1446 - (695 + 750)))) then
+					v26 = v92.HandleIncorporeal(v96.IntimidatingShout, v98.IntimidatingShoutMouseover, 27 - 19, true);
+					if (v26 or ((7564 - 2662) <= (14458 - 10863))) then
+						return v26;
+					end
+					break;
+				end
+			end
+		end
+		if (v92.TargetIsValid() or ((4203 - (285 + 66)) == (682 - 389))) then
+			local v165 = 1310 - (682 + 628);
+			local v166;
+			while true do
+				if ((v165 == (1 + 2)) or ((1858 - (176 + 123)) == (1920 + 2668))) then
+					v26 = v114();
+					if (v26 or ((3253 + 1231) == (1057 - (239 + 30)))) then
+						return v26;
+					end
+					if (((1242 + 3326) >= (3756 + 151)) and v19.CastAnnotated(v96.Pool, false, "WAIT")) then
+						return "Wait/Pool Resources";
+					end
+					break;
+				end
+				if (((2204 - 958) < (10826 - 7356)) and (v165 == (317 - (306 + 9)))) then
+					if (((14195 - 10127) >= (170 + 802)) and v96.WreckingThrow:IsCastable() and v50 and v14:AffectingCombat() and v105()) then
+						if (((303 + 190) < (1874 + 2019)) and v23(v96.WreckingThrow, not v14:IsInRange(85 - 55))) then
+							return "wrecking_throw main";
+						end
+					end
+					if ((v28 and (v104 > (1377 - (1140 + 235)))) or ((938 + 535) >= (3056 + 276))) then
+						v26 = v112();
+						if (v26 or ((1040 + 3011) <= (1209 - (33 + 19)))) then
+							return v26;
+						end
+					end
+					if (((219 + 385) < (8635 - 5754)) and ((v96.Massacre:IsAvailable() and (v14:HealthPercentage() < (16 + 19))) or (v14:HealthPercentage() < (39 - 19)))) then
+						local v191 = 0 + 0;
+						while true do
+							if ((v191 == (689 - (586 + 103))) or ((82 + 818) == (10396 - 7019))) then
+								v26 = v113();
+								if (((5947 - (1309 + 179)) > (1066 - 475)) and v26) then
+									return v26;
+								end
+								break;
+							end
+						end
+					end
+					v165 = 2 + 1;
+				end
+				if (((9125 - 5727) >= (1810 + 585)) and (v165 == (1 - 0))) then
+					if ((v100 and v90 and ((v58 and v29) or not v58) and (v89 < v102)) or ((4349 - 2166) >= (3433 - (295 + 314)))) then
+						local v192 = 0 - 0;
+						while true do
+							if (((3898 - (1300 + 662)) == (6079 - 4143)) and (v192 == (1756 - (1178 + 577)))) then
+								if ((v96.ArcaneTorrent:IsCastable() and (v96.MortalStrike:CooldownRemains() > (1.5 + 0)) and (v13:Rage() < (147 - 97))) or ((6237 - (851 + 554)) < (3814 + 499))) then
+									if (((11337 - 7249) > (8413 - 4539)) and v23(v96.ArcaneTorrent, not v14:IsInRange(310 - (115 + 187)))) then
+										return "arcane_torrent main 41";
+									end
+								end
+								if (((3318 + 1014) == (4102 + 230)) and v96.LightsJudgment:IsCastable() and v14:DebuffDown(v96.ColossusSmashDebuff) and not v96.MortalStrike:CooldownUp()) then
+									if (((15758 - 11759) >= (4061 - (160 + 1001))) and v23(v96.LightsJudgment, not v14:IsSpellInRange(v96.LightsJudgment))) then
+										return "lights_judgment main 42";
+									end
+								end
+								v192 = 2 + 0;
+							end
+							if ((v192 == (2 + 0)) or ((5169 - 2644) > (4422 - (237 + 121)))) then
+								if (((5268 - (525 + 372)) == (8286 - 3915)) and v96.Fireblood:IsCastable() and (v14:DebuffUp(v96.ColossusSmashDebuff))) then
+									if (v23(v96.Fireblood) or ((873 - 607) > (5128 - (96 + 46)))) then
+										return "fireblood main 43";
+									end
+								end
+								if (((2768 - (643 + 134)) >= (334 + 591)) and v96.AncestralCall:IsCastable() and (v14:DebuffUp(v96.ColossusSmashDebuff))) then
+									if (((1090 - 635) < (7622 - 5569)) and v23(v96.AncestralCall)) then
+										return "ancestral_call main 44";
+									end
+								end
+								v192 = 3 + 0;
+							end
+							if ((v192 == (0 - 0)) or ((1688 - 862) == (5570 - (316 + 403)))) then
+								if (((122 + 61) == (503 - 320)) and v96.BloodFury:IsCastable() and v14:DebuffUp(v96.ColossusSmashDebuff)) then
+									if (((419 + 740) <= (4502 - 2714)) and v23(v96.BloodFury)) then
+										return "blood_fury main 39";
+									end
+								end
+								if ((v96.Berserking:IsCastable() and (v14:DebuffRemains(v96.ColossusSmashDebuff) > (5 + 1))) or ((1131 + 2376) > (14961 - 10643))) then
+									if (v23(v96.Berserking) or ((14685 - 11610) <= (6159 - 3194))) then
+										return "berserking main 40";
+									end
+								end
+								v192 = 1 + 0;
+							end
+							if (((2687 - 1322) <= (99 + 1912)) and ((8 - 5) == v192)) then
+								if ((v96.BagofTricks:IsCastable() and v14:DebuffDown(v96.ColossusSmashDebuff) and not v96.MortalStrike:CooldownUp()) or ((2793 - (12 + 5)) > (13885 - 10310))) then
+									if (v23(v96.BagofTricks, not v14:IsSpellInRange(v96.BagofTricks)) or ((5449 - 2895) == (10211 - 5407))) then
+										return "bag_of_tricks main 10";
+									end
+								end
+								break;
+							end
+						end
+					end
+					if (((6390 - 3813) == (524 + 2053)) and (v89 < v102)) then
+						if ((v91 and ((v29 and v57) or not v57)) or ((1979 - (1656 + 317)) >= (1684 + 205))) then
+							local v193 = 0 + 0;
 							while true do
-								if ((v197 == (0 + 0)) or ((4112 - (29 + 35)) > (18755 - 14523))) then
-									v27 = v111();
-									if (v27 or ((5227 - 3477) >= (15331 - 11858))) then
-										return v27;
+								if (((1345 - 839) <= (9311 - 7419)) and (v193 == (354 - (5 + 349)))) then
+									v26 = v110();
+									if (v26 or ((9537 - 7529) > (3489 - (266 + 1005)))) then
+										return v26;
 									end
 									break;
 								end
 							end
 						end
 					end
-					if (((2063 + 1103) == (4178 - (53 + 959))) and v38 and v97.HeroicThrow:IsCastable() and not v15:IsInRange(438 - (312 + 96))) then
-						if (((3059 - 1296) < (4009 - (147 + 138))) and v24(v97.HeroicThrow, not v15:IsInRange(929 - (813 + 86)))) then
+					if (((250 + 129) <= (14149 - 10002)) and v37 and v96.HeroicThrow:IsCastable() and not v14:IsInRange(39 - 9)) then
+						if (v23(v96.HeroicThrow, not v14:IsInRange(1726 - (561 + 1135))) or ((5882 - 1368) <= (3316 - 2307))) then
 							return "heroic_throw main";
 						end
 					end
-					if (((52 + 5) <= (5044 - 2321)) and v97.WreckingThrow:IsCastable() and v51 and v15:AffectingCombat() and v106()) then
-						if (v24(v97.WreckingThrow, not v15:IsInRange(522 - (18 + 474))) or ((699 + 1371) == (1445 - 1002))) then
-							return "wrecking_throw main";
-						end
-					end
-					if ((v29 and (v105 > (1088 - (860 + 226)))) or ((3008 - (121 + 182)) == (172 + 1221))) then
-						local v193 = 1240 - (988 + 252);
-						while true do
-							if ((v193 == (0 + 0)) or ((1442 + 3159) < (2031 - (49 + 1921)))) then
-								v27 = v113();
-								if (v27 or ((2280 - (223 + 667)) >= (4796 - (51 + 1)))) then
-									return v27;
-								end
-								break;
-							end
-						end
-					end
-					v175 = 2 - 0;
+					v165 = 1068 - (507 + 559);
 				end
-				if ((v175 == (0 - 0)) or ((3128 - (146 + 979)) > (1083 + 2751))) then
-					if ((v34 and v97.Charge:IsCastable() and not v101) or ((761 - (311 + 294)) > (10912 - 6999))) then
-						if (((83 + 112) == (1638 - (496 + 947))) and v24(v97.Charge, not v15:IsSpellInRange(v97.Charge))) then
+				if ((v165 == (0 - 0)) or ((10811 - 7315) == (1580 - (212 + 176)))) then
+					if ((v33 and v96.Charge:IsCastable() and not v100) or ((1113 - (250 + 655)) == (8068 - 5109))) then
+						if (((7472 - 3195) >= (2053 - 740)) and v23(v96.Charge, not v14:IsSpellInRange(v96.Charge))) then
 							return "charge main 34";
 						end
 					end
-					v176 = v93.HandleDPSPotion(v15:DebuffUp(v97.ColossusSmashDebuff));
-					if (((4463 - (1233 + 125)) >= (729 + 1067)) and v176) then
-						return v176;
+					v166 = v92.HandleDPSPotion(v14:DebuffUp(v96.ColossusSmashDebuff));
+					if (((4543 - (1869 + 87)) < (11008 - 7834)) and v166) then
+						return v166;
 					end
-					if (((3929 + 450) >= (405 + 1726)) and v101 and v91 and ((v59 and v30) or not v59) and (v90 < v103)) then
-						local v194 = 1645 - (963 + 682);
-						while true do
-							if (((3208 + 636) >= (3547 - (504 + 1000))) and (v194 == (3 + 0))) then
-								if ((v97.BagofTricks:IsCastable() and v15:DebuffDown(v97.ColossusSmashDebuff) and not v97.MortalStrike:CooldownUp()) or ((2944 + 288) <= (258 + 2473))) then
-									if (((7233 - 2328) == (4191 + 714)) and v24(v97.BagofTricks, not v15:IsSpellInRange(v97.BagofTricks))) then
-										return "bag_of_tricks main 10";
-									end
-								end
-								break;
-							end
-							if ((v194 == (1 + 0)) or ((4318 - (156 + 26)) >= (2542 + 1869))) then
-								if ((v97.ArcaneTorrent:IsCastable() and (v97.MortalStrike:CooldownRemains() > (1.5 - 0)) and (v14:Rage() < (214 - (149 + 15)))) or ((3918 - (890 + 70)) == (4134 - (39 + 78)))) then
-									if (((1710 - (14 + 468)) >= (1787 - 974)) and v24(v97.ArcaneTorrent, not v15:IsInRange(22 - 14))) then
-										return "arcane_torrent main 41";
-									end
-								end
-								if ((v97.LightsJudgment:IsCastable() and v15:DebuffDown(v97.ColossusSmashDebuff) and not v97.MortalStrike:CooldownUp()) or ((1783 + 1672) > (2433 + 1617))) then
-									if (((52 + 191) == (110 + 133)) and v24(v97.LightsJudgment, not v15:IsSpellInRange(v97.LightsJudgment))) then
-										return "lights_judgment main 42";
-									end
-								end
-								v194 = 1 + 1;
-							end
-							if ((v194 == (0 - 0)) or ((268 + 3) > (5523 - 3951))) then
-								if (((70 + 2669) < (3344 - (12 + 39))) and v97.BloodFury:IsCastable() and v15:DebuffUp(v97.ColossusSmashDebuff)) then
-									if (v24(v97.BloodFury) or ((3668 + 274) < (3509 - 2375))) then
-										return "blood_fury main 39";
-									end
-								end
-								if ((v97.Berserking:IsCastable() and (v15:DebuffRemains(v97.ColossusSmashDebuff) > (21 - 15))) or ((799 + 1894) == (2618 + 2355))) then
-									if (((5441 - 3295) == (1430 + 716)) and v24(v97.Berserking)) then
-										return "berserking main 40";
-									end
-								end
-								v194 = 4 - 3;
-							end
-							if ((v194 == (1712 - (1596 + 114))) or ((5858 - 3614) == (3937 - (164 + 549)))) then
-								if ((v97.Fireblood:IsCastable() and (v15:DebuffUp(v97.ColossusSmashDebuff))) or ((6342 - (1059 + 379)) <= (2378 - 462))) then
-									if (((47 + 43) <= (180 + 885)) and v24(v97.Fireblood)) then
-										return "fireblood main 43";
-									end
-								end
-								if (((5194 - (145 + 247)) == (3941 + 861)) and v97.AncestralCall:IsCastable() and (v15:DebuffUp(v97.ColossusSmashDebuff))) then
-									if (v24(v97.AncestralCall) or ((1054 + 1226) <= (1514 - 1003))) then
-										return "ancestral_call main 44";
-									end
-								end
-								v194 = 1 + 2;
-							end
-						end
-					end
-					v175 = 1 + 0;
-				end
-				if ((v175 == (2 - 0)) or ((2396 - (254 + 466)) <= (1023 - (544 + 16)))) then
-					if (((12295 - 8426) == (4497 - (294 + 334))) and ((v97.Massacre:IsAvailable() and (v15:HealthPercentage() < (288 - (236 + 17)))) or (v15:HealthPercentage() < (9 + 11)))) then
-						v27 = v114();
-						if (((902 + 256) <= (9840 - 7227)) and v27) then
-							return v27;
-						end
-					end
-					v27 = v115();
-					if (v27 or ((11192 - 8828) <= (1030 + 969))) then
-						return v27;
-					end
-					if (v20.CastAnnotated(v97.Pool, false, "WAIT") or ((4054 + 868) < (988 - (413 + 381)))) then
-						return "Wait/Pool Resources";
-					end
-					break;
+					v165 = 1902 - (484 + 1417);
 				end
 			end
 		end
 	end
-	local function v118()
-		v32 = EpicSettings.Settings['useBattleShout'];
-		v34 = EpicSettings.Settings['useCharge'];
-		v35 = EpicSettings.Settings['useCleave'];
-		v37 = EpicSettings.Settings['useExecute'];
-		v38 = EpicSettings.Settings['useHeroicThrow'];
-		v39 = EpicSettings.Settings['useMortalStrike'];
-		v40 = EpicSettings.Settings['useOverpower'];
-		v41 = EpicSettings.Settings['useRend'];
-		v43 = EpicSettings.Settings['useShockwave'];
-		v44 = EpicSettings.Settings['useSkullsplitter'];
-		v45 = EpicSettings.Settings['useSlam'];
-		v46 = EpicSettings.Settings['useSweepingStrikes'];
-		v47 = EpicSettings.Settings['useThunderClap'];
-		v50 = EpicSettings.Settings['useWhirlwind'];
-		v51 = EpicSettings.Settings['useWreckingThrow'];
-		v31 = EpicSettings.Settings['useAvatar'];
-		v33 = EpicSettings.Settings['useBladestorm'];
-		v36 = EpicSettings.Settings['useColossusSmash'];
-		v83 = EpicSettings.Settings['useSpearOfBastion'];
-		v48 = EpicSettings.Settings['useThunderousRoar'];
-		v49 = EpicSettings.Settings['useWarbreaker'];
-		v52 = EpicSettings.Settings['avatarWithCD'];
-		v53 = EpicSettings.Settings['bladestormWithCD'];
-		v54 = EpicSettings.Settings['colossusSmashWithCD'];
-		v55 = EpicSettings.Settings['spearOfBastionWithCD'];
-		v56 = EpicSettings.Settings['thunderousRoarWithCD'];
-		v57 = EpicSettings.Settings['warbreakerWithCD'];
+	local function v117()
+		v31 = EpicSettings.Settings['useBattleShout'];
+		v33 = EpicSettings.Settings['useCharge'];
+		v34 = EpicSettings.Settings['useCleave'];
+		v36 = EpicSettings.Settings['useExecute'];
+		v37 = EpicSettings.Settings['useHeroicThrow'];
+		v38 = EpicSettings.Settings['useMortalStrike'];
+		v39 = EpicSettings.Settings['useOverpower'];
+		v40 = EpicSettings.Settings['useRend'];
+		v42 = EpicSettings.Settings['useShockwave'];
+		v43 = EpicSettings.Settings['useSkullsplitter'];
+		v44 = EpicSettings.Settings['useSlam'];
+		v45 = EpicSettings.Settings['useSweepingStrikes'];
+		v46 = EpicSettings.Settings['useThunderClap'];
+		v49 = EpicSettings.Settings['useWhirlwind'];
+		v50 = EpicSettings.Settings['useWreckingThrow'];
+		v30 = EpicSettings.Settings['useAvatar'];
+		v32 = EpicSettings.Settings['useBladestorm'];
+		v35 = EpicSettings.Settings['useColossusSmash'];
+		v82 = EpicSettings.Settings['useSpearOfBastion'];
+		v47 = EpicSettings.Settings['useThunderousRoar'];
+		v48 = EpicSettings.Settings['useWarbreaker'];
+		v51 = EpicSettings.Settings['avatarWithCD'];
+		v52 = EpicSettings.Settings['bladestormWithCD'];
+		v53 = EpicSettings.Settings['colossusSmashWithCD'];
+		v54 = EpicSettings.Settings['spearOfBastionWithCD'];
+		v55 = EpicSettings.Settings['thunderousRoarWithCD'];
+		v56 = EpicSettings.Settings['warbreakerWithCD'];
 	end
-	local function v119()
-		local v161 = 0 + 0;
+	local function v118()
+		local v158 = 0 - 0;
 		while true do
-			if ((v161 == (10 - 5)) or ((5431 - 3340) < (2001 - (582 + 1388)))) then
-				v77 = EpicSettings.Settings['interveneHP'] or (0 - 0);
-				v76 = EpicSettings.Settings['rallyingCryGroup'] or (0 + 0);
-				v75 = EpicSettings.Settings['rallyingCryHP'] or (364 - (326 + 38));
-				v161 = 17 - 11;
+			if ((v158 == (2 - 0)) or ((4893 - (48 + 725)) <= (3590 - 1392))) then
+				v64 = EpicSettings.Settings['useIgnorePain'];
+				v66 = EpicSettings.Settings['useIntervene'];
+				v65 = EpicSettings.Settings['useRallyingCry'];
+				v158 = 7 - 4;
 			end
-			if ((v161 == (0 - 0)) or ((3050 - (47 + 573)) >= (1718 + 3154))) then
-				v60 = EpicSettings.Settings['usePummel'];
-				v61 = EpicSettings.Settings['useStormBolt'];
-				v62 = EpicSettings.Settings['useIntimidatingShout'];
-				v161 = 4 - 3;
+			if ((v158 == (0 + 0)) or ((4265 - 2669) == (241 + 617))) then
+				v59 = EpicSettings.Settings['usePummel'];
+				v60 = EpicSettings.Settings['useStormBolt'];
+				v61 = EpicSettings.Settings['useIntimidatingShout'];
+				v158 = 1 + 0;
 			end
-			if ((v161 == (5 - 1)) or ((6434 - (1269 + 395)) < (2227 - (76 + 416)))) then
-				v81 = EpicSettings.Settings['unstanceHP'] or (443 - (319 + 124));
-				v73 = EpicSettings.Settings['dieByTheSwordHP'] or (0 - 0);
-				v74 = EpicSettings.Settings['ignorePainHP'] or (1007 - (564 + 443));
-				v161 = 13 - 8;
+			if (((4073 - (152 + 701)) == (4531 - (430 + 881))) and (v158 == (1 + 0))) then
+				v62 = EpicSettings.Settings['useBitterImmunity'];
+				v67 = EpicSettings.Settings['useDefensiveStance'];
+				v63 = EpicSettings.Settings['useDieByTheSword'];
+				v158 = 897 - (557 + 338);
 			end
-			if ((v161 == (461 - (337 + 121))) or ((13006 - 8567) <= (7828 - 5478))) then
-				v71 = EpicSettings.Settings['useVictoryRush'];
-				v72 = EpicSettings.Settings['bitterImmunityHP'] or (1911 - (1261 + 650));
-				v78 = EpicSettings.Settings['defensiveStanceHP'] or (0 + 0);
-				v161 = 6 - 2;
-			end
-			if ((v161 == (1819 - (772 + 1045))) or ((632 + 3847) < (4610 - (102 + 42)))) then
-				v65 = EpicSettings.Settings['useIgnorePain'];
-				v67 = EpicSettings.Settings['useIntervene'];
-				v66 = EpicSettings.Settings['useRallyingCry'];
-				v161 = 1847 - (1524 + 320);
-			end
-			if (((3817 - (1049 + 221)) > (1381 - (18 + 138))) and (v161 == (14 - 8))) then
-				v82 = EpicSettings.Settings['victoryRushHP'] or (1102 - (67 + 1035));
-				v84 = EpicSettings.Settings['spearSetting'] or "player";
+			if (((2 + 4) == v158) or ((3950 - 2548) > (12676 - 9056))) then
+				v81 = EpicSettings.Settings['victoryRushHP'] or (0 - 0);
+				v83 = EpicSettings.Settings['spearSetting'] or "player";
 				break;
 			end
-			if (((5019 - (136 + 212)) > (11362 - 8688)) and (v161 == (1 + 0))) then
-				v63 = EpicSettings.Settings['useBitterImmunity'];
-				v68 = EpicSettings.Settings['useDefensiveStance'];
-				v64 = EpicSettings.Settings['useDieByTheSword'];
-				v161 = 2 + 0;
+			if (((5547 - 2973) == (3375 - (499 + 302))) and (v158 == (869 - (39 + 827)))) then
+				v70 = EpicSettings.Settings['useVictoryRush'];
+				v71 = EpicSettings.Settings['bitterImmunityHP'] or (0 - 0);
+				v77 = EpicSettings.Settings['defensiveStanceHP'] or (0 - 0);
+				v158 = 15 - 11;
+			end
+			if (((2760 - 962) < (237 + 2520)) and ((14 - 9) == v158)) then
+				v76 = EpicSettings.Settings['interveneHP'] or (0 + 0);
+				v75 = EpicSettings.Settings['rallyingCryGroup'] or (0 - 0);
+				v74 = EpicSettings.Settings['rallyingCryHP'] or (104 - (103 + 1));
+				v158 = 560 - (475 + 79);
+			end
+			if ((v158 == (8 - 4)) or ((1206 - 829) > (337 + 2267))) then
+				v80 = EpicSettings.Settings['unstanceHP'] or (0 + 0);
+				v72 = EpicSettings.Settings['dieByTheSwordHP'] or (1503 - (1395 + 108));
+				v73 = EpicSettings.Settings['ignorePainHP'] or (0 - 0);
+				v158 = 1209 - (7 + 1197);
+			end
+		end
+	end
+	local function v119()
+		local v159 = 0 + 0;
+		while true do
+			if (((199 + 369) < (1230 - (27 + 292))) and (v159 == (2 - 1))) then
+				v91 = EpicSettings.Settings['useTrinkets'];
+				v90 = EpicSettings.Settings['useRacials'];
+				v57 = EpicSettings.Settings['trinketsWithCD'];
+				v58 = EpicSettings.Settings['racialsWithCD'];
+				v159 = 2 - 0;
+			end
+			if (((13776 - 10491) < (8337 - 4109)) and (v159 == (3 - 1))) then
+				v68 = EpicSettings.Settings['useHealthstone'];
+				v69 = EpicSettings.Settings['useHealingPotion'];
+				v78 = EpicSettings.Settings['healthstoneHP'] or (139 - (43 + 96));
+				v79 = EpicSettings.Settings['healingPotionHP'] or (0 - 0);
+				v159 = 6 - 3;
+			end
+			if (((3250 + 666) > (940 + 2388)) and (v159 == (5 - 2))) then
+				v85 = EpicSettings.Settings['HealingPotionName'] or "";
+				v84 = EpicSettings.Settings['HandleIncorporeal'];
+				break;
+			end
+			if (((959 + 1541) < (7194 - 3355)) and (v159 == (0 + 0))) then
+				v89 = EpicSettings.Settings['fightRemainsCheck'] or (0 + 0);
+				v86 = EpicSettings.Settings['InterruptWithStun'];
+				v87 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v88 = EpicSettings.Settings['InterruptThreshold'];
+				v159 = 1752 - (1414 + 337);
 			end
 		end
 	end
 	local function v120()
-		v90 = EpicSettings.Settings['fightRemainsCheck'] or (1604 - (240 + 1364));
-		v87 = EpicSettings.Settings['InterruptWithStun'];
-		v88 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-		v89 = EpicSettings.Settings['InterruptThreshold'];
-		v92 = EpicSettings.Settings['useTrinkets'];
-		v91 = EpicSettings.Settings['useRacials'];
-		v58 = EpicSettings.Settings['trinketsWithCD'];
-		v59 = EpicSettings.Settings['racialsWithCD'];
-		v69 = EpicSettings.Settings['useHealthstone'];
-		v70 = EpicSettings.Settings['useHealingPotion'];
-		v79 = EpicSettings.Settings['healthstoneHP'] or (1082 - (1050 + 32));
-		v80 = EpicSettings.Settings['healingPotionHP'] or (0 - 0);
-		v86 = EpicSettings.Settings['HealingPotionName'] or "";
-		v85 = EpicSettings.Settings['HandleIncorporeal'];
-	end
-	local function v121()
-		local v172 = 0 + 0;
-		while true do
-			if ((v172 == (1055 - (331 + 724))) or ((299 + 3397) < (3971 - (269 + 375)))) then
-				v119();
-				v118();
-				v120();
-				v28 = EpicSettings.Toggles['ooc'];
-				v172 = 726 - (267 + 458);
+		v118();
+		v117();
+		v119();
+		v27 = EpicSettings.Toggles['ooc'];
+		v28 = EpicSettings.Toggles['aoe'];
+		v29 = EpicSettings.Toggles['cds'];
+		if (((2447 - (1642 + 298)) == (1321 - 814)) and v13:IsDeadOrGhost()) then
+			return v26;
+		end
+		if (((690 - 450) <= (9392 - 6227)) and v28) then
+			v103 = v13:GetEnemiesInMeleeRange(3 + 5);
+			v104 = #v103;
+		else
+			v104 = 1 + 0;
+		end
+		v100 = v14:IsInMeleeRange(980 - (357 + 615));
+		if (((586 + 248) >= (1974 - 1169)) and (v92.TargetIsValid() or v13:AffectingCombat())) then
+			local v167 = 0 + 0;
+			while true do
+				if ((v167 == (2 - 1)) or ((3049 + 763) < (158 + 2158))) then
+					if ((v102 == (6984 + 4127)) or ((3953 - (384 + 917)) <= (2230 - (128 + 569)))) then
+						v102 = v9.FightRemains(v103, false);
+					end
+					break;
+				end
+				if ((v167 == (1543 - (1407 + 136))) or ((5485 - (687 + 1200)) < (3170 - (556 + 1154)))) then
+					v101 = v9.BossFightRemains(nil, true);
+					v102 = v101;
+					v167 = 3 - 2;
+				end
 			end
-			if (((1 + 1) == v172) or ((8734 - 4192) == (3788 - (667 + 151)))) then
-				v101 = v15:IsInMeleeRange(1505 - (1410 + 87));
-				if (((2149 - (1504 + 393)) <= (5343 - 3366)) and (v93.TargetIsValid() or v14:AffectingCombat())) then
-					local v191 = 0 - 0;
-					while true do
-						if ((v191 == (796 - (461 + 335))) or ((184 + 1252) == (5536 - (1730 + 31)))) then
-							v102 = v10.BossFightRemains(nil, true);
-							v103 = v102;
-							v191 = 1668 - (728 + 939);
+		end
+		if (not v13:IsChanneling() or ((4211 - (9 + 86)) < (1613 - (275 + 146)))) then
+			if (v13:AffectingCombat() or ((550 + 2827) <= (967 - (29 + 35)))) then
+				v26 = v116();
+				if (((17621 - 13645) >= (1310 - 871)) and v26) then
+					return v26;
+				end
+			else
+				local v188 = 0 - 0;
+				while true do
+					if (((2444 + 1308) == (4764 - (53 + 959))) and (v188 == (408 - (312 + 96)))) then
+						v26 = v115();
+						if (((7022 - 2976) > (2980 - (147 + 138))) and v26) then
+							return v26;
 						end
-						if ((v191 == (3 - 2)) or ((3281 - 1663) < (2130 - 1200))) then
-							if (((5791 - (138 + 930)) > (3796 + 357)) and (v103 == (8687 + 2424))) then
-								v103 = v10.FightRemains(v104, false);
-							end
-							break;
-						end
+						break;
 					end
 				end
-				if (not v14:IsChanneling() or ((3132 + 522) >= (19003 - 14349))) then
-					if (((2717 - (459 + 1307)) <= (3366 - (474 + 1396))) and v14:AffectingCombat()) then
-						local v195 = 0 - 0;
-						while true do
-							if ((v195 == (0 + 0)) or ((6 + 1730) == (1635 - 1064))) then
-								v27 = v117();
-								if (v27 or ((114 + 782) > (15920 - 11151))) then
-									return v27;
-								end
-								break;
-							end
-						end
-					else
-						local v196 = 0 - 0;
-						while true do
-							if ((v196 == (591 - (562 + 29))) or ((891 + 154) <= (2439 - (374 + 1045)))) then
-								v27 = v116();
-								if (v27 or ((919 + 241) <= (1018 - 690))) then
-									return v27;
-								end
-								break;
-							end
-						end
-					end
-				end
-				break;
-			end
-			if (((4446 - (448 + 190)) > (944 + 1980)) and ((1 + 0) == v172)) then
-				v29 = EpicSettings.Toggles['aoe'];
-				v30 = EpicSettings.Toggles['cds'];
-				if (((2536 + 1355) < (18912 - 13993)) and v14:IsDeadOrGhost()) then
-					return;
-				end
-				if (v29 or ((6941 - 4707) <= (2996 - (1307 + 187)))) then
-					v104 = v14:GetEnemiesInMeleeRange(31 - 23);
-					v105 = #v104;
-				else
-					v105 = 2 - 1;
-				end
-				v172 = 5 - 3;
 			end
 		end
 	end
-	local function v122()
-		v20.Print("Arms Warrior by Epic. Supported by xKaneto.");
+	local function v121()
+		v19.Print("Arms Warrior by Epic. Supported by xKaneto.");
 	end
-	v20.SetAPL(754 - (232 + 451), v121, v122);
+	v19.SetAPL(970 - (813 + 86), v120, v121);
 end;
 return v0["Epix_Warrior_Arms.lua"]();
 

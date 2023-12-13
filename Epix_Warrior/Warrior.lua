@@ -1,18 +1,18 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 76 - (46 + 30);
+	local v5 = 0 + 0;
 	local v6;
 	while true do
-		if ((v5 == (3 - 2)) or ((2999 - (666 + 739)) > (5895 - 3715))) then
+		if (((5520 - (1228 + 618)) >= (1038 - 522)) and (v5 == (3 - 2))) then
 			return v6(...);
 		end
-		if (((5461 - 2387) == (3050 + 24)) and (v5 == (791 - (368 + 423)))) then
+		if (((3267 - (802 + 150)) == (6232 - 3917)) and (v5 == (0 - 0))) then
 			v6 = v0[v4];
-			if (((1162 - 792) >= (214 - (10 + 8))) and not v6) then
+			if (not v6 or ((2288 + 855) > (4745 - (915 + 82)))) then
 				return v1(v4, ...);
 			end
-			v5 = 3 - 2;
+			v5 = 2 - 1;
 		end
 	end
 end
@@ -31,101 +31,73 @@ v0["Epix_Warrior_Warrior.lua"] = function(...)
 	local v19 = v10.Utils.MergeTableByKey;
 	local v20 = EpicLib;
 	local v21 = v20.Macro;
-	if (not v16.Warrior or ((3610 - (416 + 26)) < (1602 - 1100))) then
+	if (not v16.Warrior or ((929 + 665) > (2867 - 687))) then
 		v16.Warrior = {};
 	end
-	v16.Warrior.Commons = {AncestralCall=v16(117905 + 156833, nil, 1 - 0),ArcaneTorrent=v16(51051 - (145 + 293), nil, 432 - (44 + 386)),BagofTricks=v16(313897 - (998 + 488), nil, 1 + 2),Berserking=v16(21533 + 4764, nil, 776 - (201 + 571)),BloodFury=v16(21710 - (116 + 1022), nil, 20 - 15),Fireblood=v16(155679 + 109542, nil, 21 - 15),LightsJudgment=v16(907824 - 652177, nil, 866 - (814 + 45)),WarStomp=v16(50631 - 30082, nil, 1 + 7),BattleShout=v16(2358 + 4315, nil, 894 - (261 + 624)),Charge=v16(177 - 77, nil, 1090 - (1020 + 60)),Hamstring=v16(3138 - (630 + 793), nil, 585 - 412),HeroicThrow=v16(273455 - 215700, nil, 5 + 6),IgnorePain=v16(655748 - 465292, nil, 1819 - (760 + 987)),Pummel=v16(8465 - (1789 + 124), nil, 778 - (745 + 21)),Slam=v16(504 + 960, nil, 35 - 22),VictoryRush=v16(135044 - 100616, nil, 1 + 13),DefensiveStance=v16(303221 + 82987, nil, 1070 - (87 + 968)),Avatar=v17(70 - 54, 97599 + 9975, 906819 - 505669),AvatarBuff=v17(1430 - (447 + 966), 294500 - 186926, 402967 - (1703 + 114)),BerserkerRage=v16(19200 - (376 + 325), nil, 29 - 11),BerserkersTorment=v16(1200399 - 810276, nil, 6 + 13),BitterImmunity=v16(845229 - 461467, nil, 34 - (9 + 5)),BloodandThunder=v16(384653 - (85 + 291), nil, 1286 - (243 + 1022)),DoubleTime=v16(395080 - 291253, nil, 19 + 3),CrushingForce=v16(383944 - (1123 + 57), nil, 19 + 4),FrothingBerserker=v16(215825 - (163 + 91), nil, 1954 - (1869 + 61)),ImmovableObject=v16(110159 + 284148, nil, 87 - 62),Intervene=v16(5238 - 1827, nil, 21 + 126),IntimidatingShout=v16(7208 - 1962, nil, 25 + 1),HeroicLeap=v16(8018 - (1329 + 145), nil, 998 - (140 + 831)),ImpendingVictory=v16(204018 - (1409 + 441), nil, 746 - (15 + 703)),OverwhelmingRage=v16(177262 + 205505, nil, 467 - (262 + 176)),RallyingCry=v16(99183 - (345 + 1376), nil, 718 - (198 + 490)),RumblingEarth=v16(1216436 - 941097, nil, 74 - 43),Shockwave=v16(48174 - (696 + 510), nil, 66 - 34),SonicBoom=v16(391987 - (1091 + 171), nil, 6 + 27),SpearofBastion=v16(1184024 - 807945, nil, 112 - 78),SpellReflection=v16(24294 - (123 + 251), nil, 173 - 138),StormBolt=v16(108268 - (208 + 490), nil, 4 + 32),ThunderClap=v17(17 + 20, 7179 - (660 + 176), 47664 + 349055),ThunderousRoar=v16(384520 - (14 + 188), nil, 713 - (534 + 141)),TitanicThrow=v16(154411 + 229679, nil, 35 + 4),WarMachineBuff=v16(252122 + 10110, nil, 84 - 44),WreckingThrow=v16(609820 - 225710, nil, 114 - 73),BattleShoutBuff=v16(3584 + 3089, nil, 27 + 15),AspectsFavorBuff=v16(407650 - (115 + 281), nil, 99 - 56),Pool=v16(827868 + 172042, nil, 105 - 61)};
-	v16.Warrior.Arms = v19(v16.Warrior.Commons, {BattleStance=v16(1415986 - 1029822, nil, 912 - (550 + 317)),Execute=v17(66 - 20, 229390 - 66189, 785248 - 504248),Whirlwind=v16(1965 - (134 + 151), nil, 1712 - (970 + 695)),AngerManagement=v16(290582 - 138304, nil, 2038 - (582 + 1408)),Battlelord=v16(1340862 - 954232, nil, 60 - 11),BattlelordBuff=v16(1456963 - 1070332, nil, 1874 - (1195 + 629)),BlademastersTorment=v16(515956 - 125818, nil, 301 - (187 + 54)),Bladestorm=v17(841 - (162 + 618), 159652 + 68195, 259605 + 130169),Bloodletting=v16(817152 - 433998, nil, 294 - 119),Cleave=v16(67 + 778, nil, 1698 - (1373 + 263)),ColossusSmash=v17(1063 - (451 + 549), 52749 + 114356, 407988 - 145827),ColossusSmashDebuff=v16(349721 - 141635, nil, 1448 - (746 + 638)),DieByTheSword=v16(44423 + 73615, nil, 98 - 33),Dreadnaught=v16(262491 - (218 + 123), nil, 1647 - (1535 + 46)),ExecutionersPrecision=v16(384160 + 2474, nil, 10 + 57),ExecutionersPrecisionDebuff=v16(387193 - (306 + 254), nil, 5 + 63),FervorofBattle=v16(397053 - 194737, nil, 1536 - (899 + 568)),Hurricane=v16(256717 + 133846, nil, 169 - 99),HurricaneBuff=v16(391184 - (268 + 335), nil, 361 - (60 + 230)),ImprovedSlam=v16(400777 - (426 + 146), nil, 22 + 154),Juggernaut=v16(384748 - (282 + 1174), nil, 884 - (569 + 242)),JuggernautBuff=v16(1104108 - 720816, nil, 5 + 69),MartialProwessBuff=v16(8408 - (706 + 318), nil, 1326 - (721 + 530)),Massacre=v16(282272 - (945 + 326), nil, 189 - 113),MercilessBonegrinder=v16(341083 + 42234, nil, 777 - (271 + 429)),MercilessBonegrinderBuff=v16(352115 + 31201, nil, 1578 - (1408 + 92)),MortalStrike=v16(13380 - (461 + 625), nil, 1367 - (993 + 295)),Overpower=v16(384 + 7000, nil, 1251 - (418 + 753)),Rend=v16(295 + 477, nil, 9 + 72),RendDebuff=v16(113642 + 274897, nil, 21 + 61),Skullsplitter=v16(261172 - (406 + 123), nil, 1852 - (1749 + 20)),StormofSwords=v16(91570 + 293942, nil, 1406 - (1249 + 73)),SuddenDeath=v16(10605 + 19120, nil, 1230 - (466 + 679)),SuddenDeathBuff=v16(126135 - 73698, nil, 245 - 159),SweepingStrikes=v16(262608 - (106 + 1794), nil, 28 + 59),SweepingStrikesBuff=v16(65902 + 194806, nil, 259 - 171),TestofMight=v16(1042578 - 657570, nil, 203 - (4 + 110)),TestofMightBuff=v16(385597 - (57 + 527), nil, 1517 - (41 + 1386)),TideofBlood=v16(386460 - (17 + 86), nil, 62 + 29),Unhinged=v16(862224 - 475596, nil, 266 - 174),Warbreaker=v16(262327 - (122 + 44), nil, 160 - 67),WarlordsTorment=v16(1294278 - 904138, nil, 77 + 17),CrushingAdvanceBuff=v16(59316 + 350822, nil, 192 - 97),DeepWoundsDebuff=v16(262180 - (30 + 35), nil, 66 + 30)});
-	v16.Warrior.Fury = v19(v16.Warrior.Commons, {BerserkerStance=v16(387453 - (1043 + 214), nil, 366 - 269),Bloodbath=v16(336308 - (323 + 889), nil, 263 - 165),CrushingBlow=v16(335677 - (361 + 219), nil, 419 - (53 + 267)),Execute=v17(23 + 77, 5721 - (15 + 398), 281717 - (18 + 964)),Whirlwind=v16(716729 - 526318, nil, 59 + 42),AngerManagement=v16(95941 + 56337, nil, 952 - (20 + 830)),Annihilator=v16(299681 + 84235, nil, 229 - (116 + 10)),AshenJuggernaut=v16(28996 + 363540, nil, 842 - (542 + 196)),AshenJuggernautBuff=v16(841484 - 448947, nil, 31 + 74),Bloodthirst=v16(12134 + 11747, nil, 39 + 67),ColdSteelHotBlood=v16(1011766 - 627807, nil, 274 - 167),DancingBlades=v16(393234 - (1126 + 425), nil, 513 - (118 + 287)),DancingBladesBuff=v16(1535139 - 1143451, nil, 1230 - (118 + 1003)),EnragedRegeneration=v16(539528 - 355164, nil, 487 - (142 + 235)),Frenzy=v16(1520083 - 1185006, nil, 25 + 86),FrenzyBuff=v16(336059 - (553 + 424), nil, 211 - 99),ImprovedWhilwind=v16(11408 + 1542, nil, 113 + 0),MeatCleaver=v16(163260 + 117132, nil, 49 + 65),MeatCleaverBuff=v16(48963 + 36776, nil, 249 - 134),OdynsFury=v16(1072895 - 687836, nil, 259 - 143),Onslaught=v16(91809 + 223911, nil, 565 - 448),RagingBlow=v16(86041 - (239 + 514), nil, 42 + 76),Rampage=v16(185696 - (797 + 532), nil, 87 + 32),Ravager=v16(77227 + 151693, nil, 282 - 162),RecklessAbandon=v16(397951 - (373 + 829), nil, 852 - (476 + 255)),Recklessness=v16(2849 - (369 + 761), nil, 71 + 51),RecklessnessBuff=v16(3121 - 1402, nil, 232 - 109),StormofSwords=v16(389141 - (64 + 174), nil, 18 + 106),SuddenDeath=v16(415730 - 135009, nil, 461 - (144 + 192)),SuddenDeathBuff=v16(280992 - (42 + 174), nil, 95 + 31),Tenderize=v16(322182 + 66751, nil, 54 + 73),TitanicRage=v16(395833 - (363 + 1141), nil, 1708 - (1183 + 397)),TitansTorment=v16(1187705 - 797570, nil, 95 + 34),WrathandFury=v16(293703 + 99233, nil, 2105 - (1913 + 62)),BloodcrazeBuff=v16(248102 + 145849, nil, 346 - 215),EnrageBuff=v16(186295 - (565 + 1368), nil, 496 - 364),FuriousBloodthirstBuff=v16(424872 - (1477 + 184), nil, 236 - 62),MercilessAssaultBuff=v16(382003 + 27980, nil, 989 - (564 + 292))});
-	v16.Warrior.Protection = v19(v16.Warrior.Commons, {BattleStance=v16(666297 - 280133, nil, 403 - 269),Devastate=v16(20547 - (244 + 60), nil, 104 + 31),Execute=v16(163677 - (41 + 435), nil, 1137 - (938 + 63)),ShieldBlock=v16(1973 + 592, nil, 1262 - (936 + 189)),ShieldSlam=v16(7873 + 16049, nil, 1751 - (1565 + 48)),BarbaricTraining=v16(241327 + 149348, nil, 1277 - (782 + 356)),Bolster=v16(280268 - (176 + 91), nil, 364 - 224),BoomingVoice=v16(298804 - 96061, nil, 1233 - (975 + 117)),ChampionsBulwark=v16(388203 - (157 + 1718), nil, 116 + 26),DemoralizingShout=v16(4117 - 2957, nil, 488 - 345),EnduringDefenses=v16(387045 - (697 + 321), nil, 391 - 247),HeavyRepercussions=v16(430453 - 227276, nil, 334 - 189),ImpenetrableWall=v16(149498 + 234574, nil, 276 - 128),Juggernaut=v16(1056111 - 662144, nil, 1376 - (322 + 905)),LastStand=v16(13586 - (602 + 9), nil, 1339 - (449 + 740)),Massacre=v16(281873 - (826 + 46), nil, 1098 - (245 + 702)),Ravager=v16(723377 - 494457, nil, 49 + 103),Rend=v16(395960 - (260 + 1638), nil, 593 - (382 + 58)),Revenge=v16(21083 - 14511, nil, 128 + 26),SeismicReverberation=v16(791454 - 408498, nil, 460 - 305),ShieldCharge=v16(387157 - (902 + 303), nil, 341 - 185),ShieldWall=v16(2097 - 1226, nil, 14 + 143),SuddenDeath=v16(31415 - (1121 + 569), nil, 372 - (22 + 192)),SuddenDeathBuff=v16(53120 - (483 + 200), nil, 1622 - (1404 + 59)),UnnervingFocus=v16(1051022 - 666980, nil, 215 - 55),UnstoppableForce=v16(276101 - (468 + 297), nil, 723 - (334 + 228)),AvatarBuff=v16(1353074 - 951924, nil, 374 - 212),EarthenTenacityBuff=v16(743989 - 333771, nil, 47 + 116),FervidBuff=v16(425753 - (141 + 95), nil, 174 + 3),LastStandBuff=v16(33397 - 20422, nil, 393 - 229),RallyingCryBuff=v16(22830 + 74633, nil, 452 - 287),RevengeBuff=v16(3728 + 1574, nil, 87 + 79),SeeingRedBuff=v16(544266 - 157780, nil, 99 + 68),ShieldBlockBuff=v16(132567 - (92 + 71), nil, 83 + 85),ShieldWallBuff=v16(1464 - 593, nil, 934 - (574 + 191)),ViolentOutburstBuff=v16(318792 + 67686, nil, 425 - 255),VanguardsDeterminationBuff=v16(201280 + 192776, nil, 1020 - (254 + 595)),RendDebuff=v16(388665 - (55 + 71), nil, 225 - 53)});
-	if (((2229 - (573 + 1217)) == (1215 - 776)) and not v18.Warrior) then
+	v16.Warrior.Commons = {AncestralCall=v16(275925 - (1069 + 118), nil, 2 - 1),ArcaneTorrent=v16(110714 - 60101, nil, 1 + 1),BagofTricks=v16(555091 - 242680, nil, 3 + 0),Berserking=v16(27088 - (368 + 423), nil, 12 - 8),BloodFury=v16(20590 - (10 + 8), nil, 19 - 14),Fireblood=v16(265663 - (416 + 26), nil, 19 - 13),LightsJudgment=v16(109712 + 145935, nil, 12 - 5),WarStomp=v16(20987 - (145 + 293), nil, 438 - (44 + 386)),BattleShout=v16(8159 - (998 + 488), nil, 3 + 6),Charge=v16(82 + 18, nil, 782 - (201 + 571)),Hamstring=v16(2853 - (116 + 1022), nil, 720 - 547),HeroicThrow=v16(33901 + 23854, nil, 40 - 29),IgnorePain=v16(676326 - 485870, nil, 931 - (814 + 45)),Pummel=v16(16143 - 9591, nil, 1 + 11),Slam=v16(518 + 946, nil, 898 - (261 + 624)),VictoryRush=v16(61181 - 26753, nil, 1094 - (1020 + 60)),DefensiveStance=v16(387631 - (630 + 793), nil, 50 - 35),Avatar=v17(75 - 59, 42367 + 65207, 1381177 - 980027),AvatarBuff=v17(1764 - (760 + 987), 109487 - (1789 + 124), 401916 - (745 + 21)),BerserkerRage=v16(6364 + 12135, nil, 49 - 31),BerserkersTorment=v16(1530263 - 1140140, nil, 1 + 18),BitterImmunity=v16(301301 + 82461, nil, 1075 - (87 + 968)),BloodandThunder=v16(1691565 - 1307288, nil, 20 + 1),DoubleTime=v16(234705 - 130878, nil, 1435 - (447 + 966)),CrushingForce=v16(1047874 - 665110, nil, 1840 - (1703 + 114)),FrothingBerserker=v16(216272 - (376 + 325), nil, 38 - 14),ImmovableObject=v16(1213273 - 818966, nil, 8 + 17),Intervene=v16(7512 - 4101, nil, 161 - (9 + 5)),IntimidatingShout=v16(5622 - (85 + 291), nil, 1291 - (243 + 1022)),HeroicLeap=v16(24900 - 18356, nil, 23 + 4),ImpendingVictory=v16(203348 - (1123 + 57), nil, 23 + 5),OverwhelmingRage=v16(383021 - (163 + 91), nil, 1959 - (1869 + 61)),RallyingCry=v16(27229 + 70233, nil, 105 - 75),RumblingEarth=v16(422907 - 147568, nil, 5 + 26),Shockwave=v16(64545 - 17577, nil, 31 + 1),SonicBoom=v16(392199 - (1329 + 145), nil, 1004 - (140 + 831)),SpearofBastion=v16(377929 - (1409 + 441), nil, 752 - (15 + 703)),SpellReflection=v16(11078 + 12842, nil, 473 - (262 + 176)),StormBolt=v16(109291 - (345 + 1376), nil, 724 - (198 + 490)),ThunderClap=v17(163 - 126, 15214 - 8871, 397925 - (696 + 510)),ThunderousRoar=v16(806024 - 421706, nil, 1300 - (1091 + 171)),TitanicThrow=v16(61809 + 322281, nil, 122 - 83),WarMachineBuff=v16(869648 - 607416, nil, 414 - (123 + 251)),WreckingThrow=v16(1908623 - 1524513, nil, 739 - (208 + 490)),BattleShoutBuff=v16(564 + 6109, nil, 19 + 23),AspectsFavorBuff=v16(408090 - (660 + 176), nil, 6 + 37),Pool=v16(1000112 - (14 + 188), nil, 719 - (534 + 141))};
+	v16.Warrior.Arms = v19(v16.Warrior.Commons, {BattleStance=v16(155245 + 230919, nil, 40 + 5),Execute=v17(45 + 1, 342974 - 179773, 446121 - 165121),Whirlwind=v16(4712 - 3032, nil, 26 + 21),AngerManagement=v16(96958 + 55320, nil, 444 - (115 + 281)),Battlelord=v16(899315 - 512685, nil, 41 + 8),BattlelordBuff=v16(934391 - 547760, nil, 183 - 133),BlademastersTorment=v16(391005 - (550 + 317), nil, 86 - 26),Bladestorm=v17(85 - 24, 636713 - 408866, 390059 - (134 + 151)),Bloodletting=v16(384819 - (970 + 695), nil, 333 - 158),Cleave=v16(2835 - (582 + 1408), nil, 214 - 152),ColossusSmash=v17(78 - 15, 629711 - 462606, 263985 - (1195 + 629)),ColossusSmashDebuff=v16(275192 - 67106, nil, 305 - (187 + 54)),DieByTheSword=v16(118818 - (162 + 618), nil, 46 + 19),Dreadnaught=v16(174603 + 87547, nil, 140 - 74),ExecutionersPrecision=v16(650005 - 263371, nil, 6 + 61),ExecutionersPrecisionDebuff=v16(388269 - (1373 + 263), nil, 1068 - (451 + 549)),FervorofBattle=v16(63864 + 138452, nil, 106 - 37),Hurricane=v16(656404 - 265841, nil, 1454 - (746 + 638)),HurricaneBuff=v16(146991 + 243590, nil, 107 - 36),ImprovedSlam=v16(400546 - (218 + 123), nil, 1757 - (1535 + 46)),Juggernaut=v16(380840 + 2452, nil, 11 + 62),JuggernautBuff=v16(383852 - (306 + 254), nil, 5 + 69),MartialProwessBuff=v16(14491 - 7107, nil, 1542 - (899 + 568)),Massacre=v16(184702 + 96299, nil, 183 - 107),MercilessBonegrinder=v16(383920 - (268 + 335), nil, 367 - (60 + 230)),MercilessBonegrinderBuff=v16(383888 - (426 + 146), nil, 10 + 68),MortalStrike=v16(13750 - (282 + 1174), nil, 890 - (569 + 242)),Overpower=v16(21269 - 13885, nil, 5 + 75),Rend=v16(1796 - (706 + 318), nil, 1332 - (721 + 530)),RendDebuff=v16(389810 - (945 + 326), nil, 204 - 122),Skullsplitter=v16(231926 + 28717, nil, 783 - (271 + 429)),StormofSwords=v16(354133 + 31379, nil, 1584 - (1408 + 92)),SuddenDeath=v16(30811 - (461 + 625), nil, 1373 - (993 + 295)),SuddenDeathBuff=v16(2723 + 49714, nil, 1257 - (418 + 753)),SweepingStrikes=v16(99292 + 161416, nil, 9 + 78),SweepingStrikesBuff=v16(76253 + 184455, nil, 23 + 65),TestofMight=v16(385537 - (406 + 123), nil, 1858 - (1749 + 20)),TestofMightBuff=v16(91451 + 293562, nil, 1412 - (1249 + 73)),TideofBlood=v16(137840 + 248517, nil, 1236 - (466 + 679)),Unhinged=v16(930021 - 543393, nil, 263 - 171),Warbreaker=v16(264061 - (106 + 1794), nil, 30 + 63),WarlordsTorment=v16(98620 + 291520, nil, 277 - 183),CrushingAdvanceBuff=v16(1110629 - 700491, nil, 209 - (4 + 110)),DeepWoundsDebuff=v16(262699 - (57 + 527), nil, 1523 - (41 + 1386))});
+	v16.Warrior.Fury = v19(v16.Warrior.Commons, {BerserkerStance=v16(386299 - (17 + 86), nil, 66 + 31),Bloodbath=v16(747302 - 412206, nil, 283 - 185),CrushingBlow=v16(335263 - (122 + 44), nil, 170 - 71),Execute=v17(331 - 231, 4318 + 990, 40601 + 240134),Whirlwind=v16(385745 - 195334, nil, 166 - (30 + 35)),AngerManagement=v16(104663 + 47615, nil, 1359 - (1043 + 214)),Annihilator=v16(1451454 - 1067538, nil, 1315 - (323 + 889)),AshenJuggernaut=v16(1056566 - 664030, nil, 684 - (361 + 219)),AshenJuggernautBuff=v16(392857 - (53 + 267), nil, 24 + 81),Bloodthirst=v16(24294 - (15 + 398), nil, 1088 - (18 + 964)),ColdSteelHotBlood=v16(1445267 - 1061308, nil, 62 + 45),DancingBlades=v16(246775 + 144908, nil, 958 - (20 + 830)),DancingBladesBuff=v16(305748 + 85940, nil, 235 - (116 + 10)),EnragedRegeneration=v16(13619 + 170745, nil, 848 - (542 + 196)),Frenzy=v16(718307 - 383230, nil, 33 + 78),FrenzyBuff=v16(170245 + 164837, nil, 41 + 71),ImprovedWhilwind=v16(34124 - 21174, nil, 289 - 176),Massacre=v16(207866 - (1126 + 425), nil, 583 - (118 + 287)),MeatCleaver=v16(1098938 - 818546, nil, 1235 - (118 + 1003)),MeatCleaverBuff=v16(250909 - 165170, nil, 492 - (142 + 235)),OdynsFury=v16(1746827 - 1361768, nil, 26 + 90),Onslaught=v16(316697 - (553 + 424), nil, 221 - 104),RagingBlow=v16(75132 + 10156, nil, 118 + 0),Rampage=v16(107349 + 77018, nil, 51 + 68),Ravager=v16(130730 + 98190, nil, 260 - 140),RecklessAbandon=v16(1105467 - 708718, nil, 270 - 149),Recklessness=v16(500 + 1219, nil, 589 - 467),RecklessnessBuff=v16(2472 - (239 + 514), nil, 44 + 79),StormofSwords=v16(390232 - (797 + 532), nil, 91 + 33),SuddenDeath=v16(94702 + 186019, nil, 293 - 168),SuddenDeathBuff=v16(281978 - (373 + 829), nil, 857 - (476 + 255)),Tenderize=v16(390063 - (369 + 761), nil, 74 + 53),TitanicRage=v16(716254 - 321925, nil, 242 - 114),TitansTorment=v16(390373 - (64 + 174), nil, 19 + 110),WrathandFury=v16(581914 - 188978, nil, 466 - (144 + 192)),BloodcrazeBuff=v16(394167 - (42 + 174), nil, 99 + 32),EnrageBuff=v16(152721 + 31641, nil, 57 + 75),FuriousBloodthirstBuff=v16(424715 - (363 + 1141), nil, 1754 - (1183 + 397)),MercilessAssaultBuff=v16(1248129 - 838146, nil, 98 + 35)});
+	v16.Warrior.Protection = v19(v16.Warrior.Commons, {BattleStance=v16(288641 + 97523, nil, 2109 - (1913 + 62)),Devastate=v16(12749 + 7494, nil, 357 - 222),Execute=v16(165134 - (565 + 1368), nil, 511 - 375),ShieldBlock=v16(4226 - (1477 + 184), nil, 186 - 49),ShieldSlam=v16(22290 + 1632, nil, 994 - (564 + 292)),BarbaricTraining=v16(674080 - 283405, nil, 418 - 279),Bolster=v16(280305 - (244 + 60), nil, 108 + 32),BoomingVoice=v16(203219 - (41 + 435), nil, 1142 - (938 + 63)),ChampionsBulwark=v16(297116 + 89212, nil, 1267 - (936 + 189)),DemoralizingShout=v16(382 + 778, nil, 1756 - (1565 + 48)),EnduringDefenses=v16(238456 + 147571, nil, 1282 - (782 + 356)),HeavyRepercussions=v16(203444 - (176 + 91), nil, 377 - 232),ImpenetrableWall=v16(566049 - 181977, nil, 1240 - (975 + 117)),Juggernaut=v16(395842 - (157 + 1718), nil, 121 + 28),LastStand=v16(46060 - 33085, nil, 512 - 362),Massacre=v16(282019 - (697 + 321), nil, 411 - 260),Ravager=v16(484992 - 256072, nil, 350 - 198),Rend=v16(153386 + 240676, nil, 286 - 133),Revenge=v16(17617 - 11045, nil, 1381 - (322 + 905)),SeismicReverberation=v16(383567 - (602 + 9), nil, 1344 - (449 + 740)),ShieldCharge=v16(386824 - (826 + 46), nil, 1103 - (245 + 702)),ShieldWall=v16(2752 - 1881, nil, 51 + 106),SuddenDeath=v16(31623 - (260 + 1638), nil, 598 - (382 + 58)),SuddenDeathBuff=v16(168221 - 115784, nil, 133 + 26),UnnervingFocus=v16(793699 - 409657, nil, 475 - 315),UnstoppableForce=v16(276541 - (902 + 303), nil, 353 - 192),AvatarBuff=v16(966171 - 565021, nil, 14 + 148),EarthenTenacityBuff=v16(411908 - (1121 + 569), nil, 377 - (22 + 192)),FervidBuff=v16(426200 - (483 + 200), nil, 1640 - (1404 + 59)),LastStandBuff=v16(35509 - 22534, nil, 219 - 55),RallyingCryBuff=v16(98228 - (468 + 297), nil, 727 - (334 + 228)),RevengeBuff=v16(17883 - 12581, nil, 384 - 218),SeeingRedBuff=v16(700947 - 314461, nil, 48 + 119),ShieldBlockBuff=v16(132640 - (141 + 95), nil, 166 + 2),ShieldWallBuff=v16(2241 - 1370, nil, 405 - 236),ViolentOutburstBuff=v16(90528 + 295950, nil, 465 - 295),VanguardsDeterminationBuff=v16(277018 + 117038, nil, 90 + 81),RendDebuff=v16(547157 - 158618, nil, 102 + 70)});
+	if (((3237 - (92 + 71)) == (1519 + 1555)) and not v18.Warrior) then
 		v18.Warrior = {};
 	end
-	v18.Warrior.Commons = {Healthstone=v18(420 + 5092),RefreshingHealingPotion=v18(308389 - 117009),DreamwalkersHealingPotion=v18(207962 - (714 + 225)),AlgetharPuzzleBox=v18(566072 - 372371, {(2 + 11),(820 - (118 + 688))}),ManicGrieftorch=v18(194356 - (25 + 23), {(1899 - (927 + 959)),(746 - (16 + 716))})};
+	v18.Warrior.Commons = {Healthstone=v18(9266 - 3754),RefreshingHealingPotion=v18(192145 - (574 + 191)),DreamwalkersHealingPotion=v18(170766 + 36257),AlgetharPuzzleBox=v18(485280 - 291579, {(862 - (254 + 595)),(18 - 4)}),ManicGrieftorch=v18(196098 - (573 + 1217), {(1 + 12),(953 - (714 + 225))})};
 	v18.Warrior.Arms = v19(v18.Warrior.Commons, {});
 	v18.Warrior.Fury = v19(v18.Warrior.Commons, {});
 	v18.Warrior.Protection = v19(v18.Warrior.Commons, {});
-	if (not v21.Warrior or ((2439 - 1175) < (369 - (11 + 86)))) then
+	if (((1081 - 711) >= (272 - 76)) and not v21.Warrior) then
 		v21.Warrior = {};
 	end
-	v21.Warrior.Commons = {Healthstone=v21(21 - 12),RefreshingHealingPotion=v21(295 - (175 + 110)),InterveneFocus=v21(27 - 16),PummelMouseover=v21(59 - 47),StormBoltMouseover=v21(1809 - (503 + 1293)),SpearOfBastionPlayer=v21(39 - 25),SpearOfBastionCursor=v21(11 + 4),IntimidatingShoutMouseover=v21(1077 - (810 + 251))};
+	v21.Warrior.Commons = {Healthstone=v21(1 + 8),RefreshingHealingPotion=v21(14 - 4),InterveneFocus=v21(817 - (118 + 688)),PummelMouseover=v21(60 - (25 + 23)),StormBoltMouseover=v21(3 + 10),SpearOfBastionPlayer=v21(1900 - (927 + 959)),SpearOfBastionCursor=v21(50 - 35),IntimidatingShoutMouseover=v21(748 - (16 + 716))};
 	v21.Warrior.Arms = v19(v21.Warrior.Commons, {});
-	v21.Warrior.Fury = v19(v21.Warrior.Commons, {RavagerPlayer=v21(12 + 5),RavagerCursor=v21(6 + 12)});
-	v21.Warrior.Protection = v19(v21.Warrior.Commons, {RavagerPlayer=v21(18 + 1),RavagerCursor=v21(553 - (43 + 490))});
+	v21.Warrior.Fury = v19(v21.Warrior.Commons, {RavagerPlayer=v21(32 - 15),RavagerCursor=v21(115 - (11 + 86))});
+	v21.Warrior.Protection = v19(v21.Warrior.Commons, {RavagerPlayer=v21(45 - 26),RavagerCursor=v21(305 - (175 + 110))});
 	local v34;
 	v34 = v10.AddCoreOverride("Spell.IsCastable", function(v38, v39, v40, v41, v42, v43)
-		local v44 = 733 - (711 + 22);
-		local v45;
-		while true do
-			if (((12080 - 8957) < (4750 - (240 + 619))) and (v44 == (0 + 0))) then
-				v45 = v34(v38, v39, v40, v41, v42, v43);
-				if (((6269 - 2327) <= (331 + 4656)) and (v38 == v16.Warrior.Arms.Charge)) then
-					return v45 and (v38:Charges() >= (1745 - (1344 + 400))) and ((v13:AffectingCombat() and not v14:IsInRange(413 - (255 + 150)) and v14:IsInRange(20 + 5)) or not v13:AffectingCombat());
-				else
-					return v45;
-				end
-				break;
-			end
+		local v44 = v34(v38, v39, v40, v41, v42, v43);
+		if ((v38 == v16.Warrior.Arms.Charge) or ((7998 - 4830) < (2475 - 1973))) then
+			return v44 and (v38:Charges() >= (1797 - (503 + 1293))) and ((v13:AffectingCombat() and not v14:IsInRange(22 - 14) and v14:IsInRange(19 + 6)) or not v13:AffectingCombat());
+		else
+			return v44;
 		end
-	end, 39 + 32);
+	end, 1132 - (810 + 251));
 	local v35;
-	v35 = v10.AddCoreOverride("Spell.IsCastable", function(v46, v47, v48, v49, v50, v51)
-		local v52 = 0 - 0;
-		local v53;
-		while true do
-			if (((14805 - 10221) == (6323 - (404 + 1335))) and (v52 == (406 - (183 + 223)))) then
-				v53 = v35(v46, v47, v48, v49, v50, v51);
-				if (((4841 - 862) >= (1106 + 562)) and (v46 == v16.Warrior.Fury.Charge)) then
-					return v53 and (v46:Charges() >= (1 + 0)) and ((v13:AffectingCombat() and not v14:IsInRange(345 - (10 + 327)) and v14:IsInRange(18 + 7)) or not v13:AffectingCombat());
-				else
-					return v53;
-				end
-				break;
-			end
+	v35 = v10.AddCoreOverride("Spell.IsCastable", function(v45, v46, v47, v48, v49, v50)
+		local v51 = v35(v45, v46, v47, v48, v49, v50);
+		if (((305 + 134) == (135 + 304)) and (v45 == v16.Warrior.Fury.Charge)) then
+			return v51 and (v45:Charges() >= (1 + 0)) and ((v13:AffectingCombat() and not v14:IsInRange(541 - (43 + 490)) and v14:IsInRange(758 - (711 + 22))) or not v13:AffectingCombat());
+		else
+			return v51;
 		end
-	end, 410 - (118 + 220));
+	end, 278 - 206);
 	local v36;
-	v36 = v10.AddCoreOverride("Spell.IsReady", function(v54, v55, v56, v57, v58, v59)
-		local v60 = 0 + 0;
-		local v61;
-		while true do
-			if (((1017 - (108 + 341)) > (193 + 235)) and (v60 == (0 - 0))) then
-				v61 = v36(v54, v55, v56, v57, v58, v59);
-				if (((2827 - (711 + 782)) <= (8843 - 4230)) and (v54 == v16.Warrior.Fury.Rampage)) then
-					if (v13:PrevGCDP(470 - (270 + 199), v16.Warrior.Fury.Bladestorm) or ((605 + 1260) >= (3848 - (580 + 1239)))) then
-						return v54:IsCastable() and (v13:Rage() >= v54:Cost());
-					else
-						return v61;
-					end
-				else
-					return v61;
-				end
-				break;
+	v36 = v10.AddCoreOverride("Spell.IsReady", function(v52, v53, v54, v55, v56, v57)
+		local v58 = v36(v52, v53, v54, v55, v56, v57);
+		if ((v52 == v16.Warrior.Fury.Rampage) or ((2123 - (240 + 619)) < (66 + 206))) then
+			if (((4967 - 1844) < (258 + 3633)) and v13:PrevGCDP(1745 - (1344 + 400), v16.Warrior.Fury.Bladestorm)) then
+				return v52:IsCastable() and (v13:Rage() >= v52:Cost());
+			else
+				return v58;
 			end
+		else
+			return v58;
 		end
-	end, 213 - 141);
+	end, 477 - (255 + 150));
 	local v37;
-	v37 = v10.AddCoreOverride("Spell.IsCastable", function(v62, v63, v64, v65, v66, v67)
-		local v68 = 0 + 0;
-		local v69;
-		while true do
-			if (((178 + 4772) >= (704 + 912)) and (v68 == (0 - 0))) then
-				v69 = v37(v62, v63, v64, v65, v66, v67);
-				if (((1072 + 653) == (2892 - (645 + 522))) and (v62 == v16.Warrior.Protection.Charge)) then
-					return v69 and (v62:Charges() >= (1791 - (1010 + 780))) and not v14:IsInRange(8 + 0);
-				elseif (((6950 - 5491) <= (7273 - 4791)) and ((v62 == v16.Warrior.Protection.HeroicThrow) or (v62 == v16.Warrior.Protection.TitanicThrow))) then
-					return v69 and not v14:IsInRange(1844 - (1045 + 791));
-				elseif ((v62 == v16.Warrior.Protection.Avatar) or ((6824 - 4128) >= (6919 - 2387))) then
-					return v69 and (v13:BuffDown(v16.Warrior.Protection.AvatarBuff));
-				elseif (((1553 - (351 + 154)) >= (1626 - (1281 + 293))) and (v62 == v16.Warrior.Protection.Intervene)) then
-					return v69 and (v13:IsInParty() or v13:IsInRaid());
-				else
-					return v69;
-				end
-				break;
-			end
+	v37 = v10.AddCoreOverride("Spell.IsCastable", function(v59, v60, v61, v62, v63, v64)
+		local v65 = v37(v59, v60, v61, v62, v63, v64);
+		if (((3106 + 836) <= (2670 + 2317)) and (v59 == v16.Warrior.Protection.Charge)) then
+			return v65 and (v59:Charges() >= (4 - 3)) and not v14:IsInRange(25 - 17);
+		elseif (((6323 - (404 + 1335)) == (4990 - (183 + 223))) and ((v59 == v16.Warrior.Protection.HeroicThrow) or (v59 == v16.Warrior.Protection.TitanicThrow))) then
+			return v65 and not v14:IsInRange(9 - 1);
+		elseif (((2637 + 1342) >= (601 + 1067)) and (v59 == v16.Warrior.Protection.Avatar)) then
+			return v65 and (v13:BuffDown(v16.Warrior.Protection.AvatarBuff));
+		elseif (((905 - (10 + 327)) > (299 + 129)) and (v59 == v16.Warrior.Protection.Intervene)) then
+			return v65 and (v13:IsInParty() or v13:IsInRaid());
+		else
+			return v65;
 		end
-	end, 339 - (28 + 238));
+	end, 411 - (118 + 220));
 end;
 return v0["Epix_Warrior_Warrior.lua"]();
 
