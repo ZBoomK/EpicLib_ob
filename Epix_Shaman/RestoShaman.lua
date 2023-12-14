@@ -1,41 +1,49 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = v0[v4];
-	if (((1328 + 1041) == (6038 - 3669)) and not v5) then
-		return v1(v4, ...);
+	local v5 = 0 - 0;
+	local v6;
+	while true do
+		if (((1364 + 42) < (2406 - (409 + 103))) and (v5 == (237 - (46 + 190)))) then
+			return v6(...);
+		end
+		if (((1667 - (51 + 44)) >= (432 + 1099)) and (v5 == (1317 - (1114 + 203)))) then
+			v6 = v0[v4];
+			if (not v6 or ((5413 - (228 + 498)) < (985 + 3557))) then
+				return v1(v4, ...);
+			end
+			v5 = 1 + 0;
+		end
 	end
-	return v5(...);
 end
 v0["Epix_Shaman_RestoShaman.lua"] = function(...)
-	local v6, v7 = ...;
-	local v8 = EpicDBC.DBC;
-	local v9 = EpicLib;
-	local v10 = EpicCache;
-	local v11 = v9.Unit;
-	local v12 = v11.Player;
-	local v13 = v11.Pet;
-	local v14 = v11.Target;
-	local v15 = v11.MouseOver;
-	local v16 = v11.Focus;
-	local v17 = v9.Spell;
-	local v18 = v9.MultiSpell;
-	local v19 = v9.Item;
-	local v20 = v9.Utils;
-	local v21 = EpicLib;
-	local v22 = v21.Cast;
-	local v23 = v21.Press;
-	local v24 = v21.Macro;
-	local v25 = v21.Commons.Everyone.num;
-	local v26 = v21.Commons.Everyone.bool;
-	local v27 = math.min;
-	local v28;
-	local v29 = false;
+	local v7, v8 = ...;
+	local v9 = EpicDBC.DBC;
+	local v10 = EpicLib;
+	local v11 = EpicCache;
+	local v12 = v10.Unit;
+	local v13 = v12.Player;
+	local v14 = v12.Pet;
+	local v15 = v12.Target;
+	local v16 = v12.MouseOver;
+	local v17 = v12.Focus;
+	local v18 = v10.Spell;
+	local v19 = v10.MultiSpell;
+	local v20 = v10.Item;
+	local v21 = v10.Utils;
+	local v22 = EpicLib;
+	local v23 = v22.Cast;
+	local v24 = v22.Press;
+	local v25 = v22.Macro;
+	local v26 = v22.Commons.Everyone.num;
+	local v27 = v22.Commons.Everyone.bool;
+	local v28 = math.min;
+	local v29;
 	local v30 = false;
 	local v31 = false;
 	local v32 = false;
 	local v33 = false;
-	local v34;
+	local v34 = false;
 	local v35;
 	local v36;
 	local v37;
@@ -115,75 +123,59 @@ v0["Epix_Shaman_RestoShaman.lua"] = function(...)
 	local v111;
 	local v112;
 	local v113;
-	local v114 = 11498 - (370 + 17);
-	local v115 = 12402 - (783 + 508);
-	local v116;
-	v9:RegisterForEvent(function()
-		local v135 = 1772 - (1733 + 39);
+	local v114;
+	local v115 = 11774 - (174 + 489);
+	local v116 = 28947 - 17836;
+	local v117;
+	v10:RegisterForEvent(function()
+		local v136 = 1905 - (830 + 1075);
 		while true do
-			if (((11252 - 7157) >= (4217 - (125 + 909))) and (v135 == (1948 - (1096 + 852)))) then
-				v114 = 4985 + 6126;
-				v115 = 15867 - 4756;
+			if (((3815 - (303 + 221)) > (2936 - (231 + 1038))) and (v136 == (0 + 0))) then
+				v115 = 12273 - (171 + 991);
+				v116 = 45790 - 34679;
 				break;
 			end
 		end
 	end, "PLAYER_REGEN_ENABLED");
-	local v117 = v17.Shaman.Restoration;
-	local v118 = v24.Shaman.Restoration;
-	local v119 = v19.Shaman.Restoration;
-	local v120 = {};
-	local v121 = v21.Commons.Everyone;
-	local v122 = v21.Commons.Shaman;
-	local function v123()
-		if (v117.ImprovedPurifySpirit:IsAvailable() or ((3600 + 111) < (1520 - (409 + 103)))) then
-			v121.DispellableDebuffs = v20.MergeTable(v121.DispellableMagicDebuffs, v121.DispellableCurseDebuffs);
+	local v118 = v18.Shaman.Restoration;
+	local v119 = v25.Shaman.Restoration;
+	local v120 = v20.Shaman.Restoration;
+	local v121 = {};
+	local v122 = v22.Commons.Everyone;
+	local v123 = v22.Commons.Shaman;
+	local function v124()
+		if (v118.ImprovedPurifySpirit:IsAvailable() or ((2343 - 1470) == (5075 - 3041))) then
+			v122.DispellableDebuffs = v21.MergeTable(v122.DispellableMagicDebuffs, v122.DispellableCurseDebuffs);
 		else
-			v121.DispellableDebuffs = v121.DispellableMagicDebuffs;
+			v122.DispellableDebuffs = v122.DispellableMagicDebuffs;
 		end
 	end
-	v9:RegisterForEvent(function()
-		v123();
+	v10:RegisterForEvent(function()
+		v124();
 	end, "ACTIVE_PLAYER_SPECIALIZATION_CHANGED");
-	local function v124(v136)
-		return v136:DebuffRefreshable(v117.FlameShockDebuff) and (v115 > (241 - (46 + 190)));
+	local function v125(v137)
+		return v137:DebuffRefreshable(v118.FlameShockDebuff) and (v116 > (5 + 0));
 	end
-	local function v125()
-		local v137 = 95 - (51 + 44);
+	local function v126()
+		local v138 = 0 - 0;
 		while true do
-			if ((v137 == (0 + 0)) or ((2366 - (1114 + 203)) <= (1632 - (228 + 498)))) then
-				if (((978 + 3535) > (1507 + 1219)) and v89 and v117.AstralShift:IsReady()) then
-					if ((v12:HealthPercentage() <= v54) or ((2144 - (174 + 489)) >= (6924 - 4266))) then
-						if (v23(v117.AstralShift) or ((5125 - (830 + 1075)) == (1888 - (303 + 221)))) then
-							return "astral_shift defensives";
-						end
-					end
-				end
-				if ((v92 and v117.EarthElemental:IsReady()) or ((2323 - (231 + 1038)) > (2827 + 565))) then
-					if ((v12:HealthPercentage() <= v62) or v121.IsTankBelowHealthPercentage(v63) or ((1838 - (171 + 991)) >= (6766 - 5124))) then
-						if (((11105 - 6969) > (5981 - 3584)) and v23(v117.EarthElemental)) then
-							return "earth_elemental defensives";
-						end
-					end
-				end
-				v137 = 1 + 0;
-			end
-			if ((v137 == (3 - 2)) or ((12502 - 8168) == (6842 - 2597))) then
-				if ((v119.Healthstone:IsReady() and v35 and (v12:HealthPercentage() <= v36)) or ((13218 - 8942) <= (4279 - (111 + 1137)))) then
-					if (v23(v118.Healthstone) or ((4940 - (91 + 67)) <= (3568 - 2369))) then
+			if ((v138 == (2 - 1)) or ((4538 - 1722) < (33 - 22))) then
+				if (((4947 - (111 + 1137)) < (4864 - (91 + 67))) and v120.Healthstone:IsReady() and v36 and (v13:HealthPercentage() <= v37)) then
+					if (((7875 - 5229) >= (219 + 657)) and v24(v119.Healthstone)) then
 						return "healthstone defensive 3";
 					end
 				end
-				if ((v37 and (v12:HealthPercentage() <= v38)) or ((1214 + 3650) < (2425 - (423 + 100)))) then
-					if (((34 + 4805) >= (10244 - 6544)) and (v39 == "Refreshing Healing Potion")) then
-						if (v119.RefreshingHealingPotion:IsReady() or ((561 + 514) > (2689 - (326 + 445)))) then
-							if (((1728 - 1332) <= (8474 - 4670)) and v23(v118.RefreshingHealingPotion)) then
+				if (((1137 - (423 + 100)) <= (23 + 3161)) and v38 and (v13:HealthPercentage() <= v39)) then
+					if (((8654 - 5528) == (1630 + 1496)) and (v40 == "Refreshing Healing Potion")) then
+						if (v120.RefreshingHealingPotion:IsReady() or ((2958 - (326 + 445)) >= (21619 - 16665))) then
+							if (v24(v119.RefreshingHealingPotion) or ((8637 - 4760) == (8344 - 4769))) then
 								return "refreshing healing potion defensive 4";
 							end
 						end
 					end
-					if ((v39 == "Dreamwalker's Healing Potion") or ((9730 - 5561) == (2898 - (530 + 181)))) then
-						if (((2287 - (614 + 267)) == (1438 - (19 + 13))) and v119.DreamwalkersHealingPotion:IsReady()) then
-							if (((2491 - 960) < (9952 - 5681)) and v23(v118.RefreshingHealingPotion)) then
+					if (((1418 - (530 + 181)) > (1513 - (614 + 267))) and (v40 == "Dreamwalker's Healing Potion")) then
+						if (v120.DreamwalkersHealingPotion:IsReady() or ((578 - (19 + 13)) >= (4368 - 1684))) then
+							if (((3413 - 1948) <= (12286 - 7985)) and v24(v119.RefreshingHealingPotion)) then
 								return "dreamwalkers healing potion defensive";
 							end
 						end
@@ -191,361 +183,78 @@ v0["Epix_Shaman_RestoShaman.lua"] = function(...)
 				end
 				break;
 			end
-		end
-	end
-	local function v126()
-		local v138 = 0 - 0;
-		while true do
-			if (((165 + 470) == (1116 - 481)) and (v138 == (0 - 0))) then
-				if (((5185 - (1293 + 519)) <= (7255 - 3699)) and v40) then
-					v28 = v121.HandleCharredTreant(v117.Riptide, v118.RiptideMouseover, 104 - 64);
-					if (v28 or ((6293 - 3002) < (14143 - 10863))) then
-						return v28;
-					end
-					v28 = v121.HandleCharredTreant(v117.HealingSurge, v118.HealingSurgeMouseover, 94 - 54);
-					if (((2324 + 2062) >= (179 + 694)) and v28) then
-						return v28;
-					end
-					v28 = v121.HandleCharredTreant(v117.HealingWave, v118.HealingWaveMouseover, 92 - 52);
-					if (((213 + 708) <= (367 + 735)) and v28) then
-						return v28;
-					end
-				end
-				if (((2941 + 1765) >= (2059 - (709 + 387))) and v41) then
-					local v239 = 1858 - (673 + 1185);
-					while true do
-						if ((v239 == (2 - 1)) or ((3082 - 2122) <= (1440 - 564))) then
-							v28 = v121.HandleCharredBrambles(v117.HealingSurge, v118.HealingSurgeMouseover, 29 + 11);
-							if (v28 or ((1544 + 522) == (1257 - 325))) then
-								return v28;
-							end
-							v239 = 1 + 1;
-						end
-						if (((9620 - 4795) < (9506 - 4663)) and (v239 == (1882 - (446 + 1434)))) then
-							v28 = v121.HandleCharredBrambles(v117.HealingWave, v118.HealingWaveMouseover, 1323 - (1040 + 243));
-							if (v28 or ((11571 - 7694) >= (6384 - (559 + 1288)))) then
-								return v28;
-							end
-							break;
-						end
-						if ((v239 == (1931 - (609 + 1322))) or ((4769 - (13 + 441)) < (6449 - 4723))) then
-							v28 = v121.HandleCharredBrambles(v117.Riptide, v118.RiptideMouseover, 104 - 64);
-							if (v28 or ((18323 - 14644) < (24 + 601))) then
-								return v28;
-							end
-							v239 = 3 - 2;
+			if (((443 + 1261) > (2505 - 1080)) and (v138 == (0 - 0))) then
+				if ((v90 and v118.AstralShift:IsReady()) or ((2499 - (1293 + 519)) == (8638 - 4404))) then
+					if ((v13:HealthPercentage() <= v55) or ((8694 - 5364) < (2732 - 1303))) then
+						if (((4945 - 3798) >= (788 - 453)) and v24(v118.AstralShift)) then
+							return "astral_shift defensives";
 						end
 					end
 				end
-				break;
+				if (((1820 + 1615) > (428 + 1669)) and v93 and v118.EarthElemental:IsReady()) then
+					if ((v13:HealthPercentage() <= v63) or v122.IsTankBelowHealthPercentage(v64) or ((8759 - 4989) >= (934 + 3107))) then
+						if (v24(v118.EarthElemental) or ((1260 + 2531) <= (1007 + 604))) then
+							return "earth_elemental defensives";
+						end
+					end
+				end
+				v138 = 1097 - (709 + 387);
 			end
 		end
 	end
 	local function v127()
-		if ((v107 and ((v30 and v106) or not v106)) or ((1643 + 2982) < (277 + 355))) then
-			v28 = v121.HandleTopTrinket(v120, v30, 118 - 78, nil);
-			if (v28 or ((46 + 37) > (3273 - 1493))) then
-				return v28;
-			end
-			v28 = v121.HandleBottomTrinket(v120, v30, 27 + 13, nil);
-			if (((304 + 242) <= (774 + 303)) and v28) then
-				return v28;
-			end
-		end
-		if ((v117.EarthShield:IsReady() and v93 and v16:Exists() and not v16:IsDeadOrGhost() and v16:IsInRange(34 + 6) and (v121.UnitGroupRole(v16) == "TANK") and v16:BuffDown(v117.EarthShield) and (v121.FriendlyUnitsWithBuffCount(v117.EarthShieldBuff, true) <= (1 + 0))) or ((1429 - (153 + 280)) > (12419 - 8118))) then
-			if (((3655 + 415) > (272 + 415)) and v23(v118.EarthShieldFocus)) then
-				return "earth_shield_tank healingst";
-			end
-		end
-		if ((v99 and v12:BuffDown(v117.UnleashLife) and v117.Riptide:IsReady() and v16:BuffDown(v117.Riptide)) or ((344 + 312) >= (3022 + 308))) then
-			if ((v16:HealthPercentage() <= v79) or ((1806 + 686) <= (510 - 175))) then
-				if (((2672 + 1650) >= (3229 - (89 + 578))) and v23(v118.RiptideFocus)) then
-					return "riptide healingaoe";
-				end
-			end
-		end
-		if ((v99 and v12:BuffDown(v117.UnleashLife) and v117.Riptide:IsReady() and v16:BuffDown(v117.Riptide)) or ((2599 + 1038) >= (7837 - 4067))) then
-			if (((v16:HealthPercentage() <= v80) and (v121.UnitGroupRole(v16) == "TANK")) or ((3428 - (572 + 477)) > (618 + 3960))) then
-				if (v23(v118.RiptideFocus) or ((290 + 193) > (89 + 654))) then
-					return "riptide healingaoe";
-				end
-			end
-		end
-		if (((2540 - (84 + 2)) > (952 - 374)) and v121.AreUnitsBelowHealthPercentage(v82, v81) and v117.SpiritLinkTotem:IsReady()) then
-			if (((670 + 260) < (5300 - (497 + 345))) and (v83 == "Player")) then
-				if (((17 + 645) <= (165 + 807)) and v23(v118.SpiritLinkTotemPlayer)) then
-					return "spirit_link_totem cooldowns";
-				end
-			elseif (((5703 - (605 + 728)) == (3118 + 1252)) and (v83 == "Friendly under Cursor")) then
-				if ((v15:Exists() and not v12:CanAttack(v15)) or ((10586 - 5824) <= (40 + 821))) then
-					if (v23(v118.SpiritLinkTotemCursor, not v14:IsInRange(147 - 107)) or ((1273 + 139) == (11813 - 7549))) then
-						return "spirit_link_totem cooldowns";
-					end
-				end
-			elseif ((v83 == "Confirmation") or ((2393 + 775) < (2642 - (457 + 32)))) then
-				if (v23(v117.SpiritLinkTotem) or ((2112 + 2864) < (2734 - (832 + 570)))) then
-					return "spirit_link_totem cooldowns";
-				end
-			end
-		end
-		if (((4360 + 268) == (1207 + 3421)) and v96 and v121.AreUnitsBelowHealthPercentage(v74, v73) and v117.HealingTideTotem:IsReady()) then
-			if (v23(v117.HealingTideTotem) or ((190 - 136) == (191 + 204))) then
-				return "healing_tide_totem cooldowns";
-			end
-		end
-		if (((878 - (588 + 208)) == (220 - 138)) and v121.AreUnitsBelowHealthPercentage(v50, v49) and v117.AncestralProtectionTotem:IsReady()) then
-			if ((v51 == "Player") or ((2381 - (884 + 916)) < (589 - 307))) then
-				if (v23(v118.AncestralProtectionTotemPlayer) or ((2673 + 1936) < (3148 - (232 + 421)))) then
-					return "AncestralProtectionTotem cooldowns";
-				end
-			elseif (((3041 - (1569 + 320)) == (283 + 869)) and (v51 == "Friendly under Cursor")) then
-				if (((361 + 1535) <= (11531 - 8109)) and v15:Exists() and not v12:CanAttack(v15)) then
-					if (v23(v118.AncestralProtectionTotemCursor, not v14:IsInRange(645 - (316 + 289))) or ((2591 - 1601) > (75 + 1545))) then
-						return "AncestralProtectionTotem cooldowns";
-					end
-				end
-			elseif ((v51 == "Confirmation") or ((2330 - (666 + 787)) > (5120 - (360 + 65)))) then
-				if (((2515 + 176) >= (2105 - (79 + 175))) and v23(v117.AncestralProtectionTotem)) then
-					return "AncestralProtectionTotem cooldowns";
-				end
-			end
-		end
-		if ((v87 and v121.AreUnitsBelowHealthPercentage(v48, v47) and v117.AncestralGuidance:IsReady()) or ((4706 - 1721) >= (3790 + 1066))) then
-			if (((13106 - 8830) >= (2301 - 1106)) and v23(v117.AncestralGuidance)) then
-				return "ancestral_guidance cooldowns";
-			end
-		end
-		if (((4131 - (503 + 396)) <= (4871 - (92 + 89))) and v88 and v121.AreUnitsBelowHealthPercentage(v53, v52) and v117.Ascendance:IsReady()) then
-			if (v23(v117.Ascendance) or ((1737 - 841) >= (1614 + 1532))) then
-				return "ascendance cooldowns";
-			end
-		end
-		if (((1812 + 1249) >= (11583 - 8625)) and v98 and (v12:Mana() <= v76) and v117.ManaTideTotem:IsReady()) then
-			if (((436 + 2751) >= (1467 - 823)) and v23(v117.ManaTideTotem)) then
-				return "mana_tide_totem cooldowns";
-			end
-		end
-		if (((562 + 82) <= (337 + 367)) and v34 and ((v105 and v30) or not v105)) then
-			if (((2917 - 1959) > (119 + 828)) and v117.AncestralCall:IsReady()) then
-				if (((6849 - 2357) >= (3898 - (485 + 759))) and v23(v117.AncestralCall)) then
-					return "AncestralCall cooldowns";
-				end
-			end
-			if (((7964 - 4522) >= (2692 - (442 + 747))) and v117.BagofTricks:IsReady()) then
-				if (v23(v117.BagofTricks) or ((4305 - (832 + 303)) <= (2410 - (88 + 858)))) then
-					return "BagofTricks cooldowns";
-				end
-			end
-			if (v117.Berserking:IsReady() or ((1463 + 3334) == (3632 + 756))) then
-				if (((23 + 528) <= (1470 - (766 + 23))) and v23(v117.Berserking)) then
-					return "Berserking cooldowns";
-				end
-			end
-			if (((16177 - 12900) > (556 - 149)) and v117.BloodFury:IsReady()) then
-				if (((12369 - 7674) >= (4802 - 3387)) and v23(v117.BloodFury)) then
-					return "BloodFury cooldowns";
-				end
-			end
-			if (v117.Fireblood:IsReady() or ((4285 - (1036 + 37)) <= (670 + 274))) then
-				if (v23(v117.Fireblood) or ((6029 - 2933) <= (1415 + 383))) then
-					return "Fireblood cooldowns";
-				end
-			end
-		end
-	end
-	local function v128()
-		if (((5017 - (641 + 839)) == (4450 - (910 + 3))) and v117.EarthShield:IsReady() and v93 and v16:Exists() and not v16:IsDeadOrGhost() and v16:IsInRange(101 - 61) and (v121.UnitGroupRole(v16) == "TANK") and v16:BuffDown(v117.EarthShield) and (v121.FriendlyUnitsWithBuffCount(v117.EarthShieldBuff, true) <= (1685 - (1466 + 218)))) then
-			if (((1764 + 2073) >= (2718 - (556 + 592))) and v23(v118.EarthShieldFocus)) then
-				return "earth_shield_tank healingst";
-			end
-		end
-		if ((v90 and v121.AreUnitsBelowHealthPercentage(33 + 57, 811 - (329 + 479)) and v117.ChainHeal:IsReady() and v12:BuffUp(v117.HighTide)) or ((3804 - (174 + 680)) == (13098 - 9286))) then
-			if (((9788 - 5065) >= (1655 + 663)) and v23(v118.ChainHealFocus, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff))) then
-				return "chain_heal healingaoe";
-			end
-		end
-		if ((v97 and (v16:HealthPercentage() <= v75) and v117.HealingWave:IsReady() and (v117.PrimordialWave:TimeSinceLastCast() < (754 - (396 + 343)))) or ((180 + 1847) > (4329 - (29 + 1448)))) then
-			if (v23(v118.HealingWaveFocus, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((2525 - (135 + 1254)) > (16262 - 11945))) then
-				return "healing_wave healingaoe";
-			end
-		end
-		if (((22168 - 17420) == (3165 + 1583)) and v99 and v12:BuffDown(v117.UnleashLife) and v117.Riptide:IsReady() and v16:BuffDown(v117.Riptide)) then
-			if (((5263 - (389 + 1138)) <= (5314 - (102 + 472))) and (v16:HealthPercentage() <= v79)) then
-				if (v23(v118.RiptideFocus) or ((3200 + 190) <= (1697 + 1363))) then
-					return "riptide healingaoe";
-				end
-			end
-		end
-		if ((v99 and v12:BuffDown(v117.UnleashLife) and v117.Riptide:IsReady() and v16:BuffDown(v117.Riptide)) or ((932 + 67) > (4238 - (320 + 1225)))) then
-			if (((824 - 361) < (368 + 233)) and (v16:HealthPercentage() <= v80) and (v121.UnitGroupRole(v16) == "TANK")) then
-				if (v23(v118.RiptideFocus) or ((3647 - (157 + 1307)) < (2546 - (821 + 1038)))) then
-					return "riptide healingaoe";
-				end
-			end
-		end
-		if (((11349 - 6800) == (498 + 4051)) and v101 and v117.UnleashLife:IsReady()) then
-			if (((8298 - 3626) == (1739 + 2933)) and (v16:HealthPercentage() <= v86)) then
-				if (v23(v117.UnleashLife) or ((9091 - 5423) < (1421 - (834 + 192)))) then
-					return "unleash_life healingaoe";
-				end
-			end
-		end
-		if (((v69 == "Cursor") and v117.HealingRain:IsReady()) or ((265 + 3901) == (117 + 338))) then
-			if (v23(v118.HealingRainCursor, not v14:IsInRange(1 + 39), v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((6891 - 2442) == (2967 - (300 + 4)))) then
-				return "healing_rain healingaoe";
-			end
-		end
-		if ((v121.AreUnitsBelowHealthPercentage(v68, v67) and v117.HealingRain:IsReady()) or ((1143 + 3134) < (7824 - 4835))) then
-			if ((v69 == "Player") or ((1232 - (112 + 250)) >= (1654 + 2495))) then
-				if (((5541 - 3329) < (1824 + 1359)) and v23(v118.HealingRainPlayer, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff))) then
-					return "healing_rain healingaoe";
-				end
-			elseif (((2403 + 2243) > (2238 + 754)) and (v69 == "Friendly under Cursor")) then
-				if (((712 + 722) < (2308 + 798)) and v15:Exists() and not v12:CanAttack(v15)) then
-					if (((2200 - (1001 + 413)) < (6740 - 3717)) and v23(v118.HealingRainCursor, not v14:IsInRange(922 - (244 + 638)), v12:BuffDown(v117.SpiritwalkersGraceBuff))) then
-						return "healing_rain healingaoe";
-					end
-				end
-			elseif ((v69 == "Enemy under Cursor") or ((3135 - (627 + 66)) < (220 - 146))) then
-				if (((5137 - (512 + 90)) == (6441 - (1665 + 241))) and v15:Exists() and v12:CanAttack(v15)) then
-					if (v23(v118.HealingRainCursor, not v14:IsInRange(757 - (373 + 344)), v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((1358 + 1651) <= (557 + 1548))) then
-						return "healing_rain healingaoe";
-					end
-				end
-			elseif (((4827 - 2997) < (6208 - 2539)) and (v69 == "Confirmation")) then
-				if (v23(v117.HealingRain, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((2529 - (35 + 1064)) >= (2629 + 983))) then
-					return "healing_rain healingaoe";
-				end
-			end
-		end
-		if (((5740 - 3057) >= (10 + 2450)) and v121.AreUnitsBelowHealthPercentage(v65, v64) and v117.EarthenWallTotem:IsReady()) then
-			if ((v66 == "Player") or ((3040 - (298 + 938)) >= (4534 - (233 + 1026)))) then
-				if (v23(v118.EarthenWallTotemPlayer) or ((3083 - (636 + 1030)) > (1856 + 1773))) then
-					return "earthen_wall_totem healingaoe";
-				end
-			elseif (((4684 + 111) > (120 + 282)) and (v66 == "Friendly under Cursor")) then
-				if (((326 + 4487) > (3786 - (55 + 166))) and v15:Exists() and not v12:CanAttack(v15)) then
-					if (((759 + 3153) == (394 + 3518)) and v23(v118.EarthenWallTotemCursor, not v14:IsInRange(152 - 112))) then
-						return "earthen_wall_totem healingaoe";
-					end
-				end
-			elseif (((3118 - (36 + 261)) <= (8436 - 3612)) and (v66 == "Confirmation")) then
-				if (((3106 - (34 + 1334)) <= (844 + 1351)) and v23(v117.EarthenWallTotem)) then
-					return "earthen_wall_totem healingaoe";
-				end
-			end
-		end
-		if (((32 + 9) <= (4301 - (1035 + 248))) and v121.AreUnitsBelowHealthPercentage(v60, v59) and v117.Downpour:IsReady()) then
-			if (((2166 - (20 + 1)) <= (2139 + 1965)) and (v61 == "Player")) then
-				if (((3008 - (134 + 185)) < (5978 - (549 + 584))) and v23(v118.DownpourPlayer, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff))) then
-					return "downpour healingaoe";
-				end
-			elseif ((v61 == "Friendly under Cursor") or ((3007 - (314 + 371)) > (9001 - 6379))) then
-				if ((v15:Exists() and not v12:CanAttack(v15)) or ((5502 - (478 + 490)) == (1103 + 979))) then
-					if (v23(v118.DownpourCursor, not v14:IsInRange(1212 - (786 + 386)), v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((5088 - 3517) > (3246 - (1055 + 324)))) then
-						return "downpour healingaoe";
-					end
-				end
-			elseif ((v61 == "Confirmation") or ((3994 - (1093 + 247)) >= (2663 + 333))) then
-				if (((419 + 3559) > (8353 - 6249)) and v23(v117.Downpour, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff))) then
-					return "downpour healingaoe";
-				end
-			end
-		end
-		if (((10164 - 7169) > (4384 - 2843)) and v91 and v121.AreUnitsBelowHealthPercentage(v58, v57) and v117.CloudburstTotem:IsReady()) then
-			if (((8164 - 4915) > (340 + 613)) and v23(v117.CloudburstTotem)) then
-				return "clouburst_totem healingaoe";
-			end
-		end
-		if ((v102 and v121.AreUnitsBelowHealthPercentage(v104, v103) and v117.Wellspring:IsReady()) or ((12608 - 9335) > (15761 - 11188))) then
-			if (v23(v117.Wellspring, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((2376 + 775) < (3283 - 1999))) then
-				return "wellspring healingaoe";
-			end
-		end
-		if ((v90 and v121.AreUnitsBelowHealthPercentage(v56, v55) and v117.ChainHeal:IsReady()) or ((2538 - (364 + 324)) == (4191 - 2662))) then
-			if (((1969 - 1148) < (704 + 1419)) and v23(v118.ChainHealFocus, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff))) then
-				return "chain_heal healingaoe";
-			end
-		end
-		if (((3774 - 2872) < (3723 - 1398)) and v100 and v12:IsMoving() and v121.AreUnitsBelowHealthPercentage(v85, v84) and v117.SpiritwalkersGrace:IsReady()) then
-			if (((2605 - 1747) <= (4230 - (1249 + 19))) and v23(v117.SpiritwalkersGrace)) then
-				return "spiritwalkers_grace healingaoe";
-			end
-		end
-		if ((v94 and v121.AreUnitsBelowHealthPercentage(v71, v70) and v117.HealingStreamTotem:IsReady()) or ((3562 + 384) < (5013 - 3725))) then
-			if (v23(v117.HealingStreamTotem) or ((4328 - (686 + 400)) == (445 + 122))) then
-				return "healing_stream_totem healingaoe";
-			end
-		end
-	end
-	local function v129()
-		local v139 = 229 - (73 + 156);
+		local v139 = 1858 - (673 + 1185);
 		while true do
-			if ((v139 == (1 + 1)) or ((1658 - (721 + 90)) >= (15 + 1248))) then
-				if ((v117.ElementalOrbit:IsAvailable() and v12:BuffDown(v117.EarthShieldBuff)) or ((7315 - 5062) == (2321 - (224 + 246)))) then
-					if (v23(v117.EarthShield) or ((3380 - 1293) > (4367 - 1995))) then
-						return "earth_shield healingst";
-					end
-				end
-				if ((v117.ElementalOrbit:IsAvailable() and v12:BuffUp(v117.EarthShieldBuff)) or ((807 + 3638) < (99 + 4050))) then
-					if (v121.IsSoloMode() or ((1336 + 482) == (168 - 83))) then
-						if (((2096 - 1466) < (2640 - (203 + 310))) and v117.LightningShield:IsReady() and v12:BuffDown(v117.LightningShield)) then
-							if (v23(v117.LightningShield) or ((3931 - (1238 + 755)) == (176 + 2338))) then
-								return "lightning_shield healingst";
+			if ((v139 == (0 - 0)) or ((14700 - 10122) <= (3303 - 1295))) then
+				if (((805 + 320) <= (1552 + 524)) and v41) then
+					local v238 = 0 - 0;
+					while true do
+						if ((v238 == (1 + 1)) or ((1481 - 738) >= (8634 - 4235))) then
+							v29 = v122.HandleCharredTreant(v118.HealingWave, v119.HealingWaveMouseover, 1920 - (446 + 1434));
+							if (((2438 - (1040 + 243)) < (4993 - 3320)) and v29) then
+								return v29;
 							end
+							break;
 						end
-					elseif (((5789 - (709 + 825)) >= (100 - 45)) and v117.WaterShield:IsReady() and v12:BuffDown(v117.WaterShield)) then
-						if (((4368 - 1369) > (2020 - (196 + 668))) and v23(v117.WaterShield)) then
-							return "water_shield healingst";
+						if ((v238 == (1847 - (559 + 1288))) or ((4255 - (609 + 1322)) <= (1032 - (13 + 441)))) then
+							v29 = v122.HandleCharredTreant(v118.Riptide, v119.RiptideMouseover, 149 - 109);
+							if (((9867 - 6100) == (18761 - 14994)) and v29) then
+								return v29;
+							end
+							v238 = 1 + 0;
 						end
-					end
-				end
-				v139 = 11 - 8;
-			end
-			if (((4867 - 2517) > (1988 - (171 + 662))) and (v139 == (93 - (4 + 89)))) then
-				if (((14121 - 10092) <= (1768 + 3085)) and v117.EarthShield:IsReady() and v93 and v16:Exists() and not v16:IsDeadOrGhost() and v16:IsInRange(175 - 135) and (v121.UnitGroupRole(v16) == "TANK") and v16:BuffDown(v117.EarthShield) and (v121.FriendlyUnitsWithBuffCount(v117.EarthShieldBuff, true) <= (1 + 0))) then
-					if (v23(v118.EarthShieldFocus) or ((2002 - (35 + 1451)) > (4887 - (28 + 1425)))) then
-						return "earth_shield_tank healingst";
-					end
-				end
-				if (((6039 - (941 + 1052)) >= (2909 + 124)) and v99 and v12:BuffDown(v117.UnleashLife) and v117.Riptide:IsReady() and v16:BuffDown(v117.Riptide)) then
-					if ((v16:HealthPercentage() <= v79) or ((4233 - (822 + 692)) <= (2065 - 618))) then
-						if (v23(v118.RiptideFocus) or ((1948 + 2186) < (4223 - (45 + 252)))) then
-							return "riptide healingaoe";
+						if (((14850 - 10761) == (1453 + 2636)) and (v238 == (1 + 0))) then
+							v29 = v122.HandleCharredTreant(v118.HealingSurge, v119.HealingSurgeMouseover, 118 - 78);
+							if (((2440 + 2018) >= (3078 - 1404)) and v29) then
+								return v29;
+							end
+							v238 = 2 + 0;
 						end
 					end
 				end
-				v139 = 1 + 0;
-			end
-			if ((v139 == (1 + 0)) or ((398 - 234) >= (3218 - (114 + 319)))) then
-				if ((v99 and v12:BuffDown(v117.UnleashLife) and v117.Riptide:IsReady() and v16:BuffDown(v117.Riptide)) or ((753 - 228) == (2701 - 592))) then
-					if (((22 + 11) == (48 - 15)) and (v16:HealthPercentage() <= v80) and (v121.UnitGroupRole(v16) == "TANK")) then
-						if (((6398 - 3344) <= (5978 - (556 + 1407))) and v23(v118.RiptideFocus)) then
-							return "riptide healingaoe";
+				if (((541 + 431) <= (1019 + 399)) and v42) then
+					local v239 = 0 + 0;
+					while true do
+						if ((v239 == (1 + 0)) or ((5371 - (153 + 280)) < (13750 - 8988))) then
+							v29 = v122.HandleCharredBrambles(v118.HealingSurge, v119.HealingSurgeMouseover, 36 + 4);
+							if (v29 or ((989 + 1515) > (2232 + 2032))) then
+								return v29;
+							end
+							v239 = 2 + 0;
 						end
-					end
-				end
-				if (((3077 - (741 + 465)) < (3847 - (170 + 295))) and v99 and v12:BuffDown(v117.UnleashLife) and v117.Riptide:IsReady() and v16:BuffDown(v117.Riptide)) then
-					if (((682 + 611) <= (1990 + 176)) and ((v16:HealthPercentage() <= v79) or (v16:HealthPercentage() <= v79))) then
-						if (v23(v118.RiptideFocus) or ((6349 - 3770) < (102 + 21))) then
-							return "riptide healingaoe";
+						if (((1561 + 592) == (3278 - 1125)) and (v239 == (2 + 0))) then
+							v29 = v122.HandleCharredBrambles(v118.HealingWave, v119.HealingWaveMouseover, 707 - (89 + 578));
+							if (v29 or ((363 + 144) >= (5386 - 2795))) then
+								return v29;
+							end
+							break;
 						end
-					end
-				end
-				v139 = 2 + 0;
-			end
-			if ((v139 == (2 + 1)) or ((2076 - (957 + 273)) >= (634 + 1734))) then
-				if ((v95 and v117.HealingSurge:IsReady()) or ((1607 + 2405) <= (12795 - 9437))) then
-					if (((3936 - 2442) <= (9178 - 6173)) and (v16:HealthPercentage() <= v72)) then
-						if (v23(v118.HealingSurgeFocus, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((15404 - 12293) == (3914 - (389 + 1391)))) then
-							return "healing_surge healingst";
-						end
-					end
-				end
-				if (((1478 + 877) == (246 + 2109)) and v97 and v117.HealingWave:IsReady()) then
-					if ((v16:HealthPercentage() <= v75) or ((1338 - 750) <= (1383 - (783 + 168)))) then
-						if (((16099 - 11302) >= (3832 + 63)) and v23(v118.HealingWaveFocus, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff))) then
-							return "healing_wave healingst";
+						if (((5530 - (572 + 477)) == (605 + 3876)) and (v239 == (0 + 0))) then
+							v29 = v122.HandleCharredBrambles(v118.Riptide, v119.RiptideMouseover, 5 + 35);
+							if (v29 or ((2414 - (84 + 2)) < (1141 - 448))) then
+								return v29;
+							end
+							v239 = 1 + 0;
 						end
 					end
 				end
@@ -553,400 +262,726 @@ v0["Epix_Shaman_RestoShaman.lua"] = function(...)
 			end
 		end
 	end
-	local function v130()
-		local v140 = 311 - (309 + 2);
+	local function v128()
+		local v140 = 842 - (497 + 345);
 		while true do
-			if (((10984 - 7407) == (4789 - (1090 + 122))) and (v140 == (1 + 0))) then
-				if (((12742 - 8948) > (2528 + 1165)) and v117.Stormkeeper:IsReady()) then
-					if (v23(v117.Stormkeeper) or ((2393 - (628 + 490)) == (736 + 3364))) then
+			if (((111 + 4217) == (732 + 3596)) and (v140 == (1335 - (605 + 728)))) then
+				if (((1134 + 454) >= (2960 - 1628)) and v89 and v122.AreUnitsBelowHealthPercentage(v54, v53) and v118.Ascendance:IsReady()) then
+					if (v24(v118.Ascendance) or ((192 + 3982) > (15705 - 11457))) then
+						return "ascendance cooldowns";
+					end
+				end
+				if ((v99 and (v13:Mana() <= v77) and v118.ManaTideTotem:IsReady()) or ((4135 + 451) <= (226 - 144))) then
+					if (((2917 + 946) == (4352 - (457 + 32))) and v24(v118.ManaTideTotem)) then
+						return "mana_tide_totem cooldowns";
+					end
+				end
+				if ((v35 and ((v106 and v31) or not v106)) or ((120 + 162) <= (1444 - (832 + 570)))) then
+					if (((4343 + 266) >= (200 + 566)) and v118.AncestralCall:IsReady()) then
+						if (v24(v118.AncestralCall) or ((4076 - 2924) == (1199 + 1289))) then
+							return "AncestralCall cooldowns";
+						end
+					end
+					if (((4218 - (588 + 208)) > (9029 - 5679)) and v118.BagofTricks:IsReady()) then
+						if (((2677 - (884 + 916)) > (786 - 410)) and v24(v118.BagofTricks)) then
+							return "BagofTricks cooldowns";
+						end
+					end
+					if (v118.Berserking:IsReady() or ((1808 + 1310) <= (2504 - (232 + 421)))) then
+						if (v24(v118.Berserking) or ((2054 - (1569 + 320)) >= (857 + 2635))) then
+							return "Berserking cooldowns";
+						end
+					end
+					if (((751 + 3198) < (16363 - 11507)) and v118.BloodFury:IsReady()) then
+						if (v24(v118.BloodFury) or ((4881 - (316 + 289)) < (7894 - 4878))) then
+							return "BloodFury cooldowns";
+						end
+					end
+					if (((217 + 4473) > (5578 - (666 + 787))) and v118.Fireblood:IsReady()) then
+						if (v24(v118.Fireblood) or ((475 - (360 + 65)) >= (838 + 58))) then
+							return "Fireblood cooldowns";
+						end
+					end
+				end
+				break;
+			end
+			if ((v140 == (255 - (79 + 175))) or ((2702 - 988) >= (2309 + 649))) then
+				if ((v122.AreUnitsBelowHealthPercentage(v83, v82) and v118.SpiritLinkTotem:IsReady()) or ((4570 - 3079) < (1239 - 595))) then
+					if (((1603 - (503 + 396)) < (1168 - (92 + 89))) and (v84 == "Player")) then
+						if (((7212 - 3494) > (978 + 928)) and v24(v119.SpiritLinkTotemPlayer)) then
+							return "spirit_link_totem cooldowns";
+						end
+					elseif ((v84 == "Friendly under Cursor") or ((567 + 391) > (14235 - 10600))) then
+						if (((479 + 3022) <= (10242 - 5750)) and v16:Exists() and not v13:CanAttack(v16)) then
+							if (v24(v119.SpiritLinkTotemCursor, not v15:IsInRange(35 + 5)) or ((1645 + 1797) < (7760 - 5212))) then
+								return "spirit_link_totem cooldowns";
+							end
+						end
+					elseif (((359 + 2516) >= (2232 - 768)) and (v84 == "Confirmation")) then
+						if (v24(v118.SpiritLinkTotem) or ((6041 - (485 + 759)) >= (11321 - 6428))) then
+							return "spirit_link_totem cooldowns";
+						end
+					end
+				end
+				if ((v97 and v122.AreUnitsBelowHealthPercentage(v75, v74) and v118.HealingTideTotem:IsReady()) or ((1740 - (442 + 747)) > (3203 - (832 + 303)))) then
+					if (((3060 - (88 + 858)) > (288 + 656)) and v24(v118.HealingTideTotem)) then
+						return "healing_tide_totem cooldowns";
+					end
+				end
+				if ((v122.AreUnitsBelowHealthPercentage(v51, v50) and v118.AncestralProtectionTotem:IsReady()) or ((1873 + 389) >= (128 + 2968))) then
+					if ((v52 == "Player") or ((3044 - (766 + 23)) >= (17461 - 13924))) then
+						if (v24(v119.AncestralProtectionTotemPlayer) or ((5247 - 1410) < (3440 - 2134))) then
+							return "AncestralProtectionTotem cooldowns";
+						end
+					elseif (((10012 - 7062) == (4023 - (1036 + 37))) and (v52 == "Friendly under Cursor")) then
+						if ((v16:Exists() and not v13:CanAttack(v16)) or ((3349 + 1374) < (6422 - 3124))) then
+							if (((894 + 242) >= (1634 - (641 + 839))) and v24(v119.AncestralProtectionTotemCursor, not v15:IsInRange(953 - (910 + 3)))) then
+								return "AncestralProtectionTotem cooldowns";
+							end
+						end
+					elseif ((v52 == "Confirmation") or ((690 - 419) > (6432 - (1466 + 218)))) then
+						if (((2179 + 2561) >= (4300 - (556 + 592))) and v24(v118.AncestralProtectionTotem)) then
+							return "AncestralProtectionTotem cooldowns";
+						end
+					end
+				end
+				if ((v88 and v122.AreUnitsBelowHealthPercentage(v49, v48) and v118.AncestralGuidance:IsReady()) or ((917 + 1661) >= (4198 - (329 + 479)))) then
+					if (((895 - (174 + 680)) <= (5707 - 4046)) and v24(v118.AncestralGuidance)) then
+						return "ancestral_guidance cooldowns";
+					end
+				end
+				v140 = 3 - 1;
+			end
+			if (((430 + 171) < (4299 - (396 + 343))) and (v140 == (0 + 0))) then
+				if (((1712 - (29 + 1448)) < (2076 - (135 + 1254))) and v108 and ((v31 and v107) or not v107)) then
+					local v240 = 0 - 0;
+					while true do
+						if (((21239 - 16690) > (769 + 384)) and (v240 == (1527 - (389 + 1138)))) then
+							v29 = v122.HandleTopTrinket(v121, v31, 614 - (102 + 472), nil);
+							if (v29 or ((4411 + 263) < (2591 + 2081))) then
+								return v29;
+							end
+							v240 = 1 + 0;
+						end
+						if (((5213 - (320 + 1225)) < (8119 - 3558)) and (v240 == (1 + 0))) then
+							v29 = v122.HandleBottomTrinket(v121, v31, 1504 - (157 + 1307), nil);
+							if (v29 or ((2314 - (821 + 1038)) == (8994 - 5389))) then
+								return v29;
+							end
+							break;
+						end
+					end
+				end
+				if ((v118.EarthShield:IsReady() and v94 and v17:Exists() and not v17:IsDeadOrGhost() and v17:IsInRange(5 + 35) and (v122.UnitGroupRole(v17) == "TANK") and v17:BuffDown(v118.EarthShield) and (v122.FriendlyUnitsWithBuffCount(v118.EarthShieldBuff, true) <= (1 - 0))) or ((991 + 1672) == (8208 - 4896))) then
+					if (((5303 - (834 + 192)) <= (285 + 4190)) and v24(v119.EarthShieldFocus)) then
+						return "earth_shield_tank healingst";
+					end
+				end
+				if ((v100 and v13:BuffDown(v118.UnleashLife) and v118.Riptide:IsReady() and v17:BuffDown(v118.Riptide)) or ((224 + 646) == (26 + 1163))) then
+					if (((2405 - 852) <= (3437 - (300 + 4))) and (v17:HealthPercentage() <= v80)) then
+						if (v24(v119.RiptideFocus) or ((598 + 1639) >= (9190 - 5679))) then
+							return "riptide healingaoe";
+						end
+					end
+				end
+				if ((v100 and v13:BuffDown(v118.UnleashLife) and v118.Riptide:IsReady() and v17:BuffDown(v118.Riptide)) or ((1686 - (112 + 250)) > (1204 + 1816))) then
+					if (((v17:HealthPercentage() <= v81) and (v122.UnitGroupRole(v17) == "TANK")) or ((7495 - 4503) == (1078 + 803))) then
+						if (((1607 + 1499) > (1142 + 384)) and v24(v119.RiptideFocus)) then
+							return "riptide healingaoe";
+						end
+					end
+				end
+				v140 = 1 + 0;
+			end
+		end
+	end
+	local function v129()
+		local v141 = 0 + 0;
+		while true do
+			if (((4437 - (1001 + 413)) < (8630 - 4760)) and (v141 == (884 - (244 + 638)))) then
+				if (((836 - (627 + 66)) > (220 - 146)) and (v70 == "Cursor") and v118.HealingRain:IsReady()) then
+					if (((620 - (512 + 90)) < (4018 - (1665 + 241))) and v24(v119.HealingRainCursor, not v15:IsInRange(757 - (373 + 344)), v13:BuffDown(v118.SpiritwalkersGraceBuff))) then
+						return "healing_rain healingaoe";
+					end
+				end
+				if (((495 + 602) <= (431 + 1197)) and v122.AreUnitsBelowHealthPercentage(v69, v68) and v118.HealingRain:IsReady()) then
+					if (((12212 - 7582) == (7835 - 3205)) and (v70 == "Player")) then
+						if (((4639 - (35 + 1064)) > (1953 + 730)) and v24(v119.HealingRainPlayer, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff))) then
+							return "healing_rain healingaoe";
+						end
+					elseif (((10256 - 5462) >= (14 + 3261)) and (v70 == "Friendly under Cursor")) then
+						if (((2720 - (298 + 938)) == (2743 - (233 + 1026))) and v16:Exists() and not v13:CanAttack(v16)) then
+							if (((3098 - (636 + 1030)) < (1818 + 1737)) and v24(v119.HealingRainCursor, not v15:IsInRange(40 + 0), v13:BuffDown(v118.SpiritwalkersGraceBuff))) then
+								return "healing_rain healingaoe";
+							end
+						end
+					elseif ((v70 == "Enemy under Cursor") or ((317 + 748) > (242 + 3336))) then
+						if ((v16:Exists() and v13:CanAttack(v16)) or ((5016 - (55 + 166)) < (273 + 1134))) then
+							if (((187 + 1666) < (18380 - 13567)) and v24(v119.HealingRainCursor, not v15:IsInRange(337 - (36 + 261)), v13:BuffDown(v118.SpiritwalkersGraceBuff))) then
+								return "healing_rain healingaoe";
+							end
+						end
+					elseif ((v70 == "Confirmation") or ((4933 - 2112) < (3799 - (34 + 1334)))) then
+						if (v24(v118.HealingRain, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((1105 + 1769) < (1695 + 486))) then
+							return "healing_rain healingaoe";
+						end
+					end
+				end
+				if ((v122.AreUnitsBelowHealthPercentage(v66, v65) and v118.EarthenWallTotem:IsReady()) or ((3972 - (1035 + 248)) <= (364 - (20 + 1)))) then
+					if ((v67 == "Player") or ((974 + 895) == (2328 - (134 + 185)))) then
+						if (v24(v119.EarthenWallTotemPlayer) or ((4679 - (549 + 584)) < (3007 - (314 + 371)))) then
+							return "earthen_wall_totem healingaoe";
+						end
+					elseif ((v67 == "Friendly under Cursor") or ((7147 - 5065) == (5741 - (478 + 490)))) then
+						if (((1719 + 1525) > (2227 - (786 + 386))) and v16:Exists() and not v13:CanAttack(v16)) then
+							if (v24(v119.EarthenWallTotemCursor, not v15:IsInRange(129 - 89)) or ((4692 - (1055 + 324)) <= (3118 - (1093 + 247)))) then
+								return "earthen_wall_totem healingaoe";
+							end
+						end
+					elseif ((v67 == "Confirmation") or ((1263 + 158) >= (222 + 1882))) then
+						if (((7193 - 5381) <= (11026 - 7777)) and v24(v118.EarthenWallTotem)) then
+							return "earthen_wall_totem healingaoe";
+						end
+					end
+				end
+				v141 = 8 - 5;
+			end
+			if (((4078 - 2455) <= (697 + 1260)) and ((3 - 2) == v141)) then
+				if (((15207 - 10795) == (3327 + 1085)) and v100 and v13:BuffDown(v118.UnleashLife) and v118.Riptide:IsReady() and v17:BuffDown(v118.Riptide)) then
+					if (((4475 - 2725) >= (1530 - (364 + 324))) and (v17:HealthPercentage() <= v80)) then
+						if (((11984 - 7612) > (4439 - 2589)) and v24(v119.RiptideFocus)) then
+							return "riptide healingaoe";
+						end
+					end
+				end
+				if (((77 + 155) < (3435 - 2614)) and v100 and v13:BuffDown(v118.UnleashLife) and v118.Riptide:IsReady() and v17:BuffDown(v118.Riptide)) then
+					if (((829 - 311) < (2739 - 1837)) and (v17:HealthPercentage() <= v81) and (v122.UnitGroupRole(v17) == "TANK")) then
+						if (((4262 - (1249 + 19)) > (775 + 83)) and v24(v119.RiptideFocus)) then
+							return "riptide healingaoe";
+						end
+					end
+				end
+				if ((v102 and v118.UnleashLife:IsReady()) or ((14616 - 10861) <= (2001 - (686 + 400)))) then
+					if (((3097 + 849) > (3972 - (73 + 156))) and (v17:HealthPercentage() <= v87)) then
+						if (v24(v118.UnleashLife) or ((7 + 1328) >= (4117 - (721 + 90)))) then
+							return "unleash_life healingaoe";
+						end
+					end
+				end
+				v141 = 1 + 1;
+			end
+			if (((15727 - 10883) > (2723 - (224 + 246))) and (v141 == (0 - 0))) then
+				if (((831 - 379) == (82 + 370)) and v118.EarthShield:IsReady() and v94 and v17:Exists() and not v17:IsDeadOrGhost() and v17:IsInRange(1 + 39) and (v122.UnitGroupRole(v17) == "TANK") and v17:BuffDown(v118.EarthShield) and (v122.FriendlyUnitsWithBuffCount(v118.EarthShieldBuff, true) <= (1 + 0))) then
+					if (v24(v119.EarthShieldFocus) or ((9059 - 4502) < (6944 - 4857))) then
+						return "earth_shield_tank healingst";
+					end
+				end
+				if (((4387 - (203 + 310)) == (5867 - (1238 + 755))) and v91 and v122.AreUnitsBelowHealthPercentage(7 + 83, 1537 - (709 + 825)) and v118.ChainHeal:IsReady() and v13:BuffUp(v118.HighTide)) then
+					if (v24(v119.ChainHealFocus, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((3570 - 1632) > (7188 - 2253))) then
+						return "chain_heal healingaoe";
+					end
+				end
+				if ((v98 and (v17:HealthPercentage() <= v76) and v118.HealingWave:IsReady() and (v118.PrimordialWave:TimeSinceLastCast() < (879 - (196 + 668)))) or ((16799 - 12544) < (7090 - 3667))) then
+					if (((2287 - (171 + 662)) <= (2584 - (4 + 89))) and v24(v119.HealingWaveFocus, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff))) then
+						return "healing_wave healingaoe";
+					end
+				end
+				v141 = 3 - 2;
+			end
+			if ((v141 == (2 + 2)) or ((18258 - 14101) <= (1100 + 1703))) then
+				if (((6339 - (35 + 1451)) >= (4435 - (28 + 1425))) and v91 and v122.AreUnitsBelowHealthPercentage(v57, v56) and v118.ChainHeal:IsReady()) then
+					if (((6127 - (941 + 1052)) > (3219 + 138)) and v24(v119.ChainHealFocus, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff))) then
+						return "chain_heal healingaoe";
+					end
+				end
+				if ((v101 and v13:IsMoving() and v122.AreUnitsBelowHealthPercentage(v86, v85) and v118.SpiritwalkersGrace:IsReady()) or ((4931 - (822 + 692)) < (3617 - 1083))) then
+					if (v24(v118.SpiritwalkersGrace) or ((1283 + 1439) <= (461 - (45 + 252)))) then
+						return "spiritwalkers_grace healingaoe";
+					end
+				end
+				if ((v95 and v122.AreUnitsBelowHealthPercentage(v72, v71) and v118.HealingStreamTotem:IsReady()) or ((2383 + 25) < (726 + 1383))) then
+					if (v24(v118.HealingStreamTotem) or ((80 - 47) == (1888 - (114 + 319)))) then
+						return "healing_stream_totem healingaoe";
+					end
+				end
+				break;
+			end
+			if ((v141 == (3 - 0)) or ((567 - 124) >= (2560 + 1455))) then
+				if (((5037 - 1655) > (347 - 181)) and v122.AreUnitsBelowHealthPercentage(v61, v60) and v118.Downpour:IsReady()) then
+					if ((v62 == "Player") or ((2243 - (556 + 1407)) == (4265 - (741 + 465)))) then
+						if (((2346 - (170 + 295)) > (682 + 611)) and v24(v119.DownpourPlayer, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff))) then
+							return "downpour healingaoe";
+						end
+					elseif (((2165 + 192) == (5803 - 3446)) and (v62 == "Friendly under Cursor")) then
+						if (((102 + 21) == (79 + 44)) and v16:Exists() and not v13:CanAttack(v16)) then
+							if (v24(v119.DownpourCursor, not v15:IsInRange(23 + 17), v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((2286 - (957 + 273)) >= (908 + 2484))) then
+								return "downpour healingaoe";
+							end
+						end
+					elseif ((v62 == "Confirmation") or ((433 + 648) < (4096 - 3021))) then
+						if (v24(v118.Downpour, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((2764 - 1715) >= (13537 - 9105))) then
+							return "downpour healingaoe";
+						end
+					end
+				end
+				if ((v92 and v122.AreUnitsBelowHealthPercentage(v59, v58) and v118.CloudburstTotem:IsReady()) or ((23609 - 18841) <= (2626 - (389 + 1391)))) then
+					if (v24(v118.CloudburstTotem) or ((2107 + 1251) <= (148 + 1272))) then
+						return "clouburst_totem healingaoe";
+					end
+				end
+				if ((v103 and v122.AreUnitsBelowHealthPercentage(v105, v104) and v118.Wellspring:IsReady()) or ((8512 - 4773) <= (3956 - (783 + 168)))) then
+					if (v24(v118.Wellspring, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((5567 - 3908) >= (2100 + 34))) then
+						return "wellspring healingaoe";
+					end
+				end
+				v141 = 315 - (309 + 2);
+			end
+		end
+	end
+	local function v130()
+		if ((v118.EarthShield:IsReady() and v94 and v17:Exists() and not v17:IsDeadOrGhost() and v17:IsInRange(122 - 82) and (v122.UnitGroupRole(v17) == "TANK") and v17:BuffDown(v118.EarthShield) and (v122.FriendlyUnitsWithBuffCount(v118.EarthShieldBuff, true) <= (1213 - (1090 + 122)))) or ((1057 + 2203) < (7909 - 5554))) then
+			if (v24(v119.EarthShieldFocus) or ((458 + 211) == (5341 - (628 + 490)))) then
+				return "earth_shield_tank healingst";
+			end
+		end
+		if ((v100 and v13:BuffDown(v118.UnleashLife) and v118.Riptide:IsReady() and v17:BuffDown(v118.Riptide)) or ((304 + 1388) < (1455 - 867))) then
+			if ((v17:HealthPercentage() <= v80) or ((21922 - 17125) < (4425 - (431 + 343)))) then
+				if (v24(v119.RiptideFocus) or ((8435 - 4258) > (14030 - 9180))) then
+					return "riptide healingaoe";
+				end
+			end
+		end
+		if ((v100 and v13:BuffDown(v118.UnleashLife) and v118.Riptide:IsReady() and v17:BuffDown(v118.Riptide)) or ((317 + 83) > (143 + 968))) then
+			if (((4746 - (556 + 1139)) > (1020 - (6 + 9))) and (v17:HealthPercentage() <= v81) and (v122.UnitGroupRole(v17) == "TANK")) then
+				if (((677 + 3016) <= (2245 + 2137)) and v24(v119.RiptideFocus)) then
+					return "riptide healingaoe";
+				end
+			end
+		end
+		if ((v100 and v13:BuffDown(v118.UnleashLife) and v118.Riptide:IsReady() and v17:BuffDown(v118.Riptide)) or ((3451 - (28 + 141)) > (1589 + 2511))) then
+			if ((v17:HealthPercentage() <= v80) or (v17:HealthPercentage() <= v80) or ((4418 - 838) < (2015 + 829))) then
+				if (((1406 - (486 + 831)) < (11684 - 7194)) and v24(v119.RiptideFocus)) then
+					return "riptide healingaoe";
+				end
+			end
+		end
+		if ((v118.ElementalOrbit:IsAvailable() and v13:BuffDown(v118.EarthShieldBuff)) or ((17543 - 12560) < (342 + 1466))) then
+			if (((12107 - 8278) > (5032 - (668 + 595))) and v24(v118.EarthShield)) then
+				return "earth_shield healingst";
+			end
+		end
+		if (((1337 + 148) <= (586 + 2318)) and v118.ElementalOrbit:IsAvailable() and v13:BuffUp(v118.EarthShieldBuff)) then
+			if (((11641 - 7372) == (4559 - (23 + 267))) and v122.IsSoloMode()) then
+				if (((2331 - (1129 + 815)) <= (3169 - (371 + 16))) and v118.LightningShield:IsReady() and v13:BuffDown(v118.LightningShield)) then
+					if (v24(v118.LightningShield) or ((3649 - (1326 + 424)) <= (1736 - 819))) then
+						return "lightning_shield healingst";
+					end
+				end
+			elseif ((v118.WaterShield:IsReady() and v13:BuffDown(v118.WaterShield)) or ((15757 - 11445) <= (994 - (88 + 30)))) then
+				if (((3003 - (720 + 51)) <= (5774 - 3178)) and v24(v118.WaterShield)) then
+					return "water_shield healingst";
+				end
+			end
+		end
+		if (((3871 - (421 + 1355)) < (6080 - 2394)) and v96 and v118.HealingSurge:IsReady()) then
+			if ((v17:HealthPercentage() <= v73) or ((784 + 811) >= (5557 - (286 + 797)))) then
+				if (v24(v119.HealingSurgeFocus, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((16885 - 12266) < (4773 - 1891))) then
+					return "healing_surge healingst";
+				end
+			end
+		end
+		if ((v98 and v118.HealingWave:IsReady()) or ((733 - (397 + 42)) >= (1509 + 3322))) then
+			if (((2829 - (24 + 776)) <= (4750 - 1666)) and (v17:HealthPercentage() <= v76)) then
+				if (v24(v119.HealingWaveFocus, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((2822 - (222 + 563)) == (5332 - 2912))) then
+					return "healing_wave healingst";
+				end
+			end
+		end
+	end
+	local function v131()
+		local v142 = 0 + 0;
+		while true do
+			if (((4648 - (23 + 167)) > (5702 - (690 + 1108))) and (v142 == (1 + 0))) then
+				if (((360 + 76) >= (971 - (40 + 808))) and v118.Stormkeeper:IsReady()) then
+					if (((83 + 417) < (6944 - 5128)) and v24(v118.Stormkeeper)) then
 						return "stormkeeper damage";
 					end
 				end
-				if ((#v12:GetEnemiesInRange(99 - 59) < (13 - 10)) or ((2365 - (431 + 343)) >= (7230 - 3650))) then
-					if (((2843 - 1860) <= (1429 + 379)) and v117.LightningBolt:IsReady()) then
-						if (v23(v117.LightningBolt, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((275 + 1875) <= (2892 - (556 + 1139)))) then
+				if (((3416 + 158) == (1891 + 1683)) and (#v13:GetEnemiesInRange(22 + 18) < (574 - (47 + 524)))) then
+					if (((144 + 77) < (1066 - 676)) and v118.LightningBolt:IsReady()) then
+						if (v24(v118.LightningBolt, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((3308 - 1095) <= (3240 - 1819))) then
 							return "lightning_bolt damage";
 						end
 					end
-				elseif (((3784 - (6 + 9)) >= (215 + 958)) and v117.ChainLightning:IsReady()) then
-					if (((761 + 724) == (1654 - (28 + 141))) and v23(v117.ChainLightning, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff))) then
+				elseif (((4784 - (1165 + 561)) < (145 + 4715)) and v118.ChainLightning:IsReady()) then
+					if (v24(v118.ChainLightning, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((4013 - 2717) >= (1697 + 2749))) then
 						return "chain_lightning damage";
 					end
 				end
 				break;
 			end
-			if (((0 + 0) == v140) or ((4091 - 776) <= (1971 + 811))) then
-				if (v117.FlameShock:IsReady() or ((2193 - (486 + 831)) >= (7712 - 4748))) then
-					if (v121.CastCycle(v117.FlameShock, v12:GetEnemiesInRange(140 - 100), v124, not v14:IsSpellInRange(v117.FlameShock), nil, nil, nil, nil) or ((422 + 1810) > (7895 - 5398))) then
-						return "flame_shock_cycle damage";
-					end
-					if (v23(v117.FlameShock, not v14:IsSpellInRange(v117.FlameShock)) or ((3373 - (668 + 595)) <= (299 + 33))) then
-						return "flame_shock damage";
+			if ((v142 == (479 - (341 + 138))) or ((377 + 1016) > (9263 - 4774))) then
+				if (v118.FlameShock:IsReady() or ((4750 - (89 + 237)) < (86 - 59))) then
+					local v241 = 0 - 0;
+					while true do
+						if ((v241 == (881 - (581 + 300))) or ((3217 - (855 + 365)) > (9061 - 5246))) then
+							if (((1132 + 2333) > (3148 - (1030 + 205))) and v122.CastCycle(v118.FlameShock, v13:GetEnemiesInRange(38 + 2), v125, not v15:IsSpellInRange(v118.FlameShock), nil, nil, nil, nil)) then
+								return "flame_shock_cycle damage";
+							end
+							if (((682 + 51) < (2105 - (156 + 130))) and v24(v118.FlameShock, not v15:IsSpellInRange(v118.FlameShock))) then
+								return "flame_shock damage";
+							end
+							break;
+						end
 					end
 				end
-				if (((744 + 2942) > (8650 - 5478)) and v117.LavaBurst:IsReady()) then
-					if (v23(v117.LavaBurst, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((4764 - (23 + 267)) < (2764 - (1129 + 815)))) then
+				if (v118.LavaBurst:IsReady() or ((9986 - 5591) == (8014 - 3259))) then
+					if (v24(v118.LavaBurst, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff)) or ((7768 - 3975) < (625 + 1744))) then
 						return "lava_burst damage";
 					end
 				end
-				v140 = 388 - (371 + 16);
-			end
-		end
-	end
-	local function v131()
-		local v141 = 1750 - (1326 + 424);
-		while true do
-			if (((8103 - 3824) >= (10531 - 7649)) and (v141 == (123 - (88 + 30)))) then
-				v70 = EpicSettings.Settings['HealingStreamTotemGroup'];
-				v71 = EpicSettings.Settings['HealingStreamTotemHP'];
-				v72 = EpicSettings.Settings['HealingSurgeHP'];
-				v73 = EpicSettings.Settings['HealingTideTotemGroup'];
-				v141 = 777 - (720 + 51);
-			end
-			if ((v141 == (17 - 9)) or ((3805 - (421 + 1355)) >= (5808 - 2287))) then
-				v81 = EpicSettings.Settings['SpiritLinkTotemGroup'];
-				v82 = EpicSettings.Settings['SpiritLinkTotemHP'];
-				v83 = EpicSettings.Settings['SpiritLinkTotemUsage'];
-				v84 = EpicSettings.Settings['SpiritwalkersGraceGroup'];
-				v141 = 5 + 4;
-			end
-			if ((v141 == (1095 - (286 + 797))) or ((7446 - 5409) >= (7688 - 3046))) then
-				v100 = EpicSettings.Settings['UseSpiritwalkersGrace'];
-				v101 = EpicSettings.Settings['UseUnleashLife'];
-				v111 = EpicSettings.Settings['UseTremorTotemWithAfflicted'];
-				v112 = EpicSettings.Settings['UsePoisonCleansingTotemWithAfflicted'];
-				break;
-			end
-			if (((2159 - (397 + 42)) < (1393 + 3065)) and (v141 == (807 - (24 + 776)))) then
-				v46 = EpicSettings.Settings['InterruptThreshold'];
-				v44 = EpicSettings.Settings['InterruptWithStun'];
-				v79 = EpicSettings.Settings['RiptideHP'];
-				v80 = EpicSettings.Settings['RiptideTankHP'];
-				v141 = 12 - 4;
-			end
-			if ((v141 == (791 - (222 + 563))) or ((960 - 524) > (2176 + 845))) then
-				v74 = EpicSettings.Settings['HealingTideTotemHP'];
-				v75 = EpicSettings.Settings['HealingWaveHP'];
-				v36 = EpicSettings.Settings['healthstoneHP'];
-				v45 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-				v141 = 197 - (23 + 167);
-			end
-			if (((2511 - (690 + 1108)) <= (306 + 541)) and (v141 == (8 + 1))) then
-				v85 = EpicSettings.Settings['SpiritwalkersGraceHP'];
-				v86 = EpicSettings.Settings['UnleashLifeHP'];
-				v90 = EpicSettings.Settings['UseChainHeal'];
-				v91 = EpicSettings.Settings['UseCloudburstTotem'];
-				v141 = 858 - (40 + 808);
-			end
-			if (((355 + 1799) <= (15414 - 11383)) and (v141 == (4 + 0))) then
-				v39 = EpicSettings.Settings['HealingPotionName'];
-				v67 = EpicSettings.Settings['HealingRainGroup'];
-				v68 = EpicSettings.Settings['HealingRainHP'];
-				v69 = EpicSettings.Settings['HealingRainUsage'];
-				v141 = 3 + 2;
-			end
-			if (((2531 + 2084) == (5186 - (47 + 524))) and (v141 == (7 + 3))) then
-				v93 = EpicSettings.Settings['UseEarthShield'];
-				v37 = EpicSettings.Settings['UseHealingPotion'];
-				v94 = EpicSettings.Settings['UseHealingStreamTotem'];
-				v95 = EpicSettings.Settings['UseHealingSurge'];
-				v141 = 30 - 19;
-			end
-			if ((v141 == (0 - 0)) or ((8643 - 4853) == (2226 - (1165 + 561)))) then
-				v49 = EpicSettings.Settings['AncestralProtectionTotemGroup'];
-				v50 = EpicSettings.Settings['AncestralProtectionTotemHP'];
-				v51 = EpicSettings.Settings['AncestralProtectionTotemUsage'];
-				v55 = EpicSettings.Settings['ChainHealGroup'];
-				v141 = 1 + 0;
-			end
-			if (((275 - 186) < (85 + 136)) and (v141 == (480 - (341 + 138)))) then
-				v56 = EpicSettings.Settings['ChainHealHP'];
-				v43 = EpicSettings.Settings['DispelBuffs'];
-				v42 = EpicSettings.Settings['DispelDebuffs'];
-				v59 = EpicSettings.Settings['DownpourGroup'];
-				v141 = 1 + 1;
-			end
-			if (((4238 - 2184) >= (1747 - (89 + 237))) and (v141 == (35 - 24))) then
-				v96 = EpicSettings.Settings['UseHealingTideTotem'];
-				v97 = EpicSettings.Settings['UseHealingWave'];
-				v35 = EpicSettings.Settings['useHealthstone'];
-				v99 = EpicSettings.Settings['UseRiptide'];
-				v141 = 24 - 12;
-			end
-			if (((1573 - (581 + 300)) < (4278 - (855 + 365))) and ((4 - 2) == v141)) then
-				v60 = EpicSettings.Settings['DownpourHP'];
-				v61 = EpicSettings.Settings['DownpourUsage'];
-				v64 = EpicSettings.Settings['EarthenWallTotemGroup'];
-				v65 = EpicSettings.Settings['EarthenWallTotemHP'];
-				v141 = 1 + 2;
-			end
-			if ((v141 == (1238 - (1030 + 205))) or ((3055 + 199) == (1540 + 115))) then
-				v66 = EpicSettings.Settings['EarthenWallTotemUsage'];
-				v41 = EpicSettings.Settings['HandleCharredBrambles'];
-				v40 = EpicSettings.Settings['HandleCharredTreant'];
-				v38 = EpicSettings.Settings['HealingPotionHP'];
-				v141 = 290 - (156 + 130);
+				v142 = 1 + 0;
 			end
 		end
 	end
 	local function v132()
-		local v142 = 0 - 0;
+		v50 = EpicSettings.Settings['AncestralProtectionTotemGroup'];
+		v51 = EpicSettings.Settings['AncestralProtectionTotemHP'];
+		v52 = EpicSettings.Settings['AncestralProtectionTotemUsage'];
+		v56 = EpicSettings.Settings['ChainHealGroup'];
+		v57 = EpicSettings.Settings['ChainHealHP'];
+		v44 = EpicSettings.Settings['DispelBuffs'];
+		v43 = EpicSettings.Settings['DispelDebuffs'];
+		v60 = EpicSettings.Settings['DownpourGroup'];
+		v61 = EpicSettings.Settings['DownpourHP'];
+		v62 = EpicSettings.Settings['DownpourUsage'];
+		v65 = EpicSettings.Settings['EarthenWallTotemGroup'];
+		v66 = EpicSettings.Settings['EarthenWallTotemHP'];
+		v67 = EpicSettings.Settings['EarthenWallTotemUsage'];
+		v42 = EpicSettings.Settings['HandleCharredBrambles'];
+		v41 = EpicSettings.Settings['HandleCharredTreant'];
+		v39 = EpicSettings.Settings['HealingPotionHP'];
+		v40 = EpicSettings.Settings['HealingPotionName'];
+		v68 = EpicSettings.Settings['HealingRainGroup'];
+		v69 = EpicSettings.Settings['HealingRainHP'];
+		v70 = EpicSettings.Settings['HealingRainUsage'];
+		v71 = EpicSettings.Settings['HealingStreamTotemGroup'];
+		v72 = EpicSettings.Settings['HealingStreamTotemHP'];
+		v73 = EpicSettings.Settings['HealingSurgeHP'];
+		v74 = EpicSettings.Settings['HealingTideTotemGroup'];
+		v75 = EpicSettings.Settings['HealingTideTotemHP'];
+		v76 = EpicSettings.Settings['HealingWaveHP'];
+		v37 = EpicSettings.Settings['healthstoneHP'];
+		v46 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+		v47 = EpicSettings.Settings['InterruptThreshold'];
+		v45 = EpicSettings.Settings['InterruptWithStun'];
+		v80 = EpicSettings.Settings['RiptideHP'];
+		v81 = EpicSettings.Settings['RiptideTankHP'];
+		v82 = EpicSettings.Settings['SpiritLinkTotemGroup'];
+		v83 = EpicSettings.Settings['SpiritLinkTotemHP'];
+		v84 = EpicSettings.Settings['SpiritLinkTotemUsage'];
+		v85 = EpicSettings.Settings['SpiritwalkersGraceGroup'];
+		v86 = EpicSettings.Settings['SpiritwalkersGraceHP'];
+		v87 = EpicSettings.Settings['UnleashLifeHP'];
+		v91 = EpicSettings.Settings['UseChainHeal'];
+		v92 = EpicSettings.Settings['UseCloudburstTotem'];
+		v94 = EpicSettings.Settings['UseEarthShield'];
+		v38 = EpicSettings.Settings['UseHealingPotion'];
+		v95 = EpicSettings.Settings['UseHealingStreamTotem'];
+		v96 = EpicSettings.Settings['UseHealingSurge'];
+		v97 = EpicSettings.Settings['UseHealingTideTotem'];
+		v98 = EpicSettings.Settings['UseHealingWave'];
+		v36 = EpicSettings.Settings['useHealthstone'];
+		v100 = EpicSettings.Settings['UseRiptide'];
+		v101 = EpicSettings.Settings['UseSpiritwalkersGrace'];
+		v102 = EpicSettings.Settings['UseUnleashLife'];
+		v112 = EpicSettings.Settings['UseTremorTotemWithAfflicted'];
+		v113 = EpicSettings.Settings['UsePoisonCleansingTotemWithAfflicted'];
+	end
+	local function v133()
+		local v195 = 69 - (10 + 59);
 		while true do
-			if ((v142 == (11 - 4)) or ((2654 - 1358) == (1294 + 3616))) then
-				v112 = EpicSettings.Settings['usePoisonCleansingTotemWithAfflicted'];
-				v113 = EpicSettings.Settings['usePurgeTarget'];
+			if ((v195 == (0 + 0)) or ((20112 - 16028) == (1428 - (671 + 492)))) then
+				v48 = EpicSettings.Settings['AncestralGuidanceGroup'];
+				v49 = EpicSettings.Settings['AncestralGuidanceHP'];
+				v53 = EpicSettings.Settings['AscendanceGroup'];
+				v54 = EpicSettings.Settings['AscendanceHP'];
+				v195 = 1 + 0;
+			end
+			if (((5573 - (369 + 846)) == (1154 + 3204)) and (v195 == (6 + 0))) then
+				v109 = EpicSettings.Settings['fightRemainsCheck'];
+				v110 = EpicSettings.Settings['handleAfflicted'];
+				v111 = EpicSettings.Settings['HandleIncorporeal'];
+				v112 = EpicSettings.Settings['useTremorTotemWithAfflicted'];
+				v195 = 1952 - (1036 + 909);
+			end
+			if ((v195 == (6 + 1)) or ((5268 - 2130) < (1196 - (11 + 192)))) then
+				v113 = EpicSettings.Settings['usePoisonCleansingTotemWithAfflicted'];
+				v114 = EpicSettings.Settings['usePurgeTarget'];
 				break;
 			end
-			if (((1964 + 1404) == (3437 - (10 + 59))) and (v142 == (1 + 0))) then
-				v54 = EpicSettings.Settings['AstralShiftHP'];
-				v57 = EpicSettings.Settings['CloudburstTotemGroup'];
-				v58 = EpicSettings.Settings['CloudburstTotemHP'];
-				v62 = EpicSettings.Settings['EarthElementalHP'];
-				v142 = 9 - 7;
+			if (((1683 + 1647) > (2498 - (135 + 40))) and ((11 - 6) == v195)) then
+				v105 = EpicSettings.Settings['WellspringHP'];
+				v106 = EpicSettings.Settings['racialsWithCD'];
+				v107 = EpicSettings.Settings['trinketsWithCD'];
+				v108 = EpicSettings.Settings['useTrinkets'];
+				v195 = 4 + 2;
 			end
-			if (((3806 - (671 + 492)) < (3037 + 778)) and (v142 == (1219 - (369 + 846)))) then
-				v98 = EpicSettings.Settings['UseManaTideTotem'];
-				v34 = EpicSettings.Settings['UseRacials'];
-				v102 = EpicSettings.Settings['UseWellspring'];
-				v103 = EpicSettings.Settings['WellspringGroup'];
-				v142 = 2 + 3;
+			if ((v195 == (4 - 2)) or ((5435 - 1809) == (4165 - (50 + 126)))) then
+				v64 = EpicSettings.Settings['EarthElementalTankHP'];
+				v77 = EpicSettings.Settings['ManaTideTotemMana'];
+				v78 = EpicSettings.Settings['PrimordialWaveHP'];
+				v79 = EpicSettings.Settings['PrimordialWaveSaveCooldowns'];
+				v195 = 8 - 5;
 			end
-			if (((1633 + 280) > (2438 - (1036 + 909))) and ((0 + 0) == v142)) then
-				v47 = EpicSettings.Settings['AncestralGuidanceGroup'];
-				v48 = EpicSettings.Settings['AncestralGuidanceHP'];
-				v52 = EpicSettings.Settings['AscendanceGroup'];
-				v53 = EpicSettings.Settings['AscendanceHP'];
-				v142 = 1 - 0;
+			if (((1 + 2) == v195) or ((2329 - (1233 + 180)) == (3640 - (522 + 447)))) then
+				v88 = EpicSettings.Settings['UseAncestralGuidance'];
+				v89 = EpicSettings.Settings['UseAscendance'];
+				v90 = EpicSettings.Settings['UseAstralShift'];
+				v93 = EpicSettings.Settings['UseEarthElemental'];
+				v195 = 1425 - (107 + 1314);
 			end
-			if (((4958 - (11 + 192)) > (1733 + 1695)) and (v142 == (181 - (135 + 40)))) then
-				v108 = EpicSettings.Settings['fightRemainsCheck'];
-				v109 = EpicSettings.Settings['handleAfflicted'];
-				v110 = EpicSettings.Settings['HandleIncorporeal'];
-				v111 = EpicSettings.Settings['useTremorTotemWithAfflicted'];
-				v142 = 16 - 9;
+			if (((127 + 145) == (828 - 556)) and (v195 == (2 + 2))) then
+				v99 = EpicSettings.Settings['UseManaTideTotem'];
+				v35 = EpicSettings.Settings['UseRacials'];
+				v103 = EpicSettings.Settings['UseWellspring'];
+				v104 = EpicSettings.Settings['WellspringGroup'];
+				v195 = 9 - 4;
 			end
-			if (((833 + 548) <= (5218 - 2849)) and (v142 == (7 - 2))) then
-				v104 = EpicSettings.Settings['WellspringHP'];
-				v105 = EpicSettings.Settings['racialsWithCD'];
-				v106 = EpicSettings.Settings['trinketsWithCD'];
-				v107 = EpicSettings.Settings['useTrinkets'];
-				v142 = 182 - (50 + 126);
-			end
-			if ((v142 == (8 - 5)) or ((1072 + 3771) == (5497 - (1233 + 180)))) then
-				v87 = EpicSettings.Settings['UseAncestralGuidance'];
-				v88 = EpicSettings.Settings['UseAscendance'];
-				v89 = EpicSettings.Settings['UseAstralShift'];
-				v92 = EpicSettings.Settings['UseEarthElemental'];
-				v142 = 973 - (522 + 447);
-			end
-			if (((6090 - (107 + 1314)) > (169 + 194)) and ((5 - 3) == v142)) then
-				v63 = EpicSettings.Settings['EarthElementalTankHP'];
-				v76 = EpicSettings.Settings['ManaTideTotemMana'];
-				v77 = EpicSettings.Settings['PrimordialWaveHP'];
-				v78 = EpicSettings.Settings['PrimordialWaveSaveCooldowns'];
-				v142 = 2 + 1;
+			if (((16811 - 12562) <= (6749 - (716 + 1194))) and (v195 == (1 + 0))) then
+				v55 = EpicSettings.Settings['AstralShiftHP'];
+				v58 = EpicSettings.Settings['CloudburstTotemGroup'];
+				v59 = EpicSettings.Settings['CloudburstTotemHP'];
+				v63 = EpicSettings.Settings['EarthElementalHP'];
+				v195 = 1 + 1;
 			end
 		end
 	end
-	local function v133()
-		v131();
-		v132();
-		v29 = EpicSettings.Toggles['ooc'];
-		v30 = EpicSettings.Toggles['cds'];
-		v31 = EpicSettings.Toggles['dispel'];
-		v32 = EpicSettings.Toggles['healing'];
-		v33 = EpicSettings.Toggles['dps'];
-		if (v12:IsDeadOrGhost() or ((3726 - 1849) >= (12415 - 9277))) then
-			return;
-		end
-		if (((6652 - (716 + 1194)) >= (62 + 3564)) and (v12:AffectingCombat() or v29)) then
-			local v153 = v42 and v117.PurifySpirit:IsReady() and v31;
-			if ((v117.EarthShield:IsReady() and v93 and (v121.FriendlyUnitsWithBuffCount(v117.EarthShieldBuff, true) <= (1 + 0))) or ((5043 - (74 + 429)) == (1766 - 850))) then
-				v28 = v121.FocusUnitRefreshableBuff(v117.EarthShield, 8 + 7, 91 - 51, "TANK");
-				if (v28 or ((818 + 338) > (13395 - 9050))) then
-					return v28;
-				end
+	local function v134()
+		local v196 = 503 - (74 + 429);
+		local v197;
+		while true do
+			if (((5356 - 2579) < (1586 + 1614)) and (v196 == (0 - 0))) then
+				v132();
+				v133();
+				v30 = EpicSettings.Toggles['ooc'];
+				v31 = EpicSettings.Toggles['cds'];
+				v196 = 1 + 0;
 			end
-			if (((5530 - 3293) < (4682 - (279 + 154))) and (not v16:BuffRefreshable(v117.EarthShield) or (v121.UnitGroupRole(v16) ~= "TANK") or not v93)) then
-				local v237 = 778 - (454 + 324);
-				while true do
-					if ((v237 == (0 + 0)) or ((2700 - (12 + 5)) < (13 + 10))) then
-						v28 = v121.FocusUnit(v153, nil, nil, nil);
-						if (((1775 - 1078) <= (306 + 520)) and v28) then
-							return v28;
+			if (((292 - 197) < (4838 - 2881)) and (v196 == (436 - (279 + 154)))) then
+				if (((1604 - (454 + 324)) < (1351 + 366)) and (v30 or v13:AffectingCombat())) then
+					if (((1443 - (12 + 5)) >= (596 + 509)) and v32) then
+						if (((7017 - 4263) <= (1249 + 2130)) and v17 and v43) then
+							if ((v118.PurifySpirit:IsReady() and v122.DispellableFriendlyUnit()) or ((5020 - (277 + 816)) == (6037 - 4624))) then
+								if (v24(v119.PurifySpiritFocus) or ((2337 - (1058 + 125)) <= (148 + 640))) then
+									return "purify_spirit dispel";
+								end
+							end
 						end
-						break;
-					end
-				end
-			end
-		end
-		local v148;
-		if (((2198 - (277 + 816)) <= (5024 - 3848)) and not v12:AffectingCombat() and v29) then
-			if (((4562 - (1058 + 125)) <= (715 + 3097)) and v14 and v14:Exists() and v14:IsAPlayer() and v14:IsDeadOrGhost() and not v12:CanAttack(v14)) then
-				local v238 = v121.DeadFriendlyUnitsCount();
-				if (v12:AffectingCombat() or ((1763 - (815 + 160)) >= (6933 - 5317))) then
-					if (((4400 - 2546) <= (807 + 2572)) and (v238 > (2 - 1))) then
-						if (((6447 - (41 + 1857)) == (6442 - (1222 + 671))) and v23(v117.AncestralVision, nil, v12:BuffDown(v117.SpiritwalkersGraceBuff))) then
-							return "ancestral_vision";
-						end
-					elseif (v23(v117.AncestralSpirit, not v14:IsInRange(103 - 63), v12:BuffDown(v117.SpiritwalkersGraceBuff)) or ((4343 - 1321) >= (4206 - (229 + 953)))) then
-						return "ancestral_spirit";
-					end
-				end
-			end
-		end
-		if (((6594 - (1111 + 663)) > (3777 - (874 + 705))) and v12:AffectingCombat() and v121.TargetIsValid()) then
-			local v154 = 0 + 0;
-			while true do
-				if ((v154 == (3 + 1)) or ((2205 - 1144) >= (138 + 4753))) then
-					v148 = v125();
-					if (((2043 - (642 + 37)) <= (1020 + 3453)) and v148) then
-						return v148;
-					end
-					if ((v115 > v108) or ((576 + 3019) <= (7 - 4))) then
-						v148 = v127();
-						if (v148 or ((5126 - (233 + 221)) == (8907 - 5055))) then
-							return v148;
+						if ((v44 and v114) or ((2618 - (815 + 160)) > (14497 - 11118))) then
+							if ((v118.Purge:IsReady() and not v13:IsCasting() and not v13:IsChanneling() and v122.UnitHasMagicBuff(v15)) or ((6653 - 3850) > (1086 + 3463))) then
+								if (v24(v118.Purge, not v15:IsSpellInRange(v118.Purge)) or ((643 - 423) >= (4920 - (41 + 1857)))) then
+									return "purge dispel";
+								end
+							end
 						end
 					end
-					v154 = 5 + 0;
-				end
-				if (((3100 - (718 + 823)) == (982 + 577)) and (v154 == (808 - (266 + 539)))) then
-					if (v28 or ((4960 - 3208) <= (2013 - (636 + 589)))) then
-						return v28;
+					v197 = v127();
+					if (((4715 - (1222 + 671)) == (7293 - 4471)) and v197) then
+						return v197;
 					end
-					if (v110 or ((9274 - 5367) == (365 - 188))) then
-						local v240 = 0 + 0;
+					if (v33 or ((1524 - 463) == (3039 - (229 + 953)))) then
+						local v244 = 1774 - (1111 + 663);
 						while true do
-							if (((1261 + 2209) > (1570 - (657 + 358))) and (v240 == (0 - 0))) then
-								v28 = v121.HandleIncorporeal(v117.Hex, v118.HexMouseOver, 68 - 38, true);
-								if (v28 or ((2159 - (1151 + 36)) == (623 + 22))) then
-									return v28;
+							if (((4339 - (874 + 705)) > (191 + 1173)) and (v244 == (1 + 0))) then
+								v197 = v130();
+								if (v197 or ((10188 - 5286) <= (102 + 3493))) then
+									return v197;
+								end
+								break;
+							end
+							if ((v244 == (679 - (642 + 37))) or ((879 + 2973) == (47 + 246))) then
+								v197 = v129();
+								if (v197 or ((3913 - 2354) == (5042 - (233 + 221)))) then
+									return v197;
+								end
+								v244 = 2 - 1;
+							end
+						end
+					end
+					if (v34 or ((3947 + 537) == (2329 - (718 + 823)))) then
+						if (((2875 + 1693) >= (4712 - (266 + 539))) and v122.TargetIsValid()) then
+							v197 = v131();
+							if (((3527 - 2281) < (4695 - (636 + 589))) and v197) then
+								return v197;
+							end
+						end
+					end
+				end
+				break;
+			end
+			if (((9656 - 5588) >= (2004 - 1032)) and (v196 == (2 + 0))) then
+				if (((180 + 313) < (4908 - (657 + 358))) and (v13:AffectingCombat() or v30)) then
+					local v242 = v43 and v118.PurifySpirit:IsReady() and v32;
+					if ((v118.EarthShield:IsReady() and v94 and (v122.FriendlyUnitsWithBuffCount(v118.EarthShieldBuff, true) <= (2 - 1))) or ((3355 - 1882) >= (4519 - (1151 + 36)))) then
+						local v245 = 0 + 0;
+						while true do
+							if ((v245 == (0 + 0)) or ((12097 - 8046) <= (2989 - (1552 + 280)))) then
+								v29 = v122.FocusUnitRefreshableBuff(v118.EarthShield, 849 - (64 + 770), 28 + 12, "TANK");
+								if (((1370 - 766) < (512 + 2369)) and v29) then
+									return v29;
 								end
 								break;
 							end
 						end
 					end
-					if (((837 + 2345) >= (6316 - 4201)) and v109) then
-						v28 = v121.HandleAfflicted(v117.PurifySpirit, v118.PurifySpirit, 1862 - (1552 + 280));
-						if (((4727 - (64 + 770)) < (3008 + 1421)) and v28) then
-							return v28;
+					if (not v17:BuffRefreshable(v118.EarthShield) or (v122.UnitGroupRole(v17) ~= "TANK") or not v94 or ((2143 - (157 + 1086)) == (6758 - 3381))) then
+						v29 = v122.FocusUnit(v242, nil, nil, nil);
+						if (((19529 - 15070) > (906 - 315)) and v29) then
+							return v29;
 						end
-						if (v111 or ((6507 - 3640) < (339 + 1566))) then
-							local v241 = 1243 - (157 + 1086);
-							while true do
-								if ((v241 == (0 - 0)) or ((7865 - 6069) >= (6213 - 2162))) then
-									v28 = v121.HandleAfflicted(v117.TremorTotem, v117.TremorTotem, 40 - 10);
-									if (((2438 - (599 + 220)) <= (7479 - 3723)) and v28) then
-										return v28;
+					end
+				end
+				v197 = nil;
+				if (((4637 - 1239) >= (3214 - (599 + 220))) and not v13:AffectingCombat() and v30) then
+					if ((v16 and v16:Exists() and v16:IsAPlayer() and v16:IsDeadOrGhost() and not v13:CanAttack(v16)) or ((4346 - 2163) >= (4755 - (1813 + 118)))) then
+						local v246 = 0 + 0;
+						local v247;
+						while true do
+							if (((3153 - (841 + 376)) == (2712 - 776)) and (v246 == (0 + 0))) then
+								v247 = v122.DeadFriendlyUnitsCount();
+								if ((v247 > (2 - 1)) or ((5691 - (464 + 395)) < (11068 - 6755))) then
+									if (((1964 + 2124) > (4711 - (467 + 370))) and v24(v118.AncestralVision, nil, v13:BuffDown(v118.SpiritwalkersGraceBuff))) then
+										return "ancestral_vision";
 									end
-									break;
+								elseif (((8951 - 4619) == (3180 + 1152)) and v24(v119.AncestralSpiritMouseover, not v15:IsInRange(137 - 97), v13:BuffDown(v118.SpiritwalkersGraceBuff))) then
+									return "ancestral_spirit";
+								end
+								break;
+							end
+						end
+					end
+				end
+				if (((624 + 3375) >= (6747 - 3847)) and v13:AffectingCombat() and v122.TargetIsValid()) then
+					local v243 = 520 - (150 + 370);
+					while true do
+						if ((v243 == (1283 - (74 + 1208))) or ((6210 - 3685) > (19273 - 15209))) then
+							v29 = v122.Interrupt(v118.WindShear, 22 + 8, true);
+							if (((4761 - (14 + 376)) == (7581 - 3210)) and v29) then
+								return v29;
+							end
+							v29 = v122.InterruptCursor(v118.WindShear, v119.WindShearMouseover, 20 + 10, true, v16);
+							if (v29 or ((234 + 32) > (4756 + 230))) then
+								return v29;
+							end
+							v243 = 5 - 3;
+						end
+						if (((1498 + 493) >= (1003 - (23 + 55))) and (v243 == (0 - 0))) then
+							v117 = v13:GetEnemiesInRange(27 + 13);
+							v115 = v10.BossFightRemains(nil, true);
+							v116 = v115;
+							if (((409 + 46) < (3182 - 1129)) and (v116 == (3496 + 7615))) then
+								v116 = v10.FightRemains(v117, false);
+							end
+							v243 = 902 - (652 + 249);
+						end
+						if ((v243 == (5 - 3)) or ((2694 - (708 + 1160)) == (13167 - 8316))) then
+							v29 = v122.InterruptWithStunCursor(v118.CapacitorTotem, v119.CapacitorTotemCursor, 54 - 24, nil, v16);
+							if (((210 - (10 + 17)) == (42 + 141)) and v29) then
+								return v29;
+							end
+							if (((2891 - (1400 + 332)) <= (3429 - 1641)) and v111) then
+								v29 = v122.HandleIncorporeal(v118.Hex, v119.HexMouseOver, 1938 - (242 + 1666), true);
+								if (v29 or ((1501 + 2006) > (1583 + 2735))) then
+									return v29;
 								end
 							end
-						end
-						if (((2535 - (1813 + 118)) == (442 + 162)) and v112) then
-							v28 = v121.HandleAfflicted(v117.PoisonCleansingTotem, v117.PoisonCleansingTotem, 1247 - (841 + 376));
-							if (v28 or ((6283 - 1799) == (210 + 690))) then
-								return v28;
-							end
-						end
-					end
-					v154 = 10 - 6;
-				end
-				if (((859 - (464 + 395)) == v154) or ((11443 - 6984) <= (535 + 578))) then
-					v116 = v12:GetEnemiesInRange(877 - (467 + 370));
-					v114 = v9.BossFightRemains(nil, true);
-					v115 = v114;
-					v154 = 1 - 0;
-				end
-				if (((2667 + 965) > (11648 - 8250)) and ((1 + 0) == v154)) then
-					if (((9496 - 5414) <= (5437 - (150 + 370))) and (v115 == (12393 - (74 + 1208)))) then
-						v115 = v9.FightRemains(v116, false);
-					end
-					v28 = v121.Interrupt(v117.WindShear, 73 - 43, true);
-					if (((22916 - 18084) >= (987 + 399)) and v28) then
-						return v28;
-					end
-					v154 = 392 - (14 + 376);
-				end
-				if (((237 - 100) == (89 + 48)) and (v154 == (2 + 0))) then
-					v28 = v121.InterruptCursor(v117.WindShear, v118.WindShearMouseover, 29 + 1, true, v15);
-					if (v28 or ((4600 - 3030) >= (3259 + 1073))) then
-						return v28;
-					end
-					v28 = v121.InterruptWithStunCursor(v117.CapacitorTotem, v118.CapacitorTotemCursor, 108 - (23 + 55), nil, v15);
-					v154 = 6 - 3;
-				end
-				if ((v154 == (4 + 1)) or ((3650 + 414) <= (2819 - 1000))) then
-					if (not v78 or v30 or ((1569 + 3417) < (2475 - (652 + 249)))) then
-						if (((11844 - 7418) > (2040 - (708 + 1160))) and (v16:HealthPercentage() < v77) and v16:BuffDown(v117.Riptide)) then
-							if (((1590 - 1004) > (829 - 374)) and v117.PrimordialWave:IsReady()) then
-								if (((853 - (10 + 17)) == (186 + 640)) and v23(v118.PrimordialWaveFocus)) then
-									return "primordial_wave main";
+							if (v110 or ((2621 + 454) <= (3905 - (850 + 90)))) then
+								v29 = v122.HandleAfflicted(v118.PurifySpirit, v119.PurifySpiritMouseover, 52 - 22);
+								if (((2755 - (360 + 1030)) <= (1780 + 231)) and v29) then
+									return v29;
+								end
+								if (v112 or ((7834 - 5058) > (4918 - 1343))) then
+									local v249 = 1661 - (909 + 752);
+									while true do
+										if ((v249 == (1223 - (109 + 1114))) or ((4675 - 2121) == (1871 + 2933))) then
+											v29 = v122.HandleAfflicted(v118.TremorTotem, v118.TremorTotem, 272 - (6 + 236));
+											if (((1624 + 953) == (2075 + 502)) and v29) then
+												return v29;
+											end
+											break;
+										end
+									end
+								end
+								if (v113 or ((13 - 7) >= (3298 - 1409))) then
+									local v250 = 1133 - (1076 + 57);
+									while true do
+										if (((84 + 422) <= (2581 - (579 + 110))) and ((0 + 0) == v250)) then
+											v29 = v122.HandleAfflicted(v118.PoisonCleansingTotem, v118.PoisonCleansingTotem, 27 + 3);
+											if (v29 or ((1066 + 942) > (2625 - (174 + 233)))) then
+												return v29;
+											end
+											break;
+										end
+									end
 								end
 							end
+							v243 = 8 - 5;
+						end
+						if (((664 - 285) <= (1845 + 2302)) and (v243 == (1177 - (663 + 511)))) then
+							v197 = v126();
+							if (v197 or ((4028 + 486) <= (220 + 789))) then
+								return v197;
+							end
+							if ((v116 > v109) or ((10778 - 7282) == (722 + 470))) then
+								local v248 = 0 - 0;
+								while true do
+									if ((v248 == (0 - 0)) or ((100 + 108) == (5758 - 2799))) then
+										v197 = v128();
+										if (((3049 + 1228) >= (121 + 1192)) and v197) then
+											return v197;
+										end
+										break;
+									end
+								end
+							end
+							if (((3309 - (478 + 244)) < (3691 - (440 + 77))) and (not v79 or v31)) then
+								if (((v17:HealthPercentage() < v78) and v17:BuffDown(v118.Riptide)) or ((1874 + 2246) <= (8044 - 5846))) then
+									if (v118.PrimordialWave:IsReady() or ((3152 - (655 + 901)) == (160 + 698))) then
+										if (((2466 + 754) == (2175 + 1045)) and v24(v119.PrimordialWaveFocus)) then
+											return "primordial_wave main";
+										end
+									end
+								end
+							end
+							break;
 						end
 					end
-					break;
 				end
+				v196 = 11 - 8;
 			end
-		end
-		if (v29 or v12:AffectingCombat() or ((5751 - (1400 + 332)) > (8517 - 4076))) then
-			if (((3925 - (242 + 1666)) < (1824 + 2437)) and v31) then
-				if (((1729 + 2987) > (69 + 11)) and v16 and v42) then
-					if ((v117.PurifySpirit:IsReady() and v121.DispellableFriendlyUnit()) or ((4447 - (850 + 90)) == (5730 - 2458))) then
-						if (v23(v118.PurifySpirit) or ((2266 - (360 + 1030)) >= (2722 + 353))) then
-							return "purify_spirit dispel";
-						end
-					end
+			if ((v196 == (1446 - (695 + 750))) or ((4787 - 3385) > (5586 - 1966))) then
+				v32 = EpicSettings.Toggles['dispel'];
+				v33 = EpicSettings.Toggles['healing'];
+				v34 = EpicSettings.Toggles['dps'];
+				if (((10351 - 7777) == (2925 - (285 + 66))) and v13:IsDeadOrGhost()) then
+					return;
 				end
-				if (((12283 - 7931) > (3513 - 959)) and v43 and v113) then
-					if ((v117.Purge:IsReady() and not v12:IsCasting() and not v12:IsChanneling() and v121.UnitHasMagicBuff(v14)) or ((6067 - (909 + 752)) < (5266 - (109 + 1114)))) then
-						if (v23(v117.Purge, not v14:IsSpellInRange(v117.Purge)) or ((3458 - 1569) >= (1317 + 2066))) then
-							return "purge dispel";
-						end
-					end
-				end
-			end
-			v148 = v126();
-			if (((2134 - (6 + 236)) <= (1723 + 1011)) and v148) then
-				return v148;
-			end
-			if (((1548 + 375) < (5230 - 3012)) and v32) then
-				v148 = v128();
-				if (((3795 - 1622) > (1512 - (1076 + 57))) and v148) then
-					return v148;
-				end
-				v148 = v129();
-				if (v148 or ((427 + 2164) == (4098 - (579 + 110)))) then
-					return v148;
-				end
-			end
-			if (((357 + 4157) > (2939 + 385)) and v33) then
-				if (v121.TargetIsValid() or ((111 + 97) >= (5235 - (174 + 233)))) then
-					v148 = v130();
-					if (v148 or ((4421 - 2838) > (6260 - 2693))) then
-						return v148;
-					end
-				end
+				v196 = 4 - 2;
 			end
 		end
 	end
-	local function v134()
-		local v149 = 0 + 0;
+	local function v135()
+		local v198 = 1310 - (682 + 628);
 		while true do
-			if (((1174 - (663 + 511)) == v149) or ((1172 + 141) == (173 + 621))) then
-				v123();
-				v21.Print("Restoration Shaman rotation by Epic.");
-				v149 = 2 - 1;
-			end
-			if (((1923 + 1251) > (6832 - 3930)) and (v149 == (2 - 1))) then
-				EpicSettings.SetupVersion("Restoration Shaman X v 10.2.01 By BoomK");
+			if (((290 + 1508) < (3056 - (176 + 123))) and (v198 == (0 + 0))) then
+				v124();
+				v22.Print("Restoration Shaman rotation by Epic. Supported by xKaneto.");
 				break;
 			end
 		end
 	end
-	v21.SetAPL(126 + 138, v133, v134);
+	v22.SetAPL(192 + 72, v134, v135);
 end;
 return v0["Epix_Shaman_RestoShaman.lua"]();
 
