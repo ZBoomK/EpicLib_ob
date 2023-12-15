@@ -213,7 +213,6 @@ do
         local spoilsWithCrit = EpicSettings.Settings["NeltharusCrit"] or false
         local spoilsWithMastery = EpicSettings.Settings["NeltharusMastery"] or false
         local spoilsWithVersatility = EpicSettings.Settings["NeltharusVersatility"] or false
-        
         if trinketCondition == "Don't Use" then
           return false
         elseif trinketCondition == "At HP" then

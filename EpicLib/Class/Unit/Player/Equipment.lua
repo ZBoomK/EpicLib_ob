@@ -244,7 +244,7 @@ do
       if slotID and Equipment[slotID] ~= ItemID then
         IsExcluded = true
       -- Check if the trinket is ready, unless it's blacklisted
-      elseif Item:IsReady() and not Item:HasCooldown() and not Player:IsItemBlacklisted(Item) then
+      elseif Item:IsEquippedAndReady() and Item:IsUsable() and not Player:IsItemBlacklisted(Item) then
         for i=1, #ExcludedItems do
           if ExcludedItems[i] == ItemID then
             IsExcluded = true
