@@ -12,5 +12,4 @@ Paladin.lua
 
 Protection.lua
 Retribution.lua
-HolyPal.lua
 
