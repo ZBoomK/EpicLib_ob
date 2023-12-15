@@ -976,7 +976,7 @@ do
     -- return false;
     for i=1,21 do
       local b,_,_,type = UnitBuff(U:ID(), i);
-      if type == "" then
+      if b ~= nil and type == "" then
         return true;
       end
     end
@@ -1010,7 +1010,7 @@ do
     -- return false;
     for i=1,21 do
       local b,_,_,type = UnitBuff(U:ID(), i);
-      if type == "Magic" then
+      if b ~= nil and type == "Magic" then
         return true;
       end
     end
@@ -1118,7 +1118,7 @@ do
     -- return false;
     for i=1,21 do
       local b,_,_,type = UnitDebuff(U:ID(), i);
-      if type == "Magic" then
+      if b ~= nil and type == "Magic" then
         return true;
       end
     end
@@ -1158,7 +1158,7 @@ do
     -- return false;
     for i=1,21 do
       local b,_,_,type = UnitDebuff(U:ID(), i);
-      if type == "Disease" then
+      if b ~= nil and type == "Disease" then
         return true;
       end
     end
@@ -1191,7 +1191,7 @@ do
     -- return false;
     for i=1,21 do
       local b,_,_,type = UnitDebuff(U:ID(), i);
-      if type == "Poison" then
+      if b ~= nil and type == "Poison" then
         return true;
       end
     end
@@ -1215,7 +1215,7 @@ do
     -- return false;
     for i=1,21 do
       local b,_,_,type = UnitDebuff(U:ID(), i);
-      if type == "Curse" then
+      if b ~= nil and type == "Curse" then
         return true;
       end
     end
