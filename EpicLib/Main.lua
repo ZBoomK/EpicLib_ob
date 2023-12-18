@@ -44,7 +44,7 @@ local EnabledRotation = {
   -- Evoker
     [1467]  = "Epix_Evoker",        -- Devastation
     [1468] = "Epix_Evoker",         -- Preservation
-    [1473]  = "Epix_Evoker",        -- Augmentation
+    --[1473]  = "Epix_Evoker",        -- Augmentation
   -- Hunter
     [253]   = "Epix_Hunter",        -- Beast Mastery
     [254]   = "Epix_Hunter",        -- Marksmanship
@@ -58,7 +58,7 @@ local EnabledRotation = {
     [269]   = "Epix_Monk",          -- Windwalker
     --[270]   = "Monk",          -- Mistweaver
   -- Paladin
-    [65]    = "Epix_Paladin",       -- Holy
+    --[65]    = "Epix_Paladin",       -- Holy
     [66]    = "Epix_Paladin",       -- Protection
     [70]    = "Epix_Paladin",       -- Retribution
   -- Priest
