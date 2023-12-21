@@ -12,7 +12,6 @@
 --TODO Change line numbers to start at one instead of 0
 --TODO Add title based on loaded SpecID
 --TODO Fix profile Ids and sorting in order
---TODO Command to queue spells
 
 --TODO Change buttons' texture when selected in profiles
 --TODO Save last selected minitab
@@ -155,6 +154,7 @@ local function HandleCommands(msg, editbox)
 		local a, b, c = strsplit(" ", string.lower(msg), 3)
 		if a == "cast" then
 			ES.Queues[b..c] = true
+			C_Timer.After(2.0, function() ES.Queues[b..c] = false end) -- /run print(EpicSettings.Queues["targetdisarm"])
 		elseif a == "resetqueues" then
 			ES.Queues = {}
 		elseif a == "hide" then
