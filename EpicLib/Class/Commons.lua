@@ -198,6 +198,22 @@ do
   end
 end
 
+-- fyrakk-spirits
+do
+  local KaldoreiSpiritID = 207800;
+  function Commons.HandleFyrakkNPC(Spell, Macro, Range, Immovable)
+    if not Range then Range = 40; end
+    if Target and Target:Exists() and Target:HealthPercentage() < 90 and Target:NPCID() == KaldoreiSpiritID and Target:IsSpellInRange(Spell) and Spell:IsReady() then
+      if EL.Press(Spell, not Target:IsSpellInRange(Spell), Immovable) then return "Handle Kaldorei Spirits"; end
+    end
+    if Macro then
+      if Mouseover and Mouseover:Exists() and Mouseover:HealthPercentage() < 90 and Mouseover:NPCID() == KaldoreiSpiritID and Mouseover:IsSpellInRange(Spell) and Spell:IsReady() then
+        if EL.Press(Macro, not Mouseover:IsSpellInRange(Spell), Immovable) then return "Handle Kaldorei Spirits Mouseover"; end
+      end
+    end
+  end
+end
+
 --Trinkets
 do
   function Commons.HandleTopTrinket(ExcludeList, WithCooldownsCondition, Range, Immovable)
