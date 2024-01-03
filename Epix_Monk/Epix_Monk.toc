@@ -9,7 +9,6 @@
 
 
 Monk.lua
-Brewmaster.lua
 Windwalker.lua
 
 

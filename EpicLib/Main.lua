@@ -54,7 +54,7 @@ local EnabledRotation = {
     [63]    = "Epix_Mage",          -- Fire
     [64]    = "Epix_Mage",          -- Frost
   -- Monk
-    [268]   = "Epix_Monk",          -- Brewmaster
+    --[268]   = "Epix_Monk",          -- Brewmaster
     [269]   = "Epix_Monk",          -- Windwalker
     --[270]   = "Monk",          -- Mistweaver
   -- Paladin
