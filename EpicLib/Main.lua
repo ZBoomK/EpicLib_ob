@@ -38,7 +38,7 @@ local EnabledRotation = {
     [581]   = "Epix_DemonHunter",   -- Vengeance
   -- Druid
     [102]   = "Epix_Druid",         -- Balance
-    [103]   = "Epix_Druid",         -- Feral
+    --[103]   = "Epix_Druid",         -- Feral
     --[104]   = "Epix_Druid",         -- Guardian
     [105]   = "Epix_Druid",         -- Restoration
   -- Evoker

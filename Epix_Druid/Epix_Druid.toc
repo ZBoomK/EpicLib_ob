@@ -10,6 +10,5 @@
 Druid.lua
 
 Balance.lua
-Feral.lua
 RestoDruid.lua
 
