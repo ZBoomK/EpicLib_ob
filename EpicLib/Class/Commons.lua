@@ -1123,6 +1123,10 @@ do
     Spell(264378),
     Spell(264390),
     Spell(264407),
+    -- Amirdrassil
+    Spell(420856), -- Council
+    Spell(417807), -- Fyrakk
+    Spell(421326), -- Larodar
   };
   function Commons.UnitHasMagicDebuff(U)
     -- for i = 1, #Commons.DispellableMagicDebuffs do
