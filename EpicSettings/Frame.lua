@@ -154,7 +154,11 @@ local function HandleCommands(msg, editbox)
 		local a, b, c = strsplit(" ", string.lower(msg), 3)
 		if a == "cast" then
 			ES.Queues[b..c] = true
-			C_Timer.After(2.0, function() ES.Queues[b..c] = false end) -- /run print(EpicSettings.Queues["targetdisarm"])
+			if b == "custom" then
+				C_Timer.After(3.5, function() ES.Queues[b..c] = false end)
+			else
+				C_Timer.After(2.5, function() ES.Queues[b..c] = false end) -- /run print(EpicSettings.Queues["targetdisarm"])
+			end
 		elseif a == "resetqueues" then
 			ES.Queues = {}
 		elseif a == "hide" then
@@ -513,7 +517,7 @@ function ES.InitProfilesTab()
 	ES.SettingsFrameTabCommands.MiniTabs = {}
 
 	local miniTabNextOffsetXCommands = 0
-	local commandTabNames = {"Toggles", "Player", "Target", "Cursor", "Mouseover", "Focus"}
+	local commandTabNames = {"Toggles", "Player", "Target", "Cursor", "Mouseover", "Focus", "PvP", "Custom"}
 	
 	for i=1,#commandTabNames do
 		ES.SettingsFrameTabCommands.MiniTabs[i] = {}
