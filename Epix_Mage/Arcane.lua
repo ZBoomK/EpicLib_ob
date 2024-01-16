@@ -2,7 +2,7 @@ local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
 	local v5 = v0[v4];
-	if (((6664 - 3975) < (5749 - (834 + 192))) and not v5) then
+	if (not v5 or ((1200 - (700 + 168)) == (467 + 4174))) then
 		return v1(v4, ...);
 	end
 	return v5(...);
@@ -16,23 +16,23 @@ v0["Epix_Mage_Arcane.lua"] = function(...)
 	local v12 = v10.Player;
 	local v13 = v10.Target;
 	local v14 = v10.Focus;
-	local v15 = v9.Spell;
-	local v16 = v9.Item;
-	local v17 = EpicLib;
-	local v18 = v17.Cast;
-	local v19 = v17.Press;
-	local v20 = v17.Macro;
-	local v21 = v17.Bind;
-	local v22 = v17.Commons.Everyone.num;
-	local v23 = v17.Commons.Everyone.bool;
-	local v24 = math.max;
-	local v25;
-	local v26 = false;
+	local v15 = v10.Mouseover;
+	local v16 = v9.Spell;
+	local v17 = v9.Item;
+	local v18 = EpicLib;
+	local v19 = v18.Cast;
+	local v20 = v18.Press;
+	local v21 = v18.Macro;
+	local v22 = v18.Bind;
+	local v23 = v18.Commons.Everyone.num;
+	local v24 = v18.Commons.Everyone.bool;
+	local v25 = math.max;
+	local v26;
 	local v27 = false;
 	local v28 = false;
 	local v29 = false;
 	local v30 = false;
-	local v31;
+	local v31 = false;
 	local v32;
 	local v33;
 	local v34;
@@ -92,182 +92,198 @@ v0["Epix_Mage_Arcane.lua"] = function(...)
 	local v88;
 	local v89;
 	local v90;
-	local v91 = v15.Mage.Arcane;
+	local v91;
 	local v92 = v16.Mage.Arcane;
-	local v93 = v20.Mage.Arcane;
-	local v94 = {};
-	local v95 = v17.Commons.Everyone;
-	local function v96()
-		if (((263 + 3873) >= (616 + 1781)) and v91.RemoveCurse:IsAvailable()) then
-			v95.DispellableDebuffs = v95.DispellableCurseDebuffs;
+	local v93 = v17.Mage.Arcane;
+	local v94 = v21.Mage.Arcane;
+	local v95 = {};
+	local v96 = v18.Commons.Everyone;
+	local function v97()
+		if (v92.RemoveCurse:IsAvailable() or ((6366 - 4699) >= (3588 - (36 + 261)))) then
+			v96.DispellableDebuffs = v96.DispellableCurseDebuffs;
 		end
 	end
 	v9:RegisterForEvent(function()
-		v96();
+		v97();
 	end, "ACTIVE_PLAYER_SPECIALIZATION_CHANGED");
-	v91.ArcaneBlast:RegisterInFlight();
-	v91.ArcaneBarrage:RegisterInFlight();
-	local v97, v98;
-	local v99, v100;
-	local v101 = 1 + 2;
-	local v102 = false;
+	v92.ArcaneBlast:RegisterInFlight();
+	v92.ArcaneBarrage:RegisterInFlight();
+	local v98, v99;
+	local v100, v101;
+	local v102 = 4 - 1;
 	local v103 = false;
 	local v104 = false;
-	local v105 = true;
-	local v106 = false;
-	local v107 = v12:HasTier(44 - 15, 308 - (300 + 4));
-	local v108 = (60091 + 164909) - (((65443 - 40443) * v22(not v91.ArcaneHarmony:IsAvailable())) + ((200362 - (112 + 250)) * v22(not v107)));
-	local v109 = 2 + 1;
-	local v110 = 27835 - 16724;
-	local v111 = 6366 + 4745;
-	local v112;
+	local v105 = false;
+	local v106 = true;
+	local v107 = false;
+	local v108 = v12:HasTier(1397 - (34 + 1334), 2 + 2);
+	local v109 = (174822 + 50178) - (((26283 - (1035 + 248)) * v23(not v92.ArcaneHarmony:IsAvailable())) + ((200021 - (20 + 1)) * v23(not v108)));
+	local v110 = 2 + 1;
+	local v111 = 11430 - (134 + 185);
+	local v112 = 12244 - (549 + 584);
+	local v113;
 	v9:RegisterForEvent(function()
-		local v130 = 0 + 0;
+		local v131 = 685 - (314 + 371);
 		while true do
-			if ((v130 == (2 + 0)) or ((2149 + 2185) == (3154 + 1091))) then
-				v111 = 12525 - (1001 + 413);
+			if ((v131 == (0 - 0)) or ((1841 - (478 + 490)) == (1078 + 956))) then
+				v103 = false;
+				v106 = true;
+				v131 = 1173 - (786 + 386);
+			end
+			if ((v131 == (3 - 2)) or ((4195 - (1055 + 324)) < (1351 - (1093 + 247)))) then
+				v109 = (199943 + 25057) - (((2630 + 22370) * v23(not v92.ArcaneHarmony:IsAvailable())) + ((794035 - 594035) * v23(not v108)));
+				v111 = 37708 - 26597;
+				v131 = 5 - 3;
+			end
+			if (((9295 - 5596) < (1675 + 3031)) and (v131 == (7 - 5))) then
+				v112 = 38297 - 27186;
 				break;
-			end
-			if ((v130 == (0 - 0)) or ((5158 - (244 + 638)) <= (3724 - (627 + 66)))) then
-				v102 = false;
-				v105 = true;
-				v130 = 2 - 1;
-			end
-			if ((v130 == (603 - (512 + 90))) or ((6688 - (1665 + 241)) <= (1916 - (373 + 344)))) then
-				v108 = (101480 + 123520) - (((6615 + 18385) * v22(not v91.ArcaneHarmony:IsAvailable())) + ((527544 - 327544) * v22(not v107)));
-				v110 = 18802 - 7691;
-				v130 = 1101 - (35 + 1064);
 			end
 		end
 	end, "PLAYER_REGEN_ENABLED");
 	v9:RegisterForEvent(function()
-		v107 = not v12:HasTier(22 + 7, 8 - 4);
+		v108 = not v12:HasTier(22 + 7, 9 - 5);
 	end, "PLAYER_EQUIPMENT_CHANGED");
-	local function v113()
-		local v131 = 0 + 0;
+	local function v114()
+		local v132 = 688 - (364 + 324);
 		while true do
-			if ((v131 == (1238 - (298 + 938))) or ((6123 - (233 + 1026)) < (3568 - (636 + 1030)))) then
-				if (((2475 + 2364) >= (3615 + 85)) and v91.MirrorImage:IsCastable() and v61 and (v12:HealthPercentage() <= v67)) then
-					if (v19(v91.MirrorImage) or ((320 + 755) > (130 + 1788))) then
-						return "mirror_image defensive 4";
+			if (((7253 - 4607) >= (2101 - 1225)) and (v132 == (0 + 0))) then
+				if (((2569 - 1955) <= (5098 - 1914)) and v92.PrismaticBarrier:IsCastable() and v57 and v12:BuffDown(v92.PrismaticBarrier) and (v12:HealthPercentage() <= v64)) then
+					if (((9493 - 6367) == (4394 - (1249 + 19))) and v20(v92.PrismaticBarrier)) then
+						return "ice_barrier defensive 1";
 					end
 				end
-				if (((617 - (55 + 166)) <= (738 + 3066)) and v91.GreaterInvisibility:IsReady() and v57 and (v12:HealthPercentage() <= v64)) then
-					if (v19(v91.GreaterInvisibility) or ((420 + 3749) == (8352 - 6165))) then
-						return "greater_invisibility defensive 5";
+				if ((v92.MassBarrier:IsCastable() and v61 and v12:BuffDown(v92.PrismaticBarrier) and v96.AreUnitsBelowHealthPercentage(v69, 2 + 0)) or ((8512 - 6325) >= (6040 - (686 + 400)))) then
+					if (v20(v92.MassBarrier) or ((3042 + 835) == (3804 - (73 + 156)))) then
+						return "mass_barrier defensive 2";
 					end
 				end
-				v131 = 300 - (36 + 261);
+				v132 = 1 + 0;
 			end
-			if (((2458 - 1052) == (2774 - (34 + 1334))) and (v131 == (2 + 2))) then
-				if (((1190 + 341) < (5554 - (1035 + 248))) and v81 and (v12:HealthPercentage() <= v83)) then
-					if (((656 - (20 + 1)) == (331 + 304)) and (v85 == "Refreshing Healing Potion")) then
-						if (((3692 - (134 + 185)) <= (4689 - (549 + 584))) and v92.RefreshingHealingPotion:IsReady()) then
-							if (v19(v93.RefreshingHealingPotion) or ((3976 - (314 + 371)) < (11260 - 7980))) then
-								return "refreshing healing potion defensive";
-							end
-						end
+			if (((1518 - (721 + 90)) > (8 + 624)) and (v132 == (9 - 6))) then
+				if ((v92.AlterTime:IsReady() and v56 and (v12:HealthPercentage() <= v63)) or ((1016 - (224 + 246)) >= (4347 - 1663))) then
+					if (((2697 - 1232) <= (781 + 3520)) and v20(v92.AlterTime)) then
+						return "alter_time defensive 6";
 					end
-					if (((5354 - (478 + 490)) >= (463 + 410)) and (v85 == "Dreamwalker's Healing Potion")) then
-						if (((2093 - (786 + 386)) <= (3569 - 2467)) and v92.DreamwalkersHealingPotion:IsReady()) then
-							if (((6085 - (1055 + 324)) >= (2303 - (1093 + 247))) and v19(v93.RefreshingHealingPotion)) then
-								return "dreamwalkers healing potion defensive";
+				end
+				if (((41 + 1663) > (1047 + 378)) and v93.Healthstone:IsReady() and v83 and (v12:HealthPercentage() <= v85)) then
+					if (v20(v94.Healthstone) or ((1365 - 678) == (14089 - 9855))) then
+						return "healthstone defensive";
+					end
+				end
+				v132 = 517 - (203 + 310);
+			end
+			if ((v132 == (1994 - (1238 + 755))) or ((233 + 3097) < (2963 - (709 + 825)))) then
+				if (((2113 - 966) >= (487 - 152)) and v92.IceBlock:IsCastable() and v59 and (v12:HealthPercentage() <= v66)) then
+					if (((4299 - (196 + 668)) > (8279 - 6182)) and v20(v92.IceBlock)) then
+						return "ice_block defensive 3";
+					end
+				end
+				if ((v92.IceColdTalent:IsAvailable() and v92.IceColdAbility:IsCastable() and v60 and (v12:HealthPercentage() <= v67)) or ((7809 - 4039) >= (4874 - (171 + 662)))) then
+					if (v20(v92.IceColdAbility) or ((3884 - (4 + 89)) <= (5646 - 4035))) then
+						return "ice_cold defensive 3";
+					end
+				end
+				v132 = 1 + 1;
+			end
+			if ((v132 == (17 - 13)) or ((1796 + 2782) <= (3494 - (35 + 1451)))) then
+				if (((2578 - (28 + 1425)) <= (4069 - (941 + 1052))) and v82 and (v12:HealthPercentage() <= v84)) then
+					local v204 = 0 + 0;
+					while true do
+						if (((1514 - (822 + 692)) == v204) or ((1059 - 316) >= (2073 + 2326))) then
+							if (((1452 - (45 + 252)) < (1656 + 17)) and (v86 == "Refreshing Healing Potion")) then
+								if (v93.RefreshingHealingPotion:IsReady() or ((800 + 1524) <= (1406 - 828))) then
+									if (((4200 - (114 + 319)) == (5408 - 1641)) and v20(v94.RefreshingHealingPotion)) then
+										return "refreshing healing potion defensive";
+									end
+								end
 							end
+							if (((5238 - 1149) == (2607 + 1482)) and (v86 == "Dreamwalker's Healing Potion")) then
+								if (((6641 - 2183) >= (3507 - 1833)) and v93.DreamwalkersHealingPotion:IsReady()) then
+									if (((2935 - (556 + 1407)) <= (2624 - (741 + 465))) and v20(v94.RefreshingHealingPotion)) then
+										return "dreamwalkers healing potion defensive";
+									end
+								end
+							end
+							break;
 						end
 					end
 				end
 				break;
 			end
-			if ((v131 == (1 + 0)) or ((101 + 859) <= (3477 - 2601))) then
-				if ((v91.IceBlock:IsCastable() and v58 and (v12:HealthPercentage() <= v65)) or ((7011 - 4945) == (2651 - 1719))) then
-					if (((12124 - 7299) < (1723 + 3120)) and v19(v91.IceBlock)) then
-						return "ice_block defensive 3";
+			if ((v132 == (467 - (170 + 295))) or ((2602 + 2336) < (4375 + 387))) then
+				if ((v92.MirrorImage:IsCastable() and v62 and (v12:HealthPercentage() <= v68)) or ((6164 - 3660) > (3535 + 729))) then
+					if (((1381 + 772) == (1220 + 933)) and v20(v92.MirrorImage)) then
+						return "mirror_image defensive 4";
 					end
 				end
-				if ((v91.IceColdTalent:IsAvailable() and v91.IceColdAbility:IsCastable() and v59 and (v12:HealthPercentage() <= v66)) or ((14935 - 11058) >= (15638 - 11101))) then
-					if (v19(v91.IceColdAbility) or ((3254 + 1061) < (4413 - 2687))) then
-						return "ice_cold defensive 3";
+				if ((v92.GreaterInvisibility:IsReady() and v58 and (v12:HealthPercentage() <= v65)) or ((1737 - (957 + 273)) >= (693 + 1898))) then
+					if (((1794 + 2687) == (17074 - 12593)) and v20(v92.GreaterInvisibility)) then
+						return "greater_invisibility defensive 5";
 					end
 				end
-				v131 = 690 - (364 + 324);
-			end
-			if ((v131 == (0 - 0)) or ((8827 - 5148) < (208 + 417))) then
-				if ((v91.PrismaticBarrier:IsCastable() and v56 and v12:BuffDown(v91.PrismaticBarrier) and (v12:HealthPercentage() <= v63)) or ((19352 - 14727) < (1011 - 379))) then
-					if (v19(v91.PrismaticBarrier) or ((251 - 168) > (3048 - (1249 + 19)))) then
-						return "ice_barrier defensive 1";
-					end
-				end
-				if (((493 + 53) <= (4191 - 3114)) and v91.MassBarrier:IsCastable() and v60 and v12:BuffDown(v91.PrismaticBarrier) and v95.AreUnitsBelowHealthPercentage(v68, 1088 - (686 + 400))) then
-					if (v19(v91.MassBarrier) or ((782 + 214) > (4530 - (73 + 156)))) then
-						return "mass_barrier defensive 2";
-					end
-				end
-				v131 = 1 + 0;
-			end
-			if (((4881 - (721 + 90)) > (8 + 679)) and (v131 == (9 - 6))) then
-				if ((v91.AlterTime:IsReady() and v55 and (v12:HealthPercentage() <= v62)) or ((1126 - (224 + 246)) >= (5394 - 2064))) then
-					if (v19(v91.AlterTime) or ((4588 - 2096) <= (61 + 274))) then
-						return "alter_time defensive 6";
-					end
-				end
-				if (((103 + 4219) >= (1882 + 680)) and v92.Healthstone:IsReady() and v82 and (v12:HealthPercentage() <= v84)) then
-					if (v19(v93.Healthstone) or ((7230 - 3593) >= (12545 - 8775))) then
-						return "healthstone defensive";
-					end
-				end
-				v131 = 517 - (203 + 310);
-			end
-		end
-	end
-	local function v114()
-		if ((v91.RemoveCurse:IsReady() and v30 and v95.DispellableFriendlyUnit(2013 - (1238 + 755))) or ((167 + 2212) > (6112 - (709 + 825)))) then
-			if (v19(v93.RemoveCurseFocus) or ((889 - 406) > (1081 - 338))) then
-				return "remove_curse dispel";
+				v132 = 7 - 4;
 			end
 		end
 	end
 	local function v115()
-		v25 = v95.HandleTopTrinket(v94, v28, 904 - (196 + 668), nil);
-		if (((9688 - 7234) > (1196 - 618)) and v25) then
-			return v25;
-		end
-		v25 = v95.HandleBottomTrinket(v94, v28, 873 - (171 + 662), nil);
-		if (((1023 - (4 + 89)) < (15625 - 11167)) and v25) then
-			return v25;
+		if ((v92.RemoveCurse:IsReady() and v96.DispellableFriendlyUnit(61 - 41)) or ((11527 - 9199) < (2473 - (389 + 1391)))) then
+			if (((2716 + 1612) == (451 + 3877)) and v20(v94.RemoveCurseFocus)) then
+				return "remove_curse dispel";
+			end
 		end
 	end
 	local function v116()
-		local v132 = 0 + 0;
+		local v133 = 0 - 0;
 		while true do
-			if (((2907 - 2245) <= (382 + 590)) and ((1486 - (35 + 1451)) == v132)) then
-				if (((5823 - (28 + 1425)) == (6363 - (941 + 1052))) and v91.MirrorImage:IsCastable() and v88 and v61) then
-					if (v19(v91.MirrorImage) or ((4567 + 195) <= (2375 - (822 + 692)))) then
-						return "mirror_image precombat 2";
-					end
+			if (((2539 - (783 + 168)) >= (4470 - 3138)) and (v133 == (0 + 0))) then
+				v26 = v96.HandleTopTrinket(v95, v29, 351 - (309 + 2), nil);
+				if (v26 or ((12817 - 8643) > (5460 - (1090 + 122)))) then
+					return v26;
 				end
-				if ((v91.ArcaneBlast:IsReady() and v31 and not v91.SiphonStorm:IsAvailable()) or ((2015 - 603) == (2009 + 2255))) then
-					if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((3465 - (45 + 252)) < (2131 + 22))) then
-						return "arcane_blast precombat 4";
-					end
-				end
-				v132 = 1 + 0;
+				v133 = 1 + 0;
 			end
-			if ((v132 == (2 - 1)) or ((5409 - (114 + 319)) < (1911 - 579))) then
-				if (((5929 - 1301) == (2951 + 1677)) and v91.Evocation:IsReady() and v38 and (v91.SiphonStorm:IsAvailable())) then
-					if (v19(v91.Evocation) or ((79 - 25) == (827 - 432))) then
+			if ((v133 == (3 - 2)) or ((3139 + 1447) <= (1200 - (628 + 490)))) then
+				v26 = v96.HandleBottomTrinket(v95, v29, 8 + 32, nil);
+				if (((9564 - 5701) == (17653 - 13790)) and v26) then
+					return v26;
+				end
+				break;
+			end
+		end
+	end
+	local function v117()
+		local v134 = 774 - (431 + 343);
+		while true do
+			if ((v134 == (1 - 0)) or ((815 - 533) <= (34 + 8))) then
+				if (((590 + 4019) >= (2461 - (556 + 1139))) and v92.Evocation:IsReady() and v39 and (v92.SiphonStorm:IsAvailable())) then
+					if (v20(v92.Evocation) or ((1167 - (6 + 9)) == (456 + 2032))) then
 						return "evocation precombat 6";
 					end
 				end
-				if (((2045 - (556 + 1407)) == (1288 - (741 + 465))) and v91.ArcaneOrb:IsReady() and v47 and ((v52 and v29) or not v52)) then
-					if (v19(v91.ArcaneOrb, not v13:IsInRange(505 - (170 + 295))) or ((307 + 274) < (260 + 22))) then
+				if (((1754 + 1668) > (3519 - (28 + 141))) and v92.ArcaneOrb:IsReady() and v48 and ((v53 and v30) or not v53)) then
+					if (((340 + 537) > (463 - 87)) and v20(v92.ArcaneOrb, not v13:IsInRange(29 + 11))) then
 						return "arcane_orb precombat 8";
 					end
 				end
-				v132 = 4 - 2;
+				v134 = 1319 - (486 + 831);
 			end
-			if (((2 + 0) == v132) or ((2956 + 1653) < (1413 + 1082))) then
-				if (((2382 - (957 + 273)) == (309 + 843)) and v91.ArcaneBlast:IsReady() and v31) then
-					if (((759 + 1137) <= (13039 - 9617)) and v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast))) then
+			if (((0 - 0) == v134) or ((10977 - 7859) <= (350 + 1501))) then
+				if ((v92.MirrorImage:IsCastable() and v89 and v62) or ((521 - 356) >= (4755 - (668 + 595)))) then
+					if (((3554 + 395) < (980 + 3876)) and v20(v92.MirrorImage)) then
+						return "mirror_image precombat 2";
+					end
+				end
+				if ((v92.ArcaneBlast:IsReady() and v32 and not v92.SiphonStorm:IsAvailable()) or ((11661 - 7385) < (3306 - (23 + 267)))) then
+					if (((6634 - (1129 + 815)) > (4512 - (371 + 16))) and v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast))) then
+						return "arcane_blast precombat 4";
+					end
+				end
+				v134 = 1751 - (1326 + 424);
+			end
+			if ((v134 == (3 - 1)) or ((182 - 132) >= (1014 - (88 + 30)))) then
+				if ((v92.ArcaneBlast:IsReady() and v32) or ((2485 - (720 + 51)) >= (6579 - 3621))) then
+					if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((3267 - (421 + 1355)) < (1061 - 417))) then
 						return "arcane_blast precombat 8";
 					end
 				end
@@ -275,339 +291,354 @@ v0["Epix_Mage_Arcane.lua"] = function(...)
 			end
 		end
 	end
-	local function v117()
-		if ((((v98 >= v101) or (v99 >= v101)) and ((v91.ArcaneOrb:Charges() > (0 - 0)) or (v12:ArcaneCharges() >= (9 - 6))) and v91.RadiantSpark:CooldownUp() and (v91.TouchoftheMagi:CooldownRemains() <= (v112 * (9 - 7)))) or ((2770 - (389 + 1391)) > (1017 + 603))) then
-			v103 = true;
-		elseif ((v103 and v13:DebuffDown(v91.RadiantSparkVulnerability) and (v13:DebuffRemains(v91.RadiantSparkDebuff) < (1 + 6)) and v91.RadiantSpark:CooldownDown()) or ((1996 - 1119) > (5646 - (783 + 168)))) then
-			v103 = false;
-		end
-		if (((9031 - 6340) >= (1821 + 30)) and (v12:ArcaneCharges() > (314 - (309 + 2))) and ((v98 < v101) or (v99 < v101)) and v91.RadiantSpark:CooldownUp() and (v91.TouchoftheMagi:CooldownRemains() <= (v112 * (21 - 14))) and ((v91.ArcaneSurge:CooldownRemains() <= (v112 * (1217 - (1090 + 122)))) or (v91.ArcaneSurge:CooldownRemains() > (13 + 27)))) then
+	local function v118()
+		if (((346 + 358) < (2070 - (286 + 797))) and ((v99 >= v102) or (v100 >= v102)) and ((v92.ArcaneOrb:Charges() > (0 - 0)) or (v12:ArcaneCharges() >= (4 - 1))) and v92.RadiantSpark:CooldownUp() and (v92.TouchoftheMagi:CooldownRemains() <= (v113 * (441 - (397 + 42))))) then
 			v104 = true;
-		elseif ((v104 and v13:DebuffDown(v91.RadiantSparkVulnerability) and (v13:DebuffRemains(v91.RadiantSparkDebuff) < (23 - 16)) and v91.RadiantSpark:CooldownDown()) or ((2043 + 942) >= (5974 - (628 + 490)))) then
+		elseif (((1162 + 2556) > (2706 - (24 + 776))) and v104 and v13:DebuffDown(v92.RadiantSparkVulnerability) and (v13:DebuffRemains(v92.RadiantSparkDebuff) < (10 - 3)) and v92.RadiantSpark:CooldownDown()) then
 			v104 = false;
 		end
-		if (((767 + 3509) >= (2958 - 1763)) and v13:DebuffUp(v91.TouchoftheMagiDebuff) and v105) then
+		if (((v12:ArcaneCharges() > (788 - (222 + 563))) and ((v99 < v102) or (v100 < v102)) and v92.RadiantSpark:CooldownUp() and (v92.TouchoftheMagi:CooldownRemains() <= (v113 * (14 - 7))) and ((v92.ArcaneSurge:CooldownRemains() <= (v113 * (4 + 1))) or (v92.ArcaneSurge:CooldownRemains() > (230 - (23 + 167))))) or ((2756 - (690 + 1108)) > (1312 + 2323))) then
+			v105 = true;
+		elseif (((2888 + 613) <= (5340 - (40 + 808))) and v105 and v13:DebuffDown(v92.RadiantSparkVulnerability) and (v13:DebuffRemains(v92.RadiantSparkDebuff) < (2 + 5)) and v92.RadiantSpark:CooldownDown()) then
 			v105 = false;
 		end
-		v106 = v91.ArcaneBlast:CastTime() < v112;
+		if ((v13:DebuffUp(v92.TouchoftheMagiDebuff) and v106) or ((13162 - 9720) < (2436 + 112))) then
+			v106 = false;
+		end
+		v107 = v92.ArcaneBlast:CastTime() < v113;
 	end
-	local function v118()
-		if (((14770 - 11538) <= (5464 - (431 + 343))) and v91.TouchoftheMagi:IsReady() and v49 and ((v54 and v29) or not v54) and (v76 < v111) and (v12:PrevGCDP(1 - 0, v91.ArcaneBarrage))) then
-			if (v19(v91.TouchoftheMagi, not v13:IsSpellInRange(v91.TouchoftheMagi)) or ((2591 - 1695) >= (2486 + 660))) then
+	local function v119()
+		if (((1521 + 1354) >= (803 + 661)) and v92.TouchoftheMagi:IsReady() and v50 and ((v55 and v30) or not v55) and (v77 < v112) and (v12:PrevGCDP(572 - (47 + 524), v92.ArcaneBarrage))) then
+			if (v20(v92.TouchoftheMagi, not v13:IsSpellInRange(v92.TouchoftheMagi)) or ((3114 + 1683) >= (13375 - 8482))) then
 				return "touch_of_the_magi cooldown_phase 2";
 			end
 		end
-		if (((392 + 2669) >= (4653 - (556 + 1139))) and v91.RadiantSpark:CooldownUp()) then
-			v102 = v91.ArcaneSurge:CooldownRemains() < (25 - (6 + 9));
+		if (v92.RadiantSpark:CooldownUp() or ((823 - 272) > (4716 - 2648))) then
+			v103 = v92.ArcaneSurge:CooldownRemains() < (1736 - (1165 + 561));
 		end
-		if (((584 + 2603) >= (330 + 314)) and v91.ShiftingPower:IsReady() and v46 and ((v28 and v51) or not v51) and (v76 < v111) and v12:BuffDown(v91.ArcaneSurgeBuff) and not v91.RadiantSpark:IsAvailable()) then
-			if (((813 - (28 + 141)) <= (273 + 431)) and v19(v91.ShiftingPower, not v13:IsInRange(49 - 9), true)) then
+		if (((63 + 2051) > (2923 - 1979)) and v92.ShiftingPower:IsReady() and v47 and ((v29 and v52) or not v52) and (v77 < v112) and v12:BuffDown(v92.ArcaneSurgeBuff) and not v92.RadiantSpark:IsAvailable()) then
+			if (v20(v92.ShiftingPower, not v13:IsInRange(16 + 24), true) or ((2741 - (341 + 138)) >= (836 + 2260))) then
 				return "shifting_power cooldown_phase 4";
 			end
 		end
-		if (((679 + 279) > (2264 - (486 + 831))) and v91.ArcaneOrb:IsReady() and v47 and ((v52 and v29) or not v52) and (v76 < v111) and v91.RadiantSpark:CooldownUp() and (v12:ArcaneCharges() < v12:ArcaneChargesMax())) then
-			if (((11689 - 7197) >= (9343 - 6689)) and v19(v91.ArcaneOrb, not v13:IsInRange(8 + 32))) then
+		if ((v92.ArcaneOrb:IsReady() and v48 and ((v53 and v30) or not v53) and (v77 < v112) and v92.RadiantSpark:CooldownUp() and (v12:ArcaneCharges() < v12:ArcaneChargesMax())) or ((4653 - 2398) >= (3863 - (89 + 237)))) then
+			if (v20(v92.ArcaneOrb, not v13:IsInRange(128 - 88)) or ((8077 - 4240) < (2187 - (581 + 300)))) then
 				return "arcane_orb cooldown_phase 6";
 			end
 		end
-		if (((10883 - 7441) >= (2766 - (668 + 595))) and v91.ArcaneBlast:IsReady() and v31 and v91.RadiantSpark:CooldownUp() and ((v12:ArcaneCharges() < (2 + 0)) or ((v12:ArcaneCharges() < v12:ArcaneChargesMax()) and (v91.ArcaneOrb:CooldownRemains() >= v112)))) then
-			if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((640 + 2530) <= (3992 - 2528))) then
+		if (((4170 - (855 + 365)) == (7006 - 4056)) and v92.ArcaneBlast:IsReady() and v32 and v92.RadiantSpark:CooldownUp() and ((v12:ArcaneCharges() < (1 + 1)) or ((v12:ArcaneCharges() < v12:ArcaneChargesMax()) and (v92.ArcaneOrb:CooldownRemains() >= v113)))) then
+			if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((5958 - (1030 + 205)) < (3097 + 201))) then
 				return "arcane_blast cooldown_phase 8";
 			end
 		end
-		if ((v12:IsChanneling(v91.ArcaneMissiles) and (v12:GCDRemains() == (290 - (23 + 267))) and (v12:ManaPercentage() > (1974 - (1129 + 815))) and v12:BuffUp(v91.NetherPrecisionBuff) and v12:BuffDown(v91.ArcaneArtilleryBuff)) or ((5184 - (371 + 16)) == (6138 - (1326 + 424)))) then
-			if (((1043 - 492) <= (2488 - 1807)) and v19(v93.StopCasting, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
+		if (((1057 + 79) >= (440 - (156 + 130))) and v12:IsChanneling(v92.ArcaneMissiles) and (v12:GCDRemains() == (0 - 0)) and (v12:ManaPercentage() > (50 - 20)) and v12:BuffUp(v92.NetherPrecisionBuff) and v12:BuffDown(v92.ArcaneArtilleryBuff)) then
+			if (v20(v94.StopCasting, not v13:IsSpellInRange(v92.ArcaneMissiles)) or ((554 - 283) > (1252 + 3496))) then
 				return "arcane_missiles interrupt cooldown_phase 10";
 			end
 		end
-		if (((3395 - (88 + 30)) > (1178 - (720 + 51))) and v91.ArcaneMissiles:IsReady() and v36 and v105 and v12:BloodlustUp() and v12:BuffUp(v91.ClearcastingBuff) and (v91.RadiantSpark:CooldownRemains() < (11 - 6)) and v12:BuffDown(v91.NetherPrecisionBuff) and (v12:BuffDown(v91.ArcaneArtilleryBuff) or (v12:BuffRemains(v91.ArcaneArtilleryBuff) <= (v112 * (1782 - (421 + 1355))))) and v12:HasTier(50 - 19, 2 + 2)) then
-			if (((5778 - (286 + 797)) >= (5172 - 3757)) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
+		if (((2765 + 1975) >= (3221 - (10 + 59))) and v92.ArcaneMissiles:IsReady() and v37 and v106 and v12:BloodlustUp() and v12:BuffUp(v92.ClearcastingBuff) and (v92.RadiantSpark:CooldownRemains() < (2 + 3)) and v12:BuffDown(v92.NetherPrecisionBuff) and (v12:BuffDown(v92.ArcaneArtilleryBuff) or (v12:BuffRemains(v92.ArcaneArtilleryBuff) <= (v113 * (29 - 23)))) and v12:HasTier(1194 - (671 + 492), 4 + 0)) then
+			if (v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles)) or ((3793 - (369 + 846)) >= (898 + 2492))) then
 				return "arcane_missiles cooldown_phase 10";
 			end
 		end
-		if ((v91.ArcaneBlast:IsReady() and v31 and v105 and v91.ArcaneSurge:CooldownUp() and v12:BloodlustUp() and (v12:Mana() >= v108) and (v12:BuffRemains(v91.SiphonStormBuff) > (28 - 11)) and not v12:HasTier(469 - (397 + 42), 2 + 2)) or ((4012 - (24 + 776)) <= (1453 - 509))) then
-			if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((3881 - (222 + 563)) <= (3961 - 2163))) then
+		if (((35 + 6) <= (3606 - (1036 + 909))) and v92.ArcaneBlast:IsReady() and v32 and v106 and v92.ArcaneSurge:CooldownUp() and v12:BloodlustUp() and (v12:Mana() >= v109) and (v12:BuffRemains(v92.SiphonStormBuff) > (14 + 3)) and not v12:HasTier(50 - 20, 207 - (11 + 192))) then
+			if (((304 + 297) < (3735 - (135 + 40))) and v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast))) then
 				return "arcane_blast cooldown_phase 12";
 			end
 		end
-		if (((2547 + 990) == (3727 - (23 + 167))) and v91.ArcaneMissiles:IsReady() and v36 and v105 and v12:BloodlustUp() and v12:BuffUp(v91.ClearcastingBuff) and (v12:BuffStack(v91.ClearcastingBuff) >= (1800 - (690 + 1108))) and (v91.RadiantSpark:CooldownRemains() < (2 + 3)) and v12:BuffDown(v91.NetherPrecisionBuff) and (v12:BuffDown(v91.ArcaneArtilleryBuff) or (v12:BuffRemains(v91.ArcaneArtilleryBuff) <= (v112 * (5 + 1)))) and not v12:HasTier(878 - (40 + 808), 1 + 3)) then
-			if (((14672 - 10835) >= (1501 + 69)) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
+		if (((569 - 334) < (415 + 272)) and v92.ArcaneMissiles:IsReady() and v37 and v106 and v12:BloodlustUp() and v12:BuffUp(v92.ClearcastingBuff) and (v12:BuffStack(v92.ClearcastingBuff) >= (4 - 2)) and (v92.RadiantSpark:CooldownRemains() < (7 - 2)) and v12:BuffDown(v92.NetherPrecisionBuff) and (v12:BuffDown(v92.ArcaneArtilleryBuff) or (v12:BuffRemains(v92.ArcaneArtilleryBuff) <= (v113 * (182 - (50 + 126))))) and not v12:HasTier(83 - 53, 1 + 3)) then
+			if (((5962 - (1233 + 180)) > (2122 - (522 + 447))) and v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
 				return "arcane_missiles cooldown_phase 14";
 			end
 		end
-		if ((v91.ArcaneMissiles:IsReady() and v36 and v91.ArcaneHarmony:IsAvailable() and (v12:BuffStack(v91.ArcaneHarmonyBuff) < (8 + 7)) and ((v105 and v12:BloodlustUp()) or (v12:BuffUp(v91.ClearcastingBuff) and (v91.RadiantSpark:CooldownRemains() < (3 + 2)))) and (v91.ArcaneSurge:CooldownRemains() < (601 - (47 + 524)))) or ((1915 + 1035) == (10420 - 6608))) then
-			if (((7062 - 2339) >= (5286 - 2968)) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
+		if ((v92.ArcaneMissiles:IsReady() and v37 and v92.ArcaneHarmony:IsAvailable() and (v12:BuffStack(v92.ArcaneHarmonyBuff) < (1436 - (107 + 1314))) and ((v106 and v12:BloodlustUp()) or (v12:BuffUp(v92.ClearcastingBuff) and (v92.RadiantSpark:CooldownRemains() < (3 + 2)))) and (v92.ArcaneSurge:CooldownRemains() < (91 - 61))) or ((1986 + 2688) < (9277 - 4605))) then
+			if (((14512 - 10844) < (6471 - (716 + 1194))) and v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
 				return "arcane_missiles cooldown_phase 16";
 			end
 		end
-		if ((v91.ArcaneMissiles:IsReady() and v36 and v91.RadiantSpark:CooldownUp() and v12:BuffUp(v91.ClearcastingBuff) and v91.NetherPrecision:IsAvailable() and (v12:BuffDown(v91.NetherPrecisionBuff) or (v12:BuffRemains(v91.NetherPrecisionBuff) < v112)) and v12:HasTier(1756 - (1165 + 561), 1 + 3)) or ((6277 - 4250) > (1089 + 1763))) then
-			if (v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles)) or ((1615 - (341 + 138)) > (1166 + 3151))) then
+		if ((v92.ArcaneMissiles:IsReady() and v37 and v92.RadiantSpark:CooldownUp() and v12:BuffUp(v92.ClearcastingBuff) and v92.NetherPrecision:IsAvailable() and (v12:BuffDown(v92.NetherPrecisionBuff) or (v12:BuffRemains(v92.NetherPrecisionBuff) < v113)) and v12:HasTier(1 + 29, 1 + 3)) or ((958 - (74 + 429)) == (6954 - 3349))) then
+			if (v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles)) or ((1320 + 1343) == (7580 - 4268))) then
 				return "arcane_missiles cooldown_phase 18";
 			end
 		end
-		if (((9798 - 5050) == (5074 - (89 + 237))) and v91.RadiantSpark:IsReady() and v48 and ((v53 and v29) or not v53) and (v76 < v111)) then
-			if (((12018 - 8282) <= (9979 - 5239)) and v19(v91.RadiantSpark, not v13:IsSpellInRange(v91.RadiantSpark), true)) then
+		if (((3026 + 1251) <= (13795 - 9320)) and v92.RadiantSpark:IsReady() and v49 and ((v54 and v30) or not v54) and (v77 < v112)) then
+			if (v20(v92.RadiantSpark, not v13:IsSpellInRange(v92.RadiantSpark), true) or ((2151 - 1281) == (1622 - (279 + 154)))) then
 				return "radiant_spark cooldown_phase 20";
 			end
 		end
-		if ((v91.NetherTempest:IsReady() and v40 and (v91.NetherTempest:TimeSinceLastCast() >= (911 - (581 + 300))) and (v91.ArcaneEcho:IsAvailable())) or ((4610 - (855 + 365)) <= (7268 - 4208))) then
-			if (v19(v91.NetherTempest, not v13:IsSpellInRange(v91.NetherTempest)) or ((327 + 672) > (3928 - (1030 + 205)))) then
+		if (((2331 - (454 + 324)) <= (2465 + 668)) and v92.NetherTempest:IsReady() and v41 and (v92.NetherTempest:TimeSinceLastCast() >= (47 - (12 + 5))) and (v92.ArcaneEcho:IsAvailable())) then
+			if (v20(v92.NetherTempest, not v13:IsSpellInRange(v92.NetherTempest)) or ((1207 + 1030) >= (8946 - 5435))) then
 				return "nether_tempest cooldown_phase 22";
 			end
 		end
-		if (((435 + 28) < (560 + 41)) and v91.ArcaneSurge:IsReady() and v45 and ((v50 and v28) or not v50) and (v76 < v111)) then
-			if (v19(v91.ArcaneSurge, not v13:IsSpellInRange(v91.ArcaneSurge)) or ((2469 - (156 + 130)) < (1560 - 873))) then
+		if ((v92.ArcaneSurge:IsReady() and v46 and ((v51 and v29) or not v51) and (v77 < v112)) or ((490 + 834) > (4113 - (277 + 816)))) then
+			if (v20(v92.ArcaneSurge, not v13:IsSpellInRange(v92.ArcaneSurge)) or ((12784 - 9792) == (3064 - (1058 + 125)))) then
 				return "arcane_surge cooldown_phase 24";
 			end
 		end
-		if (((7666 - 3117) == (9316 - 4767)) and v91.ArcaneBarrage:IsReady() and v32 and (v12:PrevGCDP(1 + 0, v91.ArcaneSurge) or v12:PrevGCDP(1 + 0, v91.NetherTempest) or v12:PrevGCDP(70 - (10 + 59), v91.RadiantSpark))) then
-			if (((1322 + 3350) == (23008 - 18336)) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
+		if (((583 + 2523) > (2501 - (815 + 160))) and v92.ArcaneBarrage:IsReady() and v33 and (v12:PrevGCDP(4 - 3, v92.ArcaneSurge) or v12:PrevGCDP(2 - 1, v92.NetherTempest) or v12:PrevGCDP(1 + 0, v92.RadiantSpark))) then
+			if (((8836 - 5813) < (5768 - (41 + 1857))) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
 				return "arcane_barrage cooldown_phase 26";
 			end
 		end
-		if ((v91.ArcaneBlast:IsReady() and v31 and v13:DebuffUp(v91.RadiantSparkVulnerability) and (v13:DebuffStack(v91.RadiantSparkVulnerability) < (1167 - (671 + 492)))) or ((2920 + 748) < (1610 - (369 + 846)))) then
-			if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((1103 + 3063) == (389 + 66))) then
+		if (((2036 - (1222 + 671)) > (191 - 117)) and v92.ArcaneBlast:IsReady() and v32 and v13:DebuffUp(v92.RadiantSparkVulnerability) and (v13:DebuffStack(v92.RadiantSparkVulnerability) < (5 - 1))) then
+			if (((1200 - (229 + 953)) < (3886 - (1111 + 663))) and v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast))) then
 				return "arcane_blast cooldown_phase 28";
 			end
 		end
-		if ((v91.PresenceofMind:IsCastable() and v41 and (v13:DebuffRemains(v91.TouchoftheMagiDebuff) <= v112)) or ((6394 - (1036 + 909)) == (2118 + 545))) then
-			if (v19(v91.PresenceofMind) or ((7180 - 2903) < (3192 - (11 + 192)))) then
+		if (((2676 - (874 + 705)) <= (228 + 1400)) and v92.PresenceofMind:IsCastable() and v42 and (v13:DebuffRemains(v92.TouchoftheMagiDebuff) <= v113)) then
+			if (((3159 + 1471) == (9624 - 4994)) and v20(v92.PresenceofMind)) then
 				return "presence_of_mind cooldown_phase 30";
 			end
 		end
-		if ((v91.ArcaneBlast:IsReady() and v31 and (v12:BuffUp(v91.PresenceofMindBuff))) or ((440 + 430) >= (4324 - (135 + 40)))) then
-			if (((5359 - 3147) < (1919 + 1264)) and v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast))) then
+		if (((100 + 3440) > (3362 - (642 + 37))) and v92.ArcaneBlast:IsReady() and v32 and (v12:BuffUp(v92.PresenceofMindBuff))) then
+			if (((1094 + 3700) >= (524 + 2751)) and v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast))) then
 				return "arcane_blast cooldown_phase 32";
 			end
 		end
-		if (((10234 - 5588) > (4484 - 1492)) and v91.ArcaneMissiles:IsReady() and v36 and v12:BuffDown(v91.NetherPrecisionBuff) and v12:BuffUp(v91.ClearcastingBuff) and (v13:DebuffDown(v91.RadiantSparkVulnerability) or ((v13:DebuffStack(v91.RadiantSparkVulnerability) == (180 - (50 + 126))) and v12:PrevGCDP(2 - 1, v91.ArcaneBlast)))) then
-			if (((318 + 1116) < (4519 - (1233 + 180))) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
+		if (((3725 - 2241) == (1938 - (233 + 221))) and v92.ArcaneMissiles:IsReady() and v37 and v12:BuffDown(v92.NetherPrecisionBuff) and v12:BuffUp(v92.ClearcastingBuff) and (v13:DebuffDown(v92.RadiantSparkVulnerability) or ((v13:DebuffStack(v92.RadiantSparkVulnerability) == (8 - 4)) and v12:PrevGCDP(1 + 0, v92.ArcaneBlast)))) then
+			if (((2973 - (718 + 823)) < (2238 + 1317)) and v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
 				return "arcane_missiles cooldown_phase 34";
 			end
 		end
-		if (((1755 - (522 + 447)) < (4444 - (107 + 1314))) and v91.ArcaneBlast:IsReady() and v31) then
-			if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((1134 + 1308) < (225 - 151))) then
+		if ((v92.ArcaneBlast:IsReady() and v32) or ((1870 - (266 + 539)) > (10129 - 6551))) then
+			if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((6020 - (636 + 589)) < (3339 - 1932))) then
 				return "arcane_blast cooldown_phase 36";
 			end
 		end
 	end
-	local function v119()
-		local v133 = 0 + 0;
+	local function v120()
+		local v135 = 0 - 0;
 		while true do
-			if (((9005 - 4470) == (17943 - 13408)) and (v133 == (1913 - (716 + 1194)))) then
-				if ((v91.ArcaneBlast:IsReady() and v31) or ((52 + 2957) <= (226 + 1879))) then
-					if (((2333 - (74 + 429)) < (7077 - 3408)) and v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast))) then
+			if (((1469 + 384) < (1749 + 3064)) and (v135 == (1015 - (657 + 358)))) then
+				if ((v92.NetherTempest:IsReady() and v41 and (v92.NetherTempest:TimeSinceLastCast() >= (119 - 74)) and v13:DebuffDown(v92.NetherTempestDebuff) and v106 and v12:BloodlustUp()) or ((6426 - 3605) < (3618 - (1151 + 36)))) then
+					if (v20(v92.NetherTempest, not v13:IsSpellInRange(v92.NetherTempest)) or ((2776 + 98) < (574 + 1607))) then
+						return "nether_tempest spark_phase 2";
+					end
+				end
+				if ((v106 and v12:IsChanneling(v92.ArcaneMissiles) and (v12:GCDRemains() == (0 - 0)) and v12:BuffUp(v92.NetherPrecisionBuff) and v12:BuffDown(v92.ArcaneArtilleryBuff)) or ((4521 - (1552 + 280)) <= (1177 - (64 + 770)))) then
+					if (v20(v94.StopCasting, not v13:IsSpellInRange(v92.ArcaneMissiles)) or ((1269 + 600) == (4560 - 2551))) then
+						return "arcane_missiles interrupt spark_phase 4";
+					end
+				end
+				if ((v92.ArcaneMissiles:IsCastable() and v37 and v106 and v12:BloodlustUp() and v12:BuffUp(v92.ClearcastingBuff) and (v92.RadiantSpark:CooldownRemains() < (1 + 4)) and v12:BuffDown(v92.NetherPrecisionBuff) and (v12:BuffDown(v92.ArcaneArtilleryBuff) or (v12:BuffRemains(v92.ArcaneArtilleryBuff) <= (v113 * (1249 - (157 + 1086))))) and v12:HasTier(61 - 30, 17 - 13)) or ((5438 - 1892) < (3168 - 846))) then
+					if (v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles)) or ((2901 - (599 + 220)) == (9504 - 4731))) then
+						return "arcane_missiles spark_phase 4";
+					end
+				end
+				v135 = 1932 - (1813 + 118);
+			end
+			if (((2372 + 872) > (2272 - (841 + 376))) and (v135 == (3 - 0))) then
+				if ((v92.ArcaneBlast:IsReady() and v32 and (v92.ArcaneBlast:CastTime() >= v12:GCD()) and (v92.ArcaneBlast:ExecuteTime() < v13:DebuffRemains(v92.RadiantSparkVulnerability)) and (not v92.ArcaneBombardment:IsAvailable() or (v13:HealthPercentage() >= (9 + 26))) and ((v92.NetherTempest:IsAvailable() and v12:PrevGCDP(16 - 10, v92.RadiantSpark)) or (not v92.NetherTempest:IsAvailable() and v12:PrevGCDP(864 - (464 + 395), v92.RadiantSpark))) and not (v12:IsCasting(v92.ArcaneSurge) and (v12:CastRemains() < (0.5 - 0)) and not v107)) or ((1592 + 1721) <= (2615 - (467 + 370)))) then
+					if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((2936 - 1515) >= (1545 + 559))) then
+						return "arcane_blast spark_phase 20";
+					end
+				end
+				if (((6211 - 4399) <= (507 + 2742)) and v92.ArcaneBarrage:IsReady() and v33 and (v13:DebuffStack(v92.RadiantSparkVulnerability) == (8 - 4))) then
+					if (((2143 - (150 + 370)) <= (3239 - (74 + 1208))) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
+						return "arcane_barrage spark_phase 22";
+					end
+				end
+				if (((10851 - 6439) == (20924 - 16512)) and v92.TouchoftheMagi:IsReady() and v50 and ((v55 and v30) or not v55) and (v77 < v112) and v12:PrevGCDP(1 + 0, v92.ArcaneBarrage) and ((v92.ArcaneBarrage:InFlight() and ((v92.ArcaneBarrage:TravelTime() - v92.ArcaneBarrage:TimeSinceLastCast()) <= (390.2 - (14 + 376)))) or (v12:GCDRemains() <= (0.2 - 0)))) then
+					if (((1133 + 617) >= (740 + 102)) and v20(v92.TouchoftheMagi, not v13:IsSpellInRange(v92.TouchoftheMagi))) then
+						return "touch_of_the_magi spark_phase 24";
+					end
+				end
+				v135 = 4 + 0;
+			end
+			if (((12810 - 8438) > (1392 + 458)) and (v135 == (80 - (23 + 55)))) then
+				if (((549 - 317) < (548 + 273)) and v92.RadiantSpark:IsReady() and v49 and ((v54 and v30) or not v54) and (v77 < v112)) then
+					if (((466 + 52) < (1398 - 496)) and v20(v92.RadiantSpark, not v13:IsSpellInRange(v92.RadiantSpark))) then
+						return "radiant_spark spark_phase 14";
+					end
+				end
+				if (((942 + 2052) > (1759 - (652 + 249))) and v92.NetherTempest:IsReady() and v41 and not v107 and (v92.NetherTempest:TimeSinceLastCast() >= (40 - 25)) and ((not v107 and v12:PrevGCDP(1872 - (708 + 1160), v92.RadiantSpark) and (v92.ArcaneSurge:CooldownRemains() <= v92.NetherTempest:ExecuteTime())) or v12:PrevGCDP(13 - 8, v92.RadiantSpark))) then
+					if (v20(v92.NetherTempest, not v13:IsSpellInRange(v92.NetherTempest)) or ((6846 - 3091) <= (942 - (10 + 17)))) then
+						return "nether_tempest spark_phase 16";
+					end
+				end
+				if (((887 + 3059) > (5475 - (1400 + 332))) and v92.ArcaneSurge:IsReady() and v46 and ((v51 and v29) or not v51) and (v77 < v112) and ((not v92.NetherTempest:IsAvailable() and ((v12:PrevGCDP(7 - 3, v92.RadiantSpark) and not v107) or v12:PrevGCDP(1913 - (242 + 1666), v92.RadiantSpark))) or v12:PrevGCDP(1 + 0, v92.NetherTempest))) then
+					if (v20(v92.ArcaneSurge, not v13:IsSpellInRange(v92.ArcaneSurge)) or ((490 + 845) >= (2818 + 488))) then
+						return "arcane_surge spark_phase 18";
+					end
+				end
+				v135 = 943 - (850 + 90);
+			end
+			if (((8483 - 3639) > (3643 - (360 + 1030))) and (v135 == (1 + 0))) then
+				if (((1275 - 823) == (621 - 169)) and v92.ArcaneBlast:IsReady() and v32 and v106 and v92.ArcaneSurge:CooldownUp() and v12:BloodlustUp() and (v12:Mana() >= v109) and (v12:BuffRemains(v92.SiphonStormBuff) > (1676 - (909 + 752)))) then
+					if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((5780 - (109 + 1114)) < (3820 - 1733))) then
+						return "arcane_blast spark_phase 6";
+					end
+				end
+				if (((1509 + 2365) == (4116 - (6 + 236))) and v92.ArcaneMissiles:IsCastable() and v37 and v106 and v12:BloodlustUp() and v12:BuffUp(v92.ClearcastingBuff) and (v12:BuffStack(v92.ClearcastingBuff) >= (2 + 0)) and (v92.RadiantSpark:CooldownRemains() < (5 + 0)) and v12:BuffDown(v92.NetherPrecisionBuff) and (v12:BuffRemains(v92.ArcaneArtilleryBuff) <= (v113 * (13 - 7)))) then
+					if (v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles)) or ((3384 - 1446) > (6068 - (1076 + 57)))) then
+						return "arcane_missiles spark_phase 10";
+					end
+				end
+				if ((v92.ArcaneMissiles:IsReady() and v37 and v92.ArcaneHarmony:IsAvailable() and (v12:BuffStack(v92.ArcaneHarmonyBuff) < (3 + 12)) and ((v106 and v12:BloodlustUp()) or (v12:BuffUp(v92.ClearcastingBuff) and (v92.RadiantSpark:CooldownRemains() < (694 - (579 + 110))))) and (v92.ArcaneSurge:CooldownRemains() < (3 + 27))) or ((3762 + 493) < (1817 + 1606))) then
+					if (((1861 - (174 + 233)) <= (6958 - 4467)) and v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
+						return "arcane_missiles spark_phase 12";
+					end
+				end
+				v135 = 3 - 1;
+			end
+			if ((v135 == (2 + 2)) or ((5331 - (663 + 511)) <= (2501 + 302))) then
+				if (((1054 + 3799) >= (9193 - 6211)) and v92.ArcaneBlast:IsReady() and v32) then
+					if (((2504 + 1630) > (7903 - 4546)) and v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast))) then
 						return "arcane_blast spark_phase 26";
 					end
 				end
-				if ((v91.ArcaneBarrage:IsReady() and v32) or ((709 + 721) >= (8267 - 4655))) then
-					if (((1899 + 784) >= (7584 - 5124)) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
+				if ((v92.ArcaneBarrage:IsReady() and v33) or ((8271 - 4854) < (1210 + 1324))) then
+					if (v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage)) or ((5297 - 2575) <= (117 + 47))) then
 						return "arcane_barrage spark_phase 28";
 					end
 				end
 				break;
 			end
-			if (((2 - 1) == v133) or ((2237 - (279 + 154)) >= (4053 - (454 + 324)))) then
-				if ((v91.ArcaneMissiles:IsCastable() and v36 and v105 and v12:BloodlustUp() and v12:BuffUp(v91.ClearcastingBuff) and (v12:BuffStack(v91.ClearcastingBuff) >= (2 + 0)) and (v91.RadiantSpark:CooldownRemains() < (22 - (12 + 5))) and v12:BuffDown(v91.NetherPrecisionBuff) and (v12:BuffRemains(v91.ArcaneArtilleryBuff) <= (v112 * (4 + 2)))) or ((3610 - 2193) > (1342 + 2287))) then
-					if (((5888 - (277 + 816)) > (1717 - 1315)) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
-						return "arcane_missiles spark_phase 10";
-					end
-				end
-				if (((5996 - (1058 + 125)) > (669 + 2896)) and v91.ArcaneMissiles:IsReady() and v36 and v91.ArcaneHarmony:IsAvailable() and (v12:BuffStack(v91.ArcaneHarmonyBuff) < (990 - (815 + 160))) and ((v105 and v12:BloodlustUp()) or (v12:BuffUp(v91.ClearcastingBuff) and (v91.RadiantSpark:CooldownRemains() < (21 - 16)))) and (v91.ArcaneSurge:CooldownRemains() < (71 - 41))) then
-					if (((934 + 2978) == (11435 - 7523)) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
-						return "arcane_missiles spark_phase 12";
-					end
-				end
-				if (((4719 - (41 + 1857)) <= (6717 - (1222 + 671))) and v91.RadiantSpark:IsReady() and v48 and ((v53 and v29) or not v53) and (v76 < v111)) then
-					if (((4491 - 2753) <= (3154 - 959)) and v19(v91.RadiantSpark, not v13:IsSpellInRange(v91.RadiantSpark))) then
-						return "radiant_spark spark_phase 14";
-					end
-				end
-				if (((1223 - (229 + 953)) <= (4792 - (1111 + 663))) and v91.NetherTempest:IsReady() and v40 and not v106 and (v91.NetherTempest:TimeSinceLastCast() >= (1594 - (874 + 705))) and ((not v106 and v12:PrevGCDP(1 + 3, v91.RadiantSpark) and (v91.ArcaneSurge:CooldownRemains() <= v91.NetherTempest:ExecuteTime())) or v12:PrevGCDP(4 + 1, v91.RadiantSpark))) then
-					if (((4458 - 2313) <= (116 + 3988)) and v19(v91.NetherTempest, not v13:IsSpellInRange(v91.NetherTempest))) then
-						return "nether_tempest spark_phase 16";
-					end
-				end
-				v133 = 681 - (642 + 37);
-			end
-			if (((614 + 2075) < (776 + 4069)) and ((4 - 2) == v133)) then
-				if ((v91.ArcaneSurge:IsReady() and v45 and ((v50 and v28) or not v50) and (v76 < v111) and ((not v91.NetherTempest:IsAvailable() and ((v12:PrevGCDP(458 - (233 + 221), v91.RadiantSpark) and not v106) or v12:PrevGCDP(11 - 6, v91.RadiantSpark))) or v12:PrevGCDP(1 + 0, v91.NetherTempest))) or ((3863 - (718 + 823)) > (1650 + 972))) then
-					if (v19(v91.ArcaneSurge, not v13:IsSpellInRange(v91.ArcaneSurge)) or ((5339 - (266 + 539)) == (5894 - 3812))) then
-						return "arcane_surge spark_phase 18";
-					end
-				end
-				if ((v91.ArcaneBlast:IsReady() and v31 and (v91.ArcaneBlast:CastTime() >= v12:GCD()) and (v91.ArcaneBlast:ExecuteTime() < v13:DebuffRemains(v91.RadiantSparkVulnerability)) and (not v91.ArcaneBombardment:IsAvailable() or (v13:HealthPercentage() >= (1260 - (636 + 589)))) and ((v91.NetherTempest:IsAvailable() and v12:PrevGCDP(14 - 8, v91.RadiantSpark)) or (not v91.NetherTempest:IsAvailable() and v12:PrevGCDP(10 - 5, v91.RadiantSpark))) and not (v12:IsCasting(v91.ArcaneSurge) and (v12:CastRemains() < (0.5 + 0)) and not v106)) or ((571 + 1000) > (2882 - (657 + 358)))) then
-					if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((7026 - 4372) >= (6825 - 3829))) then
-						return "arcane_blast spark_phase 20";
-					end
-				end
-				if (((5165 - (1151 + 36)) > (2032 + 72)) and v91.ArcaneBarrage:IsReady() and v32 and (v13:DebuffStack(v91.RadiantSparkVulnerability) == (2 + 2))) then
-					if (((8944 - 5949) > (3373 - (1552 + 280))) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
-						return "arcane_barrage spark_phase 22";
-					end
-				end
-				if (((4083 - (64 + 770)) > (648 + 305)) and v91.TouchoftheMagi:IsReady() and v49 and ((v54 and v29) or not v54) and (v76 < v111) and v12:PrevGCDP(2 - 1, v91.ArcaneBarrage) and ((v91.ArcaneBarrage:InFlight() and ((v91.ArcaneBarrage:TravelTime() - v91.ArcaneBarrage:TimeSinceLastCast()) <= (0.2 + 0))) or (v12:GCDRemains() <= (1243.2 - (157 + 1086))))) then
-					if (v19(v91.TouchoftheMagi, not v13:IsSpellInRange(v91.TouchoftheMagi)) or ((6551 - 3278) > (20028 - 15455))) then
-						return "touch_of_the_magi spark_phase 24";
-					end
-				end
-				v133 = 3 - 0;
-			end
-			if ((v133 == (0 - 0)) or ((3970 - (599 + 220)) < (2556 - 1272))) then
-				if ((v91.NetherTempest:IsReady() and v40 and (v91.NetherTempest:TimeSinceLastCast() >= (1976 - (1813 + 118))) and v13:DebuffDown(v91.NetherTempestDebuff) and v105 and v12:BloodlustUp()) or ((1353 + 497) == (2746 - (841 + 376)))) then
-					if (((1150 - 329) < (494 + 1629)) and v19(v91.NetherTempest, not v13:IsSpellInRange(v91.NetherTempest))) then
-						return "nether_tempest spark_phase 2";
-					end
-				end
-				if (((2461 - 1559) < (3184 - (464 + 395))) and v105 and v12:IsChanneling(v91.ArcaneMissiles) and (v12:GCDRemains() == (0 - 0)) and v12:BuffUp(v91.NetherPrecisionBuff) and v12:BuffDown(v91.ArcaneArtilleryBuff)) then
-					if (((413 + 445) <= (3799 - (467 + 370))) and v19(v93.StopCasting, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
-						return "arcane_missiles interrupt spark_phase 4";
-					end
-				end
-				if ((v91.ArcaneMissiles:IsCastable() and v36 and v105 and v12:BloodlustUp() and v12:BuffUp(v91.ClearcastingBuff) and (v91.RadiantSpark:CooldownRemains() < (9 - 4)) and v12:BuffDown(v91.NetherPrecisionBuff) and (v12:BuffDown(v91.ArcaneArtilleryBuff) or (v12:BuffRemains(v91.ArcaneArtilleryBuff) <= (v112 * (5 + 1)))) and v12:HasTier(106 - 75, 1 + 3)) or ((9180 - 5234) < (1808 - (150 + 370)))) then
-					if (v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles)) or ((4524 - (74 + 1208)) == (1394 - 827))) then
-						return "arcane_missiles spark_phase 4";
-					end
-				end
-				if ((v91.ArcaneBlast:IsReady() and v31 and v105 and v91.ArcaneSurge:CooldownUp() and v12:BloodlustUp() and (v12:Mana() >= v108) and (v12:BuffRemains(v91.SiphonStormBuff) > (71 - 56))) or ((603 + 244) >= (1653 - (14 + 376)))) then
-					if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((3907 - 1654) == (1198 + 653))) then
-						return "arcane_blast spark_phase 6";
-					end
-				end
-				v133 = 1 + 0;
-			end
-		end
-	end
-	local function v120()
-		if ((v12:BuffUp(v91.PresenceofMindBuff) and v89 and (v12:PrevGCDP(1 + 0, v91.ArcaneBlast)) and (v91.ArcaneSurge:CooldownRemains() > (219 - 144))) or ((1571 + 516) > (2450 - (23 + 55)))) then
-			if (v19(v93.CancelPOM) or ((10534 - 6089) < (2769 + 1380))) then
-				return "cancel presence_of_mind aoe_spark_phase 1";
-			end
-		end
-		if ((v91.TouchoftheMagi:IsReady() and v49 and ((v54 and v29) or not v54) and (v76 < v111) and (v12:PrevGCDP(1 + 0, v91.ArcaneBarrage))) or ((2818 - 1000) == (27 + 58))) then
-			if (((1531 - (652 + 249)) < (5692 - 3565)) and v19(v91.TouchoftheMagi, not v13:IsSpellInRange(v91.TouchoftheMagi))) then
-				return "touch_of_the_magi aoe_spark_phase 2";
-			end
-		end
-		if ((v91.RadiantSpark:IsReady() and v48 and ((v53 and v29) or not v53) and (v76 < v111)) or ((3806 - (708 + 1160)) == (6823 - 4309))) then
-			if (((7757 - 3502) >= (82 - (10 + 17))) and v19(v91.RadiantSpark, not v13:IsSpellInRange(v91.RadiantSpark), true)) then
-				return "radiant_spark aoe_spark_phase 4";
-			end
-		end
-		if (((674 + 2325) > (2888 - (1400 + 332))) and v91.ArcaneOrb:IsReady() and v47 and ((v52 and v29) or not v52) and (v76 < v111) and (v91.ArcaneOrb:TimeSinceLastCast() >= (28 - 13)) and (v12:ArcaneCharges() < (1911 - (242 + 1666)))) then
-			if (((1006 + 1344) > (424 + 731)) and v19(v91.ArcaneOrb, not v13:IsInRange(35 + 5))) then
-				return "arcane_orb aoe_spark_phase 6";
-			end
-		end
-		if (((4969 - (850 + 90)) <= (8499 - 3646)) and v91.NetherTempest:IsReady() and v40 and (v91.NetherTempest:TimeSinceLastCast() >= (1405 - (360 + 1030))) and (v91.ArcaneEcho:IsAvailable())) then
-			if (v19(v91.NetherTempest, not v13:IsSpellInRange(v91.NetherTempest)) or ((457 + 59) > (9692 - 6258))) then
-				return "nether_tempest aoe_spark_phase 8";
-			end
-		end
-		if (((5565 - 1519) >= (4694 - (909 + 752))) and v91.ArcaneSurge:IsReady() and v45 and ((v50 and v28) or not v50) and (v76 < v111)) then
-			if (v19(v91.ArcaneSurge, not v13:IsSpellInRange(v91.ArcaneSurge)) or ((3942 - (109 + 1114)) <= (2648 - 1201))) then
-				return "arcane_surge aoe_spark_phase 10";
-			end
-		end
-		if ((v91.ArcaneBarrage:IsReady() and v32 and (v91.ArcaneSurge:CooldownRemains() < (30 + 45)) and (v13:DebuffStack(v91.RadiantSparkVulnerability) == (246 - (6 + 236))) and not v91.OrbBarrage:IsAvailable()) or ((2605 + 1529) < (3161 + 765))) then
-			if (v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage)) or ((386 - 222) >= (4864 - 2079))) then
-				return "arcane_barrage aoe_spark_phase 12";
-			end
-		end
-		if ((v91.ArcaneBarrage:IsReady() and v32 and (((v13:DebuffStack(v91.RadiantSparkVulnerability) == (1135 - (1076 + 57))) and (v91.ArcaneSurge:CooldownRemains() > (13 + 62))) or ((v13:DebuffStack(v91.RadiantSparkVulnerability) == (690 - (579 + 110))) and (v91.ArcaneSurge:CooldownRemains() < (6 + 69)) and not v91.OrbBarrage:IsAvailable()))) or ((465 + 60) == (1120 + 989))) then
-			if (((440 - (174 + 233)) == (92 - 59)) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
-				return "arcane_barrage aoe_spark_phase 14";
-			end
-		end
-		if (((5359 - 2305) <= (1786 + 2229)) and v91.ArcaneBarrage:IsReady() and v32 and ((v13:DebuffStack(v91.RadiantSparkVulnerability) == (1175 - (663 + 511))) or (v13:DebuffStack(v91.RadiantSparkVulnerability) == (2 + 0)) or ((v13:DebuffStack(v91.RadiantSparkVulnerability) == (1 + 2)) and ((v98 > (15 - 10)) or (v99 > (4 + 1)))) or (v13:DebuffStack(v91.RadiantSparkVulnerability) == (9 - 5))) and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and v91.OrbBarrage:IsAvailable()) then
-			if (((4529 - 2658) < (1614 + 1768)) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
-				return "arcane_barrage aoe_spark_phase 16";
-			end
-		end
-		if (((2516 - 1223) <= (1544 + 622)) and v91.PresenceofMind:IsCastable() and v41) then
-			if (v19(v91.PresenceofMind) or ((236 + 2343) < (845 - (478 + 244)))) then
-				return "presence_of_mind aoe_spark_phase 18";
-			end
-		end
-		if ((v91.ArcaneBlast:IsReady() and v31 and ((((v13:DebuffStack(v91.RadiantSparkVulnerability) == (519 - (440 + 77))) or (v13:DebuffStack(v91.RadiantSparkVulnerability) == (2 + 1))) and not v91.OrbBarrage:IsAvailable()) or (v13:DebuffUp(v91.RadiantSparkVulnerability) and v91.OrbBarrage:IsAvailable()))) or ((3096 - 2250) >= (3924 - (655 + 901)))) then
-			if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((744 + 3268) <= (2571 + 787))) then
-				return "arcane_blast aoe_spark_phase 20";
-			end
-		end
-		if (((1009 + 485) <= (12106 - 9101)) and v91.ArcaneBarrage:IsReady() and v32 and (((v13:DebuffStack(v91.RadiantSparkVulnerability) == (1449 - (695 + 750))) and v12:BuffUp(v91.ArcaneSurgeBuff)) or ((v13:DebuffStack(v91.RadiantSparkVulnerability) == (9 - 6)) and v12:BuffDown(v91.ArcaneSurgeBuff) and not v91.OrbBarrage:IsAvailable()))) then
-			if (v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage)) or ((4800 - 1689) == (8582 - 6448))) then
-				return "arcane_barrage aoe_spark_phase 22";
-			end
 		end
 	end
 	local function v121()
-		local v134 = 351 - (285 + 66);
+		local v136 = 0 + 0;
 		while true do
-			if (((5489 - 3134) == (3665 - (682 + 628))) and (v134 == (0 + 0))) then
-				if ((v13:DebuffRemains(v91.TouchoftheMagiDebuff) > (308 - (176 + 123))) or ((246 + 342) <= (314 + 118))) then
-					v102 = not v102;
-				end
-				if (((5066 - (239 + 30)) >= (1059 + 2836)) and v91.NetherTempest:IsReady() and v40 and (v13:DebuffRefreshable(v91.NetherTempestDebuff) or not v13:DebuffUp(v91.NetherTempestDebuff)) and (v12:ArcaneCharges() == (4 + 0)) and (v12:ManaPercentage() < (53 - 23)) and (v12:SpellHaste() < (0.667 - 0)) and v12:BuffDown(v91.ArcaneSurgeBuff)) then
-					if (((3892 - (306 + 9)) == (12482 - 8905)) and v19(v91.NetherTempest, not v13:IsSpellInRange(v91.NetherTempest))) then
-						return "nether_tempest touch_phase 2";
+			if ((v136 == (723 - (478 + 244))) or ((2925 - (440 + 77)) < (959 + 1150))) then
+				if ((v92.NetherTempest:IsReady() and v41 and (v92.NetherTempest:TimeSinceLastCast() >= (54 - 39)) and (v92.ArcaneEcho:IsAvailable())) or ((1589 - (655 + 901)) == (270 + 1185))) then
+					if (v20(v92.NetherTempest, not v13:IsSpellInRange(v92.NetherTempest)) or ((340 + 103) >= (2712 + 1303))) then
+						return "nether_tempest aoe_spark_phase 8";
 					end
 				end
-				if (((660 + 3134) > (2266 + 1427)) and v91.ArcaneOrb:IsReady() and v47 and ((v52 and v29) or not v52) and (v12:ArcaneCharges() < (1 + 1)) and (v12:ManaPercentage() < (85 - 55)) and (v12:SpellHaste() < (1375.667 - (1140 + 235))) and v12:BuffDown(v91.ArcaneSurgeBuff)) then
-					if (v19(v91.ArcaneOrb, not v13:IsInRange(26 + 14)) or ((1170 + 105) == (1053 + 3047))) then
-						return "arcane_orb touch_phase 4";
+				if (((13624 - 10242) > (1611 - (695 + 750))) and v92.ArcaneSurge:IsReady() and v46 and ((v51 and v29) or not v51) and (v77 < v112)) then
+					if (v20(v92.ArcaneSurge, not v13:IsSpellInRange(v92.ArcaneSurge)) or ((956 - 676) == (4720 - 1661))) then
+						return "arcane_surge aoe_spark_phase 10";
 					end
 				end
-				v134 = 53 - (33 + 19);
+				if (((7564 - 5683) > (1644 - (285 + 66))) and v92.ArcaneBarrage:IsReady() and v33 and (v92.ArcaneSurge:CooldownRemains() < (174 - 99)) and (v13:DebuffStack(v92.RadiantSparkVulnerability) == (1314 - (682 + 628))) and not v92.OrbBarrage:IsAvailable()) then
+					if (((380 + 1977) == (2656 - (176 + 123))) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
+						return "arcane_barrage aoe_spark_phase 12";
+					end
+				end
+				if (((52 + 71) == (90 + 33)) and v92.ArcaneBarrage:IsReady() and v33 and (((v13:DebuffStack(v92.RadiantSparkVulnerability) == (271 - (239 + 30))) and (v92.ArcaneSurge:CooldownRemains() > (21 + 54))) or ((v13:DebuffStack(v92.RadiantSparkVulnerability) == (1 + 0)) and (v92.ArcaneSurge:CooldownRemains() < (132 - 57)) and not v92.OrbBarrage:IsAvailable()))) then
+					if (v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage)) or ((3294 - 2238) >= (3707 - (306 + 9)))) then
+						return "arcane_barrage aoe_spark_phase 14";
+					end
+				end
+				v136 = 6 - 4;
 			end
-			if (((1 + 0) == v134) or ((4768 - 3177) >= (1578 + 2002))) then
-				if (((1927 - 944) <= (1696 + 112)) and v91.PresenceofMind:IsCastable() and v41 and (v13:DebuffRemains(v91.TouchoftheMagiDebuff) <= v112)) then
-					if (v19(v91.PresenceofMind) or ((2839 - (586 + 103)) <= (109 + 1088))) then
+			if ((v136 == (1 + 1)) or ((664 + 417) < (518 + 557))) then
+				if ((v92.ArcaneBarrage:IsReady() and v33 and ((v13:DebuffStack(v92.RadiantSparkVulnerability) == (2 - 1)) or (v13:DebuffStack(v92.RadiantSparkVulnerability) == (1377 - (1140 + 235))) or ((v13:DebuffStack(v92.RadiantSparkVulnerability) == (2 + 1)) and ((v99 > (5 + 0)) or (v100 > (2 + 3)))) or (v13:DebuffStack(v92.RadiantSparkVulnerability) == (56 - (33 + 19)))) and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and v92.OrbBarrage:IsAvailable()) or ((379 + 670) >= (13283 - 8851))) then
+					if (v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage)) or ((2101 + 2667) <= (1658 - 812))) then
+						return "arcane_barrage aoe_spark_phase 16";
+					end
+				end
+				if ((v92.PresenceofMind:IsCastable() and v42) or ((3149 + 209) <= (2109 - (586 + 103)))) then
+					if (v20(v92.PresenceofMind) or ((341 + 3398) <= (9251 - 6246))) then
+						return "presence_of_mind aoe_spark_phase 18";
+					end
+				end
+				if ((v92.ArcaneBlast:IsReady() and v32 and ((((v13:DebuffStack(v92.RadiantSparkVulnerability) == (1490 - (1309 + 179))) or (v13:DebuffStack(v92.RadiantSparkVulnerability) == (5 - 2))) and not v92.OrbBarrage:IsAvailable()) or (v13:DebuffUp(v92.RadiantSparkVulnerability) and v92.OrbBarrage:IsAvailable()))) or ((723 + 936) >= (5730 - 3596))) then
+					if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((2463 + 797) < (5003 - 2648))) then
+						return "arcane_blast aoe_spark_phase 20";
+					end
+				end
+				if ((v92.ArcaneBarrage:IsReady() and v33 and (((v13:DebuffStack(v92.RadiantSparkVulnerability) == (7 - 3)) and v12:BuffUp(v92.ArcaneSurgeBuff)) or ((v13:DebuffStack(v92.RadiantSparkVulnerability) == (612 - (295 + 314))) and v12:BuffDown(v92.ArcaneSurgeBuff) and not v92.OrbBarrage:IsAvailable()))) or ((1642 - 973) == (6185 - (1300 + 662)))) then
+					if (v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage)) or ((5312 - 3620) < (2343 - (1178 + 577)))) then
+						return "arcane_barrage aoe_spark_phase 22";
+					end
+				end
+				break;
+			end
+			if ((v136 == (0 + 0)) or ((14181 - 9384) < (5056 - (851 + 554)))) then
+				if ((v12:BuffUp(v92.PresenceofMindBuff) and v90 and (v12:PrevGCDP(1 + 0, v92.ArcaneBlast)) and (v92.ArcaneSurge:CooldownRemains() > (208 - 133))) or ((9071 - 4894) > (5152 - (115 + 187)))) then
+					if (v20(v94.CancelPOM) or ((307 + 93) > (1052 + 59))) then
+						return "cancel presence_of_mind aoe_spark_phase 1";
+					end
+				end
+				if (((12023 - 8972) > (2166 - (160 + 1001))) and v92.TouchoftheMagi:IsReady() and v50 and ((v55 and v30) or not v55) and (v77 < v112) and (v12:PrevGCDP(1 + 0, v92.ArcaneBarrage))) then
+					if (((2549 + 1144) <= (8969 - 4587)) and v20(v92.TouchoftheMagi, not v13:IsSpellInRange(v92.TouchoftheMagi))) then
+						return "touch_of_the_magi aoe_spark_phase 2";
+					end
+				end
+				if ((v92.RadiantSpark:IsReady() and v49 and ((v54 and v30) or not v54) and (v77 < v112)) or ((3640 - (237 + 121)) > (4997 - (525 + 372)))) then
+					if (v20(v92.RadiantSpark, not v13:IsSpellInRange(v92.RadiantSpark), true) or ((6787 - 3207) < (9344 - 6500))) then
+						return "radiant_spark aoe_spark_phase 4";
+					end
+				end
+				if (((231 - (96 + 46)) < (5267 - (643 + 134))) and v92.ArcaneOrb:IsReady() and v48 and ((v53 and v30) or not v53) and (v77 < v112) and (v92.ArcaneOrb:TimeSinceLastCast() >= (6 + 9)) and (v12:ArcaneCharges() < (6 - 3))) then
+					if (v20(v92.ArcaneOrb, not v13:IsInRange(148 - 108)) or ((4779 + 204) < (3547 - 1739))) then
+						return "arcane_orb aoe_spark_phase 6";
+					end
+				end
+				v136 = 1 - 0;
+			end
+		end
+	end
+	local function v122()
+		local v137 = 719 - (316 + 403);
+		while true do
+			if (((2546 + 1283) > (10362 - 6593)) and (v137 == (1 + 0))) then
+				if (((3739 - 2254) <= (2058 + 846)) and v92.PresenceofMind:IsCastable() and v42 and (v13:DebuffRemains(v92.TouchoftheMagiDebuff) <= v113)) then
+					if (((1376 + 2893) == (14791 - 10522)) and v20(v92.PresenceofMind)) then
 						return "presence_of_mind touch_phase 6";
 					end
 				end
-				if (((11603 - 7834) >= (2661 - (1309 + 179))) and v91.ArcaneBlast:IsReady() and v31 and v12:BuffUp(v91.PresenceofMindBuff) and (v12:ArcaneCharges() == v12:ArcaneChargesMax())) then
-					if (((2680 - 1195) == (647 + 838)) and v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast))) then
+				if (((1848 - 1461) <= (5779 - 2997)) and v92.ArcaneBlast:IsReady() and v32 and v12:BuffUp(v92.PresenceofMindBuff) and (v12:ArcaneCharges() == v12:ArcaneChargesMax())) then
+					if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((109 + 1790) <= (1804 - 887))) then
 						return "arcane_blast touch_phase 8";
 					end
 				end
-				if ((v91.ArcaneBarrage:IsReady() and v32 and (v12:BuffUp(v91.ArcaneHarmonyBuff) or (v91.ArcaneBombardment:IsAvailable() and (v13:HealthPercentage() < (93 - 58)))) and (v13:DebuffRemains(v91.TouchoftheMagiDebuff) <= v112)) or ((2504 + 811) <= (5910 - 3128))) then
-					if (v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage)) or ((1745 - 869) >= (3573 - (295 + 314)))) then
+				if ((v92.ArcaneBarrage:IsReady() and v33 and (v12:BuffUp(v92.ArcaneHarmonyBuff) or (v92.ArcaneBombardment:IsAvailable() and (v13:HealthPercentage() < (2 + 33)))) and (v13:DebuffRemains(v92.TouchoftheMagiDebuff) <= v113)) or ((12686 - 8374) <= (893 - (12 + 5)))) then
+					if (((8669 - 6437) <= (5538 - 2942)) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
 						return "arcane_barrage touch_phase 10";
 					end
 				end
-				v134 = 4 - 2;
+				v137 = 3 - 1;
 			end
-			if ((v134 == (1964 - (1300 + 662))) or ((7008 - 4776) > (4252 - (1178 + 577)))) then
-				if ((v12:IsChanneling(v91.ArcaneMissiles) and (v12:GCDRemains() == (0 + 0)) and v12:BuffUp(v91.NetherPrecisionBuff) and (((v12:ManaPercentage() > (88 - 58)) and (v91.TouchoftheMagi:CooldownRemains() > (1435 - (851 + 554)))) or (v12:ManaPercentage() > (62 + 8))) and v12:BuffDown(v91.ArcaneArtilleryBuff)) or ((5851 - 3741) <= (720 - 388))) then
-					if (((3988 - (115 + 187)) > (2430 + 742)) and v19(v93.StopCasting, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
+			if (((5195 - 3100) < (749 + 2937)) and (v137 == (1973 - (1656 + 317)))) then
+				if ((v13:DebuffRemains(v92.TouchoftheMagiDebuff) > (9 + 0)) or ((1279 + 316) >= (11896 - 7422))) then
+					v103 = not v103;
+				end
+				if ((v92.NetherTempest:IsReady() and v41 and (v13:DebuffRefreshable(v92.NetherTempestDebuff) or not v13:DebuffUp(v92.NetherTempestDebuff)) and (v12:ArcaneCharges() == (19 - 15)) and (v12:ManaPercentage() < (384 - (5 + 349))) and (v12:SpellHaste() < (0.667 - 0)) and v12:BuffDown(v92.ArcaneSurgeBuff)) or ((5890 - (266 + 1005)) < (1900 + 982))) then
+					if (v20(v92.NetherTempest, not v13:IsSpellInRange(v92.NetherTempest)) or ((1003 - 709) >= (6360 - 1529))) then
+						return "nether_tempest touch_phase 2";
+					end
+				end
+				if (((3725 - (561 + 1135)) <= (4018 - 934)) and v92.ArcaneOrb:IsReady() and v48 and ((v53 and v30) or not v53) and (v12:ArcaneCharges() < (6 - 4)) and (v12:ManaPercentage() < (1096 - (507 + 559))) and (v12:SpellHaste() < (0.667 - 0)) and v12:BuffDown(v92.ArcaneSurgeBuff)) then
+					if (v20(v92.ArcaneOrb, not v13:IsInRange(123 - 83)) or ((2425 - (212 + 176)) == (3325 - (250 + 655)))) then
+						return "arcane_orb touch_phase 4";
+					end
+				end
+				v137 = 2 - 1;
+			end
+			if (((7789 - 3331) > (6107 - 2203)) and (v137 == (1958 - (1869 + 87)))) then
+				if (((1512 - 1076) >= (2024 - (484 + 1417))) and v12:IsChanneling(v92.ArcaneMissiles) and (v12:GCDRemains() == (0 - 0)) and v12:BuffUp(v92.NetherPrecisionBuff) and (((v12:ManaPercentage() > (50 - 20)) and (v92.TouchoftheMagi:CooldownRemains() > (803 - (48 + 725)))) or (v12:ManaPercentage() > (114 - 44))) and v12:BuffDown(v92.ArcaneArtilleryBuff)) then
+					if (((1341 - 841) < (1056 + 760)) and v20(v94.StopCasting, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
 						return "arcane_missiles interrupt touch_phase 12";
 					end
 				end
-				if ((v91.ArcaneMissiles:IsCastable() and v36 and (v12:BuffStack(v91.ClearcastingBuff) > (1 + 0)) and v91.ConjureManaGem:IsAvailable() and v92.ManaGem:CooldownUp()) or ((17630 - 13156) < (1981 - (160 + 1001)))) then
-					if (((3744 + 535) >= (1989 + 893)) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
+				if (((9551 - 5977) == (1001 + 2573)) and v92.ArcaneMissiles:IsCastable() and v37 and (v12:BuffStack(v92.ClearcastingBuff) > (1 + 0)) and v92.ConjureManaGem:IsAvailable() and v93.ManaGem:CooldownUp()) then
+					if (((1074 - (152 + 701)) < (1701 - (430 + 881))) and v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
 						return "arcane_missiles touch_phase 12";
 					end
 				end
-				if ((v91.ArcaneBlast:IsReady() and v31 and (v12:BuffUp(v91.NetherPrecisionBuff))) or ((4153 - 2124) >= (3879 - (237 + 121)))) then
-					if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((2934 - (525 + 372)) >= (8800 - 4158))) then
+				if ((v92.ArcaneBlast:IsReady() and v32 and (v12:BuffUp(v92.NetherPrecisionBuff))) or ((848 + 1365) <= (2316 - (557 + 338)))) then
+					if (((904 + 2154) < (13695 - 8835)) and v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast))) then
 						return "arcane_blast touch_phase 14";
 					end
 				end
-				v134 = 9 - 6;
+				v137 = 10 - 7;
 			end
-			if (((1862 - (96 + 46)) < (5235 - (643 + 134))) and (v134 == (2 + 1))) then
-				if ((v91.ArcaneMissiles:IsCastable() and v36 and v12:BuffUp(v91.ClearcastingBuff) and ((v13:DebuffRemains(v91.TouchoftheMagiDebuff) > v91.ArcaneMissiles:CastTime()) or not v91.PresenceofMind:IsAvailable())) or ((1045 - 609) > (11215 - 8194))) then
-					if (((684 + 29) <= (1661 - 814)) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
+			if ((v137 == (7 - 4)) or ((2792 - 1496) >= (5247 - (499 + 302)))) then
+				if ((v92.ArcaneMissiles:IsCastable() and v37 and v12:BuffUp(v92.ClearcastingBuff) and ((v13:DebuffRemains(v92.TouchoftheMagiDebuff) > v92.ArcaneMissiles:CastTime()) or not v92.PresenceofMind:IsAvailable())) or ((2259 - (39 + 827)) > (12391 - 7902))) then
+					if (v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles)) or ((9879 - 5455) < (107 - 80))) then
 						return "arcane_missiles touch_phase 18";
 					end
 				end
-				if (((4402 - 2248) <= (4750 - (316 + 403))) and v91.ArcaneBlast:IsReady() and v31) then
-					if (((3068 + 1547) == (12688 - 8073)) and v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast))) then
+				if ((v92.ArcaneBlast:IsReady() and v32) or ((3065 - 1068) > (327 + 3488))) then
+					if (((10141 - 6676) > (307 + 1606)) and v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast))) then
 						return "arcane_blast touch_phase 20";
 					end
 				end
-				if ((v91.ArcaneBarrage:IsReady() and v32) or ((1370 + 2420) == (1259 - 759))) then
-					if (((64 + 25) < (72 + 149)) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
+				if (((1159 - 426) < (1923 - (103 + 1))) and v92.ArcaneBarrage:IsReady() and v33) then
+					if (v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage)) or ((4949 - (475 + 79)) == (10279 - 5524))) then
 						return "arcane_barrage touch_phase 22";
 					end
 				end
@@ -615,641 +646,700 @@ v0["Epix_Mage_Arcane.lua"] = function(...)
 			end
 		end
 	end
-	local function v122()
-		local v135 = 0 - 0;
+	local function v123()
+		local v138 = 0 - 0;
 		while true do
-			if (((9809 - 7755) >= (2951 - 1530)) and (v135 == (1 + 1))) then
-				if (((1361 - 669) < (150 + 2908)) and v91.ArcaneExplosion:IsCastable() and v33) then
-					if (v19(v91.ArcaneExplosion, not v13:IsInRange(29 - 19)) or ((3271 - (12 + 5)) == (6428 - 4773))) then
+			if ((v138 == (1 + 0)) or ((3339 + 454) < (3872 - (1395 + 108)))) then
+				if ((v92.ArcaneBarrage:IsReady() and v33 and ((((v99 <= (11 - 7)) or (v100 <= (1208 - (7 + 1197)))) and (v12:ArcaneCharges() == (2 + 1))) or (v12:ArcaneCharges() == v12:ArcaneChargesMax()))) or ((1426 + 2658) == (584 - (27 + 292)))) then
+					if (((12770 - 8412) == (5557 - 1199)) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
+						return "arcane_barrage aoe_touch_phase 4";
+					end
+				end
+				if ((v92.ArcaneOrb:IsReady() and v48 and ((v53 and v30) or not v53) and (v77 < v112) and (v12:ArcaneCharges() < (8 - 6))) or ((6188 - 3050) < (1890 - 897))) then
+					if (((3469 - (43 + 96)) > (9475 - 7152)) and v20(v92.ArcaneOrb, not v13:IsInRange(90 - 50))) then
+						return "arcane_orb aoe_touch_phase 6";
+					end
+				end
+				v138 = 2 + 0;
+			end
+			if ((v138 == (0 + 0)) or ((7166 - 3540) == (1529 + 2460))) then
+				if ((v13:DebuffRemains(v92.TouchoftheMagiDebuff) > (16 - 7)) or ((289 + 627) == (196 + 2475))) then
+					v103 = not v103;
+				end
+				if (((2023 - (1414 + 337)) == (2212 - (1642 + 298))) and v92.ArcaneMissiles:IsCastable() and v37 and v12:BuffUp(v92.ArcaneArtilleryBuff) and v12:BuffUp(v92.ClearcastingBuff)) then
+					if (((11076 - 6827) <= (13920 - 9081)) and v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
+						return "arcane_missiles aoe_touch_phase 2";
+					end
+				end
+				v138 = 2 - 1;
+			end
+			if (((914 + 1863) < (2490 + 710)) and (v138 == (974 - (357 + 615)))) then
+				if (((67 + 28) < (4801 - 2844)) and v92.ArcaneExplosion:IsCastable() and v34) then
+					if (((708 + 118) < (3679 - 1962)) and v20(v92.ArcaneExplosion, not v13:IsInRange(8 + 2))) then
 						return "arcane_explosion aoe_touch_phase 8";
 					end
 				end
 				break;
 			end
-			if ((v135 == (0 - 0)) or ((2754 - 1458) == (12176 - 7266))) then
-				if (((684 + 2684) == (5341 - (1656 + 317))) and (v13:DebuffRemains(v91.TouchoftheMagiDebuff) > (9 + 0))) then
-					v102 = not v102;
-				end
-				if (((2118 + 525) < (10144 - 6329)) and v91.ArcaneMissiles:IsCastable() and v36 and v12:BuffUp(v91.ArcaneArtilleryBuff) and v12:BuffUp(v91.ClearcastingBuff)) then
-					if (((9414 - 7501) > (847 - (5 + 349))) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
-						return "arcane_missiles aoe_touch_phase 2";
-					end
-				end
-				v135 = 4 - 3;
-			end
-			if (((6026 - (266 + 1005)) > (2259 + 1169)) and (v135 == (3 - 2))) then
-				if (((1817 - 436) <= (4065 - (561 + 1135))) and v91.ArcaneBarrage:IsReady() and v32 and ((((v98 <= (5 - 1)) or (v99 <= (12 - 8))) and (v12:ArcaneCharges() == (1069 - (507 + 559)))) or (v12:ArcaneCharges() == v12:ArcaneChargesMax()))) then
-					if (v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage)) or ((12152 - 7309) == (12630 - 8546))) then
-						return "arcane_barrage aoe_touch_phase 4";
-					end
-				end
-				if (((5057 - (212 + 176)) > (1268 - (250 + 655))) and v91.ArcaneOrb:IsReady() and v47 and ((v52 and v29) or not v52) and (v76 < v111) and (v12:ArcaneCharges() < (5 - 3))) then
-					if (v19(v91.ArcaneOrb, not v13:IsInRange(69 - 29)) or ((2936 - 1059) >= (5094 - (1869 + 87)))) then
-						return "arcane_orb aoe_touch_phase 6";
-					end
-				end
-				v135 = 6 - 4;
-			end
-		end
-	end
-	local function v123()
-		if (((6643 - (484 + 1417)) >= (7771 - 4145)) and v91.ArcaneOrb:IsReady() and v47 and ((v52 and v29) or not v52) and (v76 < v111) and (v12:ArcaneCharges() < (4 - 1)) and (v12:BloodlustDown() or (v12:ManaPercentage() > (843 - (48 + 725))) or (v107 and (v91.TouchoftheMagi:CooldownRemains() > (49 - 19))))) then
-			if (v19(v91.ArcaneOrb, not v13:IsInRange(107 - 67)) or ((2639 + 1901) == (2447 - 1531))) then
-				return "arcane_orb rotation 2";
-			end
-		end
-		v102 = ((v91.ArcaneSurge:CooldownRemains() > (9 + 21)) and (v91.TouchoftheMagi:CooldownRemains() > (3 + 7))) or false;
-		if ((v91.ShiftingPower:IsReady() and v46 and ((v28 and v51) or not v51) and (v76 < v111) and v107 and (not v91.Evocation:IsAvailable() or (v91.Evocation:CooldownRemains() > (865 - (152 + 701)))) and (not v91.ArcaneSurge:IsAvailable() or (v91.ArcaneSurge:CooldownRemains() > (1323 - (430 + 881)))) and (not v91.TouchoftheMagi:IsAvailable() or (v91.TouchoftheMagi:CooldownRemains() > (5 + 7))) and (v111 > (910 - (557 + 338)))) or ((342 + 814) > (12244 - 7899))) then
-			if (((7833 - 5596) < (11288 - 7039)) and v19(v91.ShiftingPower, not v13:IsInRange(86 - 46))) then
-				return "shifting_power rotation 4";
-			end
-		end
-		if ((v91.ShiftingPower:IsReady() and v46 and ((v28 and v51) or not v51) and (v76 < v111) and not v107 and v12:BuffDown(v91.ArcaneSurgeBuff) and (v91.ArcaneSurge:CooldownRemains() > (846 - (499 + 302))) and (v111 > (881 - (39 + 827)))) or ((7405 - 4722) < (50 - 27))) then
-			if (((2768 - 2071) <= (1267 - 441)) and v19(v91.ShiftingPower, not v13:IsInRange(4 + 36))) then
-				return "shifting_power rotation 6";
-			end
-		end
-		if (((3234 - 2129) <= (189 + 987)) and v91.PresenceofMind:IsCastable() and v41 and (v12:ArcaneCharges() < (4 - 1)) and (v13:HealthPercentage() < (139 - (103 + 1))) and v91.ArcaneBombardment:IsAvailable()) then
-			if (((3933 - (475 + 79)) <= (8240 - 4428)) and v19(v91.PresenceofMind)) then
-				return "presence_of_mind rotation 8";
-			end
-		end
-		if ((v91.ArcaneBlast:IsReady() and v31 and v91.TimeAnomaly:IsAvailable() and v12:BuffUp(v91.ArcaneSurgeBuff) and (v12:BuffRemains(v91.ArcaneSurgeBuff) <= (19 - 13))) or ((102 + 686) >= (1423 + 193))) then
-			if (((3357 - (1395 + 108)) <= (9832 - 6453)) and v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast))) then
-				return "arcane_blast rotation 10";
-			end
-		end
-		if (((5753 - (7 + 1197)) == (1984 + 2565)) and v91.ArcaneBlast:IsReady() and v31 and v12:BuffUp(v91.PresenceofMindBuff) and (v13:HealthPercentage() < (13 + 22)) and v91.ArcaneBombardment:IsAvailable() and (v12:ArcaneCharges() < (322 - (27 + 292)))) then
-			if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((8855 - 5833) >= (3855 - 831))) then
-				return "arcane_blast rotation 12";
-			end
-		end
-		if (((20214 - 15394) > (4334 - 2136)) and v12:IsChanneling(v91.ArcaneMissiles) and (v12:GCDRemains() == (0 - 0)) and v12:BuffUp(v91.NetherPrecisionBuff) and (((v12:ManaPercentage() > (169 - (43 + 96))) and (v91.TouchoftheMagi:CooldownRemains() > (122 - 92))) or (v12:ManaPercentage() > (158 - 88))) and v12:BuffDown(v91.ArcaneArtilleryBuff)) then
-			if (v19(v93.StopCasting, not v13:IsSpellInRange(v91.ArcaneMissiles)) or ((881 + 180) >= (1382 + 3509))) then
-				return "arcane_missiles interrupt rotation 20";
-			end
-		end
-		if (((2695 - 1331) <= (1715 + 2758)) and v91.ArcaneMissiles:IsCastable() and v36 and v12:BuffUp(v91.ClearcastingBuff) and (v12:BuffStack(v91.ClearcastingBuff) == v109)) then
-			if (v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles)) or ((6737 - 3142) <= (1 + 2))) then
-				return "arcane_missiles rotation 14";
-			end
-		end
-		if ((v91.NetherTempest:IsReady() and v40 and v13:DebuffRefreshable(v91.NetherTempestDebuff) and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and (v12:BuffUp(v91.TemporalWarpBuff) or (v12:ManaPercentage() < (1 + 9)) or not v91.ShiftingPower:IsAvailable()) and v12:BuffDown(v91.ArcaneSurgeBuff) and (v111 >= (1763 - (1414 + 337)))) or ((6612 - (1642 + 298)) == (10041 - 6189))) then
-			if (((4484 - 2925) == (4626 - 3067)) and v19(v91.NetherTempest, not v13:IsSpellInRange(v91.NetherTempest))) then
-				return "nether_tempest rotation 16";
-			end
-		end
-		if ((v91.ArcaneBarrage:IsReady() and v32 and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and (v12:ManaPercentage() < (17 + 33)) and not v91.Evocation:IsAvailable() and (v111 > (16 + 4))) or ((2724 - (357 + 615)) <= (554 + 234))) then
-			if (v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage)) or ((9586 - 5679) == (152 + 25))) then
-				return "arcane_barrage rotation 18";
-			end
-		end
-		if (((7436 - 3966) > (444 + 111)) and v91.ArcaneBarrage:IsReady() and v32 and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and (v12:ManaPercentage() < (5 + 65)) and v102 and v12:BloodlustUp() and (v91.TouchoftheMagi:CooldownRemains() > (4 + 1)) and (v111 > (1321 - (384 + 917)))) then
-			if (v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage)) or ((1669 - (128 + 569)) == (2188 - (1407 + 136)))) then
-				return "arcane_barrage rotation 20";
-			end
-		end
-		if (((5069 - (687 + 1200)) >= (3825 - (556 + 1154))) and v91.ArcaneMissiles:IsCastable() and v36 and v12:BuffUp(v91.ClearcastingBuff) and v12:BuffUp(v91.ConcentrationBuff) and (v12:ArcaneCharges() == v12:ArcaneChargesMax())) then
-			if (((13695 - 9802) < (4524 - (9 + 86))) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
-				return "arcane_missiles rotation 22";
-			end
-		end
-		if ((v91.ArcaneBlast:IsReady() and v31 and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and v12:BuffUp(v91.NetherPrecisionBuff)) or ((3288 - (275 + 146)) < (310 + 1595))) then
-			if (v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast)) or ((1860 - (29 + 35)) >= (17953 - 13902))) then
-				return "arcane_blast rotation 24";
-			end
-		end
-		if (((4835 - 3216) <= (16580 - 12824)) and v91.ArcaneBarrage:IsReady() and v32 and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and (v12:ManaPercentage() < (40 + 20)) and v102 and (v91.TouchoftheMagi:CooldownRemains() > (1022 - (53 + 959))) and (v91.Evocation:CooldownRemains() > (448 - (312 + 96))) and (v111 > (34 - 14))) then
-			if (((889 - (147 + 138)) == (1503 - (813 + 86))) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
-				return "arcane_barrage rotation 26";
-			end
-		end
-		if ((v91.ArcaneMissiles:IsCastable() and v36 and v12:BuffUp(v91.ClearcastingBuff) and v12:BuffDown(v91.NetherPrecisionBuff) and (not v107 or not v105)) or ((4053 + 431) == (1667 - 767))) then
-			if (v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles)) or ((4951 - (18 + 474)) <= (376 + 737))) then
-				return "arcane_missiles rotation 30";
-			end
-		end
-		if (((11854 - 8222) > (4484 - (860 + 226))) and v91.ArcaneBlast:IsReady() and v31) then
-			if (((4385 - (121 + 182)) <= (606 + 4311)) and v19(v91.ArcaneBlast, not v13:IsSpellInRange(v91.ArcaneBlast))) then
-				return "arcane_blast rotation 32";
-			end
-		end
-		if (((6072 - (988 + 252)) >= (157 + 1229)) and v91.ArcaneBarrage:IsReady() and v32) then
-			if (((43 + 94) == (2107 - (49 + 1921))) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
-				return "arcane_barrage rotation 34";
-			end
 		end
 	end
 	local function v124()
-		if ((v91.ShiftingPower:IsReady() and v46 and ((v28 and v51) or not v51) and (v76 < v111) and (not v91.Evocation:IsAvailable() or (v91.Evocation:CooldownRemains() > (902 - (223 + 667)))) and (not v91.ArcaneSurge:IsAvailable() or (v91.ArcaneSurge:CooldownRemains() > (64 - (51 + 1)))) and (not v91.TouchoftheMagi:IsAvailable() or (v91.TouchoftheMagi:CooldownRemains() > (20 - 8))) and v12:BuffDown(v91.ArcaneSurgeBuff) and ((not v91.ChargedOrb:IsAvailable() and (v91.ArcaneOrb:CooldownRemains() > (25 - 13))) or (v91.ArcaneOrb:Charges() == (1125 - (146 + 979))) or (v91.ArcaneOrb:CooldownRemains() > (4 + 8)))) or ((2175 - (311 + 294)) >= (12080 - 7748))) then
-			if (v19(v91.ShiftingPower, not v13:IsInRange(17 + 23), true) or ((5507 - (496 + 947)) <= (3177 - (1233 + 125)))) then
-				return "shifting_power aoe_rotation 2";
+		local v139 = 0 + 0;
+		while true do
+			if (((897 + 529) >= (2406 - (384 + 917))) and ((702 - (128 + 569)) == v139)) then
+				if (((4297 - (1407 + 136)) <= (5266 - (687 + 1200))) and v92.ArcaneMissiles:IsCastable() and v37 and v12:BuffUp(v92.ClearcastingBuff) and v12:BuffDown(v92.NetherPrecisionBuff) and (not v108 or not v106)) then
+					if (v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles)) or ((5637 - (556 + 1154)) == (4970 - 3557))) then
+						return "arcane_missiles rotation 30";
+					end
+				end
+				if ((v92.ArcaneBlast:IsReady() and v32) or ((1249 - (9 + 86)) <= (1209 - (275 + 146)))) then
+					if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((268 + 1375) > (3443 - (29 + 35)))) then
+						return "arcane_blast rotation 32";
+					end
+				end
+				if ((v92.ArcaneBarrage:IsReady() and v33) or ((12422 - 9619) > (13587 - 9038))) then
+					if (v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage)) or ((971 - 751) >= (1969 + 1053))) then
+						return "arcane_barrage rotation 34";
+					end
+				end
+				break;
 			end
-		end
-		if ((v91.NetherTempest:IsReady() and v40 and v13:DebuffRefreshable(v91.NetherTempestDebuff) and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and v12:BuffDown(v91.ArcaneSurgeBuff) and ((v98 > (3 + 3)) or (v99 > (6 + 0)) or not v91.OrbBarrage:IsAvailable())) or ((948 + 4038) < (3219 - (963 + 682)))) then
-			if (((3694 + 732) > (1676 - (504 + 1000))) and v19(v91.NetherTempest, not v13:IsSpellInRange(v91.NetherTempest))) then
-				return "nether_tempest aoe_rotation 4";
+			if (((3834 - (53 + 959)) == (3230 - (312 + 96))) and ((1 - 0) == v139)) then
+				if ((v92.ShiftingPower:IsReady() and v47 and ((v29 and v52) or not v52) and (v77 < v112) and not v108 and v12:BuffDown(v92.ArcaneSurgeBuff) and (v92.ArcaneSurge:CooldownRemains() > (330 - (147 + 138))) and (v112 > (914 - (813 + 86)))) or ((959 + 102) == (3440 - 1583))) then
+					if (((3252 - (18 + 474)) > (461 + 903)) and v20(v92.ShiftingPower, not v13:IsInRange(130 - 90))) then
+						return "shifting_power rotation 6";
+					end
+				end
+				if ((v92.PresenceofMind:IsCastable() and v42 and (v12:ArcaneCharges() < (1089 - (860 + 226))) and (v13:HealthPercentage() < (338 - (121 + 182))) and v92.ArcaneBombardment:IsAvailable()) or ((604 + 4298) <= (4835 - (988 + 252)))) then
+					if (v20(v92.PresenceofMind) or ((436 + 3416) == (92 + 201))) then
+						return "presence_of_mind rotation 8";
+					end
+				end
+				if ((v92.ArcaneBlast:IsReady() and v32 and v92.TimeAnomaly:IsAvailable() and v12:BuffUp(v92.ArcaneSurgeBuff) and (v12:BuffRemains(v92.ArcaneSurgeBuff) <= (1976 - (49 + 1921)))) or ((2449 - (223 + 667)) == (4640 - (51 + 1)))) then
+					if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((7717 - 3233) == (1687 - 899))) then
+						return "arcane_blast rotation 10";
+					end
+				end
+				v139 = 1127 - (146 + 979);
 			end
-		end
-		if (((395 + 191) > (415 + 40)) and v91.ArcaneMissiles:IsCastable() and v36 and v12:BuffUp(v91.ArcaneArtilleryBuff) and v12:BuffUp(v91.ClearcastingBuff) and (v91.TouchoftheMagi:CooldownRemains() > (v12:BuffRemains(v91.ArcaneArtilleryBuff) + 1 + 4))) then
-			if (((1217 - 391) == (706 + 120)) and v19(v91.ArcaneMissiles, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
-				return "arcane_missiles aoe_rotation 6";
+			if (((1290 + 3278) >= (4512 - (311 + 294))) and (v139 == (11 - 7))) then
+				if (((528 + 718) < (4913 - (496 + 947))) and v92.ArcaneMissiles:IsCastable() and v37 and v12:BuffUp(v92.ClearcastingBuff) and v12:BuffUp(v92.ConcentrationBuff) and (v12:ArcaneCharges() == v12:ArcaneChargesMax())) then
+					if (((5426 - (1233 + 125)) >= (395 + 577)) and v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
+						return "arcane_missiles rotation 22";
+					end
+				end
+				if (((443 + 50) < (740 + 3153)) and v92.ArcaneBlast:IsReady() and v32 and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and v12:BuffUp(v92.NetherPrecisionBuff)) then
+					if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((3118 - (963 + 682)) >= (2781 + 551))) then
+						return "arcane_blast rotation 24";
+					end
+				end
+				if ((v92.ArcaneBarrage:IsReady() and v33 and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and (v12:ManaPercentage() < (1564 - (504 + 1000))) and v103 and (v92.TouchoftheMagi:CooldownRemains() > (7 + 3)) and (v92.Evocation:CooldownRemains() > (37 + 3)) and (v112 > (2 + 18))) or ((5973 - 1922) <= (989 + 168))) then
+					if (((352 + 252) < (3063 - (156 + 26))) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
+						return "arcane_barrage rotation 26";
+					end
+				end
+				v139 = 3 + 2;
 			end
-		end
-		if ((v91.ArcaneBarrage:IsReady() and v32 and ((v98 <= (3 + 1)) or (v99 <= (186 - (156 + 26))) or v12:BuffUp(v91.ClearcastingBuff)) and (v12:ArcaneCharges() == (2 + 1))) or ((6287 - 2268) > (4605 - (149 + 15)))) then
-			if (((2977 - (890 + 70)) < (4378 - (39 + 78))) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
-				return "arcane_barrage aoe_rotation 8";
+			if ((v139 == (3 - 0)) or ((1064 - (149 + 15)) == (4337 - (890 + 70)))) then
+				if (((4576 - (39 + 78)) > (1073 - (14 + 468))) and v92.NetherTempest:IsReady() and v41 and v13:DebuffRefreshable(v92.NetherTempestDebuff) and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and (v12:BuffUp(v92.TemporalWarpBuff) or (v12:ManaPercentage() < (21 - 11)) or not v92.ShiftingPower:IsAvailable()) and v12:BuffDown(v92.ArcaneSurgeBuff) and (v112 >= (33 - 21))) then
+					if (((1754 + 1644) >= (1439 + 956)) and v20(v92.NetherTempest, not v13:IsSpellInRange(v92.NetherTempest))) then
+						return "nether_tempest rotation 16";
+					end
+				end
+				if ((v92.ArcaneBarrage:IsReady() and v33 and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and (v12:ManaPercentage() < (11 + 39)) and not v92.Evocation:IsAvailable() and (v112 > (10 + 10))) or ((572 + 1611) >= (5405 - 2581))) then
+					if (((1914 + 22) == (6803 - 4867)) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
+						return "arcane_barrage rotation 18";
+					end
+				end
+				if ((v92.ArcaneBarrage:IsReady() and v33 and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and (v12:ManaPercentage() < (2 + 68)) and v103 and v12:BloodlustUp() and (v92.TouchoftheMagi:CooldownRemains() > (56 - (12 + 39))) and (v112 > (19 + 1))) or ((14956 - 10124) < (15360 - 11047))) then
+					if (((1212 + 2876) > (2040 + 1834)) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
+						return "arcane_barrage rotation 20";
+					end
+				end
+				v139 = 9 - 5;
 			end
-		end
-		if (((5198 - (14 + 468)) > (175 - 95)) and v91.ArcaneOrb:IsReady() and v47 and ((v52 and v29) or not v52) and (v76 < v111) and (v12:ArcaneCharges() == (0 - 0)) and (v91.TouchoftheMagi:CooldownRemains() > (10 + 8))) then
-			if (v19(v91.ArcaneOrb, not v13:IsInRange(25 + 15)) or ((746 + 2761) == (1478 + 1794))) then
-				return "arcane_orb aoe_rotation 10";
+			if (((2886 + 1446) == (20935 - 16603)) and ((1712 - (1596 + 114)) == v139)) then
+				if (((10440 - 6441) >= (3613 - (164 + 549))) and v92.ArcaneBlast:IsReady() and v32 and v12:BuffUp(v92.PresenceofMindBuff) and (v13:HealthPercentage() < (1473 - (1059 + 379))) and v92.ArcaneBombardment:IsAvailable() and (v12:ArcaneCharges() < (3 - 0))) then
+					if (v20(v92.ArcaneBlast, not v13:IsSpellInRange(v92.ArcaneBlast)) or ((1309 + 1216) > (686 + 3378))) then
+						return "arcane_blast rotation 12";
+					end
+				end
+				if (((4763 - (145 + 247)) == (3587 + 784)) and v12:IsChanneling(v92.ArcaneMissiles) and (v12:GCDRemains() == (0 + 0)) and v12:BuffUp(v92.NetherPrecisionBuff) and (((v12:ManaPercentage() > (88 - 58)) and (v92.TouchoftheMagi:CooldownRemains() > (6 + 24))) or (v12:ManaPercentage() > (61 + 9))) and v12:BuffDown(v92.ArcaneArtilleryBuff)) then
+					if (v20(v94.StopCasting, not v13:IsSpellInRange(v92.ArcaneMissiles)) or ((431 - 165) > (5706 - (254 + 466)))) then
+						return "arcane_missiles interrupt rotation 20";
+					end
+				end
+				if (((2551 - (544 + 16)) >= (2939 - 2014)) and v92.ArcaneMissiles:IsCastable() and v37 and v12:BuffUp(v92.ClearcastingBuff) and (v12:BuffStack(v92.ClearcastingBuff) == v110)) then
+					if (((1083 - (294 + 334)) < (2306 - (236 + 17))) and v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
+						return "arcane_missiles rotation 14";
+					end
+				end
+				v139 = 2 + 1;
 			end
-		end
-		if ((v91.ArcaneBarrage:IsReady() and v32 and ((v12:ArcaneCharges() == v12:ArcaneChargesMax()) or (v12:ManaPercentage() < (3 + 7)))) or ((1676 - 800) >= (3040 + 35))) then
-			if (((15292 - 10940) > (65 + 2489)) and v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage))) then
-				return "arcane_barrage aoe_rotation 12";
-			end
-		end
-		if ((v91.ArcaneExplosion:IsCastable() and v33) or ((4457 - (12 + 39)) < (3762 + 281))) then
-			if (v19(v91.ArcaneExplosion, not v13:IsInRange(30 - 20)) or ((6727 - 4838) >= (1003 + 2380))) then
-				return "arcane_explosion aoe_rotation 14";
+			if ((v139 == (0 + 0)) or ((3110 - 2284) == (22967 - 18116))) then
+				if (((95 + 88) == (151 + 32)) and v92.ArcaneOrb:IsReady() and v48 and ((v53 and v30) or not v53) and (v77 < v112) and (v12:ArcaneCharges() < (797 - (413 + 381))) and (v12:BloodlustDown() or (v12:ManaPercentage() > (3 + 67)) or (v108 and (v92.TouchoftheMagi:CooldownRemains() > (63 - 33))))) then
+					if (((3010 - 1851) <= (3758 - (582 + 1388))) and v20(v92.ArcaneOrb, not v13:IsInRange(68 - 28))) then
+						return "arcane_orb rotation 2";
+					end
+				end
+				v103 = ((v92.ArcaneSurge:CooldownRemains() > (22 + 8)) and (v92.TouchoftheMagi:CooldownRemains() > (374 - (326 + 38)))) or false;
+				if ((v92.ShiftingPower:IsReady() and v47 and ((v29 and v52) or not v52) and (v77 < v112) and v108 and (not v92.Evocation:IsAvailable() or (v92.Evocation:CooldownRemains() > (35 - 23))) and (not v92.ArcaneSurge:IsAvailable() or (v92.ArcaneSurge:CooldownRemains() > (16 - 4))) and (not v92.TouchoftheMagi:IsAvailable() or (v92.TouchoftheMagi:CooldownRemains() > (632 - (47 + 573)))) and (v112 > (6 + 9))) or ((14894 - 11387) > (7007 - 2689))) then
+					if (v20(v92.ShiftingPower, not v13:IsInRange(1704 - (1269 + 395))) or ((3567 - (76 + 416)) <= (3408 - (319 + 124)))) then
+						return "shifting_power rotation 4";
+					end
+				end
+				v139 = 2 - 1;
 			end
 		end
 	end
 	local function v125()
-		local v136 = 0 + 0;
-		while true do
-			if (((4797 - 2905) <= (1821 + 913)) and (v136 == (0 - 0))) then
-				if (((3633 - (1596 + 114)) < (5790 - 3572)) and v91.TouchoftheMagi:IsReady() and v49 and ((v54 and v29) or not v54) and (v76 < v111) and (v12:PrevGCDP(714 - (164 + 549), v91.ArcaneBarrage))) then
-					if (((3611 - (1059 + 379)) > (469 - 90)) and v19(v91.TouchoftheMagi, not v13:IsSpellInRange(v91.TouchoftheMagi))) then
-						return "touch_of_the_magi main 30";
-					end
-				end
-				if ((v12:IsChanneling(v91.Evocation) and (((v12:ManaPercentage() >= (50 + 45)) and not v91.SiphonStorm:IsAvailable()) or ((v12:ManaPercentage() > (v111 * (1 + 3))) and not ((v111 > (402 - (145 + 247))) and (v91.ArcaneSurge:CooldownRemains() < (1 + 0)))))) or ((1198 + 1393) == (10106 - 6697))) then
-					if (((867 + 3647) > (2864 + 460)) and v19(v93.StopCasting, not v13:IsSpellInRange(v91.ArcaneMissiles))) then
-						return "cancel_action evocation main 32";
-					end
-				end
-				if ((v91.ArcaneBarrage:IsReady() and v32 and (v111 < (2 - 0))) or ((928 - (254 + 466)) >= (5388 - (544 + 16)))) then
-					if (v19(v91.ArcaneBarrage, not v13:IsSpellInRange(v91.ArcaneBarrage)) or ((5030 - 3447) > (4195 - (294 + 334)))) then
-						return "arcane_barrage main 34";
-					end
-				end
-				v136 = 254 - (236 + 17);
+		if (((2372 - (564 + 443)) <= (5567 - 3556)) and v92.ShiftingPower:IsReady() and v47 and ((v29 and v52) or not v52) and (v77 < v112) and (not v92.Evocation:IsAvailable() or (v92.Evocation:CooldownRemains() > (470 - (337 + 121)))) and (not v92.ArcaneSurge:IsAvailable() or (v92.ArcaneSurge:CooldownRemains() > (34 - 22))) and (not v92.TouchoftheMagi:IsAvailable() or (v92.TouchoftheMagi:CooldownRemains() > (39 - 27))) and v12:BuffDown(v92.ArcaneSurgeBuff) and ((not v92.ChargedOrb:IsAvailable() and (v92.ArcaneOrb:CooldownRemains() > (1923 - (1261 + 650)))) or (v92.ArcaneOrb:Charges() == (0 + 0)) or (v92.ArcaneOrb:CooldownRemains() > (18 - 6)))) then
+			if (v20(v92.ShiftingPower, not v13:IsInRange(1857 - (772 + 1045)), true) or ((392 + 2384) > (3719 - (102 + 42)))) then
+				return "shifting_power aoe_rotation 2";
 			end
-			if ((v136 == (1 + 1)) or ((1023 + 290) == (2990 - 2196))) then
-				if (((15027 - 11853) > (1495 + 1407)) and v92.ManaGem:IsReady() and v39 and not v91.CascadingPower:IsAvailable() and v12:PrevGCDP(1 + 0, v91.ArcaneSurge) and (not v106 or (v106 and v12:PrevGCDP(796 - (413 + 381), v91.ArcaneSurge)))) then
-					if (((174 + 3946) <= (9060 - 4800)) and v19(v93.ManaGem)) then
-						return "mana_gem main 42";
-					end
-				end
-				if ((not v107 and ((v91.ArcaneSurge:CooldownRemains() <= (v112 * ((2 - 1) + v22(v91.NetherTempest:IsAvailable() and v91.ArcaneEcho:IsAvailable())))) or (v12:BuffRemains(v91.ArcaneSurgeBuff) > ((1973 - (582 + 1388)) * v22(v12:HasTier(51 - 21, 2 + 0) and not v12:HasTier(394 - (326 + 38), 11 - 7)))) or v12:BuffUp(v91.ArcaneOverloadBuff)) and (v91.Evocation:CooldownRemains() > (64 - 19)) and ((v91.TouchoftheMagi:CooldownRemains() < (v112 * (624 - (47 + 573)))) or (v91.TouchoftheMagi:CooldownRemains() > (8 + 12))) and ((v98 < v101) or (v99 < v101))) or ((3749 - 2866) > (7754 - 2976))) then
-					local v200 = 1664 - (1269 + 395);
-					while true do
-						if (((492 - (76 + 416)) == v200) or ((4063 - (319 + 124)) >= (11180 - 6289))) then
-							v25 = v118();
-							if (((5265 - (564 + 443)) > (2593 - 1656)) and v25) then
-								return v25;
-							end
-							break;
-						end
-					end
-				end
-				if ((not v107 and (v91.ArcaneSurge:CooldownRemains() > (488 - (337 + 121))) and (v91.RadiantSpark:CooldownUp() or v13:DebuffUp(v91.RadiantSparkDebuff) or v13:DebuffUp(v91.RadiantSparkVulnerability)) and ((v91.TouchoftheMagi:CooldownRemains() <= (v112 * (8 - 5))) or v13:DebuffUp(v91.TouchoftheMagiDebuff)) and ((v98 < v101) or (v99 < v101))) or ((16219 - 11350) < (2817 - (1261 + 650)))) then
-					v25 = v118();
-					if (v25 or ((519 + 706) > (6737 - 2509))) then
-						return v25;
-					end
-				end
-				v136 = 1820 - (772 + 1045);
+		end
+		if ((v92.NetherTempest:IsReady() and v41 and v13:DebuffRefreshable(v92.NetherTempestDebuff) and (v12:ArcaneCharges() == v12:ArcaneChargesMax()) and v12:BuffDown(v92.ArcaneSurgeBuff) and ((v99 > (1850 - (1524 + 320))) or (v100 > (1276 - (1049 + 221))) or not v92.OrbBarrage:IsAvailable())) or ((2710 - (18 + 138)) == (11758 - 6954))) then
+			if (((3679 - (67 + 1035)) == (2925 - (136 + 212))) and v20(v92.NetherTempest, not v13:IsSpellInRange(v92.NetherTempest))) then
+				return "nether_tempest aoe_rotation 4";
 			end
-			if (((470 + 2858) > (2382 - (102 + 42))) and (v136 == (1848 - (1524 + 320)))) then
-				if (((5109 - (1049 + 221)) > (1561 - (18 + 138))) and v28 and v107 and v13:DebuffUp(v91.TouchoftheMagiDebuff) and ((v98 < v101) or (v99 < v101))) then
-					v25 = v121();
-					if (v25 or ((3164 - 1871) <= (1609 - (67 + 1035)))) then
-						return v25;
-					end
-				end
-				if ((v98 >= v101) or (v99 >= v101) or ((3244 - (136 + 212)) < (3420 - 2615))) then
-					v25 = v124();
-					if (((1856 + 460) == (2136 + 180)) and v25) then
-						return v25;
-					end
-				end
-				if ((v98 < v101) or (v99 < v101) or ((4174 - (240 + 1364)) == (2615 - (1050 + 32)))) then
-					local v201 = 0 - 0;
-					while true do
-						if ((v201 == (0 + 0)) or ((1938 - (331 + 724)) == (118 + 1342))) then
-							v25 = v123();
-							if (v25 or ((5263 - (269 + 375)) <= (1724 - (267 + 458)))) then
-								return v25;
-							end
-							break;
-						end
-					end
-				end
-				break;
+		end
+		if ((v92.ArcaneMissiles:IsCastable() and v37 and v12:BuffUp(v92.ArcaneArtilleryBuff) and v12:BuffUp(v92.ClearcastingBuff) and (v92.TouchoftheMagi:CooldownRemains() > (v12:BuffRemains(v92.ArcaneArtilleryBuff) + (21 - 16)))) or ((5 + 1) >= (1742 + 147))) then
+			if (((2110 - (240 + 1364)) <= (2974 - (1050 + 32))) and v20(v92.ArcaneMissiles, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
+				return "arcane_missiles aoe_rotation 6";
 			end
-			if ((v136 == (1 + 2)) or ((6557 - 3147) > (4934 - (667 + 151)))) then
-				if ((v28 and v91.RadiantSpark:IsAvailable() and v103) or ((2400 - (1410 + 87)) >= (4956 - (1504 + 393)))) then
-					local v202 = 0 - 0;
-					while true do
-						if ((v202 == (0 - 0)) or ((4772 - (461 + 335)) < (366 + 2491))) then
-							v25 = v120();
-							if (((6691 - (1730 + 31)) > (3974 - (728 + 939))) and v25) then
-								return v25;
-							end
-							break;
-						end
-					end
-				end
-				if ((v28 and v107 and v91.RadiantSpark:IsAvailable() and v104) or ((14329 - 10283) < (2618 - 1327))) then
-					v25 = v119();
-					if (v25 or ((9717 - 5476) == (4613 - (138 + 930)))) then
-						return v25;
-					end
-				end
-				if ((v28 and v13:DebuffUp(v91.TouchoftheMagiDebuff) and ((v98 >= v101) or (v99 >= v101))) or ((3700 + 348) > (3309 + 923))) then
-					v25 = v122();
-					if (v25 or ((1500 + 250) >= (14180 - 10707))) then
-						return v25;
-					end
-				end
-				v136 = 1770 - (459 + 1307);
+		end
+		if ((v92.ArcaneBarrage:IsReady() and v33 and ((v99 <= (14 - 10)) or (v100 <= (3 + 1)) or v12:BuffUp(v92.ClearcastingBuff)) and (v12:ArcaneCharges() == (1058 - (331 + 724)))) or ((163 + 1845) > (2862 - (269 + 375)))) then
+			if (((1104 - (267 + 458)) <= (1290 + 2857)) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
+				return "arcane_barrage aoe_rotation 8";
 			end
-			if (((5036 - (474 + 1396)) == (5528 - 2362)) and (v136 == (1 + 0))) then
-				if (((6 + 1757) < (10666 - 6942)) and v91.Evocation:IsCastable() and v38 and not v105 and v12:BuffDown(v91.ArcaneSurgeBuff) and v13:DebuffDown(v91.TouchoftheMagiDebuff) and (((v12:ManaPercentage() < (2 + 8)) and (v91.TouchoftheMagi:CooldownRemains() < (66 - 46))) or (v91.TouchoftheMagi:CooldownRemains() < (65 - 50))) and (v12:ManaPercentage() < (v111 * (595 - (562 + 29))))) then
-					if (((49 + 8) <= (4142 - (374 + 1045))) and v19(v91.Evocation)) then
-						return "evocation main 36";
-					end
-				end
-				if ((v91.ConjureManaGem:IsCastable() and v37 and v13:DebuffDown(v91.TouchoftheMagiDebuff) and v12:BuffDown(v91.ArcaneSurgeBuff) and (v91.ArcaneSurge:CooldownRemains() < (24 + 6)) and (v91.ArcaneSurge:CooldownRemains() < v111) and not v92.ManaGem:Exists()) or ((6427 - 4357) == (1081 - (448 + 190)))) then
-					if (v19(v91.ConjureManaGem) or ((874 + 1831) == (629 + 764))) then
-						return "conjure_mana_gem main 38";
-					end
-				end
-				if ((v92.ManaGem:IsReady() and v39 and v91.CascadingPower:IsAvailable() and (v12:BuffStack(v91.ClearcastingBuff) < (2 + 0)) and v12:BuffUp(v91.ArcaneSurgeBuff)) or ((17689 - 13088) < (189 - 128))) then
-					if (v19(v93.ManaGem) or ((2884 - (1307 + 187)) >= (18812 - 14068))) then
-						return "mana_gem main 40";
-					end
-				end
-				v136 = 4 - 2;
+		end
+		if ((v92.ArcaneOrb:IsReady() and v48 and ((v53 and v30) or not v53) and (v77 < v112) and (v12:ArcaneCharges() == (0 - 0)) and (v92.TouchoftheMagi:CooldownRemains() > (836 - (667 + 151)))) or ((6011 - (1410 + 87)) <= (2906 - (1504 + 393)))) then
+			if (v20(v92.ArcaneOrb, not v13:IsInRange(108 - 68)) or ((9069 - 5573) == (1988 - (461 + 335)))) then
+				return "arcane_orb aoe_rotation 10";
+			end
+		end
+		if ((v92.ArcaneBarrage:IsReady() and v33 and ((v12:ArcaneCharges() == v12:ArcaneChargesMax()) or (v12:ManaPercentage() < (2 + 8)))) or ((1969 - (1730 + 31)) == (4626 - (728 + 939)))) then
+			if (((15147 - 10870) >= (2662 - 1349)) and v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage))) then
+				return "arcane_barrage aoe_rotation 12";
+			end
+		end
+		if (((5927 - 3340) < (4242 - (138 + 930))) and v92.ArcaneExplosion:IsCastable() and v34) then
+			if (v20(v92.ArcaneExplosion, not v13:IsInRange(10 + 0)) or ((3222 + 898) <= (1884 + 314))) then
+				return "arcane_explosion aoe_rotation 14";
 			end
 		end
 	end
 	local function v126()
-		local v137 = 0 - 0;
-		while true do
-			if ((v137 == (689 - (232 + 451))) or ((1913 + 90) > (3387 + 447))) then
-				v54 = EpicSettings.Settings['touchOfTheMagiWithMiniCD'];
-				v55 = EpicSettings.Settings['useAlterTime'];
-				v56 = EpicSettings.Settings['usePrismaticBarrier'];
-				v57 = EpicSettings.Settings['useGreaterInvisibility'];
-				v137 = 571 - (510 + 54);
+		if ((v92.TouchoftheMagi:IsReady() and v50 and ((v55 and v30) or not v55) and (v77 < v112) and (v12:PrevGCDP(4 - 3, v92.ArcaneBarrage))) or ((3362 - (459 + 1307)) == (2728 - (474 + 1396)))) then
+			if (((5622 - 2402) == (3018 + 202)) and v20(v92.TouchoftheMagi, not v13:IsSpellInRange(v92.TouchoftheMagi))) then
+				return "touch_of_the_magi main 30";
 			end
-			if (((20 - 10) == v137) or ((192 - (13 + 23)) > (7627 - 3714))) then
-				v87 = EpicSettings.Settings['useTimeWarpWithTalent'];
-				v88 = EpicSettings.Settings['mirrorImageBeforePull'];
-				v90 = EpicSettings.Settings['useRemoveCurseWithAfflicted'];
-				break;
+		end
+		if ((v12:IsChanneling(v92.Evocation) and (((v12:ManaPercentage() >= (1 + 94)) and not v92.SiphonStorm:IsAvailable()) or ((v12:ManaPercentage() > (v112 * (11 - 7))) and not ((v112 > (2 + 8)) and (v92.ArcaneSurge:CooldownRemains() < (3 - 2)))))) or ((6114 - 4712) > (4211 - (562 + 29)))) then
+			if (((2195 + 379) == (3993 - (374 + 1045))) and v20(v94.StopCasting, not v13:IsSpellInRange(v92.ArcaneMissiles))) then
+				return "cancel_action evocation main 32";
 			end
-			if (((279 - 84) == (353 - 158)) and (v137 == (1088 - (830 + 258)))) then
-				v31 = EpicSettings.Settings['useArcaneBlast'];
-				v32 = EpicSettings.Settings['useArcaneBarrage'];
-				v33 = EpicSettings.Settings['useArcaneExplosion'];
-				v34 = EpicSettings.Settings['useArcaneFamiliar'];
-				v137 = 3 - 2;
+		end
+		if (((1424 + 374) < (8560 - 5803)) and v92.ArcaneBarrage:IsReady() and v33 and (v112 < (640 - (448 + 190)))) then
+			if (v20(v92.ArcaneBarrage, not v13:IsSpellInRange(v92.ArcaneBarrage)) or ((122 + 255) > (1176 + 1428))) then
+				return "arcane_barrage main 34";
 			end
-			if (((1943 + 1162) >= (1529 + 267)) and ((1443 - (860 + 581)) == v137)) then
-				v39 = EpicSettings.Settings['useManaGem'];
-				v40 = EpicSettings.Settings['useNetherTempest'];
-				v41 = EpicSettings.Settings['usePresenceOfMind'];
-				v89 = EpicSettings.Settings['cancelPOM'];
-				v137 = 10 - 7;
+		end
+		if (((371 + 197) < (3502 - 2591)) and v92.Evocation:IsCastable() and v39 and not v106 and v12:BuffDown(v92.ArcaneSurgeBuff) and v13:DebuffDown(v92.TouchoftheMagiDebuff) and (((v12:ManaPercentage() < (31 - 21)) and (v92.TouchoftheMagi:CooldownRemains() < (1514 - (1307 + 187)))) or (v92.TouchoftheMagi:CooldownRemains() < (59 - 44))) and (v12:ManaPercentage() < (v112 * (8 - 4)))) then
+			if (((10072 - 6787) < (4911 - (232 + 451))) and v20(v92.Evocation)) then
+				return "evocation main 36";
 			end
-			if (((3476 + 903) >= (2372 - (237 + 4))) and (v137 == (20 - 11))) then
-				v66 = EpicSettings.Settings['iceColdHP'] or (0 - 0);
-				v67 = EpicSettings.Settings['mirrorImageHP'] or (0 - 0);
-				v68 = EpicSettings.Settings['massBarrierHP'] or (0 + 0);
-				v86 = EpicSettings.Settings['useSpellStealTarget'];
-				v137 = 6 + 4;
+		end
+		if (((3740 + 176) > (2940 + 388)) and v92.ConjureManaGem:IsCastable() and v38 and v13:DebuffDown(v92.TouchoftheMagiDebuff) and v12:BuffDown(v92.ArcaneSurgeBuff) and (v92.ArcaneSurge:CooldownRemains() < (594 - (510 + 54))) and (v92.ArcaneSurge:CooldownRemains() < v112) and not v93.ManaGem:Exists()) then
+			if (((5036 - 2536) < (3875 - (13 + 23))) and v20(v92.ConjureManaGem)) then
+				return "conjure_mana_gem main 38";
 			end
-			if (((14512 - 10668) >= (877 + 1166)) and ((1 + 0) == v137)) then
-				v35 = EpicSettings.Settings['useArcaneIntellect'];
-				v36 = EpicSettings.Settings['useArcaneMissiles'];
-				v37 = EpicSettings.Settings['useConjureManaGem'];
-				v38 = EpicSettings.Settings['useEvocation'];
-				v137 = 1428 - (85 + 1341);
+		end
+		if (((988 - 481) == (728 - 221)) and v93.ManaGem:IsReady() and v40 and v92.CascadingPower:IsAvailable() and (v12:BuffStack(v92.ClearcastingBuff) < (3 - 1)) and v12:BuffUp(v92.ArcaneSurgeBuff)) then
+			if (((1328 - (830 + 258)) <= (11164 - 7999)) and v20(v94.ManaGem)) then
+				return "mana_gem main 40";
 			end
-			if ((v137 == (6 - 2)) or ((9127 - 5895) <= (3103 - (45 + 327)))) then
-				v46 = EpicSettings.Settings['useShiftingPower'];
-				v47 = EpicSettings.Settings['useArcaneOrb'];
-				v48 = EpicSettings.Settings['useRadiantSpark'];
-				v49 = EpicSettings.Settings['useTouchOfTheMagi'];
-				v137 = 9 - 4;
+		end
+		if (((522 + 312) >= (685 + 120)) and v93.ManaGem:IsReady() and v40 and not v92.CascadingPower:IsAvailable() and v12:PrevGCDP(1442 - (860 + 581), v92.ArcaneSurge) and (not v107 or (v107 and v12:PrevGCDP(7 - 5, v92.ArcaneSurge)))) then
+			if (v20(v94.ManaGem) or ((3026 + 786) < (2557 - (237 + 4)))) then
+				return "mana_gem main 42";
 			end
-			if (((5407 - (444 + 58)) == (2132 + 2773)) and (v137 == (2 + 6))) then
-				v62 = EpicSettings.Settings['alterTimeHP'] or (0 + 0);
-				v63 = EpicSettings.Settings['prismaticBarrierHP'] or (0 - 0);
-				v64 = EpicSettings.Settings['greaterInvisibilityHP'] or (1732 - (64 + 1668));
-				v65 = EpicSettings.Settings['iceBlockHP'] or (1973 - (1227 + 746));
-				v137 = 27 - 18;
+		end
+		if ((not v108 and ((v92.ArcaneSurge:CooldownRemains() <= (v113 * ((2 - 1) + v23(v92.NetherTempest:IsAvailable() and v92.ArcaneEcho:IsAvailable())))) or (v12:BuffRemains(v92.ArcaneSurgeBuff) > ((6 - 3) * v23(v12:HasTier(56 - 26, 2 + 0) and not v12:HasTier(18 + 12, 15 - 11)))) or v12:BuffUp(v92.ArcaneOverloadBuff)) and (v92.Evocation:CooldownRemains() > (20 + 25)) and ((v92.TouchoftheMagi:CooldownRemains() < (v113 * (3 + 1))) or (v92.TouchoftheMagi:CooldownRemains() > (1446 - (85 + 1341)))) and ((v99 < v102) or (v100 < v102))) or ((4524 - 1872) <= (4329 - 2796))) then
+			local v145 = 372 - (45 + 327);
+			while true do
+				if ((v145 == (0 - 0)) or ((4100 - (444 + 58)) < (635 + 825))) then
+					v26 = v119();
+					if (v26 or ((709 + 3407) < (583 + 609))) then
+						return v26;
+					end
+					break;
+				end
 			end
-			if ((v137 == (12 - 5)) or ((4630 - (415 + 79)) >= (114 + 4297))) then
-				v58 = EpicSettings.Settings['useIceBlock'];
-				v59 = EpicSettings.Settings['useIceCold'];
-				v60 = EpicSettings.Settings['useMassBarrier'];
-				v61 = EpicSettings.Settings['useMirrorImage'];
-				v137 = 499 - (142 + 349);
+		end
+		if ((not v108 and (v92.ArcaneSurge:CooldownRemains() > (86 - 56)) and (v92.RadiantSpark:CooldownUp() or v13:DebuffUp(v92.RadiantSparkDebuff) or v13:DebuffUp(v92.RadiantSparkVulnerability)) and ((v92.TouchoftheMagi:CooldownRemains() <= (v113 * (1735 - (64 + 1668)))) or v13:DebuffUp(v92.TouchoftheMagiDebuff)) and ((v99 < v102) or (v100 < v102))) or ((5350 - (1227 + 746)) <= (2775 - 1872))) then
+			local v146 = 0 - 0;
+			while true do
+				if (((4470 - (415 + 79)) >= (12 + 427)) and (v146 == (491 - (142 + 349)))) then
+					v26 = v119();
+					if (((1608 + 2144) == (5158 - 1406)) and v26) then
+						return v26;
+					end
+					break;
+				end
 			end
-			if (((3 + 2) == v137) or ((4066 - 1108) == (1997 + 2020))) then
-				v50 = EpicSettings.Settings['arcaneSurgeWithCD'];
-				v51 = EpicSettings.Settings['shiftingPowerWithCD'];
-				v52 = EpicSettings.Settings['arcaneOrbWithMiniCD'];
-				v53 = EpicSettings.Settings['radiantSparkWithMiniCD'];
-				v137 = 5 + 1;
+		end
+		if (((2011 + 2035) > (1899 + 796)) and v29 and v92.RadiantSpark:IsAvailable() and v104) then
+			local v147 = 0 - 0;
+			while true do
+				if ((v147 == (1864 - (1710 + 154))) or ((3863 - (200 + 118)) == (1267 + 1930))) then
+					v26 = v121();
+					if (((4185 - 1791) > (553 - 180)) and v26) then
+						return v26;
+					end
+					break;
+				end
 			end
-			if (((3344 - 2116) >= (2677 - (1710 + 154))) and (v137 == (321 - (200 + 118)))) then
-				v42 = EpicSettings.Settings['useCounterspell'];
-				v43 = EpicSettings.Settings['useBlastWave'];
-				v44 = EpicSettings.Settings['useDragonsBreath'];
-				v45 = EpicSettings.Settings['useArcaneSurge'];
-				v137 = 2 + 2;
+		end
+		if (((3692 + 463) <= (4187 + 45)) and v29 and v108 and v92.RadiantSpark:IsAvailable() and v105) then
+			local v148 = 0 + 0;
+			while true do
+				if ((v148 == (0 + 0)) or ((7758 - 4177) == (4723 - (363 + 887)))) then
+					v26 = v120();
+					if (((8722 - 3727) > (15935 - 12587)) and v26) then
+						return v26;
+					end
+					break;
+				end
+			end
+		end
+		if ((v29 and v13:DebuffUp(v92.TouchoftheMagiDebuff) and ((v99 >= v102) or (v100 >= v102))) or ((117 + 637) > (8713 - 4989))) then
+			v26 = v123();
+			if (((149 + 68) >= (1721 - (674 + 990))) and v26) then
+				return v26;
+			end
+		end
+		if ((v29 and v108 and v13:DebuffUp(v92.TouchoftheMagiDebuff) and ((v99 < v102) or (v100 < v102))) or ((594 + 1476) >= (1653 + 2384))) then
+			local v149 = 0 - 0;
+			while true do
+				if (((3760 - (507 + 548)) == (3542 - (289 + 548))) and (v149 == (1818 - (821 + 997)))) then
+					v26 = v122();
+					if (((316 - (195 + 60)) == (17 + 44)) and v26) then
+						return v26;
+					end
+					break;
+				end
+			end
+		end
+		if ((v99 >= v102) or (v100 >= v102) or ((2200 - (251 + 1250)) >= (3796 - 2500))) then
+			v26 = v125();
+			if (v26 or ((1226 + 557) >= (4648 - (809 + 223)))) then
+				return v26;
+			end
+		end
+		if ((v99 < v102) or (v100 < v102) or ((5709 - 1796) > (13595 - 9068))) then
+			v26 = v124();
+			if (((14469 - 10093) > (602 + 215)) and v26) then
+				return v26;
 			end
 		end
 	end
 	local function v127()
-		local v138 = 0 - 0;
+		local v140 = 0 + 0;
 		while true do
-			if ((v138 == (4 - 1)) or ((3070 + 385) > (4007 + 43))) then
-				v84 = EpicSettings.Settings['healthstoneHP'] or (0 + 0);
-				v83 = EpicSettings.Settings['healingPotionHP'] or (0 + 0);
-				v85 = EpicSettings.Settings['HealingPotionName'] or "";
-				v71 = EpicSettings.Settings['handleAfflicted'];
-				v138 = 8 - 4;
+			if (((5478 - (14 + 603)) > (953 - (118 + 11))) and (v140 == (1 + 5))) then
+				v55 = EpicSettings.Settings['touchOfTheMagiWithMiniCD'];
+				v56 = EpicSettings.Settings['useAlterTime'];
+				v57 = EpicSettings.Settings['usePrismaticBarrier'];
+				v58 = EpicSettings.Settings['useGreaterInvisibility'];
+				v140 = 6 + 1;
 			end
-			if (((1493 - (363 + 887)) == (424 - 181)) and (v138 == (18 - 14))) then
-				v72 = EpicSettings.Settings['HandleIncorporeal'];
+			if ((v140 == (29 - 19)) or ((2332 - (551 + 398)) >= (1347 + 784))) then
+				v88 = EpicSettings.Settings['useTimeWarpWithTalent'];
+				v89 = EpicSettings.Settings['mirrorImageBeforePull'];
+				v91 = EpicSettings.Settings['useRemoveCurseWithAfflicted'];
 				break;
 			end
-			if ((v138 == (1 + 1)) or ((633 - 362) > (1075 + 497))) then
-				v79 = EpicSettings.Settings['trinketsWithCD'];
-				v80 = EpicSettings.Settings['racialsWithCD'];
-				v82 = EpicSettings.Settings['useHealthstone'];
-				v81 = EpicSettings.Settings['useHealingPotion'];
-				v138 = 1667 - (674 + 990);
+			if ((v140 == (4 + 5)) or ((1525 + 351) >= (9450 - 6909))) then
+				v67 = EpicSettings.Settings['iceColdHP'] or (0 - 0);
+				v68 = EpicSettings.Settings['mirrorImageHP'] or (0 + 0);
+				v69 = EpicSettings.Settings['massBarrierHP'] or (0 - 0);
+				v87 = EpicSettings.Settings['useSpellStealTarget'];
+				v140 = 3 + 7;
 			end
-			if (((786 + 1953) < (1348 + 1945)) and (v138 == (0 - 0))) then
-				v76 = EpicSettings.Settings['fightRemainsCheck'] or (1055 - (507 + 548));
-				v73 = EpicSettings.Settings['InterruptWithStun'];
-				v74 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-				v75 = EpicSettings.Settings['InterruptThreshold'];
-				v138 = 838 - (289 + 548);
+			if (((1871 - (40 + 49)) <= (14364 - 10592)) and (v140 == (498 - (99 + 391)))) then
+				v63 = EpicSettings.Settings['alterTimeHP'] or (0 + 0);
+				v64 = EpicSettings.Settings['prismaticBarrierHP'] or (0 - 0);
+				v65 = EpicSettings.Settings['greaterInvisibilityHP'] or (0 - 0);
+				v66 = EpicSettings.Settings['iceBlockHP'] or (0 + 0);
+				v140 = 23 - 14;
 			end
-			if ((v138 == (1819 - (821 + 997))) or ((4197 - (195 + 60)) < (305 + 829))) then
-				v70 = EpicSettings.Settings['DispelDebuffs'];
-				v69 = EpicSettings.Settings['DispelBuffs'];
-				v78 = EpicSettings.Settings['useTrinkets'];
-				v77 = EpicSettings.Settings['useRacials'];
-				v138 = 1503 - (251 + 1250);
+			if ((v140 == (1611 - (1032 + 572))) or ((5117 - (203 + 214)) < (2630 - (568 + 1249)))) then
+				v59 = EpicSettings.Settings['useIceBlock'];
+				v60 = EpicSettings.Settings['useIceCold'];
+				v61 = EpicSettings.Settings['useMassBarrier'];
+				v62 = EpicSettings.Settings['useMirrorImage'];
+				v140 = 7 + 1;
+			end
+			if (((7682 - 4483) < (15643 - 11593)) and (v140 == (1309 - (913 + 393)))) then
+				v43 = EpicSettings.Settings['useCounterspell'];
+				v44 = EpicSettings.Settings['useBlastWave'];
+				v45 = EpicSettings.Settings['useDragonsBreath'];
+				v46 = EpicSettings.Settings['useArcaneSurge'];
+				v140 = 11 - 7;
+			end
+			if ((v140 == (5 - 1)) or ((5361 - (269 + 141)) < (9853 - 5423))) then
+				v47 = EpicSettings.Settings['useShiftingPower'];
+				v48 = EpicSettings.Settings['useArcaneOrb'];
+				v49 = EpicSettings.Settings['useRadiantSpark'];
+				v50 = EpicSettings.Settings['useTouchOfTheMagi'];
+				v140 = 1986 - (362 + 1619);
+			end
+			if (((1721 - (950 + 675)) == (38 + 58)) and (v140 == (1184 - (216 + 963)))) then
+				v51 = EpicSettings.Settings['arcaneSurgeWithCD'];
+				v52 = EpicSettings.Settings['shiftingPowerWithCD'];
+				v53 = EpicSettings.Settings['arcaneOrbWithMiniCD'];
+				v54 = EpicSettings.Settings['radiantSparkWithMiniCD'];
+				v140 = 1293 - (485 + 802);
+			end
+			if ((v140 == (560 - (432 + 127))) or ((3812 - (1065 + 8)) > (2227 + 1781))) then
+				v36 = EpicSettings.Settings['useArcaneIntellect'];
+				v37 = EpicSettings.Settings['useArcaneMissiles'];
+				v38 = EpicSettings.Settings['useConjureManaGem'];
+				v39 = EpicSettings.Settings['useEvocation'];
+				v140 = 1603 - (635 + 966);
+			end
+			if (((0 + 0) == v140) or ((65 - (5 + 37)) == (2819 - 1685))) then
+				v32 = EpicSettings.Settings['useArcaneBlast'];
+				v33 = EpicSettings.Settings['useArcaneBarrage'];
+				v34 = EpicSettings.Settings['useArcaneExplosion'];
+				v35 = EpicSettings.Settings['useArcaneFamiliar'];
+				v140 = 1 + 0;
+			end
+			if ((v140 == (2 - 0)) or ((1261 + 1432) >= (8542 - 4431))) then
+				v40 = EpicSettings.Settings['useManaGem'];
+				v41 = EpicSettings.Settings['useNetherTempest'];
+				v42 = EpicSettings.Settings['usePresenceOfMind'];
+				v90 = EpicSettings.Settings['cancelPOM'];
+				v140 = 11 - 8;
 			end
 		end
 	end
 	local function v128()
-		v126();
-		v127();
-		v26 = EpicSettings.Toggles['ooc'];
-		v27 = EpicSettings.Toggles['aoe'];
-		v28 = EpicSettings.Toggles['cds'];
-		v29 = EpicSettings.Toggles['minicds'];
-		v30 = EpicSettings.Toggles['dispel'];
-		if (v12:IsDeadOrGhost() or ((7889 - 5196) == (3418 + 1555))) then
-			return v25;
-		end
-		v97 = v13:GetEnemiesInSplashRange(1037 - (809 + 223));
-		v100 = v12:GetEnemiesInRange(58 - 18);
-		if (((6444 - 4298) == (7095 - 4949)) and v27) then
-			local v147 = 0 + 0;
-			while true do
-				if ((v147 == (0 + 0)) or ((2861 - (14 + 603)) == (3353 - (118 + 11)))) then
-					v98 = v24(v13:GetEnemiesInSplashRangeCount(1 + 4), #v100);
-					v99 = #v100;
-					break;
-				end
+		local v141 = 0 - 0;
+		while true do
+			if (((11 - 6) == v141) or ((3104 + 1212) <= (2675 - (318 + 211)))) then
+				v72 = EpicSettings.Settings['handleAfflicted'];
+				v73 = EpicSettings.Settings['HandleIncorporeal'];
+				break;
 			end
-		else
-			v98 = 1 + 0;
-			v99 = 2 - 1;
-		end
-		if (v95.TargetIsValid() or v12:AffectingCombat() or ((5853 - (551 + 398)) <= (1211 + 705))) then
-			if (((33 + 57) <= (866 + 199)) and (v12:AffectingCombat() or v70)) then
-				local v199 = v70 and v91.RemoveCurse:IsReady() and v30;
-				v25 = v95.FocusUnit(v199, v93, 74 - 54, nil, 46 - 26);
-				if (((1557 + 3245) == (19063 - 14261)) and v25) then
-					return v25;
-				end
+			if ((v141 == (0 - 0)) or ((5133 - (963 + 624)) <= (1201 + 1608))) then
+				v77 = EpicSettings.Settings['fightRemainsCheck'] or (846 - (518 + 328));
+				v74 = EpicSettings.Settings['InterruptWithStun'];
+				v75 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v141 = 2 - 1;
 			end
-			v110 = v9.BossFightRemains(nil, true);
-			v111 = v110;
-			if ((v111 == (3068 + 8043)) or ((2369 - (40 + 49)) <= (1945 - 1434))) then
-				v111 = v9.FightRemains(v100, false);
+			if (((7838 - 2934) > (2483 - (301 + 16))) and (v141 == (5 - 3))) then
+				v79 = EpicSettings.Settings['useTrinkets'];
+				v78 = EpicSettings.Settings['useRacials'];
+				v80 = EpicSettings.Settings['trinketsWithCD'];
+				v141 = 8 - 5;
 			end
-		end
-		v112 = v12:GCD();
-		if (v71 or ((2166 - (99 + 391)) <= (383 + 80))) then
-			if (((17007 - 13138) == (9580 - 5711)) and v90) then
-				v25 = v95.HandleAfflicted(v91.RemoveCurse, v93.RemoveCurseMouseover, 30 + 0);
-				if (((3046 - 1888) <= (4217 - (1032 + 572))) and v25) then
-					return v25;
-				end
+			if (((284 - 175) >= (82 + 8)) and ((1 + 0) == v141)) then
+				v76 = EpicSettings.Settings['InterruptThreshold'];
+				v71 = EpicSettings.Settings['DispelDebuffs'];
+				v70 = EpicSettings.Settings['DispelBuffs'];
+				v141 = 3 - 1;
 			end
-		end
-		if (not v12:AffectingCombat() or ((2781 - (203 + 214)) <= (3816 - (568 + 1249)))) then
-			local v148 = 0 + 0;
-			while true do
-				if ((v148 == (2 - 1)) or ((19011 - 14089) < (1500 - (913 + 393)))) then
-					if ((v91.ConjureManaGem:IsCastable() and v37) or ((5904 - 3813) < (43 - 12))) then
-						if (v19(v91.ConjureManaGem) or ((2840 - (269 + 141)) >= (10835 - 5963))) then
-							return "conjure_mana_gem precombat 4";
-						end
-					end
-					break;
-				end
-				if ((v148 == (1981 - (362 + 1619))) or ((6395 - (950 + 675)) < (669 + 1066))) then
-					if ((v91.ArcaneIntellect:IsCastable() and v35 and (v12:BuffDown(v91.ArcaneIntellect, true) or v95.GroupBuffMissing(v91.ArcaneIntellect))) or ((5618 - (216 + 963)) <= (3637 - (485 + 802)))) then
-						if (v19(v91.ArcaneIntellect) or ((5038 - (432 + 127)) < (5539 - (1065 + 8)))) then
-							return "arcane_intellect group_buff";
-						end
-					end
-					if (((1415 + 1132) > (2826 - (635 + 966))) and v91.ArcaneFamiliar:IsReady() and v34 and v12:BuffDown(v91.ArcaneFamiliarBuff)) then
-						if (((3359 + 1312) > (2716 - (5 + 37))) and v19(v91.ArcaneFamiliar)) then
-							return "arcane_familiar precombat 2";
-						end
-					end
-					v148 = 2 - 1;
-				end
+			if (((2995 + 1983) > (277 + 2628)) and (v141 == (9 - 6))) then
+				v81 = EpicSettings.Settings['racialsWithCD'];
+				v83 = EpicSettings.Settings['useHealthstone'];
+				v82 = EpicSettings.Settings['useHealingPotion'];
+				v141 = 2 + 2;
 			end
-		end
-		if (v95.TargetIsValid() or ((1538 + 2158) < (5265 - 1938))) then
-			local v149 = 0 + 0;
-			while true do
-				if ((v149 == (1 - 0)) or ((17219 - 12677) == (5601 - 2631))) then
-					v25 = v113();
-					if (((602 - 350) <= (1422 + 555)) and v25) then
-						return v25;
-					end
-					v149 = 531 - (318 + 211);
-				end
-				if ((v149 == (9 - 7)) or ((3023 - (963 + 624)) == (1614 + 2161))) then
-					if (v71 or ((2464 - (518 + 328)) < (2168 - 1238))) then
-						if (((7548 - 2825) > (4470 - (301 + 16))) and v90) then
-							local v207 = 0 - 0;
-							while true do
-								if ((v207 == (0 - 0)) or ((9534 - 5880) >= (4216 + 438))) then
-									v25 = v95.HandleAfflicted(v91.RemoveCurse, v93.RemoveCurseMouseover, 18 + 12);
-									if (((2030 - 1079) <= (901 + 595)) and v25) then
-										return v25;
-									end
-									break;
-								end
-							end
-						end
-					end
-					if (v72 or ((166 + 1570) == (1815 - 1244))) then
-						local v203 = 0 + 0;
-						while true do
-							if ((v203 == (1019 - (829 + 190))) or ((3196 - 2300) > (6033 - 1264))) then
-								v25 = v95.HandleIncorporeal(v91.Polymorph, v93.PolymorphMouseOver, 41 - 11, true);
-								if (v25 or ((2595 - 1550) <= (242 + 778))) then
-									return v25;
-								end
-								break;
-							end
-						end
-					end
-					v149 = 1 + 2;
-				end
-				if ((v149 == (8 - 5)) or ((1095 + 65) <= (941 - (520 + 93)))) then
-					if (((4084 - (259 + 17)) > (169 + 2755)) and v91.Spellsteal:IsAvailable() and v86 and v91.Spellsteal:IsReady() and v30 and v69 and not v12:IsCasting() and not v12:IsChanneling() and v95.UnitHasMagicBuff(v13)) then
-						if (((1401 + 2490) < (16653 - 11734)) and v19(v91.Spellsteal, not v13:IsSpellInRange(v91.Spellsteal))) then
-							return "spellsteal damage";
-						end
-					end
-					if ((not v12:IsCasting() and not v12:IsChanneling() and v12:AffectingCombat() and v95.TargetIsValid()) or ((2825 - (396 + 195)) <= (4357 - 2855))) then
-						local v204 = 1761 - (440 + 1321);
-						local v205;
-						while true do
-							if ((v204 == (1829 - (1059 + 770))) or ((11615 - 9103) < (977 - (424 + 121)))) then
-								v205 = v95.HandleDPSPotion(not v91.ArcaneSurge:IsReady());
-								if (v205 or ((337 + 1511) == (2212 - (641 + 706)))) then
-									return v205;
-								end
-								v204 = 1 + 0;
-							end
-							if ((v204 == (444 - (249 + 191))) or ((20396 - 15714) <= (2029 + 2512))) then
-								if (v25 or ((11662 - 8636) >= (4473 - (183 + 244)))) then
-									return v25;
-								end
-								break;
-							end
-							if (((99 + 1909) > (1368 - (434 + 296))) and (v204 == (5 - 3))) then
-								if (((2287 - (169 + 343)) <= (2835 + 398)) and (v76 < v111)) then
-									if ((v78 and ((v28 and v79) or not v79)) or ((7993 - 3450) == (5861 - 3864))) then
-										v25 = v115();
-										if (v25 or ((2542 + 560) < (2064 - 1336))) then
-											return v25;
-										end
-									end
-								end
-								v25 = v117();
-								v204 = 1126 - (651 + 472);
-							end
-							if (((261 + 84) == (149 + 196)) and ((1 - 0) == v204)) then
-								if ((v87 and v91.TimeWarp:IsReady() and v91.TemporalWarp:IsAvailable() and v12:BloodlustExhaustUp() and (v91.ArcaneSurge:CooldownUp() or (v111 <= (523 - (397 + 86))) or (v12:BuffUp(v91.ArcaneSurgeBuff) and (v111 <= (v91.ArcaneSurge:CooldownRemains() + (890 - (423 + 453))))))) or ((288 + 2539) < (50 + 328))) then
-									if (v19(v91.TimeWarp, not v13:IsInRange(35 + 5)) or ((2775 + 701) < (2320 + 277))) then
-										return "time_warp main 4";
-									end
-								end
-								if (((4269 - (50 + 1140)) < (4144 + 650)) and v77 and ((v80 and v28) or not v80) and (v76 < v111)) then
-									if (((2866 + 1988) > (278 + 4186)) and v91.LightsJudgment:IsCastable() and v12:BuffDown(v91.ArcaneSurgeBuff) and v13:DebuffDown(v91.TouchoftheMagiDebuff) and ((v98 >= (2 - 0)) or (v99 >= (2 + 0)))) then
-										if (v19(v91.LightsJudgment, not v13:IsSpellInRange(v91.LightsJudgment)) or ((5508 - (157 + 439)) == (6534 - 2776))) then
-											return "lights_judgment main 6";
-										end
-									end
-									if (((418 - 292) <= (10299 - 6817)) and v91.Berserking:IsCastable() and ((v12:PrevGCDP(919 - (782 + 136), v91.ArcaneSurge) and not (v12:BuffUp(v91.TemporalWarpBuff) and v12:BloodlustUp())) or (v12:BuffUp(v91.ArcaneSurgeBuff) and v13:DebuffUp(v91.TouchoftheMagiDebuff)))) then
-										if (v19(v91.Berserking) or ((3229 - (112 + 743)) == (5545 - (1026 + 145)))) then
-											return "berserking main 8";
-										end
-									end
-									if (((271 + 1304) == (2293 - (493 + 225))) and v12:PrevGCDP(3 - 2, v91.ArcaneSurge)) then
-										if (v91.BloodFury:IsCastable() or ((1359 + 875) == (3900 - 2445))) then
-											if (v19(v91.BloodFury) or ((21 + 1046) > (5083 - 3304))) then
-												return "blood_fury main 10";
-											end
-										end
-										if (((630 + 1531) >= (1560 - 626)) and v91.Fireblood:IsCastable()) then
-											if (((3207 - (210 + 1385)) == (3301 - (1201 + 488))) and v19(v91.Fireblood)) then
-												return "fireblood main 12";
-											end
-										end
-										if (((2698 + 1654) >= (5038 - 2205)) and v91.AncestralCall:IsCastable()) then
-											if (v19(v91.AncestralCall) or ((5777 - 2555) < (3658 - (352 + 233)))) then
-												return "ancestral_call main 14";
-											end
-										end
-									end
-								end
-								v204 = 4 - 2;
-							end
-							if (((405 + 339) <= (8364 - 5422)) and (v204 == (577 - (489 + 85)))) then
-								if (v25 or ((3334 - (277 + 1224)) <= (2815 - (663 + 830)))) then
-									return v25;
-								end
-								v25 = v125();
-								v204 = 4 + 0;
-							end
-						end
-					end
-					break;
-				end
-				if ((v149 == (0 - 0)) or ((4342 - (461 + 414)) <= (177 + 878))) then
-					if (((1417 + 2124) == (338 + 3203)) and v14) then
-						if (v70 or ((3507 + 50) >= (4253 - (172 + 78)))) then
-							v25 = v114();
-							if (v25 or ((1059 - 402) >= (614 + 1054))) then
-								return v25;
-							end
-						end
-					end
-					if ((not v12:AffectingCombat() and v26) or ((1481 - 454) > (1053 + 2805))) then
-						local v206 = 0 + 0;
-						while true do
-							if ((v206 == (0 - 0)) or ((4598 - 944) < (114 + 336))) then
-								v25 = v116();
-								if (((1046 + 845) < (1585 + 2868)) and v25) then
-									return v25;
-								end
-								break;
-							end
-						end
-					end
-					v149 = 3 - 2;
-				end
+			if ((v141 == (1023 - (829 + 190))) or ((10796 - 7770) <= (2884 - 604))) then
+				v85 = EpicSettings.Settings['healthstoneHP'] or (0 - 0);
+				v84 = EpicSettings.Settings['healingPotionHP'] or (0 - 0);
+				v86 = EpicSettings.Settings['HealingPotionName'] or "";
+				v141 = 2 + 3;
 			end
 		end
 	end
 	local function v129()
-		local v144 = 0 - 0;
+		local v142 = 0 + 0;
 		while true do
-			if ((v144 == (0 + 0)) or ((1793 + 1347) < (2576 - (133 + 314)))) then
-				v96();
-				v17.Print("Arcane Mage rotation by Epic. Supported by xKaneto.");
+			if ((v142 == (5 - 3)) or ((1560 + 93) <= (1721 - (520 + 93)))) then
+				v98 = v13:GetEnemiesInSplashRange(281 - (259 + 17));
+				v101 = v12:GetEnemiesInRange(3 + 37);
+				if (((1047 + 1862) > (8832 - 6223)) and v28) then
+					v99 = v25(v13:GetEnemiesInSplashRangeCount(596 - (396 + 195)), #v101);
+					v100 = #v101;
+				else
+					v99 = 2 - 1;
+					v100 = 1762 - (440 + 1321);
+				end
+				if (((2586 - (1059 + 770)) > (897 - 703)) and (v96.TargetIsValid() or v12:AffectingCombat())) then
+					local v205 = 545 - (424 + 121);
+					while true do
+						if ((v205 == (1 + 0)) or ((1378 - (641 + 706)) >= (554 + 844))) then
+							v112 = v111;
+							if (((3636 - (249 + 191)) <= (21223 - 16351)) and (v112 == (4963 + 6148))) then
+								v112 = v9.FightRemains(v101, false);
+							end
+							break;
+						end
+						if (((12818 - 9492) == (3753 - (183 + 244))) and (v205 == (0 + 0))) then
+							if (((2163 - (434 + 296)) <= (12375 - 8497)) and (v12:AffectingCombat() or v71)) then
+								local v208 = 512 - (169 + 343);
+								local v209;
+								while true do
+									if ((v208 == (0 + 0)) or ((2784 - 1201) == (5092 - 3357))) then
+										v209 = v71 and v92.RemoveCurse:IsReady() and v31;
+										v26 = v96.FocusUnit(v209, v94, 17 + 3, nil, 56 - 36);
+										v208 = 1124 - (651 + 472);
+									end
+									if ((v208 == (1 + 0)) or ((1287 + 1694) == (2868 - 518))) then
+										if (v26 or ((4949 - (397 + 86)) <= (1369 - (423 + 453)))) then
+											return v26;
+										end
+										break;
+									end
+								end
+							end
+							v111 = v9.BossFightRemains(nil, true);
+							v205 = 1 + 0;
+						end
+					end
+				end
+				v142 = 1 + 2;
+			end
+			if ((v142 == (3 + 0)) or ((2033 + 514) <= (1775 + 212))) then
+				v113 = v12:GCD();
+				if (((4151 - (50 + 1140)) > (2369 + 371)) and v72) then
+					if (((2183 + 1513) >= (225 + 3387)) and v91) then
+						v26 = v96.HandleAfflicted(v92.RemoveCurse, v94.RemoveCurseMouseover, 43 - 13);
+						if (v26 or ((2150 + 820) == (2474 - (157 + 439)))) then
+							return v26;
+						end
+					end
+				end
+				if (not v12:AffectingCombat() or v27 or ((6420 - 2727) < (6568 - 4591))) then
+					local v206 = 0 - 0;
+					while true do
+						if ((v206 == (918 - (782 + 136))) or ((1785 - (112 + 743)) > (3272 - (1026 + 145)))) then
+							if (((713 + 3440) > (3804 - (493 + 225))) and v92.ArcaneIntellect:IsCastable() and v36 and (v12:BuffDown(v92.ArcaneIntellect, true) or v96.GroupBuffMissing(v92.ArcaneIntellect))) then
+								if (v20(v92.ArcaneIntellect) or ((17106 - 12452) <= (2464 + 1586))) then
+									return "arcane_intellect group_buff";
+								end
+							end
+							if ((v92.ArcaneFamiliar:IsReady() and v35 and v12:BuffDown(v92.ArcaneFamiliarBuff)) or ((6976 - 4374) < (29 + 1467))) then
+								if (v20(v92.ArcaneFamiliar) or ((2915 - 1895) > (667 + 1621))) then
+									return "arcane_familiar precombat 2";
+								end
+							end
+							v206 = 1 - 0;
+						end
+						if (((1923 - (210 + 1385)) == (2017 - (1201 + 488))) and ((1 + 0) == v206)) then
+							if (((2687 - 1176) < (6829 - 3021)) and v92.ConjureManaGem:IsCastable() and v38) then
+								if (v20(v92.ConjureManaGem) or ((3095 - (352 + 233)) > (11887 - 6968))) then
+									return "conjure_mana_gem precombat 4";
+								end
+							end
+							break;
+						end
+					end
+				end
+				if (((2592 + 2171) == (13542 - 8779)) and v96.TargetIsValid()) then
+					local v207 = 574 - (489 + 85);
+					while true do
+						if (((5638 - (277 + 1224)) > (3341 - (663 + 830))) and ((0 + 0) == v207)) then
+							if (((5965 - 3529) <= (4009 - (461 + 414))) and v71 and v31 and v92.RemoveCurse:IsAvailable()) then
+								if (((625 + 3098) == (1490 + 2233)) and v14) then
+									local v212 = 0 + 0;
+									while true do
+										if ((v212 == (0 + 0)) or ((4296 - (172 + 78)) >= (6958 - 2642))) then
+											v26 = v115();
+											if (v26 or ((740 + 1268) < (2782 - 853))) then
+												return v26;
+											end
+											break;
+										end
+									end
+								end
+								if (((651 + 1733) > (593 + 1182)) and v15 and v15:Exists() and v15:IsAPlayer() and v96.UnitHasCurseDebuff(v15)) then
+									if (v92.RemoveCurse:IsReady() or ((7610 - 3067) <= (5508 - 1132))) then
+										if (((183 + 545) == (403 + 325)) and v20(v94.RemoveCurseMouseover)) then
+											return "remove_curse dispel";
+										end
+									end
+								end
+							end
+							if ((not v12:AffectingCombat() and v27) or ((383 + 693) > (18593 - 13922))) then
+								v26 = v117();
+								if (((4312 - 2461) >= (116 + 262)) and v26) then
+									return v26;
+								end
+							end
+							v207 = 1 + 0;
+						end
+						if ((v207 == (449 - (133 + 314))) or ((339 + 1609) >= (3689 - (199 + 14)))) then
+							if (((17161 - 12367) >= (2382 - (647 + 902))) and v72) then
+								if (((12298 - 8208) == (4323 - (85 + 148))) and v91) then
+									v26 = v96.HandleAfflicted(v92.RemoveCurse, v94.RemoveCurseMouseover, 1319 - (426 + 863));
+									if (v26 or ((17587 - 13829) == (4152 - (873 + 781)))) then
+										return v26;
+									end
+								end
+							end
+							if (v73 or ((3578 - 905) < (4253 - 2678))) then
+								v26 = v96.HandleIncorporeal(v92.Polymorph, v94.PolymorphMouseOver, 13 + 17, true);
+								if (v26 or ((13746 - 10025) <= (2084 - 629))) then
+									return v26;
+								end
+							end
+							v207 = 8 - 5;
+						end
+						if (((2881 - (414 + 1533)) < (1969 + 301)) and (v207 == (556 - (443 + 112)))) then
+							v26 = v114();
+							if (v26 or ((3091 - (888 + 591)) == (3242 - 1987))) then
+								return v26;
+							end
+							v207 = 1 + 1;
+						end
+						if ((v207 == (11 - 8)) or ((1699 + 2653) < (2035 + 2171))) then
+							if ((v92.Spellsteal:IsAvailable() and v87 and v92.Spellsteal:IsReady() and v31 and v70 and not v12:IsCasting() and not v12:IsChanneling() and v96.UnitHasMagicBuff(v13)) or ((306 + 2554) <= (344 - 163))) then
+								if (((5968 - 2746) >= (3205 - (136 + 1542))) and v20(v92.Spellsteal, not v13:IsSpellInRange(v92.Spellsteal))) then
+									return "spellsteal damage";
+								end
+							end
+							if (((4935 - 3430) <= (2106 + 15)) and not v12:IsCasting() and not v12:IsChanneling() and v12:AffectingCombat() and v96.TargetIsValid()) then
+								local v210 = 0 - 0;
+								local v211;
+								while true do
+									if (((539 + 205) == (1230 - (68 + 418))) and (v210 == (2 - 1))) then
+										if ((v88 and v92.TimeWarp:IsReady() and v92.TemporalWarp:IsAvailable() and v12:BloodlustExhaustUp() and (v92.ArcaneSurge:CooldownUp() or (v112 <= (72 - 32)) or (v12:BuffUp(v92.ArcaneSurgeBuff) and (v112 <= (v92.ArcaneSurge:CooldownRemains() + 13 + 1))))) or ((3071 - (770 + 322)) >= (164 + 2672))) then
+											if (((531 + 1302) <= (365 + 2303)) and v20(v92.TimeWarp, not v13:IsInRange(57 - 17))) then
+												return "time_warp main 4";
+											end
+										end
+										if (((7146 - 3460) == (10038 - 6352)) and v78 and ((v81 and v29) or not v81) and (v77 < v112)) then
+											local v213 = 0 - 0;
+											while true do
+												if (((1932 + 1535) > (713 - 236)) and (v213 == (0 + 0))) then
+													if ((v92.LightsJudgment:IsCastable() and v12:BuffDown(v92.ArcaneSurgeBuff) and v13:DebuffDown(v92.TouchoftheMagiDebuff) and ((v99 >= (2 + 0)) or (v100 >= (2 + 0)))) or ((12381 - 9093) >= (4918 - 1377))) then
+														if (v20(v92.LightsJudgment, not v13:IsSpellInRange(v92.LightsJudgment)) or ((1203 + 2354) == (20913 - 16373))) then
+															return "lights_judgment main 6";
+														end
+													end
+													if ((v92.Berserking:IsCastable() and ((v12:PrevGCDP(3 - 2, v92.ArcaneSurge) and not (v12:BuffUp(v92.TemporalWarpBuff) and v12:BloodlustUp())) or (v12:BuffUp(v92.ArcaneSurgeBuff) and v13:DebuffUp(v92.TouchoftheMagiDebuff)))) or ((108 + 153) > (6269 - 5002))) then
+														if (((2103 - (762 + 69)) < (12492 - 8634)) and v20(v92.Berserking)) then
+															return "berserking main 8";
+														end
+													end
+													v213 = 1 + 0;
+												end
+												if (((2373 + 1291) == (8862 - 5198)) and (v213 == (1 + 0))) then
+													if (((31 + 1910) >= (1753 - 1303)) and v12:PrevGCDP(158 - (8 + 149), v92.ArcaneSurge)) then
+														local v215 = 1320 - (1199 + 121);
+														while true do
+															if ((v215 == (0 - 0)) or ((10488 - 5842) < (134 + 190))) then
+																if (((13681 - 9848) == (8893 - 5060)) and v92.BloodFury:IsCastable()) then
+																	if (v20(v92.BloodFury) or ((1098 + 142) > (5177 - (518 + 1289)))) then
+																		return "blood_fury main 10";
+																	end
+																end
+																if (v92.Fireblood:IsCastable() or ((4254 - 1773) == (622 + 4060))) then
+																	if (((6903 - 2176) >= (154 + 54)) and v20(v92.Fireblood)) then
+																		return "fireblood main 12";
+																	end
+																end
+																v215 = 470 - (304 + 165);
+															end
+															if (((265 + 15) < (4011 - (54 + 106))) and ((1970 - (1618 + 351)) == v215)) then
+																if (v92.AncestralCall:IsCastable() or ((2121 + 886) > (4210 - (10 + 1006)))) then
+																	if (v20(v92.AncestralCall) or ((537 + 1599) >= (413 + 2533))) then
+																		return "ancestral_call main 14";
+																	end
+																end
+																break;
+															end
+														end
+													end
+													break;
+												end
+											end
+										end
+										v210 = 6 - 4;
+									end
+									if (((3198 - (912 + 121)) <= (1192 + 1329)) and (v210 == (1289 - (1140 + 149)))) then
+										v211 = v96.HandleDPSPotion(not v92.ArcaneSurge:IsReady());
+										if (((1831 + 1030) > (880 - 219)) and v211) then
+											return v211;
+										end
+										v210 = 1 + 0;
+									end
+									if (((15486 - 10961) > (8475 - 3956)) and (v210 == (1 + 1))) then
+										if (((11028 - 7850) > (1158 - (165 + 21))) and (v77 < v112)) then
+											if (((4877 - (61 + 50)) == (1964 + 2802)) and v79 and ((v29 and v80) or not v80)) then
+												local v214 = 0 - 0;
+												while true do
+													if ((v214 == (0 - 0)) or ((1079 + 1666) > (4588 - (1295 + 165)))) then
+														v26 = v116();
+														if (v26 or ((262 + 882) >= (1852 + 2754))) then
+															return v26;
+														end
+														break;
+													end
+												end
+											end
+										end
+										v26 = v118();
+										v210 = 1400 - (819 + 578);
+									end
+									if (((4740 - (331 + 1071)) >= (1020 - (588 + 155))) and (v210 == (1286 - (546 + 736)))) then
+										if (((4547 - (1834 + 103)) > (1575 + 985)) and v26) then
+											return v26;
+										end
+										break;
+									end
+									if ((v210 == (8 - 5)) or ((2960 - (1536 + 230)) > (3574 - (128 + 363)))) then
+										if (((195 + 721) >= (1858 - 1111)) and v26) then
+											return v26;
+										end
+										v26 = v126();
+										v210 = 2 + 2;
+									end
+								end
+							end
+							break;
+						end
+					end
+				end
 				break;
+			end
+			if ((v142 == (0 - 0)) or ((7194 - 4750) > (7174 - 4220))) then
+				v127();
+				v128();
+				v27 = EpicSettings.Toggles['ooc'];
+				v28 = EpicSettings.Toggles['aoe'];
+				v142 = 1 + 0;
+			end
+			if (((3901 - (615 + 394)) < (3173 + 341)) and (v142 == (1 + 0))) then
+				v29 = EpicSettings.Toggles['cds'];
+				v30 = EpicSettings.Toggles['minicds'];
+				v31 = EpicSettings.Toggles['dispel'];
+				if (((1624 - 1091) == (2417 - 1884)) and v12:IsDeadOrGhost()) then
+					return v26;
+				end
+				v142 = 653 - (59 + 592);
 			end
 		end
 	end
-	v17.SetAPL(11 + 51, v128, v129);
+	local function v130()
+		v97();
+		v18.Print("Arcane Mage rotation by Epic. Supported by xKaneto.");
+	end
+	v18.SetAPL(137 - 75, v129, v130);
 end;
 return v0["Epix_Mage_Arcane.lua"]();
 

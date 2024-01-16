@@ -1124,7 +1124,6 @@ do
     Spell(264390),
     Spell(264407),
     -- Amirdrassil
-    Spell(420856), -- Council
     Spell(417807), -- Fyrakk
     Spell(421326), -- Larodar
   };
@@ -1200,6 +1199,11 @@ do
     Spell(76516),
     --- Waycrest Manor
     Spell(264520),
+    -- Amirdrassil
+    Spell(420856), -- Council, Poisonous Javelin
+    Spell(420857), -- Council, Poisonous Javelin
+    Spell(420858), -- Council, Poisonous Javelin
+    Spell(420859), -- Council, Poisonous Javelin
   };
   function Commons.UnitHasPoisonDebuff(U)
     -- for i = 1, #Commons.DispellablePoisonDebuffs do
@@ -1250,6 +1254,16 @@ function Commons.UnitHasDebuffFromList(U, L)
     end
   end
   return false;
+end
+
+--Debuffs the Player can dispell
+function Commons.UnitHasDispellableDebuffByPlayer(U)
+  for i= 1,21 do
+    local b = UnitAura(U:ID(),i,"HARMFUL|RAID")
+    if b ~= nil then
+      return true;
+    end
+  end
 end
 
 -- Is in Solo Mode?

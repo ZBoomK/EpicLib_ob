@@ -104,7 +104,7 @@ do
       Object.LastDisplayTime = GetTime();
       return true;
     end
-    
+
     local PrecastWindow = mathmin(mathmax(SpellQueueWindow - EL.Latency(), 75), 150);
     if (not Usable) or OutofRange or (Immovable and (Player:IsMoving() or Player:DebuffUp(QuakingDebuffId, true) or TargetIsCastingSilence)) or ((not OffGCD) and ((Player:CastEnd() - PrecastWindow > 0) or (Player:GCDRemains() - PrecastWindow > 0))) then
       Object.LastDisplayTime = GetTime();
