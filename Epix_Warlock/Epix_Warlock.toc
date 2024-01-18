@@ -12,5 +12,5 @@ Warlock.lua
 
 Demonology.lua
 Affliction.lua
-Destruction.lua
+
 

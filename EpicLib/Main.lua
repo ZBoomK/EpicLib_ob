@@ -76,7 +76,7 @@ local EnabledRotation = {
   -- Warlock
     [265]   = "Epix_Warlock",       -- Affliction
     [266]   = "Epix_Warlock",       -- Demonology
-    [267]   = "Epix_Warlock",       -- Destruction
+    --[267]   = "Epix_Warlock",       -- Destruction
   -- Warrior
     [71]    = "Epix_Warrior",       -- Arms
     [72]    = "Epix_Warrior",       -- Fury
