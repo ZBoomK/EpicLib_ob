@@ -98,6 +98,8 @@ local fontAlt = "Interface\\Addons\\EpicSettings\\Fonts\\PTSansNarrow.TTF";
 
 local fontAltMulti = "Interface\\Addons\\EpicSettings\\Fonts\\NanumGothic-Regular.TTF";
 
+local fontKor = "Interface\\Addons\\EpicSettings\\Fonts\\BareunBatang 2Medium.ttf";
+
 local normalButtonFont = CreateFont("epicFontButtonNormal")
 normalButtonFont:SetFont(font, 12, "")
 normalButtonFont:SetTextColor(1, 0.725, 0.058, 1.0);
@@ -114,9 +116,11 @@ selectedButtonFontS:SetTextColor(0.0, 0.0, 0.0, 1.0);
 local normalFont = CreateFont("epicFontNormal")
 normalFont:SetFont(font, 10, "")
 normalFont:SetTextColor(1, 0.725, 0.058, 1.0);
+
 local normalAccentFont = CreateFont("epicFontNormalAccent")
 normalAccentFont:SetFont(font, 10, "")
 normalAccentFont:SetTextColor(1, 0.968, 0.0, 1.0);
+
 local normalAccentFontAlt = CreateFont("epicFontNormalAccentAlt")
 normalAccentFontAlt:SetFont(fontAlt, 10, "")
 normalAccentFontAlt:SetTextColor(1, 0.968, 0.0, 1.0);
@@ -124,6 +128,14 @@ normalAccentFontAlt:SetTextColor(1, 0.968, 0.0, 1.0);
 local fontAlternativeNormal = CreateFont("epicFontAlternativeNormal")
 fontAlternativeNormal:SetFont(fontAltMulti, 12, "")
 fontAlternativeNormal:SetTextColor(1, 0.725, 0.058, 1.0);
+
+local fontKorNormal = CreateFont("epicFontKorNormal")
+fontKorNormal:SetFont(fontKor, 10, "")
+fontKorNormal:SetTextColor(1, 0.725, 0.058, 1.0);
+
+local fontKorAccent = CreateFont("epicFontKorNormalAccent")
+fontKorAccent:SetFont(fontKor, 10, "")
+fontKorAccent:SetTextColor(1, 0.968, 0.0, 1.0);
 
 
 -- Profiles
@@ -486,7 +498,7 @@ function ES.InitMiniButtons()
 end
 
 function ES.InitProfilesTab()
-	local backdropInfo ={
+	local backdropInfo = {
 		--bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
  		edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
  		tile = true,
@@ -1163,8 +1175,13 @@ function ES.AddGroupDropdown(tab, minitab, line, variable, label, includeHealers
 			dropdown.optionControls[i] = CreateFrame("Button", nil, dropdown, "UIPanelButtonTemplate")
 			dropdown.optionControls[i]:SetNormalTexture("Interface\\Addons\\EpicSettings\\Vectors\\Editbox")
 			dropdown.optionControls[i]:SetHighlightTexture("Interface\\Addons\\EpicSettings\\Vectors\\White", "MOD")
-			dropdown.optionControls[i]:SetNormalFontObject(_G["epicFontNormal"])
-			dropdown.optionControls[i]:SetHighlightFontObject(_G["epicFontNormalAccent"])
+			if (GetLocale() == "koKR") then
+				dropdown.optionControls[i]:SetNormalFontObject(_G["epicFontKorNormal"])
+				dropdown.optionControls[i]:SetHighlightFontObject(_G["epicFontKorNormalAccent"])
+			else
+				dropdown.optionControls[i]:SetNormalFontObject(_G["epicFontNormal"])
+				dropdown.optionControls[i]:SetHighlightFontObject(_G["epicFontNormalAccent"])
+			end
 			dropdown.optionControls[i]:SetText(UnitName(PartyUnits[i-1]))
 			dropdown.optionControls[i]:SetSize(130, 15)
 			dropdown.optionControls[i]:SetPoint("TOPLEFT", dropdown, "BOTTOMLEFT", 0, -15*(i-1))
@@ -1250,8 +1267,13 @@ function ES.AddGroupDropdown(tab, minitab, line, variable, label, includeHealers
 				dropdown.optionControls[i] = CreateFrame("Button", nil, dropdown, "UIPanelButtonTemplate")
 				dropdown.optionControls[i]:SetNormalTexture("Interface\\Addons\\EpicSettings\\Vectors\\Editbox")
 				dropdown.optionControls[i]:SetHighlightTexture("Interface\\Addons\\EpicSettings\\Vectors\\White", "MOD")
-				dropdown.optionControls[i]:SetNormalFontObject(_G["epicFontNormal"])
-				dropdown.optionControls[i]:SetHighlightFontObject(_G["epicFontNormalAccent"])
+				if (GetLocale() == "koKR") then
+					dropdown.optionControls[i]:SetNormalFontObject(_G["epicFontKorNormal"])
+					dropdown.optionControls[i]:SetHighlightFontObject(_G["epicFontKorNormalAccent"])
+				else
+					dropdown.optionControls[i]:SetNormalFontObject(_G["epicFontNormal"])
+					dropdown.optionControls[i]:SetHighlightFontObject(_G["epicFontNormalAccent"])
+				end
 				dropdown.optionControls[i]:SetText(UnitName(PartyUnits[i-1]))
 				dropdown.optionControls[i]:SetSize(130, 15)
 				dropdown.optionControls[i]:SetPoint("TOPLEFT", dropdown, "BOTTOMLEFT", 0, -15*(i-1))
