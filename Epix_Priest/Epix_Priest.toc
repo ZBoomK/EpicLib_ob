@@ -10,7 +10,6 @@
 
 Priest.lua
 
-Holy.lua
 Shadow.lua
 Discipline.lua
 
