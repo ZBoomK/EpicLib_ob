@@ -284,7 +284,7 @@ do
     -- Abilities
     Spell(57724),   -- Shaman: Sated (Horde)
     Spell(57723),   -- Shaman: Exhaustion (Alliance)
-    Spell(80354),   -- Mage:Temporal Displacement
+    Spell(80354),   -- Mage: Temporal Displacement
     Spell(264689),  -- Hunter: Fatigued
     Spell(390435),  -- Evoker: Exhaustion
     -- Drums

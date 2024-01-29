@@ -731,55 +731,55 @@ do
     -- Dawn of the Infinite
     412012, 413606, 419327, 407535,
   };
-
-  function Commons.Interrupt(Spell, Range, OffGCD, Unit, Macro)
-    if not Unit then
-      Unit = Target;
+--Press(Object, OutofRange, Immovable, OffGCD)
+  function Commons.Interrupt(spell, Range, OffGCD, unit, macro)
+    if not unit then
+      unit = Target;
     end
-    if Unit:IsInterruptible() and (Unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or Unit:IsChanneling()) and (not EpicSettings.Settings["InterruptOnlyWhitelist"] or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, Unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, Unit:ChannelSpellID())) then
-      if Spell:IsCastable() then
-        if Macro then
-          if EL.Press(Macro, not Unit:IsSpellInRange(Spell), nil, OffGCD) then return "Cast " .. Spell:Name() .. " (Interrupt)"; end
+    if unit:IsInterruptible() and (unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or unit:IsChanneling()) and (not EpicSettings.Settings["InterruptOnlyWhitelist"] or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:ChannelSpellID())) then
+      if spell:IsCastable() then
+        if macro then
+          if EL.Press(macro, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt)"; end
         else
-          if EL.Press(Spell, not Unit:IsSpellInRange(Spell), nil, OffGCD) then return "Cast " .. Spell:Name() .. " (Interrupt)"; end
+          if EL.Press(spell, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt)"; end
         end
       end
     end
   end
 
-  function Commons.InterruptCursor(Spell, Macro, Range, OffGCD, Unit)
-    if not Unit then
-      Unit = Target;
+  function Commons.InterruptCursor(spell, Macro, Range, OffGCD, unit)
+    if not unit then
+      unit = Target;
     end
-    if Unit:IsInterruptible() and (Unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or Unit:IsChanneling()) and (not EpicSettings.Settings["InterruptOnlyWhitelist"] or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, Unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, Unit:ChannelSpellID())) then
-      if Spell:IsCastable() then
-        if EL.Press(Macro, not Unit:IsSpellInRange(Spell), nil, OffGCD) then return "Cast " .. Spell:Name() .. " (Interrupt)"; end
+    if unit:IsInterruptible() and (unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or unit:IsChanneling()) and (not EpicSettings.Settings["InterruptOnlyWhitelist"] or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:ChannelSpellID())) then
+      if spell:IsCastable() then
+        if EL.Press(Macro, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt)"; end
       end
     end
   end
 
-  function Commons.InterruptWithStun(Spell, Range, OffGCD, Unit)
-    if not Unit then
-      Unit = Target;
+  function Commons.InterruptWithStun(spell, Range, OffGCD, unit)
+    if not unit then
+      unit = Target;
     end
-    if EpicSettings.Settings["InterruptWithStun"] and (Unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or Unit:IsChanneling()) then
-      if (EpicSettings.Settings["InterruptOnlyWhitelist"] and (Utils.ValueIsInArray(Commons.StunWhitelistIDs, Unit:CastSpellID()) or Utils.ValueIsInArray(Commons.StunWhitelistIDs, Unit:ChannelSpellID()))) or (not EpicSettings.Settings["InterruptOnlyWhitelist"] and Unit:CanBeStunned()) then
-        if Spell:IsCastable() then
-            if EL.Press(Spell, not Unit:IsSpellInRange(Spell), nil, OffGCD) then return "Cast " .. Spell:Name() .. " (Interrupt With Stun)"; end
+    if EpicSettings.Settings["InterruptWithStun"] and (unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or unit:IsChanneling()) then
+      if (EpicSettings.Settings["InterruptOnlyWhitelist"] and (Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:ChannelSpellID()))) or (not EpicSettings.Settings["InterruptOnlyWhitelist"] and unit:CanBeStunned()) then
+        if spell:IsCastable() then
+            if EL.Press(spell, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt With Stun)"; end
         end
       end
     end
   end
 
 
-  function Commons.InterruptWithStunCursor(Spell, Macro, Range, OffGCD, Unit)
-    if not Unit then
-      Unit = Target;
+  function Commons.InterruptWithStunCursor(spell, Macro, Range, OffGCD, unit)
+    if not unit then
+      unit = Target;
     end
-    if EpicSettings.Settings["InterruptWithStun"] and (Unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or Unit:IsChanneling()) then
-      if (EpicSettings.Settings["InterruptOnlyWhitelist"] and (Utils.ValueIsInArray(Commons.StunWhitelistIDs, Unit:CastSpellID()) or Utils.ValueIsInArray(Commons.StunWhitelistIDs, Unit:ChannelSpellID()))) or (not EpicSettings.Settings["InterruptOnlyWhitelist"] and Unit:CanBeStunned()) then
-        if Spell:IsCastable() then
-          if EL.Press(Macro, not Unit:IsSpellInRange(Spell), nil, OffGCD) then return "Cast " .. Spell:Name() .. " (Interrupt With Stun)"; end
+    if EpicSettings.Settings["InterruptWithStun"] and (unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or unit:IsChanneling()) then
+      if (EpicSettings.Settings["InterruptOnlyWhitelist"] and (Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:ChannelSpellID()))) or (not EpicSettings.Settings["InterruptOnlyWhitelist"] and unit:CanBeStunned()) then
+        if spell:IsCastable() then
+          if EL.Press(Macro, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt With Stun)"; end
         end
       end
     end
