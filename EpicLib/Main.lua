@@ -62,7 +62,7 @@ local EnabledRotation = {
     [66]    = "Epix_Paladin",       -- Protection
     [70]    = "Epix_Paladin",       -- Retribution
   -- Priest
-    [256]   = "Epix_Priest",        -- Discipline
+    --[256]   = "Epix_Priest",        -- Discipline
     --[257]   = "Epix_Priest",        -- Holy
     [258]   = "Epix_Priest",        -- Shadow
   -- Rogue

@@ -11,5 +11,4 @@
 Priest.lua
 
 Shadow.lua
-Discipline.lua
 
