@@ -69,6 +69,13 @@ function Commons.CanDoTUnit(Unit, HealthThreshold)
   return Unit:Health() >= HealthThreshold or Unit:IsDummy();
 end
 
+-- Sleep function
+local clock = GetTime()
+function Commons.Wait(n)
+  local t0 = clock
+  while clock - t0 <= n do end
+end
+
 function Commons.IsItTimeToRamp(id, times, duration)
   local currentTime = EL.CombatTime()
 
@@ -462,123 +469,6 @@ end
 -- Interrupt
 do
   Commons.InterruptWhitelistIDs = {
-    396812,
-    388392,
-    388863,
-    377389,
-    396640,
-    387843,
-    209413,
-    207980,
-    208165,
-    198595,
-    198959,
-    215433,
-    199726,
-    198750,
-    373017,
-    392451,
-    385310,
-    152818,
-    -- 154327, -- Domination Manual Interrupt
-    156776,
-    398206,
-    156718,
-    153524,
-    397888,
-    397889,
-    395859,
-    396073,
-    397914,
-    387564,
-    375602,
-    386546,
-    377488,
-    373932,
-    384365,
-    386024,
-    387411,
-    387606,
-    384808,
-    373395,
-    376725,
-    192288,
-    -- Underrot
-    265089,
-    265091,
-    278755,
-    278961,
-    266106,
-    272183,
-    413044,
-    265433,
-    265487,
-    260879,
-    -- Freehold
-    257397,
-    281420,
-    257784,
-    259092,
-    -- Neltharions Lair
-    202108,
-    202075,
-    193585,
-    -- Uldaman
-    369400,
-    369365,
-    369411,
-    369675,
-    369823,
-    369399,
-    377500,
-    -- Brackenhide Hollow
-    367500,
-    367503,
-    382347,
-    372711,
-    374544,
-    385029,
-    382474,
-    -- Neltharus
-    378172,
-    395427,
-    372223,
-    372538,
-    384161,
-    383656,
-    396925,
-    -- Vortex
-    410870,
-    88170,
-    88186,
-    87779,
-    87761,
-    86331,
-    -- Halls of Infusion
-    374045,
-    374020,
-    374339,
-    374563,
-    395694,
-    374706,
-    374699,
-    385036,
-    377384,
-    377348,
-    377402,
-    376171,
-    -- Dawn of the Infinite
-    411994,
-    415770,
-    415435,
-    415437,
-    416256,
-    400165,
-    412922,
-    417481,
-    412378,
-    412233,
-    413427,
     --General
     396812, 388392, 388863, 377389, 396640, 387843, 209413, 207980, 208165, 198595, 198959, 215433, 199726, 198750, 373017, 392451, 385310, 152818,
     -- 154327, -- Domination Manual Interrupt
@@ -613,103 +503,20 @@ do
     76813, 429176,
     --Waycrest Manor
     263959, 264390, 265346, 265876, 266036, 271174, 278444,
+    -- Atal'Dazar
+    250096, 250368, 252781, 253517, 253544, 253583, 255041,
+    -- Blackrook Hold
+    200248, 225573, 227913,
+    -- Darkheart Thicket
+    200630, 201400, 201839, 204243, 225562,
+    -- Everbloom
+    164887, 164965, 168082, 169825, 169839, 169840, 427459, 173861,
+    -- Throne of Tides
+    76813, 429176,
+    -- Waycrest Manor
+    263959, 264390, 265346, 265876, 266036, 271174, 278444,
   };
   Commons.StunWhitelistIDs = {
-    210261,
-    198959,
-    398206,
-    388392,
-    395859,
-    397889,
-    397914,
-    153524,
-    215433,
-    396812,
-    372749,
-    372735,
-    370225,
-    386526,
-    384476,
-    383823,
-    386490,
-    387615,
-    382077,
-    387564,
-    386546,
-    385536,
-    387910,
-    212784,
-    199210,
-    114646,
-    397899,
-    397931,
-    -- Underrot
-    265540,
-    265376,
-    265089,
-    265091,
-    278961,
-    266106,
-    272183,
-    413044,
-    -- Freehold
-    257397,
-    272402,
-    281420,
-    257784,
-    257756,
-    257739,
-    -- Neltharions Lair
-    193941,
-    183526,
-    202108,
-    202075,
-    193803,
-    188587,
-    200154,
-    193585,
-    -- Uldaman
-    369400,
-    369365,
-    369423,
-    369411,
-    369674,
-    369675,
-    369823,
-    369465,
-    377486,
-    377500,
-    -- Brackenhide Hollow
-    367484,
-    367521,
-    372711,
-    385029,
-    385039,
-    -- Neltharus
-    378818,
-    371875,
-    372223,
-    384161,
-    -- Vortex
-    410870,
-    88170,
-    88186,
-    87779,
-    -- Halls of Infusion
-    374045,
-    374020,
-    374339,
-    374563,
-    395694,
-    376171,
-    385036,
-    377384,
-    377348,
-    -- Dawn of the Infinite
-    412012,
-    413606,
-    419327,
-    407535,
     --General
     210261, 198959, 398206, 388392, 395859, 397889, 397914, 153524, 215433, 396812, 372749, 372735, 370225, 386526, 384476, 383823, 386490, 387615, 382077, 387564, 386546, 385536, 387910, 212784, 199210, 114646, 397899, 397931,
     -- Underrot
@@ -733,39 +540,42 @@ do
   };
 --Press(Object, OutofRange, Immovable, OffGCD)
   function Commons.Interrupt(spell, Range, OffGCD, unit, macro)
+    local InterruptDelay = math.random(1,20)
     if not unit then
       unit = Target;
     end
-    if unit:IsInterruptible() and (unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or unit:IsChanneling()) and (not EpicSettings.Settings["InterruptOnlyWhitelist"] or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:ChannelSpellID())) then
+    if unit:IsInterruptible() and (unit:CastPercentage() >= ((EpicSettings.Settings["InterruptThreshold"] + InterruptDelay) or (20 + InterruptDelay))) and (not EpicSettings.Settings["InterruptOnlyWhitelist"] or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:ChannelSpellID())) then
       if spell:IsCastable() then
         if macro then
-          if EL.Press(macro, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt)"; end
+          if EL.Press(macro, not unit:IsInRange(Range), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt)"; end
         else
-          if EL.Press(spell, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt)"; end
+          if EL.Press(spell, not unit:IsInRange(Range), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt)"; end
         end
       end
     end
   end
 
   function Commons.InterruptCursor(spell, Macro, Range, OffGCD, unit)
+    local InterruptDelay = math.random(1,20)
     if not unit then
       unit = Target;
     end
-    if unit:IsInterruptible() and (unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or unit:IsChanneling()) and (not EpicSettings.Settings["InterruptOnlyWhitelist"] or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:ChannelSpellID())) then
+    if unit:IsInterruptible() and (unit:CastPercentage() >= ((EpicSettings.Settings["InterruptThreshold"] + InterruptDelay) or (20 + InterruptDelay))) and (not EpicSettings.Settings["InterruptOnlyWhitelist"] or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:ChannelSpellID())) then
       if spell:IsCastable() then
-        if EL.Press(Macro, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt)"; end
+        if EL.Press(Macro, not unit:IsInRange(Range), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt)"; end
       end
     end
   end
 
   function Commons.InterruptWithStun(spell, Range, OffGCD, unit)
+    local InterruptDelay = math.random(1,20)
     if not unit then
       unit = Target;
     end
-    if EpicSettings.Settings["InterruptWithStun"] and (unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or unit:IsChanneling()) then
-      if (EpicSettings.Settings["InterruptOnlyWhitelist"] and (Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:ChannelSpellID()))) or (not EpicSettings.Settings["InterruptOnlyWhitelist"] and unit:CanBeStunned()) then
+    if EpicSettings.Settings["InterruptWithStun"] and (unit:CastPercentage() >= ((EpicSettings.Settings["InterruptThreshold"] + InterruptDelay) or (20 + InterruptDelay))) then
+      if (EpicSettings.Settings["InterruptOnlyWhitelist"] and (Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:ChannelSpellID()))) or (not EpicSettings.Settings["InterruptOnlyWhitelist"] and unit:CanBeStunned()) then
         if spell:IsCastable() then
-            if EL.Press(spell, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt With Stun)"; end
+            if EL.Press(spell, not unit:IsInRange(Range), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt With Stun)"; end
         end
       end
     end
@@ -773,13 +583,14 @@ do
 
 
   function Commons.InterruptWithStunCursor(spell, Macro, Range, OffGCD, unit)
+    local InterruptDelay = math.random(1,20)
     if not unit then
       unit = Target;
     end
-    if EpicSettings.Settings["InterruptWithStun"] and (unit:CastPercentage() >= (EpicSettings.Settings["InterruptThreshold"] or 0) or unit:IsChanneling()) then
-      if (EpicSettings.Settings["InterruptOnlyWhitelist"] and (Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:ChannelSpellID()))) or (not EpicSettings.Settings["InterruptOnlyWhitelist"] and unit:CanBeStunned()) then
+    if EpicSettings.Settings["InterruptWithStun"] and (unit:CastPercentage() >= ((EpicSettings.Settings["InterruptThreshold"] + InterruptDelay) or (20 + InterruptDelay))) then
+      if (EpicSettings.Settings["InterruptOnlyWhitelist"] and (Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.StunWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:CastSpellID()) or Utils.ValueIsInArray(Commons.InterruptWhitelistIDs, unit:ChannelSpellID()))) or (not EpicSettings.Settings["InterruptOnlyWhitelist"] and unit:CanBeStunned()) then
         if spell:IsCastable() then
-          if EL.Press(Macro, not unit:IsSpellInRange(spell), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt With Stun)"; end
+          if EL.Press(Macro, not unit:IsInRange(Range), nil, OffGCD) then return "Cast " .. spell:Name() .. " (Interrupt With Stun)"; end
         end
       end
     end
@@ -1539,7 +1350,7 @@ end
 Commons.LastFocusSwap = 0
 -- Focus Specified Unit
 function Commons.FocusSpecifiedUnit(UnitToFocus, Range)
-  local cycleDelay = 500
+  local cycleDelay = 800
   if not Range then Range = 40; end
   if UnitToFocus ~= nil and (Focus == nil or not Focus:Exists() or UnitToFocus:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(UnitToFocus:ID())
@@ -1574,7 +1385,7 @@ end
 
 -- Focus Unit With a Debuff From a List
 function Commons.FocusUnitWithDebuffFromList(DebuffList, Range, maxRaid)
-  local cycleDelay = 500
+  local cycleDelay = 800
   if not Range then Range = 40; end
   local NewFocusUnit = nil
   if Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid) then
@@ -1626,7 +1437,7 @@ end
 
 -- Focus Unit
 function Commons.FocusUnit(IncludeDispellableUnits, Macros, Range, Role, maxRaid)
-  local cycleDelay = 500
+  local cycleDelay = 800
   if not Range then Range = 40; end
   local NewFocusUnit = Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid);
   if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
@@ -1671,7 +1482,7 @@ end
 
 -- Focus Unit With Buff Remaining less than Time
 function Commons.FocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid)
-  local cycleDelay = 500
+  local cycleDelay = 800
   if not Range then Range = 40; end
   local NewFocusUnit = Commons.GetFocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid);
   if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
