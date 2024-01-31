@@ -1,44 +1,36 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 1052 - (433 + 619);
-	local v6;
-	while true do
-		if ((v5 == (164 - (92 + 71))) or ((724 + 740) > (3698 - 1498))) then
-			return v6(...);
-		end
-		if ((v5 == (765 - (574 + 191))) or ((1119 + 237) > (11832 - 7109))) then
-			v6 = v0[v4];
-			if (not v6 or ((2113 + 2023) <= (4282 - (254 + 595)))) then
-				return v1(v4, ...);
-			end
-			v5 = 127 - (55 + 71);
-		end
+	local v5 = v0[v4];
+	if (((1995 - (476 + 255)) < (3370 - (369 + 761))) and not v5) then
+		return v1(v4, ...);
 	end
+	return v5(...);
 end
 v0["Epix_DeathKnight_Blood.lua"] = function(...)
-	local v7, v8 = ...;
-	local v9 = EpicDBC.DBC;
-	local v10 = EpicLib;
-	local v11 = EpicCache;
-	local v12 = v10.Utils;
-	local v13 = v10.Unit;
-	local v14 = v13.Player;
-	local v15 = v13.Target;
-	local v16 = v10.Spell;
-	local v17 = v10.MultiSpell;
-	local v18 = v10.Item;
-	local v19 = v10.Pet;
-	local v20 = v10.Press;
-	local v21 = v10.Macro;
-	local v22 = v10.Commons.Everyone.num;
-	local v23 = v10.Commons.Everyone.bool;
-	local v24 = math.min;
-	local v25 = math.abs;
-	local v26 = math.max;
+	local v6, v7 = ...;
+	local v8 = EpicDBC.DBC;
+	local v9 = EpicLib;
+	local v10 = EpicCache;
+	local v11 = v9.Utils;
+	local v12 = v9.Unit;
+	local v13 = v12.Player;
+	local v14 = v12.Target;
+	local v15 = v9.Spell;
+	local v16 = v9.MultiSpell;
+	local v17 = v9.Item;
+	local v18 = v9.Pet;
+	local v19 = v9.Press;
+	local v20 = v9.Macro;
+	local v21 = v9.Commons.Everyone.num;
+	local v22 = v9.Commons.Everyone.bool;
+	local v23 = math.min;
+	local v24 = math.abs;
+	local v25 = math.max;
+	local v26 = false;
 	local v27 = false;
 	local v28 = false;
-	local v29 = false;
+	local v29;
 	local v30;
 	local v31;
 	local v32;
@@ -72,120 +64,98 @@ v0["Epix_DeathKnight_Blood.lua"] = function(...)
 	local v60;
 	local v61;
 	local v62;
-	local v63;
-	local function v64()
-		local v93 = 0 - 0;
-		while true do
-			if (((6035 - (573 + 1217)) <= (12825 - 8194)) and (v93 == (1 + 4))) then
-				v60 = EpicSettings.Settings['RuneTapThreshold'];
-				v61 = EpicSettings.Settings['VampiricBloodThreshold'];
-				v62 = EpicSettings.Settings['DeathStrikeDumpAmount'];
-				break;
-			end
-			if (((6889 - 2613) >= (4853 - (714 + 225))) and (v93 == (5 - 3))) then
-				v43 = EpicSettings.Settings['UseAMSAMZOffensively'];
-				v44 = EpicSettings.Settings['AntiMagicShellGCD'];
-				v45 = EpicSettings.Settings['AntiMagicZoneGCD'];
-				v46 = EpicSettings.Settings['DeathAndDecayGCD'];
-				v47 = EpicSettings.Settings['EmpowerRuneWeaponGCD'];
-				v48 = EpicSettings.Settings['SacrificialPactGCD'];
-				v93 = 3 - 0;
-			end
-			if (((22 + 176) <= (6319 - 1954)) and ((809 - (118 + 688)) == v93)) then
-				v49 = EpicSettings.Settings['MindFreezeOffGCD'];
-				v50 = EpicSettings.Settings['RacialsOffGCD'];
-				v51 = EpicSettings.Settings['BonestormGCD'];
-				v52 = EpicSettings.Settings['ChainsOfIceGCD'];
-				v53 = EpicSettings.Settings['DancingRuneWeaponGCD'];
-				v54 = EpicSettings.Settings['DeathStrikeGCD'];
-				v93 = 52 - (25 + 23);
-			end
-			if (((927 + 3855) > (6562 - (927 + 959))) and (v93 == (0 - 0))) then
-				v30 = EpicSettings.Settings['UseRacials'];
-				v32 = EpicSettings.Settings['UseHealingPotion'];
-				v33 = EpicSettings.Settings['HealingPotionName'] or (732 - (16 + 716));
-				v34 = EpicSettings.Settings['HealingPotionHP'] or (0 - 0);
-				v35 = EpicSettings.Settings['UseHealthstone'];
-				v36 = EpicSettings.Settings['HealthstoneHP'] or (97 - (11 + 86));
-				v93 = 2 - 1;
-			end
-			if (((5149 - (175 + 110)) > (5546 - 3349)) and (v93 == (4 - 3))) then
-				v37 = EpicSettings.Settings['InterruptWithStun'] or (1796 - (503 + 1293));
-				v38 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (0 - 0);
-				v39 = EpicSettings.Settings['InterruptThreshold'] or (0 + 0);
-				v31 = EpicSettings.Settings['UseTrinkets'];
-				v41 = EpicSettings.Settings['UseDeathStrikeHP'];
-				v42 = EpicSettings.Settings['UseDarkSuccorHP'];
-				v93 = 1063 - (810 + 251);
-			end
-			if (((3 + 1) == v93) or ((1136 + 2564) == (2260 + 247))) then
-				v55 = EpicSettings.Settings['IceboundFortitudeGCD'];
-				v56 = EpicSettings.Settings['TombstoneGCD'];
-				v57 = EpicSettings.Settings['VampiricBloodGCD'];
-				v58 = EpicSettings.Settings['BloodTapOffGCD'];
-				v59 = EpicSettings.Settings['RuneTapOffGCD'];
-				v63 = EpicSettings.Settings['IceboundFortitudeThreshold'];
-				v93 = 538 - (43 + 490);
-			end
-		end
+	local function v63()
+		v29 = EpicSettings.Settings['UseRacials'];
+		v31 = EpicSettings.Settings['UseHealingPotion'];
+		v32 = EpicSettings.Settings['HealingPotionName'] or (0 + 0);
+		v33 = EpicSettings.Settings['HealingPotionHP'] or (0 - 0);
+		v34 = EpicSettings.Settings['UseHealthstone'];
+		v35 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
+		v36 = EpicSettings.Settings['InterruptWithStun'] or (238 - (64 + 174));
+		v37 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (0 + 0);
+		v38 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
+		v30 = EpicSettings.Settings['UseTrinkets'];
+		v40 = EpicSettings.Settings['UseDeathStrikeHP'];
+		v41 = EpicSettings.Settings['UseDarkSuccorHP'];
+		v42 = EpicSettings.Settings['UseAMSAMZOffensively'];
+		v43 = EpicSettings.Settings['AntiMagicShellGCD'];
+		v44 = EpicSettings.Settings['AntiMagicZoneGCD'];
+		v45 = EpicSettings.Settings['DeathAndDecayGCD'];
+		v46 = EpicSettings.Settings['EmpowerRuneWeaponGCD'];
+		v47 = EpicSettings.Settings['SacrificialPactGCD'];
+		v48 = EpicSettings.Settings['MindFreezeOffGCD'];
+		v49 = EpicSettings.Settings['RacialsOffGCD'];
+		v50 = EpicSettings.Settings['BonestormGCD'];
+		v51 = EpicSettings.Settings['ChainsOfIceGCD'];
+		v52 = EpicSettings.Settings['DancingRuneWeaponGCD'];
+		v53 = EpicSettings.Settings['DeathStrikeGCD'];
+		v54 = EpicSettings.Settings['IceboundFortitudeGCD'];
+		v55 = EpicSettings.Settings['TombstoneGCD'];
+		v56 = EpicSettings.Settings['VampiricBloodGCD'];
+		v57 = EpicSettings.Settings['BloodTapOffGCD'];
+		v58 = EpicSettings.Settings['RuneTapOffGCD'];
+		v62 = EpicSettings.Settings['IceboundFortitudeThreshold'];
+		v59 = EpicSettings.Settings['RuneTapThreshold'];
+		v60 = EpicSettings.Settings['VampiricBloodThreshold'];
+		v61 = EpicSettings.Settings['DeathStrikeDumpAmount'];
 	end
-	local v65;
-	local v66 = v16.DeathKnight.Blood;
-	local v67 = v18.DeathKnight.Blood;
-	local v68 = v21.DeathKnight.Blood;
-	local v69 = {v67.Fyralath:ID()};
-	local v70 = 251 - 186;
-	local v71 = ((not v66.DeathsCaress:IsAvailable() or v66.Consumption:IsAvailable() or v66.Blooddrinker:IsAvailable()) and (863 - (240 + 619))) or (2 + 3);
-	local v72 = 0 - 0;
-	local v73 = 0 + 0;
+	local v64;
+	local v65 = v15.DeathKnight.Blood;
+	local v66 = v17.DeathKnight.Blood;
+	local v67 = v20.DeathKnight.Blood;
+	local v68 = {v66.Fyralath:ID()};
+	local v69 = 281 - (42 + 174);
+	local v70 = ((not v65.DeathsCaress:IsAvailable() or v65.Consumption:IsAvailable() or v65.Blooddrinker:IsAvailable()) and (4 + 0)) or (5 + 0);
+	local v71 = 0 + 0;
+	local v72 = 1504 - (363 + 1141);
+	local v73;
 	local v74;
 	local v75;
 	local v76;
 	local v77;
-	local v78;
-	local v79 = v10.GhoulTable;
-	local v80 = v10.Commons.Everyone;
-	local v81 = {{v66.Asphyxiate,"Cast Asphyxiate (Interrupt)",function()
+	local v78 = v9.GhoulTable;
+	local v79 = v9.Commons.Everyone;
+	local v80 = {{v65.Asphyxiate,"Cast Asphyxiate (Interrupt)",function()
 		return true;
 	end}};
-	v10:RegisterForEvent(function()
-		v71 = ((not v66.DeathsCaress:IsAvailable() or v66.Consumption:IsAvailable() or v66.Blooddrinker:IsAvailable()) and (16 - 12)) or (16 - 11);
+	v9:RegisterForEvent(function()
+		v70 = ((not v65.DeathsCaress:IsAvailable() or v65.Consumption:IsAvailable() or v65.Blooddrinker:IsAvailable()) and (1979 - (1913 + 62))) or (4 + 1);
 	end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
-	local function v82(v94)
-		local v95 = 1739 - (404 + 1335);
-		local v96;
+	local function v81(v119)
+		local v120 = 0 - 0;
+		local v121;
 		while true do
-			if (((4880 - (183 + 223)) >= (332 - 58)) and ((0 + 0) == v95)) then
-				v96 = 0 + 0;
-				for v137, v138 in pairs(v94) do
-					if (not v138:DebuffUp(v66.BloodPlagueDebuff) or ((2231 - (10 + 327)) <= (980 + 426))) then
-						v96 = v96 + (339 - (118 + 220));
+			if (((5824 - (565 + 1368)) >= (5768 - 4234)) and (v120 == (1662 - (1477 + 184)))) then
+				return v121;
+			end
+			if (((5370 - 1428) == (3673 + 269)) and (v120 == (856 - (564 + 292)))) then
+				v121 = 0 - 0;
+				for v132, v133 in pairs(v119) do
+					if (not v133:DebuffUp(v65.BloodPlagueDebuff) or ((9892 - 6610) > (5031 - (244 + 60)))) then
+						v121 = v121 + 1 + 0;
 					end
 				end
-				v95 = 1 + 0;
-			end
-			if (((2021 - (108 + 341)) >= (688 + 843)) and (v95 == (4 - 3))) then
-				return v96;
+				v120 = 477 - (41 + 435);
 			end
 		end
 	end
-	local function v83(v97)
-		return (v97:DebuffRemains(v66.SoulReaperDebuff));
+	local function v82(v122)
+		return (v122:DebuffRemains(v65.SoulReaperDebuff));
 	end
-	local function v84(v98)
-		return ((v98:TimeToX(1528 - (711 + 782)) < (9 - 4)) or (v98:HealthPercentage() <= (504 - (270 + 199)))) and (v98:TimeToDie() > (v98:DebuffRemains(v66.SoulReaperDebuff) + 2 + 3));
+	local function v83(v123)
+		return ((v123:TimeToX(1036 - (938 + 63)) < (4 + 1)) or (v123:HealthPercentage() <= (1160 - (936 + 189)))) and (v123:TimeToDie() > (v123:DebuffRemains(v65.SoulReaperDebuff) + 2 + 3));
 	end
-	local function v85()
-		local v99 = 1819 - (580 + 1239);
+	local function v84()
+		local v124 = 1613 - (1565 + 48);
 		while true do
-			if ((v99 == (0 - 0)) or ((4482 + 205) < (164 + 4378))) then
-				if (((1434 + 1857) > (4352 - 2685)) and v66.DeathsCaress:IsReady()) then
-					if (v20(v66.DeathsCaress, nil, nil, not v15:IsSpellInRange(v66.DeathsCaress)) or ((543 + 330) == (3201 - (645 + 522)))) then
+			if ((v124 == (0 + 0)) or ((5117 - (782 + 356)) < (3724 - (176 + 91)))) then
+				if (((1114 - 686) < (2658 - 854)) and v65.DeathsCaress:IsReady()) then
+					if (v19(v65.DeathsCaress, nil, nil, not v14:IsSpellInRange(v65.DeathsCaress)) or ((4417 - (975 + 117)) > (6488 - (157 + 1718)))) then
 						return "deaths_caress precombat 4";
 					end
 				end
-				if (v66.Marrowrend:IsReady() or ((4606 - (1010 + 780)) < (11 + 0))) then
-					if (((17621 - 13922) < (13790 - 9084)) and v20(v66.Marrowrend, nil, nil, not v15:IsInMeleeRange(1841 - (1045 + 791)))) then
+				if (v65.Marrowrend:IsReady() or ((4018 + 932) <= (16162 - 11609))) then
+					if (((9111 - 6446) <= (4951 - (697 + 321))) and v19(v65.Marrowrend, nil, nil, not v14:IsInMeleeRange(13 - 8))) then
 						return "marrowrend precombat 6";
 					end
 				end
@@ -193,280 +163,241 @@ v0["Epix_DeathKnight_Blood.lua"] = function(...)
 			end
 		end
 	end
-	local function v86()
-		local v100 = 0 - 0;
-		while true do
-			if (((4039 - 1393) >= (1381 - (351 + 154))) and (v100 == (1575 - (1281 + 293)))) then
-				if (((880 - (28 + 238)) <= (7114 - 3930)) and v66.VampiricBlood:IsCastable() and v74 and (v14:HealthPercentage() <= v61) and v14:BuffDown(v66.IceboundFortitudeBuff)) then
-					if (((4685 - (1381 + 178)) == (2932 + 194)) and v20(v66.VampiricBlood, v57)) then
-						return "vampiric_blood defensives 14";
-					end
-				end
-				if ((v66.IceboundFortitude:IsCastable() and v74 and (v14:HealthPercentage() <= v63) and v14:BuffDown(v66.VampiricBloodBuff)) or ((1764 + 423) >= (2114 + 2840))) then
-					if (v20(v66.IceboundFortitude, v55) or ((13365 - 9488) == (1853 + 1722))) then
-						return "icebound_fortitude defensives 16";
-					end
-				end
-				v100 = 472 - (381 + 89);
-			end
-			if (((627 + 80) > (428 + 204)) and (v100 == (0 - 0))) then
-				if ((v66.RuneTap:IsReady() and v74 and (v14:HealthPercentage() <= v60) and (v14:Rune() >= (1159 - (1074 + 82))) and (v66.RuneTap:Charges() >= (1 - 0)) and v14:BuffDown(v66.RuneTapBuff)) or ((2330 - (214 + 1570)) >= (4139 - (990 + 465)))) then
-					if (((604 + 861) <= (1872 + 2429)) and v20(v66.RuneTap, v59)) then
-						return "rune_tap defensives 2";
-					end
-				end
-				if (((1658 + 46) > (5607 - 4182)) and v14:ActiveMitigationNeeded() and (v66.Marrowrend:TimeSinceLastCast() > (1728.5 - (1668 + 58))) and (v66.DeathStrike:TimeSinceLastCast() > (628.5 - (512 + 114)))) then
-					local v139 = 0 - 0;
-					while true do
-						if ((v139 == (1 - 0)) or ((2390 - 1703) == (1970 + 2264))) then
-							if (v66.DeathStrike:IsReady() or ((624 + 2706) < (1243 + 186))) then
-								if (((3868 - 2721) >= (2329 - (109 + 1885))) and v20(v66.DeathStrike, v54, nil, not v15:IsSpellInRange(v66.DeathStrike))) then
-									return "death_strike defensives 10";
-								end
-							end
-							break;
-						end
-						if (((4904 - (1269 + 200)) > (4019 - 1922)) and (v139 == (815 - (98 + 717)))) then
-							if ((v66.DeathStrike:IsReady() and (v14:BuffStack(v66.BoneShieldBuff) > (833 - (802 + 24)))) or ((6501 - 2731) >= (5103 - 1062))) then
-								if (v20(v66.DeathStrike, v54, nil, not v15:IsSpellInRange(v66.DeathStrike)) or ((560 + 3231) <= (1238 + 373))) then
-									return "death_strike defensives 4";
-								end
-							end
-							if (v66.Marrowrend:IsReady() or ((752 + 3826) <= (434 + 1574))) then
-								if (((3129 - 2004) <= (6922 - 4846)) and v20(v66.Marrowrend, nil, nil, not v15:IsInMeleeRange(2 + 3))) then
-									return "marrowrend defensives 6";
-								end
-							end
-							v139 = 1 + 0;
-						end
-					end
-				end
-				v100 = 1 + 0;
-			end
-			if ((v100 == (2 + 0)) or ((347 + 396) >= (5832 - (797 + 636)))) then
-				if (((5607 - 4452) < (3292 - (1427 + 192))) and v66.DeathStrike:IsReady() and (v14:HealthPercentage() <= (18 + 32 + (((v14:RunicPower() > v70) and (46 - 26)) or (0 + 0)))) and not v14:HealingAbsorbed()) then
-					if (v20(v66.DeathStrike, v54, nil, not v15:IsSpellInRange(v66.DeathStrike)) or ((1054 + 1270) <= (904 - (192 + 134)))) then
-						return "death_strike defensives 18";
-					end
-				end
-				break;
+	local function v85()
+		if (((6933 - 3660) == (7545 - 4272)) and v65.RuneTap:IsReady() and v73 and (v13:HealthPercentage() <= v59) and (v13:Rune() >= (2 + 1)) and (v65.RuneTap:Charges() >= (1 - 0)) and v13:BuffDown(v65.RuneTapBuff)) then
+			if (((10251 - 6427) > (1636 - (322 + 905))) and v19(v65.RuneTap, v58)) then
+				return "rune_tap defensives 2";
 			end
 		end
+		if (((2698 - (602 + 9)) == (3276 - (449 + 740))) and v13:ActiveMitigationNeeded() and (v65.Marrowrend:TimeSinceLastCast() > (874.5 - (826 + 46))) and (v65.DeathStrike:TimeSinceLastCast() > (949.5 - (245 + 702)))) then
+			if ((v65.DeathStrike:IsReady() and (v13:BuffStack(v65.BoneShieldBuff) > (21 - 14))) or ((1095 + 2309) > (6401 - (260 + 1638)))) then
+				if (v19(v65.DeathStrike, v53, nil, not v14:IsSpellInRange(v65.DeathStrike)) or ((3946 - (382 + 58)) <= (4198 - 2889))) then
+					return "death_strike defensives 4";
+				end
+			end
+			if (((2456 + 499) == (6106 - 3151)) and v65.Marrowrend:IsReady()) then
+				if (v19(v65.Marrowrend, nil, nil, not v14:IsInMeleeRange(14 - 9)) or ((4108 - (902 + 303)) == (3282 - 1787))) then
+					return "marrowrend defensives 6";
+				end
+			end
+			if (((10948 - 6402) >= (196 + 2079)) and v65.DeathStrike:IsReady()) then
+				if (((2509 - (1121 + 569)) >= (236 - (22 + 192))) and v19(v65.DeathStrike, v53, nil, not v14:IsSpellInRange(v65.DeathStrike))) then
+					return "death_strike defensives 10";
+				end
+			end
+		end
+		if (((3845 - (483 + 200)) == (4625 - (1404 + 59))) and v65.VampiricBlood:IsCastable() and v73 and (v13:HealthPercentage() <= v60) and v13:BuffDown(v65.IceboundFortitudeBuff)) then
+			if (v19(v65.VampiricBlood, v56) or ((6483 - 4114) > (5951 - 1522))) then
+				return "vampiric_blood defensives 14";
+			end
+		end
+		if (((4860 - (468 + 297)) >= (3745 - (334 + 228))) and v65.IceboundFortitude:IsCastable() and v73 and (v13:HealthPercentage() <= v62) and v13:BuffDown(v65.VampiricBloodBuff)) then
+			if (v19(v65.IceboundFortitude, v54) or ((12517 - 8806) < (2336 - 1328))) then
+				return "icebound_fortitude defensives 16";
+			end
+		end
+		if ((v65.DeathStrike:IsReady() and (v13:HealthPercentage() <= ((90 - 40) + (((v13:RunicPower() > v69) and (6 + 14)) or (236 - (141 + 95))))) and not v13:HealingAbsorbed()) or ((1031 + 18) <= (2331 - 1425))) then
+			if (((10848 - 6335) > (639 + 2087)) and v19(v65.DeathStrike, v53, nil, not v14:IsSpellInRange(v65.DeathStrike))) then
+				return "death_strike defensives 18";
+			end
+		end
+	end
+	local function v86()
 	end
 	local function v87()
-	end
-	local function v88()
-		local v101 = 1276 - (316 + 960);
-		while true do
-			if (((2097 + 1670) == (2908 + 859)) and (v101 == (1 + 0))) then
-				if (((15632 - 11543) == (4640 - (83 + 468))) and v66.ArcanePulse:IsCastable() and ((v76 >= (1808 - (1202 + 604))) or ((v14:Rune() < (4 - 3)) and (v14:RunicPowerDeficit() > (99 - 39))))) then
-					if (((12343 - 7885) >= (1999 - (45 + 280))) and v20(v66.ArcanePulse, nil, not v15:IsInRange(8 + 0))) then
-						return "arcane_pulse racials 6";
-					end
-				end
-				if (((850 + 122) <= (518 + 900)) and v66.LightsJudgment:IsCastable() and (v14:BuffUp(v66.UnholyStrengthBuff))) then
-					if (v20(v66.LightsJudgment, nil, not v15:IsSpellInRange(v66.LightsJudgment)) or ((2733 + 2205) < (838 + 3924))) then
-						return "lights_judgment racials 8";
-					end
-				end
-				v101 = 3 - 1;
+		if ((v65.BloodFury:IsCastable() and v65.DancingRuneWeapon:CooldownUp() and (not v65.Blooddrinker:IsReady() or not v65.Blooddrinker:IsAvailable())) or ((4057 - 2576) >= (1869 + 789))) then
+			if (v19(v65.BloodFury) or ((1677 + 1543) == (1920 - 556))) then
+				return "blood_fury racials 2";
 			end
-			if ((v101 == (1911 - (340 + 1571))) or ((988 + 1516) > (6036 - (1733 + 39)))) then
-				if (((5916 - 3763) == (3187 - (125 + 909))) and v66.BloodFury:IsCastable() and v66.DancingRuneWeapon:CooldownUp() and (not v66.Blooddrinker:IsReady() or not v66.Blooddrinker:IsAvailable())) then
-					if (v20(v66.BloodFury) or ((2455 - (1096 + 852)) >= (1163 + 1428))) then
-						return "blood_fury racials 2";
-					end
-				end
-				if (((6399 - 1918) == (4347 + 134)) and v66.Berserking:IsCastable()) then
-					if (v20(v66.Berserking) or ((2840 - (409 + 103)) < (929 - (46 + 190)))) then
-						return "berserking racials 4";
-					end
-				end
-				v101 = 96 - (51 + 44);
+		end
+		if (v65.Berserking:IsCastable() or ((622 + 432) > (3555 - (92 + 71)))) then
+			if (v19(v65.Berserking) or ((334 + 342) >= (2760 - 1118))) then
+				return "berserking racials 4";
 			end
-			if (((1221 + 3107) == (5645 - (1114 + 203))) and (v101 == (729 - (228 + 498)))) then
-				if (((345 + 1243) >= (736 + 596)) and v66.BagofTricks:IsCastable()) then
-					if (v20(v66.BagofTricks, nil, not v15:IsSpellInRange(v66.BagofTricks)) or ((4837 - (174 + 489)) > (11067 - 6819))) then
-						return "bag_of_tricks racials 14";
-					end
-				end
-				if ((v66.ArcaneTorrent:IsCastable() and (v14:RunicPowerDeficit() > (1925 - (830 + 1075)))) or ((5110 - (303 + 221)) <= (1351 - (231 + 1038)))) then
-					if (((3220 + 643) == (5025 - (171 + 991))) and v20(v66.ArcaneTorrent, nil, not v15:IsInRange(32 - 24))) then
-						return "arcane_torrent racials 16";
-					end
-				end
-				break;
+		end
+		if (((4901 - (574 + 191)) > (1978 + 419)) and v65.ArcanePulse:IsCastable() and ((v75 >= (4 - 2)) or ((v13:Rune() < (1 + 0)) and (v13:RunicPowerDeficit() > (909 - (254 + 595)))))) then
+			if (v19(v65.ArcanePulse, nil, not v14:IsInRange(134 - (55 + 71))) or ((5709 - 1375) == (6035 - (573 + 1217)))) then
+				return "arcane_pulse racials 6";
 			end
-			if ((v101 == (5 - 3)) or ((703 - 421) <= (34 + 8))) then
-				if (((16156 - 11547) >= (2209 - 1443)) and v66.AncestralCall:IsCastable()) then
-					if (v20(v66.AncestralCall) or ((1856 - 704) == (7690 - 5202))) then
-						return "ancestral_call racials 10";
-					end
-				end
-				if (((4670 - (111 + 1137)) > (3508 - (91 + 67))) and v66.Fireblood:IsCastable()) then
-					if (((2610 - 1733) > (94 + 282)) and v20(v66.Fireblood)) then
-						return "fireblood racials 12";
-					end
-				end
-				v101 = 526 - (423 + 100);
+		end
+		if ((v65.LightsJudgment:IsCastable() and (v13:BuffUp(v65.UnholyStrengthBuff))) or ((11841 - 7565) <= (231 + 2800))) then
+			if (v19(v65.LightsJudgment, nil, not v14:IsSpellInRange(v65.LightsJudgment)) or ((7704 - 2922) <= (2138 - (714 + 225)))) then
+				return "lights_judgment racials 8";
+			end
+		end
+		if (v65.AncestralCall:IsCastable() or ((14214 - 9350) < (2651 - 749))) then
+			if (((524 + 4315) >= (5357 - 1657)) and v19(v65.AncestralCall)) then
+				return "ancestral_call racials 10";
+			end
+		end
+		if (v65.Fireblood:IsCastable() or ((1881 - (118 + 688)) > (1966 - (25 + 23)))) then
+			if (((77 + 319) <= (5690 - (927 + 959))) and v19(v65.Fireblood)) then
+				return "fireblood racials 12";
+			end
+		end
+		if (v65.BagofTricks:IsCastable() or ((14053 - 9884) == (2919 - (16 + 716)))) then
+			if (((2713 - 1307) == (1503 - (11 + 86))) and v19(v65.BagofTricks, nil, not v14:IsSpellInRange(v65.BagofTricks))) then
+				return "bag_of_tricks racials 14";
+			end
+		end
+		if (((3734 - 2203) < (4556 - (175 + 110))) and v65.ArcaneTorrent:IsCastable() and (v13:RunicPowerDeficit() > (50 - 30))) then
+			if (((3131 - 2496) == (2431 - (503 + 1293))) and v19(v65.ArcaneTorrent, nil, not v14:IsInRange(22 - 14))) then
+				return "arcane_torrent racials 16";
 			end
 		end
 	end
-	local function v89()
-		local v102 = 0 + 0;
+	local function v88()
+		local v125 = 0 + 0;
 		while true do
-			if ((v102 == (5 - 3)) or ((1626 + 1492) <= (2622 - (326 + 445)))) then
-				if ((v66.DeathAndDecay:IsReady() and v14:BuffDown(v66.DeathAndDecayBuff) and (v66.SanguineGround:IsAvailable() or v66.UnholyGround:IsAvailable())) or ((720 - 555) >= (7779 - 4287))) then
-					if (((9217 - 5268) < (5567 - (530 + 181))) and v20(v68.DaDPlayer, v46, nil, not v15:IsInRange(911 - (614 + 267)))) then
-						return "death_and_decay drw_up 16";
-					end
-				end
-				if ((v66.BloodBoil:IsCastable() and (v76 > (34 - (19 + 13))) and (v66.BloodBoil:ChargesFractional() >= (1.1 - 0))) or ((9963 - 5687) < (8615 - 5599))) then
-					if (((1219 + 3471) > (7254 - 3129)) and v20(v66.BloodBoil, nil, not v15:IsInMeleeRange(20 - 10))) then
-						return "blood_boil drw_up 18";
-					end
-				end
-				v73 = (1837 - (1293 + 519)) + (v77 * v22(v66.Heartbreaker:IsAvailable()) * (3 - 1));
-				v102 = 7 - 4;
-			end
-			if (((5 - 2) == v102) or ((215 - 165) >= (2110 - 1214))) then
-				if ((v66.DeathStrike:IsReady() and ((v14:RunicPowerDeficit() <= v73) or (v14:RunicPower() >= v70))) or ((908 + 806) >= (604 + 2354))) then
-					if (v20(v66.DeathStrike, v54, nil, not v15:IsSpellInRange(v66.DeathStrike)) or ((3464 - 1973) < (149 + 495))) then
-						return "death_strike drw_up 20";
-					end
-				end
-				if (((234 + 470) < (617 + 370)) and v66.Consumption:IsCastable()) then
-					if (((4814 - (709 + 387)) > (3764 - (673 + 1185))) and v20(v66.Consumption, nil, not v15:IsSpellInRange(v66.Consumption))) then
-						return "consumption drw_up 22";
-					end
-				end
-				if ((v66.BloodBoil:IsReady() and (v66.BloodBoil:ChargesFractional() >= (2.1 - 1)) and (v14:BuffStack(v66.HemostasisBuff) < (16 - 11))) or ((1576 - 618) > (2600 + 1035))) then
-					if (((2616 + 885) <= (6064 - 1572)) and v20(v66.BloodBoil, nil, nil, not v15:IsInMeleeRange(3 + 7))) then
-						return "blood_boil drw_up 24";
-					end
-				end
-				v102 = 7 - 3;
-			end
-			if ((v102 == (1 - 0)) or ((5322 - (446 + 1434)) < (3831 - (1040 + 243)))) then
-				if (((8580 - 5705) >= (3311 - (559 + 1288))) and v66.Marrowrend:IsReady() and ((v14:BuffRemains(v66.BoneShieldBuff) <= (1935 - (609 + 1322))) or (v14:BuffStack(v66.BoneShieldBuff) < v71)) and (v14:RunicPowerDeficit() > (474 - (13 + 441)))) then
-					if (v20(v66.Marrowrend, nil, nil, not v15:IsInMeleeRange(18 - 13)) or ((12565 - 7768) >= (24369 - 19476))) then
-						return "marrowrend drw_up 10";
-					end
-				end
-				if ((v66.SoulReaper:IsReady() and (v76 == (1 + 0)) and ((v15:TimeToX(127 - 92) < (2 + 3)) or (v15:HealthPercentage() <= (16 + 19))) and (v15:TimeToDie() > (v15:DebuffRemains(v66.SoulReaperDebuff) + (14 - 9)))) or ((302 + 249) > (3803 - 1735))) then
-					if (((1398 + 716) > (526 + 418)) and v20(v66.SoulReaper, nil, nil, not v15:IsInMeleeRange(4 + 1))) then
+			if (((4434 - (810 + 251)) <= (2468 + 1088)) and (v125 == (1 + 0))) then
+				if ((v65.SoulReaper:IsReady() and (v75 == (1 + 0)) and ((v14:TimeToX(568 - (43 + 490)) < (738 - (711 + 22))) or (v14:HealthPercentage() <= (135 - 100))) and (v14:TimeToDie() > (v14:DebuffRemains(v65.SoulReaperDebuff) + (864 - (240 + 619))))) or ((795 + 2496) < (5217 - 1937))) then
+					if (((291 + 4095) >= (2617 - (1344 + 400))) and v19(v65.SoulReaper, nil, nil, not v14:IsInMeleeRange(410 - (255 + 150)))) then
 						return "soul_reaper drw_up 12";
 					end
 				end
-				if ((v66.SoulReaper:IsReady() and (v76 >= (2 + 0))) or ((2214 + 48) >= (3529 - (153 + 280)))) then
-					if (v80.CastTargetIf(v66.SoulReaper, v75, "min", v83, v84, not v15:IsInMeleeRange(14 - 9)) or ((2025 + 230) >= (1397 + 2140))) then
+				if (((726 + 195) <= (590 + 512)) and v65.SoulReaper:IsReady() and (v75 >= (8 - 6))) then
+					if (((15199 - 10493) >= (2702 - (404 + 1335))) and v79.CastTargetIf(v65.SoulReaper, v74, "min", v82, v83, not v14:IsInMeleeRange(411 - (183 + 223)))) then
 						return "soul_reaper drw_up 14";
 					end
 				end
-				v102 = 2 + 0;
+				if ((v65.DeathAndDecay:IsReady() and v13:BuffDown(v65.DeathAndDecayBuff) and (v65.SanguineGround:IsAvailable() or v65.UnholyGround:IsAvailable())) or ((1168 - 208) <= (581 + 295))) then
+					if (v19(v67.DaDPlayer, v45, nil, not v14:IsInRange(11 + 19)) or ((2403 - (10 + 327)) == (650 + 282))) then
+						return "death_and_decay drw_up 16";
+					end
+				end
+				if (((5163 - (118 + 220)) < (1614 + 3229)) and v65.BloodBoil:IsCastable() and (v75 > (451 - (108 + 341))) and (v65.BloodBoil:ChargesFractional() >= (1.1 + 0))) then
+					if (v19(v65.BloodBoil, nil, not v14:IsInMeleeRange(42 - 32)) or ((5370 - (711 + 782)) >= (8697 - 4160))) then
+						return "blood_boil drw_up 18";
+					end
+				end
+				v125 = 471 - (270 + 199);
 			end
-			if ((v102 == (4 + 0)) or ((2781 + 1056) < (1988 - 682))) then
-				if (((1824 + 1126) == (3617 - (89 + 578))) and v66.HeartStrike:IsReady() and ((v14:RuneTimeToX(2 + 0) < v14:GCD()) or (v14:RunicPowerDeficit() >= v73))) then
-					if (v20(v66.HeartStrike, nil, nil, not v15:IsSpellInRange(v66.HeartStrike)) or ((9818 - 5095) < (4347 - (572 + 477)))) then
+			if (((1 + 1) == v125) or ((6134 - (580 + 1239)) < (5130 - 3404))) then
+				v72 = 24 + 1 + (v76 * v21(v65.Heartbreaker:IsAvailable()) * (1 + 1));
+				if ((v65.DeathStrike:IsReady() and ((v13:RunicPowerDeficit() <= v72) or (v13:RunicPower() >= v69))) or ((1603 + 2076) < (1631 - 1006))) then
+					if (v19(v65.DeathStrike, v53, nil, not v14:IsSpellInRange(v65.DeathStrike)) or ((2874 + 1751) < (1799 - (645 + 522)))) then
+						return "death_strike drw_up 20";
+					end
+				end
+				if (v65.Consumption:IsCastable() or ((1873 - (1010 + 780)) > (1780 + 0))) then
+					if (((2601 - 2055) <= (3156 - 2079)) and v19(v65.Consumption, nil, not v14:IsSpellInRange(v65.Consumption))) then
+						return "consumption drw_up 22";
+					end
+				end
+				if ((v65.BloodBoil:IsReady() and (v65.BloodBoil:ChargesFractional() >= (1837.1 - (1045 + 791))) and (v13:BuffStack(v65.HemostasisBuff) < (12 - 7))) or ((1520 - 524) > (4806 - (351 + 154)))) then
+					if (((5644 - (1281 + 293)) > (953 - (28 + 238))) and v19(v65.BloodBoil, nil, nil, not v14:IsInMeleeRange(22 - 12))) then
+						return "blood_boil drw_up 24";
+					end
+				end
+				v125 = 1562 - (1381 + 178);
+			end
+			if ((v125 == (0 + 0)) or ((529 + 127) >= (1421 + 1909))) then
+				if ((v65.BloodBoil:IsReady() and (v14:DebuffDown(v65.BloodPlagueDebuff))) or ((8590 - 6098) <= (174 + 161))) then
+					if (((4792 - (381 + 89)) >= (2272 + 290)) and v19(v65.BloodBoil, nil, nil, not v14:IsInMeleeRange(7 + 3))) then
+						return "blood_boil drw_up 2";
+					end
+				end
+				if ((v65.Tombstone:IsReady() and (v13:BuffStack(v65.BoneShieldBuff) > (8 - 3)) and (v13:Rune() >= (1158 - (1074 + 82))) and (v13:RunicPowerDeficit() >= (65 - 35)) and (not v65.ShatteringBone:IsAvailable() or (v65.ShatteringBone:IsAvailable() and v13:BuffUp(v65.DeathAndDecayBuff)))) or ((5421 - (214 + 1570)) >= (5225 - (990 + 465)))) then
+					if (v19(v65.Tombstone) or ((981 + 1398) > (1992 + 2586))) then
+						return "tombstone drw_up 4";
+					end
+				end
+				if ((v65.DeathStrike:IsReady() and ((v13:BuffRemains(v65.CoagulopathyBuff) <= v13:GCD()) or (v13:BuffRemains(v65.IcyTalonsBuff) <= v13:GCD()))) or ((470 + 13) > (2923 - 2180))) then
+					if (((4180 - (1668 + 58)) > (1204 - (512 + 114))) and v19(v65.DeathStrike, v53, nil, not v14:IsInMeleeRange(13 - 8))) then
+						return "death_strike drw_up 6";
+					end
+				end
+				if (((1922 - 992) < (15512 - 11054)) and v65.Marrowrend:IsReady() and ((v13:BuffRemains(v65.BoneShieldBuff) <= (2 + 2)) or (v13:BuffStack(v65.BoneShieldBuff) < v70)) and (v13:RunicPowerDeficit() > (4 + 16))) then
+					if (((576 + 86) <= (3278 - 2306)) and v19(v65.Marrowrend, nil, nil, not v14:IsInMeleeRange(1999 - (109 + 1885)))) then
+						return "marrowrend drw_up 10";
+					end
+				end
+				v125 = 1470 - (1269 + 200);
+			end
+			if (((8376 - 4006) == (5185 - (98 + 717))) and (v125 == (829 - (802 + 24)))) then
+				if ((v65.HeartStrike:IsReady() and ((v13:RuneTimeToX(2 - 0) < v13:GCD()) or (v13:RunicPowerDeficit() >= v72))) or ((6013 - 1251) <= (128 + 733))) then
+					if (v19(v65.HeartStrike, nil, nil, not v14:IsSpellInRange(v65.HeartStrike)) or ((1085 + 327) == (701 + 3563))) then
 						return "heart_strike drw_up 26";
 					end
 				end
 				break;
 			end
-			if (((154 + 982) >= (93 + 61)) and (v102 == (0 + 0))) then
-				if ((v66.BloodBoil:IsReady() and (v15:DebuffDown(v66.BloodPlagueDebuff))) or ((357 - (84 + 2)) > (7824 - 3076))) then
-					if (((3415 + 1325) >= (3994 - (497 + 345))) and v20(v66.BloodBoil, nil, nil, not v15:IsInMeleeRange(1 + 9))) then
-						return "blood_boil drw_up 2";
-					end
-				end
-				if ((v66.Tombstone:IsReady() and (v14:BuffStack(v66.BoneShieldBuff) > (1 + 4)) and (v14:Rune() >= (1335 - (605 + 728))) and (v14:RunicPowerDeficit() >= (22 + 8)) and (not v66.ShatteringBone:IsAvailable() or (v66.ShatteringBone:IsAvailable() and v14:BuffUp(v66.DeathAndDecayBuff)))) or ((5731 - 3153) >= (156 + 3234))) then
-					if (((151 - 110) <= (1498 + 163)) and v20(v66.Tombstone)) then
-						return "tombstone drw_up 4";
-					end
-				end
-				if (((1664 - 1063) < (2688 + 872)) and v66.DeathStrike:IsReady() and ((v14:BuffRemains(v66.CoagulopathyBuff) <= v14:GCD()) or (v14:BuffRemains(v66.IcyTalonsBuff) <= v14:GCD()))) then
-					if (((724 - (457 + 32)) < (292 + 395)) and v20(v66.DeathStrike, v54, nil, not v15:IsInMeleeRange(1407 - (832 + 570)))) then
-						return "death_strike drw_up 6";
-					end
-				end
-				v102 = 1 + 0;
-			end
 		end
 	end
-	local function v90()
-		local v103 = 0 + 0;
+	local function v89()
+		local v126 = 0 + 0;
 		while true do
-			if (((16097 - 11548) > (556 + 597)) and ((796 - (588 + 208)) == v103)) then
-				if ((v29 and v66.Tombstone:IsCastable() and (v14:BuffStack(v66.BoneShieldBuff) > (13 - 8)) and (v14:Rune() >= (1802 - (884 + 916))) and (v14:RunicPowerDeficit() >= (62 - 32)) and (not v66.ShatteringBone:IsAvailable() or (v66.ShatteringBone:IsAvailable() and v14:BuffUp(v66.DeathAndDecayBuff))) and (v66.DancingRuneWeapon:CooldownRemains() >= (15 + 10))) or ((5327 - (232 + 421)) < (6561 - (1569 + 320)))) then
-					if (((900 + 2768) < (867 + 3694)) and v20(v66.Tombstone)) then
-						return "tombstone standard 2";
-					end
-				end
-				v72 = (33 - 23) + (v76 * v22(v66.Heartbreaker:IsAvailable()) * (607 - (316 + 289)));
-				if ((v66.DeathStrike:IsReady() and ((v14:BuffRemains(v66.CoagulopathyBuff) <= v14:GCD()) or (v14:BuffRemains(v66.IcyTalonsBuff) <= v14:GCD()) or (v14:RunicPower() >= v70) or (v14:RunicPowerDeficit() <= v72) or (v15:TimeToDie() < (26 - 16)))) or ((22 + 433) == (5058 - (666 + 787)))) then
-					if (v20(v66.DeathStrike, v54, nil, not v15:IsInMeleeRange(430 - (360 + 65))) or ((2489 + 174) == (3566 - (79 + 175)))) then
-						return "death_strike standard 4";
-					end
-				end
-				v103 = 1 - 0;
-			end
-			if (((3338 + 939) <= (13716 - 9241)) and (v103 == (1 - 0))) then
-				if ((v66.DeathsCaress:IsReady() and ((v14:BuffRemains(v66.BoneShieldBuff) <= (903 - (503 + 396))) or (v14:BuffStack(v66.BoneShieldBuff) < (v71 + (182 - (92 + 89))))) and (v14:RunicPowerDeficit() > (19 - 9)) and not (v66.InsatiableBlade:IsAvailable() and (v66.DancingRuneWeapon:CooldownRemains() < v14:BuffRemains(v66.BoneShieldBuff))) and not v66.Consumption:IsAvailable() and not v66.Blooddrinker:IsAvailable() and (v14:RuneTimeToX(2 + 1) > v14:GCD())) or ((515 + 355) == (4656 - 3467))) then
-					if (((213 + 1340) <= (7143 - 4010)) and v20(v66.DeathsCaress, nil, nil, not v15:IsSpellInRange(v66.DeathsCaress))) then
-						return "deaths_caress standard 6";
-					end
-				end
-				if ((v66.Marrowrend:IsReady() and ((v14:BuffRemains(v66.BoneShieldBuff) <= (4 + 0)) or (v14:BuffStack(v66.BoneShieldBuff) < v71)) and (v14:RunicPowerDeficit() > (10 + 10)) and not (v66.InsatiableBlade:IsAvailable() and (v66.DancingRuneWeapon:CooldownRemains() < v14:BuffRemains(v66.BoneShieldBuff)))) or ((6813 - 4576) >= (439 + 3072))) then
-					if (v20(v66.Marrowrend, nil, nil, not v15:IsInMeleeRange(7 - 2)) or ((2568 - (485 + 759)) > (6987 - 3967))) then
-						return "marrowrend standard 8";
-					end
-				end
-				if (v66.Consumption:IsCastable() or ((4181 - (442 + 747)) == (3016 - (832 + 303)))) then
-					if (((4052 - (88 + 858)) > (466 + 1060)) and v20(v66.Consumption, nil, not v15:IsSpellInRange(v66.Consumption))) then
-						return "consumption standard 10";
-					end
-				end
-				v103 = 2 + 0;
-			end
-			if (((125 + 2898) < (4659 - (766 + 23))) and (v103 == (14 - 11))) then
-				if (((194 - 51) > (194 - 120)) and v66.BloodBoil:IsCastable() and (v66.BloodBoil:ChargesFractional() >= (3.8 - 2)) and ((v14:BuffStack(v66.HemostasisBuff) <= ((1078 - (1036 + 37)) - v76)) or (v76 > (2 + 0)))) then
-					if (((34 - 16) < (1662 + 450)) and v20(v66.BloodBoil, nil, not v15:IsInMeleeRange(1490 - (641 + 839)))) then
+			if ((v126 == (8 - 5)) or ((10564 - 7396) < (771 + 1382))) then
+				if ((v65.BloodBoil:IsCastable() and (v65.BloodBoil:ChargesFractional() >= (1.8 + 0)) and ((v13:BuffStack(v65.HemostasisBuff) <= ((5 + 0) - v75)) or (v75 > (2 + 0)))) or ((2324 + 2652) < (2765 - (797 + 636)))) then
+					if (((22470 - 17842) == (6247 - (1427 + 192))) and v19(v65.BloodBoil, nil, not v14:IsInMeleeRange(4 + 6))) then
 						return "blood_boil standard 18";
 					end
 				end
-				if (((2010 - (910 + 3)) <= (4150 - 2522)) and v66.HeartStrike:IsReady() and (v14:RuneTimeToX(1688 - (1466 + 218)) < v14:GCD())) then
-					if (((2128 + 2502) == (5778 - (556 + 592))) and v20(v66.HeartStrike, nil, nil, not v15:IsSpellInRange(v66.HeartStrike))) then
+				if ((v65.HeartStrike:IsReady() and (v13:RuneTimeToX(8 - 4) < v13:GCD())) or ((49 + 5) == (180 + 215))) then
+					if (((408 - (192 + 134)) == (1358 - (316 + 960))) and v19(v65.HeartStrike, nil, nil, not v14:IsSpellInRange(v65.HeartStrike))) then
 						return "heart_strike standard 20";
 					end
 				end
-				if (((1259 + 2281) > (3491 - (329 + 479))) and v66.BloodBoil:IsCastable() and (v66.BloodBoil:ChargesFractional() >= (855.1 - (174 + 680)))) then
-					if (((16472 - 11678) >= (6787 - 3512)) and v20(v66.BloodBoil, nil, nil, not v15:IsInMeleeRange(8 + 2))) then
+				if ((v65.BloodBoil:IsCastable() and (v65.BloodBoil:ChargesFractional() >= (1.1 + 0))) or ((449 + 132) < (261 + 21))) then
+					if (v19(v65.BloodBoil, nil, nil, not v14:IsInMeleeRange(38 - 28)) or ((5160 - (83 + 468)) < (4301 - (1202 + 604)))) then
 						return "blood_boil standard 22";
 					end
 				end
-				v103 = 743 - (396 + 343);
+				v126 = 18 - 14;
 			end
-			if (((132 + 1352) == (2961 - (29 + 1448))) and ((1391 - (135 + 1254)) == v103)) then
-				if (((5394 - 3962) < (16598 - 13043)) and v66.SoulReaper:IsReady() and (v76 == (1 + 0)) and ((v15:TimeToX(1562 - (389 + 1138)) < (579 - (102 + 472))) or (v15:HealthPercentage() <= (34 + 1))) and (v15:TimeToDie() > (v15:DebuffRemains(v66.SoulReaperDebuff) + 3 + 2))) then
-					if (v20(v66.SoulReaper, nil, nil, not v15:IsInMeleeRange(5 + 0)) or ((2610 - (320 + 1225)) > (6369 - 2791))) then
+			if (((1916 - 764) == (3189 - 2037)) and (v126 == (326 - (45 + 280)))) then
+				if (((1831 + 65) <= (2990 + 432)) and v65.DeathsCaress:IsReady() and ((v13:BuffRemains(v65.BoneShieldBuff) <= (2 + 2)) or (v13:BuffStack(v65.BoneShieldBuff) < (v70 + 1 + 0))) and (v13:RunicPowerDeficit() > (2 + 8)) and not (v65.InsatiableBlade:IsAvailable() and (v65.DancingRuneWeapon:CooldownRemains() < v13:BuffRemains(v65.BoneShieldBuff))) and not v65.Consumption:IsAvailable() and not v65.Blooddrinker:IsAvailable() and (v13:RuneTimeToX(5 - 2) > v13:GCD())) then
+					if (v19(v65.DeathsCaress, nil, nil, not v14:IsSpellInRange(v65.DeathsCaress)) or ((2901 - (340 + 1571)) > (639 + 981))) then
+						return "deaths_caress standard 6";
+					end
+				end
+				if ((v65.Marrowrend:IsReady() and ((v13:BuffRemains(v65.BoneShieldBuff) <= (1776 - (1733 + 39))) or (v13:BuffStack(v65.BoneShieldBuff) < v70)) and (v13:RunicPowerDeficit() > (54 - 34)) and not (v65.InsatiableBlade:IsAvailable() and (v65.DancingRuneWeapon:CooldownRemains() < v13:BuffRemains(v65.BoneShieldBuff)))) or ((1911 - (125 + 909)) > (6643 - (1096 + 852)))) then
+					if (((1208 + 1483) >= (2643 - 792)) and v19(v65.Marrowrend, nil, nil, not v14:IsInMeleeRange(5 + 0))) then
+						return "marrowrend standard 8";
+					end
+				end
+				if (v65.Consumption:IsCastable() or ((3497 - (409 + 103)) >= (5092 - (46 + 190)))) then
+					if (((4371 - (51 + 44)) >= (338 + 857)) and v19(v65.Consumption, nil, not v14:IsSpellInRange(v65.Consumption))) then
+						return "consumption standard 10";
+					end
+				end
+				v126 = 1319 - (1114 + 203);
+			end
+			if (((3958 - (228 + 498)) <= (1017 + 3673)) and (v126 == (0 + 0))) then
+				if ((v28 and v65.Tombstone:IsCastable() and (v13:BuffStack(v65.BoneShieldBuff) > (668 - (174 + 489))) and (v13:Rune() >= (5 - 3)) and (v13:RunicPowerDeficit() >= (1935 - (830 + 1075))) and (not v65.ShatteringBone:IsAvailable() or (v65.ShatteringBone:IsAvailable() and v13:BuffUp(v65.DeathAndDecayBuff))) and (v65.DancingRuneWeapon:CooldownRemains() >= (549 - (303 + 221)))) or ((2165 - (231 + 1038)) >= (2622 + 524))) then
+					if (((4223 - (171 + 991)) >= (12190 - 9232)) and v19(v65.Tombstone)) then
+						return "tombstone standard 2";
+					end
+				end
+				v71 = (26 - 16) + (v75 * v21(v65.Heartbreaker:IsAvailable()) * (4 - 2));
+				if (((2551 + 636) >= (2257 - 1613)) and v65.DeathStrike:IsReady() and ((v13:BuffRemains(v65.CoagulopathyBuff) <= v13:GCD()) or (v13:BuffRemains(v65.IcyTalonsBuff) <= v13:GCD()) or (v13:RunicPower() >= v69) or (v13:RunicPowerDeficit() <= v71) or (v14:TimeToDie() < (28 - 18)))) then
+					if (((1037 - 393) <= (2176 - 1472)) and v19(v65.DeathStrike, v53, nil, not v14:IsInMeleeRange(1253 - (111 + 1137)))) then
+						return "death_strike standard 4";
+					end
+				end
+				v126 = 159 - (91 + 67);
+			end
+			if (((2851 - 1893) > (237 + 710)) and (v126 == (525 - (423 + 100)))) then
+				if (((32 + 4460) >= (7348 - 4694)) and v65.SoulReaper:IsReady() and (v75 == (1 + 0)) and ((v14:TimeToX(806 - (326 + 445)) < (21 - 16)) or (v14:HealthPercentage() <= (77 - 42))) and (v14:TimeToDie() > (v14:DebuffRemains(v65.SoulReaperDebuff) + (11 - 6)))) then
+					if (((4153 - (530 + 181)) >= (2384 - (614 + 267))) and v19(v65.SoulReaper, nil, nil, not v14:IsInMeleeRange(37 - (19 + 13)))) then
 						return "soul_reaper standard 12";
 					end
 				end
-				if ((v66.SoulReaper:IsReady() and (v76 >= (2 + 0))) or ((6259 - (157 + 1307)) < (3266 - (821 + 1038)))) then
-					if (((4623 - 2770) < (527 + 4286)) and v80.CastTargetIf(v66.SoulReaper, v75, "min", v83, v84, not v15:IsInMeleeRange(8 - 3))) then
+				if ((v65.SoulReaper:IsReady() and (v75 >= (2 - 0))) or ((7387 - 4217) <= (4182 - 2718))) then
+					if (v79.CastTargetIf(v65.SoulReaper, v74, "min", v82, v83, not v14:IsInMeleeRange(2 + 3)) or ((8436 - 3639) == (9099 - 4711))) then
 						return "soul_reaper standard 14";
 					end
 				end
-				if ((v29 and v66.Bonestorm:IsReady() and (v14:RunicPower() >= (19 + 31))) or ((6991 - 4170) < (3457 - (834 + 192)))) then
-					if (v20(v66.Bonestorm) or ((183 + 2691) < (560 + 1621))) then
+				if (((2363 - (1293 + 519)) <= (1389 - 708)) and v28 and v65.Bonestorm:IsReady() and (v13:RunicPower() >= (261 - 161))) then
+					if (((6266 - 2989) > (1754 - 1347)) and v19(v65.Bonestorm)) then
 						return "bonestorm standard 16";
 					end
 				end
-				v103 = 1 + 2;
+				v126 = 6 - 3;
 			end
-			if ((v103 == (5 - 1)) or ((2993 - (300 + 4)) <= (92 + 251))) then
-				if ((v66.HeartStrike:IsReady() and (v14:Rune() > (2 - 1)) and ((v14:RuneTimeToX(365 - (112 + 250)) < v14:GCD()) or (v14:BuffStack(v66.BoneShieldBuff) > (3 + 4)))) or ((4681 - 2812) == (1151 + 858))) then
-					if (v20(v66.HeartStrike, nil, nil, not v15:IsSpellInRange(v66.HeartStrike)) or ((1834 + 1712) < (1737 + 585))) then
+			if (((2487 + 2208) >= (289 + 1126)) and (v126 == (9 - 5))) then
+				if ((v65.HeartStrike:IsReady() and (v13:Rune() > (1 + 0)) and ((v13:RuneTimeToX(1 + 2) < v13:GCD()) or (v13:BuffStack(v65.BoneShieldBuff) > (5 + 2)))) or ((4308 - (709 + 387)) <= (2802 - (673 + 1185)))) then
+					if (v19(v65.HeartStrike, nil, nil, not v14:IsSpellInRange(v65.HeartStrike)) or ((8978 - 5882) <= (5773 - 3975))) then
 						return "heart_strike standard 24";
 					end
 				end
@@ -474,210 +405,156 @@ v0["Epix_DeathKnight_Blood.lua"] = function(...)
 			end
 		end
 	end
-	local function v91()
-		local v104 = 0 + 0;
-		while true do
-			if ((v104 == (3 + 0)) or ((3496 - (1001 + 413)) == (10643 - 5870))) then
-				v74 = v14:IsTankingAoE(890 - (244 + 638)) or v14:IsTanking(v15);
-				if (((3937 - (627 + 66)) > (3143 - 2088)) and v80.TargetIsValid()) then
-					local v140 = 602 - (512 + 90);
-					local v141;
-					while true do
-						if ((v140 == (1906 - (1665 + 241))) or ((4030 - (373 + 344)) <= (802 + 976))) then
-							if (not v14:AffectingCombat() or ((376 + 1045) >= (5549 - 3445))) then
-								local v142 = 0 - 0;
-								local v143;
-								while true do
-									if (((2911 - (35 + 1064)) <= (2364 + 885)) and (v142 == (0 - 0))) then
-										v143 = v85();
-										if (((7 + 1616) <= (3193 - (298 + 938))) and v143) then
-											return v143;
-										end
-										break;
-									end
-								end
-							end
-							if (((5671 - (233 + 1026)) == (6078 - (636 + 1030))) and v74) then
-								local v144 = 0 + 0;
-								local v145;
-								while true do
-									if (((1710 + 40) >= (251 + 591)) and (v144 == (0 + 0))) then
-										v145 = v86();
-										if (((4593 - (55 + 166)) > (359 + 1491)) and v145) then
-											return v145;
-										end
-										break;
-									end
-								end
-							end
-							if (((24 + 208) < (3135 - 2314)) and v14:IsChanneling(v66.Blooddrinker) and v14:BuffUp(v66.BoneShieldBuff) and (v78 == (297 - (36 + 261))) and not v14:ShouldStopCasting() and (v14:CastRemains() > (0.2 - 0))) then
-								if (((1886 - (34 + 1334)) < (347 + 555)) and v10.CastAnnotated(v66.Pool, false, "WAIT")) then
-									return "Pool During Blooddrinker";
-								end
-							end
-							v70 = v62;
-							v140 = 1 + 0;
+	local function v90()
+		v63();
+		v26 = EpicSettings.Toggles['ooc'];
+		v27 = EpicSettings.Toggles['aoe'];
+		v28 = EpicSettings.Toggles['cds'];
+		v74 = v13:GetEnemiesInMeleeRange(8 - 3);
+		if (((2530 + 1007) == (2643 + 894)) and v27) then
+			v75 = #v74;
+		else
+			v75 = 1 - 0;
+		end
+		if (((943 + 2894) >= (3130 - 1560)) and (v79.TargetIsValid() or v13:AffectingCombat())) then
+			v76 = v23(v75, (v13:BuffUp(v65.DeathAndDecayBuff) and (9 - 4)) or (1882 - (446 + 1434)));
+			v77 = v81(v74);
+			v73 = v13:IsTankingAoE(1291 - (1040 + 243)) or v13:IsTanking(v14);
+		end
+		if (v79.TargetIsValid() or ((8804 - 5854) == (5659 - (559 + 1288)))) then
+			if (((6654 - (609 + 1322)) >= (2772 - (13 + 441))) and not v13:AffectingCombat()) then
+				local v134 = v84();
+				if (v134 or ((7574 - 5547) > (7470 - 4618))) then
+					return v134;
+				end
+			end
+			if (v73 or ((5657 - 4521) > (161 + 4156))) then
+				local v135 = v85();
+				if (((17243 - 12495) == (1687 + 3061)) and v135) then
+					return v135;
+				end
+			end
+			if (((1638 + 2098) <= (14066 - 9326)) and v13:IsChanneling(v65.Blooddrinker) and v13:BuffUp(v65.BoneShieldBuff) and (v77 == (0 + 0)) and not v13:ShouldStopCasting() and (v13:CastRemains() > (0.2 - 0))) then
+				if (v9.CastAnnotated(v65.Pool, false, "WAIT") or ((2242 + 1148) <= (1702 + 1358))) then
+					return "Pool During Blooddrinker";
+				end
+			end
+			v69 = v61;
+			if (v30 or ((718 + 281) > (2262 + 431))) then
+				local v136 = 0 + 0;
+				local v137;
+				while true do
+					if (((896 - (153 + 280)) < (1735 - 1134)) and ((0 + 0) == v136)) then
+						v137 = v86();
+						if (v137 or ((862 + 1321) < (360 + 327))) then
+							return v137;
 						end
-						if (((4277 - (1035 + 248)) > (879 - (20 + 1))) and (v140 == (2 + 0))) then
-							if ((v66.DeathAndDecay:IsReady() and v14:BuffDown(v66.DeathAndDecayBuff) and (v66.UnholyGround:IsAvailable() or v66.SanguineGround:IsAvailable() or (v76 > (322 - (134 + 185))) or v14:BuffUp(v66.CrimsonScourgeBuff))) or ((4888 - (549 + 584)) <= (1600 - (314 + 371)))) then
-								if (((13546 - 9600) > (4711 - (478 + 490))) and v20(v68.DaDPlayer, v46, nil, not v15:IsInRange(16 + 14))) then
-									return "death_and_decay main 8";
-								end
-							end
-							if ((v66.DeathStrike:IsReady() and ((v14:BuffRemains(v66.CoagulopathyBuff) <= v14:GCD()) or (v14:BuffRemains(v66.IcyTalonsBuff) <= v14:GCD()) or (v14:RunicPower() >= v70) or (v14:RunicPowerDeficit() <= v72) or (v15:TimeToDie() < (1182 - (786 + 386))))) or ((4323 - 2988) >= (4685 - (1055 + 324)))) then
-								if (((6184 - (1093 + 247)) > (2003 + 250)) and v20(v66.DeathStrike, v54, nil, not v15:IsSpellInRange(v66.DeathStrike))) then
-									return "death_strike main 10";
-								end
-							end
-							if (((48 + 404) == (1794 - 1342)) and v66.Blooddrinker:IsReady() and (v14:BuffDown(v66.DancingRuneWeaponBuff))) then
-								if (v20(v66.Blooddrinker, nil, nil, not v15:IsSpellInRange(v66.Blooddrinker)) or ((15465 - 10908) < (5938 - 3851))) then
-									return "blooddrinker main 12";
-								end
-							end
-							if (((9734 - 5860) == (1379 + 2495)) and v29) then
-								local v146 = v88();
-								if (v146 or ((7465 - 5527) > (17009 - 12074))) then
-									return v146;
-								end
-							end
-							v140 = 3 + 0;
-						end
-						if ((v140 == (9 - 5)) or ((4943 - (364 + 324)) < (9383 - 5960))) then
-							if (((3488 - 2034) <= (826 + 1665)) and v29 and v66.AbominationLimb:IsCastable()) then
-								if (v20(v66.AbominationLimb, nil, not v15:IsInRange(83 - 63)) or ((6656 - 2499) <= (8512 - 5709))) then
-									return "abomination_limb main 22";
-								end
-							end
-							if (((6121 - (1249 + 19)) >= (2692 + 290)) and v29 and v66.DancingRuneWeapon:IsCastable() and (v14:BuffDown(v66.DancingRuneWeaponBuff))) then
-								if (((16091 - 11957) > (4443 - (686 + 400))) and v20(v66.DancingRuneWeapon, v53)) then
-									return "dancing_rune_weapon main 24";
-								end
-							end
-							if ((v14:BuffUp(v66.DancingRuneWeaponBuff)) or ((2681 + 736) < (2763 - (73 + 156)))) then
-								local v147 = 0 + 0;
-								local v148;
-								while true do
-									if ((v147 == (811 - (721 + 90))) or ((31 + 2691) <= (532 - 368))) then
-										v148 = v89();
-										if (v148 or ((2878 - (224 + 246)) < (3416 - 1307))) then
-											return v148;
-										end
-										v147 = 1 - 0;
-									end
-									if (((1 + 0) == v147) or ((1 + 32) == (1069 + 386))) then
-										if (v10.CastAnnotated(v66.Pool, false, "WAIT") or ((880 - 437) >= (13361 - 9346))) then
-											return "Wait/Pool for DRWUp";
-										end
-										break;
-									end
-								end
-							end
-							v141 = v90();
-							v140 = 518 - (203 + 310);
-						end
-						if (((5375 - (1238 + 755)) > (12 + 154)) and (v140 == (1539 - (709 + 825)))) then
-							if (v141 or ((515 - 235) == (4455 - 1396))) then
-								return v141;
-							end
-							if (((2745 - (196 + 668)) > (5104 - 3811)) and v10.CastAnnotated(v66.Pool, false, "WAIT")) then
-								return "Wait/Pool Resources";
-							end
-							break;
-						end
-						if (((4882 - 2525) == (3190 - (171 + 662))) and (v140 == (94 - (4 + 89)))) then
-							if (((430 - 307) == (45 + 78)) and v31) then
-								local v149 = 0 - 0;
-								local v150;
-								while true do
-									if ((v149 == (0 + 0)) or ((2542 - (35 + 1451)) >= (4845 - (28 + 1425)))) then
-										v150 = v87();
-										if (v150 or ((3074 - (941 + 1052)) < (1031 + 44))) then
-											return v150;
-										end
-										break;
-									end
-								end
-							end
-							if ((v29 and v66.RaiseDead:IsCastable()) or ((2563 - (822 + 692)) >= (6326 - 1894))) then
-								if (v20(v66.RaiseDead, nil) or ((2246 + 2522) <= (1143 - (45 + 252)))) then
-									return "raise_dead main 4";
-								end
-							end
-							if ((v66.VampiricBlood:IsCastable() and v14:BuffDown(v66.VampiricBloodBuff) and v14:BuffDown(v66.VampiricStrengthBuff)) or ((3323 + 35) <= (489 + 931))) then
-								if (v20(v66.VampiricBlood, v57) or ((9099 - 5360) <= (3438 - (114 + 319)))) then
-									return "vampiric_blood main 5";
-								end
-							end
-							if ((v66.DeathsCaress:IsReady() and (v14:BuffDown(v66.BoneShieldBuff))) or ((2381 - 722) >= (2733 - 599))) then
-								if (v20(v66.DeathsCaress, nil, nil, not v15:IsSpellInRange(v66.DeathsCaress)) or ((2079 + 1181) < (3508 - 1153))) then
-									return "deaths_caress main 6";
-								end
-							end
-							v140 = 3 - 1;
-						end
-						if ((v140 == (1966 - (556 + 1407))) or ((1875 - (741 + 465)) == (4688 - (170 + 295)))) then
-							if ((v29 and v66.SacrificialPact:IsReady() and v79.GhoulActive() and v14:BuffDown(v66.DancingRuneWeaponBuff) and ((v79.GhoulRemains() < (2 + 0)) or (v15:TimeToDie() < v14:GCD()))) or ((1555 + 137) < (1447 - 859))) then
-								if (v20(v66.SacrificialPact, v48) or ((3977 + 820) < (2342 + 1309))) then
-									return "sacrificial_pact main 14";
-								end
-							end
-							if ((v29 and v66.BloodTap:IsCastable() and (((v14:Rune() <= (2 + 0)) and (v14:RuneTimeToX(1234 - (957 + 273)) > v14:GCD()) and (v66.BloodTap:ChargesFractional() >= (1.8 + 0))) or (v14:RuneTimeToX(2 + 1) > v14:GCD()))) or ((15916 - 11739) > (12780 - 7930))) then
-								if (v20(v66.BloodTap, v58) or ((1221 - 821) > (5501 - 4390))) then
-									return "blood_tap main 16";
-								end
-							end
-							if (((4831 - (389 + 1391)) > (631 + 374)) and v29 and v66.GorefiendsGrasp:IsCastable() and (v66.TighteningGrasp:IsAvailable())) then
-								if (((385 + 3308) <= (9975 - 5593)) and v20(v66.GorefiendsGrasp, nil, not v15:IsSpellInRange(v66.GorefiendsGrasp))) then
-									return "gorefiends_grasp main 18";
-								end
-							end
-							if ((v29 and v66.EmpowerRuneWeapon:IsReady() and (v14:Rune() < (957 - (783 + 168))) and (v14:RunicPowerDeficit() > (16 - 11))) or ((3229 + 53) > (4411 - (309 + 2)))) then
-								if (v20(v66.EmpowerRuneWeapon) or ((10993 - 7413) < (4056 - (1090 + 122)))) then
-									return "empower_rune_weapon main 20";
-								end
-							end
-							v140 = 2 + 2;
-						end
+						break;
 					end
 				end
-				break;
 			end
-			if (((298 - 209) < (3073 + 1417)) and ((1118 - (628 + 490)) == v104)) then
-				v64();
-				v27 = EpicSettings.Toggles['ooc'];
-				v28 = EpicSettings.Toggles['aoe'];
-				v104 = 1 + 0;
-			end
-			if ((v104 == (2 - 1)) or ((22772 - 17789) < (2582 - (431 + 343)))) then
-				v29 = EpicSettings.Toggles['cds'];
-				v75 = v14:GetEnemiesInMeleeRange(10 - 5);
-				v65 = v14:GetEnemiesInMeleeRange(28 - 18);
-				v104 = 2 + 0;
-			end
-			if (((490 + 3339) > (5464 - (556 + 1139))) and (v104 == (17 - (6 + 9)))) then
-				if (((272 + 1213) <= (1488 + 1416)) and v28) then
-					v76 = ((#v75 > (169 - (28 + 141))) and #v75) or (1 + 0);
-				else
-					v76 = 1 - 0;
-					v65 = 1 + 0;
+			if (((4129 + 420) == (3297 + 1252)) and v28 and v65.RaiseDead:IsCastable()) then
+				if (((7113 - 2441) == (2888 + 1784)) and v19(v65.RaiseDead, nil)) then
+					return "raise_dead main 4";
 				end
-				v77 = v24(v76, (v14:BuffUp(v66.DeathAndDecayBuff) and (1322 - (486 + 831))) or (5 - 3));
-				v78 = v82(v75);
-				v104 = 10 - 7;
+			end
+			if ((v65.VampiricBlood:IsCastable() and v13:BuffDown(v65.VampiricBloodBuff) and v13:BuffDown(v65.VampiricStrengthBuff)) or ((4335 - (89 + 578)) < (283 + 112))) then
+				if (v19(v65.VampiricBlood, v56) or ((8660 - 4494) == (1504 - (572 + 477)))) then
+					return "vampiric_blood main 5";
+				end
+			end
+			if ((v65.DeathsCaress:IsReady() and (v13:BuffDown(v65.BoneShieldBuff))) or ((601 + 3848) == (1599 + 1064))) then
+				if (v19(v65.DeathsCaress, nil, nil, not v14:IsSpellInRange(v65.DeathsCaress)) or ((511 + 3766) < (3075 - (84 + 2)))) then
+					return "deaths_caress main 6";
+				end
+			end
+			if ((v65.DeathAndDecay:IsReady() and v13:BuffDown(v65.DeathAndDecayBuff) and (v65.UnholyGround:IsAvailable() or v65.SanguineGround:IsAvailable() or (v75 > (4 - 1)) or v13:BuffUp(v65.CrimsonScourgeBuff))) or ((627 + 243) >= (4991 - (497 + 345)))) then
+				if (((57 + 2155) < (539 + 2644)) and v19(v67.DaDPlayer, v45, nil, not v14:IsInRange(1363 - (605 + 728)))) then
+					return "death_and_decay main 8";
+				end
+			end
+			if (((3315 + 1331) > (6651 - 3659)) and v65.DeathStrike:IsReady() and ((v13:BuffRemains(v65.CoagulopathyBuff) <= v13:GCD()) or (v13:BuffRemains(v65.IcyTalonsBuff) <= v13:GCD()) or (v13:RunicPower() >= v69) or (v13:RunicPowerDeficit() <= v71) or (v14:TimeToDie() < (1 + 9)))) then
+				if (((5301 - 3867) < (2801 + 305)) and v19(v65.DeathStrike, v53, nil, not v14:IsSpellInRange(v65.DeathStrike))) then
+					return "death_strike main 10";
+				end
+			end
+			if (((2177 - 1391) < (2283 + 740)) and v65.Blooddrinker:IsReady() and (v13:BuffDown(v65.DancingRuneWeaponBuff))) then
+				if (v19(v65.Blooddrinker, nil, nil, not v14:IsSpellInRange(v65.Blooddrinker)) or ((2931 - (457 + 32)) < (32 + 42))) then
+					return "blooddrinker main 12";
+				end
+			end
+			if (((5937 - (832 + 570)) == (4273 + 262)) and v28) then
+				local v138 = 0 + 0;
+				local v139;
+				while true do
+					if ((v138 == (0 - 0)) or ((1450 + 1559) <= (2901 - (588 + 208)))) then
+						v139 = v87();
+						if (((4932 - 3102) < (5469 - (884 + 916))) and v139) then
+							return v139;
+						end
+						break;
+					end
+				end
+			end
+			if ((v28 and v65.SacrificialPact:IsReady() and v78.GhoulActive() and v13:BuffDown(v65.DancingRuneWeaponBuff) and ((v78.GhoulRemains() < (3 - 1)) or (v14:TimeToDie() < v13:GCD()))) or ((830 + 600) >= (4265 - (232 + 421)))) then
+				if (((4572 - (1569 + 320)) >= (604 + 1856)) and v19(v65.SacrificialPact, v47)) then
+					return "sacrificial_pact main 14";
+				end
+			end
+			if ((v28 and v65.BloodTap:IsCastable() and (((v13:Rune() <= (1 + 1)) and (v13:RuneTimeToX(13 - 9) > v13:GCD()) and (v65.BloodTap:ChargesFractional() >= (606.8 - (316 + 289)))) or (v13:RuneTimeToX(7 - 4) > v13:GCD()))) or ((84 + 1720) >= (4728 - (666 + 787)))) then
+				if (v19(v65.BloodTap, v57) or ((1842 - (360 + 65)) > (3392 + 237))) then
+					return "blood_tap main 16";
+				end
+			end
+			if (((5049 - (79 + 175)) > (633 - 231)) and v28 and v65.GorefiendsGrasp:IsCastable() and (v65.TighteningGrasp:IsAvailable())) then
+				if (((3756 + 1057) > (10927 - 7362)) and v19(v65.GorefiendsGrasp, nil, not v14:IsSpellInRange(v65.GorefiendsGrasp))) then
+					return "gorefiends_grasp main 18";
+				end
+			end
+			if (((7533 - 3621) == (4811 - (503 + 396))) and v28 and v65.EmpowerRuneWeapon:IsReady() and (v13:Rune() < (187 - (92 + 89))) and (v13:RunicPowerDeficit() > (9 - 4))) then
+				if (((1447 + 1374) <= (2856 + 1968)) and v19(v65.EmpowerRuneWeapon)) then
+					return "empower_rune_weapon main 20";
+				end
+			end
+			if (((6806 - 5068) <= (301 + 1894)) and v28 and v65.AbominationLimb:IsCastable()) then
+				if (((93 - 52) <= (2634 + 384)) and v19(v65.AbominationLimb, nil, not v14:IsInRange(10 + 10))) then
+					return "abomination_limb main 22";
+				end
+			end
+			if (((6532 - 4387) <= (513 + 3591)) and v28 and v65.DancingRuneWeapon:IsCastable() and (v13:BuffDown(v65.DancingRuneWeaponBuff))) then
+				if (((4100 - 1411) < (6089 - (485 + 759))) and v19(v65.DancingRuneWeapon, v52)) then
+					return "dancing_rune_weapon main 24";
+				end
+			end
+			if ((v13:BuffUp(v65.DancingRuneWeaponBuff)) or ((5372 - 3050) > (3811 - (442 + 747)))) then
+				local v140 = v88();
+				if (v140 or ((5669 - (832 + 303)) == (3028 - (88 + 858)))) then
+					return v140;
+				end
+				if (v9.CastAnnotated(v65.Pool, false, "WAIT") or ((479 + 1092) > (1546 + 321))) then
+					return "Wait/Pool for DRWUp";
+				end
+			end
+			local v131 = v89();
+			if (v131 or ((110 + 2544) >= (3785 - (766 + 23)))) then
+				return v131;
+			end
+			if (((19638 - 15660) > (2877 - 773)) and v9.CastAnnotated(v65.Pool, false, "WAIT")) then
+				return "Wait/Pool Resources";
 			end
 		end
 	end
-	local function v92()
-		local v105 = 0 + 0;
+	local function v91()
+		local v130 = 0 - 0;
 		while true do
-			if (((13498 - 9229) == (5532 - (668 + 595))) and (v105 == (0 + 0))) then
-				v66.MarkofFyralathDebuff:RegisterAuraTracking();
-				v10.Print("Blood DK by Epic. Work in progress Gojira");
+			if (((10165 - 7170) > (2614 - (1036 + 37))) and (v130 == (0 + 0))) then
+				v65.MarkofFyralathDebuff:RegisterAuraTracking();
+				v9.Print("Blood DK by Epic. Work in progress Gojira");
 				break;
 			end
 		end
 	end
-	v10.SetAPL(51 + 199, v91, v92);
+	v9.SetAPL(486 - 236, v90, v91);
 end;
 return v0["Epix_DeathKnight_Blood.lua"]();
 
