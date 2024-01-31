@@ -73,7 +73,7 @@ end
 local clock = GetTime()
 function Commons.Wait(n, t0)
   local RandomDelay = math.random(100,300)
-  if (clock - t0)*1000 <= (n - RandomDelay) then
+  if (clock - t0)*1000 <= (n + RandomDelay) then
     return false
   else
     return true
