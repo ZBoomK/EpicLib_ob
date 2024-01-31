@@ -71,9 +71,13 @@ end
 
 -- Sleep function
 local clock = GetTime()
-function Commons.Wait(n)
-  local t0 = clock
-  while clock - t0 <= n do end
+function Commons.Wait(n, t0)
+  local RandomDelay = math.random(100,300)
+  if (clock - t0)*1000 <= (n - RandomDelay) then
+    return false
+  else
+    return true
+  end
 end
 
 function Commons.IsItTimeToRamp(id, times, duration)
