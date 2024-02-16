@@ -1175,6 +1175,24 @@ do
   end
 end
 
+-- Get friendly unit with a heal absorb
+function Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid)
+  if not Range then Range = 40; end
+  local AbsorbUnit;
+  local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
+  for i = 1, #FriendlyUnits do
+    local FriendlyUnit = FriendlyUnits[i];
+    if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
+      if FriendlyUnit and FriendlyUnit:Exists() and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
+        if FriendlyUnit:HasHealAbsorb() then
+          AbsorbUnit = FriendlyUnit;
+        end
+      end
+    end
+  end
+  return AbsorbUnit;
+end
+
 -- Get named friendly unit.
 function Commons.NamedUnit(Range, Name, maxRaid)
   if not Range then Range = 40; end

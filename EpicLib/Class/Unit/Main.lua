@@ -20,6 +20,7 @@ local UnitCanAttack = UnitCanAttack
 local UnitClassification = UnitClassification
 local UnitExists = UnitExists
 local UnitGUID = UnitGUID
+local UnitGetTotalHealAbsorbs = UnitGetTotalHealAbsorbs
 local UnitHealth = UnitHealth
 local UnitHealthMax = UnitHealthMax
 local UnitIsDeadOrGhost = UnitIsDeadOrGhost
@@ -280,6 +281,11 @@ function Unit:HealthPercentage()
   local MaxHealth = self:MaxHealth()
 
   return Health > 0 and MaxHealth > 0 and Health / MaxHealth * 100 or -1
+end
+
+-- Get the unit Heal AbsorbSpell
+function Unit:HasHealAbsorb()
+  return UnitGetTotalHealAbsorbs(self.UnitID) or 0
 end
 
 -- Get if the unit Is Dead Or Ghost.
