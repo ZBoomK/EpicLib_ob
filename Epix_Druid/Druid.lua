@@ -1,205 +1,173 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 0 + 0;
-	local v6;
-	while true do
-		if (((574 - 272) <= (2211 - (71 + 1638))) and (v5 == (0 - 0))) then
-			v6 = v0[v4];
-			if (not v6 or ((1568 + 3249) < (19547 - 15412))) then
-				return v1(v4, ...);
-			end
-			v5 = 1 + 0;
-		end
-		if (((182 + 90) == (746 - 474)) and (v5 == (1 + 0))) then
-			return v6(...);
-		end
+	local v5 = v0[v4];
+	if (((318 + 1086) <= (1891 + 1329)) and not v5) then
+		return v1(v4, ...);
 	end
+	return v5(...);
 end
 v0["Epix_Druid_Druid.lua"] = function(...)
-	local v7, v8 = ...;
-	local v9 = EpicDBC.DBC;
-	local v10 = EpicLib;
-	local v11 = EpicCache;
-	local v12 = v10.Unit;
-	local v13 = v12.Player;
-	local v14 = v12.Target;
-	local v15 = v12.Pet;
-	local v16 = v10.Spell;
-	local v17 = v10.MultiSpell;
-	local v18 = v10.Item;
-	local v19 = v10.Utils.MergeTableByKey;
-	local v20 = EpicLib;
-	local v21 = v20.Macro;
-	if (((1230 - (87 + 1043)) <= (3571 - (10 + 438))) and not v16.Druid) then
-		v16.Druid = {};
+	local v6, v7 = ...;
+	local v8 = EpicDBC.DBC;
+	local v9 = EpicLib;
+	local v10 = EpicCache;
+	local v11 = v9.Unit;
+	local v12 = v11.Player;
+	local v13 = v11.Target;
+	local v14 = v11.Pet;
+	local v15 = v9.Spell;
+	local v16 = v9.MultiSpell;
+	local v17 = v9.Item;
+	local v18 = v9.Utils.MergeTableByKey;
+	local v19 = EpicLib;
+	local v20 = v19.Macro;
+	if (((4158 - 3019) <= (7854 - 5642)) and not v15.Druid) then
+		v15.Druid = {};
 	end
-	v16.Druid.Commons = {Nothing=v16(0 + 0, nil, 0 - 0),Berserking=v16(21695 + 4602, nil, 1181 - (1123 + 57)),Shadowmeld=v16(47992 + 10992, nil, 256 - (163 + 91)),Barkskin=v16(24742 - (1869 + 61), nil, 1 + 2),BearForm=v16(19325 - 13838, nil, 5 - 1),CatForm=v16(106 + 662, nil, 6 - 1),FerociousBite=v16(21198 + 1370, nil, 1480 - (1329 + 145)),MarkOfTheWild=v16(2097 - (140 + 831), nil, 1857 - (1409 + 441)),MarkoftheWildBuff=v16(1844 - (15 + 703)),Moonfire=v16(4132 + 4789, nil, 446 - (262 + 176)),Prowl=v16(6936 - (345 + 1376), nil, 697 - (198 + 490)),Rebirth=v16(90497 - 70013, nil, 23 - 13),Regrowth=v16(10142 - (696 + 510), nil, 22 - 11),Rejuvenation=v16(2036 - (1091 + 171), nil, 2 + 10),Revive=v16(159837 - 109068, nil, 43 - 30),Shred=v16(5595 - (123 + 251), nil, 69 - 55),Soothe=v16(3606 - (208 + 490), nil, 2 + 13),TravelForm=v16(349 + 434, nil, 852 - (660 + 176)),AstralInfluence=v16(23732 + 173792, nil, 415 - (14 + 188)),AstralCommunion=v16(203034 - (534 + 141), nil, 7 + 10),ConvokeTheSpirits=v16(346323 + 45205, nil, 18 + 0),FrenziedRegeneration=v16(48003 - 25161, nil, 29 - 10),HeartOfTheWild=v16(896082 - 576628, nil, 11 + 9),Innervate=v16(18571 + 10595, nil, 417 - (115 + 281)),IncapacitatingRoar=v16(230 - 131, nil, 19 + 3),ImprovedNaturesCure=v16(948281 - 555903, nil, 84 - 61),Ironfur=v16(192948 - (550 + 317), nil, 33 - 9),NaturesVigil=v16(175659 - 50685, nil, 69 - 44),Maim=v16(22855 - (134 + 151), nil, 1691 - (970 + 695)),MightyBash=v16(9943 - 4732, nil, 2017 - (582 + 1408)),MoonkinForm=v17(717 - 510, 31276 - 6418, 744721 - 547096),PoPHealBuff=v16(397160 - (1195 + 629), nil, 36 - 8),Rake=v16(2063 - (187 + 54), nil, 809 - (162 + 618)),Renewal=v16(75843 + 32395, nil, 20 + 10),RemoveCorruption=v16(5932 - 3150, nil, 51 - 20),Rip=v16(85 + 994, nil, 1668 - (1373 + 263)),SkullBash=v16(107839 - (451 + 549), nil, 11 + 22),StampedingRoar=v16(121019 - 43255, nil, 56 - 22),Starfire=v16(195537 - (746 + 638), nil, 14 + 21),Starsurge=v17(312 - 106, 79015 - (218 + 123), 199207 - (1535 + 46)),Sunfire=v16(92805 + 597, nil, 6 + 30),SurvivalInstincts=v16(61896 - (306 + 254), nil, 3 + 34),Swiftmend=v16(36428 - 17866, nil, 1505 - (899 + 568)),Swipe=v17(135 + 70, 258409 - 151624, 214374 - (268 + 335), 214054 - (60 + 230)),Typhoon=v16(133041 - (426 + 146), nil, 5 + 34),Thrash=v17(1666 - (282 + 1174), 78569 - (569 + 242), 307733 - 200903),WildCharge=v17(12 + 192, 18003 - (706 + 318), 50627 - (721 + 530), 103688 - (945 + 326)),Wildgrowth=v16(121013 - 72575, nil, 36 + 4),UrsolsVortex=v16(103493 - (271 + 429), nil, 38 + 3),MassEntanglement=v16(103859 - (1408 + 92), nil, 1128 - (461 + 625)),FrenziedRegenerationBuff=v16(24130 - (993 + 295), nil, 3 + 40),IronfurBuff=v16(193252 - (418 + 753), nil, 17 + 27),SuddenAmbushBuff=v16(35113 + 305585, nil, 14 + 31),MoonfireDebuff=v16(41653 + 123159, nil, 575 - (406 + 123)),RakeDebuff=v16(157491 - (1749 + 20), nil, 12 + 35),SunfireDebuff=v16(166137 - (1249 + 73), nil, 18 + 30),ThrashDebuff=v17(1348 - (466 + 679), 256976 - 150146, 549413 - 357323),Hibernate=v16(4537 - (106 + 1794), nil, 66 + 142),Pool=v16(252757 + 747153, nil, 144 - 95)};
-	v16.Druid.Balance = v19(v16.Druid.Commons, {EclipseLunar=v16(131383 - 82865, nil, 164 - (4 + 110)),EclipseSolar=v16(49101 - (57 + 527), nil, 1478 - (41 + 1386)),Wrath=v16(191087 - (17 + 86), nil, 36 + 16),AetherialKindling=v16(730453 - 402912, nil, 153 - 100),AstralCommunion=v16(400802 - (122 + 44), nil, 92 - 38),AstralSmolder=v16(1307275 - 913217, nil, 45 + 10),BalanceofAllThings=v16(56989 + 337059, nil, 113 - 57),CelestialAlignment=v17(267 - (30 + 35), 133492 + 60731, 384667 - (1043 + 214)),ElunesGuidance=v16(1489544 - 1095553, nil, 1269 - (323 + 889)),ForceOfNature=v16(553498 - 347862, nil, 638 - (361 + 219)),FungalGrowth=v16(393319 - (53 + 267), nil, 14 + 45),FuryOfElune=v16(203183 - (15 + 398), nil, 1042 - (18 + 964)),Incarnation=v17(756 - 555, 59379 + 43181, 245975 + 144439),IncarnationTalent=v16(394863 - (20 + 830), nil, 48 + 13),NaturesBalance=v16(202556 - (116 + 10), nil, 5 + 57),OrbitBreaker=v16(383935 - (542 + 196), nil, 134 - 71),OrbitalStrike=v16(113997 + 276381, nil, 33 + 31),PowerofGoldrinn=v16(141844 + 252202, nil, 170 - 105),PrimordialArcanicPulsar=v16(1010030 - 616070, nil, 1617 - (1126 + 425)),RattleTheStars=v16(394359 - (118 + 287), nil, 262 - 195),Solstice=v16(344768 - (118 + 1003), nil, 198 - 130),SouloftheForest=v16(114484 - (142 + 235), nil, 312 - 243),Starfall=v16(41567 + 149467, nil, 1047 - (553 + 424)),Starlord=v16(382625 - 180280, nil, 63 + 8),Starweaver=v16(390781 + 3159, nil, 42 + 30),StellarFlare=v16(86016 + 116331, nil, 42 + 31),TwinMoons=v16(606186 - 326566, nil, 206 - 132),UmbralEmbrace=v16(881645 - 487885, nil, 22 + 53),UmbralIntensity=v16(1851850 - 1468655, nil, 829 - (239 + 514)),WaningTwilight=v16(138362 + 255594, nil, 1406 - (797 + 532)),WarriorofElune=v16(147086 + 55339, nil, 27 + 51),WildMushroom=v16(208666 - 119919, nil, 1281 - (373 + 829)),WildSurges=v16(407621 - (476 + 255)),FullMoon=v16(275413 - (369 + 761), nil, 47 + 33),HalfMoon=v16(498202 - 223920, nil, 153 - 72),NewMoon=v16(274519 - (64 + 174), nil, 12 + 70),BOATArcaneBuff=v16(583563 - 189513, nil, 419 - (144 + 192)),BOATNatureBuff=v16(394265 - (42 + 174), nil, 64 + 20),CABuff=v16(317607 + 65803, nil, 37 + 48),IncarnationBuff=v17(1704 - (363 + 1141), 104140 - (1183 + 397), 1188554 - 798140),PAPBuff=v16(288792 + 105169, nil, 65 + 21),RattledStarsBuff=v16(395930 - (1913 + 62), nil, 55 + 32),SolsticeBuff=v16(909740 - 566092, nil, 2021 - (565 + 1368)),StarfallBuff=v16(718428 - 527394, nil, 1750 - (1477 + 184)),StarlordBuff=v16(381126 - 101417, nil, 84 + 6),StarweaversWarp=v16(394798 - (564 + 292), nil, 156 - 65),StarweaversWeft=v16(1187413 - 793469, nil, 396 - (244 + 60)),UmbralEmbraceBuff=v16(302769 + 90994, nil, 569 - (41 + 435)),WarriorofEluneBuff=v16(203426 - (938 + 63), nil, 73 + 21),FungalGrowthDebuff=v16(82406 - (936 + 189), nil, 32 + 63),StellarFlareDebuff=v16(203960 - (1565 + 48), nil, 60 + 36),GatheringStarstuff=v16(395550 - (782 + 356), nil, 364 - (176 + 91)),TouchTheCosmos=v16(1027578 - 633164, nil, 144 - 46),BOATArcaneLegBuff=v16(341038 - (975 + 117), nil, 1974 - (157 + 1718)),BOATNatureLegBuff=v16(275883 + 64060, nil, 354 - 254),OnethsClearVisionBuff=v16(1161702 - 821905, nil, 1119 - (697 + 321)),OnethsPerceptionBuff=v16(925658 - 585858, nil, 215 - 113),TimewornDreambinderBuff=v16(783942 - 443893, nil, 41 + 62),DreamstateBuff=v16(794894 - 370646)});
-	v16.Druid.Feral = v19(v16.Druid.Commons, {AdaptiveSwarm=v16(1050538 - 658650, nil, 1331 - (322 + 905)),ApexPredatorsCraving=v16(392492 - (602 + 9), nil, 1294 - (449 + 740)),AshamanesGuidance=v16(392420 - (826 + 46), nil, 1053 - (245 + 702)),Berserk=v16(337960 - 231009, nil, 35 + 72),BerserkHeartoftheLion=v16(393072 - (260 + 1638), nil, 548 - (382 + 58)),Bloodtalons=v16(1024783 - 705344, nil, 91 + 18),BrutalSlash=v16(417531 - 215503, nil, 326 - 216),CircleofLifeandDeath=v16(401525 - (902 + 303), nil, 243 - 132),DireFixation=v16(1006056 - 588346, nil, 10 + 102),DoubleClawedRake=v16(393390 - (1121 + 569), nil, 327 - (22 + 192)),FeralFrenzy=v16(275520 - (483 + 200), nil, 1577 - (1404 + 59)),Incarnation=v16(280633 - 178090, nil, 154 - 39),LionsStrength=v16(392737 - (468 + 297), nil, 678 - (334 + 228)),LunarInspiration=v16(524769 - 369189, nil, 270 - 153),LIMoonfire=v16(282248 - 126623, nil, 34 + 84),MomentofClarity=v16(236304 - (141 + 95), nil, 117 + 2),Predator=v16(520003 - 317982, nil, 288 - 168),PrimalWrath=v16(66847 + 218534, nil, 331 - 210),RampantFerocity=v16(275368 + 116341, nil, 64 + 58),RipandTear=v16(551111 - 159764, nil, 73 + 50),Sabertooth=v16(202194 - (92 + 71), nil, 62 + 62),SouloftheForest=v16(266445 - 107969, nil, 890 - (574 + 191)),Swipe=v16(88084 + 18701, nil, 315 - 189),TearOpenWounds=v16(200120 + 191665, nil, 976 - (254 + 595)),ThrashingClaws=v16(405426 - (55 + 71), nil, 168 - 40),TigersFury=v16(7007 - (573 + 1217), nil, 357 - 228),UnbridledSwarm=v16(29823 + 362128, nil, 209 - 79),WildSlashes=v16(391803 - (714 + 225), nil, 382 - 251),FranticMomentum=v16(546337 - 154462, nil, 23 + 188),ApexPredatorsCravingBuff=v16(567424 - 175542, nil, 938 - (118 + 688)),BloodtalonsBuff=v16(145200 - (25 + 23), nil, 26 + 107),Clearcasting=v16(137586 - (927 + 959), nil, 451 - 317),OverflowingPowerBuff=v16(405921 - (16 + 716), nil, 260 - 125),PredatorRevealedBuff=v16(408565 - (11 + 86), nil, 331 - 195),PredatorySwiftnessBuff=v16(69654 - (175 + 110), nil, 345 - 208),SabertoothBuff=v16(1932070 - 1540348, nil, 1934 - (503 + 1293)),SuddenAmbushBuff=v16(1094706 - 702732, nil, 101 + 38),SmolderingFrenzyBuff=v16(423812 - (810 + 251), nil, 148 + 64),AdaptiveSwarmDebuff=v16(120272 + 271617, nil, 127 + 13),AdaptiveSwarmHeal=v16(392424 - (43 + 490), nil, 874 - (711 + 22)),DireFixationDebuff=v16(1615800 - 1198087, nil, 1001 - (240 + 619)),LIMoonfireDebuff=v16(37555 + 118070, nil, 227 - 84),ThrashDebuff=v16(26819 + 378414, nil, 1888 - (1344 + 400))});
-	v16.Druid.Guardian = v19(v16.Druid.Commons, {Mangle=v16(34322 - (255 + 150), nil, 115 + 30),Berserk=v16(26948 + 23386, nil, 623 - 477),BristlingFur=v16(503334 - 347499, nil, 1886 - (404 + 1335)),DreamofCenarius=v16(372525 - (183 + 223), nil, 179 - 31),FlashingClaws=v16(260680 + 132747, nil, 54 + 95),FuryofNature=v16(371032 - (10 + 327), nil, 105 + 45),Incarnation=v16(102896 - (118 + 220), nil, 51 + 100),LayeredMane=v16(385170 - (108 + 341), nil, 69 + 83),LunarBeam=v16(862751 - 658685, nil, 1646 - (711 + 782)),Maul=v16(13048 - 6241, nil, 623 - (270 + 199)),Pulverize=v16(26037 + 54276, nil, 1974 - (580 + 1239)),RageoftheSleeper=v16(597087 - 396236, nil, 150 + 6),Raze=v16(14379 + 385875, nil, 69 + 88),ReinforcedFur=v16(1027724 - 634106, nil, 99 + 59),SouloftheForest=v16(159644 - (645 + 522), nil, 1949 - (1010 + 780)),Swipe=v16(213666 + 105, nil, 762 - 602),ThornsofIron=v16(1172833 - 772611, nil, 1997 - (1045 + 791)),ToothandClaw=v16(342452 - 207164, nil, 246 - 84),ViciousCycle=v16(372504 - (351 + 154), nil, 1737 - (1281 + 293)),VulnerableFlesh=v16(372884 - (28 + 238), nil, 366 - 202),Growl=v16(8354 - (1381 + 178), nil, 197 + 13),BerserkBuff=v16(40587 + 9747, nil, 71 + 94),DreamofCenariusBuff=v16(1282963 - 910811, nil, 86 + 80),GalacticGuardianBuff=v16(214178 - (381 + 89), nil, 149 + 18),GoreBuff=v16(63343 + 30319, nil, 287 - 119),IncarnationBuff=v16(103714 - (1074 + 82), nil, 370 - 201),ToothandClawBuff=v16(137070 - (214 + 1570), nil, 1625 - (990 + 465)),ViciousCycleMaulBuff=v16(153361 + 218654, nil, 75 + 96),ViciousCycleMangleBuff=v16(361770 + 10249, nil, 676 - 504),ToothandClawDebuff=v16(137327 - (1668 + 58), nil, 799 - (512 + 114))});
-	v16.Druid.Restoration = v19(v16.Druid.Commons, {EclipseLunar=v16(126493 - 77975, nil, 359 - 185),EclipseSolar=v16(168822 - 120305, nil, 82 + 93),Efflorescence=v16(27182 + 118023, nil, 154 + 22),Lifebloom=v17(671 - 472, 35757 - (109 + 1885), 190019 - (1269 + 200)),NaturesCure=v16(169480 - 81057, nil, 992 - (98 + 717)),Revitalize=v16(212866 - (802 + 24), nil, 306 - 128),Starfire=v16(249594 - 51966, nil, 27 + 152),Starsurge=v16(151841 + 45785, nil, 30 + 150),Wrath=v16(1117 + 4059, nil, 503 - 322),Abundance=v16(691572 - 484189, nil, 66 + 116),AdaptiveSwarm=v16(159523 + 232365, nil, 151 + 32),BalanceAffinity=v16(143705 + 53927, nil, 86 + 98),CenarionWard=v16(103784 - (797 + 636), nil, 898 - 713),FeralAffinity=v16(199109 - (1427 + 192), nil, 65 + 121),Flourish=v16(459063 - 261342, nil, 169 + 18),IronBark=v16(46380 + 55962, nil, 514 - (192 + 134)),NaturesSwiftness=v16(133434 - (316 + 960), nil, 106 + 83),Reforestation=v16(302788 + 89568, nil, 176 + 14),SoulOfTheForest=v16(605862 - 447384, nil, 742 - (83 + 468)),Tranquility=v16(2546 - (1202 + 604), nil, 896 - 704),UnbridledSwarm=v16(652332 - 260381, nil, 534 - 341),Undergrowth=v16(392626 - (45 + 280), nil, 188 + 6),AdaptiveSwarmHeal=v16(342383 + 49508, nil, 72 + 123),IncarnationBuff=v16(65120 + 52559, nil, 35 + 161),SoulOfTheForestBuff=v16(211301 - 97193, nil, 2108 - (340 + 1571)),AdaptiveSwarmDebuff=v16(154571 + 237318, nil, 1970 - (1733 + 39)),GroveGuardians=v16(282189 - 179496, nil, 1243 - (125 + 909))});
-	if (not v18.Druid or ((3317 - (1096 + 852)) > (2238 + 2749))) then
-		v18.Druid = {};
+	v15.Druid.Commons = {Nothing=v15(859 - (814 + 45), nil, 0 - 0),Berserking=v15(1418 + 24879, nil, 1 + 0),Shadowmeld=v15(59869 - (261 + 624), nil, 3 - 1),Barkskin=v15(23892 - (1020 + 60), nil, 1426 - (630 + 793)),BearForm=v15(18593 - 13106, nil, 18 - 14),CatForm=v15(303 + 465, nil, 17 - 12),FerociousBite=v15(24315 - (760 + 987), nil, 1919 - (1789 + 124)),MarkOfTheWild=v15(1892 - (745 + 21), nil, 3 + 4),MarkoftheWildBuff=v15(3097 - 1971),Moonfire=v15(34992 - 26071, nil, 1 + 7),Prowl=v15(4095 + 1120, nil, 1064 - (87 + 968)),Rebirth=v15(90169 - 69685, nil, 10 + 0),Regrowth=v15(20200 - 11264, nil, 1424 - (447 + 966)),Rejuvenation=v15(2118 - 1344, nil, 1829 - (1703 + 114)),Revive=v15(51470 - (376 + 325), nil, 21 - 8),Shred=v15(16064 - 10843, nil, 5 + 9),Soothe=v15(6404 - 3496, nil, 29 - (9 + 5)),TravelForm=v15(1159 - (85 + 291), nil, 1281 - (243 + 1022)),AstralInfluence=v15(751613 - 554089, nil, 176 + 37),AstralCommunion=v15(203539 - (1123 + 57), nil, 14 + 3),ConvokeTheSpirits=v15(391782 - (163 + 91), nil, 1948 - (1869 + 61)),FrenziedRegeneration=v15(6382 + 16460, nil, 66 - 47),HeartOfTheWild=v15(490665 - 171211, nil, 3 + 17),Innervate=v15(40080 - 10914, nil, 20 + 1),IncapacitatingRoar=v15(1573 - (1329 + 145), nil, 993 - (140 + 831)),ImprovedNaturesCure=v15(394228 - (1409 + 441), nil, 741 - (15 + 703)),Ironfur=v15(88954 + 103127, nil, 462 - (262 + 176)),NaturesVigil=v15(126695 - (345 + 1376), nil, 713 - (198 + 490)),Maim=v15(99713 - 77143, nil, 62 - 36),MightyBash=v15(6417 - (696 + 510), nil, 56 - 29),MoonkinForm=v16(1469 - (1091 + 171), 4001 + 20857, 622190 - 424565),PoPHealBuff=v15(1311066 - 915730, nil, 402 - (123 + 251)),Rake=v15(9053 - 7231, nil, 727 - (208 + 490)),Renewal=v15(9134 + 99104, nil, 14 + 16),RemoveCorruption=v15(3618 - (660 + 176), nil, 4 + 27),Rip=v15(1281 - (14 + 188), nil, 707 - (534 + 141)),SkullBash=v15(42952 + 63887, nil, 30 + 3),StampedingRoar=v15(74766 + 2998, nil, 71 - 37),Starfire=v15(308241 - 114088, nil, 98 - 63),Starsurge=v16(111 + 95, 50093 + 28581, 198022 - (115 + 281)),Sunfire=v15(217256 - 123854, nil, 30 + 6),SurvivalInstincts=v15(148233 - 86897, nil, 135 - 98),Swiftmend=v15(19429 - (550 + 317), nil, 54 - 16),Swipe=v16(288 - 83, 298408 - 191623, 214056 - (134 + 151), 215429 - (970 + 695)),Typhoon=v15(252781 - 120312, nil, 2029 - (582 + 1408)),Thrash=v16(728 - 518, 97836 - 20078, 402573 - 295743),WildCharge=v16(2028 - (1195 + 629), 22454 - 5475, 49617 - (187 + 54), 103197 - (162 + 618)),Wildgrowth=v15(33941 + 14497, nil, 27 + 13),UrsolsVortex=v15(219226 - 116433, nil, 68 - 27),MassEntanglement=v15(8004 + 94355, nil, 1678 - (1373 + 263)),FrenziedRegenerationBuff=v15(23842 - (451 + 549), nil, 14 + 29),IronfurBuff=v15(298926 - 106845, nil, 73 - 29),SuddenAmbushBuff=v15(342082 - (746 + 638), nil, 17 + 28),MoonfireDebuff=v15(250230 - 85418, nil, 387 - (218 + 123)),RakeDebuff=v15(157303 - (1535 + 46), nil, 47 + 0),SunfireDebuff=v15(23850 + 140965, nil, 608 - (306 + 254)),ThrashDebuff=v16(13 + 190, 209658 - 102828, 193557 - (899 + 568)),Hibernate=v15(1734 + 903, nil, 503 - 295),Pool=v15(1000513 - (268 + 335), nil, 339 - (60 + 230))};
+	v15.Druid.Balance = v18(v15.Druid.Commons, {EclipseLunar=v15(49090 - (426 + 146), nil, 6 + 44),EclipseSolar=v15(49973 - (282 + 1174), nil, 862 - (569 + 242)),Wrath=v15(550147 - 359163, nil, 3 + 49),AetherialKindling=v15(328565 - (706 + 318), nil, 1304 - (721 + 530)),AstralCommunion=v15(401907 - (945 + 326), nil, 134 - 80),AstralSmolder=v15(350641 + 43417, nil, 755 - (271 + 429)),BalanceofAllThings=v15(361974 + 32074, nil, 1556 - (1408 + 92)),CelestialAlignment=v16(1288 - (461 + 625), 195511 - (993 + 295), 19909 + 363501),ElunesGuidance=v15(395162 - (418 + 753), nil, 22 + 35),ForceOfNature=v15(21194 + 184442, nil, 17 + 41),FungalGrowth=v15(99321 + 293678, nil, 588 - (406 + 123)),FuryOfElune=v15(204539 - (1749 + 20), nil, 15 + 45),Incarnation=v16(1523 - (1249 + 73), 36591 + 65969, 391559 - (466 + 679)),IncarnationTalent=v15(947786 - 553773, nil, 174 - 113),NaturesBalance=v15(204330 - (106 + 1794), nil, 20 + 42),OrbitBreaker=v15(96865 + 286332, nil, 185 - 122),OrbitalStrike=v15(1057120 - 666742, nil, 178 - (4 + 110)),PowerofGoldrinn=v15(394630 - (57 + 527), nil, 1492 - (41 + 1386)),PrimordialArcanicPulsar=v15(394063 - (17 + 86), nil, 45 + 21),RattleTheStars=v15(878562 - 484608, nil, 193 - 126),Solstice=v15(343813 - (122 + 44), nil, 117 - 49),SouloftheForest=v15(378546 - 264439, nil, 57 + 12),Starfall=v15(27628 + 163406, nil, 141 - 71),Starlord=v15(202410 - (30 + 35), nil, 49 + 22),Starweaver=v15(395197 - (1043 + 214), nil, 272 - 200),StellarFlare=v15(203559 - (323 + 889), nil, 195 - 122),TwinMoons=v15(280200 - (361 + 219), nil, 394 - (53 + 267)),UmbralEmbrace=v15(88959 + 304801, nil, 488 - (15 + 398)),UmbralIntensity=v15(384177 - (18 + 964), nil, 285 - 209),WaningTwilight=v15(228086 + 165870, nil, 49 + 28),WarriorofElune=v15(203275 - (20 + 830), nil, 61 + 17),WildMushroom=v15(88873 - (116 + 10), nil, 6 + 73),WildSurges=v15(407628 - (542 + 196)),FullMoon=v15(587982 - 313699, nil, 24 + 56),HalfMoon=v15(139354 + 134928, nil, 30 + 51),NewMoon=v15(722755 - 448474, nil, 210 - 128),BOATArcaneBuff=v15(395601 - (1126 + 425), nil, 488 - (118 + 287)),BOATNatureBuff=v15(1544393 - 1150344, nil, 1205 - (118 + 1003)),CABuff=v15(1122022 - 738612, nil, 462 - (142 + 235)),IncarnationBuff=v16(907 - 707, 22316 + 80244, 391391 - (553 + 424)),PAPBuff=v15(744963 - 351002, nil, 76 + 10),RattledStarsBuff=v15(390796 + 3159, nil, 51 + 36),SolsticeBuff=v15(146082 + 197566, nil, 51 + 37),StarfallBuff=v15(414141 - 223107, nil, 247 - 158),StarlordBuff=v15(626280 - 346571, nil, 27 + 63),StarweaversWarp=v15(1903787 - 1509845, nil, 844 - (239 + 514)),StarweaversWeft=v15(138358 + 255586, nil, 1421 - (797 + 532)),UmbralEmbraceBuff=v15(286115 + 107648, nil, 32 + 61),WarriorofEluneBuff=v15(475952 - 273527, nil, 1296 - (373 + 829)),FungalGrowthDebuff=v15(82012 - (476 + 255), nil, 1225 - (369 + 761)),StellarFlareDebuff=v15(117053 + 85294, nil, 174 - 78),GatheringStarstuff=v15(747412 - 353000, nil, 335 - (64 + 174)),TouchTheCosmos=v15(56174 + 338240, nil, 144 - 46),BOATArcaneLegBuff=v15(340282 - (144 + 192), nil, 315 - (42 + 174)),BOATNatureLegBuff=v15(255377 + 84566, nil, 83 + 17),OnethsClearVisionBuff=v15(144361 + 195436, nil, 1605 - (363 + 1141)),OnethsPerceptionBuff=v15(341380 - (1183 + 397), nil, 310 - 208),TimewornDreambinderBuff=v15(249272 + 90777, nil, 77 + 26),DreamstateBuff=v15(426223 - (1913 + 62))});
+	v15.Druid.Feral = v18(v15.Druid.Commons, {AdaptiveSwarm=v15(246803 + 145085, nil, 274 - 170),ApexPredatorsCraving=v15(393814 - (565 + 1368), nil, 394 - 289),AshamanesGuidance=v15(393209 - (1477 + 184), nil, 143 - 37),Berserk=v15(99652 + 7299, nil, 963 - (564 + 292)),BerserkHeartoftheLion=v15(674942 - 283768, nil, 325 - 217),Bloodtalons=v15(319743 - (244 + 60), nil, 84 + 25),BrutalSlash=v15(202504 - (41 + 435), nil, 1111 - (938 + 63)),CircleofLifeandDeath=v15(307877 + 92443, nil, 1236 - (936 + 189)),DireFixation=v15(137469 + 280241, nil, 1725 - (1565 + 48)),DoubleClawedRake=v15(241960 + 149740, nil, 1251 - (782 + 356)),FeralFrenzy=v15(275104 - (176 + 91), nil, 296 - 182),Incarnation=v15(151128 - 48585, nil, 1207 - (975 + 117)),LionsStrength=v15(393847 - (157 + 1718), nil, 95 + 21),LunarInspiration=v15(552297 - 396717, nil, 399 - 282),LIMoonfire=v15(156643 - (697 + 321), nil, 321 - 203),MomentofClarity=v15(500136 - 264068, nil, 273 - 154),Predator=v15(78636 + 123385, nil, 224 - 104),PrimalWrath=v15(765024 - 479643, nil, 1348 - (322 + 905)),RampantFerocity=v15(392320 - (602 + 9), nil, 1311 - (449 + 740)),RipandTear=v15(392219 - (826 + 46), nil, 1070 - (245 + 702)),Sabertooth=v15(638409 - 436378, nil, 40 + 84),SouloftheForest=v15(160374 - (260 + 1638), nil, 565 - (382 + 58)),Swipe=v15(342574 - 235789, nil, 105 + 21),TearOpenWounds=v15(809701 - 417916, nil, 377 - 250),ThrashingClaws=v15(406505 - (902 + 303), nil, 280 - 152),TigersFury=v15(12565 - 7348, nil, 12 + 117),UnbridledSwarm=v15(393641 - (1121 + 569), nil, 344 - (22 + 192)),WildSlashes=v15(391547 - (483 + 200), nil, 1594 - (1404 + 59)),FranticMomentum=v15(1072459 - 680584, nil, 283 - 72),ApexPredatorsCravingBuff=v15(392647 - (468 + 297), nil, 694 - (334 + 228)),BloodtalonsBuff=v15(489595 - 344443, nil, 308 - 175),Clearcasting=v15(246111 - 110411, nil, 39 + 95),OverflowingPowerBuff=v15(405425 - (141 + 95), nil, 133 + 2),PredatorRevealedBuff=v15(1051399 - 642931, nil, 326 - 190),PredatorySwiftnessBuff=v15(16249 + 53120, nil, 375 - 238),SabertoothBuff=v15(275377 + 116345, nil, 72 + 66),SuddenAmbushBuff=v15(551994 - 160020, nil, 82 + 57),SmolderingFrenzyBuff=v15(422914 - (92 + 71), nil, 105 + 107),AdaptiveSwarmDebuff=v15(658881 - 266992, nil, 905 - (574 + 191)),AdaptiveSwarmHeal=v15(323257 + 68634, nil, 353 - 212),DireFixationDebuff=v15(213363 + 204350, nil, 991 - (254 + 595)),LIMoonfireDebuff=v15(155751 - (55 + 71), nil, 187 - 44),ThrashDebuff=v15(407023 - (573 + 1217), nil, 398 - 254)});
+	v15.Druid.Guardian = v18(v15.Druid.Commons, {Mangle=v15(2581 + 31336, nil, 233 - 88),Berserk=v15(51273 - (714 + 225), nil, 426 - 280),BristlingFur=v15(217258 - 61423, nil, 16 + 131),DreamofCenarius=v15(538808 - 166689, nil, 954 - (118 + 688)),FlashingClaws=v15(393475 - (25 + 23), nil, 29 + 120),FuryofNature=v15(372581 - (927 + 959), nil, 505 - 355),Incarnation=v15(103290 - (16 + 716), nil, 291 - 140),LayeredMane=v15(384818 - (11 + 86), nil, 370 - 218),LunarBeam=v15(204351 - (175 + 110), nil, 385 - 232),Maul=v15(33573 - 26766, nil, 1950 - (503 + 1293)),Pulverize=v15(224298 - 143985, nil, 113 + 42),RageoftheSleeper=v15(201912 - (810 + 251), nil, 109 + 47),Raze=v15(122839 + 277415, nil, 142 + 15),ReinforcedFur=v15(394151 - (43 + 490), nil, 891 - (711 + 22)),SouloftheForest=v15(613021 - 454544, nil, 1018 - (240 + 619)),Swipe=v15(51586 + 162185, nil, 254 - 94),ThornsofIron=v15(26488 + 373734, nil, 1905 - (1344 + 400)),ToothandClaw=v15(135693 - (255 + 150), nil, 128 + 34),ViciousCycle=v15(199159 + 172840, nil, 696 - 533),VulnerableFlesh=v15(1203526 - 830908, nil, 1903 - (404 + 1335)),Growl=v15(7201 - (183 + 223), nil, 255 - 45),BerserkBuff=v15(33351 + 16983, nil, 60 + 105),DreamofCenariusBuff=v15(372489 - (10 + 327), nil, 116 + 50),GalacticGuardianBuff=v15(214046 - (118 + 220), nil, 56 + 111),GoreBuff=v15(94111 - (108 + 341), nil, 76 + 92),IncarnationBuff=v15(433595 - 331037, nil, 1662 - (711 + 782)),ToothandClawBuff=v15(259347 - 124061, nil, 639 - (270 + 199)),ViciousCycleMaulBuff=v15(120603 + 251412, nil, 1990 - (580 + 1239)),ViciousCycleMangleBuff=v15(1105933 - 733914, nil, 165 + 7),ToothandClawDebuff=v15(4872 + 130729, nil, 76 + 97)});
+	v15.Druid.Restoration = v18(v15.Druid.Commons, {EclipseLunar=v15(126678 - 78160, nil, 109 + 65),EclipseSolar=v15(49684 - (645 + 522), nil, 1965 - (1010 + 780)),Efflorescence=v15(145134 + 71, nil, 838 - 662),Lifebloom=v16(583 - 384, 35599 - (1045 + 791), 477274 - 288724),NaturesCure=v15(135017 - 46594, nil, 682 - (351 + 154)),Revitalize=v15(213614 - (1281 + 293), nil, 444 - (28 + 238)),Starfire=v15(441594 - 243966, nil, 1738 - (1381 + 178)),Starsurge=v15(185361 + 12265, nil, 146 + 34),Wrath=v15(2208 + 2968, nil, 623 - 442),Abundance=v15(107438 + 99945, nil, 652 - (381 + 89)),AdaptiveSwarm=v15(347523 + 44365, nil, 124 + 59),BalanceAffinity=v15(338540 - 140908, nil, 1340 - (1074 + 82)),CenarionWard=v15(224299 - 121948, nil, 1969 - (214 + 1570)),FeralAffinity=v15(198945 - (990 + 465), nil, 77 + 109),Flourish=v15(86033 + 111688, nil, 182 + 5),IronBark=v15(402769 - 300427, nil, 1914 - (1668 + 58)),NaturesSwiftness=v15(132784 - (512 + 114), nil, 492 - 303),Reforestation=v15(811134 - 418778, nil, 661 - 471),SoulOfTheForest=v15(73726 + 84752, nil, 36 + 155),Tranquility=v15(644 + 96, nil, 647 - 455),UnbridledSwarm=v15(393945 - (109 + 1885), nil, 1662 - (1269 + 200)),Undergrowth=v15(751925 - 359624, nil, 1009 - (98 + 717)),AdaptiveSwarmHeal=v15(392717 - (802 + 24), nil, 336 - 141),IncarnationBuff=v15(148622 - 30943, nil, 29 + 167),SoulOfTheForestBuff=v15(87672 + 26436, nil, 33 + 164),AdaptiveSwarmDebuff=v15(84534 + 307355, nil, 550 - 352),GroveGuardians=v15(342456 - 239763, nil, 75 + 134)});
+	if (not v17.Druid or ((481 + 699) >= (3476 + 737))) then
+		v17.Druid = {};
 	end
-	v18.Druid.Commons = {RefreshingHealingPotion=v18(273311 - 81931),Healthstone=v18(5347 + 165),Djaruun=v18(203081 - (409 + 103)),MirrorofFracturedTomorrows=v18(207817 - (46 + 190), {(4 + 9),(740 - (228 + 498))}),AshesoftheEmbersoul=v18(44884 + 162283, {(676 - (174 + 489)),(1919 - (830 + 1075))}),BandolierofTwistedBlades=v18(207689 - (303 + 221), {(11 + 2),(57 - 43)}),MydasTalisman=v18(425118 - 266799, {(11 + 2),(40 - 26)}),WitherbarksBranch=v18(177314 - 67315, {(1261 - (111 + 1137)),(41 - 27)})};
-	v18.Druid.Balance = v19(v18.Druid.Commons, {});
-	v18.Druid.Feral = v19(v18.Druid.Commons, {});
-	v18.Druid.Guardian = v19(v18.Druid.Commons, {});
-	v18.Druid.Restoration = v19(v18.Druid.Commons, {});
-	if (not v21.Druid or ((216 + 647) >= (5107 - (423 + 100)))) then
-		v21.Druid = {};
+	v17.Druid.Commons = {RefreshingHealingPotion=v17(139159 + 52221),DreamwalkersHealingPotion=v17(96657 + 110366),Healthstone=v17(6945 - (797 + 636)),Djaruun=v17(983545 - 780976),MirrorofFracturedTomorrows=v17(209200 - (1427 + 192), {(29 - 16),(7 + 7)}),AshesoftheEmbersoul=v17(207493 - (192 + 134), {(8 + 5),(13 + 1)}),BandolierofTwistedBlades=v17(791992 - 584827, {(1819 - (1202 + 604)),(23 - 9)}),MydasTalisman=v17(438343 - 280024, {(13 + 0),(6 + 8)}),WitherbarksBranch=v17(60870 + 49129, {(23 - 10),(6 + 8)})};
+	v17.Druid.Balance = v18(v17.Druid.Commons, {});
+	v17.Druid.Feral = v18(v17.Druid.Commons, {});
+	v17.Druid.Guardian = v18(v17.Druid.Commons, {});
+	v17.Druid.Restoration = v18(v17.Druid.Commons, {});
+	if (((6425 - (1733 + 39)) > (8447 - 5373)) and not v20.Druid) then
+		v20.Druid = {};
 	end
-	v21.Druid.Commons = {InnervatePlayer=v21(1 + 40),MarkOfTheWildPlayer=v21(115 - 73),MoonfireMouseover=v21(23 + 20),RakeMouseover=v21(815 - (326 + 445)),RipMouseover=v21(196 - 151),RebirthMouseover=v21(101 - 55),ReviveMouseover=v21(109 - 62),RegrowthMouseover=v21(721 - (530 + 181)),RejuvenationFocus=v21(893 - (614 + 267)),RejuvenationMouseover=v21(45 - (19 + 13)),SunfireMouseover=v21(22 - 8),SwiftmendFocus=v21(34 - 19),SwiftmendMouseover=v21(45 - 29),SwiftmendPlayer=v21(5 + 12),SkullBashMouseover=v21(31 - 13),WildgrowthFocus=v21(38 - 19),UrsolsVortexCursor=v21(1832 - (1293 + 519)),HibernateMouseover=v21(79 - 40),RegrowthPlayer=v21(133 - 82),CancelStarlord=v21(99 - 47),Healthstone=v21(90 - 69),Djaruun=v21(51 - 29),RefreshingHealingPotion=v21(27 + 23)};
-	v21.Druid.Balance = v19(v21.Druid.Commons, {StellarFlareMouseover=v21(6 + 19)});
-	v21.Druid.Feral = v19(v21.Druid.Commons, {AdaptiveSwarmMouseover=v21(59 - 33),PrimalWrathMouseover=v21(7 + 20),RemoveCorruptionMouseover=v21(17 + 32),AdaptiveSwarmPlayer=v21(34 + 19)});
-	v21.Druid.Guardian = v19(v21.Druid.Commons, {PulverizeMouseover=v21(1124 - (709 + 387)),ThrashMouseover=v21(1887 - (673 + 1185))});
-	v21.Druid.Restoration = v19(v21.Druid.Commons, {AdaptiveSwarmFocus=v21(87 - 57),CenarionWardFocus=v21(99 - 68),EfflorescenceCursor=v21(51 - 19),IronBarkFocus=v21(24 + 9),LifebloomFocus=v21(26 + 8),NaturesCureFocus=v21(46 - 11),NaturesCureMouseover=v21(9 + 27),EfflorescencePlayer=v21(73 - 36),WildgrowthMouseover=v21(74 - 36),GroveGuardiansFocus=v21(1920 - (446 + 1434)),RegrowthFocus=v21(1331 - (1040 + 243))});
-	local v37 = v16.Druid.Feral;
-	local v38 = v16.Druid.Restoration;
-	local v39 = v16.Druid.Balance;
-	v10.AddCoreOverride("Player.AstralPowerP", function()
-		local v46 = 0 - 0;
-		local v47;
-		while true do
-			if ((v46 == (1847 - (559 + 1288))) or ((2655 - (609 + 1322)) >= (2122 - (13 + 441)))) then
-				v47 = v13:AstralPower();
-				if (((1599 - 1171) < (4725 - 2921)) and not v13:IsCasting()) then
-					return v47;
-				elseif (v13:IsCasting(v16.Druid.Balance.Wrath) or v13:IsCasting(v16.Druid.Balance.Starfire) or v13:IsCasting(v16.Druid.Balance.StellarFlare) or ((16559 - 13234) > (172 + 4441))) then
-					return v47 + (29 - 21);
-				elseif (v13:IsCasting(v16.Druid.Balance.NewMoon) or ((1759 + 3191) <= (1996 + 2557))) then
-					return v47 + (29 - 19);
-				elseif (((1459 + 1206) <= (7232 - 3299)) and v13:IsCasting(v16.Druid.Balance.HalfMoon)) then
-					return v47 + 14 + 6;
-				elseif (((1821 + 1452) == (2352 + 921)) and v13:IsCasting(v16.Druid.Balance.FullMoon)) then
-					return v47 + 34 + 6;
-				else
-					return v47;
-				end
-				break;
-			end
-		end
-	end, 100 + 2);
-	v10.AddCoreOverride("Spell.EnergizeAmount", function(v48)
-		local v49 = 433 - (153 + 280);
-		local v50;
-		while true do
-			if (((11041 - 7217) > (368 + 41)) and (v49 == (1 + 0))) then
-				return v50;
-			end
-			if (((1093 + 994) == (1894 + 193)) and (v49 == (0 + 0))) then
-				v50 = 0 - 0;
-				if ((v48 == v39.StellarFlare) or ((2104 + 1300) > (5170 - (89 + 578)))) then
-					v50 = 9 + 3;
-				elseif ((v48 == v39.AstralCommunion) or ((7288 - 3782) <= (2358 - (572 + 477)))) then
-					v50 = 9 + 51;
-				elseif (((1774 + 1181) == (353 + 2602)) and (v48 == v39.ForceofNature)) then
-					v50 = 106 - (84 + 2);
-				elseif ((v48 == v39.Sunfire) or ((4784 - 1881) == (1078 + 417))) then
-					v50 = 850 - (497 + 345);
-				elseif (((117 + 4429) >= (385 + 1890)) and (v48 == v39.Moonfire)) then
-					v50 = 1339 - (605 + 728);
-				elseif (((585 + 234) >= (48 - 26)) and (v48 == v39.NewMoon)) then
-					v50 = 1 + 11;
-				elseif (((11690 - 8528) == (2851 + 311)) and (v48 == v39.HalfMoon)) then
-					v50 = 66 - 42;
-				elseif ((v48 == v39.FullMoon) or ((1789 + 580) > (4918 - (457 + 32)))) then
-					v50 = 22 + 28;
-				end
-				v49 = 1403 - (832 + 570);
-			end
-		end
-	end, 97 + 5);
-	local v40;
-	v40 = v10.AddCoreOverride("Spell.IsCastable", function(v51, v52, v53, v54, v55, v56)
-		local v57 = 0 + 0;
-		local v58;
-		local v59;
-		while true do
-			if (((14491 - 10396) >= (1534 + 1649)) and (v57 == (796 - (588 + 208)))) then
-				v58 = true;
-				if (v53 or ((10001 - 6290) < (2808 - (884 + 916)))) then
-					local v87 = 0 - 0;
-					local v88;
-					while true do
-						if ((v87 == (0 + 0)) or ((1702 - (232 + 421)) <= (2795 - (1569 + 320)))) then
-							v88 = v55 or v14;
-							v58 = v88:IsInRange(v53, v54);
-							break;
-						end
-					end
-				end
-				v57 = 1 + 0;
-			end
-			if (((858 + 3655) > (9186 - 6460)) and (v57 == (606 - (316 + 289)))) then
-				v59 = v40(v51, v52, v53, v54, v55, v56);
-				if ((v51 == v16.Druid.Balance.MoonkinForm) or ((3876 - 2395) >= (123 + 2535))) then
-					return v59 and v13:BuffDown(v51);
-				elseif ((v51 == v16.Druid.Balance.StellarFlare) or ((4673 - (666 + 787)) == (1789 - (360 + 65)))) then
-					return v59 and not v13:IsCasting(v51);
-				elseif ((v51 == v16.Druid.Balance.Wrath) or (v51 == v16.Druid.Balance.Starfire) or ((986 + 68) > (3646 - (79 + 175)))) then
-					return v59 and not (v13:IsCasting(v51) and (v51:Count() == (1 - 0)));
-				elseif ((v51 == v16.Druid.Balance.WarriorofElune) or ((528 + 148) >= (5032 - 3390))) then
-					return v59 and v13:BuffDown(v51);
-				elseif (((7965 - 3829) > (3296 - (503 + 396))) and ((v51 == v16.Druid.Balance.NewMoon) or (v51 == v16.Druid.Balance.HalfMoon) or (v51 == v16.Druid.Balance.FullMoon))) then
-					return v59 and not v13:IsCasting(v51);
-				else
-					return v59;
-				end
-				break;
-			end
-		end
-	end, 283 - (92 + 89));
-	local v41;
-	v41 = v10.AddCoreOverride("Spell.IsCastable", function(v60, v61, v62, v63, v64, v65)
-		local v66 = 0 - 0;
-		local v67;
-		while true do
-			if ((v66 == (0 + 0)) or ((2566 + 1768) == (16624 - 12379))) then
-				v67 = v41(v60, v61, v62, v63, v64, v65);
-				if ((v60 == v16.Druid.Feral.CatForm) or (v60 == v16.Druid.Feral.MoonkinForm) or ((585 + 3691) <= (6910 - 3879))) then
-					return v67 and v13:BuffDown(v60);
-				elseif ((v60 == v16.Druid.Feral.Prowl) or ((4173 + 609) <= (573 + 626))) then
-					return v67 and v60:IsUsable() and not v13:StealthUp(true, true);
-				else
-					return v67;
-				end
-				break;
-			end
-		end
-	end, 313 - 210);
-	local v42;
-	v42 = v10.AddCoreOverride("Spell.IsCastable", function(v68, v69, v70, v71, v72, v73)
-		local v74 = v42(v68, v69, v70, v71, v72, v73);
-		if ((v68 == v16.Druid.Restoration.CatForm) or (v68 == v16.Druid.Restoration.MoonkinForm) or ((608 + 4256) < (2899 - 997))) then
-			return v74 and v13:BuffDown(v68);
+	v20.Druid.Commons = {InnervatePlayer=v20(1075 - (125 + 909)),MarkOfTheWildPlayer=v20(1990 - (1096 + 852)),MoonfireMouseover=v20(20 + 23),RakeMouseover=v20(62 - 18),RipMouseover=v20(44 + 1),RebirthMouseover=v20(558 - (409 + 103)),ReviveMouseover=v20(283 - (46 + 190)),RegrowthMouseover=v20(105 - (51 + 44)),RejuvenationFocus=v20(4 + 8),RejuvenationMouseover=v20(1330 - (1114 + 203)),SunfireMouseover=v20(740 - (228 + 498)),SwiftmendFocus=v20(4 + 11),SwiftmendMouseover=v20(9 + 7),SwiftmendPlayer=v20(680 - (174 + 489)),SkullBashMouseover=v20(46 - 28),WildgrowthFocus=v20(1924 - (830 + 1075)),UrsolsVortexCursor=v20(544 - (303 + 221)),HibernateMouseover=v20(1308 - (231 + 1038)),RegrowthPlayer=v20(43 + 8),CancelStarlord=v20(1214 - (171 + 991)),Healthstone=v20(86 - 65),Djaruun=v20(58 - 36),RefreshingHealingPotion=v20(124 - 74)};
+	v20.Druid.Balance = v18(v20.Druid.Commons, {StellarFlareMouseover=v20(21 + 4)});
+	v20.Druid.Feral = v18(v20.Druid.Commons, {AdaptiveSwarmMouseover=v20(91 - 65),PrimalWrathMouseover=v20(77 - 50),RemoveCorruptionMouseover=v20(78 - 29),AdaptiveSwarmPlayer=v20(163 - 110)});
+	v20.Druid.Guardian = v18(v20.Druid.Commons, {PulverizeMouseover=v20(1276 - (111 + 1137)),ThrashMouseover=v20(187 - (91 + 67))});
+	v20.Druid.Restoration = v18(v20.Druid.Commons, {AdaptiveSwarmFocus=v20(89 - 59),CenarionWardFocus=v20(8 + 23),EfflorescenceCursor=v20(555 - (423 + 100)),IronBarkFocus=v20(1 + 32),LifebloomFocus=v20(94 - 60),NaturesCureFocus=v20(19 + 16),NaturesCureMouseover=v20(807 - (326 + 445)),EfflorescencePlayer=v20(161 - 124),WildgrowthMouseover=v20(84 - 46),GroveGuardiansFocus=v20(93 - 53),RegrowthFocus=v20(759 - (530 + 181))});
+	local v36 = v15.Druid.Feral;
+	local v37 = v15.Druid.Restoration;
+	local v38 = v15.Druid.Balance;
+	v9.AddCoreOverride("Player.AstralPowerP", function()
+		local v45 = v12:AstralPower();
+		if (((1251 - (614 + 267)) >= (228 - (19 + 13))) and not v12:IsCasting()) then
+			return v45;
+		elseif (v12:IsCasting(v15.Druid.Balance.Wrath) or v12:IsCasting(v15.Druid.Balance.Starfire) or v12:IsCasting(v15.Druid.Balance.StellarFlare) or ((5155 - 1987) < (1169 - 667))) then
+			return v45 + (22 - 14);
+		elseif (((115 + 324) == (771 - 332)) and v12:IsCasting(v15.Druid.Balance.NewMoon)) then
+			return v45 + (20 - 10);
+		elseif (v12:IsCasting(v15.Druid.Balance.HalfMoon) or ((3076 - (1293 + 519)) < (554 - 282))) then
+			return v45 + (52 - 32);
+		elseif (((5971 - 2848) < (16778 - 12887)) and v12:IsCasting(v15.Druid.Balance.FullMoon)) then
+			return v45 + (94 - 54);
 		else
-			return v74;
+			return v45;
 		end
-	end, 1349 - (485 + 759));
-	v10.Druid = {};
-	v10.Druid.FullMoonLastCast = nil;
-	v10.Druid.OrbitBreakerStacks = 0 - 0;
-	v10:RegisterForSelfCombatEvent(function(v75, v76, v76, v76, v76, v76, v76, v76, v76, v76, v76, v77)
-		local v78 = 1189 - (442 + 747);
+	end, 55 + 47);
+	v9.AddCoreOverride("Spell.EnergizeAmount", function(v46)
+		local v47 = 0 + 0;
+		if (((9158 - 5216) <= (1153 + 3834)) and (v46 == v38.StellarFlare)) then
+			v47 = 4 + 8;
+		elseif (((2865 + 1719) == (5680 - (709 + 387))) and (v46 == v38.AstralCommunion)) then
+			v47 = 1918 - (673 + 1185);
+		elseif (((11539 - 7560) >= (5356 - 3688)) and (v46 == v38.ForceofNature)) then
+			v47 = 32 - 12;
+		elseif (((407 + 161) > (320 + 108)) and (v46 == v38.Sunfire)) then
+			v47 = 10 - 2;
+		elseif (((328 + 1006) <= (9197 - 4584)) and (v46 == v38.Moonfire)) then
+			v47 = 11 - 5;
+		elseif ((v46 == v38.NewMoon) or ((3745 - (446 + 1434)) >= (3312 - (1040 + 243)))) then
+			v47 = 35 - 23;
+		elseif (((6797 - (559 + 1288)) >= (3547 - (609 + 1322))) and (v46 == v38.HalfMoon)) then
+			v47 = 478 - (13 + 441);
+		elseif (((6445 - 4720) == (4518 - 2793)) and (v46 == v38.FullMoon)) then
+			v47 = 249 - 199;
+		end
+		return v47;
+	end, 4 + 98);
+	local v39;
+	v39 = v9.AddCoreOverride("Spell.IsCastable", function(v48, v49, v50, v51, v52, v53)
+		local v54 = 0 - 0;
+		local v55;
+		local v56;
 		while true do
-			if (((5974 - (832 + 303)) >= (4646 - (88 + 858))) and (v78 == (0 + 0))) then
-				if ((v77 == (167587 + 34910)) or ((45 + 1030) > (2707 - (766 + 23)))) then
-					v10.Druid.OrbitBreakerStacks = v10.Druid.OrbitBreakerStacks + (4 - 3);
+			if (((519 + 940) <= (1088 + 1394)) and (v54 == (2 - 1))) then
+				v56 = v39(v48, v49, v50, v51, v52, v53);
+				if ((v48 == v15.Druid.Balance.MoonkinForm) or ((1476 + 1220) >= (8334 - 3802))) then
+					return v56 and v12:BuffDown(v48);
+				elseif (((693 + 355) >= (29 + 23)) and (v48 == v15.Druid.Balance.StellarFlare)) then
+					return v56 and not v12:IsCasting(v48);
+				elseif (((2126 + 832) < (3781 + 722)) and ((v48 == v15.Druid.Balance.Wrath) or (v48 == v15.Druid.Balance.Starfire))) then
+					return v56 and not (v12:IsCasting(v48) and (v48:Count() == (1 + 0)));
+				elseif ((v48 == v15.Druid.Balance.WarriorofElune) or ((3168 - (153 + 280)) == (3779 - 2470))) then
+					return v56 and v12:BuffDown(v48);
+				elseif ((v48 == v15.Druid.Balance.NewMoon) or (v48 == v15.Druid.Balance.HalfMoon) or (v48 == v15.Druid.Balance.FullMoon) or ((3708 + 422) <= (1167 + 1788))) then
+					return v56 and not v12:IsCasting(v48);
+				else
+					return v56;
 				end
-				if (((540 - 144) <= (10022 - 6218)) and (v77 == (930925 - 656642))) then
-					if (not v16.Druid.Balance.NewMoon:IsAvailable() or (v16.Druid.Balance.NewMoon:IsAvailable() and ((v10.Druid.FullMoonLastCast == nil) or ((v75 - v10.Druid.FullMoonLastCast) > (1074.5 - (1036 + 37))))) or ((2956 + 1213) == (4258 - 2071))) then
-						v10.Druid.OrbitBreakerStacks = 0 + 0;
+				break;
+			end
+			if ((v54 == (0 + 0)) or ((1783 + 181) <= (971 + 369))) then
+				v55 = true;
+				if (((3804 - 1305) == (1545 + 954)) and v50) then
+					local v83 = v52 or v13;
+					v55 = v83:IsInRange(v50, v51);
+				end
+				v54 = 668 - (89 + 578);
+			end
+		end
+	end, 73 + 29);
+	local v40;
+	v40 = v9.AddCoreOverride("Spell.IsCastable", function(v57, v58, v59, v60, v61, v62)
+		local v63 = 0 - 0;
+		local v64;
+		while true do
+			if ((v63 == (1049 - (572 + 477))) or ((305 + 1950) < (14 + 8))) then
+				v64 = v40(v57, v58, v59, v60, v61, v62);
+				if ((v57 == v15.Druid.Feral.CatForm) or (v57 == v15.Druid.Feral.MoonkinForm) or ((130 + 956) >= (1491 - (84 + 2)))) then
+					return v64 and v12:BuffDown(v57);
+				elseif ((v57 == v15.Druid.Feral.Prowl) or ((3903 - 1534) == (307 + 119))) then
+					return v64 and v57:IsUsable() and not v12:StealthUp(true, true);
+				else
+					return v64;
+				end
+				break;
+			end
+		end
+	end, 945 - (497 + 345));
+	local v41;
+	v41 = v9.AddCoreOverride("Spell.IsCastable", function(v65, v66, v67, v68, v69, v70)
+		local v71 = v41(v65, v66, v67, v68, v69, v70);
+		if ((v65 == v15.Druid.Restoration.CatForm) or (v65 == v15.Druid.Restoration.MoonkinForm) or ((79 + 2997) > (539 + 2644))) then
+			return v71 and v12:BuffDown(v65);
+		else
+			return v71;
+		end
+	end, 1438 - (605 + 728));
+	v9.Druid = {};
+	v9.Druid.FullMoonLastCast = nil;
+	v9.Druid.OrbitBreakerStacks = 0 + 0;
+	v9:RegisterForSelfCombatEvent(function(v72, v73, v73, v73, v73, v73, v73, v73, v73, v73, v73, v74)
+		local v75 = 0 - 0;
+		while true do
+			if (((56 + 1146) > (3911 - 2853)) and (v75 == (0 + 0))) then
+				if (((10281 - 6570) > (2534 + 821)) and (v74 == (202986 - (457 + 32)))) then
+					v9.Druid.OrbitBreakerStacks = v9.Druid.OrbitBreakerStacks + 1 + 0;
+				end
+				if ((v74 == (275685 - (832 + 570))) or ((854 + 52) >= (582 + 1647))) then
+					if (((4557 - 3269) > (603 + 648)) and (not v15.Druid.Balance.NewMoon:IsAvailable() or (v15.Druid.Balance.NewMoon:IsAvailable() and ((v9.Druid.FullMoonLastCast == nil) or ((v72 - v9.Druid.FullMoonLastCast) > (797.5 - (588 + 208))))))) then
+						v9.Druid.OrbitBreakerStacks = 0 - 0;
 					end
 				end
 				break;
 			end
 		end
 	end, "SPELL_DAMAGE");
-	v10:RegisterForSelfCombatEvent(function(v79, v80, v80, v80, v80, v80, v80, v80, v80, v80, v80, v81)
-		if (((2886 - (641 + 839)) == (2319 - (910 + 3))) and (v81 == (699228 - 424945))) then
-			v10.Druid.FullMoonLastCast = v79;
+	v9:RegisterForSelfCombatEvent(function(v76, v77, v77, v77, v77, v77, v77, v77, v77, v77, v77, v78)
+		if ((v78 == (276083 - (884 + 916))) or ((9448 - 4935) < (1944 + 1408))) then
+			v9.Druid.FullMoonLastCast = v76;
 		end
 	end, "SPELL_CAST_SUCCESS");
 end;
