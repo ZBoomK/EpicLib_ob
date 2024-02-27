@@ -32,17 +32,17 @@ v0["Epix_Shaman_Shaman.lua"] = function(...)
 	if (not v17.Shaman or ((5700 - 2557) > (1065 + 2683))) then
 		v17.Shaman = {};
 	end
-	v17.Shaman.Commons = {CacheofAcquiredTreasures=v17(188501 - (141 + 95), {(33 - 20),(4 + 10)}),ScarsofFraternalStrife=v17(515790 - 327537, {(7 + 6),(9 + 5)}),TheFirstSigil=v17(188434 - (92 + 71), {(21 - 8),(12 + 2)}),Healthstone=v17(13808 - 8296),RefreshingHealingPotion=v17(97755 + 93625),DreamwalkersHealingPotion=v17(207872 - (254 + 595)),AeratedManaPotion=v17(191512 - (55 + 71))};
+	v17.Shaman.Commons = {CacheofAcquiredTreasures=v17(188501 - (141 + 95), {(33 - 20),(4 + 10)}),ScarsofFraternalStrife=v17(515790 - 327537, {(7 + 6),(9 + 5)}),TheFirstSigil=v17(188434 - (92 + 71), {(21 - 8),(12 + 2)}),Dreambinder=v17(522646 - 314030),Iridal=v17(106408 + 101913),Healthstone=v17(6361 - (254 + 595)),RefreshingHealingPotion=v17(191506 - (55 + 71)),DreamwalkersHealingPotion=v17(272730 - 65707),AeratedManaPotion=v17(193176 - (573 + 1217))};
 	v17.Shaman.Enhancement = v18(v17.Shaman.Commons, {});
 	v17.Shaman.Elemental = v18(v17.Shaman.Commons, {});
 	v17.Shaman.Restoration = v18(v17.Shaman.Commons, {});
-	if (not v20.Shaman or ((2099 - 505) > (3970 - (573 + 1217)))) then
+	if (not v20.Shaman or ((4414 - 2820) > (166 + 2014))) then
 		v20.Shaman = {};
 	end
-	v20.Shaman.Commons = {Healthstone=v20(24 - 15),RefreshingHealingPotion=v20(1 + 9),ManaPotion=v20(112 - 42),CleanseSpiritFocus=v20(950 - (714 + 225)),CleanseSpiritMouseover=v20(34 - 22),CapacitorTotemCursor=v20(17 - 4),WindShearMouseover=v20(2 + 12),HexMouseOver=v20(21 - 6),AncestralSpiritMouseover=v20(831 - (118 + 688)),HealingSurgeFocus=v20(91 - (25 + 23)),HealingSurgeMouseover=v20(9 + 35)};
-	v20.Shaman.Elemental = v18(v20.Shaman.Commons, {EarthquakePlayer=v20(1903 - (927 + 959)),EarthquakeCursor=v20(60 - 42),LiquidMagmaTotemPlayer=v20(751 - (16 + 716)),LiquidMagmaTotemCursor=v20(38 - 18),FireElementalMeteor=v20(118 - (11 + 86)),StormElementalTempest=v20(53 - 31)});
-	v20.Shaman.Enhancement = v18(v20.Shaman.Commons, {HealingSurgeFocus=v20(308 - (175 + 110)),HealingSurgeMouseover=v20(60 - 36),TotemicProjectionPlayer=v20(226 - 180)});
-	v20.Shaman.Restoration = v18(v20.Shaman.Commons, {EarthShieldFocus=v20(1841 - (503 + 1293)),HealingWaveFocus=v20(72 - 46),HealingRainPlayer=v20(20 + 7),HealingRainCursor=v20(1089 - (810 + 251)),ChainHealFocus=v20(21 + 8),SpiritLinkTotemPlayer=v20(10 + 20),SpiritLinkTotemCursor=v20(28 + 3),EarthenWallTotemPlayer=v20(565 - (43 + 490)),EarthenWallTotemCursor=v20(766 - (711 + 22)),DownpourPlayer=v20(131 - 97),DownpourCursor=v20(894 - (240 + 619)),AncestralProtectionTotemPlayer=v20(9 + 27),AncestralProtectionTotemCursor=v20(58 - 21),PurifySpiritMouseover=v20(3 + 35),PurifySpiritFocus=v20(1791 - (1344 + 400)),RiptideMouseover=v20(444 - (255 + 150)),HealingWaveMouseover=v20(32 + 8),RiptideFocus=v20(22 + 19),PrimordialWaveFocus=v20(179 - 137),ChainHealMouseover=v20(154 - 106)});
+	v20.Shaman.Commons = {Healthstone=v20(13 - 4),RefreshingHealingPotion=v20(949 - (714 + 225)),UseWeapon=v20(295 - 194),ManaPotion=v20(97 - 27),CleanseSpiritFocus=v20(2 + 9),CleanseSpiritMouseover=v20(16 - 4),CapacitorTotemCursor=v20(819 - (118 + 688)),WindShearMouseover=v20(62 - (25 + 23)),HexMouseOver=v20(3 + 12),AncestralSpiritMouseover=v20(1911 - (927 + 959)),HealingSurgeFocus=v20(144 - 101),HealingSurgeMouseover=v20(776 - (16 + 716))};
+	v20.Shaman.Elemental = v18(v20.Shaman.Commons, {EarthquakePlayer=v20(32 - 15),EarthquakeCursor=v20(115 - (11 + 86)),LiquidMagmaTotemPlayer=v20(45 - 26),LiquidMagmaTotemCursor=v20(305 - (175 + 110)),FireElementalMeteor=v20(52 - 31),StormElementalTempest=v20(108 - 86)});
+	v20.Shaman.Enhancement = v18(v20.Shaman.Commons, {HealingSurgeFocus=v20(1819 - (503 + 1293)),HealingSurgeMouseover=v20(66 - 42),TotemicProjectionPlayer=v20(34 + 12)});
+	v20.Shaman.Restoration = v18(v20.Shaman.Commons, {EarthShieldFocus=v20(1106 - (810 + 251)),HealingWaveFocus=v20(19 + 7),HealingRainPlayer=v20(9 + 18),HealingRainCursor=v20(26 + 2),ChainHealFocus=v20(562 - (43 + 490)),SpiritLinkTotemPlayer=v20(763 - (711 + 22)),SpiritLinkTotemCursor=v20(119 - 88),EarthenWallTotemPlayer=v20(891 - (240 + 619)),EarthenWallTotemCursor=v20(8 + 25),DownpourPlayer=v20(53 - 19),DownpourCursor=v20(3 + 32),AncestralProtectionTotemPlayer=v20(1780 - (1344 + 400)),AncestralProtectionTotemCursor=v20(442 - (255 + 150)),PurifySpiritMouseover=v20(30 + 8),PurifySpiritFocus=v20(26 + 21),RiptideMouseover=v20(166 - 127),HealingWaveMouseover=v20(129 - 89),RiptideFocus=v20(1780 - (404 + 1335)),PrimordialWaveFocus=v20(448 - (183 + 223)),ChainHealMouseover=v20(57 - 9)});
 end;
 return v0["Epix_Shaman_Shaman.lua"]();
 
