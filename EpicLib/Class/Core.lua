@@ -175,9 +175,130 @@ do
   function EL.CastAnnotated(Object, OffGCD, Text, OutofRange)
     return EL.Press(Object, OutofRange, nil, OffGCD);
   end
-  function EL.CastPooling(Object, CustomTime, OutofRange)
-    return EL.Press(Object, OutofRange);
+-- Main Cast Queue
+function EL.CastQueue(...)
+  local QueueSpellTable = {...}
+
+  return EL.Press(QueueSpellTable[1]);
+end
+
+-- Pooling Cast Queue
+function EL.CastQueuePooling(CustomTime, ...)
+  local QueueSpellTable = {...}
+
+  -- If there is a custom time, just pass in the first spell
+  if CustomTime then
+    return EL.CastPooling(QueueSpellTable[1], CustomTime)
+  else
+    -- Find the largest cost in the table to use as the cooldown object
+    local MaxCost = 0
+    local Resource = QueueSpellTable[1]:CostInfo(nil, "type")
+    local TimeToResource = 0
+    for i = 1, #QueueSpellTable do
+      if QueueSpellTable[i]:Cost() > MaxCost then
+        MaxCost = QueueSpellTable[i]:Cost()
+        Resource = QueueSpellTable[i]:CostInfo(nil, "type")
+      end
+      if Resource then
+        TimeToResource = Player.TimeToXResourceMap[Resource](Object:Cost())
+      end
+    end
+    if(TimeToResource > 0) then
+      EL.CastPooling(QueueSpellTable[1], TimeToResource)
+    else
+      EL.CastPooling(QueueSpellTable[1])
+    end
   end
+
+  return EL.CastPooling(QueueSpellTable[1], CustomTime)
+end
+
+local GCDSpell = Spell(61304)
+local CooldownSpell, CooldownSpellDisplayTime, CooldownSpellCastDuration
+function EL.CastPooling(Object, CustomTime, OutofRange)
+--OLD
+  --return EL.Press(Object, OutofRange);
+--NEW
+  local SpellID = Object.SpellID;
+  local SpellReturnID = Object.ReturnID;
+  local MacroID = Object.MacroID;
+  local Usable = MacroID or Object:IsUsable();
+
+  local StartTime, CastDuration
+  -- Default GCD and Casting Swirls
+  local CurrentTime = GetTime()
+  if Player:IsCasting() or Player:IsChanneling() then
+    StartTime = Player:CastStart()
+    CastDuration = Player:CastDuration()
+  else
+    StartTime, CastDuration = GCDSpell:CooldownInfo()
+  end
+
+  -- Tracking Values for Current Spell
+  if CooldownSpell ~= Object then
+    CooldownSpell = Object
+    CooldownSpellDisplayTime = CurrentTime
+    CooldownSpellCastDuration = 0
+  end
+
+  if not EpicSettings.Toggles["toggle"] then
+    return false;
+  end
+
+  local TimeToResource
+  if CustomTime then
+    TimeToResource = CustomTime
+  else
+    local Resource = Object:CostInfo(nil, "type")
+    if Resource then
+      TimeToResource = Player.TimeToXResourceMap[Resource](Object:Cost())
+    end
+  end
+
+  if TimeToResource and TimeToResource > 0 then
+
+    if TimeToResource > ((StartTime + CastDuration) - CurrentTime) then
+      local AdjustedCastDuration = CurrentTime - CooldownSpellDisplayTime + TimeToResource
+      -- 0.25s minimum, don't display an increase unless it is greater than 0.5s
+      if (CooldownSpellCastDuration == 0 and AdjustedCastDuration > 0.25) or CooldownSpellCastDuration > AdjustedCastDuration
+        or (AdjustedCastDuration - CooldownSpellCastDuration) > 0.5 then
+        CooldownSpellCastDuration = AdjustedCastDuration
+      end
+      StartTime = CooldownSpellDisplayTime
+      CastDuration = CooldownSpellCastDuration
+    end
+
+    if((StartTime + CastDuration) > CurrentTime) then
+      if SpellID then
+        EL.EpicSettingsS = 0;
+      end
+      if MacroID then
+        EL.EpicSettingsM = 0;
+      end
+    end
+
+    Object.LastDisplayTime = GetTime();
+    return true;
+  end
+
+  local PrecastWindow = mathmin(mathmax(SpellQueueWindow - EL.Latency(), 75), 150);
+  if (not Usable) or OutofRange or (((Player:CastEnd() - PrecastWindow > 0) or (Player:GCDRemains() - PrecastWindow > 0))) then
+    Object.LastDisplayTime = GetTime();
+    return false;
+  end
+
+  if SpellID then
+    EL.EpicSettingsS = SpellReturnID;
+    --EL.Print("Casting Spell: "..SpellReturnID);
+  end
+  if MacroID then
+    EL.EpicSettingsM = MacroID;
+    --EL.Print("Casting Macro: "..MacroID);
+  end
+
+  Object.LastDisplayTime = GetTime();
+  return true;
+end
   function EL.CastSuggested(Object, OutofRange)
     return EL.Press(Object, OutofRange);
   end
