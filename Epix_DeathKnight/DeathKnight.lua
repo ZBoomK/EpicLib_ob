@@ -1,18 +1,18 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 648 - (166 + 482);
+	local v5 = 0 + 0;
 	local v6;
 	while true do
-		if (((124 + 2116) > (1523 - (630 + 793))) and (v5 == (3 - 2))) then
-			return v6(...);
-		end
-		if ((v5 == (0 - 0)) or ((1436 + 2208) >= (16058 - 11394))) then
+		if ((v5 == (1747 - (760 + 987))) or ((2341 - (1789 + 124)) > (1334 - (745 + 21)))) then
 			v6 = v0[v4];
-			if (not v6 or ((3116 - (760 + 987)) == (6640 - (1789 + 124)))) then
+			if (((459 + 875) <= (12692 - 8079)) and not v6) then
 				return v1(v4, ...);
 			end
-			v5 = 767 - (745 + 21);
+			v5 = 3 - 2;
+		end
+		if ((v5 == (1 + 0)) or ((1465 + 400) >= (3084 - (87 + 968)))) then
+			return v6(...);
 		end
 	end
 end
@@ -31,125 +31,119 @@ v0["Epix_DeathKnight_DeathKnight.lua"] = function(...)
 	local v19 = v10.Utils.MergeTableByKey;
 	local v20 = EpicLib;
 	local v21 = v20.Macro;
-	if (not v16.DeathKnight or ((297 + 566) == (9512 - 6055))) then
+	if (((21789 - 16839) >= (1467 + 149)) and not v16.DeathKnight) then
 		v16.DeathKnight = {};
 	end
-	v16.DeathKnight.Commons = {CleavingStrikes=v16(1243107 - 926191, nil, 1 + 8),DeathStrike=v16(39255 + 10743, nil, 1065 - (87 + 968)),EmpowerRuneWeapon=v16(209391 - 161823, nil, 10 + 1),IceboundFortitude=v16(110296 - 61504, nil, 1425 - (447 + 966)),IcyTalons=v16(533508 - 338630, nil, 1830 - (1703 + 114)),RaiseDead=v16(47286 - (376 + 325), nil, 22 - 8),RunicAttenuation=v16(637254 - 430150, nil, 5 + 10),SacrificialPact=v16(721476 - 393902, nil, 30 - (9 + 5)),SoulReaper=v16(343670 - (85 + 291), nil, 1282 - (243 + 1022)),UnholyGround=v16(1424145 - 1049880, nil, 15 + 3),AbominationLimbBuff=v16(384449 - (1123 + 57), nil, 16 + 3),DeathAndDecayBuff=v16(188544 - (163 + 91), nil, 1950 - (1869 + 61)),DeathsDueBuff=v16(90563 + 233602, nil, 73 - 52),EmpowerRuneWeaponBuff=v16(73062 - 25494, nil, 4 + 18),IcyTalonsBuff=v16(267811 - 72932, nil, 22 + 1),UnholyStrengthBuff=v16(54839 - (1329 + 145), nil, 995 - (140 + 831)),DeathStrikeBuff=v16(103418 - (1409 + 441), nil, 743 - (15 + 703)),BloodPlagueDebuff=v16(25507 + 29571, nil, 464 - (262 + 176)),FrostFeverDebuff=v16(56816 - (345 + 1376), nil, 715 - (198 + 490)),SoulReaperDebuff=v16(1516659 - 1173365, nil, 66 - 38),VirulentPlagueDebuff=v16(192793 - (696 + 510), nil, 60 - 31),MarkofFyralathDebuff=v16(415794 - (1091 + 171)),AncestralCall=v16(44212 + 230526, nil, 3 - 2),ArcanePulse=v16(863453 - 603089, nil, 376 - (123 + 251)),ArcaneTorrent=v16(251493 - 200880, nil, 701 - (208 + 490)),BagofTricks=v16(26363 + 286048, nil, 2 + 2),Berserking=v16(27133 - (660 + 176), nil, 1 + 4),BloodFury=v16(20774 - (14 + 188), nil, 681 - (534 + 141)),Fireblood=v16(106624 + 158597, nil, 7 + 0),LightsJudgment=v16(245791 + 9856, nil, 16 - 8),DeathAndDecay=v16(68688 - 25423, nil, 84 - 54),DeathCoil=v16(25529 + 22012, nil, 20 + 11),AbominationLimb=v16(383665 - (115 + 281), nil, 74 - 42),AntiMagicShell=v16(40327 + 8380, nil, 79 - 46),AntiMagicZone=v16(187197 - 136145, nil, 901 - (550 + 317)),Asphyxiate=v16(320108 - 98546, nil, 49 - 14),Assimilation=v16(1046205 - 671822, nil, 321 - (134 + 151)),ChainsofIce=v16(47189 - (970 + 695), nil, 70 - 33),MindFreeze=v16(49518 - (582 + 1408), nil, 131 - 93),Pool=v16(1258108 - 258198, nil, 146 - 107)};
-	v16.DeathKnight.Blood = v19(v16.DeathKnight.Commons, {BloodBoil=v16(52666 - (1195 + 629), nil, 52 - 12),BloodTap=v16(221940 - (187 + 54), nil, 821 - (162 + 618)),Blooddrinker=v16(144996 + 61935, nil, 28 + 14),Bonestorm=v16(415543 - 220699, nil, 72 - 29),Coagulopathy=v16(30610 + 360867, nil, 1680 - (1373 + 263)),Consumption=v16(275156 - (451 + 549), nil, 15 + 30),DancingRuneWeapon=v16(76299 - 27271, nil, 76 - 30),DeathsCaress=v16(196676 - (746 + 638), nil, 18 + 29),GorefiendsGrasp=v16(164276 - 56077, nil, 389 - (218 + 123)),HeartStrike=v16(208511 - (1535 + 46), nil, 49 + 0),Heartbreaker=v16(32057 + 189479, nil, 610 - (306 + 254)),InsatiableBlade=v16(23379 + 354258, nil, 99 - 48),Marrowrend=v16(196649 - (899 + 568), nil, 35 + 17),RapidDecomposition=v16(471063 - 276401, nil, 656 - (268 + 335)),RelishinBlood=v16(317900 - (60 + 230), nil, 626 - (426 + 146)),RuneTap=v16(23322 + 171357, nil, 1511 - (282 + 1174)),SanguineGround=v16(392269 - (569 + 242), nil, 161 - 105),ShatteringBone=v16(21596 + 356044, nil, 1081 - (706 + 318)),TighteningGrasp=v16(208221 - (721 + 530), nil, 1329 - (945 + 326)),Tombstone=v16(549152 - 329343, nil, 53 + 6),VampiricBlood=v16(55933 - (271 + 429), nil, 56 + 4),BoneShieldBuff=v16(196681 - (1408 + 92), nil, 1147 - (461 + 625)),CoagulopathyBuff=v16(392769 - (993 + 295), nil, 4 + 58),CrimsonScourgeBuff=v16(82312 - (418 + 753), nil, 24 + 39),DancingRuneWeaponBuff=v16(8375 + 72881, nil, 19 + 45),HemostasisBuff=v16(69234 + 204713, nil, 594 - (406 + 123)),IceboundFortitudeBuff=v16(50561 - (1749 + 20), nil, 16 + 50),RuneTapBuff=v16(196001 - (1249 + 73), nil, 24 + 43),VampiricBloodBuff=v16(56378 - (466 + 679), nil, 163 - 95),VampiricStrengthBuff=v16(1167974 - 759618, nil, 1969 - (106 + 1794))});
-	v16.DeathKnight.Frost = v19(v16.DeathKnight.Commons, {FrostStrike=v16(15547 + 33596, nil, 18 + 52),HowlingBlast=v16(145210 - 96026, nil, 192 - 121),Avalanche=v16(207256 - (4 + 110), nil, 656 - (57 + 527)),BitingCold=v16(378483 - (41 + 1386), nil, 176 - (17 + 86)),BreathofSindragosa=v16(103353 + 48926, nil, 164 - 90),ChillStreak=v16(884398 - 579006, nil, 241 - (122 + 44)),ColdHeart=v16(485739 - 204531, nil, 251 - 175),Everfrost=v16(306634 + 70304, nil, 12 + 65),FatalFixation=v16(820808 - 415642, nil, 143 - (30 + 35)),Frostscythe=v16(142432 + 64798, nil, 1336 - (1043 + 214)),FrostwyrmsFury=v16(1055944 - 776642, nil, 1292 - (323 + 889)),GatheringStorm=v16(524633 - 329721, nil, 661 - (361 + 219)),GlacialAdvance=v16(195233 - (53 + 267), nil, 19 + 63),HornofWinter=v16(57743 - (15 + 398), nil, 1065 - (18 + 964)),Icebreaker=v16(1479110 - 1086160, nil, 49 + 35),Icecap=v16(130497 + 76629, nil, 935 - (20 + 830)),ImprovedObliterate=v16(247602 + 69596, nil, 212 - (116 + 10)),MightoftheFrozenWastes=v16(6008 + 75325, nil, 825 - (542 + 196)),Obliterate=v16(105084 - 56064, nil, 26 + 62),Obliteration=v16(142888 + 138350, nil, 33 + 56),PillarofFrost=v16(135103 - 83832, nil, 230 - 140),RageoftheFrozenChampion=v16(378627 - (1126 + 425), nil, 496 - (118 + 287)),RemorselessWinter=v16(771199 - 574429, nil, 1213 - (118 + 1003)),ShatteringBlade=v16(605938 - 398881, nil, 470 - (142 + 235)),UnleashedFrenzy=v16(1709836 - 1332931, nil, 21 + 73),ColdHeartBuff=v16(282186 - (553 + 424), nil, 179 - 84),GatheringStormBuff=v16(186583 + 25222, nil, 96 + 0),KillingMachineBuff=v16(29768 + 21356, nil, 42 + 55),PillarofFrostBuff=v16(29280 + 21991, nil, 212 - 114),RimeBuff=v16(164537 - 105485, nil, 221 - 122),UnleashedFrenzyBuff=v16(109602 + 267305, nil),RazoriceDebuff=v16(249916 - 198202, nil, 854 - (239 + 514))});
-	v16.DeathKnight.Unholy = v19(v16.DeathKnight.Commons, {Apocalypse=v16(96829 + 178870, nil, 1431 - (797 + 532)),ArmyoftheDamned=v16(201155 + 75682, nil, 35 + 68),ArmyoftheDead=v16(100281 - 57631, nil, 1306 - (373 + 829)),BurstingSores=v16(207995 - (476 + 255), nil, 1235 - (369 + 761)),ClawingShadows=v16(119924 + 87387, nil, 192 - 86),CoilofDevastation=v16(739563 - 349293, nil, 345 - (64 + 174)),CommanderoftheDead=v16(55582 + 334677, nil, 159 - 51),DarkTransformation=v16(63896 - (144 + 192), nil, 325 - (42 + 174)),Defile=v16(114398 + 37882, nil, 92 + 18),EbonFever=v16(88057 + 119212, nil, 1615 - (363 + 1141)),Epidemic=v16(208897 - (1183 + 397), nil, 340 - 228),EternalAgony=v16(286085 + 104183, nil, 85 + 28),FesteringStrike=v16(87923 - (1913 + 62), nil, 72 + 42),Festermight=v16(999595 - 622005, nil, 2048 - (565 + 1368)),GhoulishFrenzy=v16(1420004 - 1042417, nil, 1777 - (1477 + 184)),ImprovedDeathCoil=v16(514484 - 136904, nil, 110 + 7),InfectedClaws=v16(208128 - (564 + 292), nil, 203 - 85),Morbidity=v16(1138125 - 760533, nil, 423 - (244 + 60)),Outbreak=v16(59649 + 17926, nil, 596 - (41 + 435)),Pestilence=v16(278235 - (938 + 63), nil, 94 + 27),Plaguebringer=v16(391300 - (936 + 189), nil, 41 + 81),RaiseDead=v16(48197 - (1565 + 48), nil, 76 + 47),RottenTouch=v16(391413 - (782 + 356), nil, 391 - (176 + 91)),ScourgeStrike=v16(143527 - 88437, nil, 184 - 59),SummonGargoyle=v17(1293 - (975 + 117), 51081 - (157 + 1718), 168275 + 39074),Superstrain=v16(1385475 - 995192, nil, 430 - 304),UnholyAssault=v16(208307 - (697 + 321), nil, 345 - 218),UnholyBlight=v16(245735 - 129746, nil, 294 - 166),UnholyCommand=v16(123368 + 193573, nil, 241 - 112),UnholyPact=v16(855763 - 536533, nil, 1357 - (322 + 905)),VileContagion=v16(390890 - (602 + 9), nil, 1320 - (449 + 740)),CommanderoftheDeadBuff=v16(391132 - (826 + 46), nil, 1079 - (245 + 702)),FestermightBuff=v16(1193172 - 815581, nil, 43 + 90),PlaguebringerBuff=v16(392076 - (260 + 1638), nil, 574 - (382 + 58)),RunicCorruptionBuff=v16(165087 - 113627, nil, 113 + 22),SuddenDoomBuff=v16(168105 - 86765, nil, 403 - 267),UnholyAssaultBuff=v16(208494 - (902 + 303), nil, 300 - 163),DeathRotDebuff=v16(909306 - 531766, nil, 12 + 126),FesteringWoundDebuff=v16(196000 - (1121 + 569), nil, 353 - (22 + 192)),RottenTouchDebuff=v16(390959 - (483 + 200), nil, 1603 - (1404 + 59)),UnholyBlightDebuff=v16(317445 - 201451, nil, 189 - 48)});
-	if (not v18.DeathKnight or ((1193 - (468 + 297)) > (1130 - (334 + 228)))) then
+	v16.DeathKnight.Commons = {CleavingStrikes=v16(716404 - 399488, nil, 1422 - (447 + 966)),DeathStrike=v16(136877 - 86879, nil, 1827 - (1703 + 114)),EmpowerRuneWeapon=v16(48269 - (376 + 325), nil, 17 - 6),IceboundFortitude=v16(150131 - 101339, nil, 4 + 8),IcyTalons=v16(429215 - 234337, nil, 27 - (9 + 5)),RaiseDead=v16(46961 - (85 + 291), nil, 1279 - (243 + 1022)),RunicAttenuation=v16(788067 - 580963, nil, 13 + 2),SacrificialPact=v16(328754 - (1123 + 57), nil, 14 + 2),SoulReaper=v16(343548 - (163 + 91), nil, 1947 - (1869 + 61)),UnholyGround=v16(104560 + 269705, nil, 63 - 45),AbominationLimbBuff=v16(588682 - 205413, nil, 3 + 16),DeathAndDecayBuff=v16(258757 - 70467, nil, 19 + 1),DeathsDueBuff=v16(325639 - (1329 + 145), nil, 992 - (140 + 831)),EmpowerRuneWeaponBuff=v16(49418 - (1409 + 441), nil, 740 - (15 + 703)),IcyTalonsBuff=v16(90250 + 104629, nil, 461 - (262 + 176)),UnholyStrengthBuff=v16(55086 - (345 + 1376), nil, 712 - (198 + 490)),DeathStrikeBuff=v16(448723 - 347155, nil, 59 - 34),BloodPlagueDebuff=v16(56284 - (696 + 510), nil, 54 - 28),FrostFeverDebuff=v16(56357 - (1091 + 171), nil, 5 + 22),SoulReaperDebuff=v16(1080806 - 737512, nil, 92 - 64),VirulentPlagueDebuff=v16(191961 - (123 + 251), nil, 144 - 115),MarkofFyralathDebuff=v16(415230 - (208 + 490)),AncestralCall=v16(23184 + 251554, nil, 1 + 0),ArcanePulse=v16(261200 - (660 + 176), nil, 1 + 1),ArcaneTorrent=v16(50815 - (14 + 188), nil, 678 - (534 + 141)),BagofTricks=v16(125595 + 186816, nil, 4 + 0),Berserking=v16(25284 + 1013, nil, 10 - 5),BloodFury=v16(32659 - 12087, nil, 16 - 10),Fireblood=v16(142417 + 122804, nil, 5 + 2),LightsJudgment=v16(256043 - (115 + 281), nil, 18 - 10),DeathAndDecay=v16(35821 + 7444, nil, 72 - 42),DeathCoil=v16(174323 - 126782, nil, 898 - (550 + 317)),AbominationLimb=v16(553739 - 170470, nil, 44 - 12),AntiMagicShell=v16(136110 - 87403, nil, 318 - (134 + 151)),AntiMagicZone=v16(52717 - (970 + 695), nil, 64 - 30),Asphyxiate=v16(223552 - (582 + 1408), nil, 121 - 86),Assimilation=v16(471056 - 96673, nil, 135 - 99),ChainsofIce=v16(47348 - (1195 + 629), nil, 48 - 11),MindFreeze=v16(47769 - (187 + 54), nil, 818 - (162 + 618)),Pool=v16(700635 + 299275, nil, 26 + 13)};
+	v16.DeathKnight.Blood = v19(v16.DeathKnight.Commons, {BloodBoil=v16(108430 - 57588, nil, 67 - 27),BloodTap=v16(17335 + 204364, nil, 1677 - (1373 + 263)),Blooddrinker=v16(207931 - (451 + 549), nil, 14 + 28),Bonestorm=v16(303225 - 108381, nil, 72 - 29),Coagulopathy=v16(392861 - (746 + 638), nil, 17 + 27),Consumption=v16(416246 - 142090, nil, 386 - (218 + 123)),DancingRuneWeapon=v16(50609 - (1535 + 46), nil, 46 + 0),DeathsCaress=v16(28260 + 167032, nil, 607 - (306 + 254)),GorefiendsGrasp=v16(6699 + 101500, nil, 93 - 45),HeartStrike=v16(208397 - (899 + 568), nil, 33 + 16),Heartbreaker=v16(536095 - 314559, nil, 653 - (268 + 335)),InsatiableBlade=v16(377927 - (60 + 230), nil, 623 - (426 + 146)),Marrowrend=v16(23382 + 171800, nil, 1508 - (282 + 1174)),RapidDecomposition=v16(195473 - (569 + 242), nil, 152 - 99),RelishinBlood=v16(18163 + 299447, nil, 1078 - (706 + 318)),RuneTap=v16(195930 - (721 + 530), nil, 1326 - (945 + 326)),SanguineGround=v16(977986 - 586528, nil, 50 + 6),ShatteringBone=v16(378340 - (271 + 429), nil, 53 + 4),TighteningGrasp=v16(208470 - (1408 + 92), nil, 1144 - (461 + 625)),Tombstone=v16(221097 - (993 + 295), nil, 4 + 55),VampiricBlood=v16(56404 - (418 + 753), nil, 23 + 37),BoneShieldBuff=v16(20116 + 175065, nil, 18 + 43),CoagulopathyBuff=v16(98938 + 292543, nil, 591 - (406 + 123)),CrimsonScourgeBuff=v16(82910 - (1749 + 20), nil, 15 + 48),DancingRuneWeaponBuff=v16(82578 - (1249 + 73), nil, 23 + 41),HemostasisBuff=v16(275092 - (466 + 679), nil, 156 - 91),IceboundFortitudeBuff=v16(139554 - 90762, nil, 1966 - (106 + 1794)),RuneTapBuff=v16(61588 + 133091, nil, 17 + 50),VampiricBloodBuff=v16(163069 - 107836, nil, 183 - 115),VampiricStrengthBuff=v16(408470 - (4 + 110), nil, 653 - (57 + 527))});
+	v16.DeathKnight.Frost = v19(v16.DeathKnight.Commons, {FrostStrike=v16(50570 - (41 + 1386), nil, 173 - (17 + 86)),HowlingBlast=v16(33382 + 15802, nil, 158 - 87),Avalanche=v16(599871 - 392729, nil, 238 - (122 + 44)),BitingCold=v16(651301 - 274245, nil, 242 - 169),BreathofSindragosa=v16(123877 + 28402, nil, 11 + 63),ChillStreak=v16(618679 - 313287, nil, 140 - (30 + 35)),ColdHeart=v16(193278 + 87930, nil, 1333 - (1043 + 214)),Everfrost=v16(1425073 - 1048135, nil, 1289 - (323 + 889)),FatalFixation=v16(1090561 - 685395, nil, 658 - (361 + 219)),Frostscythe=v16(207550 - (53 + 267), nil, 18 + 61),FrostwyrmsFury=v16(279715 - (15 + 398), nil, 1062 - (18 + 964)),GatheringStorm=v16(733671 - 538759, nil, 47 + 34),GlacialAdvance=v16(122803 + 72110, nil, 932 - (20 + 830)),HornofWinter=v16(44752 + 12578, nil, 209 - (116 + 10)),Icebreaker=v16(29026 + 363924, nil, 822 - (542 + 196)),Icecap=v16(444017 - 236891, nil, 25 + 60),ImprovedObliterate=v16(161159 + 156039, nil, 31 + 55),MightoftheFrozenWastes=v16(214319 - 132986, nil, 222 - 135),Obliterate=v16(50571 - (1126 + 425), nil, 493 - (118 + 287)),Obliteration=v16(1102253 - 821015, nil, 1210 - (118 + 1003)),PillarofFrost=v16(150041 - 98770, nil, 467 - (142 + 235)),RageoftheFrozenChampion=v16(1710612 - 1333536, nil, 20 + 71),RemorselessWinter=v16(197747 - (553 + 424), nil, 173 - 81),ShatteringBlade=v16(182400 + 24657, nil, 93 + 0),UnleashedFrenzy=v16(219455 + 157450, nil, 40 + 54),ColdHeartBuff=v16(160590 + 120619, nil, 205 - 110),GatheringStormBuff=v16(590155 - 378350, nil, 214 - 118),KillingMachineBuff=v16(14867 + 36257, nil, 468 - 371),PillarofFrostBuff=v16(52024 - (239 + 514), nil, 35 + 63),RimeBuff=v16(60381 - (797 + 532), nil, 72 + 27),UnleashedFrenzyBuff=v16(127151 + 249756, nil),RazoriceDebuff=v16(121592 - 69878, nil, 1303 - (373 + 829))});
+	v16.DeathKnight.Unholy = v19(v16.DeathKnight.Commons, {Apocalypse=v16(276430 - (476 + 255), nil, 1232 - (369 + 761)),ArmyoftheDamned=v16(160143 + 116694, nil, 186 - 83),ArmyoftheDead=v16(80821 - 38171, nil, 342 - (64 + 174)),BurstingSores=v16(29520 + 177744, nil, 155 - 50),ClawingShadows=v16(207647 - (144 + 192), nil, 322 - (42 + 174)),CoilofDevastation=v16(293184 + 97086, nil, 89 + 18),CommanderoftheDead=v16(165799 + 224460, nil, 1612 - (363 + 1141)),DarkTransformation=v16(65140 - (1183 + 397), nil, 331 - 222),Defile=v16(111629 + 40651, nil, 83 + 27),EbonFever=v16(209244 - (1913 + 62), nil, 70 + 41),Epidemic=v16(548830 - 341513, nil, 2045 - (565 + 1368)),EternalAgony=v16(1467694 - 1077426, nil, 1774 - (1477 + 184)),FesteringStrike=v16(117110 - 31162, nil, 107 + 7),Festermight=v16(378446 - (564 + 292), nil, 198 - 83),GhoulishFrenzy=v16(1138110 - 760523, nil, 420 - (244 + 60)),ImprovedDeathCoil=v16(290326 + 87254, nil, 593 - (41 + 435)),InfectedClaws=v16(208273 - (938 + 63), nil, 91 + 27),Morbidity=v16(378717 - (936 + 189), nil, 40 + 79),Outbreak=v16(79188 - (1565 + 48), nil, 75 + 45),Pestilence=v16(278372 - (782 + 356), nil, 388 - (176 + 91)),Plaguebringer=v16(1016534 - 626359, nil, 179 - 57),RaiseDead=v16(47676 - (975 + 117), nil, 1998 - (157 + 1718)),RottenTouch=v16(316730 + 73545, nil, 440 - 316),ScourgeStrike=v16(188342 - 133252, nil, 1143 - (697 + 321)),SummonGargoyle=v17(547 - 346, 104248 - 55042, 478018 - 270669),Superstrain=v16(151915 + 238368, nil, 235 - 109),UnholyAssault=v16(555681 - 348392, nil, 1354 - (322 + 905)),UnholyBlight=v16(116600 - (602 + 9), nil, 1317 - (449 + 740)),UnholyCommand=v16(317813 - (826 + 46), nil, 1076 - (245 + 702)),UnholyPact=v16(1008753 - 689523, nil, 42 + 88),VileContagion=v16(392177 - (260 + 1638), nil, 571 - (382 + 58)),CommanderoftheDeadBuff=v16(1251982 - 861722, nil, 110 + 22),FestermightBuff=v16(780367 - 402776, nil, 394 - 261),PlaguebringerBuff=v16(391383 - (902 + 303), nil, 294 - 160),RunicCorruptionBuff=v16(123941 - 72481, nil, 12 + 123),SuddenDoomBuff=v16(83030 - (1121 + 569), nil, 350 - (22 + 192)),UnholyAssaultBuff=v16(207972 - (483 + 200), nil, 1600 - (1404 + 59)),DeathRotDebuff=v16(1033228 - 655688, nil, 184 - 46),FesteringWoundDebuff=v16(195075 - (468 + 297), nil, 701 - (334 + 228)),RottenTouchDebuff=v16(1316396 - 926120, nil, 324 - 184),UnholyBlightDebuff=v16(210371 - 94377, nil, 41 + 100)});
+	if (((1961 - (141 + 95)) == (1695 + 30)) and not v18.DeathKnight) then
 		v18.DeathKnight = {};
 	end
-	v18.DeathKnight.Commons = {AlgetharPuzzleBox=v18(653350 - 459649, {(23 - 10),(250 - (141 + 95))}),IrideusFragment=v18(190316 + 3427, {(30 - 17),(38 - 24)}),VialofAnimatedBlood=v18(112215 + 47410, {(18 - 5),(177 - (92 + 71))}),Fyralath=v18(101974 + 104474, {(778 - (574 + 191)),(34 - 20)}),RefreshingHealingPotion=v18(97755 + 93625),DreamwalkersHealingPotion=v18(207872 - (254 + 595)),Healthstone=v18(5638 - (55 + 71))};
+	v18.DeathKnight.Commons = {AlgetharPuzzleBox=v18(498587 - 304886, {(4 + 9),(10 + 4)}),IrideusFragment=v18(100887 + 92856, {(8 + 5),(7 + 7)}),VialofAnimatedBlood=v18(268377 - 108752, {(11 + 2),(8 + 6)}),Fyralath=v18(207297 - (254 + 595), {(16 - 3),(38 - 24)}),RefreshingHealingPotion=v18(14562 + 176818),DreamwalkersHealingPotion=v18(333596 - 126573),Healthstone=v18(6451 - (714 + 225))};
 	v18.DeathKnight.Blood = v19(v18.DeathKnight.Commons, {});
 	v18.DeathKnight.Frost = v19(v18.DeathKnight.Commons, {});
 	v18.DeathKnight.Unholy = v19(v18.DeathKnight.Commons, {});
-	if (((1757 - 423) <= (6403 - (573 + 1217))) and not v21.DeathKnight) then
+	if (((4263 - 2804) <= (3459 - 977)) and not v21.DeathKnight) then
 		v21.DeathKnight = {};
 	end
-	v21.DeathKnight.Commons = {Healthstone=v21(58 - 37),DaDCursor=v21(1 + 8),DaDPlayer=v21(16 - 6),DefileCursor=v21(950 - (714 + 225)),DefilePlayer=v21(34 - 22)};
+	v21.DeathKnight.Commons = {Healthstone=v21(3 + 18),DaDCursor=v21(12 - 3),DaDPlayer=v21(816 - (118 + 688)),DefileCursor=v21(59 - (25 + 23)),DefilePlayer=v21(3 + 9),MindFreezeMouseover=v21(1952 - (927 + 959))};
 	v21.DeathKnight.Blood = v19(v21.DeathKnight.Commons, {});
 	v21.DeathKnight.Unholy = v19(v21.DeathKnight.Commons, {});
 	v21.DeathKnight.Frost = v19(v21.DeathKnight.Commons, {});
-	local v34 = {(4618 + 38032),(55896 - (118 + 688)),(40154 + 167157),(145841 - 102576),(293962 - 141682),(189218 - 111643),(292848 - 176859),(47320 - (503 + 1293)),(2686 + 1028),(238239 + 105055),(100668 + 11005)};
-	v10.GhoulTable = {SummonedGhoul=nil,SummonExpiration=nil,SummonedGargoyle=nil,GargoyleExpiration=nil,ApocMagusExpiration=(533 - (43 + 490)),ArmyMagusExpiration=(733 - (711 + 22))};
+	local v34 = {(43382 - (16 + 716)),(55187 - (11 + 86)),(207596 - (175 + 110)),(213393 - 170128),(425288 - 273008),(78636 - (810 + 251)),(35598 + 80391),(46057 - (43 + 490)),(14366 - 10652),(82842 + 260452),(7391 + 104282)};
+	v10.GhoulTable = {SummonedGhoul=nil,SummonExpiration=nil,SummonedGargoyle=nil,GargoyleExpiration=nil,ApocMagusExpiration=(1744 - (1344 + 400)),ArmyMagusExpiration=(405 - (255 + 150))};
 	v10:RegisterForSelfCombatEvent(function(v44, v44, v44, v44, v44, v44, v44, v45, v44, v44, v44, v46)
-		local v47 = 0 - 0;
+		local v47 = 0 + 0;
 		while true do
-			if ((v47 == (859 - (240 + 619))) or ((451 + 1414) >= (3226 - 1197))) then
-				if (((328 + 4622) >= (3360 - (1344 + 400))) and (v46 == (46990 - (255 + 150)))) then
-					v10.GhoulTable.SummonedGhoul = v45;
-					v10.GhoulTable.SummonExpiration = GetTime() + 48 + 12;
-				end
-				if (((924 + 801) == (7370 - 5645)) and ((v46 == (158931 - 109725)) or (v46 == (209088 - (404 + 1335))))) then
-					local v72 = 406 - (183 + 223);
+			if ((v47 == (0 + 0)) or ((11518 - 8822) >= (14637 - 10105))) then
+				if (((2787 - (404 + 1335)) >= (458 - (183 + 223))) and (v46 == (56687 - 10102))) then
+					local v73 = 0 + 0;
 					while true do
-						if (((1774 - 315) <= (1645 + 837)) and (v72 == (0 + 0))) then
-							v10.GhoulTable.SummonedGargoyle = v45;
-							v10.GhoulTable.GargoyleExpiration = GetTime() + (362 - (10 + 327));
+						if (((1065 + 1893) < (4840 - (10 + 327))) and (v73 == (0 + 0))) then
+							v10.GhoulTable.SummonedGhoul = v45;
+							v10.GhoulTable.SummonExpiration = GetTime() + (398 - (118 + 220));
 							break;
 						end
 					end
+				end
+				if ((v46 == (16399 + 32807)) or (v46 == (207798 - (108 + 341))) or ((1229 + 1506) == (5534 - 4225))) then
+					v10.GhoulTable.SummonedGargoyle = v45;
+					v10.GhoulTable.GargoyleExpiration = GetTime() + (1518 - (711 + 782));
 				end
 				break;
 			end
 		end
 	end, "SPELL_SUMMON");
 	v10:RegisterForSelfCombatEvent(function(v48, v48, v48, v48, v48, v48, v48, v48, v48, v48, v48, v49)
-		if ((v49 == (228119 + 99455)) or ((3034 - (118 + 220)) >= (1511 + 3021))) then
-			local v66 = 449 - (108 + 341);
+		if ((v49 == (627969 - 300395)) or ((4599 - (270 + 199)) <= (958 + 1997))) then
+			local v67 = 1819 - (580 + 1239);
 			while true do
-				if (((471 + 577) >= (219 - 167)) and (v66 == (1493 - (711 + 782)))) then
+				if ((v67 == (0 - 0)) or ((1878 + 86) <= (49 + 1291))) then
 					v10.GhoulTable.SummonedGhoul = nil;
 					v10.GhoulTable.SummonExpiration = nil;
 					break;
 				end
 			end
 		end
-		if (((5670 - 2712) < (4972 - (270 + 199))) and v13:HasTier(11 + 20, 1823 - (580 + 1239)) and ((v10.GhoulTable.ApocMagusExpiration > (0 - 0)) or (v10.GhoulTable.ArmyMagusExpiration > (0 + 0)))) then
-			local v67 = 0 + 0;
-			while true do
-				if ((v67 == (0 + 0)) or ((7141 - 4406) == (814 + 495))) then
-					if ((v49 == (87115 - (645 + 522))) or ((5920 - (1010 + 780)) <= (2954 + 1))) then
-						local v79 = 0 - 0;
-						while true do
-							if ((v79 == (0 - 0)) or ((3800 - (1045 + 791)) <= (3391 - 2051))) then
-								if (((3815 - 1316) == (3004 - (351 + 154))) and v10.GhoulTable:ApocMagusActive()) then
-									v10.GhoulTable.ApocMagusExpiration = v10.GhoulTable.ApocMagusExpiration + (1575 - (1281 + 293));
-								end
-								if (v10.GhoulTable:ArmyMagusActive() or ((2521 - (28 + 238)) < (48 - 26))) then
-									v10.GhoulTable.ArmyMagusExpiration = v10.GhoulTable.ArmyMagusExpiration + (1560 - (1381 + 178));
-								end
-								break;
+		if (((1089 + 1410) == (6524 - 4025)) and v13:HasTier(20 + 11, 1171 - (645 + 522)) and ((v10.GhoulTable.ApocMagusExpiration > (1790 - (1010 + 780))) or (v10.GhoulTable.ArmyMagusExpiration > (0 + 0)))) then
+			if ((v49 == (409448 - 323500)) or ((6608 - 4353) < (1858 - (1045 + 791)))) then
+				local v72 = 0 - 0;
+				while true do
+					if ((v72 == (0 - 0)) or ((1591 - (351 + 154)) >= (2979 - (1281 + 293)))) then
+						if (v10.GhoulTable:ApocMagusActive() or ((2635 - (28 + 238)) == (951 - 525))) then
+							v10.GhoulTable.ApocMagusExpiration = v10.GhoulTable.ApocMagusExpiration + (1560 - (1381 + 178));
+						end
+						if (v10.GhoulTable:ArmyMagusActive() or ((2886 + 190) > (2567 + 616))) then
+							v10.GhoulTable.ArmyMagusExpiration = v10.GhoulTable.ArmyMagusExpiration + 1 + 0;
+						end
+						break;
+					end
+				end
+			end
+			for v70, v71 in pairs(v34) do
+				if (((4143 - 2941) > (549 + 509)) and (v71 == v49)) then
+					local v78 = 470 - (381 + 89);
+					while true do
+						if (((3291 + 420) > (2269 + 1086)) and ((0 - 0) == v78)) then
+							if (v10.GhoulTable:ApocMagusActive() or ((2062 - (1074 + 82)) >= (4884 - 2655))) then
+								v10.GhoulTable.ApocMagusExpiration = v10.GhoulTable.ApocMagusExpiration + (1784.5 - (214 + 1570));
 							end
+							if (((2743 - (990 + 465)) > (516 + 735)) and v10.GhoulTable:ArmyMagusActive()) then
+								v10.GhoulTable.ArmyMagusExpiration = v10.GhoulTable.ArmyMagusExpiration + 0.5 + 0;
+							end
+							break;
 						end
 					end
-					for v77, v78 in pairs(v34) do
-						if ((v78 == v49) or ((1019 + 67) >= (1133 + 272))) then
-							local v82 = 0 + 0;
-							while true do
-								if ((v82 == (0 - 0)) or ((1228 + 1141) == (896 - (381 + 89)))) then
-									if (v10.GhoulTable:ApocMagusActive() or ((2728 + 348) > (2153 + 1030))) then
-										v10.GhoulTable.ApocMagusExpiration = v10.GhoulTable.ApocMagusExpiration + (0.5 - 0);
-									end
-									if (((2358 - (1074 + 82)) > (2318 - 1260)) and v10.GhoulTable:ArmyMagusActive()) then
-										v10.GhoulTable.ArmyMagusExpiration = v10.GhoulTable.ArmyMagusExpiration + (1784.5 - (214 + 1570));
-									end
-									break;
-								end
-							end
-						end
-					end
-					break;
 				end
 			end
 		end
-		if (((5166 - (990 + 465)) > (1384 + 1971)) and v13:HasTier(14 + 17, 2 + 0) and (v49 == (1085021 - 809322))) then
-			v10.GhoulTable.ApocMagusExpiration = GetTime() + (1746 - (1668 + 58));
+		if ((v13:HasTier(31 + 0, 7 - 5) and (v49 == (277425 - (1668 + 58)))) or ((5139 - (512 + 114)) < (8738 - 5386))) then
+			v10.GhoulTable.ApocMagusExpiration = GetTime() + (41 - 21);
 		end
-		if ((v13:HasTier(657 - (512 + 114), 5 - 3) and (v49 == (88172 - 45522))) or ((3152 - 2246) >= (1037 + 1192))) then
-			v10.GhoulTable.ArmyMagusExpiration = GetTime() + 6 + 24;
+		if ((v13:HasTier(107 - 76, 1 + 1) and (v49 == (7984 + 34666))) or ((1796 + 269) >= (10779 - 7583))) then
+			v10.GhoulTable.ArmyMagusExpiration = GetTime() + (2024 - (109 + 1885));
 		end
 	end, "SPELL_CAST_SUCCESS");
 	v10:RegisterForCombatEvent(function(v50, v50, v50, v50, v50, v50, v50, v51)
-		local v52 = 0 + 0;
+		local v52 = 1469 - (1269 + 200);
 		while true do
-			if (((4344 - 3056) > (3245 - (109 + 1885))) and (v52 == (1469 - (1269 + 200)))) then
-				if ((v51 == v10.GhoulTable.SummonedGhoul) or ((8649 - 4136) < (4167 - (98 + 717)))) then
-					local v75 = 826 - (802 + 24);
+			if ((v52 == (0 - 0)) or ((5191 - (98 + 717)) <= (2307 - (802 + 24)))) then
+				if ((v51 == v10.GhoulTable.SummonedGhoul) or ((5848 - 2456) >= (5987 - 1246))) then
+					local v79 = 0 + 0;
 					while true do
-						if ((v75 == (0 - 0)) or ((2608 - 543) >= (472 + 2724))) then
+						if (((2555 + 770) >= (354 + 1800)) and (v79 == (0 + 0))) then
 							v10.GhoulTable.SummonedGhoul = nil;
 							v10.GhoulTable.SummonExpiration = nil;
 							break;
 						end
 					end
 				end
-				if ((v51 == v10.GhoulTable.SummonedGargoyle) or ((3363 + 1013) <= (244 + 1237))) then
-					local v76 = 0 + 0;
+				if ((v51 == v10.GhoulTable.SummonedGargoyle) or ((3602 - 2307) >= (10781 - 7548))) then
+					local v80 = 0 + 0;
 					while true do
-						if ((v76 == (0 - 0)) or ((11311 - 7919) >= (1696 + 3045))) then
+						if (((1782 + 2595) > (1355 + 287)) and (v80 == (0 + 0))) then
 							v10.GhoulTable.SummonedGargoyle = nil;
 							v10.GhoulTable.GargoyleExpiration = nil;
 							break;
@@ -163,9 +157,9 @@ v0["Epix_DeathKnight_DeathKnight.lua"] = function(...)
 	v10.GhoulTable.GhoulRemains = function(v53)
 		local v54 = 0 + 0;
 		while true do
-			if (((2743 + 582) >= (1567 + 587)) and (v54 == (0 + 0))) then
-				if ((v10.GhoulTable.SummonExpiration == nil) or ((2728 - (797 + 636)) >= (15697 - 12464))) then
-					return 1619 - (1427 + 192);
+			if (((6156 - (797 + 636)) > (6583 - 5227)) and (v54 == (1619 - (1427 + 192)))) then
+				if ((v10.GhoulTable.SummonExpiration == nil) or ((1434 + 2702) <= (7970 - 4537))) then
+					return 0 + 0;
 				end
 				return v10.GhoulTable.SummonExpiration - GetTime();
 			end
@@ -175,25 +169,30 @@ v0["Epix_DeathKnight_DeathKnight.lua"] = function(...)
 		return (v10.GhoulTable.SummonedGhoul ~= nil) and (v10.GhoulTable:GhoulRemains() > (0 + 0));
 	end;
 	v10.GhoulTable.GargRemains = function(v56)
-		if (((10162 - 5785) > (1476 + 166)) and (v10.GhoulTable.GargoyleExpiration == nil)) then
-			return 0 + 0;
+		local v57 = 326 - (192 + 134);
+		while true do
+			if (((5521 - (316 + 960)) <= (2578 + 2053)) and (v57 == (0 + 0))) then
+				if (((3953 + 323) >= (14963 - 11049)) and (v10.GhoulTable.GargoyleExpiration == nil)) then
+					return 551 - (83 + 468);
+				end
+				return v10.GhoulTable.GargoyleExpiration - GetTime();
+			end
 		end
-		return v10.GhoulTable.GargoyleExpiration - GetTime();
 	end;
-	v10.GhoulTable.GargActive = function(v57)
-		return (v10.GhoulTable.SummonedGargoyle ~= nil) and (v10.GhoulTable:GargRemains() > (326 - (192 + 134)));
+	v10.GhoulTable.GargActive = function(v58)
+		return (v10.GhoulTable.SummonedGargoyle ~= nil) and (v10.GhoulTable:GargRemains() > (1806 - (1202 + 604)));
 	end;
-	v10.GhoulTable.ArmyMagusRemains = function(v58)
+	v10.GhoulTable.ArmyMagusRemains = function(v59)
 		return v10.GhoulTable.ArmyMagusExpiration - GetTime();
 	end;
-	v10.GhoulTable.ArmyMagusActive = function(v59)
-		return v10.GhoulTable:ArmyMagusRemains() > (1276 - (316 + 960));
+	v10.GhoulTable.ArmyMagusActive = function(v60)
+		return v10.GhoulTable:ArmyMagusRemains() > (0 - 0);
 	end;
-	v10.GhoulTable.ApocMagusRemains = function(v60)
+	v10.GhoulTable.ApocMagusRemains = function(v61)
 		return v10.GhoulTable.ApocMagusExpiration - GetTime();
 	end;
-	v10.GhoulTable.ApocMagusActive = function(v61)
-		return v10.GhoulTable.ApocMagusRemains() > (0 + 0);
+	v10.GhoulTable.ApocMagusActive = function(v62)
+		return v10.GhoulTable.ApocMagusRemains() > (0 - 0);
 	end;
 end;
 return v0["Epix_DeathKnight_DeathKnight.lua"]();
