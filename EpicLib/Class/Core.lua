@@ -200,7 +200,7 @@ function EL.CastQueuePooling(CustomTime, ...)
         Resource = QueueSpellTable[i]:CostInfo(nil, "type")
       end
       if Resource then
-        TimeToResource = Player.TimeToXResourceMap[Resource](Object:Cost())
+        TimeToResource = Player.TimeToXResourceMap[Resource](QueueSpellTable[i]:Cost())
       end
     end
     if(TimeToResource > 0) then
