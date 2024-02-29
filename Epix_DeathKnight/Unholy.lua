@@ -1,40 +1,48 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = v0[v4];
-	if (((1083 + 3086) > (3846 - 1659)) and not v5) then
-		return v1(v4, ...);
+	local v5 = 1155 - (59 + 1096);
+	local v6;
+	while true do
+		if (((1 + 0) == v5) or ((1823 + 364) >= (6116 - (171 + 991)))) then
+			return v6(...);
+		end
+		if ((v5 == (0 - 0)) or ((10410 - 6533) == (8921 - 5346))) then
+			v6 = v0[v4];
+			if (((566 + 141) > (2215 - 1583)) and not v6) then
+				return v1(v4, ...);
+			end
+			v5 = 2 - 1;
+		end
 	end
-	return v5(...);
 end
 v0["Epix_DeathKnight_Unholy.lua"] = function(...)
-	local v6, v7 = ...;
-	local v8 = EpicDBC.DBC;
-	local v9 = EpicLib;
-	local v10 = EpicCache;
-	local v11 = v9.Utils;
-	local v12 = v9.Unit;
-	local v13 = v12.Player;
-	local v14 = v12.Pet;
-	local v15 = v12.Target;
-	local v16 = v9.Spell;
-	local v17 = v9.MultiSpell;
-	local v18 = v9.Item;
-	local v19 = v9.Cast;
-	local v20 = v9.Mouseover;
-	local v21 = v9.Macro;
-	local v22 = v9.Commons.Everyone.num;
-	local v23 = v9.Commons.Everyone.bool;
-	local v24 = math.min;
-	local v25 = math.abs;
-	local v26 = math.max;
-	local v27 = false;
+	local v7, v8 = ...;
+	local v9 = EpicDBC.DBC;
+	local v10 = EpicLib;
+	local v11 = EpicCache;
+	local v12 = v10.Utils;
+	local v13 = v10.Unit;
+	local v14 = v13.Player;
+	local v15 = v13.Pet;
+	local v16 = v13.Target;
+	local v17 = v10.Spell;
+	local v18 = v10.MultiSpell;
+	local v19 = v10.Item;
+	local v20 = v10.Cast;
+	local v21 = v10.Mouseover;
+	local v22 = v10.Macro;
+	local v23 = v10.Commons.Everyone.num;
+	local v24 = v10.Commons.Everyone.bool;
+	local v25 = math.min;
+	local v26 = math.abs;
+	local v27 = math.max;
 	local v28 = false;
 	local v29 = false;
-	local v19 = v9.Cast;
-	local v30 = table.insert;
-	local v31 = GetTime;
-	local v32;
+	local v30 = false;
+	local v20 = v10.Cast;
+	local v31 = table.insert;
+	local v32 = GetTime;
 	local v33;
 	local v34;
 	local v35;
@@ -62,75 +70,75 @@ v0["Epix_DeathKnight_Unholy.lua"] = function(...)
 	local v57;
 	local v58;
 	local v59;
-	local function v60()
-		local v129 = 0 - 0;
+	local v60;
+	local function v61()
+		local v130 = 0 - 0;
 		while true do
-			if (((3218 - (1293 + 519)) == (2868 - 1462)) and (v129 == (4 - 2))) then
-				v39 = EpicSettings.Settings['InterruptWithStun'] or (0 - 0);
-				v40 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (0 - 0);
-				v41 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
-				v129 = 2 + 1;
+			if (((12 - 8) == v130) or ((1794 - (111 + 1137)) >= (2842 - (91 + 67)))) then
+				v47 = EpicSettings.Settings['AntiMagicShellGCD'];
+				v48 = EpicSettings.Settings['AntiMagicZoneGCD'];
+				v49 = EpicSettings.Settings['DeathAndDecayGCD'];
+				v130 = 14 - 9;
 			end
-			if (((313 + 1218) < (9923 - 5652)) and (v129 == (2 + 6))) then
-				v58 = EpicSettings.Settings['UnholyBlightGCD'];
-				v59 = EpicSettings.Settings['VileContagionGCD'];
+			if (((366 + 1099) <= (4824 - (423 + 100))) and (v130 == (1 + 6))) then
+				v56 = EpicSettings.Settings['EpidemicGCD'];
+				v57 = EpicSettings.Settings['SummonGargoyleGCD'];
+				v58 = EpicSettings.Settings['UnholyAssaultGCD'];
+				v130 = 21 - 13;
+			end
+			if (((889 + 815) > (2196 - (326 + 445))) and (v130 == (13 - 10))) then
+				v44 = EpicSettings.Settings['UseDeathStrikeHP'] or (0 - 0);
+				v45 = EpicSettings.Settings['UseDarkSuccorHP'] or (0 - 0);
+				v46 = EpicSettings.Settings['UseAMSAMZOffensively'];
+				v130 = 715 - (530 + 181);
+			end
+			if ((v130 == (881 - (614 + 267))) or ((719 - (19 + 13)) == (6891 - 2657))) then
+				v33 = EpicSettings.Settings['UseRacials'];
+				v35 = EpicSettings.Settings['UseHealingPotion'];
+				v36 = EpicSettings.Settings['HealingPotionName'] or (0 - 0);
+				v130 = 2 - 1;
+			end
+			if ((v130 == (2 + 3)) or ((5856 - 2526) < (2963 - 1534))) then
+				v50 = EpicSettings.Settings['EmpowerRuneWeaponGCD'];
+				v51 = EpicSettings.Settings['SacrificialPactGCD'];
+				v52 = EpicSettings.Settings['MindFreezeOffGCD'];
+				v130 = 1818 - (1293 + 519);
+			end
+			if (((2339 - 1192) >= (874 - 539)) and (v130 == (11 - 5))) then
+				v53 = EpicSettings.Settings['RacialsOffGCD'];
+				v54 = EpicSettings.Settings['ApocalypseGCD'];
+				v55 = EpicSettings.Settings['DarkTransformationGCD'];
+				v130 = 30 - 23;
+			end
+			if (((8091 - 4656) > (1111 + 986)) and (v130 == (2 + 6))) then
+				v59 = EpicSettings.Settings['UnholyBlightGCD'];
+				v60 = EpicSettings.Settings['VileContagionGCD'];
 				break;
 			end
-			if (((211 + 424) == (397 + 238)) and (v129 == (1101 - (709 + 387)))) then
-				v49 = EpicSettings.Settings['EmpowerRuneWeaponGCD'];
-				v50 = EpicSettings.Settings['SacrificialPactGCD'];
-				v51 = EpicSettings.Settings['MindFreezeOffGCD'];
-				v129 = 1864 - (673 + 1185);
+			if ((v130 == (4 - 2)) or ((872 + 2898) >= (1343 + 2698))) then
+				v40 = EpicSettings.Settings['InterruptWithStun'] or (0 + 0);
+				v41 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (1096 - (709 + 387));
+				v42 = EpicSettings.Settings['InterruptThreshold'] or (1858 - (673 + 1185));
+				v130 = 8 - 5;
 			end
-			if (((9782 - 6409) <= (11418 - 7862)) and (v129 == (0 - 0))) then
-				v32 = EpicSettings.Settings['UseRacials'];
-				v34 = EpicSettings.Settings['UseHealingPotion'];
-				v35 = EpicSettings.Settings['HealingPotionName'] or (0 + 0);
-				v129 = 1 + 0;
-			end
-			if ((v129 == (3 - 0)) or ((809 + 2482) < (6540 - 3260))) then
-				v43 = EpicSettings.Settings['UseDeathStrikeHP'] or (0 - 0);
-				v44 = EpicSettings.Settings['UseDarkSuccorHP'] or (1880 - (446 + 1434));
-				v45 = EpicSettings.Settings['UseAMSAMZOffensively'];
-				v129 = 1287 - (1040 + 243);
-			end
-			if (((13090 - 8704) >= (2720 - (559 + 1288))) and (v129 == (1937 - (609 + 1322)))) then
-				v52 = EpicSettings.Settings['RacialsOffGCD'];
-				v53 = EpicSettings.Settings['ApocalypseGCD'];
-				v54 = EpicSettings.Settings['DarkTransformationGCD'];
-				v129 = 461 - (13 + 441);
-			end
-			if (((3441 - 2520) <= (2886 - 1784)) and (v129 == (4 - 3))) then
-				v36 = EpicSettings.Settings['HealingPotionHP'] or (0 + 0);
-				v37 = EpicSettings.Settings['UseHealthstone'];
-				v38 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
-				v129 = 1 + 1;
-			end
-			if (((2063 + 2643) >= (2857 - 1894)) and (v129 == (4 + 3))) then
-				v55 = EpicSettings.Settings['EpidemicGCD'];
-				v56 = EpicSettings.Settings['SummonGargoyleGCD'];
-				v57 = EpicSettings.Settings['UnholyAssaultGCD'];
-				v129 = 14 - 6;
-			end
-			if ((v129 == (3 + 1)) or ((534 + 426) <= (630 + 246))) then
-				v46 = EpicSettings.Settings['AntiMagicShellGCD'];
-				v47 = EpicSettings.Settings['AntiMagicZoneGCD'];
-				v48 = EpicSettings.Settings['DeathAndDecayGCD'];
-				v129 = 5 + 0;
+			if ((v130 == (3 - 2)) or ((6237 - 2446) <= (1153 + 458))) then
+				v37 = EpicSettings.Settings['HealingPotionHP'] or (0 + 0);
+				v38 = EpicSettings.Settings['UseHealthstone'];
+				v39 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
+				v130 = 1 + 1;
 			end
 		end
 	end
-	local v61 = v16.DeathKnight.Unholy;
-	local v62 = v18.DeathKnight.Unholy;
-	local v63 = v21.DeathKnight.Unholy;
-	local v64 = {};
-	local v65 = v13:GetEquipment();
-	local v66 = (v65[13 + 0] and v18(v65[446 - (153 + 280)])) or v18(0 - 0);
-	local v67 = (v65[13 + 1] and v18(v65[6 + 8])) or v18(0 + 0);
-	local v68;
+	local v62 = v17.DeathKnight.Unholy;
+	local v63 = v19.DeathKnight.Unholy;
+	local v64 = v22.DeathKnight.Unholy;
+	local v65 = {};
+	local v66 = v14:GetEquipment();
+	local v67 = (v66[25 - 12] and v19(v66[24 - 11])) or v19(1880 - (446 + 1434));
+	local v68 = (v66[1297 - (1040 + 243)] and v19(v66[41 - 27])) or v19(1847 - (559 + 1288));
 	local v69;
-	local v70 = v9.Commons.Everyone;
-	local v71;
+	local v70;
+	local v71 = v10.Commons.Everyone;
 	local v72;
 	local v73;
 	local v74;
@@ -139,416 +147,397 @@ v0["Epix_DeathKnight_Unholy.lua"] = function(...)
 	local v77;
 	local v78;
 	local v79;
-	local v80, v81;
-	local v82, v83;
-	local v84, v85;
-	local v86 = ((v61.ClawingShadows:IsAvailable()) and v61.ClawingShadows) or v61.ScourgeStrike;
-	local v87 = ((v61.Defile:IsAvailable()) and v61.Defile) or v61.DeathAndDecay;
-	local v88 = ((v61.Defile:IsAvailable()) and v63.DefilePlayer) or v63.DaDPlayer;
-	local v89;
-	local v90 = 10084 + 1027;
-	local v91 = 8052 + 3059;
-	local v92 = v9.GhoulTable;
-	local v93, v94;
-	local v95, v96;
-	local v97;
-	local v98 = {{v61.Asphyxiate,"Cast Asphyxiate (Interrupt)",function()
+	local v80;
+	local v81, v82;
+	local v83, v84;
+	local v85, v86;
+	local v87 = ((v62.ClawingShadows:IsAvailable()) and v62.ClawingShadows) or v62.ScourgeStrike;
+	local v88 = ((v62.Defile:IsAvailable()) and v62.Defile) or v62.DeathAndDecay;
+	local v89 = ((v62.Defile:IsAvailable()) and v64.DefilePlayer) or v64.DaDPlayer;
+	local v90;
+	local v91 = 13042 - (609 + 1322);
+	local v92 = 11565 - (13 + 441);
+	local v93 = v10.GhoulTable;
+	local v94, v95;
+	local v96, v97;
+	local v98;
+	local v99 = {{v62.Asphyxiate,"Cast Asphyxiate (Interrupt)",function()
 		return true;
 	end}};
-	v9:RegisterForEvent(function()
-		local v130 = 0 - 0;
+	v10:RegisterForEvent(function()
+		local v131 = 0 - 0;
 		while true do
-			if ((v130 == (1050 - (572 + 477))) or ((279 + 1787) == (560 + 372))) then
-				v67 = (v65[2 + 12] and v18(v65[100 - (84 + 2)])) or v18(0 - 0);
+			if ((v131 == (1 + 0)) or ((2007 + 2571) <= (5958 - 3950))) then
+				v68 = (v66[8 + 6] and v19(v66[25 - 11])) or v19(0 + 0);
 				break;
 			end
-			if (((3476 + 1349) < (5685 - (497 + 345))) and ((0 + 0) == v130)) then
-				v65 = v13:GetEquipment();
-				v66 = (v65[3 + 10] and v18(v65[1346 - (605 + 728)])) or v18(0 + 0);
-				v130 = 1 - 0;
+			if (((626 + 499) <= (1492 + 584)) and (v131 == (0 + 0))) then
+				v66 = v14:GetEquipment();
+				v67 = (v66[13 + 0] and v19(v66[446 - (153 + 280)])) or v19(0 - 0);
+				v131 = 1 + 0;
 			end
 		end
 	end, "PLAYER_EQUIPMENT_CHANGED");
-	v9:RegisterForEvent(function()
-		local v131 = 0 + 0;
+	v10:RegisterForEvent(function()
+		local v132 = 0 + 0;
 		while true do
-			if ((v131 == (0 - 0)) or ((3496 + 381) >= (12570 - 8033))) then
-				v90 = 8390 + 2721;
-				v91 = 11600 - (457 + 32);
+			if ((v132 == (0 + 0)) or ((675 + 68) >= (3188 + 1211))) then
+				v91 = 16918 - 5807;
+				v92 = 6868 + 4243;
 				break;
 			end
 		end
 	end, "PLAYER_REGEN_ENABLED");
-	v9:RegisterForEvent(function()
-		v86 = ((v61.ClawingShadows:IsAvailable()) and v61.ClawingShadows) or v61.ScourgeStrike;
-		v88 = ((v61.Defile:IsAvailable()) and v63.DefilePlayer) or v63.DaDPlayer;
-		v87 = ((v61.Defile:IsAvailable()) and v61.Defile) or v61.DeathAndDecay;
+	v10:RegisterForEvent(function()
+		v87 = ((v62.ClawingShadows:IsAvailable()) and v62.ClawingShadows) or v62.ScourgeStrike;
+		v89 = ((v62.Defile:IsAvailable()) and v64.DefilePlayer) or v64.DaDPlayer;
+		v88 = ((v62.Defile:IsAvailable()) and v62.Defile) or v62.DeathAndDecay;
 	end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
-	local function v99()
-		return (v13:HealthPercentage() < v43) or ((v13:HealthPercentage() < v44) and v13:BuffUp(v61.DeathStrikeBuff));
+	local function v100()
+		return (v14:HealthPercentage() < v44) or ((v14:HealthPercentage() < v45) and v14:BuffUp(v62.DeathStrikeBuff));
 	end
-	local function v100(v132)
-		local v133 = 0 + 0;
-		local v134;
+	local function v101(v133)
+		local v134 = 667 - (89 + 578);
+		local v135;
 		while true do
-			if ((v133 == (1402 - (832 + 570))) or ((4066 + 249) < (451 + 1275))) then
-				v134 = 0 - 0;
-				for v183, v184 in pairs(v132) do
-					if (v184:DebuffDown(v61.VirulentPlagueDebuff) or ((1773 + 1906) < (1421 - (588 + 208)))) then
-						v134 = v134 + (2 - 1);
+			if (((826 + 329) < (3477 - 1804)) and (v134 == (1050 - (572 + 477)))) then
+				return v135;
+			end
+			if ((v134 == (0 + 0)) or ((1395 + 929) <= (69 + 509))) then
+				v135 = 86 - (84 + 2);
+				for v186, v187 in pairs(v133) do
+					if (((6207 - 2440) == (2714 + 1053)) and v187:DebuffDown(v62.VirulentPlagueDebuff)) then
+						v135 = v135 + (843 - (497 + 345));
 					end
 				end
-				v133 = 1801 - (884 + 916);
-			end
-			if (((1 - 0) == v133) or ((2682 + 1943) < (1285 - (232 + 421)))) then
-				return v134;
+				v134 = 1 + 0;
 			end
 		end
 	end
-	local function v101(v135)
-		local v136 = 1889 - (1569 + 320);
-		local v137;
+	local function v102(v136)
+		local v137 = 0 + 0;
+		local v138;
 		while true do
-			if ((v136 == (1 + 0)) or ((16 + 67) > (5998 - 4218))) then
-				return v9.FightRemains(v137);
+			if (((5422 - (605 + 728)) == (2918 + 1171)) and (v137 == (1 - 0))) then
+				return v10.FightRemains(v138);
 			end
-			if (((1151 - (316 + 289)) <= (2819 - 1742)) and (v136 == (0 + 0))) then
-				v137 = {};
-				for v185 in pairs(v135) do
-					if (not v12:IsInBossList(v135[v185]['UnitNPCID']) or ((2449 - (666 + 787)) > (4726 - (360 + 65)))) then
-						v30(v137, v135[v185]);
+			if (((205 + 4253) >= (6189 - 4515)) and (v137 == (0 + 0))) then
+				v138 = {};
+				for v188 in pairs(v136) do
+					if (((2692 - 1720) <= (1071 + 347)) and not v13:IsInBossList(v136[v188]['UnitNPCID'])) then
+						v31(v138, v136[v188]);
 					end
 				end
-				v136 = 1 + 0;
+				v137 = 490 - (457 + 32);
 			end
 		end
-	end
-	local function v102(v138)
-		return (v138:DebuffStack(v61.FesteringWoundDebuff));
 	end
 	local function v103(v139)
-		return (v139:DebuffRemains(v61.SoulReaper));
+		return (v139:DebuffStack(v62.FesteringWoundDebuff));
 	end
 	local function v104(v140)
-		return (v61.BurstingSores:IsAvailable() and v140:DebuffUp(v61.FesteringWoundDebuff) and ((v13:BuffDown(v61.DeathAndDecayBuff) and v61.DeathAndDecay:CooldownDown() and (v13:Rune() < (257 - (79 + 175)))) or (v13:BuffUp(v61.DeathAndDecayBuff) and (v13:Rune() == (0 - 0))))) or (not v61.BurstingSores:IsAvailable() and (v140:DebuffStack(v61.FesteringWoundDebuff) >= (4 + 0))) or (v13:HasTier(94 - 63, 3 - 1) and v140:DebuffUp(v61.FesteringWoundDebuff));
+		return (v140:DebuffRemains(v62.SoulReaper));
 	end
 	local function v105(v141)
-		return v141:DebuffStack(v61.FesteringWoundDebuff) >= (903 - (503 + 396));
+		return (v62.BurstingSores:IsAvailable() and v141:DebuffUp(v62.FesteringWoundDebuff) and ((v14:BuffDown(v62.DeathAndDecayBuff) and v62.DeathAndDecay:CooldownDown() and (v14:Rune() < (2 + 1))) or (v14:BuffUp(v62.DeathAndDecayBuff) and (v14:Rune() == (1402 - (832 + 570)))))) or (not v62.BurstingSores:IsAvailable() and (v141:DebuffStack(v62.FesteringWoundDebuff) >= (4 + 0))) or (v14:HasTier(9 + 22, 6 - 4) and v141:DebuffUp(v62.FesteringWoundDebuff));
 	end
 	local function v106(v142)
-		return v142:DebuffStack(v61.FesteringWoundDebuff) < (185 - (92 + 89));
+		return v142:DebuffStack(v62.FesteringWoundDebuff) >= (2 + 2);
 	end
 	local function v107(v143)
-		return v143:DebuffStack(v61.FesteringWoundDebuff) < (7 - 3);
+		return v143:DebuffStack(v62.FesteringWoundDebuff) < (800 - (588 + 208));
 	end
 	local function v108(v144)
-		return v144:DebuffStack(v61.FesteringWoundDebuff) >= (3 + 1);
+		return v144:DebuffStack(v62.FesteringWoundDebuff) < (10 - 6);
 	end
 	local function v109(v145)
-		return ((v145:TimeToX(21 + 14) < (19 - 14)) or (v145:HealthPercentage() <= (5 + 30))) and (v145:TimeToDie() > (v145:DebuffRemains(v61.SoulReaper) + (11 - 6)));
+		return v145:DebuffStack(v62.FesteringWoundDebuff) >= (1804 - (884 + 916));
 	end
 	local function v110(v146)
-		return (v146:DebuffStack(v61.FesteringWoundDebuff) <= (2 + 0)) or v14:BuffUp(v61.DarkTransformation);
+		return ((v146:TimeToX(73 - 38) < (3 + 2)) or (v146:HealthPercentage() <= (688 - (232 + 421)))) and (v146:TimeToDie() > (v146:DebuffRemains(v62.SoulReaper) + (1894 - (1569 + 320))));
 	end
 	local function v111(v147)
-		return (v147:DebuffStack(v61.FesteringWoundDebuff) >= (2 + 2)) and (v87:CooldownRemains() < (8 - 5));
+		return (v147:DebuffStack(v62.FesteringWoundDebuff) <= (1 + 1)) or v15:BuffUp(v62.DarkTransformation);
 	end
 	local function v112(v148)
-		return v148:DebuffStack(v61.FesteringWoundDebuff) >= (1 + 0);
+		return (v148:DebuffStack(v62.FesteringWoundDebuff) >= (1 + 3)) and (v88:CooldownRemains() < (9 - 6));
 	end
 	local function v113(v149)
-		return (v149:TimeToDie() > v149:DebuffRemains(v61.VirulentPlagueDebuff)) and (v149:DebuffRefreshable(v61.VirulentPlagueDebuff) or (v61.Superstrain:IsAvailable() and (v149:DebuffRefreshable(v61.FrostFeverDebuff) or v149:DebuffRefreshable(v61.BloodPlagueDebuff)))) and (not v61.UnholyBlight:IsAvailable() or (v61.UnholyBlight:IsAvailable() and (v61.UnholyBlight:CooldownRemains() > ((22 - 7) / ((v22(v61.Superstrain:IsAvailable()) * (1247 - (485 + 759))) + (v22(v61.Plaguebringer:IsAvailable()) * (4 - 2)) + (v22(v61.EbonFever:IsAvailable()) * (1191 - (442 + 747))))))));
+		return v149:DebuffStack(v62.FesteringWoundDebuff) >= (606 - (316 + 289));
 	end
-	local function v114()
-		if (((5205 - (832 + 303)) > (1633 - (88 + 858))) and v61.RaiseDead:IsCastable() and (v14:IsDeadOrGhost() or not v14:IsActive() or not v14:IsActive())) then
-			if (v19(v61.RaiseDead, nil) or ((200 + 456) >= (2756 + 574))) then
-				return "raise_dead precombat 2 displaystyle";
-			end
-		end
-		if ((v61.ArmyoftheDead:IsReady() and v29) or ((103 + 2389) <= (1124 - (766 + 23)))) then
-			if (((21336 - 17014) >= (3503 - 941)) and v19(v61.ArmyoftheDead, nil)) then
-				return "army_of_the_dead precombat 4";
-			end
-		end
-		if (v61.Outbreak:IsReady() or ((9582 - 5945) >= (12795 - 9025))) then
-			if (v19(v61.Outbreak, nil, nil, not v15:IsSpellInRange(v61.Outbreak)) or ((3452 - (1036 + 37)) > (3246 + 1332))) then
-				return "outbreak precombat 6";
-			end
-		end
-		if (v61.FesteringStrike:IsReady() or ((940 - 457) > (585 + 158))) then
-			if (((3934 - (641 + 839)) > (1491 - (910 + 3))) and v19(v61.FesteringStrike, nil, nil, not v15:IsInMeleeRange(12 - 7))) then
-				return "festering_strike precombat 8";
-			end
-		end
+	local function v114(v150)
+		return (v150:TimeToDie() > v150:DebuffRemains(v62.VirulentPlagueDebuff)) and (v150:DebuffRefreshable(v62.VirulentPlagueDebuff) or (v62.Superstrain:IsAvailable() and (v150:DebuffRefreshable(v62.FrostFeverDebuff) or v150:DebuffRefreshable(v62.BloodPlagueDebuff)))) and (not v62.UnholyBlight:IsAvailable() or (v62.UnholyBlight:IsAvailable() and (v62.UnholyBlight:CooldownRemains() > ((39 - 24) / ((v23(v62.Superstrain:IsAvailable()) * (1 + 2)) + (v23(v62.Plaguebringer:IsAvailable()) * (1455 - (666 + 787))) + (v23(v62.EbonFever:IsAvailable()) * (427 - (360 + 65))))))));
 	end
 	local function v115()
-		v68 = v70.HandleTopTrinket(v64, v29, 1724 - (1466 + 218), nil);
-		if (((428 + 502) < (5606 - (556 + 592))) and v68) then
-			return v68;
-		end
-		v68 = v70.HandleBottomTrinket(v64, v29, 15 + 25, nil);
-		if (((1470 - (329 + 479)) <= (1826 - (174 + 680))) and v68) then
-			return v68;
-		end
-	end
-	local function v116()
-		if (((15016 - 10646) == (9057 - 4687)) and v61.Epidemic:IsReady() and (not v77 or (v91 < (8 + 2)))) then
-			if (v19(v61.Epidemic, v55, nil, not v15:IsInRange(769 - (396 + 343))) or ((422 + 4340) <= (2338 - (29 + 1448)))) then
-				return "epidemic aoe 2";
-			end
-		end
-		if ((v86:IsReady() and v76) or ((2801 - (135 + 1254)) == (16063 - 11799))) then
-			if (v70.CastTargetIf(v86, v93, "max", v102, nil, not v15:IsSpellInRange(v86)) or ((14791 - 11623) < (1435 + 718))) then
-				return "wound_spender aoe 4";
-			end
-		end
-		if ((v61.FesteringStrike:IsReady() and not v76) or ((6503 - (389 + 1138)) < (1906 - (102 + 472)))) then
-			if (((4368 + 260) == (2567 + 2061)) and v70.CastTargetIf(v61.FesteringStrike, v93, "max", v102, nil, not v15:IsInMeleeRange(5 + 0))) then
-				return "festering_strike aoe 6";
-			end
-		end
-		if ((v61.DeathCoil:IsReady() and not v77 and not v61.Epidemic:IsAvailable()) or ((1599 - (320 + 1225)) == (703 - 308))) then
-			if (((51 + 31) == (1546 - (157 + 1307))) and v19(v61.DeathCoil, nil, nil, not v15:IsSpellInRange(v61.DeathCoil))) then
-				return "death_coil aoe 8";
-			end
-		end
-	end
-	local function v117()
-		local v150 = 1859 - (821 + 1038);
+		local v151 = 0 + 0;
 		while true do
-			if (((2 - 1) == v150) or ((64 + 517) < (500 - 218))) then
-				if ((v61.Epidemic:IsReady() and (not v77 or (v91 < (4 + 6)))) or ((11423 - 6814) < (3521 - (834 + 192)))) then
-					if (((74 + 1078) == (296 + 856)) and v19(v61.Epidemic, v55, nil, not v15:IsInRange(1 + 39))) then
-						return "epidemic aoe_burst 6";
+			if ((v151 == (255 - (79 + 175))) or ((7785 - 2847) < (3716 + 1046))) then
+				if (v62.Outbreak:IsReady() or ((7675 - 5171) > (8211 - 3947))) then
+					if (((3052 - (503 + 396)) == (2334 - (92 + 89))) and v20(v62.Outbreak, nil, nil, not v16:IsSpellInRange(v62.Outbreak))) then
+						return "outbreak precombat 6";
 					end
 				end
-				if (((2936 - 1040) <= (3726 - (300 + 4))) and v61.DeathCoil:IsReady() and not v77 and not v61.Epidemic:IsAvailable()) then
-					if (v19(v61.DeathCoil, nil, nil, not v15:IsSpellInRange(v61.DeathCoil)) or ((265 + 725) > (4240 - 2620))) then
-						return "death_coil aoe_burst 8";
-					end
-				end
-				v150 = 364 - (112 + 250);
-			end
-			if ((v150 == (1 + 1)) or ((2196 - 1319) > (2690 + 2005))) then
-				if (((1392 + 1299) >= (1385 + 466)) and v86:IsReady()) then
-					if (v19(v86, nil, nil, not v15:IsSpellInRange(v86)) or ((1481 + 1504) >= (3608 + 1248))) then
-						return "wound_spender aoe_burst 10";
+				if (v62.FesteringStrike:IsReady() or ((983 - 476) >= (1329 + 1262))) then
+					if (((2653 + 1828) == (17548 - 13067)) and v20(v62.FesteringStrike, nil, nil, not v16:IsInMeleeRange(1 + 4))) then
+						return "festering_strike precombat 8";
 					end
 				end
 				break;
 			end
-			if (((5690 - (1001 + 413)) >= (2664 - 1469)) and (v150 == (882 - (244 + 638)))) then
-				if (((3925 - (627 + 66)) <= (13974 - 9284)) and v61.Epidemic:IsReady() and ((v13:Rune() < (603 - (512 + 90))) or (v61.BurstingSores:IsAvailable() and (v61.FesteringWoundDebuff:AuraActiveCount() == (1906 - (1665 + 241))))) and not v77 and ((v94 >= (723 - (373 + 344))) or (v13:RunicPowerDeficit() < (14 + 16)) or (v13:BuffStack(v61.FestermightBuff) == (6 + 14)))) then
-					if (v19(v61.Epidemic, v55, nil, not v15:IsInRange(105 - 65)) or ((1515 - 619) >= (4245 - (35 + 1064)))) then
-						return "epidemic aoe_burst 2";
+			if ((v151 == (0 - 0)) or ((2032 + 296) < (331 + 362))) then
+				if (((13181 - 8853) == (541 + 3787)) and v62.RaiseDead:IsCastable() and (v15:IsDeadOrGhost() or not v15:IsActive() or not v15:IsActive())) then
+					if (((2421 - 833) >= (2576 - (485 + 759))) and v20(v62.RaiseDead, nil)) then
+						return "raise_dead precombat 2 displaystyle";
 					end
 				end
-				if (((2228 + 833) >= (6328 - 3370)) and v86:IsReady()) then
-					if (((13 + 3174) >= (1880 - (298 + 938))) and v70.CastTargetIf(v86, v93, "max", v102, v112, not v15:IsSpellInRange(v86))) then
-						return "wound_spender aoe_burst 4";
+				if ((v62.ArmyoftheDead:IsReady() and v30) or ((9657 - 5483) > (5437 - (442 + 747)))) then
+					if (v20(v62.ArmyoftheDead, nil) or ((5721 - (832 + 303)) <= (1028 - (88 + 858)))) then
+						return "army_of_the_dead precombat 4";
 					end
 				end
-				v150 = 1260 - (233 + 1026);
+				v151 = 1 + 0;
+			end
+		end
+	end
+	local function v116()
+		v69 = v71.HandleTopTrinket(v65, v30, 34 + 6, nil);
+		if (((160 + 3703) == (4652 - (766 + 23))) and v69) then
+			return v69;
+		end
+		v69 = v71.HandleBottomTrinket(v65, v30, 197 - 157, nil);
+		if (v69 or ((385 - 103) <= (110 - 68))) then
+			return v69;
+		end
+	end
+	local function v117()
+		local v152 = 0 - 0;
+		while true do
+			if (((5682 - (1036 + 37)) >= (544 + 222)) and (v152 == (0 - 0))) then
+				if ((v62.Epidemic:IsReady() and (not v78 or (v92 < (8 + 2)))) or ((2632 - (641 + 839)) == (3401 - (910 + 3)))) then
+					if (((8723 - 5301) > (5034 - (1466 + 218))) and v20(v62.Epidemic, v56, nil, not v16:IsInRange(14 + 16))) then
+						return "epidemic aoe 2";
+					end
+				end
+				if (((2025 - (556 + 592)) > (134 + 242)) and v87:IsReady() and v77) then
+					if (v71.CastTargetIf(v87, v94, "max", v103, nil, not v16:IsSpellInRange(v87)) or ((3926 - (329 + 479)) <= (2705 - (174 + 680)))) then
+						return "wound_spender aoe 4";
+					end
+				end
+				v152 = 3 - 2;
+			end
+			if ((v152 == (1 - 0)) or ((118 + 47) >= (4231 - (396 + 343)))) then
+				if (((350 + 3599) < (6333 - (29 + 1448))) and v62.FesteringStrike:IsReady() and not v77) then
+					if (v71.CastTargetIf(v62.FesteringStrike, v94, "max", v103, nil, not v16:IsInMeleeRange(1394 - (135 + 1254))) or ((16108 - 11832) < (14082 - 11066))) then
+						return "festering_strike aoe 6";
+					end
+				end
+				if (((3126 + 1564) > (5652 - (389 + 1138))) and v62.DeathCoil:IsReady() and not v78 and not v62.Epidemic:IsAvailable()) then
+					if (v20(v62.DeathCoil, nil, nil, not v16:IsSpellInRange(v62.DeathCoil)) or ((624 - (102 + 472)) >= (846 + 50))) then
+						return "death_coil aoe 8";
+					end
+				end
+				break;
 			end
 		end
 	end
 	local function v118()
-		local v151 = 1666 - (636 + 1030);
-		while true do
-			if (((330 + 314) <= (688 + 16)) and (v151 == (1 + 2))) then
-				if (((65 + 893) > (1168 - (55 + 166))) and v61.DarkTransformation:IsReady() and v61.DarkTransformation:IsCastable() and (((v87:CooldownRemains() < (2 + 8)) and v61.InfectedClaws:IsAvailable() and ((v61.FesteringWoundDebuff:AuraActiveCount() < v96) or not v61.VileContagion:IsAvailable())) or not v61.InfectedClaws:IsAvailable())) then
-					if (((452 + 4040) >= (10135 - 7481)) and v19(v61.DarkTransformation, v54)) then
-						return "dark_transformation aoe_cooldowns 14";
-					end
-				end
-				if (((3739 - (36 + 261)) >= (2627 - 1124)) and v61.EmpowerRuneWeapon:IsCastable() and (v14:BuffUp(v61.DarkTransformation))) then
-					if (v19(v61.EmpowerRuneWeapon, v49) or ((4538 - (34 + 1334)) <= (563 + 901))) then
-						return "empower_rune_weapon aoe_cooldowns 16";
-					end
-				end
-				v151 = 4 + 0;
+		if ((v62.Epidemic:IsReady() and ((v14:Rune() < (1 + 0)) or (v62.BurstingSores:IsAvailable() and (v62.FesteringWoundDebuff:AuraActiveCount() == (0 + 0)))) and not v78 and ((v95 >= (1551 - (320 + 1225))) or (v14:RunicPowerDeficit() < (53 - 23)) or (v14:BuffStack(v62.FestermightBuff) == (13 + 7)))) or ((3178 - (157 + 1307)) >= (4817 - (821 + 1038)))) then
+			if (v20(v62.Epidemic, v56, nil, not v16:IsInRange(99 - 59)) or ((164 + 1327) < (1143 - 499))) then
+				return "epidemic aoe_burst 2";
 			end
-			if ((v151 == (1285 - (1035 + 248))) or ((4818 - (20 + 1)) == (2287 + 2101))) then
-				if (((870 - (134 + 185)) <= (1814 - (549 + 584))) and v61.UnholyAssault:IsCastable()) then
-					if (((3962 - (314 + 371)) > (1397 - 990)) and v70.CastTargetIf(v61.UnholyAssault, v93, "min", v102, v110, not v15:IsInMeleeRange(973 - (478 + 490)), v57)) then
+		end
+		if (((262 + 442) < (2446 - 1459)) and v87:IsReady()) then
+			if (((4744 - (834 + 192)) > (122 + 1784)) and v71.CastTargetIf(v87, v94, "max", v103, v113, not v16:IsSpellInRange(v87))) then
+				return "wound_spender aoe_burst 4";
+			end
+		end
+		if ((v62.Epidemic:IsReady() and (not v78 or (v92 < (3 + 7)))) or ((21 + 937) > (5631 - 1996))) then
+			if (((3805 - (300 + 4)) <= (1200 + 3292)) and v20(v62.Epidemic, v56, nil, not v16:IsInRange(104 - 64))) then
+				return "epidemic aoe_burst 6";
+			end
+		end
+		if ((v62.DeathCoil:IsReady() and not v78 and not v62.Epidemic:IsAvailable()) or ((3804 - (112 + 250)) < (1016 + 1532))) then
+			if (((7202 - 4327) >= (839 + 625)) and v20(v62.DeathCoil, nil, nil, not v16:IsSpellInRange(v62.DeathCoil))) then
+				return "death_coil aoe_burst 8";
+			end
+		end
+		if (v87:IsReady() or ((2481 + 2316) >= (3660 + 1233))) then
+			if (v20(v87, nil, nil, not v16:IsSpellInRange(v87)) or ((274 + 277) > (1537 + 531))) then
+				return "wound_spender aoe_burst 10";
+			end
+		end
+	end
+	local function v119()
+		local v153 = 1414 - (1001 + 413);
+		while true do
+			if (((4713 - 2599) > (1826 - (244 + 638))) and ((695 - (627 + 66)) == v153)) then
+				if (v62.UnholyAssault:IsCastable() or ((6739 - 4477) >= (3698 - (512 + 90)))) then
+					if (v71.CastTargetIf(v62.UnholyAssault, v94, "min", v103, v111, not v16:IsInMeleeRange(1911 - (1665 + 241)), v58) or ((2972 - (373 + 344)) >= (1596 + 1941))) then
 						return "unholy_assault aoe_cooldowns 10";
 					end
 				end
-				if (((2488 + 2207) >= (2587 - (786 + 386))) and v61.RaiseDead:IsCastable() and (v14:IsDeadOrGhost() or not v14:IsActive())) then
-					if (v19(v61.RaiseDead, nil) or ((10403 - 7191) <= (2323 - (1055 + 324)))) then
+				if ((v62.RaiseDead:IsCastable() and (v15:IsDeadOrGhost() or not v15:IsActive())) or ((1016 + 2821) < (3444 - 2138))) then
+					if (((4992 - 2042) == (4049 - (35 + 1064))) and v20(v62.RaiseDead, nil)) then
 						return "raise_dead aoe_cooldowns 12";
 					end
 				end
-				v151 = 1343 - (1093 + 247);
+				v153 = 3 + 0;
 			end
-			if ((v151 == (4 + 0)) or ((326 + 2770) <= (7138 - 5340))) then
-				if (((12003 - 8466) == (10064 - 6527)) and v61.SacrificialPact:IsReady() and ((v14:BuffDown(v61.DarkTransformation) and (v61.DarkTransformation:CooldownRemains() > (15 - 9))) or (v91 < v13:GCD()))) then
-					if (((1365 + 2472) >= (6048 - 4478)) and v19(v61.SacrificialPact, v50)) then
+			if (((0 - 0) == v153) or ((19 + 4704) < (4534 - (298 + 938)))) then
+				if (((2395 - (233 + 1026)) >= (1820 - (636 + 1030))) and v62.VileContagion:IsReady() and (v88:CooldownRemains() < (2 + 1))) then
+					if (v71.CastTargetIf(v62.VileContagion, v94, "max", v103, v112, not v16:IsSpellInRange(v62.VileContagion)) or ((265 + 6) > (1411 + 3337))) then
+						return "vile_contagion aoe_cooldowns 2";
+					end
+				end
+				if (((321 + 4419) >= (3373 - (55 + 166))) and v62.SummonGargoyle:IsReady()) then
+					if (v20(v62.SummonGargoyle, v57) or ((500 + 2078) >= (341 + 3049))) then
+						return "summon_gargoyle aoe_cooldowns 4";
+					end
+				end
+				v153 = 3 - 2;
+			end
+			if (((338 - (36 + 261)) <= (2904 - 1243)) and (v153 == (1372 - (34 + 1334)))) then
+				if (((232 + 369) < (2767 + 793)) and v62.SacrificialPact:IsReady() and ((v15:BuffDown(v62.DarkTransformation) and (v62.DarkTransformation:CooldownRemains() > (1289 - (1035 + 248)))) or (v92 < v14:GCD()))) then
+					if (((256 - (20 + 1)) < (358 + 329)) and v20(v62.SacrificialPact, v51)) then
 						return "sacrificial_pact aoe_cooldowns 18";
 					end
 				end
 				break;
 			end
-			if ((v151 == (3 - 2)) or ((2225 + 725) == (9748 - 5936))) then
-				if (((5411 - (364 + 324)) >= (6354 - 4036)) and v61.AbominationLimb:IsCastable() and ((v13:Rune() < (4 - 2)) or (v89 > (4 + 6)) or not v61.Festermight:IsAvailable() or (v13:BuffUp(v61.FestermightBuff) and (v13:BuffRemains(v61.FestermightBuff) < (50 - 38))))) then
-					if (v19(v61.AbominationLimb, nil, nil, not v15:IsInRange(32 - 12)) or ((6156 - 4129) > (4120 - (1249 + 19)))) then
+			if (((4868 - (134 + 185)) > (2286 - (549 + 584))) and (v153 == (686 - (314 + 371)))) then
+				if ((v62.AbominationLimb:IsCastable() and ((v14:Rune() < (6 - 4)) or (v90 > (978 - (478 + 490))) or not v62.Festermight:IsAvailable() or (v14:BuffUp(v62.FestermightBuff) and (v14:BuffRemains(v62.FestermightBuff) < (7 + 5))))) or ((5846 - (786 + 386)) < (15132 - 10460))) then
+					if (((5047 - (1055 + 324)) < (5901 - (1093 + 247))) and v20(v62.AbominationLimb, nil, nil, not v16:IsInRange(18 + 2))) then
 						return "abomination_limb aoe_cooldowns 6";
 					end
 				end
-				if (v61.Apocalypse:IsReady() or ((1026 + 110) > (16803 - 12486))) then
-					if (((5834 - (686 + 400)) == (3726 + 1022)) and v70.CastTargetIf(v61.Apocalypse, v93, "min", v102, v104, not v15:IsInMeleeRange(234 - (73 + 156)))) then
+				if (v62.Apocalypse:IsReady() or ((48 + 407) == (14312 - 10707))) then
+					if (v71.CastTargetIf(v62.Apocalypse, v94, "min", v103, v105, not v16:IsInMeleeRange(16 - 11)) or ((7577 - 4914) == (8322 - 5010))) then
 						return "apocalypse aoe_cooldowns 8";
 					end
 				end
-				v151 = 1 + 1;
+				v153 = 1 + 1;
 			end
-			if (((4547 - (721 + 90)) <= (54 + 4686)) and (v151 == (0 - 0))) then
-				if ((v61.VileContagion:IsReady() and (v87:CooldownRemains() < (473 - (224 + 246)))) or ((5491 - 2101) <= (5634 - 2574))) then
-					if (v70.CastTargetIf(v61.VileContagion, v93, "max", v102, v111, not v15:IsSpellInRange(v61.VileContagion)) or ((182 + 817) > (65 + 2628))) then
-						return "vile_contagion aoe_cooldowns 2";
+			if (((16476 - 12199) <= (15424 - 10949)) and (v153 == (3 + 0))) then
+				if ((v62.DarkTransformation:IsReady() and v62.DarkTransformation:IsCastable() and (((v88:CooldownRemains() < (25 - 15)) and v62.InfectedClaws:IsAvailable() and ((v62.FesteringWoundDebuff:AuraActiveCount() < v97) or not v62.VileContagion:IsAvailable())) or not v62.InfectedClaws:IsAvailable())) or ((1558 - (364 + 324)) == (3259 - 2070))) then
+					if (((3726 - 2173) <= (1039 + 2094)) and v20(v62.DarkTransformation, v55)) then
+						return "dark_transformation aoe_cooldowns 14";
 					end
 				end
-				if (((341 + 122) < (1194 - 593)) and v61.SummonGargoyle:IsReady()) then
-					if (v19(v61.SummonGargoyle, v56) or ((7264 - 5081) < (1200 - (203 + 310)))) then
-						return "summon_gargoyle aoe_cooldowns 4";
+				if ((v62.EmpowerRuneWeapon:IsCastable() and (v15:BuffUp(v62.DarkTransformation))) or ((9360 - 7123) >= (5622 - 2111))) then
+					if (v20(v62.EmpowerRuneWeapon, v50) or ((4020 - 2696) > (4288 - (1249 + 19)))) then
+						return "empower_rune_weapon aoe_cooldowns 16";
 					end
 				end
-				v151 = 1994 - (1238 + 755);
+				v153 = 4 + 0;
 			end
 		end
 	end
-	local function v119()
-		local v152 = 0 + 0;
+	local function v120()
+		local v154 = 0 - 0;
 		while true do
-			if (((6083 - (709 + 825)) == (8382 - 3833)) and (v152 == (2 - 0))) then
-				if (((5536 - (196 + 668)) == (18446 - 13774)) and v61.FesteringStrike:IsReady() and (v61.Apocalypse:CooldownRemains() < v74)) then
-					if (v70.CastTargetIf(v61.FesteringStrike, v93, "max", v102, v106, not v15:IsInMeleeRange(10 - 5)) or ((4501 - (171 + 662)) < (488 - (4 + 89)))) then
+			if ((v154 == (1086 - (686 + 400))) or ((2348 + 644) == (2110 - (73 + 156)))) then
+				if (((15 + 3091) > (2337 - (721 + 90))) and v88:IsReady() and (not v62.BurstingSores:IsAvailable() or (v62.FesteringWoundDebuff:AuraActiveCount() == v97) or (v62.FesteringWoundDebuff:AuraActiveCount() >= (1 + 7)))) then
+					if (((9815 - 6792) < (4340 - (224 + 246))) and v20(v89, v49)) then
+						return "any_dnd aoe_setup 2";
+					end
+				end
+				if (((231 - 88) > (135 - 61)) and v62.FesteringStrike:IsReady() and (v62.FesteringWoundDebuff:AuraActiveCount() < v97) and v62.BurstingSores:IsAvailable()) then
+					if (((4 + 14) < (51 + 2061)) and v71.CastTargetIf(v62.FesteringStrike, v94, "min", v103, nil, not v16:IsInMeleeRange(4 + 1))) then
+						return "festering_strike aoe_setup 4";
+					end
+				end
+				v154 = 1 - 0;
+			end
+			if (((3650 - 2553) <= (2141 - (203 + 310))) and (v154 == (1994 - (1238 + 755)))) then
+				if (((324 + 4306) == (6164 - (709 + 825))) and v62.Epidemic:IsReady() and (not v78 or (v92 < (18 - 8)))) then
+					if (((5156 - 1616) > (3547 - (196 + 668))) and v20(v62.Epidemic, v56, nil, not v16:IsInRange(157 - 117))) then
+						return "epidemic aoe_setup 6";
+					end
+				end
+				if (((9930 - 5136) >= (4108 - (171 + 662))) and v62.FesteringStrike:IsReady() and (v62.FesteringWoundDebuff:AuraActiveCount() < v97)) then
+					if (((1577 - (4 + 89)) == (5201 - 3717)) and v71.CastTargetIf(v62.FesteringStrike, v94, "min", v103, nil, not v16:IsInMeleeRange(2 + 3))) then
+						return "festering_strike aoe_setup 8";
+					end
+				end
+				v154 = 8 - 6;
+			end
+			if (((562 + 870) < (5041 - (35 + 1451))) and ((1455 - (28 + 1425)) == v154)) then
+				if ((v62.FesteringStrike:IsReady() and (v62.Apocalypse:CooldownRemains() < v75)) or ((3058 - (941 + 1052)) > (3431 + 147))) then
+					if (v71.CastTargetIf(v62.FesteringStrike, v94, "max", v103, v107, not v16:IsInMeleeRange(1519 - (822 + 692))) or ((6845 - 2050) < (663 + 744))) then
 						return "festering_strike aoe_setup 10";
 					end
 				end
-				if ((v61.DeathCoil:IsReady() and not v77 and not v61.Epidemic:IsAvailable()) or ((14601 - 10435) == (166 + 289))) then
-					if (v19(v61.DeathCoil, nil, nil, not v15:IsSpellInRange(v61.DeathCoil)) or ((19540 - 15091) == (1045 + 1618))) then
+				if (((2150 - (45 + 252)) < (4763 + 50)) and v62.DeathCoil:IsReady() and not v78 and not v62.Epidemic:IsAvailable()) then
+					if (v20(v62.DeathCoil, nil, nil, not v16:IsSpellInRange(v62.DeathCoil)) or ((971 + 1850) < (5916 - 3485))) then
 						return "death_coil aoe_setup 12";
 					end
 				end
 				break;
 			end
-			if ((v152 == (1486 - (35 + 1451))) or ((5730 - (28 + 1425)) < (4982 - (941 + 1052)))) then
-				if ((v87:IsReady() and (not v61.BurstingSores:IsAvailable() or (v61.FesteringWoundDebuff:AuraActiveCount() == v96) or (v61.FesteringWoundDebuff:AuraActiveCount() >= (8 + 0)))) or ((2384 - (822 + 692)) >= (5922 - 1773))) then
-					if (((1042 + 1170) < (3480 - (45 + 252))) and v19(v88, v48)) then
-						return "any_dnd aoe_setup 2";
-					end
-				end
-				if (((4597 + 49) > (1030 + 1962)) and v61.FesteringStrike:IsReady() and (v61.FesteringWoundDebuff:AuraActiveCount() < v96) and v61.BurstingSores:IsAvailable()) then
-					if (((3489 - 2055) < (3539 - (114 + 319))) and v70.CastTargetIf(v61.FesteringStrike, v93, "min", v102, nil, not v15:IsInMeleeRange(6 - 1))) then
-						return "festering_strike aoe_setup 4";
-					end
-				end
-				v152 = 1 - 0;
-			end
-			if (((502 + 284) < (4503 - 1480)) and (v152 == (1 - 0))) then
-				if ((v61.Epidemic:IsReady() and (not v77 or (v91 < (1973 - (556 + 1407))))) or ((3648 - (741 + 465)) < (539 - (170 + 295)))) then
-					if (((2390 + 2145) == (4166 + 369)) and v19(v61.Epidemic, v55, nil, not v15:IsInRange(98 - 58))) then
-						return "epidemic aoe_setup 6";
-					end
-				end
-				if ((v61.FesteringStrike:IsReady() and (v61.FesteringWoundDebuff:AuraActiveCount() < v96)) or ((2495 + 514) <= (1350 + 755))) then
-					if (((1037 + 793) < (4899 - (957 + 273))) and v70.CastTargetIf(v61.FesteringStrike, v93, "min", v102, nil, not v15:IsInMeleeRange(2 + 3))) then
-						return "festering_strike aoe_setup 8";
-					end
-				end
-				v152 = 1 + 1;
-			end
-		end
-	end
-	local function v120()
-		local v153 = 0 - 0;
-		while true do
-			if ((v153 == (2 - 1)) or ((4367 - 2937) >= (17885 - 14273))) then
-				if (((4463 - (389 + 1391)) >= (1544 + 916)) and v61.DarkTransformation:IsReady() and (v61.Apocalypse:CooldownRemains() < (1 + 4))) then
-					if (v19(v61.DarkTransformation, v54) or ((4106 - 2302) >= (4226 - (783 + 168)))) then
-						return "dark_transformation cooldowns 6";
-					end
-				end
-				if ((v61.Apocalypse:IsReady() and v78) or ((4755 - 3338) > (3570 + 59))) then
-					if (((5106 - (309 + 2)) > (1234 - 832)) and v70.CastTargetIf(v61.Apocalypse, v93, "max", v102, v105, not v15:IsInMeleeRange(1217 - (1090 + 122)), v53)) then
-						return "apocalypse cooldowns 8";
-					end
-				end
-				v153 = 1 + 1;
-			end
-			if (((16164 - 11351) > (2440 + 1125)) and (v153 == (1122 - (628 + 490)))) then
-				if (((702 + 3210) == (9685 - 5773)) and v61.SoulReaper:IsReady() and (v94 >= (9 - 7))) then
-					if (((3595 - (431 + 343)) <= (9742 - 4918)) and v70.CastTargetIf(v61.SoulReaper, v93, "min", v103, v109, not v15:IsSpellInRange(v61.SoulReaper))) then
-						return "soul_reaper cooldowns 18";
-					end
-				end
-				break;
-			end
-			if (((5027 - 3289) <= (1735 + 460)) and ((1 + 1) == v153)) then
-				if (((1736 - (556 + 1139)) <= (3033 - (6 + 9))) and v61.EmpowerRuneWeapon:IsCastable() and ((v78 and ((v84 and (v85 <= (5 + 18))) or (not v61.SummonGargoyle:IsAvailable() and v61.ArmyoftheDamned:IsAvailable() and v82 and v80) or (not v61.SummonGargoyle:IsAvailable() and not v61.ArmyoftheDamned:IsAvailable() and v14:BuffUp(v61.DarkTransformation)) or (not v61.SummonGargoyle:IsAvailable() and v14:BuffUp(v61.DarkTransformation)))) or (v91 <= (11 + 10)))) then
-					if (((2314 - (28 + 141)) <= (1590 + 2514)) and v19(v61.EmpowerRuneWeapon, v49)) then
-						return "empower_rune_weapon cooldowns 10";
-					end
-				end
-				if (((3318 - 629) < (3432 + 1413)) and v61.AbominationLimb:IsCastable() and (v13:Rune() < (1320 - (486 + 831))) and v78) then
-					if (v19(v61.AbominationLimb) or ((6042 - 3720) > (9230 - 6608))) then
-						return "abomination_limb cooldowns 12";
-					end
-				end
-				v153 = 1 + 2;
-			end
-			if (((0 - 0) == v153) or ((5797 - (668 + 595)) == (1874 + 208))) then
-				if ((v61.SummonGargoyle:IsCastable() and (v13:BuffUp(v61.CommanderoftheDeadBuff) or not v61.CommanderoftheDead:IsAvailable())) or ((317 + 1254) > (5091 - 3224))) then
-					if (v19(v61.SummonGargoyle, v56) or ((2944 - (23 + 267)) >= (4940 - (1129 + 815)))) then
-						return "summon_gargoyle cooldowns 2";
-					end
-				end
-				if (((4365 - (371 + 16)) > (3854 - (1326 + 424))) and v61.RaiseDead:IsCastable() and (v14:IsDeadOrGhost() or not v14:IsActive())) then
-					if (((5672 - 2677) > (5631 - 4090)) and v19(v61.RaiseDead, nil)) then
-						return "raise_dead cooldowns 4 displaystyle";
-					end
-				end
-				v153 = 119 - (88 + 30);
-			end
-			if (((4020 - (720 + 51)) > (2119 - 1166)) and (v153 == (1779 - (421 + 1355)))) then
-				if ((v61.UnholyAssault:IsReady() and v78) or ((5399 - 2126) > (2247 + 2326))) then
-					if (v70.CastTargetIf(v61.UnholyAssault, v93, "min", v102, nil, not v15:IsInMeleeRange(1088 - (286 + 797)), v57) or ((11518 - 8367) < (2126 - 842))) then
-						return "unholy_assault cooldowns 14";
-					end
-				end
-				if ((v61.SoulReaper:IsReady() and (v94 == (440 - (397 + 42))) and ((v15:TimeToX(11 + 24) < (805 - (24 + 776))) or (v15:HealthPercentage() <= (53 - 18))) and (v15:TimeToDie() > (790 - (222 + 563)))) or ((4076 - 2226) == (1101 + 428))) then
-					if (((1011 - (23 + 167)) < (3921 - (690 + 1108))) and v19(v61.SoulReaper, nil, nil, not v15:IsSpellInRange(v61.SoulReaper))) then
-						return "soul_reaper cooldowns 16";
-					end
-				end
-				v153 = 2 + 2;
-			end
 		end
 	end
 	local function v121()
-		local v154 = 0 + 0;
-		while true do
-			if (((1750 - (40 + 808)) < (383 + 1942)) and (v154 == (15 - 11))) then
-				if (((821 + 37) <= (1567 + 1395)) and v61.DeathCoil:IsReady() and (v13:Rune() <= (1 + 0))) then
-					if (v19(v61.DeathCoil, nil, nil, not v15:IsSpellInRange(v61.DeathCoil)) or ((4517 - (47 + 524)) < (836 + 452))) then
-						return "death_coil garg_setup 22";
-					end
-				end
-				break;
+		if ((v62.SummonGargoyle:IsCastable() and (v14:BuffUp(v62.CommanderoftheDeadBuff) or not v62.CommanderoftheDead:IsAvailable())) or ((3307 - (114 + 319)) < (3131 - 950))) then
+			if (v20(v62.SummonGargoyle, v57) or ((3444 - 755) <= (219 + 124))) then
+				return "summon_gargoyle cooldowns 2";
 			end
-			if ((v154 == (5 - 3)) or ((4847 - 1605) == (1292 - 725))) then
-				if ((v29 and v84 and (v85 <= (1749 - (1165 + 561)))) or ((26 + 821) >= (3911 - 2648))) then
-					local v186 = 0 + 0;
+		end
+		if ((v62.RaiseDead:IsCastable() and (v15:IsDeadOrGhost() or not v15:IsActive())) or ((2783 - 914) == (4209 - 2200))) then
+			if (v20(v62.RaiseDead, nil) or ((5509 - (556 + 1407)) < (3528 - (741 + 465)))) then
+				return "raise_dead cooldowns 4 displaystyle";
+			end
+		end
+		if ((v62.DarkTransformation:IsReady() and (v62.Apocalypse:CooldownRemains() < (470 - (170 + 295)))) or ((1097 + 985) == (4385 + 388))) then
+			if (((7986 - 4742) > (875 + 180)) and v20(v62.DarkTransformation, v55)) then
+				return "dark_transformation cooldowns 6";
+			end
+		end
+		if ((v62.Apocalypse:IsReady() and v79) or ((2125 + 1188) <= (1007 + 771))) then
+			if (v71.CastTargetIf(v62.Apocalypse, v94, "max", v103, v106, not v16:IsInMeleeRange(1235 - (957 + 273)), v54) or ((381 + 1040) >= (843 + 1261))) then
+				return "apocalypse cooldowns 8";
+			end
+		end
+		if (((6904 - 5092) <= (8561 - 5312)) and v62.EmpowerRuneWeapon:IsCastable() and ((v79 and ((v85 and (v86 <= (70 - 47))) or (not v62.SummonGargoyle:IsAvailable() and v62.ArmyoftheDamned:IsAvailable() and v83 and v81) or (not v62.SummonGargoyle:IsAvailable() and not v62.ArmyoftheDamned:IsAvailable() and v15:BuffUp(v62.DarkTransformation)) or (not v62.SummonGargoyle:IsAvailable() and v15:BuffUp(v62.DarkTransformation)))) or (v92 <= (103 - 82)))) then
+			if (((3403 - (389 + 1391)) <= (1228 + 729)) and v20(v62.EmpowerRuneWeapon, v50)) then
+				return "empower_rune_weapon cooldowns 10";
+			end
+		end
+		if (((460 + 3952) == (10044 - 5632)) and v62.AbominationLimb:IsCastable() and (v14:Rune() < (954 - (783 + 168))) and v79) then
+			if (((5873 - 4123) >= (829 + 13)) and v20(v62.AbominationLimb)) then
+				return "abomination_limb cooldowns 12";
+			end
+		end
+		if (((4683 - (309 + 2)) > (5681 - 3831)) and v62.UnholyAssault:IsReady() and v79) then
+			if (((1444 - (1090 + 122)) < (267 + 554)) and v71.CastTargetIf(v62.UnholyAssault, v94, "min", v103, nil, not v16:IsInMeleeRange(16 - 11), v58)) then
+				return "unholy_assault cooldowns 14";
+			end
+		end
+		if (((355 + 163) < (2020 - (628 + 490))) and v62.SoulReaper:IsReady() and (v95 == (1 + 0)) and ((v16:TimeToX(86 - 51) < (22 - 17)) or (v16:HealthPercentage() <= (809 - (431 + 343)))) and (v16:TimeToDie() > (10 - 5))) then
+			if (((8661 - 5667) > (678 + 180)) and v20(v62.SoulReaper, nil, nil, not v16:IsSpellInRange(v62.SoulReaper))) then
+				return "soul_reaper cooldowns 16";
+			end
+		end
+		if ((v62.SoulReaper:IsReady() and (v95 >= (1 + 1))) or ((5450 - (556 + 1139)) <= (930 - (6 + 9)))) then
+			if (((723 + 3223) > (1918 + 1825)) and v71.CastTargetIf(v62.SoulReaper, v94, "min", v104, v110, not v16:IsSpellInRange(v62.SoulReaper))) then
+				return "soul_reaper cooldowns 18";
+			end
+		end
+	end
+	local function v122()
+		local v155 = 169 - (28 + 141);
+		while true do
+			if ((v155 == (1 + 1)) or ((1647 - 312) >= (2342 + 964))) then
+				if (((6161 - (486 + 831)) > (5862 - 3609)) and v30 and v85 and (v86 <= (80 - 57))) then
+					local v204 = 0 + 0;
 					while true do
-						if (((479 - (341 + 138)) == v186) or ((609 + 1644) == (3819 - 1968))) then
-							if (v61.EmpowerRuneWeapon:IsCastable() or ((2413 - (89 + 237)) > (7630 - 5258))) then
-								if (v19(v61.EmpowerRuneWeapon, v49) or ((9358 - 4913) < (5030 - (581 + 300)))) then
+						if (((1429 - 977) == (1715 - (668 + 595))) and (v204 == (0 + 0))) then
+							if (v62.EmpowerRuneWeapon:IsCastable() or ((919 + 3638) < (5691 - 3604))) then
+								if (((4164 - (23 + 267)) == (5818 - (1129 + 815))) and v20(v62.EmpowerRuneWeapon, v50)) then
 									return "empower_rune_weapon garg_setup 10";
 								end
 							end
-							if (v61.UnholyAssault:IsCastable() or ((3038 - (855 + 365)) == (201 - 116))) then
-								if (((206 + 424) < (3362 - (1030 + 205))) and v19(v61.UnholyAssault, v57, nil, not v15:IsInMeleeRange(5 + 0))) then
+							if (v62.UnholyAssault:IsCastable() or ((2325 - (371 + 16)) > (6685 - (1326 + 424)))) then
+								if (v20(v62.UnholyAssault, v58, nil, not v16:IsInMeleeRange(9 - 4)) or ((15548 - 11293) < (3541 - (88 + 30)))) then
 									return "unholy_assault garg_setup 12";
 								end
 							end
@@ -556,90 +545,119 @@ v0["Epix_DeathKnight_Unholy.lua"] = function(...)
 						end
 					end
 				end
-				if ((v61.DarkTransformation:IsReady() and ((v61.CommanderoftheDead:IsAvailable() and (v13:RunicPower() > (38 + 2))) or not v61.CommanderoftheDead:IsAvailable())) or ((2224 - (156 + 130)) == (5711 - 3197))) then
-					if (((7171 - 2916) >= (112 - 57)) and v19(v61.DarkTransformation, v54)) then
+				if (((2225 - (720 + 51)) <= (5541 - 3050)) and v62.DarkTransformation:IsReady() and ((v62.CommanderoftheDead:IsAvailable() and (v14:RunicPower() > (1816 - (421 + 1355)))) or not v62.CommanderoftheDead:IsAvailable())) then
+					if (v20(v62.DarkTransformation, v55) or ((6857 - 2700) <= (1377 + 1426))) then
 						return "dark_transformation garg_setup 16";
 					end
 				end
-				v154 = 1 + 2;
+				v155 = 1086 - (286 + 797);
 			end
-			if (((1749 + 1250) > (1225 - (10 + 59))) and (v154 == (1 + 2))) then
-				if (((11573 - 9223) > (2318 - (671 + 492))) and v87:IsReady() and v13:BuffDown(v61.DeathAndDecayBuff) and (v89 > (0 + 0))) then
-					if (((5244 - (369 + 846)) <= (1285 + 3568)) and v19(v88, v48)) then
+			if (((17740 - 12887) >= (4938 - 1956)) and (v155 == (442 - (397 + 42)))) then
+				if (((1292 + 2842) > (4157 - (24 + 776))) and v88:IsReady() and v14:BuffDown(v62.DeathAndDecayBuff) and (v90 > (0 - 0))) then
+					if (v20(v89, v49) or ((4202 - (222 + 563)) < (5582 - 3048))) then
 						return "any_dnd garg_setup 18";
 					end
 				end
-				if ((v61.FesteringStrike:IsReady() and ((v89 == (0 + 0)) or not v61.Apocalypse:IsAvailable() or ((v13:RunicPower() < (1985 - (1036 + 909))) and not v84))) or ((411 + 105) > (5764 - 2330))) then
-					if (((4249 - (11 + 192)) >= (1533 + 1500)) and v19(v61.FesteringStrike, nil, nil, not v15:IsInMeleeRange(180 - (135 + 40)))) then
+				if ((v62.FesteringStrike:IsReady() and ((v90 == (0 + 0)) or not v62.Apocalypse:IsAvailable() or ((v14:RunicPower() < (230 - (23 + 167))) and not v85))) or ((4520 - (690 + 1108)) <= (60 + 104))) then
+					if (v20(v62.FesteringStrike, nil, nil, not v16:IsInMeleeRange(5 + 0)) or ((3256 - (40 + 808)) < (348 + 1761))) then
 						return "festering_strike garg_setup 20";
 					end
 				end
-				v154 = 9 - 5;
+				v155 = 15 - 11;
 			end
-			if ((v154 == (0 + 0)) or ((5989 - 3270) <= (2168 - 721))) then
-				if ((v61.Apocalypse:IsReady() and (v89 >= (180 - (50 + 126))) and ((v13:BuffUp(v61.CommanderoftheDeadBuff) and (v85 < (63 - 40))) or not v61.CommanderoftheDead:IsAvailable())) or ((915 + 3219) < (5339 - (1233 + 180)))) then
-					if (v19(v61.Apocalypse, v53, nil, not v15:IsInMeleeRange(974 - (522 + 447))) or ((1585 - (107 + 1314)) >= (1293 + 1492))) then
+			if ((v155 == (0 + 0)) or ((18 + 15) == (798 + 657))) then
+				if ((v62.Apocalypse:IsReady() and (v90 >= (575 - (47 + 524))) and ((v14:BuffUp(v62.CommanderoftheDeadBuff) and (v86 < (15 + 8))) or not v62.CommanderoftheDead:IsAvailable())) or ((1210 - 767) >= (6003 - 1988))) then
+					if (((7712 - 4330) > (1892 - (1165 + 561))) and v20(v62.Apocalypse, v54, nil, not v16:IsInMeleeRange(1 + 4))) then
 						return "apocalypse garg_setup 2";
 					end
 				end
-				if ((v61.ArmyoftheDead:IsReady() and v29 and ((v61.CommanderoftheDead:IsAvailable() and ((v61.DarkTransformation:CooldownRemains() < (8 - 5)) or v13:BuffUp(v61.CommanderoftheDeadBuff))) or (not v61.CommanderoftheDead:IsAvailable() and v61.UnholyAssault:IsAvailable() and (v61.UnholyAssault:CooldownRemains() < (5 + 5))) or (not v61.UnholyAssault:IsAvailable() and not v61.CommanderoftheDead:IsAvailable()))) or ((1042 - 517) == (8344 - 6235))) then
-					if (((1943 - (716 + 1194)) == (1 + 32)) and v19(v61.ArmyoftheDead)) then
+				if ((v62.ArmyoftheDead:IsReady() and v30 and ((v62.CommanderoftheDead:IsAvailable() and ((v62.DarkTransformation:CooldownRemains() < (9 - 6)) or v14:BuffUp(v62.CommanderoftheDeadBuff))) or (not v62.CommanderoftheDead:IsAvailable() and v62.UnholyAssault:IsAvailable() and (v62.UnholyAssault:CooldownRemains() < (4 + 6))) or (not v62.UnholyAssault:IsAvailable() and not v62.CommanderoftheDead:IsAvailable()))) or ((759 - (341 + 138)) == (826 + 2233))) then
+					if (((3881 - 2000) > (1619 - (89 + 237))) and v20(v62.ArmyoftheDead)) then
 						return "army_of_the_dead garg_setup 4";
 					end
 				end
-				v154 = 1 + 0;
+				v155 = 3 - 2;
 			end
-			if (((3557 - (74 + 429)) <= (7745 - 3730)) and (v154 == (1 + 0))) then
-				if (((4282 - 2411) < (2393 + 989)) and v61.SoulReaper:IsReady() and (v94 == (2 - 1)) and ((v15:TimeToX(86 - 51) < (438 - (279 + 154))) or (v15:HealthPercentage() <= (813 - (454 + 324)))) and (v15:TimeToDie() > (4 + 1))) then
-					if (((1310 - (12 + 5)) <= (1168 + 998)) and v19(v61.SoulReaper, nil, nil, not v15:IsInMeleeRange(12 - 7))) then
+			if (((4961 - 2604) == (3238 - (581 + 300))) and ((1224 - (855 + 365)) == v155)) then
+				if (((291 - 168) == (41 + 82)) and v62.DeathCoil:IsReady() and (v14:Rune() <= (1236 - (1030 + 205)))) then
+					if (v20(v62.DeathCoil, nil, nil, not v16:IsSpellInRange(v62.DeathCoil)) or ((992 + 64) >= (3156 + 236))) then
+						return "death_coil garg_setup 22";
+					end
+				end
+				break;
+			end
+			if ((v155 == (287 - (156 + 130))) or ((2456 - 1375) < (1811 - 736))) then
+				if ((v62.SoulReaper:IsReady() and (v95 == (1 - 0)) and ((v16:TimeToX(10 + 25) < (3 + 2)) or (v16:HealthPercentage() <= (104 - (10 + 59)))) and (v16:TimeToDie() > (2 + 3))) or ((5166 - 4117) >= (5595 - (671 + 492)))) then
+					if (v20(v62.SoulReaper, nil, nil, not v16:IsInMeleeRange(4 + 1)) or ((5983 - (369 + 846)) <= (224 + 622))) then
 						return "soul_reaper garg_setup 6";
 					end
 				end
-				if ((v61.SummonGargoyle:IsCastable() and v29 and (v13:BuffUp(v61.CommanderoftheDeadBuff) or (not v61.CommanderoftheDead:IsAvailable() and (v13:RunicPower() >= (15 + 25))))) or ((3672 - (277 + 816)) < (525 - 402))) then
-					if (v19(v61.SummonGargoyle, v56) or ((2029 - (1058 + 125)) >= (444 + 1924))) then
+				if ((v62.SummonGargoyle:IsCastable() and v30 and (v14:BuffUp(v62.CommanderoftheDeadBuff) or (not v62.CommanderoftheDead:IsAvailable() and (v14:RunicPower() >= (35 + 5))))) or ((5303 - (1036 + 909)) <= (1130 + 290))) then
+					if (v20(v62.SummonGargoyle, v57) or ((6276 - 2537) <= (3208 - (11 + 192)))) then
 						return "summon_gargoyle garg_setup 8";
 					end
 				end
-				v154 = 977 - (815 + 160);
+				v155 = 2 + 0;
 			end
 		end
 	end
-	local function v122()
-		local v155 = 0 - 0;
+	local function v123()
+		local v156 = 175 - (135 + 40);
+		local v157;
 		while true do
-			if ((v155 == (4 - 2)) or ((958 + 3054) <= (9815 - 6457))) then
-				if (((3392 - (41 + 1857)) <= (4898 - (1222 + 671))) and v86:IsReady() and ((v61.Apocalypse:CooldownRemains() > (v74 + (7 - 4))) or (v94 >= (3 - 0))) and v61.Plaguebringer:IsAvailable() and (v61.Superstrain:IsAvailable() or v61.UnholyBlight:IsAvailable()) and (v13:BuffRemains(v61.PlaguebringerBuff) < v13:GCD())) then
-					if (v19(v86, nil, nil, not v15:IsSpellInRange(v86)) or ((4293 - (229 + 953)) == (3908 - (1111 + 663)))) then
+			if (((4 - 2) == v156) or ((1000 + 659) >= (4701 - 2567))) then
+				if ((v62.DeathCoil:IsReady() and ((v95 <= (4 - 1)) or not v62.Epidemic:IsAvailable()) and ((v85 and v62.CommanderoftheDead:IsAvailable() and v14:BuffUp(v62.CommanderoftheDeadBuff) and (v62.Apocalypse:CooldownRemains() < (181 - (50 + 126))) and (v14:BuffRemains(v62.CommanderoftheDeadBuff) > (75 - 48))) or (v16:DebuffUp(v62.DeathRotDebuff) and (v16:DebuffRemains(v62.DeathRotDebuff) < v14:GCD())))) or ((722 + 2538) < (3768 - (1233 + 180)))) then
+					if (v20(v62.DeathCoil, nil, nil, not v16:IsSpellInRange(v62.DeathCoil)) or ((1638 - (522 + 447)) == (5644 - (107 + 1314)))) then
+						return "death_coil high_prio_actions 6";
+					end
+				end
+				if ((v62.Epidemic:IsReady() and (v97 >= (2 + 2)) and ((v62.CommanderoftheDead:IsAvailable() and v14:BuffUp(v62.CommanderoftheDeadBuff) and (v62.Apocalypse:CooldownRemains() < (15 - 10))) or (v16:DebuffUp(v62.DeathRotDebuff) and (v16:DebuffRemains(v62.DeathRotDebuff) < v14:GCD())))) or ((719 + 973) < (1167 - 579))) then
+					if (v20(v62.Epidemic, v56, nil, not v16:IsInRange(158 - 118)) or ((6707 - (716 + 1194)) < (63 + 3588))) then
+						return "epidemic high_prio_actions 8";
+					end
+				end
+				v156 = 1 + 2;
+			end
+			if ((v156 == (506 - (74 + 429))) or ((8057 - 3880) > (2404 + 2446))) then
+				if ((v87:IsReady() and ((v62.Apocalypse:CooldownRemains() > (v75 + (6 - 3))) or (v95 >= (3 + 0))) and v62.Plaguebringer:IsAvailable() and (v62.Superstrain:IsAvailable() or v62.UnholyBlight:IsAvailable()) and (v14:BuffRemains(v62.PlaguebringerBuff) < v14:GCD())) or ((1233 - 833) > (2746 - 1635))) then
+					if (((3484 - (279 + 154)) > (1783 - (454 + 324))) and v20(v87, nil, nil, not v16:IsSpellInRange(v87))) then
 						return "wound_spender high_prio_actions 10";
 					end
 				end
-				if (((3934 - (874 + 705)) == (330 + 2025)) and v61.UnholyBlight:IsReady() and ((v78 and (((not v61.Apocalypse:IsAvailable() or v61.Apocalypse:CooldownDown()) and v61.Morbidity:IsAvailable()) or not v61.Morbidity:IsAvailable())) or v79 or (v91 < (15 + 6)))) then
-					if (v19(v61.UnholyBlight, v58, nil, not v15:IsInRange(16 - 8)) or ((17 + 571) <= (1111 - (642 + 37)))) then
+				if (((2906 + 787) <= (4399 - (12 + 5))) and v62.UnholyBlight:IsReady() and ((v79 and (((not v62.Apocalypse:IsAvailable() or v62.Apocalypse:CooldownDown()) and v62.Morbidity:IsAvailable()) or not v62.Morbidity:IsAvailable())) or v80 or (v92 < (12 + 9)))) then
+					if (v20(v62.UnholyBlight, v59, nil, not v16:IsInRange(20 - 12)) or ((1213 + 2069) > (5193 - (277 + 816)))) then
 						return "unholy_blight high_prio_actions 12";
 					end
 				end
-				v155 = 1 + 2;
+				v156 = 17 - 13;
 			end
-			if (((768 + 4029) >= (9779 - 5884)) and (v155 == (457 - (233 + 221)))) then
-				if (((8271 - 4694) == (3149 + 428)) and v61.Outbreak:IsReady()) then
-					if (((5335 - (718 + 823)) > (2324 + 1369)) and v70.CastCycle(v61.Outbreak, v93, v113, not v15:IsSpellInRange(v61.Outbreak))) then
+			if ((v156 == (1187 - (1058 + 125))) or ((672 + 2908) < (3819 - (815 + 160)))) then
+				if (((381 - 292) < (10658 - 6168)) and v62.Outbreak:IsReady()) then
+					if (v71.CastCycle(v62.Outbreak, v94, v114, not v16:IsSpellInRange(v62.Outbreak)) or ((1189 + 3794) < (5285 - 3477))) then
 						return "outbreak high_prio_actions 14";
 					end
 				end
 				break;
 			end
-			if ((v155 == (805 - (266 + 539))) or ((3609 - 2334) == (5325 - (636 + 589)))) then
-				if (v45 or ((3776 - 2185) >= (7383 - 3803))) then
-					local v187 = 0 + 0;
+			if (((5727 - (41 + 1857)) > (5662 - (1222 + 671))) and (v156 == (0 - 0))) then
+				v157 = v71.HandleDPSPotion();
+				if (((2134 - 649) <= (4086 - (229 + 953))) and v157) then
+					return "DPS Pot";
+				end
+				v156 = 1775 - (1111 + 663);
+			end
+			if (((5848 - (874 + 705)) == (598 + 3671)) and (v156 == (1 + 0))) then
+				if (((803 - 416) <= (79 + 2703)) and v46) then
+					local v205 = 679 - (642 + 37);
 					while true do
-						if (((358 + 625) <= (2823 - (657 + 358))) and (v187 == (0 - 0))) then
-							if ((v61.AntiMagicShell:IsCastable() and (v13:RunicPowerDeficit() > (91 - 51)) and (v84 or not v61.SummonGargoyle:IsAvailable() or (v61.SummonGargoyle:CooldownRemains() > (1227 - (1151 + 36))))) or ((2077 + 73) <= (315 + 882))) then
-								if (((11255 - 7486) >= (3005 - (1552 + 280))) and v19(v61.AntiMagicShell, v46)) then
+						if ((v205 == (0 + 0)) or ((304 + 1595) <= (2302 - 1385))) then
+							if ((v62.AntiMagicShell:IsCastable() and (v14:RunicPowerDeficit() > (494 - (233 + 221))) and (v85 or not v62.SummonGargoyle:IsAvailable() or (v62.SummonGargoyle:CooldownRemains() > (92 - 52)))) or ((3796 + 516) <= (2417 - (718 + 823)))) then
+								if (((1405 + 827) <= (3401 - (266 + 539))) and v20(v62.AntiMagicShell, v47)) then
 									return "antimagic_shell ams_amz 2";
 								end
 							end
-							if (((2319 - (64 + 770)) == (1009 + 476)) and v61.AntiMagicZone:IsCastable() and (v13:RunicPowerDeficit() > (158 - 88)) and v61.Assimilation:IsAvailable() and (v84 or not v61.SummonGargoyle:IsAvailable())) then
-								if (v19(v61.AntiMagicZone, v47) or ((589 + 2726) <= (4025 - (157 + 1086)))) then
+							if (((5931 - 3836) < (4911 - (636 + 589))) and v62.AntiMagicZone:IsCastable() and (v14:RunicPowerDeficit() > (166 - 96)) and v62.Assimilation:IsAvailable() and (v85 or not v62.SummonGargoyle:IsAvailable())) then
+								if (v20(v62.AntiMagicZone, v48) or ((3289 - 1694) >= (3546 + 928))) then
 									return "antimagic_zone ams_amz 4";
 								end
 							end
@@ -647,426 +665,376 @@ v0["Epix_DeathKnight_Unholy.lua"] = function(...)
 						end
 					end
 				end
-				if ((v61.ArmyoftheDead:IsReady() and v29 and ((v61.SummonGargoyle:IsAvailable() and (v61.SummonGargoyle:CooldownRemains() < (3 - 1))) or not v61.SummonGargoyle:IsAvailable() or (v91 < (153 - 118)))) or ((1343 - 467) >= (4045 - 1081))) then
-					if (v19(v61.ArmyoftheDead) or ((3051 - (599 + 220)) > (4972 - 2475))) then
+				if ((v62.ArmyoftheDead:IsReady() and v30 and ((v62.SummonGargoyle:IsAvailable() and (v62.SummonGargoyle:CooldownRemains() < (1 + 1))) or not v62.SummonGargoyle:IsAvailable() or (v92 < (1050 - (657 + 358))))) or ((12229 - 7610) < (6565 - 3683))) then
+					if (v20(v62.ArmyoftheDead) or ((1481 - (1151 + 36)) >= (4666 + 165))) then
 						return "army_of_the_dead high_prio_actions 4";
 					end
 				end
-				v155 = 1932 - (1813 + 118);
-			end
-			if ((v155 == (1 + 0)) or ((3327 - (841 + 376)) <= (464 - 132))) then
-				if (((857 + 2829) > (8657 - 5485)) and v61.DeathCoil:IsReady() and ((v94 <= (862 - (464 + 395))) or not v61.Epidemic:IsAvailable()) and ((v84 and v61.CommanderoftheDead:IsAvailable() and v13:BuffUp(v61.CommanderoftheDeadBuff) and (v61.Apocalypse:CooldownRemains() < (12 - 7)) and (v13:BuffRemains(v61.CommanderoftheDeadBuff) > (13 + 14))) or (v15:DebuffUp(v61.DeathRotDebuff) and (v15:DebuffRemains(v61.DeathRotDebuff) < v13:GCD())))) then
-					if (v19(v61.DeathCoil, nil, nil, not v15:IsSpellInRange(v61.DeathCoil)) or ((5311 - (467 + 370)) < (1694 - 874))) then
-						return "death_coil high_prio_actions 6";
-					end
-				end
-				if (((3142 + 1137) >= (9879 - 6997)) and v61.Epidemic:IsReady() and (v96 >= (1 + 3)) and ((v61.CommanderoftheDead:IsAvailable() and v13:BuffUp(v61.CommanderoftheDeadBuff) and (v61.Apocalypse:CooldownRemains() < (11 - 6))) or (v15:DebuffUp(v61.DeathRotDebuff) and (v15:DebuffRemains(v61.DeathRotDebuff) < v13:GCD())))) then
-					if (v19(v61.Epidemic, v55, nil, not v15:IsInRange(560 - (150 + 370))) or ((3311 - (74 + 1208)) >= (8660 - 5139))) then
-						return "epidemic high_prio_actions 8";
-					end
-				end
-				v155 = 9 - 7;
-			end
-		end
-	end
-	local function v123()
-		local v156 = 0 + 0;
-		while true do
-			if (((391 - (14 + 376)) == v156) or ((3532 - 1495) >= (3004 + 1638))) then
-				if (((1511 + 209) < (4252 + 206)) and v61.Berserking:IsCastable() and ((((v61.Berserking:BaseDuration() + (8 - 5)) >= v85) and v84) or ((not v61.SummonGargoyle:IsAvailable() or (v61.SummonGargoyle:CooldownRemains() > (46 + 14))) and ((v82 and (v83 <= (v61.Berserking:BaseDuration() + (81 - (23 + 55))))) or (v80 and (v81 <= (v61.Berserking:BaseDuration() + (6 - 3)))) or ((v94 >= (2 + 0)) and v13:BuffUp(v61.DeathAndDecayBuff)))) or (v91 <= (v61.Berserking:BaseDuration() + 3 + 0)))) then
-					if (v19(v61.Berserking, v52) or ((675 - 239) > (951 + 2070))) then
-						return "berserking racials 6";
-					end
-				end
-				if (((1614 - (652 + 249)) <= (2266 - 1419)) and v61.LightsJudgment:IsCastable() and v13:BuffUp(v61.UnholyStrengthBuff) and (not v61.Festermight:IsAvailable() or (v13:BuffRemains(v61.FestermightBuff) < v15:TimeToDie()) or (v13:BuffRemains(v61.UnholyStrengthBuff) < v15:TimeToDie()))) then
-					if (((4022 - (708 + 1160)) <= (10941 - 6910)) and v19(v61.LightsJudgment, v52, nil, not v15:IsSpellInRange(v61.LightsJudgment))) then
-						return "lights_judgment racials 8";
-					end
-				end
-				v156 = 3 - 1;
-			end
-			if (((4642 - (10 + 17)) == (1037 + 3578)) and (v156 == (1735 - (1400 + 332)))) then
-				if ((v61.Fireblood:IsCastable() and ((((v61.Fireblood:BaseDuration() + (5 - 2)) >= v85) and v84) or ((not v61.SummonGargoyle:IsAvailable() or (v61.SummonGargoyle:CooldownRemains() > (1968 - (242 + 1666)))) and ((v82 and (v83 <= (v61.Fireblood:BaseDuration() + 2 + 1))) or (v80 and (v81 <= (v61.Fireblood:BaseDuration() + 2 + 1))) or ((v94 >= (2 + 0)) and v13:BuffUp(v61.DeathAndDecayBuff)))) or (v91 <= (v61.Fireblood:BaseDuration() + (943 - (850 + 90)))))) or ((6638 - 2848) == (1890 - (360 + 1030)))) then
-					if (((79 + 10) < (623 - 402)) and v19(v61.Fireblood, v52)) then
-						return "fireblood racials 14";
-					end
-				end
-				if (((2825 - 771) >= (3082 - (909 + 752))) and v61.BagofTricks:IsCastable() and (v94 == (1224 - (109 + 1114))) and (v13:BuffUp(v61.UnholyStrengthBuff) or HL.FilteredFightRemains(v93, "<", 9 - 4))) then
-					if (((270 + 422) < (3300 - (6 + 236))) and v19(v61.BagofTricks, v52, nil, not v15:IsSpellInRange(v61.BagofTricks))) then
-						return "bag_of_tricks racials 16";
-					end
-				end
-				break;
-			end
-			if ((v156 == (0 + 0)) or ((2620 + 634) == (3903 - 2248))) then
-				if ((v61.ArcaneTorrent:IsCastable() and (v13:RunicPowerDeficit() > (34 - 14)) and ((v61.SummonGargoyle:CooldownRemains() < v13:GCD()) or not v61.SummonGargoyle:IsAvailable() or (v84 and (v13:Rune() < (1135 - (1076 + 57))) and (v89 < (1 + 0))))) or ((1985 - (579 + 110)) == (388 + 4522))) then
-					if (((2978 + 390) == (1788 + 1580)) and v19(v61.ArcaneTorrent, v52, nil, not v15:IsInRange(415 - (174 + 233)))) then
-						return "arcane_torrent racials 2";
-					end
-				end
-				if (((7382 - 4739) < (6695 - 2880)) and v61.BloodFury:IsCastable() and ((((v61.BloodFury:BaseDuration() + 2 + 1) >= v85) and v84) or ((not v61.SummonGargoyle:IsAvailable() or (v61.SummonGargoyle:CooldownRemains() > (1234 - (663 + 511)))) and ((v82 and (v83 <= (v61.BloodFury:BaseDuration() + 3 + 0))) or (v80 and (v81 <= (v61.BloodFury:BaseDuration() + 1 + 2))) or ((v94 >= (5 - 3)) and v13:BuffUp(v61.DeathAndDecayBuff)))) or (v91 <= (v61.BloodFury:BaseDuration() + 2 + 1)))) then
-					if (((4503 - 2590) > (1193 - 700)) and v19(v61.BloodFury, v52)) then
-						return "blood_fury racials 4";
-					end
-				end
-				v156 = 1 + 0;
-			end
-			if (((9254 - 4499) > (2444 + 984)) and ((1 + 1) == v156)) then
-				if (((2103 - (478 + 244)) <= (2886 - (440 + 77))) and v61.AncestralCall:IsCastable() and ((((9 + 9) >= v85) and v84) or ((not v61.SummonGargoyle:IsAvailable() or (v61.SummonGargoyle:CooldownRemains() > (219 - 159))) and ((v82 and (v83 <= (1574 - (655 + 901)))) or (v80 and (v81 <= (4 + 14))) or ((v94 >= (2 + 0)) and v13:BuffUp(v61.DeathAndDecayBuff)))) or (v91 <= (13 + 5)))) then
-					if (v19(v61.AncestralCall, v52) or ((19510 - 14667) == (5529 - (695 + 750)))) then
-						return "ancestral_call racials 10";
-					end
-				end
-				if (((15943 - 11274) > (559 - 196)) and v61.ArcanePulse:IsCastable() and ((v94 >= (7 - 5)) or ((v13:Rune() <= (352 - (285 + 66))) and (v13:RunicPowerDeficit() >= (139 - 79))))) then
-					if (v19(v61.ArcanePulse, v52, nil, not v15:IsInRange(1318 - (682 + 628))) or ((303 + 1574) >= (3437 - (176 + 123)))) then
-						return "arcane_pulse racials 12";
-					end
-				end
-				v156 = 2 + 1;
+				v156 = 1 + 1;
 			end
 		end
 	end
 	local function v124()
-		local v157 = 0 + 0;
+		if (((6059 - 4030) <= (4916 - (1552 + 280))) and v62.ArcaneTorrent:IsCastable() and (v14:RunicPowerDeficit() > (854 - (64 + 770))) and ((v62.SummonGargoyle:CooldownRemains() < v14:GCD()) or not v62.SummonGargoyle:IsAvailable() or (v85 and (v14:Rune() < (2 + 0)) and (v90 < (2 - 1))))) then
+			if (v20(v62.ArcaneTorrent, v53, nil, not v16:IsInRange(2 + 6)) or ((3280 - (157 + 1086)) == (4843 - 2423))) then
+				return "arcane_torrent racials 2";
+			end
+		end
+		if (((19524 - 15066) > (5988 - 2084)) and v62.BloodFury:IsCastable() and ((((v62.BloodFury:BaseDuration() + (3 - 0)) >= v86) and v85) or ((not v62.SummonGargoyle:IsAvailable() or (v62.SummonGargoyle:CooldownRemains() > (879 - (599 + 220)))) and ((v83 and (v84 <= (v62.BloodFury:BaseDuration() + (5 - 2)))) or (v81 and (v82 <= (v62.BloodFury:BaseDuration() + (1934 - (1813 + 118))))) or ((v95 >= (2 + 0)) and v14:BuffUp(v62.DeathAndDecayBuff)))) or (v92 <= (v62.BloodFury:BaseDuration() + (1220 - (841 + 376)))))) then
+			if (((610 - 174) >= (29 + 94)) and v20(v62.BloodFury, v53)) then
+				return "blood_fury racials 4";
+			end
+		end
+		if (((1364 - 864) < (2675 - (464 + 395))) and v62.Berserking:IsCastable() and ((((v62.Berserking:BaseDuration() + (7 - 4)) >= v86) and v85) or ((not v62.SummonGargoyle:IsAvailable() or (v62.SummonGargoyle:CooldownRemains() > (29 + 31))) and ((v83 and (v84 <= (v62.Berserking:BaseDuration() + (840 - (467 + 370))))) or (v81 and (v82 <= (v62.Berserking:BaseDuration() + (5 - 2)))) or ((v95 >= (2 + 0)) and v14:BuffUp(v62.DeathAndDecayBuff)))) or (v92 <= (v62.Berserking:BaseDuration() + (10 - 7))))) then
+			if (((558 + 3016) == (8314 - 4740)) and v20(v62.Berserking, v53)) then
+				return "berserking racials 6";
+			end
+		end
+		if (((741 - (150 + 370)) < (1672 - (74 + 1208))) and v62.LightsJudgment:IsCastable() and v14:BuffUp(v62.UnholyStrengthBuff) and (not v62.Festermight:IsAvailable() or (v14:BuffRemains(v62.FestermightBuff) < v16:TimeToDie()) or (v14:BuffRemains(v62.UnholyStrengthBuff) < v16:TimeToDie()))) then
+			if (v20(v62.LightsJudgment, v53, nil, not v16:IsSpellInRange(v62.LightsJudgment)) or ((5443 - 3230) <= (6739 - 5318))) then
+				return "lights_judgment racials 8";
+			end
+		end
+		if (((2176 + 882) < (5250 - (14 + 376))) and v62.AncestralCall:IsCastable() and ((((30 - 12) >= v86) and v85) or ((not v62.SummonGargoyle:IsAvailable() or (v62.SummonGargoyle:CooldownRemains() > (39 + 21))) and ((v83 and (v84 <= (16 + 2))) or (v81 and (v82 <= (18 + 0))) or ((v95 >= (5 - 3)) and v14:BuffUp(v62.DeathAndDecayBuff)))) or (v92 <= (14 + 4)))) then
+			if (v20(v62.AncestralCall, v53) or ((1374 - (23 + 55)) >= (10536 - 6090))) then
+				return "ancestral_call racials 10";
+			end
+		end
+		if ((v62.ArcanePulse:IsCastable() and ((v95 >= (2 + 0)) or ((v14:Rune() <= (1 + 0)) and (v14:RunicPowerDeficit() >= (93 - 33))))) or ((439 + 954) > (5390 - (652 + 249)))) then
+			if (v20(v62.ArcanePulse, v53, nil, not v16:IsInRange(21 - 13)) or ((6292 - (708 + 1160)) < (73 - 46))) then
+				return "arcane_pulse racials 12";
+			end
+		end
+		if ((v62.Fireblood:IsCastable() and ((((v62.Fireblood:BaseDuration() + (5 - 2)) >= v86) and v85) or ((not v62.SummonGargoyle:IsAvailable() or (v62.SummonGargoyle:CooldownRemains() > (87 - (10 + 17)))) and ((v83 and (v84 <= (v62.Fireblood:BaseDuration() + 1 + 2))) or (v81 and (v82 <= (v62.Fireblood:BaseDuration() + (1735 - (1400 + 332))))) or ((v95 >= (3 - 1)) and v14:BuffUp(v62.DeathAndDecayBuff)))) or (v92 <= (v62.Fireblood:BaseDuration() + (1911 - (242 + 1666)))))) or ((855 + 1142) > (1399 + 2416))) then
+			if (((2954 + 511) > (2853 - (850 + 90))) and v20(v62.Fireblood, v53)) then
+				return "fireblood racials 14";
+			end
+		end
+		if (((1283 - 550) < (3209 - (360 + 1030))) and v62.BagofTricks:IsCastable() and (v95 == (1 + 0)) and (v14:BuffUp(v62.UnholyStrengthBuff) or HL.FilteredFightRemains(v94, "<", 13 - 8))) then
+			if (v20(v62.BagofTricks, v53, nil, not v16:IsSpellInRange(v62.BagofTricks)) or ((6046 - 1651) == (6416 - (909 + 752)))) then
+				return "bag_of_tricks racials 16";
+			end
+		end
+	end
+	local function v125()
+		local v158 = 1223 - (109 + 1114);
 		while true do
-			if (((5011 - (239 + 30)) >= (986 + 2640)) and (v157 == (1 + 0))) then
-				if ((v87:IsReady() and v13:BuffDown(v61.DeathAndDecayBuff) and ((v94 >= (3 - 1)) or (v61.UnholyGround:IsAvailable() and ((v80 and (v81 >= (40 - 27))) or (v84 and (v85 > (323 - (306 + 9)))) or (v82 and (v83 > (27 - 19))) or (not v76 and (v89 >= (1 + 3))))) or (v61.Defile:IsAvailable() and (v84 or v80 or v82 or v14:BuffUp(v61.DarkTransformation)))) and ((v61.FesteringWoundDebuff:AuraActiveCount() == v94) or (v94 == (1 + 0)))) or ((2186 + 2354) == (2619 - 1703))) then
-					if (v19(v88, v48) or ((2531 - (1140 + 235)) > (2766 + 1579))) then
+			if ((v158 == (1 - 0)) or ((1477 + 2316) < (2611 - (6 + 236)))) then
+				if ((v88:IsReady() and v14:BuffDown(v62.DeathAndDecayBuff) and ((v95 >= (2 + 0)) or (v62.UnholyGround:IsAvailable() and ((v81 and (v82 >= (11 + 2))) or (v85 and (v86 > (18 - 10))) or (v83 and (v84 > (13 - 5))) or (not v77 and (v90 >= (1137 - (1076 + 57)))))) or (v62.Defile:IsAvailable() and (v85 or v81 or v83 or v15:BuffUp(v62.DarkTransformation)))) and ((v62.FesteringWoundDebuff:AuraActiveCount() == v95) or (v95 == (1 + 0)))) or ((4773 - (579 + 110)) == (21 + 244))) then
+					if (((3854 + 504) == (2313 + 2045)) and v20(v89, v49)) then
 						return "any_dnd st 6";
 					end
 				end
-				if (((2052 + 185) < (1091 + 3158)) and v86:IsReady() and (v76 or ((v94 >= (54 - (33 + 19))) and v13:BuffUp(v61.DeathAndDecayBuff)))) then
-					if (v19(v86, nil, nil, not v15:IsSpellInRange(v86)) or ((969 + 1714) < (68 - 45))) then
+				if ((v87:IsReady() and (v77 or ((v95 >= (409 - (174 + 233))) and v14:BuffUp(v62.DeathAndDecayBuff)))) or ((8765 - 5627) < (1742 - 749))) then
+					if (((1481 + 1849) > (3497 - (663 + 511))) and v20(v87, nil, nil, not v16:IsSpellInRange(v87))) then
 						return "wound_spender st 8";
 					end
 				end
-				v157 = 1 + 1;
+				v158 = 2 + 0;
 			end
-			if (((1366 - 669) <= (775 + 51)) and (v157 == (691 - (586 + 103)))) then
-				if (((101 + 1004) <= (3620 - 2444)) and v61.FesteringStrike:IsReady() and not v76) then
-					if (((4867 - (1309 + 179)) <= (6881 - 3069)) and v70.CastTargetIf(v61.FesteringStrike, v93, "min", v102, v107, not v15:IsInMeleeRange(3 + 2))) then
+			if ((v158 == (1 + 1)) or ((11178 - 7552) == (2416 + 1573))) then
+				if ((v62.FesteringStrike:IsReady() and not v77) or ((2156 - 1240) == (6465 - 3794))) then
+					if (((130 + 142) == (529 - 257)) and v71.CastTargetIf(v62.FesteringStrike, v94, "min", v103, v108, not v16:IsInMeleeRange(4 + 1))) then
 						return "festering_strike st 10";
 					end
 				end
-				if (v61.DeathCoil:IsReady() or ((2116 - 1328) >= (1221 + 395))) then
-					if (((3938 - 2084) <= (6732 - 3353)) and v19(v61.DeathCoil, nil, nil, not v15:IsSpellInRange(v61.DeathCoil))) then
+				if (((389 + 3860) <= (5561 - (478 + 244))) and v62.DeathCoil:IsReady()) then
+					if (((3294 - (440 + 77)) < (1455 + 1745)) and v20(v62.DeathCoil, nil, nil, not v16:IsSpellInRange(v62.DeathCoil))) then
 						return "death_coil st 12";
 					end
 				end
-				v157 = 612 - (295 + 314);
+				v158 = 10 - 7;
 			end
-			if (((11172 - 6623) == (6511 - (1300 + 662))) and (v157 == (9 - 6))) then
-				if ((v86:IsReady() and not v76) or ((4777 - (1178 + 577)) >= (1571 + 1453))) then
-					if (((14249 - 9429) > (3603 - (851 + 554))) and v70.CastTargetIf(v86, v93, "max", v102, v108, not v15:IsSpellInRange(v86))) then
+			if (((1651 - (655 + 901)) < (363 + 1594)) and (v158 == (3 + 0))) then
+				if (((558 + 268) < (6917 - 5200)) and v87:IsReady() and not v77) then
+					if (((2871 - (695 + 750)) >= (3773 - 2668)) and v71.CastTargetIf(v87, v94, "max", v103, v109, not v16:IsSpellInRange(v87))) then
 						return "wound_spender st 14";
 					end
 				end
 				break;
 			end
-			if ((v157 == (0 + 0)) or ((2942 - 1881) >= (10622 - 5731))) then
-				if (((1666 - (115 + 187)) <= (3426 + 1047)) and v61.DeathCoil:IsReady() and not v72 and ((not v77 and v73) or (v91 < (10 + 0)))) then
-					if (v19(v61.DeathCoil, nil, nil, not v15:IsSpellInRange(v61.DeathCoil)) or ((14166 - 10571) <= (1164 - (160 + 1001)))) then
+			if (((4250 - 1496) <= (13589 - 10210)) and (v158 == (351 - (285 + 66)))) then
+				if ((v62.DeathCoil:IsReady() and not v73 and ((not v78 and v74) or (v92 < (23 - 13)))) or ((5237 - (682 + 628)) == (228 + 1185))) then
+					if (v20(v62.DeathCoil, nil, nil, not v16:IsSpellInRange(v62.DeathCoil)) or ((1453 - (176 + 123)) <= (330 + 458))) then
 						return "death_coil st 2";
 					end
 				end
-				if ((v61.Epidemic:IsReady() and v72 and ((not v77 and v73) or (v91 < (9 + 1)))) or ((3224 + 1448) == (7884 - 4032))) then
-					if (((1917 - (237 + 121)) == (2456 - (525 + 372))) and v19(v61.Epidemic, v55, nil, not v15:IsInRange(75 - 35))) then
+				if ((v62.Epidemic:IsReady() and v73 and ((not v78 and v74) or (v92 < (8 + 2)))) or ((1912 - (239 + 30)) > (919 + 2460))) then
+					if (v20(v62.Epidemic, v56, nil, not v16:IsInRange(39 + 1)) or ((4960 - 2157) > (14192 - 9643))) then
 						return "epidemic st 4";
 					end
 				end
-				v157 = 3 - 2;
-			end
-		end
-	end
-	local function v125()
-		if (v33 or ((1894 - (96 + 46)) <= (1565 - (643 + 134)))) then
-			local v161 = v115();
-			if (v161 or ((1411 + 2496) == (424 - 247))) then
-				return v161;
+				v158 = 316 - (306 + 9);
 			end
 		end
 	end
 	local function v126()
-		local v158 = 0 - 0;
-		while true do
-			if (((3328 + 142) > (1089 - 534)) and (v158 == (3 - 1))) then
-				v76 = (((v61.Apocalypse:CooldownRemains() > v74) or not v61.Apocalypse:IsAvailable()) and (v75 or ((v89 >= (720 - (316 + 403))) and (v61.UnholyAssault:CooldownRemains() < (14 + 6)) and v61.UnholyAssault:IsAvailable() and v78) or (v15:DebuffUp(v61.RottenTouchDebuff) and (v89 >= (2 - 1))) or (v89 > (2 + 2)) or (v13:HasTier(77 - 46, 3 + 1) and (v92:ApocMagusActive() or v92:ArmyMagusActive()) and (v89 >= (1 + 0))))) or ((v91 < (17 - 12)) and (v89 >= (4 - 3)));
-				v77 = v61.VileContagion:IsAvailable() and (v61.VileContagion:CooldownRemains() < (5 - 2)) and (v13:RunicPower() < (4 + 56)) and not v78;
-				v158 = 5 - 2;
-			end
-			if ((v158 == (1 + 2)) or ((2859 - 1887) == (662 - (12 + 5)))) then
-				v78 = (v94 == (3 - 2)) or not v28;
-				v79 = (v94 >= (3 - 1)) and v28;
-				v158 = 8 - 4;
-			end
-			if (((7890 - 4708) >= (430 + 1685)) and (v158 == (1973 - (1656 + 317)))) then
-				v72 = (v61.ImprovedDeathCoil:IsAvailable() and not v61.CoilofDevastation:IsAvailable() and (v94 >= (3 + 0))) or (v61.CoilofDevastation:IsAvailable() and (v94 >= (4 + 0))) or (not v61.ImprovedDeathCoil:IsAvailable() and (v94 >= (4 - 2)));
-				v71 = (v94 >= (14 - 11)) or ((v61.SummonGargoyle:CooldownRemains() > (355 - (5 + 349))) and ((v61.Apocalypse:CooldownRemains() > (4 - 3)) or not v61.Apocalypse:IsAvailable())) or not v61.SummonGargoyle:IsAvailable() or (v9.CombatTime() > (1291 - (266 + 1005)));
-				v158 = 1 + 0;
-			end
-			if (((13283 - 9390) < (5830 - 1401)) and (v158 == (1700 - (561 + 1135)))) then
-				v73 = (not v61.RottenTouch:IsAvailable() or (v61.RottenTouch:IsAvailable() and v15:DebuffDown(v61.RottenTouchDebuff)) or (v13:RunicPowerDeficit() < (26 - 6))) and (not v13:HasTier(101 - 70, 1070 - (507 + 559)) or (v13:HasTier(77 - 46, 12 - 8) and not (v92:ApocMagusActive() or v92:ArmyMagusActive())) or (v13:RunicPowerDeficit() < (408 - (212 + 176))) or (v13:Rune() < (908 - (250 + 655)))) and ((v61.ImprovedDeathCoil:IsAvailable() and ((v94 == (5 - 3)) or v61.CoilofDevastation:IsAvailable())) or (v13:Rune() < (5 - 2)) or v84 or v13:BuffUp(v61.SuddenDoomBuff) or ((v61.Apocalypse:CooldownRemains() < (15 - 5)) and (v89 > (1959 - (1869 + 87)))) or (not v76 and (v89 >= (13 - 9))));
-				break;
-			end
-			if ((v158 == (1902 - (484 + 1417))) or ((6144 - 3277) < (3192 - 1287))) then
-				v74 = ((v61.Apocalypse:CooldownRemains() < (783 - (48 + 725))) and (v89 <= (5 - 1)) and (v61.UnholyAssault:CooldownRemains() > (26 - 16)) and (5 + 2)) or (4 - 2);
-				if ((not v84 and v61.Festermight:IsAvailable() and v13:BuffUp(v61.FestermightBuff) and ((v13:BuffRemains(v61.FestermightBuff) / ((2 + 3) * v13:GCD())) >= (1 + 0))) or ((2649 - (152 + 701)) >= (5362 - (430 + 881)))) then
-					v75 = v89 >= (1 + 0);
-				else
-					v75 = v89 >= ((898 - (557 + 338)) - v22(v61.InfectedClaws:IsAvailable()));
-				end
-				v158 = 1 + 1;
+		if (v34 or ((767 - 547) >= (526 + 2496))) then
+			local v164 = v116();
+			if (((1732 + 1090) == (1359 + 1463)) and v164) then
+				return v164;
 			end
 		end
 	end
 	local function v127()
-		local v159 = 0 - 0;
-		while true do
-			if (((5669 - 4050) <= (9978 - 6222)) and (v159 == (8 - 4))) then
-				if (((1405 - (499 + 302)) == (1470 - (39 + 827))) and (v70.TargetIsValid() or v13:AffectingCombat())) then
-					v90 = v9.BossFightRemains();
-					v91 = v90;
-					if ((v91 == (30672 - 19561)) or ((10013 - 5529) == (3574 - 2674))) then
-						v91 = v9.FightRemains(v93, false);
-					end
-					v97 = v100(v95);
-					v80 = v61.Apocalypse:TimeSinceLastCast() <= (22 - 7);
-					v81 = (v80 and ((2 + 13) - v61.Apocalypse:TimeSinceLastCast())) or (0 - 0);
-					v82 = v61.ArmyoftheDead:TimeSinceLastCast() <= (5 + 25);
-					v83 = (v82 and ((47 - 17) - v61.ArmyoftheDead:TimeSinceLastCast())) or (104 - (103 + 1));
-					v84 = v92:GargActive();
-					v85 = v92:GargRemains();
-					v89 = v15:DebuffStack(v61.FesteringWoundDebuff);
-				end
-				if (v70.TargetIsValid() or ((5013 - (475 + 79)) <= (2405 - 1292))) then
-					if (((11622 - 7990) > (440 + 2958)) and not v13:IsCasting() and not v13:IsChanneling()) then
-						local v191 = 0 + 0;
-						local v192;
-						while true do
-							if (((5585 - (1395 + 108)) <= (14308 - 9391)) and ((1205 - (7 + 1197)) == v191)) then
-								v192 = v70.Interrupt(v61.MindFreeze, 7 + 8, true, v20, v63.MindFreezeMouseover);
-								if (((1687 + 3145) >= (1705 - (27 + 292))) and v192) then
-									return v192;
-								end
-								break;
-							end
-							if (((401 - 264) == (174 - 37)) and (v191 == (0 - 0))) then
-								v192 = v70.Interrupt(v61.MindFreeze, 29 - 14, true);
-								if (v192 or ((2990 - 1420) >= (4471 - (43 + 96)))) then
-									return v192;
-								end
-								v191 = 4 - 3;
-							end
-						end
-					end
-					if (not v13:AffectingCombat() or ((9187 - 5123) <= (1510 + 309))) then
-						local v193 = 0 + 0;
-						local v194;
-						while true do
-							if ((v193 == (0 - 0)) or ((1911 + 3075) < (2949 - 1375))) then
-								v194 = v114();
-								if (((1394 + 3032) > (13 + 159)) and v194) then
-									return v194;
-								end
-								break;
-							end
-						end
-					end
-					if (((2337 - (1414 + 337)) > (2395 - (1642 + 298))) and v61.DeathStrike:IsReady() and not v69) then
-						if (((2152 - 1326) == (2375 - 1549)) and v19(v61.DeathStrike)) then
-							return "death_strike low hp or proc";
-						end
-					end
-					if ((v94 == (0 - 0)) or ((1323 + 2696) > (3456 + 985))) then
-						if (((2989 - (357 + 615)) < (2992 + 1269)) and v61.Outbreak:IsReady() and (v97 > (0 - 0))) then
-							if (((4041 + 675) > (171 - 91)) and v19(v61.Outbreak, nil, nil, not v15:IsSpellInRange(v61.Outbreak))) then
-								return "outbreak out_of_range";
-							end
-						end
-						if ((v61.Epidemic:IsReady() and v28 and (v61.VirulentPlagueDebuff:AuraActiveCount() > (1 + 0)) and not v77) or ((239 + 3268) == (2057 + 1215))) then
-							if (v19(v61.Epidemic, v55, nil, not v15:IsInRange(1341 - (384 + 917))) or ((1573 - (128 + 569)) >= (4618 - (1407 + 136)))) then
-								return "epidemic out_of_range";
-							end
-						end
-						if (((6239 - (687 + 1200)) > (4264 - (556 + 1154))) and v61.DeathCoil:IsReady() and (v61.VirulentPlagueDebuff:AuraActiveCount() < (6 - 4)) and not v77) then
-							if (v19(v61.DeathCoil, nil, nil, not v15:IsSpellInRange(v61.DeathCoil)) or ((4501 - (9 + 86)) < (4464 - (275 + 146)))) then
-								return "death_coil out_of_range";
-							end
-						end
-					end
-					v126();
-					local v188 = v122();
-					if (v188 or ((308 + 1581) >= (3447 - (29 + 35)))) then
-						return v188;
-					end
-					local v188 = v115();
-					if (((8385 - 6493) <= (8165 - 5431)) and v188) then
-						return v188;
-					end
-					if (((8488 - 6565) < (1445 + 773)) and v29 and not v71) then
-						local v195 = 1012 - (53 + 959);
-						local v196;
-						while true do
-							if (((2581 - (312 + 96)) > (657 - 278)) and (v195 == (285 - (147 + 138)))) then
-								v196 = v121();
-								if (v196 or ((3490 - (813 + 86)) == (3081 + 328))) then
-									return v196;
-								end
-								break;
-							end
-						end
-					end
-					if (((8363 - 3849) > (3816 - (18 + 474))) and v29 and v78) then
-						local v197 = 0 + 0;
-						local v198;
-						while true do
-							if ((v197 == (0 - 0)) or ((1294 - (860 + 226)) >= (5131 - (121 + 182)))) then
-								v198 = v120();
-								if (v198 or ((195 + 1388) > (4807 - (988 + 252)))) then
-									return v198;
-								end
-								break;
-							end
-						end
-					end
-					if ((v28 and v29 and v79) or ((149 + 1164) == (249 + 545))) then
-						local v199 = 1970 - (49 + 1921);
-						local v200;
-						while true do
-							if (((4064 - (223 + 667)) > (2954 - (51 + 1))) and (v199 == (0 - 0))) then
-								v200 = v118();
-								if (((8822 - 4702) <= (5385 - (146 + 979))) and v200) then
-									return v200;
-								end
-								break;
-							end
-						end
-					end
-					if (v29 or ((250 + 633) > (5383 - (311 + 294)))) then
-						local v201 = 0 - 0;
-						local v202;
-						while true do
-							if ((v201 == (0 + 0)) or ((5063 - (496 + 947)) >= (6249 - (1233 + 125)))) then
-								v202 = v123();
-								if (((1728 + 2530) > (841 + 96)) and v202) then
-									return v202;
-								end
-								break;
-							end
-						end
-					end
-					if (v28 or ((926 + 3943) < (2551 - (963 + 682)))) then
-						local v203 = 0 + 0;
-						while true do
-							if (((1504 - (504 + 1000)) == v203) or ((825 + 400) > (3851 + 377))) then
-								if (((315 + 3013) > (3300 - 1062)) and v79 and (v87:CooldownRemains() < (9 + 1)) and v13:BuffDown(v61.DeathAndDecayBuff)) then
-									local v205 = 0 + 0;
-									local v206;
-									while true do
-										if (((4021 - (156 + 26)) > (810 + 595)) and (v205 == (0 - 0))) then
-											v206 = v119();
-											if (v206 or ((1457 - (149 + 15)) <= (1467 - (890 + 70)))) then
-												return v206;
-											end
-											break;
-										end
-									end
-								end
-								if (((v94 >= (121 - (39 + 78))) and v13:BuffUp(v61.DeathAndDecayBuff)) or ((3378 - (14 + 468)) < (1770 - 965))) then
-									local v207 = 0 - 0;
-									local v208;
-									while true do
-										if (((1195 + 1121) == (1391 + 925)) and (v207 == (0 + 0))) then
-											v208 = v117();
-											if (v208 or ((1161 + 1409) == (402 + 1131))) then
-												return v208;
-											end
-											break;
-										end
-									end
-								end
-								v203 = 1 - 0;
-							end
-							if ((v203 == (1 + 0)) or ((3102 - 2219) == (37 + 1423))) then
-								if (((v94 >= (55 - (12 + 39))) and (((v87:CooldownRemains() > (10 + 0)) and v13:BuffDown(v61.DeathAndDecayBuff)) or not v79)) or ((14297 - 9678) <= (3557 - 2558))) then
-									local v209 = v116();
-									if (v209 or ((1011 + 2399) > (2167 + 1949))) then
-										return v209;
-									end
-								end
-								break;
-							end
-						end
-					end
-					if ((v94 <= (7 - 4)) or ((602 + 301) >= (14783 - 11724))) then
-						local v204 = v124();
-						if (v204 or ((5686 - (1596 + 114)) < (7459 - 4602))) then
-							return v204;
-						end
-					end
-					if (((5643 - (164 + 549)) > (3745 - (1059 + 379))) and v61.FesteringStrike:IsReady()) then
-						if (v19(v61.FesteringStrike, nil, nil) or ((5023 - 977) < (670 + 621))) then
-							return "festering_strike precombat 8";
-						end
-					end
-				end
-				break;
-			end
-			if ((v159 == (0 + 0)) or ((4633 - (145 + 247)) == (2909 + 636))) then
-				v60();
-				v27 = EpicSettings.Toggles['ooc'];
-				v159 = 1 + 0;
-			end
-			if ((v159 == (5 - 3)) or ((777 + 3271) > (3646 + 586))) then
-				v69 = not v99();
-				v93 = v13:GetEnemiesInMeleeRange(7 - 2);
-				v159 = 723 - (254 + 466);
-			end
-			if ((v159 == (561 - (544 + 16))) or ((5561 - 3811) >= (4101 - (294 + 334)))) then
-				v28 = EpicSettings.Toggles['aoe'];
-				v29 = EpicSettings.Toggles['cds'];
-				v159 = 255 - (236 + 17);
-			end
-			if (((1365 + 1801) == (2465 + 701)) and (v159 == (10 - 7))) then
-				v95 = v15:GetEnemiesInSplashRange(47 - 37);
-				if (((908 + 855) < (3068 + 656)) and v28) then
-					local v189 = 794 - (413 + 381);
-					while true do
-						if (((3 + 54) <= (5790 - 3067)) and (v189 == (0 - 0))) then
-							v94 = #v93;
-							v96 = v15:GetEnemiesInSplashRangeCount(1980 - (582 + 1388));
-							break;
-						end
-					end
-				else
-					local v190 = 0 - 0;
-					while true do
-						if ((v190 == (0 + 0)) or ((2434 - (326 + 38)) == (1310 - 867))) then
-							v94 = 1 - 0;
-							v96 = 621 - (47 + 573);
-							break;
-						end
-					end
-				end
-				v159 = 2 + 2;
-			end
+		v73 = (v62.ImprovedDeathCoil:IsAvailable() and not v62.CoilofDevastation:IsAvailable() and (v95 >= (8 - 5))) or (v62.CoilofDevastation:IsAvailable() and (v95 >= (1379 - (1140 + 235)))) or (not v62.ImprovedDeathCoil:IsAvailable() and (v95 >= (2 + 0)));
+		v72 = (v95 >= (3 + 0)) or ((v62.SummonGargoyle:CooldownRemains() > (1 + 0)) and ((v62.Apocalypse:CooldownRemains() > (53 - (33 + 19))) or not v62.Apocalypse:IsAvailable())) or not v62.SummonGargoyle:IsAvailable() or (v10.CombatTime() > (8 + 12));
+		v75 = ((v62.Apocalypse:CooldownRemains() < (29 - 19)) and (v90 <= (2 + 2)) and (v62.UnholyAssault:CooldownRemains() > (19 - 9)) and (7 + 0)) or (691 - (586 + 103));
+		if ((not v85 and v62.Festermight:IsAvailable() and v14:BuffUp(v62.FestermightBuff) and ((v14:BuffRemains(v62.FestermightBuff) / ((1 + 4) * v14:GCD())) >= (2 - 1))) or ((2549 - (1309 + 179)) == (3351 - 1494))) then
+			v76 = v90 >= (1 + 0);
+		else
+			v76 = v90 >= ((7 - 4) - v23(v62.InfectedClaws:IsAvailable()));
 		end
+		v77 = (((v62.Apocalypse:CooldownRemains() > v75) or not v62.Apocalypse:IsAvailable()) and (v76 or ((v90 >= (1 + 0)) and (v62.UnholyAssault:CooldownRemains() < (42 - 22)) and v62.UnholyAssault:IsAvailable() and v79) or (v16:DebuffUp(v62.RottenTouchDebuff) and (v90 >= (1 - 0))) or (v90 > (613 - (295 + 314))) or (v14:HasTier(76 - 45, 1966 - (1300 + 662)) and (v93:ApocMagusActive() or v93:ArmyMagusActive()) and (v90 >= (3 - 2))))) or ((v92 < (1760 - (1178 + 577))) and (v90 >= (1 + 0)));
+		v78 = v62.VileContagion:IsAvailable() and (v62.VileContagion:CooldownRemains() < (8 - 5)) and (v14:RunicPower() < (1465 - (851 + 554))) and not v79;
+		v79 = (v95 == (1 + 0)) or not v29;
+		v80 = (v95 >= (5 - 3)) and v29;
+		v74 = (not v62.RottenTouch:IsAvailable() or (v62.RottenTouch:IsAvailable() and v16:DebuffDown(v62.RottenTouchDebuff)) or (v14:RunicPowerDeficit() < (43 - 23))) and (not v14:HasTier(333 - (115 + 187), 4 + 0) or (v14:HasTier(30 + 1, 15 - 11) and not (v93:ApocMagusActive() or v93:ArmyMagusActive())) or (v14:RunicPowerDeficit() < (1181 - (160 + 1001))) or (v14:Rune() < (3 + 0))) and ((v62.ImprovedDeathCoil:IsAvailable() and ((v95 == (2 + 0)) or v62.CoilofDevastation:IsAvailable())) or (v14:Rune() < (5 - 2)) or v85 or v14:BuffUp(v62.SuddenDoomBuff) or ((v62.Apocalypse:CooldownRemains() < (368 - (237 + 121))) and (v90 > (900 - (525 + 372)))) or (not v77 and (v90 >= (7 - 3))));
 	end
 	local function v128()
-		local v160 = 0 - 0;
-		while true do
-			if (((0 - 0) == v160) or ((4369 - (1269 + 395)) == (1885 - (76 + 416)))) then
-				v61.VirulentPlagueDebuff:RegisterAuraTracking();
-				v61.FesteringWoundDebuff:RegisterAuraTracking();
-				v160 = 444 - (319 + 124);
+		v61();
+		v28 = EpicSettings.Toggles['ooc'];
+		v29 = EpicSettings.Toggles['aoe'];
+		v30 = EpicSettings.Toggles['cds'];
+		v70 = not v100();
+		v94 = v14:GetEnemiesInMeleeRange(16 - 11);
+		v96 = v16:GetEnemiesInSplashRange(152 - (96 + 46));
+		if (((3537 - (643 + 134)) > (493 + 871)) and v29) then
+			local v165 = 0 - 0;
+			while true do
+				if ((v165 == (0 - 0)) or ((4702 + 200) <= (7055 - 3460))) then
+					v95 = #v94;
+					v97 = v16:GetEnemiesInSplashRangeCount(20 - 10);
+					break;
+				end
 			end
-			if ((v160 == (2 - 1)) or ((5608 - (564 + 443)) < (168 - 107))) then
-				v9.Print("Unholy DK by Epic. Work in Progress Gojira");
+		else
+			local v166 = 719 - (316 + 403);
+			while true do
+				if ((v166 == (0 + 0)) or ((10590 - 6738) == (106 + 187))) then
+					v95 = 2 - 1;
+					v97 = 1 + 0;
+					break;
+				end
+			end
+		end
+		if (v71.TargetIsValid() or v14:AffectingCombat() or ((503 + 1056) == (15897 - 11309))) then
+			v91 = v10.BossFightRemains();
+			v92 = v91;
+			if ((v92 == (53064 - 41953)) or ((9314 - 4830) == (46 + 742))) then
+				v92 = v10.FightRemains(v94, false);
+			end
+			v98 = v101(v96);
+			v81 = v62.Apocalypse:TimeSinceLastCast() <= (29 - 14);
+			v82 = (v81 and ((1 + 14) - v62.Apocalypse:TimeSinceLastCast())) or (0 - 0);
+			v83 = v62.ArmyoftheDead:TimeSinceLastCast() <= (47 - (12 + 5));
+			v84 = (v83 and ((116 - 86) - v62.ArmyoftheDead:TimeSinceLastCast())) or (0 - 0);
+			v85 = v93:GargActive();
+			v86 = v93:GargRemains();
+			v90 = v16:DebuffStack(v62.FesteringWoundDebuff);
+		end
+		if (((9710 - 5142) >= (9688 - 5781)) and v71.TargetIsValid()) then
+			if (((253 + 993) < (5443 - (1656 + 317))) and not v14:IsCasting() and not v14:IsChanneling()) then
+				local v189 = 0 + 0;
+				local v190;
+				while true do
+					if (((3260 + 808) >= (2584 - 1612)) and (v189 == (4 - 3))) then
+						v190 = v71.Interrupt(v62.MindFreeze, 369 - (5 + 349), true, v21, v64.MindFreezeMouseover);
+						if (((2341 - 1848) < (5164 - (266 + 1005))) and v190) then
+							return v190;
+						end
+						break;
+					end
+					if (((0 + 0) == v189) or ((5025 - 3552) >= (4386 - 1054))) then
+						v190 = v71.Interrupt(v62.MindFreeze, 1711 - (561 + 1135), true);
+						if (v190 or ((5278 - 1227) <= (3802 - 2645))) then
+							return v190;
+						end
+						v189 = 1067 - (507 + 559);
+					end
+				end
+			end
+			if (((1515 - 911) < (8909 - 6028)) and not v14:AffectingCombat()) then
+				local v191 = 388 - (212 + 176);
+				local v192;
+				while true do
+					if ((v191 == (905 - (250 + 655))) or ((2454 - 1554) == (5900 - 2523))) then
+						v192 = v115();
+						if (((6975 - 2516) > (2547 - (1869 + 87))) and v192) then
+							return v192;
+						end
+						break;
+					end
+				end
+			end
+			if (((11785 - 8387) >= (4296 - (484 + 1417))) and v62.DeathStrike:IsReady() and not v70) then
+				if (v20(v62.DeathStrike) or ((4678 - 2495) >= (4732 - 1908))) then
+					return "death_strike low hp or proc";
+				end
+			end
+			if (((2709 - (48 + 725)) == (3162 - 1226)) and (v95 == (0 - 0))) then
+				if ((v62.Outbreak:IsReady() and (v98 > (0 + 0))) or ((12912 - 8080) < (1208 + 3105))) then
+					if (((1192 + 2896) > (4727 - (152 + 701))) and v20(v62.Outbreak, nil, nil, not v16:IsSpellInRange(v62.Outbreak))) then
+						return "outbreak out_of_range";
+					end
+				end
+				if (((5643 - (430 + 881)) == (1659 + 2673)) and v62.Epidemic:IsReady() and v29 and (v62.VirulentPlagueDebuff:AuraActiveCount() > (896 - (557 + 338))) and not v78) then
+					if (((1182 + 2817) >= (8172 - 5272)) and v20(v62.Epidemic, v56, nil, not v16:IsInRange(140 - 100))) then
+						return "epidemic out_of_range";
+					end
+				end
+				if ((v62.DeathCoil:IsReady() and (v62.VirulentPlagueDebuff:AuraActiveCount() < (4 - 2)) and not v78) or ((5441 - 2916) > (4865 - (499 + 302)))) then
+					if (((5237 - (39 + 827)) == (12066 - 7695)) and v20(v62.DeathCoil, nil, nil, not v16:IsSpellInRange(v62.DeathCoil))) then
+						return "death_coil out_of_range";
+					end
+				end
+			end
+			v127();
+			local v167 = v123();
+			if (v167 or ((593 - 327) > (19803 - 14817))) then
+				return v167;
+			end
+			local v167 = v116();
+			if (((3056 - 1065) >= (80 + 845)) and v167) then
+				return v167;
+			end
+			if (((1331 - 876) < (329 + 1724)) and v30 and not v72) then
+				local v193 = 0 - 0;
+				local v194;
+				while true do
+					if ((v193 == (104 - (103 + 1))) or ((1380 - (475 + 79)) == (10486 - 5635))) then
+						v194 = v122();
+						if (((585 - 402) == (24 + 159)) and v194) then
+							return v194;
+						end
+						break;
+					end
+				end
+			end
+			if (((1021 + 138) <= (3291 - (1395 + 108))) and v30 and v79) then
+				local v195 = 0 - 0;
+				local v196;
+				while true do
+					if ((v195 == (1204 - (7 + 1197))) or ((1530 + 1977) > (1507 + 2811))) then
+						v196 = v121();
+						if (v196 or ((3394 - (27 + 292)) <= (8688 - 5723))) then
+							return v196;
+						end
+						break;
+					end
+				end
+			end
+			if (((1740 - 375) <= (8433 - 6422)) and v29 and v30 and v80) then
+				local v197 = 0 - 0;
+				local v198;
+				while true do
+					if ((v197 == (0 - 0)) or ((2915 - (43 + 96)) > (14582 - 11007))) then
+						v198 = v119();
+						if (v198 or ((5773 - 3219) == (3987 + 817))) then
+							return v198;
+						end
+						break;
+					end
+				end
+			end
+			if (((728 + 1849) == (5092 - 2515)) and v30) then
+				local v199 = 0 + 0;
+				local v200;
+				while true do
+					if ((v199 == (0 - 0)) or ((2 + 4) >= (139 + 1750))) then
+						v200 = v124();
+						if (((2257 - (1414 + 337)) <= (3832 - (1642 + 298))) and v200) then
+							return v200;
+						end
+						break;
+					end
+				end
+			end
+			if (v29 or ((5234 - 3226) > (6380 - 4162))) then
+				local v201 = 0 - 0;
+				while true do
+					if (((125 + 254) <= (3227 + 920)) and ((972 - (357 + 615)) == v201)) then
+						if ((v80 and (v88:CooldownRemains() < (8 + 2)) and v14:BuffDown(v62.DeathAndDecayBuff)) or ((11075 - 6561) <= (865 + 144))) then
+							local v206 = 0 - 0;
+							local v207;
+							while true do
+								if (((0 + 0) == v206) or ((238 + 3258) == (750 + 442))) then
+									v207 = v120();
+									if (v207 or ((1509 - (384 + 917)) == (3656 - (128 + 569)))) then
+										return v207;
+									end
+									break;
+								end
+							end
+						end
+						if (((5820 - (1407 + 136)) >= (3200 - (687 + 1200))) and (v95 >= (1714 - (556 + 1154))) and v14:BuffUp(v62.DeathAndDecayBuff)) then
+							local v208 = 0 - 0;
+							local v209;
+							while true do
+								if (((2682 - (9 + 86)) < (3595 - (275 + 146))) and ((0 + 0) == v208)) then
+									v209 = v118();
+									if (v209 or ((4184 - (29 + 35)) <= (9741 - 7543))) then
+										return v209;
+									end
+									break;
+								end
+							end
+						end
+						v201 = 2 - 1;
+					end
+					if (((4 - 3) == v201) or ((1040 + 556) == (1870 - (53 + 959)))) then
+						if (((3628 - (312 + 96)) == (5588 - 2368)) and (v95 >= (289 - (147 + 138))) and (((v88:CooldownRemains() > (909 - (813 + 86))) and v14:BuffDown(v62.DeathAndDecayBuff)) or not v80)) then
+							local v210 = 0 + 0;
+							local v211;
+							while true do
+								if ((v210 == (0 - 0)) or ((1894 - (18 + 474)) > (1222 + 2398))) then
+									v211 = v117();
+									if (((8401 - 5827) == (3660 - (860 + 226))) and v211) then
+										return v211;
+									end
+									break;
+								end
+							end
+						end
+						break;
+					end
+				end
+			end
+			if (((2101 - (121 + 182)) < (340 + 2417)) and (v95 <= (1243 - (988 + 252)))) then
+				local v202 = 0 + 0;
+				local v203;
+				while true do
+					if ((v202 == (0 + 0)) or ((2347 - (49 + 1921)) > (3494 - (223 + 667)))) then
+						v203 = v125();
+						if (((620 - (51 + 1)) < (1567 - 656)) and v203) then
+							return v203;
+						end
+						break;
+					end
+				end
+			end
+			if (((7034 - 3749) < (5353 - (146 + 979))) and v62.FesteringStrike:IsReady()) then
+				if (((1106 + 2810) > (3933 - (311 + 294))) and v20(v62.FesteringStrike, nil, nil)) then
+					return "festering_strike precombat 8";
+				end
+			end
+		end
+	end
+	local function v129()
+		local v162 = 0 - 0;
+		while true do
+			if (((1059 + 1441) < (5282 - (496 + 947))) and (v162 == (1358 - (1233 + 125)))) then
+				v62.VirulentPlagueDebuff:RegisterAuraTracking();
+				v62.FesteringWoundDebuff:RegisterAuraTracking();
+				v162 = 1 + 0;
+			end
+			if (((455 + 52) == (97 + 410)) and (v162 == (1646 - (963 + 682)))) then
+				v10.Print("Unholy DK by Epic. Work in Progress Gojira");
 				break;
 			end
 		end
 	end
-	v9.SetAPL(710 - (337 + 121), v127, v128);
+	v10.SetAPL(211 + 41, v128, v129);
 end;
 return v0["Epix_DeathKnight_Unholy.lua"]();
 
