@@ -1378,7 +1378,7 @@ Commons.LastFocusSwap = 0
 function Commons.FocusSpecifiedUnit(UnitToFocus, Range)
   local cycleDelay = 800
   if not Range then Range = 40; end
-  if UnitToFocus ~= nil and (Focus == nil or not Focus:Exists() or UnitToFocus:GUID() ~= Focus:GUID()) and UnitToFocus:IsInRange(Range) then
+  if UnitToFocus ~= nil and (Focus == nil or not Focus:Exists() or UnitToFocus:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(UnitToFocus:ID())
     if (GetTime() - Commons.LastFocusSwap)*1000 >= cycleDelay then
       Commons.LastFocusSwap = GetTime()
@@ -1417,7 +1417,7 @@ function Commons.FocusUnitWithDebuffFromList(DebuffList, Range, maxRaid)
   if Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid) then
     NewFocusUnit = Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid)[1]
   end
-  if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) and NewFocusUnit:IsInRange(Range)then
+  if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(NewFocusUnit:ID())
     if (GetTime() - Commons.LastFocusSwap)*1000 >= cycleDelay then
       Commons.LastFocusSwap = GetTime()
@@ -1468,7 +1468,7 @@ function Commons.FocusUnit(IncludeDispellableUnits, Macros, Range, Role, maxRaid
   local cycleDelay = 800
   if not Range then Range = 40; end
   local NewFocusUnit = Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid);
-  if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) and NewFocusUnit:IsInRange(Range) then
+  if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(NewFocusUnit:ID())
     if (GetTime() - Commons.LastFocusSwap)*1000 >= cycleDelay then
       Commons.LastFocusSwap = GetTime()
@@ -1513,7 +1513,7 @@ function Commons.FocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer
   local cycleDelay = 800
   if not Range then Range = 40; end
   local NewFocusUnit = Commons.GetFocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid);
-  if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) and NewFocusUnit:IsInRange(Range) then
+  if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(NewFocusUnit:ID())
     if (GetTime() - Commons.LastFocusSwap)*1000 >= cycleDelay then
       Commons.LastFocusSwap = GetTime()
