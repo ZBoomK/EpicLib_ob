@@ -102,6 +102,7 @@ function Commons.IsItTimeToRamp(id, times, duration)
   return false
 end
 
+-- Return which Boss  is casting the spell
 function Commons.GetCastingEnemy(spell)
   for _, u in pairs(Nameplate) do
     if u:Exists() and u:IsCasting(spell) then
@@ -112,6 +113,7 @@ function Commons.GetCastingEnemy(spell)
   return nil
 end
 
+-- Return which Boss is casting the spell
 function Commons.EnemiesWithDebuffCount(spell, range)
   local count = 0
   for _, u in pairs(Nameplate) do
@@ -312,7 +314,7 @@ do
     local PotionType = EpicSettings.Settings["DPSPotionName"]
     local PotionUsage = EpicSettings.Settings["DPSPotionUsage"]
     local SelectedPotion = Commons.PotionSelected()
-
+  
     if SelectedPotion and SelectedPotion:IsReady() then
       if PotionUsage == "Bloodlust+Cooldowns" then
         if Player:BloodlustUp() and CooldownsCondition then
@@ -334,10 +336,10 @@ do
           return true;
       end
     end
-
+  
     return false;
   end
-
+  
   function Commons.PotionSelected()
     local PotionType = EpicSettings.Settings["DPSPotionName"]
     local FleetingUltimatePowerPotionIDs = {
@@ -409,7 +411,7 @@ do
         local spoilsWithCrit = EpicSettings.Settings["NeltharusCrit"] or false
         local spoilsWithMastery = EpicSettings.Settings["NeltharusMastery"] or false
         local spoilsWithVersatility = EpicSettings.Settings["NeltharusVersatility"] or false
-
+        
         if trinketCondition == "Don't Use" then
           return false
         elseif trinketCondition == "At HP" then
@@ -471,7 +473,7 @@ do
     end
   end
 end
-
+  
 
 
 -- Interrupt
@@ -1168,7 +1170,7 @@ end
 do
   Commons.MindControllSpells = {};
   function Commons.IsMindControlled(FriendlyUnit)
-    if FriendlyUnit and FriendlyUnit:Exists() and not FriendlyUnit:IsDeadOrGhost() then
+    if FriendlyUnit and FriendlyUnit:Exists()and not FriendlyUnit:IsDeadOrGhost() then
       for i = 1, #Commons.MindControllSpells do
         if FriendlyUnit:DebuffUp(Commons.MindControllSpells[i], true) then
           return true;
@@ -1186,9 +1188,9 @@ function Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid)
   local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
-    if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role and FriendlyUnit:IsInRange(Range) then
-      if FriendlyUnit and FriendlyUnit:Exists() and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
-        if FriendlyUnit:HasHealAbsorb() > 0 then
+    if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
+      if FriendlyUnit and FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
+        if FriendlyUnit:HasHealAbsorb() then
           AbsorbUnit = FriendlyUnit;
         end
       end
@@ -1204,7 +1206,7 @@ function Commons.NamedUnit(Range, Name, maxRaid)
   local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
-    if FriendlyUnit and FriendlyUnit:Exists() and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) and FriendlyUnit:IsInRange(Range) then
+    if FriendlyUnit and FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
       if FriendlyUnit:Name() == Name then
         NamedUnit = FriendlyUnit;
       end
@@ -1221,7 +1223,7 @@ function Commons.LowestFriendlyUnit(Range, Role, maxRaid)
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
     if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
-      if FriendlyUnit and FriendlyUnit:Exists() and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) and FriendlyUnit:IsInRange(Range) then
+      if FriendlyUnit and FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
         if (not LowestUnit) or FriendlyUnit:HealthPercentage() < LowestUnit:HealthPercentage() then
           LowestUnit = FriendlyUnit;
         end
@@ -1238,8 +1240,8 @@ function Commons.LowestFriendlyUnitRefreshableBuff(Buff, Time, Range, Role, Excl
   local FriendlyUnits = Commons.FriendlyUnits(ExcludePlayer, maxRaid);
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
-    if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role and FriendlyUnit:IsInRange(Range) then
-      if FriendlyUnit and (FriendlyUnit:BuffDown(Buff) or FriendlyUnit:BuffRemains(Buff) < Time) and FriendlyUnit:Exists() and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
+    if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
+      if FriendlyUnit and (FriendlyUnit:BuffDown(Buff) or FriendlyUnit:BuffRemains(Buff) < Time) and FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
         if (not LowestUnit) or FriendlyUnit:HealthPercentage() < LowestUnit:HealthPercentage() then
           LowestUnit = FriendlyUnit;
         end
@@ -1256,7 +1258,7 @@ function Commons.FriendlyUnitsBelowHealthPercentageCount(HealthPercentage, maxRa
   local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
-    if FriendlyUnit:Exists() and not FriendlyUnit:IsDeadOrGhost() and FriendlyUnit:IsInRange(Range) then
+    if FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and not FriendlyUnit:IsDeadOrGhost() then
       if FriendlyUnit:HealthPercentage() <= HealthPercentage then
         Count = Count + 1;
       end
@@ -1304,7 +1306,7 @@ function Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid)
   local j = 1
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
-    if FriendlyUnit:Exists() and not FriendlyUnit:IsDeadOrGhost() and FriendlyUnit:IsInRange(Range) then
+    if FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and not FriendlyUnit:IsDeadOrGhost() then
       if Commons.UnitHasDebuffFromList(FriendlyUnit, DebuffList) then
         UnitsWithDebuff[j] = FriendlyUnits[i]
         j = j+1
@@ -1457,9 +1459,9 @@ function Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid)
       return DispellableFriendlyUnit;
     end
   end
+  local LowestAbsorbUnit = Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid);
+  if LowestAbsorbUnit then return LowestAbsorbUnit; end
   local LowestFriendlyUnit = Commons.LowestFriendlyUnit(Range, Role, maxRaid);
-  local LowestFriendlyUnitWithAbsorbs = Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid);
-  if LowestFriendlyUnitWithAbsorbs then return LowestFriendlyUnitWithAbsorbs; end
   if LowestFriendlyUnit then return LowestFriendlyUnit; end
 end
 
@@ -1604,14 +1606,14 @@ do
             return;
           end
         end
-
+        
         for i = 0, #Commons.Timers do
           if Commons.Timers[i] ~= nil and Commons.Timers[i].id == spellId then
             Commons.Timers[i].time = GetTime() + duration;
             return;
           end
         end
-
+        
         local timer = {};
         timer.id = spellId;
         timer.time = GetTime() + duration;
@@ -1639,7 +1641,7 @@ do
       BigWigsLoader.RegisterMessage(callback, "BigWigs_OnPluginDisable", cleanupTimersCallback);
     end
   end
-
+  
   function Commons.PulseTimers()
     if IsAddOnLoaded("DBM-Core") then
       -- Currently unsupported.
@@ -1671,7 +1673,7 @@ do
   function Commons.GetPullTimer()
     return Commons.GetTimer("Pull");
   end
-
+  
   function Commons.GetBreakTimer()
     return Commons.GetTimer("Break");
   end
