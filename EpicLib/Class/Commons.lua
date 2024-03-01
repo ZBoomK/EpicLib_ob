@@ -1190,7 +1190,7 @@ function Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid)
     local FriendlyUnit = FriendlyUnits[i];
     if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
       if FriendlyUnit and FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
-        if FriendlyUnit:HasHealAbsorb() then
+        if FriendlyUnit:HasHealAbsorb() > 100000 then
           AbsorbUnit = FriendlyUnit;
         end
       end
@@ -1459,8 +1459,8 @@ function Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid)
       return DispellableFriendlyUnit;
     end
   end
-  local LowestAbsorbUnit = Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid);
-  if LowestAbsorbUnit then return LowestAbsorbUnit; end
+  --local LowestAbsorbUnit = Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid);
+  --if LowestAbsorbUnit then return LowestAbsorbUnit; end
   local LowestFriendlyUnit = Commons.LowestFriendlyUnit(Range, Role, maxRaid);
   if LowestFriendlyUnit then return LowestFriendlyUnit; end
 end
