@@ -1,51 +1,43 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 1223 - (109 + 1114);
-	local v6;
-	while true do
-		if ((v5 == (1 - 0)) or ((1795 + 2814) <= (2737 - (6 + 236)))) then
-			return v6(...);
-		end
-		if (((726 + 426) == (928 + 224)) and (v5 == (0 - 0))) then
-			v6 = v0[v4];
-			if (((3311 - 1415) <= (4555 - (1076 + 57))) and not v6) then
-				return v1(v4, ...);
-			end
-			v5 = 1 + 0;
-		end
+	local v5 = v0[v4];
+	if (not v5 or ((30 + 3649) < (2457 - (1552 + 280)))) then
+		return v1(v4, ...);
 	end
+	return v5(...);
 end
 v0["Epix_Shaman_Elemental.lua"] = function(...)
-	local v7, v8 = ...;
-	local v9 = EpicDBC.DBC;
-	local v10 = EpicLib;
-	local v11 = EpicCache;
-	local v12 = v10.Unit;
-	local v13 = v10.Utils;
-	local v14 = v12.Player;
-	local v15 = v12.MouseOver;
-	local v16 = v12.Pet;
-	local v17 = v12.Target;
-	local v18 = v12.Focus;
-	local v19 = v10.Spell;
-	local v20 = v10.MultiSpell;
-	local v21 = v10.Item;
-	local v22 = EpicLib;
-	local v23 = v22.Cast;
-	local v24 = v22.Macro;
-	local v25 = v22.Press;
-	local v26 = v22.Commons.Everyone.num;
-	local v27 = v22.Commons.Everyone.bool;
-	local v28 = math.max;
-	local v29 = GetTime;
-	local v30 = GetWeaponEnchantInfo;
-	local v31;
+	local v6, v7 = ...;
+	local v8 = EpicDBC.DBC;
+	local v9 = EpicLib;
+	local v10 = EpicCache;
+	local v11 = v9.Unit;
+	local v12 = v9.Utils;
+	local v13 = v11.Player;
+	local v14 = v11.MouseOver;
+	local v15 = v11.Pet;
+	local v16 = v11.Target;
+	local v17 = v11.Focus;
+	local v18 = v9.Spell;
+	local v19 = v9.MultiSpell;
+	local v20 = v9.Item;
+	local v21 = EpicLib;
+	local v22 = v21.Cast;
+	local v23 = v21.Macro;
+	local v24 = v21.Press;
+	local v25 = v21.Commons.Everyone.num;
+	local v26 = v21.Commons.Everyone.bool;
+	local v27 = math.max;
+	local v28 = GetTime;
+	local v29 = GetWeaponEnchantInfo;
+	local v30;
+	local v31 = false;
 	local v32 = false;
 	local v33 = false;
 	local v34 = false;
 	local v35 = false;
-	local v36 = false;
+	local v36;
 	local v37;
 	local v38;
 	local v39;
@@ -109,97 +101,111 @@ v0["Epix_Shaman_Elemental.lua"] = function(...)
 	local v97;
 	local v98;
 	local v99;
-	local v100;
-	local v101 = v19.Shaman.Elemental;
-	local v102 = v21.Shaman.Elemental;
-	local v103 = v24.Shaman.Elemental;
-	local v104 = {};
-	local v105 = v22.Commons.Everyone;
-	local v106 = v22.Commons.Shaman;
-	local function v107()
-		if (v101.CleanseSpirit:IsAvailable() or ((1679 - (579 + 110)) > (128 + 1492))) then
-			v105.DispellableDebuffs = v105.DispellableCurseDebuffs;
+	local v100 = v18.Shaman.Elemental;
+	local v101 = v20.Shaman.Elemental;
+	local v102 = v23.Shaman.Elemental;
+	local v103 = {};
+	local v104 = v21.Commons.Everyone;
+	local v105 = v21.Commons.Shaman;
+	local function v106()
+		if (v100.CleanseSpirit:IsAvailable() or ((5459 - (64 + 770)) < (430 + 202))) then
+			v104.DispellableDebuffs = v104.DispellableCurseDebuffs;
 		end
 	end
-	v10:RegisterForEvent(function()
-		v107();
+	v9:RegisterForEvent(function()
+		v106();
 	end, "ACTIVE_PLAYER_SPECIALIZATION_CHANGED");
-	v10:RegisterForEvent(function()
-		v101.PrimordialWave:RegisterInFlightEffect(289256 + 37906);
-		v101.PrimordialWave:RegisterInFlight();
-		v101.LavaBurst:RegisterInFlight();
+	v9:RegisterForEvent(function()
+		local v146 = 0 - 0;
+		while true do
+			if ((v146 == (1 + 0)) or ((1326 - (157 + 1086)) > (3562 - 1782))) then
+				v100.LavaBurst:RegisterInFlight();
+				break;
+			end
+			if (((2391 - 1845) <= (1652 - 575)) and (v146 == (0 - 0))) then
+				v100.PrimordialWave:RegisterInFlightEffect(327981 - (599 + 220));
+				v100.PrimordialWave:RegisterInFlight();
+				v146 = 1 - 0;
+			end
+		end
 	end, "LEARNED_SPELL_IN_TAB");
-	v101.PrimordialWave:RegisterInFlightEffect(173634 + 153528);
-	v101.PrimordialWave:RegisterInFlight();
-	v101.LavaBurst:RegisterInFlight();
-	local v108 = 11518 - (174 + 233);
-	local v109 = 31036 - 19925;
-	local v110, v111;
-	local v112, v113;
-	local v114 = 0 - 0;
-	local v115 = 0 + 0;
-	local v116 = 1174 - (663 + 511);
-	local v117 = 0 + 0;
-	local v118 = 0 + 0;
-	local function v119()
-		return (123 - 83) - (v29() - v116);
+	v100.PrimordialWave:RegisterInFlightEffect(329093 - (1813 + 118));
+	v100.PrimordialWave:RegisterInFlight();
+	v100.LavaBurst:RegisterInFlight();
+	local v107 = 8122 + 2989;
+	local v108 = 12328 - (841 + 376);
+	local v109, v110;
+	local v111, v112;
+	local v113 = 0 - 0;
+	local v114 = 0 + 0;
+	local v115 = 0 - 0;
+	local v116 = 859 - (464 + 395);
+	local v117 = 0 - 0;
+	local function v118()
+		return (20 + 20) - (v28() - v115);
 	end
-	v10:RegisterForSelfCombatEvent(function(...)
-		local v147 = 0 + 0;
+	v9:RegisterForSelfCombatEvent(function(...)
+		local v147 = 837 - (467 + 370);
 		local v148;
 		local v149;
 		local v150;
 		while true do
-			if ((v147 == (0 - 0)) or ((2122 - 1245) > (2241 + 2454))) then
-				v148, v149, v149, v149, v150 = select(15 - 7, ...);
-				if (((1918 + 773) >= (170 + 1681)) and (v148 == v14:GUID()) and (v150 == (192356 - (478 + 244)))) then
-					v117 = v29();
-					C_Timer.After(517.1 - (440 + 77), function()
-						if ((v117 ~= v118) or ((1358 + 1627) >= (17773 - 12917))) then
-							v116 = v117;
+			if ((v147 == (0 - 0)) or ((732 + 264) > (14743 - 10442))) then
+				v148, v149, v149, v149, v150 = select(2 + 6, ...);
+				if (((9469 - 5399) > (1207 - (150 + 370))) and (v148 == v13:GUID()) and (v150 == (192916 - (74 + 1208)))) then
+					local v247 = 0 - 0;
+					while true do
+						if ((v247 == (0 - 0)) or ((467 + 189) >= (3720 - (14 + 376)))) then
+							v116 = v28();
+							C_Timer.After(0.1 - 0, function()
+								if ((v116 ~= v117) or ((1613 + 879) <= (295 + 40))) then
+									v115 = v116;
+								end
+							end);
+							break;
 						end
-					end);
+					end
 				end
 				break;
 			end
 		end
 	end, "SPELL_AURA_APPLIED");
-	local function v120(v151)
-		return (v151:DebuffRefreshable(v101.FlameShockDebuff));
+	local function v119(v151)
+		return (v151:DebuffRefreshable(v100.FlameShockDebuff));
 	end
-	local function v121(v152)
-		return v152:DebuffRefreshable(v101.FlameShockDebuff) and (v152:DebuffRemains(v101.FlameShockDebuff) < (v152:TimeToDie() - (1561 - (655 + 901))));
+	local function v120(v152)
+		return v152:DebuffRefreshable(v100.FlameShockDebuff) and (v152:DebuffRemains(v100.FlameShockDebuff) < (v152:TimeToDie() - (5 + 0)));
 	end
-	local function v122(v153)
-		return v153:DebuffRefreshable(v101.FlameShockDebuff) and (v153:DebuffRemains(v101.FlameShockDebuff) < (v153:TimeToDie() - (1 + 4))) and (v153:DebuffRemains(v101.FlameShockDebuff) > (0 + 0));
+	local function v121(v153)
+		return v153:DebuffRefreshable(v100.FlameShockDebuff) and (v153:DebuffRemains(v100.FlameShockDebuff) < (v153:TimeToDie() - (14 - 9))) and (v153:DebuffRemains(v100.FlameShockDebuff) > (0 + 0));
 	end
-	local function v123(v154)
-		return (v154:DebuffRemains(v101.FlameShockDebuff));
+	local function v122(v154)
+		return (v154:DebuffRemains(v100.FlameShockDebuff));
 	end
-	local function v124(v155)
-		return v155:DebuffRemains(v101.FlameShockDebuff) > (2 + 0);
+	local function v123(v155)
+		return v155:DebuffRemains(v100.FlameShockDebuff) > (80 - (23 + 55));
 	end
-	local function v125(v156)
-		return (v156:DebuffRemains(v101.LightningRodDebuff));
+	local function v124(v156)
+		return (v156:DebuffRemains(v100.LightningRodDebuff));
 	end
-	local function v126()
+	local function v125()
 		local v157 = 0 - 0;
 		local v158;
 		while true do
-			if (((5721 - (695 + 750)) >= (4080 - 2885)) and (v157 == (0 - 0))) then
-				v158 = v14:Maelstrom();
-				if (((12998 - 9766) <= (5041 - (285 + 66))) and not v14:IsCasting()) then
+			if (((2885 + 1437) >= (2301 + 261)) and (v157 == (0 - 0))) then
+				v158 = v13:Maelstrom();
+				if (not v13:IsCasting() or ((1145 + 2492) >= (4671 - (652 + 249)))) then
 					return v158;
-				elseif (v14:IsCasting(v101.ElementalBlast) or ((2088 - 1192) >= (4456 - (682 + 628)))) then
-					return v158 - (13 + 62);
-				elseif (((3360 - (176 + 123)) >= (1238 + 1720)) and v14:IsCasting(v101.Icefury)) then
-					return v158 + 19 + 6;
-				elseif (((3456 - (239 + 30)) >= (176 + 468)) and v14:IsCasting(v101.LightningBolt)) then
-					return v158 + 10 + 0;
-				elseif (((1139 - 495) <= (2196 - 1492)) and v14:IsCasting(v101.LavaBurst)) then
-					return v158 + (327 - (306 + 9));
-				elseif (((3342 - 2384) > (165 + 782)) and v14:IsCasting(v101.ChainLightning)) then
-					return v158 + ((3 + 1) * v115);
+				elseif (v13:IsCasting(v100.ElementalBlast) or ((6366 - 3987) > (6446 - (708 + 1160)))) then
+					return v158 - (203 - 128);
+				elseif (v13:IsCasting(v100.Icefury) or ((880 - 397) > (770 - (10 + 17)))) then
+					return v158 + 6 + 19;
+				elseif (((4186 - (1400 + 332)) > (1108 - 530)) and v13:IsCasting(v100.LightningBolt)) then
+					return v158 + (1918 - (242 + 1666));
+				elseif (((398 + 532) < (1634 + 2824)) and v13:IsCasting(v100.LavaBurst)) then
+					return v158 + 11 + 1;
+				elseif (((1602 - (850 + 90)) <= (1701 - 729)) and v13:IsCasting(v100.ChainLightning)) then
+					return v158 + ((1394 - (360 + 1030)) * v114);
 				else
 					return v158;
 				end
@@ -207,62 +213,62 @@ v0["Epix_Shaman_Elemental.lua"] = function(...)
 			end
 		end
 	end
-	local function v127(v159)
+	local function v126(v159)
 		local v160 = 0 + 0;
 		local v161;
 		while true do
-			if (((12845 - 8353) >= (4029 - (1140 + 235))) and (v160 == (0 + 0))) then
+			if (((12334 - 7964) == (6012 - 1642)) and (v160 == (1661 - (909 + 752)))) then
 				v161 = v159:IsReady();
-				if (((3157 + 285) >= (386 + 1117)) and ((v159 == v101.Stormkeeper) or (v159 == v101.ElementalBlast) or (v159 == v101.Icefury))) then
-					local v254 = 52 - (33 + 19);
-					local v255;
+				if ((v159 == v100.Stormkeeper) or (v159 == v100.ElementalBlast) or (v159 == v100.Icefury) or ((5985 - (109 + 1114)) <= (1576 - 715))) then
+					local v248 = 0 + 0;
+					local v249;
 					while true do
-						if (((0 + 0) == v254) or ((9501 - 6331) <= (645 + 819))) then
-							v255 = v14:BuffUp(v101.SpiritwalkersGraceBuff) or not v14:IsMoving();
-							return v161 and v255 and not v14:IsCasting(v159);
+						if ((v248 == (242 - (6 + 236))) or ((890 + 522) == (3433 + 831))) then
+							v249 = v13:BuffUp(v100.SpiritwalkersGraceBuff) or not v13:IsMoving();
+							return v161 and v249 and not v13:IsCasting(v159);
 						end
 					end
-				elseif ((v159 == v101.LavaBeam) or ((9407 - 4610) == (4115 + 273))) then
-					local v270 = 689 - (586 + 103);
-					local v271;
+				elseif ((v159 == v100.LavaBeam) or ((7471 - 4303) < (3760 - 1607))) then
+					local v259 = 1133 - (1076 + 57);
+					local v260;
 					while true do
-						if (((51 + 500) <= (2096 - 1415)) and (v270 == (1488 - (1309 + 179)))) then
-							v271 = v14:BuffUp(v101.SpiritwalkersGraceBuff) or not v14:IsMoving();
-							return v161 and v271;
+						if ((v259 == (0 + 0)) or ((5665 - (579 + 110)) < (106 + 1226))) then
+							v260 = v13:BuffUp(v100.SpiritwalkersGraceBuff) or not v13:IsMoving();
+							return v161 and v260;
 						end
 					end
-				elseif (((5915 - 2638) > (178 + 229)) and ((v159 == v101.LightningBolt) or (v159 == v101.ChainLightning))) then
-					local v279 = 0 - 0;
-					local v280;
+				elseif (((4092 + 536) == (2457 + 2171)) and ((v159 == v100.LightningBolt) or (v159 == v100.ChainLightning))) then
+					local v267 = 407 - (174 + 233);
+					local v268;
 					while true do
-						if (((3547 + 1148) >= (3006 - 1591)) and (v279 == (0 - 0))) then
-							v280 = v14:BuffUp(v101.SpiritwalkersGraceBuff) or v14:BuffUp(v101.StormkeeperBuff) or not v14:IsMoving();
-							return v161 and v280;
+						if ((v267 == (0 - 0)) or ((94 - 40) == (176 + 219))) then
+							v268 = v13:BuffUp(v100.SpiritwalkersGraceBuff) or v13:BuffUp(v100.StormkeeperBuff) or not v13:IsMoving();
+							return v161 and v268;
 						end
 					end
-				elseif ((v159 == v101.LavaBurst) or ((3821 - (295 + 314)) <= (2318 - 1374))) then
-					local v288 = 1962 - (1300 + 662);
-					local v289;
-					local v290;
-					local v291;
-					local v292;
+				elseif (((1256 - (663 + 511)) == (74 + 8)) and (v159 == v100.LavaBurst)) then
+					local v273 = 0 + 0;
+					local v274;
+					local v275;
+					local v276;
+					local v277;
 					while true do
-						if (((3 - 2) == v288) or ((4851 - (1178 + 577)) <= (934 + 864))) then
-							v291 = (v101.LavaBurst:Charges() >= (2 - 1)) and not v14:IsCasting(v101.LavaBurst);
-							v292 = (v101.LavaBurst:Charges() == (1407 - (851 + 554))) and v14:IsCasting(v101.LavaBurst);
-							v288 = 2 + 0;
+						if ((v273 == (5 - 3)) or ((352 + 229) < (663 - 381))) then
+							return v161 and v274 and (v275 or v276 or v277);
 						end
-						if (((9809 - 6272) == (7681 - 4144)) and (v288 == (304 - (115 + 187)))) then
-							return v161 and v289 and (v290 or v291 or v292);
+						if ((v273 == (0 - 0)) or ((2200 + 2409) < (4856 - 2361))) then
+							v274 = v13:BuffUp(v100.SpiritwalkersGraceBuff) or v13:BuffUp(v100.LavaSurgeBuff) or not v13:IsMoving();
+							v275 = v13:BuffUp(v100.LavaSurgeBuff);
+							v273 = 1 + 0;
 						end
-						if (((2939 + 898) >= (1487 + 83)) and (v288 == (0 - 0))) then
-							v289 = v14:BuffUp(v101.SpiritwalkersGraceBuff) or v14:BuffUp(v101.LavaSurgeBuff) or not v14:IsMoving();
-							v290 = v14:BuffUp(v101.LavaSurgeBuff);
-							v288 = 1162 - (160 + 1001);
+						if (((106 + 1046) == (1874 - (478 + 244))) and (v273 == (518 - (440 + 77)))) then
+							v276 = (v100.LavaBurst:Charges() >= (1 + 0)) and not v13:IsCasting(v100.LavaBurst);
+							v277 = (v100.LavaBurst:Charges() == (7 - 5)) and v13:IsCasting(v100.LavaBurst);
+							v273 = 1558 - (655 + 901);
 						end
 					end
-				elseif ((v159 == v101.PrimordialWave) or ((2581 + 369) == (2631 + 1181))) then
-					return v161 and v34 and v14:BuffDown(v101.PrimordialWaveBuff) and v14:BuffDown(v101.LavaSurgeBuff);
+				elseif (((352 + 1544) <= (2620 + 802)) and (v159 == v100.PrimordialWave)) then
+					return v161 and v33 and v13:BuffDown(v100.PrimordialWaveBuff) and v13:BuffDown(v100.LavaSurgeBuff);
 				else
 					return v161;
 				end
@@ -270,737 +276,694 @@ v0["Epix_Shaman_Elemental.lua"] = function(...)
 			end
 		end
 	end
-	local function v128()
-		local v162 = 0 - 0;
+	local function v127()
+		local v162 = 0 + 0;
 		local v163;
 		while true do
-			if (((5081 - (237 + 121)) >= (3215 - (525 + 372))) and (v162 == (0 - 0))) then
-				if (not v101.MasteroftheElements:IsAvailable() or ((6659 - 4632) > (2994 - (96 + 46)))) then
+			if ((v162 == (0 - 0)) or ((2435 - (695 + 750)) > (5531 - 3911))) then
+				if (not v100.MasteroftheElements:IsAvailable() or ((1353 - 476) > (18882 - 14187))) then
 					return false;
 				end
-				v163 = v14:BuffUp(v101.MasteroftheElementsBuff);
-				v162 = 778 - (643 + 134);
+				v163 = v13:BuffUp(v100.MasteroftheElementsBuff);
+				v162 = 352 - (285 + 66);
 			end
-			if ((v162 == (1 + 0)) or ((2723 - 1587) > (16027 - 11710))) then
-				if (((4554 + 194) == (9317 - 4569)) and not v14:IsCasting()) then
+			if (((6272 - 3581) >= (3161 - (682 + 628))) and (v162 == (1 + 0))) then
+				if (not v13:IsCasting() or ((3284 - (176 + 123)) >= (2032 + 2824))) then
 					return v163;
-				elseif (((7636 - 3900) <= (5459 - (316 + 403))) and v14:IsCasting(v106.LavaBurst)) then
+				elseif (((3102 + 1174) >= (1464 - (239 + 30))) and v13:IsCasting(v105.LavaBurst)) then
 					return true;
-				elseif (v14:IsCasting(v106.ElementalBlast) or v14:IsCasting(v101.Icefury) or v14:IsCasting(v101.LightningBolt) or v14:IsCasting(v101.ChainLightning) or ((2254 + 1136) <= (8413 - 5353))) then
+				elseif (((879 + 2353) <= (4508 + 182)) and (v13:IsCasting(v105.ElementalBlast) or v13:IsCasting(v100.Icefury) or v13:IsCasting(v100.LightningBolt) or v13:IsCasting(v100.ChainLightning))) then
 					return false;
 				else
 					return v163;
 				end
 				break;
+			end
+		end
+	end
+	local function v128()
+		local v164 = 0 - 0;
+		local v165;
+		while true do
+			if ((v164 == (2 - 1)) or ((1211 - (306 + 9)) >= (10978 - 7832))) then
+				if (((533 + 2528) >= (1815 + 1143)) and not v13:IsCasting()) then
+					return v165 > (0 + 0);
+				elseif (((9113 - 5926) >= (2019 - (1140 + 235))) and (v165 == (1 + 0)) and (v13:IsCasting(v100.LightningBolt) or v13:IsCasting(v100.ChainLightning))) then
+					return false;
+				else
+					return v165 > (0 + 0);
+				end
+				break;
+			end
+			if (((166 + 478) <= (756 - (33 + 19))) and ((0 + 0) == v164)) then
+				if (((2871 - 1913) > (418 + 529)) and not v100.PoweroftheMaelstrom:IsAvailable()) then
+					return false;
+				end
+				v165 = v13:BuffStack(v100.PoweroftheMaelstromBuff);
+				v164 = 1 - 0;
 			end
 		end
 	end
 	local function v129()
-		if (not v101.PoweroftheMaelstrom:IsAvailable() or ((362 + 637) > (6781 - 4088))) then
+		if (((4213 + 279) >= (3343 - (586 + 103))) and not v100.Stormkeeper:IsAvailable()) then
 			return false;
 		end
-		local v164 = v14:BuffStack(v101.PoweroftheMaelstromBuff);
-		if (((329 + 134) < (194 + 407)) and not v14:IsCasting()) then
-			return v164 > (0 - 0);
-		elseif (((v164 == (4 - 3)) and (v14:IsCasting(v101.LightningBolt) or v14:IsCasting(v101.ChainLightning))) or ((4534 - 2351) < (40 + 647))) then
-			return false;
+		local v166 = v13:BuffUp(v100.StormkeeperBuff);
+		if (((314 + 3128) >= (4627 - 3124)) and not v13:IsCasting()) then
+			return v166;
+		elseif (v13:IsCasting(v100.Stormkeeper) or ((4658 - (1309 + 179)) <= (2642 - 1178))) then
+			return true;
 		else
-			return v164 > (0 - 0);
+			return v166;
 		end
 	end
 	local function v130()
-		local v165 = 0 + 0;
-		local v166;
-		while true do
-			if (((13383 - 8834) == (4566 - (12 + 5))) and (v165 == (0 - 0))) then
-				if (((9967 - 5295) == (9930 - 5258)) and not v101.Stormkeeper:IsAvailable()) then
-					return false;
-				end
-				v166 = v14:BuffUp(v101.StormkeeperBuff);
-				v165 = 2 - 1;
-			end
-			if ((v165 == (1 + 0)) or ((5641 - (1656 + 317)) < (352 + 43))) then
-				if (not v14:IsCasting() or ((3339 + 827) == (1209 - 754))) then
-					return v166;
-				elseif (v14:IsCasting(v101.Stormkeeper) or ((21895 - 17446) == (3017 - (5 + 349)))) then
-					return true;
-				else
-					return v166;
-				end
-				break;
-			end
+		if (not v100.Icefury:IsAvailable() or ((2088 + 2709) == (11784 - 7396))) then
+			return false;
+		end
+		local v167 = v13:BuffUp(v100.IcefuryBuff);
+		if (((417 + 134) <= (1446 - 765)) and not v13:IsCasting()) then
+			return v167;
+		elseif (((6529 - 3252) > (1016 - (295 + 314))) and v13:IsCasting(v100.Icefury)) then
+			return true;
+		else
+			return v167;
 		end
 	end
-	local function v131()
-		local v167 = 0 - 0;
-		local v168;
-		while true do
-			if ((v167 == (1272 - (266 + 1005))) or ((2819 + 1458) < (10198 - 7209))) then
-				if (not v14:IsCasting() or ((1145 - 275) >= (5845 - (561 + 1135)))) then
-					return v168;
-				elseif (((2882 - 670) < (10462 - 7279)) and v14:IsCasting(v101.Icefury)) then
-					return true;
-				else
-					return v168;
-				end
-				break;
-			end
-			if (((5712 - (507 + 559)) > (7507 - 4515)) and ((0 - 0) == v167)) then
-				if (((1822 - (212 + 176)) < (4011 - (250 + 655))) and not v101.Icefury:IsAvailable()) then
-					return false;
-				end
-				v168 = v14:BuffUp(v101.IcefuryBuff);
-				v167 = 2 - 1;
-			end
-		end
-	end
-	local v132 = 0 - 0;
-	local function v133()
-		if (((1229 - 443) < (4979 - (1869 + 87))) and v101.CleanseSpirit:IsReady() and v36 and v105.DispellableFriendlyUnit(86 - 61)) then
-			local v196 = 1901 - (484 + 1417);
+	local v131 = 0 - 0;
+	local function v132()
+		if (((6657 - (1300 + 662)) >= (4443 - 3028)) and v100.CleanseSpirit:IsReady() and v35 and v104.DispellableFriendlyUnit(1780 - (1178 + 577))) then
+			local v182 = 0 + 0;
 			while true do
-				if ((v196 == (0 - 0)) or ((4092 - 1650) < (847 - (48 + 725)))) then
-					if (((7408 - 2873) == (12166 - 7631)) and (v132 == (0 + 0))) then
-						v132 = v29();
+				if ((v182 == (0 - 0)) or ((4617 - (851 + 554)) <= (835 + 109))) then
+					if ((v131 == (0 - 0)) or ((6723 - 3627) <= (2100 - (115 + 187)))) then
+						v131 = v28();
 					end
-					if (v105.Wait(1336 - 836, v132) or ((843 + 2166) <= (614 + 1491))) then
-						if (((2683 - (152 + 701)) < (4980 - (430 + 881))) and v25(v103.CleanseSpiritFocus)) then
+					if (((2709 + 828) == (3349 + 188)) and v104.Wait(1970 - 1470, v131)) then
+						if (((4998 - (160 + 1001)) >= (1374 + 196)) and v24(v102.CleanseSpiritFocus)) then
 							return "cleanse_spirit dispel";
 						end
-						v132 = 0 + 0;
+						v131 = 0 + 0;
 					end
 					break;
 				end
 			end
 		end
 	end
-	local function v134()
-		if ((v99 and (v14:HealthPercentage() <= v100)) or ((2325 - (557 + 338)) >= (1068 + 2544))) then
-			if (((7560 - 4877) >= (8614 - 6154)) and v101.HealingSurge:IsReady()) then
-				if (v25(v101.HealingSurge) or ((4792 - 2988) >= (7057 - 3782))) then
+	local function v133()
+		if ((v98 and (v13:HealthPercentage() <= v99)) or ((6039 - 3089) == (4170 - (237 + 121)))) then
+			if (((5620 - (525 + 372)) >= (4394 - 2076)) and v100.HealingSurge:IsReady()) then
+				if (v24(v100.HealingSurge) or ((6659 - 4632) > (2994 - (96 + 46)))) then
 					return "healing_surge heal ooc";
 				end
 			end
 		end
 	end
-	local function v135()
-		local v169 = 801 - (499 + 302);
-		while true do
-			if ((v169 == (866 - (39 + 827))) or ((3911 - 2494) > (8104 - 4475))) then
-				if (((19045 - 14250) > (616 - 214)) and v101.AstralShift:IsReady() and v72 and (v14:HealthPercentage() <= v78)) then
-					if (((413 + 4400) > (10434 - 6869)) and v25(v101.AstralShift)) then
-						return "astral_shift defensive 1";
-					end
-				end
-				if (((626 + 3286) == (6189 - 2277)) and v101.AncestralGuidance:IsReady() and v71 and v105.AreUnitsBelowHealthPercentage(v76, v77)) then
-					if (((2925 - (103 + 1)) <= (5378 - (475 + 79))) and v25(v101.AncestralGuidance)) then
-						return "ancestral_guidance defensive 2";
-					end
-				end
-				v169 = 2 - 1;
+	local function v134()
+		if ((v100.AstralShift:IsReady() and v71 and (v13:HealthPercentage() <= v77)) or ((1913 - (643 + 134)) > (1559 + 2758))) then
+			if (((11384 - 6636) == (17627 - 12879)) and v24(v100.AstralShift)) then
+				return "astral_shift defensive 1";
 			end
-			if (((5561 - 3823) <= (284 + 1911)) and (v169 == (2 + 0))) then
-				if (((1544 - (1395 + 108)) <= (8782 - 5764)) and v93 and (v14:HealthPercentage() <= v95)) then
-					if (((3349 - (7 + 1197)) <= (1790 + 2314)) and (v97 == "Refreshing Healing Potion")) then
-						if (((939 + 1750) < (5164 - (27 + 292))) and v102.RefreshingHealingPotion:IsReady()) then
-							if (v25(v103.RefreshingHealingPotion) or ((6803 - 4481) > (3343 - 721))) then
+		end
+		if (((3583 + 153) <= (9302 - 4562)) and v100.AncestralGuidance:IsReady() and v70 and v104.AreUnitsBelowHealthPercentage(v75, v76, v100.HealingSurge)) then
+			if (v24(v100.AncestralGuidance) or ((6929 - 3539) <= (3779 - (316 + 403)))) then
+				return "ancestral_guidance defensive 2";
+			end
+		end
+		if ((v100.HealingStreamTotem:IsReady() and v72 and v104.AreUnitsBelowHealthPercentage(v78, v79, v100.HealingSurge)) or ((665 + 334) > (7403 - 4710))) then
+			if (((168 + 295) < (1513 - 912)) and v24(v100.HealingStreamTotem)) then
+				return "healing_stream_totem defensive 3";
+			end
+		end
+		if ((v101.Healthstone:IsReady() and v93 and (v13:HealthPercentage() <= v95)) or ((1547 + 636) < (222 + 465))) then
+			if (((15762 - 11213) == (21725 - 17176)) and v24(v102.Healthstone)) then
+				return "healthstone defensive 3";
+			end
+		end
+		if (((9705 - 5033) == (268 + 4404)) and v92 and (v13:HealthPercentage() <= v94)) then
+			local v183 = 0 - 0;
+			while true do
+				if ((v183 == (0 + 0)) or ((10791 - 7123) < (412 - (12 + 5)))) then
+					if ((v96 == "Refreshing Healing Potion") or ((16180 - 12014) == (970 - 515))) then
+						if (v101.RefreshingHealingPotion:IsReady() or ((9456 - 5007) == (6603 - 3940))) then
+							if (v24(v102.RefreshingHealingPotion) or ((869 + 3408) < (4962 - (1656 + 317)))) then
 								return "refreshing healing potion defensive 4";
 							end
 						end
 					end
-					if ((v97 == "Dreamwalker's Healing Potion") or ((19014 - 14480) == (4105 - 2023))) then
-						if (v102.DreamwalkersHealingPotion:IsReady() or ((2991 - 1420) > (2006 - (43 + 96)))) then
-							if (v25(v103.RefreshingHealingPotion) or ((10825 - 8171) >= (6773 - 3777))) then
+					if ((v96 == "Dreamwalker's Healing Potion") or ((776 + 94) >= (3325 + 824))) then
+						if (((5881 - 3669) < (15665 - 12482)) and v101.DreamwalkersHealingPotion:IsReady()) then
+							if (((5000 - (5 + 349)) > (14211 - 11219)) and v24(v102.RefreshingHealingPotion)) then
 								return "dreamwalkers healing potion defensive";
 							end
 						end
 					end
+					break;
+				end
+			end
+		end
+	end
+	local function v135()
+		local v168 = 1271 - (266 + 1005);
+		while true do
+			if (((945 + 489) < (10597 - 7491)) and (v168 == (0 - 0))) then
+				v30 = v104.HandleTopTrinket(v103, v33, 1736 - (561 + 1135), nil);
+				if (((1023 - 237) < (9936 - 6913)) and v30) then
+					return v30;
+				end
+				v168 = 1067 - (507 + 559);
+			end
+			if ((v168 == (2 - 1)) or ((7552 - 5110) < (462 - (212 + 176)))) then
+				v30 = v104.HandleBottomTrinket(v103, v33, 945 - (250 + 655), nil);
+				if (((12366 - 7831) == (7924 - 3389)) and v30) then
+					return v30;
 				end
 				break;
-			end
-			if (((3301 + 677) > (595 + 1509)) and (v169 == (1 - 0))) then
-				if (((1148 + 1847) > (2887 - 1346)) and v101.HealingStreamTotem:IsReady() and v73 and v105.AreUnitsBelowHealthPercentage(v79, v80)) then
-					if (((1023 + 2226) > (70 + 883)) and v25(v101.HealingStreamTotem)) then
-						return "healing_stream_totem defensive 3";
-					end
-				end
-				if ((v102.Healthstone:IsReady() and v94 and (v14:HealthPercentage() <= v96)) or ((5024 - (1414 + 337)) > (6513 - (1642 + 298)))) then
-					if (v25(v103.Healthstone) or ((8214 - 5063) < (3693 - 2409))) then
-						return "healthstone defensive 3";
-					end
-				end
-				v169 = 5 - 3;
 			end
 		end
 	end
 	local function v136()
-		v31 = v105.HandleTopTrinket(v104, v34, 14 + 26, nil);
-		if (v31 or ((1440 + 410) == (2501 - (357 + 615)))) then
-			return v31;
-		end
-		v31 = v105.HandleBottomTrinket(v104, v34, 29 + 11, nil);
-		if (((2014 - 1193) < (1820 + 303)) and v31) then
-			return v31;
+		local v169 = 0 - 0;
+		while true do
+			if ((v169 == (1956 - (1869 + 87))) or ((10436 - 7427) <= (4006 - (484 + 1417)))) then
+				if (((3922 - 2092) < (6148 - 2479)) and v126(v100.Stormkeeper) and (v100.Stormkeeper:CooldownRemains() == (773 - (48 + 725))) and not v13:BuffUp(v100.StormkeeperBuff) and v48 and ((v65 and v34) or not v65) and (v90 < v108)) then
+					if (v24(v100.Stormkeeper) or ((2336 - 906) >= (9690 - 6078))) then
+						return "stormkeeper precombat 2";
+					end
+				end
+				if (((1560 + 1123) >= (6574 - 4114)) and v126(v100.Icefury) and (v100.Icefury:CooldownRemains() == (0 + 0)) and v42) then
+					if (v24(v100.Icefury, not v16:IsSpellInRange(v100.Icefury)) or ((526 + 1278) >= (4128 - (152 + 701)))) then
+						return "icefury precombat 4";
+					end
+				end
+				v169 = 1312 - (430 + 881);
+			end
+			if ((v169 == (2 + 1)) or ((2312 - (557 + 338)) > (1073 + 2556))) then
+				if (((13512 - 8717) > (1407 - 1005)) and v13:IsCasting(v100.LavaBurst) and v40 and v100.FlameShock:IsReady()) then
+					if (((12786 - 7973) > (7682 - 4117)) and v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock))) then
+						return "flameshock precombat 14";
+					end
+				end
+				if (((4713 - (499 + 302)) == (4778 - (39 + 827))) and v13:IsCasting(v100.LavaBurst) and v47 and ((v64 and v34) or not v64) and v126(v100.PrimordialWave)) then
+					if (((7787 - 4966) <= (10773 - 5949)) and v24(v100.PrimordialWave, not v16:IsSpellInRange(v100.PrimordialWave))) then
+						return "primordial_wave precombat 16";
+					end
+				end
+				break;
+			end
+			if (((6903 - 5165) <= (3369 - 1174)) and (v169 == (1 + 1))) then
+				if (((119 - 78) <= (483 + 2535)) and v13:IsCasting(v100.ElementalBlast) and v40 and not v100.PrimordialWave:IsAvailable() and v100.FlameShock:IsViable()) then
+					if (((3394 - 1249) <= (4208 - (103 + 1))) and v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock))) then
+						return "flameshock precombat 10";
+					end
+				end
+				if (((3243 - (475 + 79)) < (10473 - 5628)) and v126(v100.LavaBurst) and v44 and not v13:IsCasting(v100.LavaBurst) and (not v100.ElementalBlast:IsAvailable() or (v100.ElementalBlast:IsAvailable() and not v100.ElementalBlast:IsAvailable()))) then
+					if (v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst)) or ((7430 - 5108) > (339 + 2283))) then
+						return "lavaburst precombat 12";
+					end
+				end
+				v169 = 3 + 0;
+			end
+			if ((v169 == (1504 - (1395 + 108))) or ((13193 - 8659) == (3286 - (7 + 1197)))) then
+				if ((v126(v100.ElementalBlast) and v39) or ((685 + 886) > (652 + 1215))) then
+					if (v24(v100.ElementalBlast, not v16:IsSpellInRange(v100.ElementalBlast)) or ((2973 - (27 + 292)) >= (8778 - 5782))) then
+						return "elemental_blast precombat 6";
+					end
+				end
+				if (((5072 - 1094) > (8823 - 6719)) and v13:IsCasting(v100.ElementalBlast) and v47 and ((v64 and v34) or not v64) and v126(v100.PrimordialWave)) then
+					if (((5905 - 2910) > (2934 - 1393)) and v24(v100.PrimordialWave, not v16:IsSpellInRange(v100.PrimordialWave))) then
+						return "primordial_wave precombat 8";
+					end
+				end
+				v169 = 141 - (43 + 96);
+			end
 		end
 	end
 	local function v137()
-		if (((1932 - 1030) < (1860 + 465)) and v127(v101.Stormkeeper) and (v101.Stormkeeper:CooldownRemains() == (0 + 0)) and not v14:BuffUp(v101.StormkeeperBuff) and v49 and ((v66 and v35) or not v66) and (v91 < v109)) then
-			if (((540 + 318) <= (4263 - (384 + 917))) and v25(v101.Stormkeeper)) then
-				return "stormkeeper precombat 2";
-			end
-		end
-		if ((v127(v101.Icefury) and (v101.Icefury:CooldownRemains() == (697 - (128 + 569))) and v43) or ((5489 - (1407 + 136)) < (3175 - (687 + 1200)))) then
-			if (v25(v101.Icefury, not v17:IsSpellInRange(v101.Icefury)) or ((4952 - (556 + 1154)) == (1994 - 1427))) then
-				return "icefury precombat 4";
-			end
-		end
-		if ((v127(v101.ElementalBlast) and v40) or ((942 - (9 + 86)) >= (1684 - (275 + 146)))) then
-			if (v25(v101.ElementalBlast, not v17:IsSpellInRange(v101.ElementalBlast)) or ((367 + 1886) == (1915 - (29 + 35)))) then
-				return "elemental_blast precombat 6";
-			end
-		end
-		if ((v14:IsCasting(v101.ElementalBlast) and v48 and ((v65 and v35) or not v65) and v127(v101.PrimordialWave)) or ((9249 - 7162) > (7084 - 4712))) then
-			if (v25(v101.PrimordialWave, not v17:IsSpellInRange(v101.PrimordialWave)) or ((19622 - 15177) < (2703 + 1446))) then
-				return "primordial_wave precombat 8";
-			end
-		end
-		if ((v14:IsCasting(v101.ElementalBlast) and v41 and not v101.PrimordialWave:IsAvailable() and v101.FlameShock:IsViable()) or ((2830 - (53 + 959)) == (493 - (312 + 96)))) then
-			if (((1093 - 463) < (2412 - (147 + 138))) and v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock))) then
-				return "flameshock precombat 10";
-			end
-		end
-		if ((v127(v101.LavaBurst) and v45 and not v14:IsCasting(v101.LavaBurst) and (not v101.ElementalBlast:IsAvailable() or (v101.ElementalBlast:IsAvailable() and not v101.ElementalBlast:IsAvailable()))) or ((2837 - (813 + 86)) == (2272 + 242))) then
-			if (((7883 - 3628) >= (547 - (18 + 474))) and v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst))) then
-				return "lavaburst precombat 12";
-			end
-		end
-		if (((1012 + 1987) > (3772 - 2616)) and v14:IsCasting(v101.LavaBurst) and v41 and v101.FlameShock:IsReady()) then
-			if (((3436 - (860 + 226)) > (1458 - (121 + 182))) and v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock))) then
-				return "flameshock precombat 14";
-			end
-		end
-		if (((496 + 3533) <= (6093 - (988 + 252))) and v14:IsCasting(v101.LavaBurst) and v48 and ((v65 and v35) or not v65) and v127(v101.PrimordialWave)) then
-			if (v25(v101.PrimordialWave, not v17:IsSpellInRange(v101.PrimordialWave)) or ((59 + 457) > (1076 + 2358))) then
-				return "primordial_wave precombat 16";
-			end
-		end
-	end
-	local function v138()
-		local v170 = 1970 - (49 + 1921);
+		local v170 = 0 - 0;
 		while true do
-			if (((4936 - (223 + 667)) >= (3085 - (51 + 1))) and (v170 == (11 - 4))) then
-				if ((v101.FlameShock:IsCastable() and v41 and v14:IsMoving() and v17:DebuffRefreshable(v101.FlameShockDebuff)) or ((5822 - 3103) <= (2572 - (146 + 979)))) then
-					if (v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock)) or ((1167 + 2967) < (4531 - (311 + 294)))) then
+			if (((7345 - 4096) > (791 + 162)) and (v170 == (2 + 5))) then
+				if ((v126(v100.LavaBeam) and v43 and v127() and (v13:BuffRemains(v100.AscendanceBuff) > v100.LavaBeam:CastTime())) or ((6468 - 3195) > (1753 + 2820))) then
+					if (v24(v100.LavaBeam, not v16:IsSpellInRange(v100.LavaBeam)) or ((5905 - 2754) < (405 + 879))) then
+						return "lava_beam aoe 82";
+					end
+				end
+				if ((v126(v100.LavaBurst) and (v114 == (1 + 2)) and v100.MasteroftheElements:IsAvailable()) or ((3601 - (1414 + 337)) == (3469 - (1642 + 298)))) then
+					local v250 = 0 - 0;
+					while true do
+						if (((2361 - 1540) < (6299 - 4176)) and (v250 == (0 + 0))) then
+							if (((702 + 200) < (3297 - (357 + 615))) and v104.CastCycle(v100.LavaBurst, v112, v122, not v16:IsSpellInRange(v100.LavaBurst))) then
+								return "lava_burst aoe 84";
+							end
+							if (((603 + 255) <= (7267 - 4305)) and v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst))) then
+								return "lava_burst aoe 84";
+							end
+							break;
+						end
+					end
+				end
+				if ((v126(v100.LavaBurst) and v13:BuffUp(v100.LavaSurgeBuff) and v100.DeeplyRootedElements:IsAvailable()) or ((3382 + 564) < (2759 - 1471))) then
+					if (v104.CastCycle(v100.LavaBurst, v112, v122, not v16:IsSpellInRange(v100.LavaBurst)) or ((2593 + 649) == (39 + 528))) then
+						return "lava_burst aoe 86";
+					end
+					if (v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst)) or ((533 + 314) >= (2564 - (384 + 917)))) then
+						return "lava_burst aoe 86";
+					end
+				end
+				if ((v126(v100.Icefury) and (v100.Icefury:CooldownRemains() == (697 - (128 + 569))) and v42 and v100.ElectrifiedShocks:IsAvailable() and (v114 < (1548 - (1407 + 136)))) or ((4140 - (687 + 1200)) == (3561 - (556 + 1154)))) then
+					if (v24(v100.Icefury, not v16:IsSpellInRange(v100.Icefury)) or ((7342 - 5255) > (2467 - (9 + 86)))) then
+						return "icefury aoe 88";
+					end
+				end
+				if ((v126(v100.FrostShock) and v41 and v13:BuffUp(v100.IcefuryBuff) and v100.ElectrifiedShocks:IsAvailable() and not v16:DebuffUp(v100.ElectrifiedShocksDebuff) and (v114 < (426 - (275 + 146))) and v100.UnrelentingCalamity:IsAvailable()) or ((723 + 3722) < (4213 - (29 + 35)))) then
+					if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((8057 - 6239) == (253 - 168))) then
+						return "frost_shock aoe 90";
+					end
+				end
+				v170 = 35 - 27;
+			end
+			if (((411 + 219) < (3139 - (53 + 959))) and ((409 - (312 + 96)) == v170)) then
+				if ((v100.LiquidMagmaTotem:IsReady() and v54 and ((v61 and v33) or not v61) and (v90 < v108) and (v66 == "player")) or ((3363 - 1425) == (2799 - (147 + 138)))) then
+					if (((5154 - (813 + 86)) >= (50 + 5)) and v24(v102.LiquidMagmaTotemPlayer, not v16:IsInRange(74 - 34))) then
+						return "liquid_magma_totem aoe player 11";
+					end
+				end
+				if (((3491 - (18 + 474)) > (390 + 766)) and v126(v100.PrimordialWave) and v13:BuffDown(v100.PrimordialWaveBuff) and v13:BuffUp(v100.SurgeofPowerBuff) and v13:BuffDown(v100.SplinteredElementsBuff)) then
+					local v251 = 0 - 0;
+					while true do
+						if (((3436 - (860 + 226)) > (1458 - (121 + 182))) and ((0 + 0) == v251)) then
+							if (((5269 - (988 + 252)) <= (549 + 4304)) and v104.CastTargetIf(v100.PrimordialWave, v112, "min", v122, nil, not v16:IsSpellInRange(v100.PrimordialWave), nil, nil)) then
+								return "primordial_wave aoe 12";
+							end
+							if (v24(v100.PrimordialWave, not v16:IsSpellInRange(v100.PrimordialWave)) or ((162 + 354) > (5404 - (49 + 1921)))) then
+								return "primordial_wave aoe 12";
+							end
+							break;
+						end
+					end
+				end
+				if (((4936 - (223 + 667)) >= (3085 - (51 + 1))) and v126(v100.PrimordialWave) and v13:BuffDown(v100.PrimordialWaveBuff) and v100.DeeplyRootedElements:IsAvailable() and not v100.SurgeofPower:IsAvailable() and v13:BuffDown(v100.SplinteredElementsBuff)) then
+					if (v104.CastTargetIf(v100.PrimordialWave, v112, "min", v122, nil, not v16:IsSpellInRange(v100.PrimordialWave), nil, nil) or ((4679 - 1960) <= (3098 - 1651))) then
+						return "primordial_wave aoe 14";
+					end
+					if (v24(v100.PrimordialWave, not v16:IsSpellInRange(v100.PrimordialWave)) or ((5259 - (146 + 979)) < (1109 + 2817))) then
+						return "primordial_wave aoe 14";
+					end
+				end
+				if ((v126(v100.PrimordialWave) and v13:BuffDown(v100.PrimordialWaveBuff) and v100.MasteroftheElements:IsAvailable() and not v100.LightningRod:IsAvailable()) or ((769 - (311 + 294)) >= (7766 - 4981))) then
+					if (v104.CastTargetIf(v100.PrimordialWave, v112, "min", v122, nil, not v16:IsSpellInRange(v100.PrimordialWave), nil, nil) or ((223 + 302) == (3552 - (496 + 947)))) then
+						return "primordial_wave aoe 16";
+					end
+					if (((1391 - (1233 + 125)) == (14 + 19)) and v24(v100.PrimordialWave, not v16:IsSpellInRange(v100.PrimordialWave))) then
+						return "primordial_wave aoe 16";
+					end
+				end
+				if (((2740 + 314) <= (763 + 3252)) and v100.FlameShock:IsCastable()) then
+					local v252 = 1645 - (963 + 682);
+					while true do
+						if (((1562 + 309) < (4886 - (504 + 1000))) and (v252 == (2 + 0))) then
+							if (((1178 + 115) <= (205 + 1961)) and v13:BuffUp(v100.SurgeofPowerBuff) and v40 and (not v100.LightningRod:IsAvailable() or v100.SkybreakersFieryDemise:IsAvailable())) then
+								local v269 = 0 - 0;
+								while true do
+									if ((v269 == (0 + 0)) or ((1500 + 1079) < (305 - (156 + 26)))) then
+										if (v104.CastCycle(v100.FlameShock, v112, v121, not v16:IsSpellInRange(v100.FlameShock)) or ((488 + 358) >= (3704 - 1336))) then
+											return "flame_shock aoe 26";
+										end
+										if (v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock)) or ((4176 - (149 + 15)) <= (4318 - (890 + 70)))) then
+											return "flame_shock aoe 26";
+										end
+										break;
+									end
+								end
+							end
+							if (((1611 - (39 + 78)) <= (3487 - (14 + 468))) and v100.MasteroftheElements:IsAvailable() and v40 and not v100.LightningRod:IsAvailable() and not v100.SurgeofPower:IsAvailable()) then
+								if (v104.CastCycle(v100.FlameShock, v112, v121, not v16:IsSpellInRange(v100.FlameShock)) or ((6841 - 3730) == (5964 - 3830))) then
+									return "flame_shock aoe 28";
+								end
+								if (((1216 + 1139) == (1415 + 940)) and v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock))) then
+									return "flame_shock aoe 28";
+								end
+							end
+							v252 = 1 + 2;
+						end
+						if (((1 + 0) == v252) or ((155 + 433) <= (826 - 394))) then
+							if (((4742 + 55) >= (13687 - 9792)) and v100.MasteroftheElements:IsAvailable() and v40 and not v100.LightningRod:IsAvailable() and (v100.FlameShockDebuff:AuraActiveCount() < (1 + 5))) then
+								local v270 = 51 - (12 + 39);
+								while true do
+									if (((3328 + 249) == (11071 - 7494)) and (v270 == (0 - 0))) then
+										if (((1125 + 2669) > (1944 + 1749)) and v104.CastCycle(v100.FlameShock, v112, v120, not v16:IsSpellInRange(v100.FlameShock))) then
+											return "flame_shock aoe 22";
+										end
+										if (v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock)) or ((3233 - 1958) == (2731 + 1369))) then
+											return "flame_shock aoe 22";
+										end
+										break;
+									end
+								end
+							end
+							if ((v100.DeeplyRootedElements:IsAvailable() and v40 and not v100.SurgeofPower:IsAvailable() and (v100.FlameShockDebuff:AuraActiveCount() < (28 - 22))) or ((3301 - (1596 + 114)) >= (9346 - 5766))) then
+								local v271 = 713 - (164 + 549);
+								while true do
+									if (((2421 - (1059 + 379)) <= (2244 - 436)) and (v271 == (0 + 0))) then
+										if (v104.CastCycle(v100.FlameShock, v112, v120, not v16:IsSpellInRange(v100.FlameShock)) or ((363 + 1787) <= (1589 - (145 + 247)))) then
+											return "flame_shock aoe 24";
+										end
+										if (((3093 + 676) >= (543 + 630)) and v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock))) then
+											return "flame_shock aoe 24";
+										end
+										break;
+									end
+								end
+							end
+							v252 = 5 - 3;
+						end
+						if (((285 + 1200) == (1280 + 205)) and ((0 - 0) == v252)) then
+							if ((v13:BuffUp(v100.SurgeofPowerBuff) and v40 and v100.LightningRod:IsAvailable() and v100.WindspeakersLavaResurgence:IsAvailable() and (v16:DebuffRemains(v100.FlameShockDebuff) < (v16:TimeToDie() - (736 - (254 + 466)))) and (v111 < (565 - (544 + 16)))) or ((10535 - 7220) <= (3410 - (294 + 334)))) then
+								if (v104.CastCycle(v100.FlameShock, v112, v120, not v16:IsSpellInRange(v100.FlameShock)) or ((1129 - (236 + 17)) >= (1278 + 1686))) then
+									return "flame_shock aoe 18";
+								end
+								if (v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock)) or ((1738 + 494) > (9403 - 6906))) then
+									return "flame_shock aoe 18";
+								end
+							end
+							if ((v13:BuffUp(v100.SurgeofPowerBuff) and v40 and (not v100.LightningRod:IsAvailable() or v100.SkybreakersFieryDemise:IsAvailable()) and (v100.FlameShockDebuff:AuraActiveCount() < (28 - 22))) or ((1087 + 1023) <= (274 + 58))) then
+								if (((4480 - (413 + 381)) > (134 + 3038)) and v104.CastCycle(v100.FlameShock, v112, v120, not v16:IsSpellInRange(v100.FlameShock))) then
+									return "flame_shock aoe 20";
+								end
+								if (v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock)) or ((9515 - 5041) < (2130 - 1310))) then
+									return "flame_shock aoe 20";
+								end
+							end
+							v252 = 1971 - (582 + 1388);
+						end
+						if (((7290 - 3011) >= (2063 + 819)) and (v252 == (367 - (326 + 38)))) then
+							if ((v100.DeeplyRootedElements:IsAvailable() and v40 and not v100.SurgeofPower:IsAvailable()) or ((6001 - 3972) >= (5026 - 1505))) then
+								if (v104.CastCycle(v100.FlameShock, v112, v121, not v16:IsSpellInRange(v100.FlameShock)) or ((2657 - (47 + 573)) >= (1637 + 3005))) then
+									return "flame_shock aoe 30";
+								end
+								if (((7304 - 5584) < (7235 - 2777)) and v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock))) then
+									return "flame_shock aoe 30";
+								end
+							end
+							break;
+						end
+					end
+				end
+				v170 = 1666 - (1269 + 395);
+			end
+			if ((v170 == (500 - (76 + 416))) or ((879 - (319 + 124)) > (6905 - 3884))) then
+				if (((1720 - (564 + 443)) <= (2344 - 1497)) and v126(v100.LavaBeam) and v43 and (v13:BuffRemains(v100.AscendanceBuff) > v100.LavaBeam:CastTime())) then
+					if (((2612 - (337 + 121)) <= (11811 - 7780)) and v24(v100.LavaBeam, not v16:IsSpellInRange(v100.LavaBeam))) then
+						return "lava_beam aoe 92";
+					end
+				end
+				if (((15373 - 10758) == (6526 - (1261 + 650))) and v126(v100.ChainLightning) and v36) then
+					if (v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning)) or ((1604 + 2186) == (796 - 296))) then
+						return "chain_lightning aoe 94";
+					end
+				end
+				if (((1906 - (772 + 1045)) < (32 + 189)) and v100.FlameShock:IsCastable() and v40 and v13:IsMoving() and v16:DebuffRefreshable(v100.FlameShockDebuff)) then
+					if (((2198 - (102 + 42)) >= (3265 - (1524 + 320))) and v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock))) then
 						return "flame_shock aoe 96";
 					end
 				end
-				if ((v101.FrostShock:IsCastable() and v42 and v14:IsMoving()) or ((457 - 293) >= (1180 + 1605))) then
-					if (v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock)) or ((1968 - (496 + 947)) == (3467 - (1233 + 125)))) then
+				if (((1962 - (1049 + 221)) < (3214 - (18 + 138))) and v100.FrostShock:IsCastable() and v41 and v13:IsMoving()) then
+					if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((7964 - 4710) == (2757 - (67 + 1035)))) then
 						return "frost_shock aoe 98";
 					end
 				end
 				break;
 			end
-			if (((14 + 19) == (30 + 3)) and (v170 == (0 + 0))) then
-				if (((4699 - (963 + 682)) <= (3351 + 664)) and v101.FireElemental:IsReady() and v54 and ((v60 and v34) or not v60) and (v91 < v109)) then
-					if (((3375 - (504 + 1000)) < (2278 + 1104)) and v25(v101.FireElemental)) then
-						return "fire_elemental aoe 2";
-					end
-				end
-				if (((1178 + 115) <= (205 + 1961)) and v101.StormElemental:IsReady() and v56 and ((v61 and v34) or not v61) and (v91 < v109)) then
-					if (v25(v101.StormElemental) or ((3802 - 1223) < (106 + 17))) then
-						return "storm_elemental aoe 4";
-					end
-				end
-				if ((v127(v101.Stormkeeper) and not v130() and v49 and ((v66 and v35) or not v66) and (v91 < v109)) or ((492 + 354) >= (2550 - (156 + 26)))) then
-					if (v25(v101.Stormkeeper) or ((2312 + 1700) <= (5253 - 1895))) then
-						return "stormkeeper aoe 7";
-					end
-				end
-				if (((1658 - (149 + 15)) <= (3965 - (890 + 70))) and v101.TotemicRecall:IsCastable() and (v101.LiquidMagmaTotem:CooldownRemains() > (162 - (39 + 78))) and v50) then
-					if (v25(v101.TotemicRecall) or ((3593 - (14 + 468)) == (4692 - 2558))) then
-						return "totemic_recall aoe 8";
-					end
-				end
-				if (((6582 - 4227) == (1216 + 1139)) and v101.LiquidMagmaTotem:IsReady() and v55 and ((v62 and v34) or not v62) and (v91 < v109) and (v67 == "cursor")) then
-					if (v25(v103.LiquidMagmaTotemCursor, not v17:IsInRange(25 + 15)) or ((125 + 463) <= (196 + 236))) then
-						return "liquid_magma_totem aoe cursor 10";
-					end
-				end
-				if (((1257 + 3540) >= (7455 - 3560)) and v101.LiquidMagmaTotem:IsReady() and v55 and ((v62 and v34) or not v62) and (v91 < v109) and (v67 == "player")) then
-					if (((3536 + 41) == (12569 - 8992)) and v25(v103.LiquidMagmaTotemPlayer, not v17:IsInRange(2 + 38))) then
-						return "liquid_magma_totem aoe player 11";
-					end
-				end
-				v170 = 52 - (12 + 39);
-			end
-			if (((3530 + 264) > (11431 - 7738)) and (v170 == (14 - 10))) then
-				if ((v127(v101.EarthShock) and v39 and v101.EchoesofGreatSundering:IsAvailable()) or ((378 + 897) == (2159 + 1941))) then
-					if (v25(v101.EarthShock, not v17:IsSpellInRange(v101.EarthShock)) or ((4034 - 2443) >= (2385 + 1195))) then
-						return "earth_shock aoe 60";
-					end
-				end
-				if (((4750 - 3767) <= (3518 - (1596 + 114))) and v127(v101.Icefury) and (v101.Icefury:CooldownRemains() == (0 - 0)) and v43 and not v14:BuffUp(v101.AscendanceBuff) and v101.ElectrifiedShocks:IsAvailable() and ((v101.LightningRod:IsAvailable() and (v115 < (718 - (164 + 549))) and not v128()) or (v101.DeeplyRootedElements:IsAvailable() and (v115 == (1441 - (1059 + 379)))))) then
-					if (v25(v101.Icefury, not v17:IsSpellInRange(v101.Icefury)) or ((2669 - 519) <= (621 + 576))) then
+			if ((v170 == (353 - (136 + 212))) or ((5507 - 4211) == (3934 + 976))) then
+				if (((3105 + 263) == (4972 - (240 + 1364))) and v126(v100.Icefury) and (v100.Icefury:CooldownRemains() == (1082 - (1050 + 32))) and v42 and not v13:BuffUp(v100.AscendanceBuff) and v100.ElectrifiedShocks:IsAvailable() and ((v100.LightningRod:IsAvailable() and (v114 < (17 - 12)) and not v127()) or (v100.DeeplyRootedElements:IsAvailable() and (v114 == (2 + 1))))) then
+					if (((3698 - (331 + 724)) < (308 + 3507)) and v24(v100.Icefury, not v16:IsSpellInRange(v100.Icefury))) then
 						return "icefury aoe 62";
 					end
 				end
-				if (((636 + 3133) >= (1565 - (145 + 247))) and v127(v101.FrostShock) and v42 and not v14:BuffUp(v101.AscendanceBuff) and v14:BuffUp(v101.IcefuryBuff) and v101.ElectrifiedShocks:IsAvailable() and (not v17:DebuffUp(v101.ElectrifiedShocksDebuff) or (v14:BuffRemains(v101.IcefuryBuff) < v14:GCD())) and ((v101.LightningRod:IsAvailable() and (v115 < (5 + 0)) and not v128()) or (v101.DeeplyRootedElements:IsAvailable() and (v115 == (2 + 1))))) then
-					if (((4402 - 2917) == (285 + 1200)) and v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock))) then
+				if (((2557 - (269 + 375)) > (1218 - (267 + 458))) and v126(v100.FrostShock) and v41 and not v13:BuffUp(v100.AscendanceBuff) and v13:BuffUp(v100.IcefuryBuff) and v100.ElectrifiedShocks:IsAvailable() and (not v16:DebuffUp(v100.ElectrifiedShocksDebuff) or (v13:BuffRemains(v100.IcefuryBuff) < v13:GCD())) and ((v100.LightningRod:IsAvailable() and (v114 < (2 + 3)) and not v127()) or (v100.DeeplyRootedElements:IsAvailable() and (v114 == (5 - 2))))) then
+					if (((5573 - (667 + 151)) > (4925 - (1410 + 87))) and v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock))) then
 						return "frost_shock aoe 64";
 					end
 				end
-				if ((v127(v101.LavaBurst) and v101.MasteroftheElements:IsAvailable() and not v128() and (v130() or ((v119() < (3 + 0)) and v14:HasTier(48 - 18, 722 - (254 + 466)))) and (v126() < ((((620 - (544 + 16)) - ((15 - 10) * v101.EyeoftheStorm:TalentRank())) - ((630 - (294 + 334)) * v26(v101.FlowofPower:IsAvailable()))) - (263 - (236 + 17)))) and (v115 < (3 + 2))) or ((2581 + 734) <= (10477 - 7695))) then
-					if (v105.CastCycle(v101.LavaBurst, v113, v123, not v17:IsSpellInRange(v101.LavaBurst)) or ((4147 - 3271) >= (1527 + 1437))) then
+				if (((3278 - (1504 + 393)) <= (6403 - 4034)) and v126(v100.LavaBurst) and v100.MasteroftheElements:IsAvailable() and not v127() and (v129() or ((v118() < (7 - 4)) and v13:HasTier(826 - (461 + 335), 1 + 1))) and (v125() < ((((1821 - (1730 + 31)) - ((1672 - (728 + 939)) * v100.EyeoftheStorm:TalentRank())) - ((6 - 4) * v25(v100.FlowofPower:IsAvailable()))) - (20 - 10))) and (v114 < (11 - 6))) then
+					if (v104.CastCycle(v100.LavaBurst, v112, v122, not v16:IsSpellInRange(v100.LavaBurst)) or ((5911 - (138 + 930)) == (3733 + 351))) then
 						return "lava_burst aoe 66";
 					end
-					if (v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst)) or ((1839 + 393) > (3291 - (413 + 381)))) then
+					if (((3651 + 1018) > (312 + 51)) and v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst))) then
 						return "lava_burst aoe 66";
 					end
 				end
-				if ((v127(v101.LavaBeam) and v44 and (v130())) or ((89 + 2021) <= (705 - 373))) then
-					if (((9574 - 5888) > (5142 - (582 + 1388))) and v25(v101.LavaBeam, not v17:IsSpellInRange(v101.LavaBeam))) then
+				if ((v126(v100.LavaBeam) and v43 and (v129())) or ((7664 - 5787) >= (4904 - (459 + 1307)))) then
+					if (((6612 - (474 + 1396)) >= (6331 - 2705)) and v24(v100.LavaBeam, not v16:IsSpellInRange(v100.LavaBeam))) then
 						return "lava_beam aoe 68";
 					end
 				end
-				if ((v127(v101.ChainLightning) and v37 and (v130())) or ((7622 - 3148) < (587 + 233))) then
-					if (((4643 - (326 + 38)) >= (8525 - 5643)) and v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning))) then
+				if ((v126(v100.ChainLightning) and v36 and (v129())) or ((4255 + 285) == (3 + 913))) then
+					if (v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning)) or ((3311 - 2155) > (551 + 3794))) then
 						return "chain_lightning aoe 70";
 					end
 				end
-				v170 = 7 - 2;
+				v170 = 19 - 13;
 			end
-			if ((v170 == (621 - (47 + 573))) or ((716 + 1313) >= (14953 - 11432))) then
-				if ((v127(v101.PrimordialWave) and v14:BuffDown(v101.PrimordialWaveBuff) and v14:BuffUp(v101.SurgeofPowerBuff) and v14:BuffDown(v101.SplinteredElementsBuff)) or ((3305 - 1268) >= (6306 - (1269 + 395)))) then
-					local v256 = 492 - (76 + 416);
-					while true do
-						if (((2163 - (319 + 124)) < (10190 - 5732)) and (v256 == (1007 - (564 + 443)))) then
-							if (v105.CastTargetIf(v101.PrimordialWave, v113, "min", v123, nil, not v17:IsSpellInRange(v101.PrimordialWave), nil, nil) or ((1206 - 770) > (3479 - (337 + 121)))) then
-								return "primordial_wave aoe 12";
-							end
-							if (((2088 - 1375) <= (2821 - 1974)) and v25(v101.PrimordialWave, not v17:IsSpellInRange(v101.PrimordialWave))) then
-								return "primordial_wave aoe 12";
-							end
-							break;
-						end
+			if (((9755 - 7518) < (4840 - (562 + 29))) and (v170 == (0 + 0))) then
+				if ((v100.FireElemental:IsReady() and v53 and ((v59 and v33) or not v59) and (v90 < v108)) or ((4102 - (374 + 1045)) < (19 + 4))) then
+					if (((2163 - 1466) <= (1464 - (448 + 190))) and v24(v100.FireElemental)) then
+						return "fire_elemental aoe 2";
 					end
 				end
-				if (((4065 - (1261 + 650)) <= (1706 + 2325)) and v127(v101.PrimordialWave) and v14:BuffDown(v101.PrimordialWaveBuff) and v101.DeeplyRootedElements:IsAvailable() and not v101.SurgeofPower:IsAvailable() and v14:BuffDown(v101.SplinteredElementsBuff)) then
-					local v257 = 0 - 0;
-					while true do
-						if (((6432 - (772 + 1045)) == (651 + 3964)) and (v257 == (144 - (102 + 42)))) then
-							if (v105.CastTargetIf(v101.PrimordialWave, v113, "min", v123, nil, not v17:IsSpellInRange(v101.PrimordialWave), nil, nil) or ((5634 - (1524 + 320)) == (1770 - (1049 + 221)))) then
-								return "primordial_wave aoe 14";
-							end
-							if (((245 - (18 + 138)) < (540 - 319)) and v25(v101.PrimordialWave, not v17:IsSpellInRange(v101.PrimordialWave))) then
-								return "primordial_wave aoe 14";
-							end
-							break;
-						end
+				if (((357 + 748) <= (531 + 645)) and v100.StormElemental:IsReady() and v55 and ((v60 and v33) or not v60) and (v90 < v108)) then
+					if (((2202 + 1177) <= (14656 - 10844)) and v24(v100.StormElemental)) then
+						return "storm_elemental aoe 4";
 					end
 				end
-				if (((3156 - (67 + 1035)) >= (1769 - (136 + 212))) and v127(v101.PrimordialWave) and v14:BuffDown(v101.PrimordialWaveBuff) and v101.MasteroftheElements:IsAvailable() and not v101.LightningRod:IsAvailable()) then
-					local v258 = 0 - 0;
-					while true do
-						if (((555 + 137) < (2820 + 238)) and (v258 == (1604 - (240 + 1364)))) then
-							if (v105.CastTargetIf(v101.PrimordialWave, v113, "min", v123, nil, not v17:IsSpellInRange(v101.PrimordialWave), nil, nil) or ((4336 - (1050 + 32)) == (5909 - 4254))) then
-								return "primordial_wave aoe 16";
-							end
-							if (v25(v101.PrimordialWave, not v17:IsSpellInRange(v101.PrimordialWave)) or ((767 + 529) == (5965 - (331 + 724)))) then
-								return "primordial_wave aoe 16";
-							end
-							break;
-						end
+				if ((v126(v100.Stormkeeper) and not v129() and v48 and ((v65 and v34) or not v65) and (v90 < v108)) or ((2448 - 1660) >= (3110 - (1307 + 187)))) then
+					if (((7352 - 5498) <= (7911 - 4532)) and v24(v100.Stormkeeper)) then
+						return "stormkeeper aoe 7";
 					end
 				end
-				if (((272 + 3096) == (4012 - (269 + 375))) and v101.FlameShock:IsCastable()) then
-					local v259 = 725 - (267 + 458);
-					while true do
-						if (((822 + 1821) < (7336 - 3521)) and (v259 == (820 - (667 + 151)))) then
-							if (((3410 - (1410 + 87)) > (2390 - (1504 + 393))) and v14:BuffUp(v101.SurgeofPowerBuff) and v41 and (not v101.LightningRod:IsAvailable() or v101.SkybreakersFieryDemise:IsAvailable())) then
-								local v282 = 0 - 0;
-								while true do
-									if (((12336 - 7581) > (4224 - (461 + 335))) and ((0 + 0) == v282)) then
-										if (((3142 - (1730 + 31)) <= (4036 - (728 + 939))) and v105.CastCycle(v101.FlameShock, v113, v122, not v17:IsSpellInRange(v101.FlameShock))) then
-											return "flame_shock aoe 26";
-										end
-										if (v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock)) or ((17152 - 12309) == (8283 - 4199))) then
-											return "flame_shock aoe 26";
-										end
-										break;
-									end
-								end
-							end
-							if (((10697 - 6028) > (1431 - (138 + 930))) and v101.MasteroftheElements:IsAvailable() and v41 and not v101.LightningRod:IsAvailable() and not v101.SurgeofPower:IsAvailable()) then
-								local v283 = 0 + 0;
-								while true do
-									if (((0 + 0) == v283) or ((1609 + 268) >= (12813 - 9675))) then
-										if (((6508 - (459 + 1307)) >= (5496 - (474 + 1396))) and v105.CastCycle(v101.FlameShock, v113, v122, not v17:IsSpellInRange(v101.FlameShock))) then
-											return "flame_shock aoe 28";
-										end
-										if (v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock)) or ((7927 - 3387) == (859 + 57))) then
-											return "flame_shock aoe 28";
-										end
-										break;
-									end
-								end
-							end
-							v259 = 1 + 2;
-						end
-						if ((v259 == (0 - 0)) or ((147 + 1009) > (14504 - 10159))) then
-							if (((9755 - 7518) < (4840 - (562 + 29))) and v14:BuffUp(v101.SurgeofPowerBuff) and v41 and v101.LightningRod:IsAvailable() and v101.WindspeakersLavaResurgence:IsAvailable() and (v17:DebuffRemains(v101.FlameShockDebuff) < (v17:TimeToDie() - (14 + 2))) and (v112 < (1424 - (374 + 1045)))) then
-								local v284 = 0 + 0;
-								while true do
-									if ((v284 == (0 - 0)) or ((3321 - (448 + 190)) < (8 + 15))) then
-										if (((315 + 382) <= (539 + 287)) and v105.CastCycle(v101.FlameShock, v113, v121, not v17:IsSpellInRange(v101.FlameShock))) then
-											return "flame_shock aoe 18";
-										end
-										if (((4248 - 3143) <= (3653 - 2477)) and v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock))) then
-											return "flame_shock aoe 18";
-										end
-										break;
-									end
-								end
-							end
-							if (((4873 - (1307 + 187)) <= (15116 - 11304)) and v14:BuffUp(v101.SurgeofPowerBuff) and v41 and (not v101.LightningRod:IsAvailable() or v101.SkybreakersFieryDemise:IsAvailable()) and (v101.FlameShockDebuff:AuraActiveCount() < (13 - 7))) then
-								local v285 = 0 - 0;
-								while true do
-									if ((v285 == (683 - (232 + 451))) or ((753 + 35) >= (1428 + 188))) then
-										if (((2418 - (510 + 54)) <= (6807 - 3428)) and v105.CastCycle(v101.FlameShock, v113, v121, not v17:IsSpellInRange(v101.FlameShock))) then
-											return "flame_shock aoe 20";
-										end
-										if (((4585 - (13 + 23)) == (8866 - 4317)) and v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock))) then
-											return "flame_shock aoe 20";
-										end
-										break;
-									end
-								end
-							end
-							v259 = 1 - 0;
-						end
-						if ((v259 == (4 - 1)) or ((4110 - (830 + 258)) >= (10667 - 7643))) then
-							if (((3016 + 1804) > (1871 + 327)) and v101.DeeplyRootedElements:IsAvailable() and v41 and not v101.SurgeofPower:IsAvailable()) then
-								local v286 = 1441 - (860 + 581);
-								while true do
-									if ((v286 == (0 - 0)) or ((843 + 218) >= (5132 - (237 + 4)))) then
-										if (((3205 - 1841) <= (11316 - 6843)) and v105.CastCycle(v101.FlameShock, v113, v122, not v17:IsSpellInRange(v101.FlameShock))) then
-											return "flame_shock aoe 30";
-										end
-										if (v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock)) or ((6816 - 3221) <= (3 + 0))) then
-											return "flame_shock aoe 30";
-										end
-										break;
-									end
-								end
-							end
-							break;
-						end
-						if ((v259 == (1 + 0)) or ((17638 - 12966) == (1653 + 2199))) then
-							if (((849 + 710) == (2985 - (85 + 1341))) and v101.MasteroftheElements:IsAvailable() and v41 and not v101.LightningRod:IsAvailable() and (v101.FlameShockDebuff:AuraActiveCount() < (10 - 4))) then
-								if (v105.CastCycle(v101.FlameShock, v113, v121, not v17:IsSpellInRange(v101.FlameShock)) or ((4947 - 3195) <= (1160 - (45 + 327)))) then
-									return "flame_shock aoe 22";
-								end
-								if (v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock)) or ((7371 - 3464) == (679 - (444 + 58)))) then
-									return "flame_shock aoe 22";
-								end
-							end
-							if (((1508 + 1962) > (96 + 459)) and v101.DeeplyRootedElements:IsAvailable() and v41 and not v101.SurgeofPower:IsAvailable() and (v101.FlameShockDebuff:AuraActiveCount() < (3 + 3))) then
-								local v287 = 0 - 0;
-								while true do
-									if (((1732 - (64 + 1668)) == v287) or ((2945 - (1227 + 746)) == (1982 - 1337))) then
-										if (((5904 - 2722) >= (2609 - (415 + 79))) and v105.CastCycle(v101.FlameShock, v113, v121, not v17:IsSpellInRange(v101.FlameShock))) then
-											return "flame_shock aoe 24";
-										end
-										if (((101 + 3792) < (4920 - (142 + 349))) and v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock))) then
-											return "flame_shock aoe 24";
-										end
-										break;
-									end
-								end
-							end
-							v259 = 1 + 1;
-						end
+				if (((13947 - 9398) == (5232 - (232 + 451))) and v100.TotemicRecall:IsCastable() and (v100.LiquidMagmaTotem:CooldownRemains() > (43 + 2)) and v49) then
+					if (v24(v100.TotemicRecall) or ((2670 + 352) >= (3588 - (510 + 54)))) then
+						return "totemic_recall aoe 8";
 					end
 				end
-				if ((v101.Ascendance:IsCastable() and v53 and ((v59 and v34) or not v59) and (v91 < v109)) or ((3941 - 1074) < (947 + 958))) then
-					if (v25(v101.Ascendance) or ((1266 + 530) >= (11032 - 6981))) then
-						return "ascendance aoe 32";
+				if (((9711 - 4891) > (2234 - (13 + 23))) and v100.LiquidMagmaTotem:IsReady() and v54 and ((v61 and v33) or not v61) and (v90 < v108) and (v66 == "cursor")) then
+					if (v24(v102.LiquidMagmaTotemCursor, not v16:IsInRange(77 - 37)) or ((1524 - 463) >= (8886 - 3995))) then
+						return "liquid_magma_totem aoe cursor 10";
 					end
 				end
-				if (((3483 - (1710 + 154)) <= (4074 - (200 + 118))) and v127(v101.LavaBurst) and (v115 == (2 + 1)) and not v101.LightningRod:IsAvailable() and v14:HasTier(53 - 22, 5 - 1)) then
-					local v260 = 0 + 0;
-					while true do
-						if (((598 + 6) == (325 + 279)) and (v260 == (0 + 0))) then
-							if (v105.CastCycle(v101.LavaBurst, v113, v123, not v17:IsSpellInRange(v101.LavaBurst)) or ((9714 - 5230) == (2150 - (363 + 887)))) then
-								return "lava_burst aoe 34";
-							end
-							if (v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst)) or ((7785 - 3326) <= (5297 - 4184))) then
-								return "lava_burst aoe 34";
-							end
-							break;
-						end
-					end
-				end
-				v170 = 1 + 1;
+				v170 = 1089 - (830 + 258);
 			end
-			if (((8498 - 4866) > (2322 + 1076)) and (v170 == (1669 - (674 + 990)))) then
-				if (((1171 + 2911) <= (2013 + 2904)) and v127(v101.LavaBeam) and v44 and v129() and (v14:BuffRemains(v101.AscendanceBuff) > v101.LavaBeam:CastTime())) then
-					if (((7658 - 2826) >= (2441 - (507 + 548))) and v25(v101.LavaBeam, not v17:IsSpellInRange(v101.LavaBeam))) then
-						return "lava_beam aoe 72";
-					end
-				end
-				if (((974 - (289 + 548)) == (1955 - (821 + 997))) and v127(v101.ChainLightning) and v37 and v129()) then
-					if (v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning)) or ((1825 - (195 + 60)) >= (1165 + 3167))) then
-						return "chain_lightning aoe 74";
-					end
-				end
-				if ((v127(v101.LavaBeam) and v44 and (v115 >= (1507 - (251 + 1250))) and v14:BuffUp(v101.SurgeofPowerBuff) and (v14:BuffRemains(v101.AscendanceBuff) > v101.LavaBeam:CastTime())) or ((11905 - 7841) <= (1250 + 569))) then
-					if (v25(v101.LavaBeam, not v17:IsSpellInRange(v101.LavaBeam)) or ((6018 - (809 + 223)) < (2296 - 722))) then
-						return "lava_beam aoe 76";
-					end
-				end
-				if (((13291 - 8865) > (568 - 396)) and v127(v101.ChainLightning) and v37 and (v115 >= (5 + 1)) and v14:BuffUp(v101.SurgeofPowerBuff)) then
-					if (((307 + 279) > (1072 - (14 + 603))) and v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning))) then
-						return "chain_lightning aoe 78";
-					end
-				end
-				if (((955 - (118 + 11)) == (134 + 692)) and v127(v101.LavaBurst) and v14:BuffUp(v101.LavaSurgeBuff) and v101.DeeplyRootedElements:IsAvailable() and v14:BuffUp(v101.WindspeakersLavaResurgenceBuff)) then
-					local v261 = 0 + 0;
-					while true do
-						if ((v261 == (0 - 0)) or ((4968 - (551 + 398)) > (2807 + 1634))) then
-							if (((718 + 1299) < (3463 + 798)) and v105.CastCycle(v101.LavaBurst, v113, v123, not v17:IsSpellInRange(v101.LavaBurst))) then
-								return "lava_burst aoe 80";
-							end
-							if (((17538 - 12822) > (184 - 104)) and v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst))) then
-								return "lava_burst aoe 80";
-							end
-							break;
-						end
-					end
-				end
-				if ((v127(v101.LavaBeam) and v44 and v128() and (v14:BuffRemains(v101.AscendanceBuff) > v101.LavaBeam:CastTime())) or ((1137 + 2370) == (12989 - 9717))) then
-					if (v25(v101.LavaBeam, not v17:IsSpellInRange(v101.LavaBeam)) or ((242 + 634) >= (3164 - (40 + 49)))) then
-						return "lava_beam aoe 82";
-					end
-				end
-				v170 = 22 - 16;
-			end
-			if (((4842 - (99 + 391)) > (2113 + 441)) and (v170 == (13 - 10))) then
-				if ((v38 and v101.Earthquake:IsReady() and not v101.EchoesofGreatSundering:IsAvailable() and not v101.ElementalBlast:IsAvailable() and (v115 == (7 - 4)) and ((v115 == (3 + 0)) or (v114 == (7 - 4)))) or ((6010 - (1032 + 572)) < (4460 - (203 + 214)))) then
-					local v262 = 1817 - (568 + 1249);
-					while true do
-						if (((0 + 0) == v262) or ((4536 - 2647) >= (13067 - 9684))) then
-							if (((3198 - (913 + 393)) <= (7720 - 4986)) and (v52 == "cursor")) then
-								if (((2716 - 793) < (2628 - (269 + 141))) and v25(v103.EarthquakeCursor, not v17:IsInRange(88 - 48))) then
-									return "earthquake aoe 48";
-								end
-							end
-							if (((4154 - (362 + 1619)) > (2004 - (950 + 675))) and (v52 == "player")) then
-								if (v25(v103.EarthquakePlayer, not v17:IsInRange(16 + 24)) or ((3770 - (216 + 963)) == (4696 - (485 + 802)))) then
-									return "earthquake aoe 48";
-								end
-							end
-							break;
-						end
-					end
-				end
-				if (((5073 - (432 + 127)) > (4397 - (1065 + 8))) and v38 and v101.Earthquake:IsReady() and (v14:BuffUp(v101.EchoesofGreatSunderingBuff))) then
-					local v263 = 0 + 0;
-					while true do
-						if (((1601 - (635 + 966)) == v263) or ((150 + 58) >= (4870 - (5 + 37)))) then
-							if ((v52 == "cursor") or ((3936 - 2353) > (1485 + 2082))) then
-								if (v25(v103.EarthquakeCursor, not v17:IsInRange(63 - 23)) or ((615 + 698) == (1649 - 855))) then
-									return "earthquake aoe 50";
-								end
-							end
-							if (((12033 - 8859) > (5472 - 2570)) and (v52 == "player")) then
-								if (((9850 - 5730) <= (3063 + 1197)) and v25(v103.EarthquakePlayer, not v17:IsInRange(569 - (318 + 211)))) then
-									return "earthquake aoe 50";
-								end
-							end
-							break;
-						end
-					end
-				end
-				if ((v127(v101.ElementalBlast) and v40 and v101.EchoesofGreatSundering:IsAvailable()) or ((4344 - 3461) > (6365 - (963 + 624)))) then
-					if (v105.CastTargetIf(v101.ElementalBlast, v113, "min", v125, nil, not v17:IsSpellInRange(v101.ElementalBlast), nil, nil) or ((1548 + 2072) >= (5737 - (518 + 328)))) then
+			if (((4811 - 3447) <= (2799 + 1674)) and (v170 == (4 + 0))) then
+				if ((v126(v100.ElementalBlast) and v39 and v100.EchoesofGreatSundering:IsAvailable()) or ((5036 - (860 + 581)) <= (10 - 7))) then
+					if (v104.CastTargetIf(v100.ElementalBlast, v112, "min", v124, nil, not v16:IsSpellInRange(v100.ElementalBlast), nil, nil) or ((3708 + 964) == (4093 - (237 + 4)))) then
 						return "elemental_blast aoe 52";
 					end
-					if (((9925 - 5667) > (1497 - 560)) and v25(v101.ElementalBlast, not v17:IsSpellInRange(v101.ElementalBlast))) then
+					if (((3663 - 2104) == (3943 - 2384)) and v24(v100.ElementalBlast, not v16:IsSpellInRange(v100.ElementalBlast))) then
 						return "elemental_blast aoe 52";
 					end
 				end
-				if ((v127(v101.ElementalBlast) and v40 and v101.EchoesofGreatSundering:IsAvailable()) or ((5186 - (301 + 16)) < (2655 - 1749))) then
-					if (v25(v101.ElementalBlast, not v17:IsSpellInRange(v101.ElementalBlast)) or ((3440 - 2215) > (11032 - 6804))) then
+				if ((v126(v100.ElementalBlast) and v39 and v100.EchoesofGreatSundering:IsAvailable()) or ((3321 - 1569) <= (645 + 143))) then
+					if (v24(v100.ElementalBlast, not v16:IsSpellInRange(v100.ElementalBlast)) or ((2244 + 1663) == (668 - 491))) then
 						return "elemental_blast aoe 54";
 					end
 				end
-				if (((3015 + 313) > (1271 + 967)) and v127(v101.ElementalBlast) and v40 and (v115 == (5 - 2)) and not v101.EchoesofGreatSundering:IsAvailable()) then
-					if (((2310 + 1529) > (134 + 1271)) and v25(v101.ElementalBlast, not v17:IsSpellInRange(v101.ElementalBlast))) then
+				if (((1489 + 1981) > (302 + 253)) and v126(v100.ElementalBlast) and v39 and (v114 == (1429 - (85 + 1341))) and not v100.EchoesofGreatSundering:IsAvailable()) then
+					if (v24(v100.ElementalBlast, not v16:IsSpellInRange(v100.ElementalBlast)) or ((1658 - 686) == (1821 - 1176))) then
 						return "elemental_blast aoe 56";
 					end
 				end
-				if ((v127(v101.EarthShock) and v39 and v101.EchoesofGreatSundering:IsAvailable()) or ((4110 - 2817) <= (164 + 343))) then
-					if (v105.CastTargetIf(v101.EarthShock, v113, "min", v125, nil, not v17:IsSpellInRange(v101.EarthShock), nil, nil) or ((3915 - (829 + 190)) < (2872 - 2067))) then
-						return "earth_shock aoe 58";
-					end
-					if (((2930 - 614) == (3200 - 884)) and v25(v101.EarthShock, not v17:IsSpellInRange(v101.EarthShock))) then
-						return "earth_shock aoe 58";
-					end
-				end
-				v170 = 9 - 5;
-			end
-			if ((v170 == (2 + 4)) or ((840 + 1730) == (4652 - 3119))) then
-				if ((v127(v101.LavaBurst) and (v115 == (3 + 0)) and v101.MasteroftheElements:IsAvailable()) or ((1496 - (520 + 93)) == (1736 - (259 + 17)))) then
-					local v264 = 0 + 0;
+				if (((3554 - (45 + 327)) >= (3991 - 1876)) and v126(v100.EarthShock) and v38 and v100.EchoesofGreatSundering:IsAvailable()) then
+					local v253 = 502 - (444 + 58);
 					while true do
-						if (((0 + 0) == v264) or ((15637 - 11018) <= (1590 - (396 + 195)))) then
-							if (v105.CastCycle(v101.LavaBurst, v113, v123, not v17:IsSpellInRange(v101.LavaBurst)) or ((9893 - 6483) > (5877 - (440 + 1321)))) then
-								return "lava_burst aoe 84";
+						if (((1692 + 2201) < (763 + 3666)) and (v253 == (0 + 0))) then
+							if (v104.CastTargetIf(v100.EarthShock, v112, "min", v124, nil, not v16:IsSpellInRange(v100.EarthShock), nil, nil) or ((8308 - 5441) < (3637 - (64 + 1668)))) then
+								return "earth_shock aoe 58";
 							end
-							if (v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst)) or ((2732 - (1059 + 770)) >= (14145 - 11086))) then
-								return "lava_burst aoe 84";
+							if (v24(v100.EarthShock, not v16:IsSpellInRange(v100.EarthShock)) or ((3769 - (1227 + 746)) >= (12451 - 8400))) then
+								return "earth_shock aoe 58";
 							end
 							break;
 						end
 					end
 				end
-				if ((v127(v101.LavaBurst) and v14:BuffUp(v101.LavaSurgeBuff) and v101.DeeplyRootedElements:IsAvailable()) or ((4521 - (424 + 121)) < (521 + 2336))) then
-					local v265 = 1347 - (641 + 706);
-					while true do
-						if (((1953 + 2977) > (2747 - (249 + 191))) and (v265 == (0 - 0))) then
-							if (v105.CastCycle(v101.LavaBurst, v113, v123, not v17:IsSpellInRange(v101.LavaBurst)) or ((1807 + 2239) < (4975 - 3684))) then
-								return "lava_burst aoe 86";
-							end
-							if (v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst)) or ((4668 - (183 + 244)) == (175 + 3370))) then
-								return "lava_burst aoe 86";
-							end
-							break;
+				if (((3004 - 1385) <= (4250 - (415 + 79))) and v126(v100.EarthShock) and v38 and v100.EchoesofGreatSundering:IsAvailable()) then
+					if (((16 + 588) == (1095 - (142 + 349))) and v24(v100.EarthShock, not v16:IsSpellInRange(v100.EarthShock))) then
+						return "earth_shock aoe 60";
+					end
+				end
+				v170 = 3 + 2;
+			end
+			if ((v170 == (7 - 1)) or ((2229 + 2255) == (635 + 265))) then
+				if ((v126(v100.LavaBeam) and v43 and v128() and (v13:BuffRemains(v100.AscendanceBuff) > v100.LavaBeam:CastTime())) or ((12143 - 7684) <= (2977 - (1710 + 154)))) then
+					if (((3950 - (200 + 118)) > (1347 + 2051)) and v24(v100.LavaBeam, not v16:IsSpellInRange(v100.LavaBeam))) then
+						return "lava_beam aoe 72";
+					end
+				end
+				if (((7136 - 3054) <= (7292 - 2375)) and v126(v100.ChainLightning) and v36 and v128()) then
+					if (((4294 + 538) >= (1371 + 15)) and v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning))) then
+						return "chain_lightning aoe 74";
+					end
+				end
+				if (((74 + 63) == (22 + 115)) and v126(v100.LavaBeam) and v43 and (v114 >= (12 - 6)) and v13:BuffUp(v100.SurgeofPowerBuff) and (v13:BuffRemains(v100.AscendanceBuff) > v100.LavaBeam:CastTime())) then
+					if (v24(v100.LavaBeam, not v16:IsSpellInRange(v100.LavaBeam)) or ((2820 - (363 + 887)) >= (7563 - 3231))) then
+						return "lava_beam aoe 76";
+					end
+				end
+				if ((v126(v100.ChainLightning) and v36 and (v114 >= (28 - 22)) and v13:BuffUp(v100.SurgeofPowerBuff)) or ((628 + 3436) <= (4255 - 2436))) then
+					if (v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning)) or ((3407 + 1579) < (3238 - (674 + 990)))) then
+						return "chain_lightning aoe 78";
+					end
+				end
+				if (((1269 + 3157) > (71 + 101)) and v126(v100.LavaBurst) and v13:BuffUp(v100.LavaSurgeBuff) and v100.DeeplyRootedElements:IsAvailable() and v13:BuffUp(v100.WindspeakersLavaResurgenceBuff)) then
+					if (((928 - 342) > (1510 - (507 + 548))) and v104.CastCycle(v100.LavaBurst, v112, v122, not v16:IsSpellInRange(v100.LavaBurst))) then
+						return "lava_burst aoe 80";
+					end
+					if (((1663 - (289 + 548)) == (2644 - (821 + 997))) and v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst))) then
+						return "lava_burst aoe 80";
+					end
+				end
+				v170 = 262 - (195 + 60);
+			end
+			if (((1 + 2) == v170) or ((5520 - (251 + 1250)) > (13010 - 8569))) then
+				if (((1386 + 631) < (5293 - (809 + 223))) and v126(v100.LavaBurst) and v13:BuffUp(v100.LavaSurgeBuff) and not v100.LightningRod:IsAvailable() and v13:HasTier(45 - 14, 11 - 7)) then
+					if (((15593 - 10877) > (59 + 21)) and v104.CastCycle(v100.LavaBurst, v112, v122, not v16:IsSpellInRange(v100.LavaBurst))) then
+						return "lava_burst aoe 42";
+					end
+					if (v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst)) or ((1837 + 1670) == (3889 - (14 + 603)))) then
+						return "lava_burst aoe 42";
+					end
+				end
+				if ((v126(v100.LavaBurst) and v13:BuffUp(v100.LavaSurgeBuff) and v100.MasteroftheElements:IsAvailable() and not v127() and (v125() >= (((189 - (118 + 11)) - ((1 + 4) * v100.EyeoftheStorm:TalentRank())) - ((2 + 0) * v25(v100.FlowofPower:IsAvailable())))) and ((not v100.EchoesofGreatSundering:IsAvailable() and not v100.LightningRod:IsAvailable()) or v13:BuffUp(v100.EchoesofGreatSunderingBuff)) and ((not v13:BuffUp(v100.AscendanceBuff) and (v114 > (8 - 5)) and v100.UnrelentingCalamity:IsAvailable()) or ((v114 > (952 - (551 + 398))) and not v100.UnrelentingCalamity:IsAvailable()) or (v114 == (2 + 1)))) or ((312 + 564) >= (2499 + 576))) then
+					if (((16185 - 11833) > (5884 - 3330)) and v104.CastCycle(v100.LavaBurst, v112, v122, not v16:IsSpellInRange(v100.LavaBurst))) then
+						return "lava_burst aoe 44";
+					end
+					if (v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst)) or ((1429 + 2977) < (16049 - 12006))) then
+						return "lava_burst aoe 44";
+					end
+				end
+				if ((v37 and v100.Earthquake:IsReady() and not v100.EchoesofGreatSundering:IsAvailable() and (v114 > (1 + 2)) and ((v114 > (92 - (40 + 49))) or (v113 > (11 - 8)))) or ((2379 - (99 + 391)) >= (2799 + 584))) then
+					if (((8317 - 6425) <= (6770 - 4036)) and (v51 == "cursor")) then
+						if (((1874 + 49) < (5836 - 3618)) and v24(v102.EarthquakeCursor, not v16:IsInRange(1644 - (1032 + 572)))) then
+							return "earthquake aoe 46";
+						end
+					end
+					if (((2590 - (203 + 214)) > (2196 - (568 + 1249))) and (v51 == "player")) then
+						if (v24(v102.EarthquakePlayer, not v16:IsInRange(32 + 8)) or ((6223 - 3632) == (13167 - 9758))) then
+							return "earthquake aoe 46";
 						end
 					end
 				end
-				if ((v127(v101.Icefury) and (v101.Icefury:CooldownRemains() == (730 - (434 + 296))) and v43 and v101.ElectrifiedShocks:IsAvailable() and (v115 < (15 - 10))) or ((4560 - (169 + 343)) > (3711 + 521))) then
-					if (v25(v101.Icefury, not v17:IsSpellInRange(v101.Icefury)) or ((3079 - 1329) >= (10193 - 6720))) then
-						return "icefury aoe 88";
-					end
-				end
-				if (((2594 + 572) == (8978 - 5812)) and v127(v101.FrostShock) and v42 and v14:BuffUp(v101.IcefuryBuff) and v101.ElectrifiedShocks:IsAvailable() and not v17:DebuffUp(v101.ElectrifiedShocksDebuff) and (v115 < (1128 - (651 + 472))) and v101.UnrelentingCalamity:IsAvailable()) then
-					if (((1333 + 430) < (1607 + 2117)) and v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock))) then
-						return "frost_shock aoe 90";
-					end
-				end
-				if (((69 - 12) <= (3206 - (397 + 86))) and v127(v101.LavaBeam) and v44 and (v14:BuffRemains(v101.AscendanceBuff) > v101.LavaBeam:CastTime())) then
-					if (v25(v101.LavaBeam, not v17:IsSpellInRange(v101.LavaBeam)) or ((2946 - (423 + 453)) == (46 + 397))) then
-						return "lava_beam aoe 92";
-					end
-				end
-				if ((v127(v101.ChainLightning) and v37) or ((357 + 2348) == (1217 + 176))) then
-					if (v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning)) or ((3672 + 929) < (55 + 6))) then
-						return "chain_lightning aoe 94";
-					end
-				end
-				v170 = 1197 - (50 + 1140);
-			end
-			if ((v170 == (2 + 0)) or ((821 + 569) >= (295 + 4449))) then
-				if ((v38 and v101.Earthquake:IsReady() and v128() and (((v14:BuffStack(v101.MagmaChamberBuff) > (21 - 6)) and (v115 >= ((6 + 1) - v26(v101.UnrelentingCalamity:IsAvailable())))) or (v101.SplinteredElements:IsAvailable() and (v115 >= ((606 - (157 + 439)) - v26(v101.UnrelentingCalamity:IsAvailable())))) or (v101.MountainsWillFall:IsAvailable() and (v115 >= (15 - 6)))) and not v101.LightningRod:IsAvailable() and v14:HasTier(102 - 71, 11 - 7)) or ((2921 - (782 + 136)) > (4689 - (112 + 743)))) then
-					local v266 = 1171 - (1026 + 145);
+				if (((5820 - (913 + 393)) > (9386 - 6062)) and v37 and v100.Earthquake:IsReady() and not v100.EchoesofGreatSundering:IsAvailable() and not v100.ElementalBlast:IsAvailable() and (v114 == (3 - 0)) and ((v114 == (413 - (269 + 141))) or (v113 == (6 - 3)))) then
+					local v254 = 1981 - (362 + 1619);
 					while true do
-						if ((v266 == (0 + 0)) or ((874 - (493 + 225)) > (14382 - 10469))) then
-							if (((119 + 76) == (522 - 327)) and (v52 == "cursor")) then
-								if (((60 + 3045) >= (5132 - 3336)) and v25(v103.EarthquakeCursor, not v17:IsInRange(12 + 28))) then
-									return "earthquake aoe 36";
+						if ((v254 == (1625 - (950 + 675))) or ((81 + 127) >= (6007 - (216 + 963)))) then
+							if ((v51 == "cursor") or ((2870 - (485 + 802)) > (4126 - (432 + 127)))) then
+								if (v24(v102.EarthquakeCursor, not v16:IsInRange(1113 - (1065 + 8))) or ((730 + 583) == (2395 - (635 + 966)))) then
+									return "earthquake aoe 48";
 								end
 							end
-							if (((7315 - 2936) >= (3726 - (210 + 1385))) and (v52 == "player")) then
-								if (((5533 - (1201 + 488)) >= (1267 + 776)) and v25(v103.EarthquakePlayer, not v17:IsInRange(71 - 31))) then
-									return "earthquake aoe 36";
+							if (((2283 + 891) > (2944 - (5 + 37))) and (v51 == "player")) then
+								if (((10246 - 6126) <= (1773 + 2487)) and v24(v102.EarthquakePlayer, not v16:IsInRange(63 - 23))) then
+									return "earthquake aoe 48";
 								end
 							end
 							break;
 						end
 					end
 				end
-				if ((v127(v101.LavaBeam) and v44 and v130() and ((v14:BuffUp(v101.SurgeofPowerBuff) and (v115 >= (10 - 4))) or (v128() and ((v115 < (591 - (352 + 233))) or not v101.SurgeofPower:IsAvailable()))) and not v101.LightningRod:IsAvailable() and v14:HasTier(74 - 43, 3 + 1)) or ((9189 - 5957) <= (3305 - (489 + 85)))) then
-					if (((6406 - (277 + 1224)) == (6398 - (663 + 830))) and v25(v101.LavaBeam, not v17:IsSpellInRange(v101.LavaBeam))) then
+				if ((v37 and v100.Earthquake:IsReady() and (v13:BuffUp(v100.EchoesofGreatSunderingBuff))) or ((414 + 469) > (9928 - 5150))) then
+					local v255 = 0 - 0;
+					while true do
+						if ((v255 == (0 - 0)) or ((8655 - 5035) >= (3517 + 1374))) then
+							if (((4787 - (318 + 211)) > (4610 - 3673)) and (v51 == "cursor")) then
+								if (v24(v102.EarthquakeCursor, not v16:IsInRange(1627 - (963 + 624))) or ((2082 + 2787) < (1752 - (518 + 328)))) then
+									return "earthquake aoe 50";
+								end
+							end
+							if ((v51 == "player") or ((2855 - 1630) > (6757 - 2529))) then
+								if (((3645 - (301 + 16)) > (6559 - 4321)) and v24(v102.EarthquakePlayer, not v16:IsInRange(112 - 72))) then
+									return "earthquake aoe 50";
+								end
+							end
+							break;
+						end
+					end
+				end
+				v170 = 10 - 6;
+			end
+			if (((3478 + 361) > (798 + 607)) and (v170 == (3 - 1))) then
+				if ((v100.Ascendance:IsCastable() and v52 and ((v58 and v33) or not v58) and (v90 < v108)) or ((778 + 515) <= (49 + 458))) then
+					if (v24(v100.Ascendance) or ((9207 - 6311) < (260 + 545))) then
+						return "ascendance aoe 32";
+					end
+				end
+				if (((3335 - (829 + 190)) == (8263 - 5947)) and v126(v100.LavaBurst) and (v114 == (3 - 0)) and not v100.LightningRod:IsAvailable() and v13:HasTier(42 - 11, 9 - 5)) then
+					local v256 = 0 + 0;
+					while true do
+						if (((0 + 0) == v256) or ((7800 - 5230) == (1447 + 86))) then
+							if (v104.CastCycle(v100.LavaBurst, v112, v122, not v16:IsSpellInRange(v100.LavaBurst)) or ((1496 - (520 + 93)) == (1736 - (259 + 17)))) then
+								return "lava_burst aoe 34";
+							end
+							if (v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst)) or ((267 + 4352) <= (360 + 639))) then
+								return "lava_burst aoe 34";
+							end
+							break;
+						end
+					end
+				end
+				if ((v37 and v100.Earthquake:IsReady() and v127() and (((v13:BuffStack(v100.MagmaChamberBuff) > (50 - 35)) and (v114 >= ((598 - (396 + 195)) - v25(v100.UnrelentingCalamity:IsAvailable())))) or (v100.SplinteredElements:IsAvailable() and (v114 >= ((29 - 19) - v25(v100.UnrelentingCalamity:IsAvailable())))) or (v100.MountainsWillFall:IsAvailable() and (v114 >= (1770 - (440 + 1321))))) and not v100.LightningRod:IsAvailable() and v13:HasTier(1860 - (1059 + 770), 18 - 14)) or ((3955 - (424 + 121)) > (751 + 3365))) then
+					if ((v51 == "cursor") or ((2250 - (641 + 706)) >= (1212 + 1847))) then
+						if (v24(v102.EarthquakeCursor, not v16:IsInRange(480 - (249 + 191))) or ((17320 - 13344) < (1276 + 1581))) then
+							return "earthquake aoe 36";
+						end
+					end
+					if (((19001 - 14071) > (2734 - (183 + 244))) and (v51 == "player")) then
+						if (v24(v102.EarthquakePlayer, not v16:IsInRange(2 + 38)) or ((4776 - (434 + 296)) < (4119 - 2828))) then
+							return "earthquake aoe 36";
+						end
+					end
+				end
+				if ((v126(v100.LavaBeam) and v43 and v129() and ((v13:BuffUp(v100.SurgeofPowerBuff) and (v114 >= (518 - (169 + 343)))) or (v127() and ((v114 < (6 + 0)) or not v100.SurgeofPower:IsAvailable()))) and not v100.LightningRod:IsAvailable() and v13:HasTier(54 - 23, 11 - 7)) or ((3475 + 766) == (10053 - 6508))) then
+					if (v24(v100.LavaBeam, not v16:IsSpellInRange(v100.LavaBeam)) or ((5171 - (651 + 472)) > (3199 + 1033))) then
 						return "lava_beam aoe 38";
 					end
 				end
-				if ((v127(v101.ChainLightning) and v37 and v130() and ((v14:BuffUp(v101.SurgeofPowerBuff) and (v115 >= (6 + 0))) or (v128() and ((v115 < (14 - 8)) or not v101.SurgeofPower:IsAvailable()))) and not v101.LightningRod:IsAvailable() and v14:HasTier(906 - (461 + 414), 1 + 3)) or ((1655 + 2481) >= (421 + 3990))) then
-					if (v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning)) or ((2917 + 41) == (4267 - (172 + 78)))) then
+				if ((v126(v100.ChainLightning) and v36 and v129() and ((v13:BuffUp(v100.SurgeofPowerBuff) and (v114 >= (3 + 3))) or (v127() and ((v114 < (7 - 1)) or not v100.SurgeofPower:IsAvailable()))) and not v100.LightningRod:IsAvailable() and v13:HasTier(514 - (397 + 86), 880 - (423 + 453))) or ((178 + 1572) >= (458 + 3015))) then
+					if (((2765 + 401) == (2527 + 639)) and v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning))) then
 						return "chain_lightning aoe 40";
 					end
 				end
-				if (((1979 - 751) >= (300 + 513)) and v127(v101.LavaBurst) and v14:BuffUp(v101.LavaSurgeBuff) and not v101.LightningRod:IsAvailable() and v14:HasTier(44 - 13, 2 + 2)) then
-					if (v105.CastCycle(v101.LavaBurst, v113, v123, not v17:IsSpellInRange(v101.LavaBurst)) or ((1154 + 2301) > (6785 - 2735))) then
-						return "lava_burst aoe 42";
-					end
-					if (((305 - 62) == (62 + 181)) and v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst))) then
-						return "lava_burst aoe 42";
-					end
-				end
-				if ((v127(v101.LavaBurst) and v14:BuffUp(v101.LavaSurgeBuff) and v101.MasteroftheElements:IsAvailable() and not v128() and (v126() >= (((34 + 26) - ((2 + 3) * v101.EyeoftheStorm:TalentRank())) - ((7 - 5) * v26(v101.FlowofPower:IsAvailable())))) and ((not v101.EchoesofGreatSundering:IsAvailable() and not v101.LightningRod:IsAvailable()) or v14:BuffUp(v101.EchoesofGreatSunderingBuff)) and ((not v14:BuffUp(v101.AscendanceBuff) and (v115 > (6 - 3)) and v101.UnrelentingCalamity:IsAvailable()) or ((v115 > (1 + 2)) and not v101.UnrelentingCalamity:IsAvailable()) or (v115 == (2 + 1)))) or ((718 - (133 + 314)) > (274 + 1298))) then
-					local v267 = 213 - (199 + 14);
-					while true do
-						if (((9805 - 7066) < (4842 - (647 + 902))) and ((0 - 0) == v267)) then
-							if (v105.CastCycle(v101.LavaBurst, v113, v123, not v17:IsSpellInRange(v101.LavaBurst)) or ((4175 - (85 + 148)) < (2423 - (426 + 863)))) then
-								return "lava_burst aoe 44";
-							end
-							if (v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst)) or ((12603 - 9910) == (6627 - (873 + 781)))) then
-								return "lava_burst aoe 44";
-							end
-							break;
-						end
-					end
-				end
-				if (((2873 - 727) == (5795 - 3649)) and v38 and v101.Earthquake:IsReady() and not v101.EchoesofGreatSundering:IsAvailable() and (v115 > (2 + 1)) and ((v115 > (11 - 8)) or (v114 > (3 - 0)))) then
-					local v268 = 0 - 0;
-					while true do
-						if ((v268 == (1947 - (414 + 1533))) or ((1946 + 298) == (3779 - (443 + 112)))) then
-							if ((v52 == "cursor") or ((6383 - (888 + 591)) <= (4950 - 3034))) then
-								if (((6 + 84) <= (4011 - 2946)) and v25(v103.EarthquakeCursor, not v17:IsInRange(16 + 24))) then
-									return "earthquake aoe 46";
-								end
-							end
-							if (((2323 + 2479) == (514 + 4288)) and (v52 == "player")) then
-								if (v25(v103.EarthquakePlayer, not v17:IsInRange(76 - 36)) or ((4223 - 1943) <= (2189 - (136 + 1542)))) then
-									return "earthquake aoe 46";
-								end
-							end
-							break;
-						end
-					end
-				end
-				v170 = 9 - 6;
+				v170 = 3 + 0;
 			end
 		end
 	end
-	local function v139()
-		if ((v101.FireElemental:IsCastable() and v54 and ((v60 and v34) or not v60) and (v91 < v109)) or ((1664 + 12) <= (736 - 273))) then
-			if (((2801 + 1068) == (4355 - (68 + 418))) and v25(v101.FireElemental)) then
+	local function v138()
+		if (((2953 - (50 + 1140)) < (3219 + 505)) and v100.FireElemental:IsCastable() and v53 and ((v59 and v33) or not v59) and (v90 < v108)) then
+			if (((34 + 23) <= (170 + 2553)) and v24(v100.FireElemental)) then
 				return "fire_elemental single_target 2";
 			end
 		end
-		if (((3139 - 1981) <= (4740 - 2127)) and v101.StormElemental:IsCastable() and v56 and ((v61 and v34) or not v61) and (v91 < v109)) then
-			if (v25(v101.StormElemental) or ((2041 + 323) <= (3091 - (770 + 322)))) then
+		if ((v100.StormElemental:IsCastable() and v55 and ((v60 and v33) or not v60) and (v90 < v108)) or ((2972 - 902) == (321 + 122))) then
+			if (v24(v100.StormElemental) or ((3301 - (157 + 439)) == (2421 - 1028))) then
 				return "storm_elemental single_target 4";
 			end
 		end
-		if ((v101.TotemicRecall:IsCastable() and v50 and (v101.LiquidMagmaTotem:CooldownRemains() > (3 + 42)) and ((v101.LavaSurge:IsAvailable() and v101.SplinteredElements:IsAvailable()) or ((v114 > (1 + 0)) and (v115 > (1 + 0))))) or ((7041 - 2119) < (376 - 182))) then
-			if (v25(v101.TotemicRecall) or ((5694 - 3603) < (113 - 82))) then
+		if ((v100.TotemicRecall:IsCastable() and v49 and (v100.LiquidMagmaTotem:CooldownRemains() > (149 - 104)) and ((v100.LavaSurge:IsAvailable() and v100.SplinteredElements:IsAvailable()) or ((v113 > (2 - 1)) and (v114 > (919 - (782 + 136)))))) or ((5456 - (112 + 743)) < (1232 - (1026 + 145)))) then
+			if (v24(v100.TotemicRecall) or ((239 + 1151) >= (5462 - (493 + 225)))) then
 				return "totemic_recall single_target 6";
 			end
 		end
-		if ((v101.LiquidMagmaTotem:IsCastable() and v55 and ((v62 and v34) or not v62) and (v91 < v109) and ((v101.LavaSurge:IsAvailable() and v101.SplinteredElements:IsAvailable()) or (v101.FlameShockDebuff:AuraActiveCount() == (0 + 0)) or (v17:DebuffRemains(v101.FlameShockDebuff) < (8 - 2)) or ((v114 > (1 + 0)) and (v115 > (1 + 0))))) or ((1905 + 525) >= (18345 - 13473))) then
-			local v197 = 0 - 0;
+		if ((v100.LiquidMagmaTotem:IsCastable() and v54 and ((v61 and v33) or not v61) and (v90 < v108) and ((v100.LavaSurge:IsAvailable() and v100.SplinteredElements:IsAvailable()) or (v100.FlameShockDebuff:AuraActiveCount() == (0 - 0)) or (v16:DebuffRemains(v100.FlameShockDebuff) < (4 + 2)) or ((v113 > (2 - 1)) and (v114 > (1 + 0))))) or ((5723 - 3720) > (1117 + 2717))) then
+			local v184 = 0 - 0;
 			while true do
-				if ((v197 == (0 + 0)) or ((21972 - 17202) < (5735 - 4000))) then
-					if ((v67 == "cursor") or ((1826 + 2613) <= (11628 - 9278))) then
-						if (v25(v103.LiquidMagmaTotemCursor, not v17:IsInRange(871 - (762 + 69))) or ((14503 - 10024) < (3848 + 618))) then
+				if ((v184 == (1595 - (210 + 1385))) or ((1845 - (1201 + 488)) > (2426 + 1487))) then
+					if (((346 - 151) == (349 - 154)) and (v66 == "cursor")) then
+						if (((3690 - (352 + 233)) >= (4340 - 2544)) and v24(v102.LiquidMagmaTotemCursor, not v16:IsInRange(22 + 18))) then
 							return "liquid_magma_totem single_target cursor 8";
 						end
 					end
-					if (((1649 + 898) > (2962 - 1737)) and (v67 == "player")) then
-						if (((1470 + 3201) > (43 + 2631)) and v25(v103.LiquidMagmaTotemPlayer, not v17:IsInRange(155 - 115))) then
+					if (((12450 - 8071) >= (2705 - (489 + 85))) and (v66 == "player")) then
+						if (((5345 - (277 + 1224)) >= (3536 - (663 + 830))) and v24(v102.LiquidMagmaTotemPlayer, not v16:IsInRange(36 + 4))) then
 							return "liquid_magma_totem single_target player 8";
 						end
 					end
@@ -1008,789 +971,749 @@ v0["Epix_Shaman_Elemental.lua"] = function(...)
 				end
 			end
 		end
-		if ((v127(v101.PrimordialWave) and v101.PrimordialWave:IsCastable() and v48 and ((v65 and v35) or not v65) and not v14:BuffUp(v101.PrimordialWaveBuff) and not v14:BuffUp(v101.SplinteredElementsBuff)) or ((3853 - (8 + 149)) < (4647 - (1199 + 121)))) then
-			local v198 = 0 - 0;
+		if ((v126(v100.PrimordialWave) and v100.PrimordialWave:IsCastable() and v47 and ((v64 and v34) or not v64) and not v13:BuffUp(v100.PrimordialWaveBuff) and not v13:BuffUp(v100.SplinteredElementsBuff)) or ((7914 - 4682) <= (3606 - (461 + 414)))) then
+			local v185 = 0 + 0;
 			while true do
-				if ((v198 == (0 - 0)) or ((1871 + 2671) == (10601 - 7631))) then
-					if (((584 - 332) <= (1750 + 227)) and v105.CastCycle(v101.PrimordialWave, v113, v123, not v17:IsSpellInRange(v101.PrimordialWave))) then
+				if (((1963 + 2942) == (468 + 4437)) and (v185 == (0 + 0))) then
+					if (v104.CastCycle(v100.PrimordialWave, v112, v122, not v16:IsSpellInRange(v100.PrimordialWave)) or ((4386 - (172 + 78)) >= (7112 - 2701))) then
 						return "primordial_wave single_target 10";
 					end
-					if (v25(v101.PrimordialWave, not v17:IsSpellInRange(v101.PrimordialWave)) or ((3243 - (518 + 1289)) == (6473 - 2698))) then
+					if (v24(v100.PrimordialWave, not v16:IsSpellInRange(v100.PrimordialWave)) or ((1089 + 1869) == (5796 - 1779))) then
 						return "primordial_wave single_target 10";
 					end
 					break;
 				end
 			end
 		end
-		if ((v101.FlameShock:IsCastable() and v41 and (v114 == (1 + 0)) and v17:DebuffRefreshable(v101.FlameShockDebuff) and ((v17:DebuffRemains(v101.FlameShockDebuff) < v101.PrimordialWave:CooldownRemains()) or not v101.PrimordialWave:IsAvailable()) and v14:BuffDown(v101.SurgeofPowerBuff) and (not v128() or (not v130() and ((v101.ElementalBlast:IsAvailable() and (v126() < ((131 - 41) - ((6 + 2) * v101.EyeoftheStorm:TalentRank())))) or (v126() < ((529 - (304 + 165)) - ((5 + 0) * v101.EyeoftheStorm:TalentRank()))))))) or ((1778 - (54 + 106)) < (2899 - (1618 + 351)))) then
-			if (((3331 + 1392) > (5169 - (10 + 1006))) and v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock))) then
+		if (((335 + 893) >= (272 + 541)) and v100.FlameShock:IsCastable() and v40 and (v113 == (1 - 0)) and v16:DebuffRefreshable(v100.FlameShockDebuff) and ((v16:DebuffRemains(v100.FlameShockDebuff) < v100.PrimordialWave:CooldownRemains()) or not v100.PrimordialWave:IsAvailable()) and v13:BuffDown(v100.SurgeofPowerBuff) and (not v127() or (not v129() and ((v100.ElementalBlast:IsAvailable() and (v125() < ((113 - 23) - ((3 + 5) * v100.EyeoftheStorm:TalentRank())))) or (v125() < ((34 + 26) - ((2 + 3) * v100.EyeoftheStorm:TalentRank()))))))) then
+			if (v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock)) or ((13753 - 10298) > (9435 - 5385))) then
 				return "flame_shock single_target 12";
 			end
 		end
-		if ((v101.FlameShock:IsCastable() and v41 and (v101.FlameShockDebuff:AuraActiveCount() == (0 + 0)) and (v114 > (1 + 0)) and (v115 > (3 - 2)) and (v101.DeeplyRootedElements:IsAvailable() or v101.Ascendance:IsAvailable() or v101.PrimordialWave:IsAvailable() or v101.SearingFlames:IsAvailable() or v101.MagmaChamber:IsAvailable()) and ((not v128() and (v130() or (v101.Stormkeeper:CooldownRemains() > (1033 - (912 + 121))))) or not v101.SurgeofPower:IsAvailable())) or ((1727 + 1927) >= (5943 - (1140 + 149)))) then
-			local v199 = 0 + 0;
+		if (((75 + 168) == (139 + 104)) and v100.FlameShock:IsCastable() and v40 and (v100.FlameShockDebuff:AuraActiveCount() == (447 - (133 + 314))) and (v113 > (1 + 0)) and (v114 > (214 - (199 + 14))) and (v100.DeeplyRootedElements:IsAvailable() or v100.Ascendance:IsAvailable() or v100.PrimordialWave:IsAvailable() or v100.SearingFlames:IsAvailable() or v100.MagmaChamber:IsAvailable()) and ((not v127() and (v129() or (v100.Stormkeeper:CooldownRemains() > (0 - 0)))) or not v100.SurgeofPower:IsAvailable())) then
+			local v186 = 1549 - (647 + 902);
 			while true do
-				if (((1267 - 316) <= (279 + 1217)) and ((0 - 0) == v199)) then
-					if (v105.CastTargetIf(v101.FlameShock, v113, "min", v123, nil, not v17:IsSpellInRange(v101.FlameShock)) or ((3255 - 1519) == (99 + 472))) then
+				if ((v186 == (0 - 0)) or ((504 - (85 + 148)) > (2861 - (426 + 863)))) then
+					if (((12818 - 10079) < (4947 - (873 + 781))) and v104.CastTargetIf(v100.FlameShock, v112, "min", v122, nil, not v16:IsSpellInRange(v100.FlameShock))) then
 						return "flame_shock single_target 14";
 					end
-					if (v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock)) or ((3109 - 2213) > (4955 - (165 + 21)))) then
+					if (v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock)) or ((5278 - 1336) < (3062 - 1928))) then
 						return "flame_shock single_target 14";
 					end
 					break;
 				end
 			end
 		end
-		if ((v101.FlameShock:IsCastable() and v41 and (v114 > (112 - (61 + 50))) and (v115 > (1 + 0)) and (v101.DeeplyRootedElements:IsAvailable() or v101.Ascendance:IsAvailable() or v101.PrimordialWave:IsAvailable() or v101.SearingFlames:IsAvailable() or v101.MagmaChamber:IsAvailable()) and ((v14:BuffUp(v101.SurgeofPowerBuff) and not v130() and v101.Stormkeeper:IsAvailable()) or not v101.SurgeofPower:IsAvailable())) or ((4980 - 3935) <= (2055 - 1035))) then
-			local v200 = 0 + 0;
-			while true do
-				if ((v200 == (1460 - (1295 + 165))) or ((265 + 895) <= (132 + 196))) then
-					if (((5205 - (819 + 578)) > (4326 - (331 + 1071))) and v105.CastTargetIf(v101.FlameShock, v113, "min", v123, v120, not v17:IsSpellInRange(v101.FlameShock))) then
-						return "flame_shock single_target 16";
-					end
-					if (((4634 - (588 + 155)) < (6201 - (546 + 736))) and v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock))) then
-						return "flame_shock single_target 16";
-					end
-					break;
-				end
+		if ((v100.FlameShock:IsCastable() and v40 and (v113 > (1 + 0)) and (v114 > (3 - 2)) and (v100.DeeplyRootedElements:IsAvailable() or v100.Ascendance:IsAvailable() or v100.PrimordialWave:IsAvailable() or v100.SearingFlames:IsAvailable() or v100.MagmaChamber:IsAvailable()) and ((v13:BuffUp(v100.SurgeofPowerBuff) and not v129() and v100.Stormkeeper:IsAvailable()) or not v100.SurgeofPower:IsAvailable())) or ((3858 - 1165) == (14766 - 9793))) then
+			if (((4093 - (414 + 1533)) == (1861 + 285)) and v104.CastTargetIf(v100.FlameShock, v112, "min", v122, v119, not v16:IsSpellInRange(v100.FlameShock))) then
+				return "flame_shock single_target 16";
+			end
+			if (v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock)) or ((2799 - (443 + 112)) == (4703 - (888 + 591)))) then
+				return "flame_shock single_target 16";
 			end
 		end
-		if ((v127(v101.Stormkeeper) and (v101.Stormkeeper:CooldownRemains() == (1937 - (1834 + 103))) and not v14:BuffUp(v101.StormkeeperBuff) and v49 and ((v66 and v35) or not v66) and (v91 < v109) and v14:BuffDown(v101.AscendanceBuff) and not v130() and (v126() >= (72 + 44)) and v101.ElementalBlast:IsAvailable() and v101.SurgeofPower:IsAvailable() and v101.SwellingMaelstrom:IsAvailable() and not v101.LavaSurge:IsAvailable() and not v101.EchooftheElements:IsAvailable() and not v101.PrimordialSurge:IsAvailable()) or ((6664 - 4430) <= (3268 - (1536 + 230)))) then
-			if (v25(v101.Stormkeeper) or ((3003 - (128 + 363)) < (92 + 340))) then
+		if ((v126(v100.Stormkeeper) and (v100.Stormkeeper:CooldownRemains() == (0 - 0)) and not v13:BuffUp(v100.StormkeeperBuff) and v48 and ((v65 and v34) or not v65) and (v90 < v108) and v13:BuffDown(v100.AscendanceBuff) and not v129() and (v125() >= (7 + 109)) and v100.ElementalBlast:IsAvailable() and v100.SurgeofPower:IsAvailable() and v100.SwellingMaelstrom:IsAvailable() and not v100.LavaSurge:IsAvailable() and not v100.EchooftheElements:IsAvailable() and not v100.PrimordialSurge:IsAvailable()) or ((18470 - 13566) <= (748 + 1168))) then
+			if (((44 + 46) <= (114 + 951)) and v24(v100.Stormkeeper)) then
 				return "stormkeeper single_target 18";
 			end
 		end
-		if ((v127(v101.Stormkeeper) and (v101.Stormkeeper:CooldownRemains() == (0 - 0)) and not v14:BuffUp(v101.StormkeeperBuff) and v49 and ((v66 and v35) or not v66) and (v91 < v109) and v14:BuffDown(v101.AscendanceBuff) and not v130() and v14:BuffUp(v101.SurgeofPowerBuff) and not v101.LavaSurge:IsAvailable() and not v101.EchooftheElements:IsAvailable() and not v101.PrimordialSurge:IsAvailable()) or ((478 + 1370) == (1432 - 567))) then
-			if (v25(v101.Stormkeeper) or ((13783 - 9101) <= (11029 - 6488))) then
+		if (((9150 - 4348) == (8894 - 4092)) and v126(v100.Stormkeeper) and (v100.Stormkeeper:CooldownRemains() == (1678 - (136 + 1542))) and not v13:BuffUp(v100.StormkeeperBuff) and v48 and ((v65 and v34) or not v65) and (v90 < v108) and v13:BuffDown(v100.AscendanceBuff) and not v129() and v13:BuffUp(v100.SurgeofPowerBuff) and not v100.LavaSurge:IsAvailable() and not v100.EchooftheElements:IsAvailable() and not v100.PrimordialSurge:IsAvailable()) then
+			if (v24(v100.Stormkeeper) or ((7476 - 5196) <= (508 + 3))) then
 				return "stormkeeper single_target 20";
 			end
 		end
-		if ((v127(v101.Stormkeeper) and (v101.Stormkeeper:CooldownRemains() == (0 + 0)) and not v14:BuffUp(v101.StormkeeperBuff) and v49 and ((v66 and v35) or not v66) and (v91 < v109) and v14:BuffDown(v101.AscendanceBuff) and not v130() and (not v101.SurgeofPower:IsAvailable() or not v101.ElementalBlast:IsAvailable() or v101.LavaSurge:IsAvailable() or v101.EchooftheElements:IsAvailable() or v101.PrimordialSurge:IsAvailable())) or ((4035 - (615 + 394)) >= (3653 + 393))) then
-			if (((1914 + 94) > (1944 - 1306)) and v25(v101.Stormkeeper)) then
+		if ((v126(v100.Stormkeeper) and (v100.Stormkeeper:CooldownRemains() == (0 - 0)) and not v13:BuffUp(v100.StormkeeperBuff) and v48 and ((v65 and v34) or not v65) and (v90 < v108) and v13:BuffDown(v100.AscendanceBuff) and not v129() and (not v100.SurgeofPower:IsAvailable() or not v100.ElementalBlast:IsAvailable() or v100.LavaSurge:IsAvailable() or v100.EchooftheElements:IsAvailable() or v100.PrimordialSurge:IsAvailable())) or ((1213 + 463) <= (949 - (68 + 418)))) then
+			if (((10487 - 6618) == (7019 - 3150)) and v24(v100.Stormkeeper)) then
 				return "stormkeeper single_target 22";
 			end
 		end
-		if (((8051 - 6276) <= (3884 - (59 + 592))) and v101.Ascendance:IsCastable() and v53 and ((v59 and v34) or not v59) and (v91 < v109) and not v130()) then
-			if (v25(v101.Ascendance) or ((10057 - 5514) == (3677 - 1680))) then
+		if (((1000 + 158) <= (3705 - (770 + 322))) and v100.Ascendance:IsCastable() and v52 and ((v58 and v33) or not v58) and (v90 < v108) and not v129()) then
+			if (v24(v100.Ascendance) or ((137 + 2227) <= (579 + 1420))) then
 				return "ascendance single_target 24";
 			end
 		end
-		if ((v127(v101.LightningBolt) and v101.LightningBolt:IsCastable() and v46 and v130() and v14:BuffUp(v101.SurgeofPowerBuff)) or ((2187 + 915) < (899 - (70 + 101)))) then
-			if (((852 - 507) == (245 + 100)) and v25(v101.LightningBolt, not v17:IsSpellInRange(v101.LightningBolt))) then
+		if ((v126(v100.LightningBolt) and v100.LightningBolt:IsCastable() and v45 and v129() and v13:BuffUp(v100.SurgeofPowerBuff)) or ((672 + 4250) < (276 - 82))) then
+			if (v24(v100.LightningBolt, not v16:IsSpellInRange(v100.LightningBolt)) or ((4054 - 1963) < (84 - 53))) then
 				return "lightning_bolt single_target 26";
 			end
 		end
-		if ((v127(v101.LavaBeam) and v44 and (v114 > (2 - 1)) and (v115 > (242 - (123 + 118))) and v130() and not v101.SurgeofPower:IsAvailable()) or ((685 + 2142) < (5 + 373))) then
-			if (v25(v101.LavaBeam, not v17:IsSpellInRange(v101.LavaBeam)) or ((4875 - (653 + 746)) < (4857 - 2260))) then
+		if ((v126(v100.LavaBeam) and v43 and (v113 > (3 - 2)) and (v114 > (1 + 0)) and v129() and not v100.SurgeofPower:IsAvailable()) or ((3640 - 1210) >= (2338 + 2534))) then
+			if (v24(v100.LavaBeam, not v16:IsSpellInRange(v100.LavaBeam)) or ((2925 + 1845) < (1360 + 375))) then
 				return "lava_beam single_target 28";
 			end
 		end
-		if (((4435 - 1356) < (12835 - 8041)) and v127(v101.ChainLightning) and v101.ChainLightning:IsCastable() and v37 and (v114 > (1 + 0)) and (v115 > (1 + 0)) and v130() and not v101.SurgeofPower:IsAvailable()) then
-			if (((4240 + 614) > (547 + 3917)) and v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning))) then
+		if ((v126(v100.ChainLightning) and v100.ChainLightning:IsCastable() and v36 and (v113 > (3 - 2)) and (v114 > (1 - 0)) and v129() and not v100.SurgeofPower:IsAvailable()) or ((1501 + 2938) <= (10825 - 8475))) then
+			if (v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning)) or ((14805 - 10326) < (1837 + 2629))) then
 				return "chain_lightning single_target 30";
 			end
 		end
-		if ((v127(v101.LavaBurst) and v101.LavaBurst:IsCastable() and v45 and v130() and not v128() and not v101.SurgeofPower:IsAvailable() and v101.MasteroftheElements:IsAvailable()) or ((767 + 4145) == (9212 - 5454))) then
-			if (((120 + 6) <= (6432 - 2950)) and v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst))) then
+		if (((12603 - 10056) > (2056 - (762 + 69))) and v126(v100.LavaBurst) and v100.LavaBurst:IsCastable() and v44 and v129() and not v127() and not v100.SurgeofPower:IsAvailable() and v100.MasteroftheElements:IsAvailable()) then
+			if (((15125 - 10454) > (2304 + 370)) and v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst))) then
 				return "lava_burst single_target 32";
 			end
 		end
-		if ((v127(v101.LightningBolt) and v101.LightningBolt:IsCastable() and v46 and v130() and not v101.SurgeofPower:IsAvailable() and v128()) or ((3608 - (885 + 349)) == (3474 + 900))) then
-			if (((4295 - 2720) == (4581 - 3006)) and v25(v101.LightningBolt, not v17:IsSpellInRange(v101.LightningBolt))) then
+		if ((v126(v100.LightningBolt) and v100.LightningBolt:IsCastable() and v45 and v129() and not v100.SurgeofPower:IsAvailable() and v127()) or ((2393 + 1303) < (8046 - 4719))) then
+			if (v24(v100.LightningBolt, not v16:IsSpellInRange(v100.LightningBolt)) or ((1430 + 3112) == (48 + 2922))) then
 				return "lightning_bolt single_target 34";
 			end
 		end
-		if ((v127(v101.LightningBolt) and v101.LightningBolt:IsCastable() and v46 and v130() and not v101.SurgeofPower:IsAvailable() and not v101.MasteroftheElements:IsAvailable()) or ((3202 - (915 + 53)) == (2256 - (768 + 33)))) then
-			if (v25(v101.LightningBolt, not v17:IsSpellInRange(v101.LightningBolt)) or ((4085 - 3018) > (3131 - 1352))) then
+		if (((981 - 729) <= (2134 - (8 + 149))) and v126(v100.LightningBolt) and v100.LightningBolt:IsCastable() and v45 and v129() and not v100.SurgeofPower:IsAvailable() and not v100.MasteroftheElements:IsAvailable()) then
+			if (v24(v100.LightningBolt, not v16:IsSpellInRange(v100.LightningBolt)) or ((2756 - (1199 + 121)) == (6387 - 2612))) then
 				return "lightning_bolt single_target 36";
 			end
 		end
-		if (((2489 - (287 + 41)) >= (1781 - (638 + 209))) and v127(v101.LightningBolt) and v101.LightningBolt:IsCastable() and v46 and v14:BuffUp(v101.SurgeofPowerBuff) and v101.LightningRod:IsAvailable()) then
-			if (((838 + 774) == (3298 - (96 + 1590))) and v25(v101.LightningBolt, not v17:IsSpellInRange(v101.LightningBolt))) then
+		if ((v126(v100.LightningBolt) and v100.LightningBolt:IsCastable() and v45 and v13:BuffUp(v100.SurgeofPowerBuff) and v100.LightningRod:IsAvailable()) or ((3652 - 2034) < (383 + 547))) then
+			if (((16858 - 12135) > (9636 - 5483)) and v24(v100.LightningBolt, not v16:IsSpellInRange(v100.LightningBolt))) then
 				return "lightning_bolt single_target 38";
 			end
 		end
-		if (((6024 - (741 + 931)) >= (1392 + 1441)) and v127(v101.Icefury) and (v101.Icefury:CooldownRemains() == (0 - 0)) and v43 and v101.ElectrifiedShocks:IsAvailable() and v101.LightningRod:IsAvailable() and v101.LightningRod:IsAvailable()) then
-			if (v25(v101.Icefury, not v17:IsSpellInRange(v101.Icefury)) or ((15052 - 11830) < (1319 + 1754))) then
+		if ((v126(v100.Icefury) and (v100.Icefury:CooldownRemains() == (0 + 0)) and v42 and v100.ElectrifiedShocks:IsAvailable() and v100.LightningRod:IsAvailable() and v100.LightningRod:IsAvailable()) or ((5461 - (518 + 1289)) >= (7981 - 3327))) then
+			if (((127 + 824) <= (2184 - 688)) and v24(v100.Icefury, not v16:IsSpellInRange(v100.Icefury))) then
 				return "icefury single_target 40";
 			end
 		end
-		if (((320 + 424) <= (938 + 2004)) and v101.FrostShock:IsCastable() and v42 and v131() and v101.ElectrifiedShocks:IsAvailable() and ((v17:DebuffRemains(v101.ElectrifiedShocksDebuff) < (7 - 5)) or (v14:BuffRemains(v101.IcefuryBuff) <= v14:GCD())) and v101.LightningRod:IsAvailable()) then
-			if (v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock)) or ((596 + 1237) <= (646 + 676))) then
+		if ((v100.FrostShock:IsCastable() and v41 and v130() and v100.ElectrifiedShocks:IsAvailable() and ((v16:DebuffRemains(v100.ElectrifiedShocksDebuff) < (2 + 0)) or (v13:BuffRemains(v100.IcefuryBuff) <= v13:GCD())) and v100.LightningRod:IsAvailable()) or ((2205 - (304 + 165)) == (540 + 31))) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((1056 - (54 + 106)) > (6738 - (1618 + 351)))) then
 				return "frost_shock single_target 42";
 			end
 		end
-		if ((v101.FrostShock:IsCastable() and v42 and v131() and v101.ElectrifiedShocks:IsAvailable() and (v126() >= (203 - 153)) and (v17:DebuffRemains(v101.ElectrifiedShocksDebuff) < ((2 + 0) * v14:GCD())) and v130() and v101.LightningRod:IsAvailable()) or ((3961 - (64 + 430)) <= (1047 + 8))) then
-			if (((3904 - (106 + 257)) == (2511 + 1030)) and v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock))) then
+		if ((v100.FrostShock:IsCastable() and v41 and v130() and v100.ElectrifiedShocks:IsAvailable() and (v125() >= (36 + 14)) and (v16:DebuffRemains(v100.ElectrifiedShocksDebuff) < ((1018 - (10 + 1006)) * v13:GCD())) and v129() and v100.LightningRod:IsAvailable()) or ((263 + 782) <= (143 + 877))) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((3760 - 2600) <= (1361 - (912 + 121)))) then
 				return "frost_shock single_target 44";
 			end
 		end
-		if ((v101.LavaBeam:IsCastable() and v44 and (v114 > (722 - (496 + 225))) and (v115 > (1 - 0)) and v129() and (v14:BuffRemains(v101.AscendanceBuff) > v101.LavaBeam:CastTime()) and not v14:HasTier(150 - 119, 1662 - (256 + 1402))) or ((5456 - (30 + 1869)) >= (5372 - (213 + 1156)))) then
-			if (v25(v101.LavaBeam, not v17:IsSpellInRange(v101.LavaBeam)) or ((845 - (96 + 92)) >= (285 + 1383))) then
+		if (((1800 + 2008) > (4213 - (1140 + 149))) and v100.LavaBeam:IsCastable() and v43 and (v113 > (1 + 0)) and (v114 > (1 - 0)) and v128() and (v13:BuffRemains(v100.AscendanceBuff) > v100.LavaBeam:CastTime()) and not v13:HasTier(6 + 25, 13 - 9)) then
+			if (((7297 - 3406) < (849 + 4070)) and v24(v100.LavaBeam, not v16:IsSpellInRange(v100.LavaBeam))) then
 				return "lava_beam single_target 46";
 			end
 		end
-		if ((v101.FrostShock:IsCastable() and v42 and v131() and v130() and not v101.LavaSurge:IsAvailable() and not v101.EchooftheElements:IsAvailable() and not v101.PrimordialSurge:IsAvailable() and v101.ElementalBlast:IsAvailable() and (((v126() >= (960 - (142 + 757))) and (v126() < (62 + 13)) and (v101.LavaBurst:CooldownRemains() > v14:GCD())) or ((v126() >= (21 + 28)) and (v126() < (142 - (32 + 47))) and (v101.LavaBurst:CooldownRemains() > (1977 - (1053 + 924)))))) or ((1006 + 21) > (6644 - 2786))) then
-			if (v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock)) or ((5302 - (685 + 963)) < (915 - 465))) then
+		if ((v100.FrostShock:IsCastable() and v41 and v130() and v129() and not v100.LavaSurge:IsAvailable() and not v100.EchooftheElements:IsAvailable() and not v100.PrimordialSurge:IsAvailable() and v100.ElementalBlast:IsAvailable() and (((v125() >= (211 - 150)) and (v125() < (261 - (165 + 21))) and (v100.LavaBurst:CooldownRemains() > v13:GCD())) or ((v125() >= (160 - (61 + 50))) and (v125() < (26 + 37)) and (v100.LavaBurst:CooldownRemains() > (0 - 0))))) or ((4501 - 2267) <= (591 + 911))) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((3972 - (1295 + 165)) < (99 + 333))) then
 				return "frost_shock single_target 48";
 			end
 		end
-		if (((2948 - 1057) < (6162 - (541 + 1168))) and v101.FrostShock:IsCastable() and v42 and v131() and not v101.LavaSurge:IsAvailable() and not v101.EchooftheElements:IsAvailable() and not v101.ElementalBlast:IsAvailable() and (((v126() >= (1633 - (645 + 952))) and (v126() < (888 - (669 + 169))) and (v101.LavaBurst:CooldownRemains() > v14:GCD())) or ((v126() >= (83 - 59)) and (v126() < (82 - 44)) and (v101.LavaBurst:CooldownRemains() > (0 + 0))))) then
-			if (v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock)) or ((693 + 2447) < (2894 - (181 + 584)))) then
+		if ((v100.FrostShock:IsCastable() and v41 and v130() and not v100.LavaSurge:IsAvailable() and not v100.EchooftheElements:IsAvailable() and not v100.ElementalBlast:IsAvailable() and (((v125() >= (15 + 21)) and (v125() < (1447 - (819 + 578))) and (v100.LavaBurst:CooldownRemains() > v13:GCD())) or ((v125() >= (1426 - (331 + 1071))) and (v125() < (781 - (588 + 155))) and (v100.LavaBurst:CooldownRemains() > (1282 - (546 + 736)))))) or ((3785 - (1834 + 103)) == (533 + 332))) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((13966 - 9284) <= (6307 - (1536 + 230)))) then
 				return "frost_shock single_target 50";
 			end
 		end
-		if ((v127(v101.LavaBurst) and v101.LavaBurst:IsCastable() and v45 and v14:BuffUp(v101.WindspeakersLavaResurgenceBuff) and (v101.EchooftheElements:IsAvailable() or v101.LavaSurge:IsAvailable() or v101.PrimordialSurge:IsAvailable() or ((v126() >= (1458 - (665 + 730))) and v101.MasteroftheElements:IsAvailable()) or ((v126() >= (109 - 71)) and v14:BuffUp(v101.EchoesofGreatSunderingBuff) and (v114 > (1 - 0)) and (v115 > (1351 - (540 + 810)))) or not v101.ElementalBlast:IsAvailable())) or ((10215 - 7660) < (3409 - 2169))) then
-			if (v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst)) or ((3762 + 965) <= (4925 - (166 + 37)))) then
+		if ((v126(v100.LavaBurst) and v100.LavaBurst:IsCastable() and v44 and v13:BuffUp(v100.WindspeakersLavaResurgenceBuff) and (v100.EchooftheElements:IsAvailable() or v100.LavaSurge:IsAvailable() or v100.PrimordialSurge:IsAvailable() or ((v125() >= (554 - (128 + 363))) and v100.MasteroftheElements:IsAvailable()) or ((v125() >= (9 + 29)) and v13:BuffUp(v100.EchoesofGreatSunderingBuff) and (v113 > (2 - 1)) and (v114 > (1 + 0))) or not v100.ElementalBlast:IsAvailable())) or ((5012 - 1986) >= (11911 - 7865))) then
+			if (((4877 - 2869) > (438 + 200)) and v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst))) then
 				return "lava_burst single_target 52";
 			end
 		end
-		if (((2621 - (22 + 1859)) < (6709 - (843 + 929))) and v127(v101.LavaBurst) and v101.LavaBurst:IsCastable() and v45 and v14:BuffUp(v101.LavaSurgeBuff) and (v101.EchooftheElements:IsAvailable() or v101.LavaSurge:IsAvailable() or v101.PrimordialSurge:IsAvailable() or not v101.MasteroftheElements:IsAvailable() or not v101.ElementalBlast:IsAvailable())) then
-			if (((3920 - (30 + 232)) >= (799 - 519)) and v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst))) then
+		if (((2784 - (615 + 394)) <= (2919 + 314)) and v126(v100.LavaBurst) and v100.LavaBurst:IsCastable() and v44 and v13:BuffUp(v100.LavaSurgeBuff) and (v100.EchooftheElements:IsAvailable() or v100.LavaSurge:IsAvailable() or v100.PrimordialSurge:IsAvailable() or not v100.MasteroftheElements:IsAvailable() or not v100.ElementalBlast:IsAvailable())) then
+			if (v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst)) or ((4330 + 213) == (6087 - 4090))) then
 				return "lava_burst single_target 54";
 			end
 		end
-		if ((v127(v101.LavaBurst) and v101.LavaBurst:IsCastable() and v45 and v14:BuffUp(v101.AscendanceBuff) and (v14:HasTier(808 - (55 + 722), 8 - 4) or not v101.ElementalBlast:IsAvailable())) or ((2560 - (78 + 1597)) >= (227 + 804))) then
-			local v201 = 0 + 0;
+		if ((v126(v100.LavaBurst) and v100.LavaBurst:IsCastable() and v44 and v13:BuffUp(v100.AscendanceBuff) and (v13:HasTier(140 - 109, 655 - (59 + 592)) or not v100.ElementalBlast:IsAvailable())) or ((6867 - 3765) < (1340 - 612))) then
+			local v187 = 0 + 0;
 			while true do
-				if (((2976 + 578) >= (1074 - (305 + 244))) and (v201 == (0 + 0))) then
-					if (((2519 - (95 + 10)) <= (2105 + 867)) and v105.CastCycle(v101.LavaBurst, v113, v124, not v17:IsSpellInRange(v101.LavaBurst))) then
+				if (((516 - (70 + 101)) == (852 - 507)) and (v187 == (0 + 0))) then
+					if (v104.CastCycle(v100.LavaBurst, v112, v123, not v16:IsSpellInRange(v100.LavaBurst)) or ((7099 - 4272) < (619 - (123 + 118)))) then
 						return "lava_burst single_target 56";
 					end
-					if (((11183 - 7654) <= (4839 - 1301)) and v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst))) then
+					if (v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst)) or ((842 + 2634) < (33 + 2564))) then
 						return "lava_burst single_target 56";
 					end
 					break;
 				end
 			end
 		end
-		if ((v127(v101.LavaBurst) and v101.LavaBurst:IsCastable() and v45 and v14:BuffDown(v101.AscendanceBuff) and (not v101.ElementalBlast:IsAvailable() or not v101.MountainsWillFall:IsAvailable()) and not v101.LightningRod:IsAvailable() and v14:HasTier(793 - (592 + 170), 13 - 9)) or ((7184 - 4323) < (214 + 244))) then
-			local v202 = 0 + 0;
+		if (((4478 - (653 + 746)) < (8966 - 4172)) and v126(v100.LavaBurst) and v100.LavaBurst:IsCastable() and v44 and v13:BuffDown(v100.AscendanceBuff) and (not v100.ElementalBlast:IsAvailable() or not v100.MountainsWillFall:IsAvailable()) and not v100.LightningRod:IsAvailable() and v13:HasTier(44 - 13, 10 - 6)) then
+			local v188 = 0 + 0;
 			while true do
-				if (((4146 - 2429) <= (734 + 3791)) and (v202 == (0 - 0))) then
-					if (v105.CastCycle(v101.LavaBurst, v113, v124, not v17:IsSpellInRange(v101.LavaBurst)) or ((3685 - (353 + 154)) <= (2028 - 504))) then
+				if (((3106 + 1748) > (3899 + 565)) and (v188 == (0 + 0))) then
+					if (v104.CastCycle(v100.LavaBurst, v112, v123, not v16:IsSpellInRange(v100.LavaBurst)) or ((767 + 4145) == (9212 - 5454))) then
 						return "lava_burst single_target 58";
 					end
-					if (((5811 - 1557) > (256 + 114)) and v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst))) then
+					if (((120 + 6) <= (6432 - 2950)) and v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst))) then
 						return "lava_burst single_target 58";
 					end
 					break;
 				end
 			end
 		end
-		if ((v127(v101.LavaBurst) and v101.LavaBurst:IsCastable() and v45 and v101.MasteroftheElements:IsAvailable() and not v128() and not v101.LightningRod:IsAvailable()) or ((1281 + 354) == (1173 + 604))) then
-			if (v105.CastCycle(v101.LavaBurst, v113, v124, not v17:IsSpellInRange(v101.LavaBurst)) or ((4823 - 1485) >= (7558 - 3565))) then
-				return "lava_burst single_target 60";
-			end
-			if (((2689 - 1535) <= (1561 - (7 + 79))) and v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst))) then
-				return "lava_burst single_target 60";
+		if ((v126(v100.LavaBurst) and v100.LavaBurst:IsCastable() and v44 and v100.MasteroftheElements:IsAvailable() and not v127() and not v100.LightningRod:IsAvailable()) or ((3608 - (885 + 349)) == (3474 + 900))) then
+			local v189 = 0 - 0;
+			while true do
+				if (((4581 - 3006) == (2543 - (915 + 53))) and (v189 == (801 - (768 + 33)))) then
+					if (v104.CastCycle(v100.LavaBurst, v112, v123, not v16:IsSpellInRange(v100.LavaBurst)) or ((8553 - 6319) == (2561 - 1106))) then
+						return "lava_burst single_target 60";
+					end
+					if (v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst)) or ((1395 - (287 + 41)) > (2626 - (638 + 209)))) then
+						return "lava_burst single_target 60";
+					end
+					break;
+				end
 			end
 		end
-		if ((v127(v101.LavaBurst) and v101.LavaBurst:IsCastable() and v45 and v101.MasteroftheElements:IsAvailable() and not v128() and ((v126() >= (36 + 39)) or ((v126() >= (231 - (24 + 157))) and not v101.ElementalBlast:IsAvailable())) and v101.SwellingMaelstrom:IsAvailable() and (v126() <= (259 - 129))) or ((5567 - 2957) < (350 + 880))) then
-			if (v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst)) or ((3900 - 2452) == (3463 - (262 + 118)))) then
+		if (((1123 + 1038) >= (2620 - (96 + 1590))) and v126(v100.LavaBurst) and v100.LavaBurst:IsCastable() and v44 and v100.MasteroftheElements:IsAvailable() and not v127() and ((v125() >= (1747 - (741 + 931))) or ((v125() >= (25 + 25)) and not v100.ElementalBlast:IsAvailable())) and v100.SwellingMaelstrom:IsAvailable() and (v125() <= (370 - 240))) then
+			if (((7530 - 5918) == (692 + 920)) and v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst))) then
 				return "lava_burst single_target 62";
 			end
 		end
-		if (((4222 - (1038 + 45)) > (1980 - 1064)) and v101.Earthquake:IsReady() and v38 and v14:BuffUp(v101.EchoesofGreatSunderingBuff) and ((not v101.ElementalBlast:IsAvailable() and (v114 < (232 - (19 + 211)))) or (v114 > (114 - (88 + 25))))) then
-			local v203 = 0 - 0;
-			while true do
-				if (((1467 + 1487) == (2757 + 197)) and (v203 == (1036 - (1007 + 29)))) then
-					if (((32 + 85) <= (7068 - 4176)) and (v52 == "cursor")) then
-						if (v25(v103.EarthquakeCursor, not v17:IsInRange(189 - 149)) or ((101 + 352) > (5473 - (340 + 471)))) then
-							return "earthquake single_target 64";
-						end
-					end
-					if (((3324 - 2004) > (1184 - (276 + 313))) and (v52 == "player")) then
-						if (v25(v103.EarthquakePlayer, not v17:IsInRange(97 - 57)) or ((2949 + 250) < (251 + 339))) then
-							return "earthquake single_target 64";
-						end
-					end
-					break;
+		if (((1871 + 2481) >= (903 + 1930)) and v100.Earthquake:IsReady() and v37 and v13:BuffUp(v100.EchoesofGreatSunderingBuff) and ((not v100.ElementalBlast:IsAvailable() and (v113 < (7 - 5))) or (v113 > (1 + 0)))) then
+			if ((v51 == "cursor") or ((1574 + 1648) < (12535 - 9462))) then
+				if (((668 + 76) <= (3436 - (64 + 430))) and v24(v102.EarthquakeCursor, not v16:IsInRange(40 + 0))) then
+					return "earthquake single_target 64";
+				end
+			end
+			if ((v51 == "player") or ((2196 - (106 + 257)) <= (938 + 384))) then
+				if (v24(v102.EarthquakePlayer, not v16:IsInRange(761 - (496 + 225))) or ((7089 - 3622) <= (5139 - 4084))) then
+					return "earthquake single_target 64";
 				end
 			end
 		end
-		if ((v101.Earthquake:IsReady() and v38 and (v114 > (1 + 0)) and (v115 > (1973 - (495 + 1477))) and not v101.EchoesofGreatSundering:IsAvailable() and not v101.ElementalBlast:IsAvailable()) or ((14350 - 9557) < (20 + 10))) then
-			local v204 = 403 - (342 + 61);
-			while true do
-				if ((v204 == (0 + 0)) or ((1861 - (4 + 161)) <= (649 + 410))) then
-					if (((7354 - 5011) == (6158 - 3815)) and (v52 == "cursor")) then
-						if (v25(v103.EarthquakeCursor, not v17:IsInRange(537 - (322 + 175))) or ((1606 - (173 + 390)) > (886 + 2705))) then
-							return "earthquake single_target 66";
-						end
-					end
-					if ((v52 == "player") or ((3204 - (203 + 111)) >= (253 + 3826))) then
-						if (((3155 + 1319) <= (13920 - 9150)) and v25(v103.EarthquakePlayer, not v17:IsInRange(37 + 3))) then
-							return "earthquake single_target 66";
-						end
-					end
-					break;
+		if (((5199 - (256 + 1402)) == (5440 - (30 + 1869))) and v100.Earthquake:IsReady() and v37 and (v113 > (1370 - (213 + 1156))) and (v114 > (189 - (96 + 92))) and not v100.EchoesofGreatSundering:IsAvailable() and not v100.ElementalBlast:IsAvailable()) then
+			if ((v51 == "cursor") or ((606 + 2951) >= (4902 - (142 + 757)))) then
+				if (v24(v102.EarthquakeCursor, not v16:IsInRange(33 + 7)) or ((269 + 388) >= (1747 - (32 + 47)))) then
+					return "earthquake single_target 66";
+				end
+			end
+			if ((v51 == "player") or ((3004 - (1053 + 924)) > (3779 + 79))) then
+				if (v24(v102.EarthquakePlayer, not v16:IsInRange(68 - 28)) or ((5302 - (685 + 963)) < (915 - 465))) then
+					return "earthquake single_target 66";
 				end
 			end
 		end
-		if ((v127(v101.ElementalBlast) and v101.ElementalBlast:IsCastable() and v40 and (not v101.MasteroftheElements:IsAvailable() or (v128() and v17:DebuffUp(v101.ElectrifiedShocksDebuff)))) or ((5648 - (57 + 649)) == (4287 - (328 + 56)))) then
-			if (v25(v101.ElementalBlast, not v17:IsSpellInRange(v101.ElementalBlast)) or ((80 + 168) > (5357 - (433 + 79)))) then
+		if (((2948 - 1057) < (6162 - (541 + 1168))) and v126(v100.ElementalBlast) and v100.ElementalBlast:IsCastable() and v39 and (not v100.MasteroftheElements:IsAvailable() or (v127() and v16:DebuffUp(v100.ElectrifiedShocksDebuff)))) then
+			if (v24(v100.ElementalBlast, not v16:IsSpellInRange(v100.ElementalBlast)) or ((4737 - (645 + 952)) < (2967 - (669 + 169)))) then
 				return "elemental_blast single_target 68";
 			end
 		end
-		if (((144 + 1425) == (1267 + 302)) and v127(v101.FrostShock) and v42 and v131() and v128() and (v126() < (369 - 259)) and (v101.LavaBurst:ChargesFractional() < (4 - 3)) and v101.ElectrifiedShocks:IsAvailable() and v101.ElementalBlast:IsAvailable() and not v101.LightningRod:IsAvailable()) then
-			if (v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock)) or ((3593 + 1334) <= (2870 + 351))) then
+		if ((v126(v100.FrostShock) and v41 and v130() and v127() and (v125() < (381 - 271)) and (v100.LavaBurst:ChargesFractional() < (1 - 0)) and v100.ElectrifiedShocks:IsAvailable() and v100.ElementalBlast:IsAvailable() and not v100.LightningRod:IsAvailable()) or ((863 + 1692) < (274 + 966))) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((5492 - (181 + 584)) <= (6117 - (665 + 730)))) then
 				return "frost_shock single_target 70";
 			end
 		end
-		if ((v127(v101.ElementalBlast) and v101.ElementalBlast:IsCastable() and v40 and (v128() or v101.LightningRod:IsAvailable())) or ((2816 - (562 + 474)) > (6502 - 3715))) then
-			if (v25(v101.ElementalBlast, not v17:IsSpellInRange(v101.ElementalBlast)) or ((8021 - 4084) <= (2135 - (76 + 829)))) then
+		if (((2132 - 1392) < (10067 - 5130)) and v126(v100.ElementalBlast) and v100.ElementalBlast:IsCastable() and v39 and (v127() or v100.LightningRod:IsAvailable())) then
+			if (((5008 - (540 + 810)) >= (1119 - 839)) and v24(v100.ElementalBlast, not v16:IsSpellInRange(v100.ElementalBlast))) then
 				return "elemental_blast single_target 72";
 			end
 		end
-		if ((v101.EarthShock:IsReady() and v39) or ((4310 - (1506 + 167)) < (3204 - 1498))) then
-			if (v25(v101.EarthShock, not v17:IsSpellInRange(v101.EarthShock)) or ((2935 - (58 + 208)) <= (1423 + 986))) then
+		if ((v100.EarthShock:IsReady() and v38) or ((2433 - 1548) >= (821 + 210))) then
+			if (((3757 - (166 + 37)) >= (2406 - (22 + 1859))) and v24(v100.EarthShock, not v16:IsSpellInRange(v100.EarthShock))) then
 				return "earth_shock single_target 74";
 			end
 		end
-		if ((v127(v101.FrostShock) and v42 and v131() and v101.ElectrifiedShocks:IsAvailable() and v128() and not v101.LightningRod:IsAvailable() and (v114 > (1 + 0)) and (v115 > (1 + 0))) or ((5715 - 4314) > (5033 - (258 + 79)))) then
-			if (v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock)) or ((417 + 2863) < (2778 - 1457))) then
+		if (((4186 - (843 + 929)) <= (3234 - (30 + 232))) and v126(v100.FrostShock) and v41 and v130() and v100.ElectrifiedShocks:IsAvailable() and v127() and not v100.LightningRod:IsAvailable() and (v113 > (2 - 1)) and (v114 > (778 - (55 + 722)))) then
+			if (((7574 - 4045) <= (5213 - (78 + 1597))) and v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock))) then
 				return "frost_shock single_target 76";
 			end
 		end
-		if (((6397 - (1219 + 251)) >= (3974 - (1231 + 440))) and v127(v101.LavaBurst) and v101.LavaBurst:IsCastable() and v45 and (v101.DeeplyRootedElements:IsAvailable())) then
-			local v205 = 58 - (34 + 24);
+		if ((v126(v100.LavaBurst) and v100.LavaBurst:IsCastable() and v44 and (v100.DeeplyRootedElements:IsAvailable())) or ((629 + 2232) < (417 + 41))) then
+			local v190 = 0 + 0;
 			while true do
-				if (((2008 + 1454) >= (1926 - 894)) and (v205 == (0 + 0))) then
-					if (v105.CastCycle(v101.LavaBurst, v113, v124, not v17:IsSpellInRange(v101.LavaBurst)) or ((3271 - 2194) >= (6446 - 4435))) then
+				if (((2266 - (305 + 244)) <= (4198 + 327)) and (v190 == (105 - (95 + 10)))) then
+					if (v104.CastCycle(v100.LavaBurst, v112, v123, not v16:IsSpellInRange(v100.LavaBurst)) or ((2251 + 927) <= (4829 - 3305))) then
 						return "lava_burst single_target 78";
 					end
-					if (((4056 - 2513) < (8090 - 5675)) and v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst))) then
+					if (((5819 - 1565) > (1132 - (592 + 170))) and v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst))) then
 						return "lava_burst single_target 78";
 					end
 					break;
 				end
 			end
 		end
-		if ((v101.FrostShock:IsCastable() and v42 and v131() and v101.FluxMelting:IsAvailable() and v14:BuffDown(v101.FluxMeltingBuff)) or ((9703 - 5259) < (3604 - (877 + 712)))) then
-			if (v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock)) or ((2515 + 1685) == (3086 - (242 + 512)))) then
+		if ((v100.FrostShock:IsCastable() and v41 and v130() and v100.FluxMelting:IsAvailable() and v13:BuffDown(v100.FluxMeltingBuff)) or ((5702 - 4067) == (4462 - 2685))) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((1556 + 1782) >= (1555 + 2438))) then
 				return "frost_shock single_target 80";
 			end
 		end
-		if ((v101.FrostShock:IsCastable() and v42 and v131() and ((v101.ElectrifiedShocks:IsAvailable() and (v17:DebuffRemains(v101.ElectrifiedShocksDebuff) < (3 - 1))) or (v14:BuffRemains(v101.IcefuryBuff) < (633 - (92 + 535))))) or ((1007 + 271) >= (2710 - 1394))) then
-			if (((68 + 1014) == (3932 - 2850)) and v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock))) then
+		if (((2786 - 1632) <= (240 + 1235)) and v100.FrostShock:IsCastable() and v41 and v130() and ((v100.ElectrifiedShocks:IsAvailable() and (v16:DebuffRemains(v100.ElectrifiedShocksDebuff) < (3 - 1))) or (v13:BuffRemains(v100.IcefuryBuff) < (513 - (353 + 154))))) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((3474 - 864) < (1680 - 450))) then
 				return "frost_shock single_target 82";
 			end
 		end
-		if (((1303 + 25) <= (3378 + 1500)) and v127(v101.LavaBurst) and v101.LavaBurst:IsCastable() and v45 and (v101.EchooftheElements:IsAvailable() or v101.LavaSurge:IsAvailable() or v101.PrimordialSurge:IsAvailable() or not v101.ElementalBlast:IsAvailable() or not v101.MasteroftheElements:IsAvailable() or v130())) then
-			if (((574 + 3513) >= (2700 - 1345)) and v105.CastCycle(v101.LavaBurst, v113, v124, not v17:IsSpellInRange(v101.LavaBurst))) then
-				return "lava_burst single_target 84";
-			end
-			if (v25(v101.LavaBurst, not v17:IsSpellInRange(v101.LavaBurst)) or ((899 - 309) > (6435 - (1476 + 309)))) then
-				return "lava_burst single_target 84";
-			end
-		end
-		if ((v127(v101.ElementalBlast) and v101.ElementalBlast:IsCastable() and v40) or ((5058 - (299 + 985)) <= (872 + 2795))) then
-			if (((4163 - 2893) < (2239 - (86 + 7))) and v25(v101.ElementalBlast, not v17:IsSpellInRange(v101.ElementalBlast))) then
-				return "elemental_blast single_target 86";
-			end
-		end
-		if (((18647 - 14084) >= (6 + 50)) and v127(v101.ChainLightning) and v101.ChainLightning:IsCastable() and v37 and v129() and v101.UnrelentingCalamity:IsAvailable() and (v114 > (881 - (672 + 208))) and (v115 > (1 + 0))) then
-			if (v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning)) or ((578 - (14 + 118)) == (1067 - (339 + 106)))) then
-				return "chain_lightning single_target 88";
-			end
-		end
-		if (((1646 + 423) > (508 + 501)) and v127(v101.LightningBolt) and v101.LightningBolt:IsCastable() and v46 and v129() and v101.UnrelentingCalamity:IsAvailable()) then
-			if (((1407 - (440 + 955)) < (4147 + 61)) and v25(v101.LightningBolt, not v17:IsSpellInRange(v101.LightningBolt))) then
-				return "lightning_bolt single_target 90";
-			end
-		end
-		if ((v127(v101.Icefury) and v101.Icefury:IsCastable() and v43) or ((5371 - 2381) <= (989 + 1991))) then
-			if (v25(v101.Icefury, not v17:IsSpellInRange(v101.Icefury)) or ((6411 - 3836) >= (2928 + 1347))) then
-				return "icefury single_target 92";
-			end
-		end
-		if ((v127(v101.ChainLightning) and v101.ChainLightning:IsCastable() and v37 and v16:IsActive() and (v16:Name() == "Greater Storm Elemental") and v17:DebuffUp(v101.LightningRodDebuff) and (v17:DebuffUp(v101.ElectrifiedShocksDebuff) or v129()) and (v114 > (354 - (260 + 93))) and (v115 > (1 + 0))) or ((8294 - 4668) <= (2358 - 1052))) then
-			if (((3342 - (1181 + 793)) < (963 + 2817)) and v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning))) then
-				return "chain_lightning single_target 94";
-			end
-		end
-		if ((v127(v101.LightningBolt) and v101.LightningBolt:IsCastable() and v46 and v16:IsActive() and (v16:Name() == "Greater Storm Elemental") and v17:DebuffUp(v101.LightningRodDebuff) and (v17:DebuffUp(v101.ElectrifiedShocksDebuff) or v129())) or ((3476 - (105 + 202)) == (1823 + 450))) then
-			if (((3291 - (352 + 458)) <= (13220 - 9941)) and v25(v101.LightningBolt, not v17:IsSpellInRange(v101.LightningBolt))) then
-				return "lightning_bolt single_target 96";
-			end
-		end
-		if ((v101.FrostShock:IsCastable() and v42 and v131() and v128() and v14:BuffDown(v101.LavaSurgeBuff) and not v101.ElectrifiedShocks:IsAvailable() and not v101.FluxMelting:IsAvailable() and (v101.LavaBurst:ChargesFractional() < (2 - 1)) and v101.EchooftheElements:IsAvailable()) or ((1030 + 33) <= (2563 - 1686))) then
-			if (((3263 - (438 + 511)) == (3697 - (1262 + 121))) and v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock))) then
-				return "frost_shock single_target 98";
-			end
-		end
-		if (((1992 - (728 + 340)) >= (2267 - (816 + 974))) and v101.FrostShock:IsCastable() and v42 and v131() and (v101.FluxMelting:IsAvailable() or (v101.ElectrifiedShocks:IsAvailable() and not v101.LightningRod:IsAvailable()))) then
-			if (((5554 - 3741) <= (13596 - 9818)) and v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock))) then
-				return "frost_shock single_target 100";
-			end
-		end
-		if (((4489 - (163 + 176)) == (11813 - 7663)) and v127(v101.ChainLightning) and v101.ChainLightning:IsCastable() and v37 and v128() and v14:BuffDown(v101.LavaSurgeBuff) and (v101.LavaBurst:ChargesFractional() < (4 - 3)) and v101.EchooftheElements:IsAvailable() and (v114 > (1 + 0)) and (v115 > (1811 - (1564 + 246)))) then
-			if (((777 - (124 + 221)) <= (2054 + 953)) and v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning))) then
-				return "chain_lightning single_target 102";
-			end
-		end
-		if ((v127(v101.LightningBolt) and v101.LightningBolt:IsCastable() and v46 and v128() and v14:BuffDown(v101.LavaSurgeBuff) and (v101.LavaBurst:ChargesFractional() < (452 - (115 + 336))) and v101.EchooftheElements:IsAvailable()) or ((898 - 490) > (561 + 2160))) then
-			if (v25(v101.LightningBolt, not v17:IsSpellInRange(v101.LightningBolt)) or ((3464 - (45 + 1)) < (135 + 2362))) then
-				return "lightning_bolt single_target 104";
-			end
-		end
-		if (((3725 - (1282 + 708)) < (3381 - (583 + 629))) and v101.FrostShock:IsCastable() and v42 and v131() and not v101.ElectrifiedShocks:IsAvailable() and not v101.FluxMelting:IsAvailable()) then
-			if (((648 + 3242) >= (8438 - 5176)) and v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock))) then
-				return "frost_shock single_target 106";
-			end
-		end
-		if ((v127(v101.ChainLightning) and v101.ChainLightning:IsCastable() and v37 and (v114 > (1 + 0)) and (v115 > (1171 - (943 + 227)))) or ((1905 + 2451) >= (6280 - (1539 + 92)))) then
-			if (((5850 - (706 + 1240)) == (4162 - (81 + 177))) and v25(v101.ChainLightning, not v17:IsSpellInRange(v101.ChainLightning))) then
-				return "chain_lightning single_target 108";
-			end
-		end
-		if ((v127(v101.LightningBolt) and v101.LightningBolt:IsCastable() and v46) or ((8080 - 5220) >= (4046 - (212 + 45)))) then
-			if (v25(v101.LightningBolt, not v17:IsSpellInRange(v101.LightningBolt)) or ((3632 - 2546) > (6395 - (708 + 1238)))) then
-				return "lightning_bolt single_target 110";
-			end
-		end
-		if (((415 + 4566) > (179 + 367)) and v101.FlameShock:IsCastable() and v41 and (v14:IsMoving())) then
-			local v206 = 1667 - (586 + 1081);
+		if ((v126(v100.LavaBurst) and v100.LavaBurst:IsCastable() and v44 and (v100.EchooftheElements:IsAvailable() or v100.LavaSurge:IsAvailable() or v100.PrimordialSurge:IsAvailable() or not v100.ElementalBlast:IsAvailable() or not v100.MasteroftheElements:IsAvailable() or v129())) or ((1000 + 448) == (2415 + 668))) then
+			local v191 = 0 + 0;
 			while true do
-				if ((v206 == (511 - (348 + 163))) or ((2125 + 241) <= (288 - (215 + 65)))) then
-					if (v105.CastCycle(v101.FlameShock, v113, v120, not v17:IsSpellInRange(v101.FlameShock)) or ((6599 - 4009) == (4723 - (1541 + 318)))) then
-						return "flame_shock single_target 112";
+				if (((4535 - 1396) > (1733 - 817)) and (v191 == (0 - 0))) then
+					if (((3040 - (7 + 79)) == (1382 + 1572)) and v104.CastCycle(v100.LavaBurst, v112, v123, not v16:IsSpellInRange(v100.LavaBurst))) then
+						return "lava_burst single_target 84";
 					end
-					if (v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock)) or ((2328 + 296) > (2098 + 2051))) then
-						return "flame_shock single_target 112";
+					if (((298 - (24 + 157)) <= (5770 - 2878)) and v24(v100.LavaBurst, not v16:IsSpellInRange(v100.LavaBurst))) then
+						return "lava_burst single_target 84";
 					end
 					break;
 				end
 			end
 		end
-		if ((v101.FlameShock:IsCastable() and v41) or ((1973 + 645) >= (6245 - (1036 + 714)))) then
-			if (v25(v101.FlameShock, not v17:IsSpellInRange(v101.FlameShock)) or ((1638 + 847) >= (1730 + 1401))) then
+		if ((v126(v100.ElementalBlast) and v100.ElementalBlast:IsCastable() and v39) or ((966 - 513) > (1325 + 3337))) then
+			if (((3555 - 2235) > (975 - (262 + 118))) and v24(v100.ElementalBlast, not v16:IsSpellInRange(v100.ElementalBlast))) then
+				return "elemental_blast single_target 86";
+			end
+		end
+		if ((v126(v100.ChainLightning) and v100.ChainLightning:IsCastable() and v36 and v128() and v100.UnrelentingCalamity:IsAvailable() and (v113 > (1084 - (1038 + 45))) and (v114 > (1 - 0))) or ((3429 - (19 + 211)) < (703 - (88 + 25)))) then
+			if (v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning)) or ((12203 - 7410) < (15 + 15))) then
+				return "chain_lightning single_target 88";
+			end
+		end
+		if ((v126(v100.LightningBolt) and v100.LightningBolt:IsCastable() and v45 and v128() and v100.UnrelentingCalamity:IsAvailable()) or ((1583 + 113) <= (2095 - (1007 + 29)))) then
+			if (((632 + 1711) == (5726 - 3383)) and v24(v100.LightningBolt, not v16:IsSpellInRange(v100.LightningBolt))) then
+				return "lightning_bolt single_target 90";
+			end
+		end
+		if ((v126(v100.Icefury) and v100.Icefury:IsCastable() and v42) or ((4932 - 3889) > (801 + 2790))) then
+			if (v24(v100.Icefury, not v16:IsSpellInRange(v100.Icefury)) or ((3701 - (340 + 471)) >= (10273 - 6194))) then
+				return "icefury single_target 92";
+			end
+		end
+		if (((5063 - (276 + 313)) <= (11644 - 6874)) and v126(v100.ChainLightning) and v100.ChainLightning:IsCastable() and v36 and v15:IsActive() and (v15:Name() == "Greater Storm Elemental") and v16:DebuffUp(v100.LightningRodDebuff) and (v16:DebuffUp(v100.ElectrifiedShocksDebuff) or v128()) and (v113 > (1 + 0)) and (v114 > (1 + 0))) then
+			if (v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning)) or ((464 + 4478) == (5875 - (495 + 1477)))) then
+				return "chain_lightning single_target 94";
+			end
+		end
+		if ((v126(v100.LightningBolt) and v100.LightningBolt:IsCastable() and v45 and v15:IsActive() and (v15:Name() == "Greater Storm Elemental") and v16:DebuffUp(v100.LightningRodDebuff) and (v16:DebuffUp(v100.ElectrifiedShocksDebuff) or v128())) or ((742 - 494) > (3174 + 1671))) then
+			if (((1972 - (342 + 61)) == (687 + 882)) and v24(v100.LightningBolt, not v16:IsSpellInRange(v100.LightningBolt))) then
+				return "lightning_bolt single_target 96";
+			end
+		end
+		if ((v100.FrostShock:IsCastable() and v41 and v130() and v127() and v13:BuffDown(v100.LavaSurgeBuff) and not v100.ElectrifiedShocks:IsAvailable() and not v100.FluxMelting:IsAvailable() and (v100.LavaBurst:ChargesFractional() < (166 - (4 + 161))) and v100.EchooftheElements:IsAvailable()) or ((3017 + 1910) <= (10110 - 6889))) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((4678 - 2898) > (3284 - (322 + 175)))) then
+				return "frost_shock single_target 98";
+			end
+		end
+		if ((v100.FrostShock:IsCastable() and v41 and v130() and (v100.FluxMelting:IsAvailable() or (v100.ElectrifiedShocks:IsAvailable() and not v100.LightningRod:IsAvailable()))) or ((4500 - (173 + 390)) <= (304 + 926))) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((2951 - (203 + 111)) < (106 + 1600))) then
+				return "frost_shock single_target 100";
+			end
+		end
+		if ((v126(v100.ChainLightning) and v100.ChainLightning:IsCastable() and v36 and v127() and v13:BuffDown(v100.LavaSurgeBuff) and (v100.LavaBurst:ChargesFractional() < (1 + 0)) and v100.EchooftheElements:IsAvailable() and (v113 > (2 - 1)) and (v114 > (1 + 0))) or ((3375 - (57 + 649)) <= (2793 - (328 + 56)))) then
+			if (v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning)) or ((448 + 953) > (5208 - (433 + 79)))) then
+				return "chain_lightning single_target 102";
+			end
+		end
+		if ((v126(v100.LightningBolt) and v100.LightningBolt:IsCastable() and v45 and v127() and v13:BuffDown(v100.LavaSurgeBuff) and (v100.LavaBurst:ChargesFractional() < (1 + 0)) and v100.EchooftheElements:IsAvailable()) or ((2648 + 632) < (4441 - 3120))) then
+			if (((23299 - 18372) >= (1680 + 623)) and v24(v100.LightningBolt, not v16:IsSpellInRange(v100.LightningBolt))) then
+				return "lightning_bolt single_target 104";
+			end
+		end
+		if (((3085 + 377) >= (2068 - (562 + 474))) and v100.FrostShock:IsCastable() and v41 and v130() and not v100.ElectrifiedShocks:IsAvailable() and not v100.FluxMelting:IsAvailable()) then
+			if (v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock)) or ((2512 - 1435) >= (4097 - 2086))) then
+				return "frost_shock single_target 106";
+			end
+		end
+		if (((2448 - (76 + 829)) < (4088 - (1506 + 167))) and v126(v100.ChainLightning) and v100.ChainLightning:IsCastable() and v36 and (v113 > (1 - 0)) and (v114 > (267 - (58 + 208)))) then
+			if (v24(v100.ChainLightning, not v16:IsSpellInRange(v100.ChainLightning)) or ((2625 + 1819) < (1436 + 579))) then
+				return "chain_lightning single_target 108";
+			end
+		end
+		if ((v126(v100.LightningBolt) and v100.LightningBolt:IsCastable() and v45) or ((2414 + 1786) == (9513 - 7181))) then
+			if (v24(v100.LightningBolt, not v16:IsSpellInRange(v100.LightningBolt)) or ((1615 - (258 + 79)) >= (167 + 1149))) then
+				return "lightning_bolt single_target 110";
+			end
+		end
+		if (((2275 - 1193) == (2552 - (1219 + 251))) and v100.FlameShock:IsCastable() and v40 and (v13:IsMoving())) then
+			if (((2999 - (1231 + 440)) <= (4936 - (34 + 24))) and v104.CastCycle(v100.FlameShock, v112, v119, not v16:IsSpellInRange(v100.FlameShock))) then
+				return "flame_shock single_target 112";
+			end
+			if (((2371 + 1716) >= (2529 - 1174)) and v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock))) then
+				return "flame_shock single_target 112";
+			end
+		end
+		if ((v100.FlameShock:IsCastable() and v40) or ((258 + 332) > (14123 - 9473))) then
+			if (v24(v100.FlameShock, not v16:IsSpellInRange(v100.FlameShock)) or ((12098 - 8324) <= (9640 - 5973))) then
 				return "flame_shock single_target 114";
 			end
 		end
-		if ((v101.FrostShock:IsCastable() and v42) or ((4084 - (883 + 397)) <= (3375 - (563 + 27)))) then
-			if (v25(v101.FrostShock, not v17:IsSpellInRange(v101.FrostShock)) or ((17884 - 13313) == (5401 - (1369 + 617)))) then
+		if (((4254 - 2984) < (4685 - 2539)) and v100.FrostShock:IsCastable() and v41) then
+			if (((6152 - (877 + 712)) >= (34 + 22)) and v24(v100.FrostShock, not v16:IsSpellInRange(v100.FrostShock))) then
 				return "frost_shock single_target 116";
 			end
 		end
 	end
+	local function v139()
+		if ((v73 and v100.EarthShield:IsCastable() and v13:BuffDown(v100.EarthShieldBuff) and ((v74 == "Earth Shield") or (v100.ElementalOrbit:IsAvailable() and v13:BuffUp(v100.LightningShield)))) or ((1200 - (242 + 512)) == (1299 - 677))) then
+			if (((2696 - (92 + 535)) > (795 + 214)) and v24(v100.EarthShield)) then
+				return "earth_shield main 2";
+			end
+		elseif (((24 - 12) < (264 + 3944)) and v73 and v100.LightningShield:IsCastable() and v13:BuffDown(v100.LightningShieldBuff) and ((v74 == "Lightning Shield") or (v100.ElementalOrbit:IsAvailable() and v13:BuffUp(v100.EarthShield)))) then
+			if (v24(v100.LightningShield) or ((10867 - 7877) <= (2922 + 58))) then
+				return "lightning_shield main 2";
+			end
+		end
+		v30 = v133();
+		if (v30 or ((1783 + 792) >= (600 + 3675))) then
+			return v30;
+		end
+		if ((v16 and v16:Exists() and v16:IsAPlayer() and v16:IsDeadOrGhost() and not v13:CanAttack(v16)) or ((7225 - 3599) <= (1990 - 684))) then
+			if (((3153 - (1476 + 309)) < (5064 - (299 + 985))) and v24(v100.AncestralSpirit, nil, true)) then
+				return "ancestral_spirit";
+			end
+		end
+		if ((v100.AncestralSpirit:IsCastable() and v100.AncestralSpirit:IsReady() and not v13:AffectingCombat() and v14:Exists() and v14:IsDeadOrGhost() and v14:IsAPlayer() and not v13:CanAttack(v14)) or ((753 + 2416) == (7451 - 5178))) then
+			if (((2574 - (86 + 7)) <= (13400 - 10121)) and v24(v102.AncestralSpiritMouseover)) then
+				return "ancestral_spirit mouseover";
+			end
+		end
+		v109, v110 = v29();
+		if ((v100.ImprovedFlametongueWeapon:IsAvailable() and v100.FlametongueWeapon:IsCastable() and v50 and (not v109 or (v110 < (57007 + 542993))) and v100.FlametongueWeapon:IsAvailable()) or ((1943 - (672 + 208)) <= (376 + 501))) then
+			if (((2446 - (14 + 118)) == (2759 - (339 + 106))) and v24(v100.FlametongueWeapon)) then
+				return "flametongue_weapon enchant";
+			end
+		end
+		if (((736 + 188) >= (240 + 237)) and not v13:AffectingCombat() and v31 and v104.TargetIsValid()) then
+			local v192 = 1395 - (440 + 955);
+			while true do
+				if (((1787 + 26) <= (6786 - 3008)) and (v192 == (0 + 0))) then
+					v30 = v136();
+					if (((10332 - 6182) == (2843 + 1307)) and v30) then
+						return v30;
+					end
+					break;
+				end
+			end
+		end
+	end
 	local function v140()
-		local v171 = 1487 - (85 + 1402);
+		local v171 = 353 - (260 + 93);
 		while true do
-			if ((v171 == (2 + 1)) or ((11463 - 7022) > (5190 - (274 + 129)))) then
-				if (((2137 - (12 + 205)) == (1753 + 167)) and v101.ImprovedFlametongueWeapon:IsAvailable() and v101.FlametongueWeapon:IsCastable() and v51 and (not v110 or (v111 < (2326466 - 1726466))) and v101.FlametongueWeapon:IsAvailable()) then
-					if (v25(v101.FlametongueWeapon) or ((627 + 20) == (4861 - (27 + 357)))) then
-						return "flametongue_weapon enchant";
+			if (((405 + 27) <= (6878 - 3871)) and (v171 == (3 - 1))) then
+				if (v17 or ((2382 - (1181 + 793)) > (693 + 2028))) then
+					if (v84 or ((3725 - (105 + 202)) < (2002 + 495))) then
+						v30 = v132();
+						if (((2545 - (352 + 458)) < (8744 - 6575)) and v30) then
+							return v30;
+						end
 					end
 				end
-				if (((4299 - (91 + 389)) == (4116 - (90 + 207))) and not v14:AffectingCombat() and v32 and v105.TargetIsValid()) then
-					local v269 = 0 + 0;
+				if (((9945 - 6055) >= (3158 + 104)) and v100.GreaterPurge:IsAvailable() and v97 and v100.GreaterPurge:IsReady() and v35 and v83 and not v13:IsCasting() and not v13:IsChanneling() and v104.UnitHasMagicBuff(v16)) then
+					if (v24(v100.GreaterPurge, not v16:IsSpellInRange(v100.GreaterPurge)) or ((12732 - 8376) >= (5598 - (438 + 511)))) then
+						return "greater_purge damage";
+					end
+				end
+				v171 = 1386 - (1262 + 121);
+			end
+			if (((4972 - (728 + 340)) == (5694 - (816 + 974))) and (v171 == (0 - 0))) then
+				v30 = v134();
+				if (v30 or ((10292 - 7432) >= (4128 - (163 + 176)))) then
+					return v30;
+				end
+				v171 = 2 - 1;
+			end
+			if ((v171 == (13 - 10)) or ((329 + 757) > (6259 - (1564 + 246)))) then
+				if (((5326 - (124 + 221)) > (373 + 173)) and v100.Purge:IsReady() and v97 and v35 and v83 and not v13:IsCasting() and not v13:IsChanneling() and v104.UnitHasMagicBuff(v16)) then
+					if (v24(v100.Purge, not v16:IsSpellInRange(v100.Purge)) or ((2817 - (115 + 336)) <= (17 - 9))) then
+						return "purge damage";
+					end
+				end
+				if ((v104.TargetIsValid() and not v13:IsChanneling() and not v13:IsCasting()) or ((534 + 2056) == (2910 - (45 + 1)))) then
+					if (((v90 < v108) and v57 and ((v63 and v33) or not v63)) or ((142 + 2482) > (6139 - (1282 + 708)))) then
+						if ((v100.BloodFury:IsCastable() and (not v100.Ascendance:IsAvailable() or v13:BuffUp(v100.AscendanceBuff) or (v100.Ascendance:CooldownRemains() > (1262 - (583 + 629))))) or ((436 + 2182) >= (11628 - 7133))) then
+							if (v24(v100.BloodFury) or ((1303 + 1182) >= (4301 - (943 + 227)))) then
+								return "blood_fury main 2";
+							end
+						end
+						if ((v100.Berserking:IsCastable() and (not v100.Ascendance:IsAvailable() or v13:BuffUp(v100.AscendanceBuff))) or ((1226 + 1578) <= (4416 - (1539 + 92)))) then
+							if (v24(v100.Berserking) or ((6517 - (706 + 1240)) == (3673 - (81 + 177)))) then
+								return "berserking main 4";
+							end
+						end
+						if ((v100.Fireblood:IsCastable() and (not v100.Ascendance:IsAvailable() or v13:BuffUp(v100.AscendanceBuff) or (v100.Ascendance:CooldownRemains() > (141 - 91)))) or ((4698 - (212 + 45)) > (16012 - 11225))) then
+							if (((3866 - (708 + 1238)) == (160 + 1760)) and v24(v100.Fireblood)) then
+								return "fireblood main 6";
+							end
+						end
+						if ((v100.AncestralCall:IsCastable() and (not v100.Ascendance:IsAvailable() or v13:BuffUp(v100.AscendanceBuff) or (v100.Ascendance:CooldownRemains() > (17 + 33)))) or ((2314 - (586 + 1081)) == (4988 - (348 + 163)))) then
+							if (((3430 + 389) == (4099 - (215 + 65))) and v24(v100.AncestralCall)) then
+								return "ancestral_call main 8";
+							end
+						end
+						if ((v100.BagofTricks:IsCastable() and (not v100.Ascendance:IsAvailable() or v13:BuffUp(v100.AscendanceBuff))) or ((3735 - 2269) > (6219 - (1541 + 318)))) then
+							if (v24(v100.BagofTricks) or ((13 + 1) > (503 + 491))) then
+								return "bag_of_tricks main 10";
+							end
+						end
+					end
+					if (((303 + 98) <= (2484 - (1036 + 714))) and (v90 < v108)) then
+						if ((v56 and ((v33 and v62) or not v62)) or ((1429 + 738) >= (1893 + 1533))) then
+							v30 = v135();
+							if (((2044 - (883 + 397)) < (3875 - (563 + 27))) and v30) then
+								return v30;
+							end
+						end
+					end
+					if (((9777 - 7278) == (4485 - (1369 + 617))) and v100.NaturesSwiftness:IsCastable() and v46) then
+						if (v24(v100.NaturesSwiftness) or ((2179 - (85 + 1402)) >= (1701 + 3232))) then
+							return "natures_swiftness main 12";
+						end
+					end
+					local v257 = v104.HandleDPSPotion(v13:BuffUp(v100.AscendanceBuff));
+					if (v257 or ((8140 - 4986) <= (2663 - (274 + 129)))) then
+						return v257;
+					end
+					if ((v32 and (v113 > (219 - (12 + 205))) and (v114 > (2 + 0))) or ((10224 - 7587) > (3048 + 101))) then
+						local v261 = 384 - (27 + 357);
+						while true do
+							if (((480 - (91 + 389)) == v261) or ((4289 - (90 + 207)) < (93 + 2314))) then
+								v30 = v137();
+								if (v30 or ((3763 - (706 + 155)) > (6654 - (730 + 1065)))) then
+									return v30;
+								end
+								v261 = 1564 - (1339 + 224);
+							end
+							if (((854 + 825) < (3881 + 478)) and ((1 - 0) == v261)) then
+								if (((2756 - (268 + 575)) < (5964 - (919 + 375))) and v24(v100.Pool)) then
+									return "Pool for Aoe()";
+								end
+								break;
+							end
+						end
+					end
+					if (true or ((7825 - 4979) < (1850 - (180 + 791)))) then
+						local v262 = 1805 - (323 + 1482);
+						while true do
+							if (((6506 - (1177 + 741)) == (301 + 4287)) and (v262 == (3 - 2))) then
+								if (v24(v100.Pool) or ((134 + 213) == (4612 - 2547))) then
+									return "Pool for SingleTarget()";
+								end
+								break;
+							end
+							if ((v262 == (0 + 0)) or ((1420 - (96 + 13)) > (4618 - (962 + 959)))) then
+								v30 = v138();
+								if (v30 or ((6786 - 4069) > (672 + 3123))) then
+									return v30;
+								end
+								v262 = 1352 - (461 + 890);
+							end
+						end
+					end
+				end
+				break;
+			end
+			if ((v171 == (1 + 0)) or ((4211 - 3130) < (634 - (19 + 224)))) then
+				if (v85 or ((110 + 11) > (3636 - (37 + 161)))) then
+					local v258 = 0 + 0;
 					while true do
-						if ((v269 == (861 - (706 + 155))) or ((3261 - (730 + 1065)) > (5923 - (1339 + 224)))) then
-							v31 = v137();
-							if (v31 or ((8 + 6) > (885 + 109))) then
-								return v31;
+						if (((28 + 43) < (1923 + 26)) and (v258 == (61 - (60 + 1)))) then
+							if (((5177 - (826 + 97)) == (4120 + 134)) and v80) then
+								local v272 = 0 - 0;
+								while true do
+									if (((6584 - 3388) >= (3235 - (375 + 310))) and (v272 == (1999 - (1864 + 135)))) then
+										v30 = v104.HandleAfflicted(v100.CleanseSpirit, v102.CleanseSpiritMouseover, 103 - 63);
+										if (((544 + 1912) < (1397 + 2779)) and v30) then
+											return v30;
+										end
+										break;
+									end
+								end
+							end
+							if (v81 or ((2825 - 1675) == (4583 - (314 + 817)))) then
+								v30 = v104.HandleAfflicted(v100.TremorTotem, v100.TremorTotem, 18 + 12);
+								if (((2089 - (32 + 182)) < (1669 + 589)) and v30) then
+									return v30;
+								end
+							end
+							v258 = 3 - 2;
+						end
+						if (((1238 - (39 + 26)) > (185 - (54 + 90))) and (v258 == (199 - (45 + 153)))) then
+							if (v82 or ((34 + 22) >= (3760 - (457 + 95)))) then
+								v30 = v104.HandleAfflicted(v100.PoisonCleansingTotem, v100.PoisonCleansingTotem, 30 + 0);
+								if (((9002 - 4689) > (8151 - 4778)) and v30) then
+									return v30;
+								end
 							end
 							break;
 						end
 					end
 				end
-				break;
-			end
-			if (((596 - 195) <= (1577 - (268 + 575))) and (v171 == (1295 - (919 + 375)))) then
-				if (v31 or ((5958 - 3791) >= (4397 - (180 + 791)))) then
-					return v31;
-				end
-				if (((2569 - (323 + 1482)) < (5203 - (1177 + 741))) and v17 and v17:Exists() and v17:IsAPlayer() and v17:IsDeadOrGhost() and not v14:CanAttack(v17)) then
-					if (((164 + 2335) == (9371 - 6872)) and v25(v101.AncestralSpirit, nil, true)) then
-						return "ancestral_spirit";
+				if (v86 or ((16245 - 11752) == (998 + 1227))) then
+					v30 = v104.HandleIncorporeal(v100.Hex, v102.HexMouseOver, 103 - 73, true);
+					if (((9370 - 6266) >= (3840 - (485 + 263))) and v30) then
+						return v30;
 					end
 				end
-				v171 = 1 + 1;
-			end
-			if (((0 - 0) == v171) or ((58 + 634) >= (5042 - (96 + 13)))) then
-				if ((v74 and v101.EarthShield:IsCastable() and v14:BuffDown(v101.EarthShieldBuff) and ((v75 == "Earth Shield") or (v101.ElementalOrbit:IsAvailable() and v14:BuffUp(v101.LightningShield)))) or ((5075 - (962 + 959)) <= (5645 - 3385))) then
-					if (v25(v101.EarthShield) or ((467 + 2170) > (4500 - (461 + 890)))) then
-						return "earth_shield main 2";
-					end
-				elseif ((v74 and v101.LightningShield:IsCastable() and v14:BuffDown(v101.LightningShieldBuff) and ((v75 == "Lightning Shield") or (v101.ElementalOrbit:IsAvailable() and v14:BuffUp(v101.EarthShield)))) or ((2929 + 1063) < (9378 - 6971))) then
-					if (v25(v101.LightningShield) or ((3145 - (19 + 224)) > (4405 + 454))) then
-						return "lightning_shield main 2";
-					end
-				end
-				v31 = v134();
-				v171 = 199 - (37 + 161);
-			end
-			if (((606 + 1073) < (1690 + 2669)) and (v171 == (2 + 0))) then
-				if (((1974 - (60 + 1)) < (5593 - (826 + 97))) and v101.AncestralSpirit:IsCastable() and v101.AncestralSpirit:IsReady() and not v14:AffectingCombat() and v15:Exists() and v15:IsDeadOrGhost() and v15:IsAPlayer() and not v14:CanAttack(v15)) then
-					if (v25(v103.AncestralSpiritMouseover) or ((2757 + 89) < (3159 - 2280))) then
-						return "ancestral_spirit mouseover";
-					end
-				end
-				v110, v111 = v30();
-				v171 = 5 - 2;
+				v171 = 709 - (575 + 132);
 			end
 		end
 	end
 	local function v141()
-		v31 = v135();
-		if (((5273 - (375 + 310)) == (6587 - (1864 + 135))) and v31) then
-			return v31;
-		end
-		if (v86 or ((894 - 547) == (458 + 1607))) then
-			local v207 = 0 + 0;
-			while true do
-				if (((0 - 0) == v207) or ((2442 - (314 + 817)) > (1530 + 1167))) then
-					if (v81 or ((2931 - (32 + 182)) > (2805 + 990))) then
-						local v272 = 0 - 0;
-						while true do
-							if (((65 - (39 + 26)) == v272) or ((1225 - (54 + 90)) < (589 - (45 + 153)))) then
-								v31 = v105.HandleAfflicted(v101.CleanseSpirit, v103.CleanseSpiritMouseover, 25 + 15);
-								if (v31 or ((673 - (457 + 95)) > (3416 + 22))) then
-									return v31;
-								end
-								break;
-							end
-						end
-					end
-					if (((147 - 76) < (4710 - 2761)) and v82) then
-						local v273 = 0 - 0;
-						while true do
-							if (((1907 + 2347) == (14671 - 10417)) and (v273 == (0 - 0))) then
-								v31 = v105.HandleAfflicted(v101.TremorTotem, v101.TremorTotem, 778 - (485 + 263));
-								if (((3903 - (575 + 132)) >= (3411 - (750 + 111))) and v31) then
-									return v31;
-								end
-								break;
-							end
-						end
-					end
-					v207 = 1011 - (445 + 565);
-				end
-				if (((1977 + 479) < (600 + 3576)) and ((1 - 0) == v207)) then
-					if (v83 or ((384 + 766) == (3762 - (189 + 121)))) then
-						local v274 = 0 + 0;
-						while true do
-							if (((3222 - (634 + 713)) < (2796 - (493 + 45))) and (v274 == (968 - (493 + 475)))) then
-								v31 = v105.HandleAfflicted(v101.PoisonCleansingTotem, v101.PoisonCleansingTotem, 8 + 22);
-								if (((1957 - (158 + 626)) > (20 + 21)) and v31) then
-									return v31;
-								end
-								break;
-							end
-						end
-					end
-					break;
-				end
+		local v172 = 861 - (750 + 111);
+		while true do
+			if (((4558 - (445 + 565)) > (2494 + 604)) and (v172 == (1 + 4))) then
+				v91 = EpicSettings.Settings['useWeapon'];
+				v52 = EpicSettings.Settings['useAscendance'];
+				v54 = EpicSettings.Settings['useLiquidMagmaTotem'];
+				v172 = 10 - 4;
 			end
-		end
-		if (v87 or ((92 - 36) >= (714 + 2494))) then
-			local v208 = 0 + 0;
-			while true do
-				if (((5404 - (1035 + 56)) > (4332 - (114 + 845))) and (v208 == (0 + 0))) then
-					v31 = v105.HandleIncorporeal(v101.Hex, v103.HexMouseOver, 76 - 46, true);
-					if (v31 or ((3778 + 715) == (3274 - (179 + 870)))) then
-						return v31;
-					end
-					break;
-				end
+			if ((v172 == (3 + 5)) or ((3562 - (189 + 121)) == (125 + 378))) then
+				v64 = EpicSettings.Settings['primordialWaveWithMiniCD'];
+				v65 = EpicSettings.Settings['stormkeeperWithMiniCD'];
+				break;
 			end
-		end
-		if (((4353 - 1249) >= (3970 - (827 + 51))) and v18) then
-			if (((9382 - 5834) > (1552 + 1546)) and v85) then
-				local v253 = 473 - (95 + 378);
-				while true do
-					if ((v253 == (0 + 0)) or ((4607 - 1355) == (442 + 61))) then
-						v31 = v133();
-						if (((5744 - (334 + 677)) > (7734 - 5668)) and v31) then
-							return v31;
-						end
-						break;
-					end
-				end
+			if (((6080 - (634 + 713)) > (2604 - (493 + 45))) and (v172 == (972 - (493 + 475)))) then
+				v48 = EpicSettings.Settings['useStormkeeper'];
+				v49 = EpicSettings.Settings['useTotemicRecall'];
+				v50 = EpicSettings.Settings['useWeaponEnchant'];
+				v172 = 2 + 3;
 			end
-		end
-		if (((4605 - (1049 + 7)) >= (4000 - 3084)) and v101.GreaterPurge:IsAvailable() and v98 and v101.GreaterPurge:IsReady() and v36 and v84 and not v14:IsCasting() and not v14:IsChanneling() and v105.UnitHasMagicBuff(v17)) then
-			if (v25(v101.GreaterPurge, not v17:IsSpellInRange(v101.GreaterPurge)) or ((4117 - 1928) <= (77 + 168))) then
-				return "greater_purge damage";
+			if (((4333 - (158 + 626)) >= (431 + 485)) and (v172 == (2 - 0))) then
+				v42 = EpicSettings.Settings['useIceFury'];
+				v43 = EpicSettings.Settings['useLavaBeam'];
+				v44 = EpicSettings.Settings['useLavaBurst'];
+				v172 = 1 + 2;
 			end
-		end
-		if ((v101.Purge:IsReady() and v98 and v36 and v84 and not v14:IsCasting() and not v14:IsChanneling() and v105.UnitHasMagicBuff(v17)) or ((3723 - 2334) > (7863 - 3938))) then
-			if (((1857 + 2312) >= (4501 - (1004 + 416))) and v25(v101.Purge, not v17:IsSpellInRange(v101.Purge))) then
-				return "purge damage";
+			if (((1 + 5) == v172) or ((3280 - (1035 + 56)) <= (1204 - (114 + 845)))) then
+				v53 = EpicSettings.Settings['useFireElemental'];
+				v55 = EpicSettings.Settings['useStormElemental'];
+				v58 = EpicSettings.Settings['ascendanceWithCD'];
+				v172 = 3 + 4;
 			end
-		end
-		if (((2306 - (1621 + 336)) <= (2833 - (337 + 1602))) and v105.TargetIsValid() and not v14:IsChanneling() and not v14:IsCasting()) then
-			local v209 = 1517 - (1014 + 503);
-			local v210;
-			while true do
-				if (((1746 - (446 + 569)) <= (125 + 2853)) and (v209 == (2 - 1))) then
-					if ((v101.NaturesSwiftness:IsCastable() and v47) or ((300 + 592) > (8082 - 4190))) then
-						if (v25(v101.NaturesSwiftness) or ((91 + 4375) == (1405 - (223 + 282)))) then
-							return "natures_swiftness main 12";
-						end
-					end
-					v210 = v105.HandleDPSPotion(v14:BuffUp(v101.AscendanceBuff));
-					v209 = 1 + 1;
-				end
-				if ((v209 == (2 - 0)) or ((3039 - 955) >= (3558 - (623 + 47)))) then
-					if (((524 - (32 + 13)) < (1045 + 818)) and v210) then
-						return v210;
-					end
-					if ((v33 and (v114 > (2 + 0)) and (v115 > (1803 - (1070 + 731)))) or ((2320 + 108) >= (5442 - (1257 + 147)))) then
-						local v275 = 0 + 0;
-						while true do
-							if ((v275 == (1 - 0)) or ((3011 - (98 + 35)) > (1216 + 1681))) then
-								if (v25(v101.Pool) or ((8743 - 6274) > (12370 - 8694))) then
-									return "Pool for Aoe()";
-								end
-								break;
-							end
-							if (((218 + 15) < (429 + 58)) and ((0 + 0) == v275)) then
-								v31 = v138();
-								if (((3030 - (395 + 162)) >= (177 + 24)) and v31) then
-									return v31;
-								end
-								v275 = 1942 - (816 + 1125);
-							end
-						end
-					end
-					v209 = 3 - 0;
-				end
-				if (((5268 - (701 + 447)) >= (204 - 71)) and ((4 - 1) == v209)) then
-					if (((4421 - (391 + 950)) >= (5351 - 3365)) and true) then
-						local v276 = 0 - 0;
-						while true do
-							if ((v276 == (0 - 0)) or ((1010 + 429) > (2059 + 1479))) then
-								v31 = v139();
-								if (v31 or ((1531 - 1112) < (1529 - (251 + 1271)))) then
-									return v31;
-								end
-								v276 = 1 + 0;
-							end
-							if (((7550 - 4730) == (7061 - 4241)) and (v276 == (1 - 0))) then
-								if (v25(v101.Pool) or ((5621 - (1147 + 112)) <= (882 + 2645))) then
-									return "Pool for SingleTarget()";
-								end
-								break;
-							end
-						end
-					end
-					break;
-				end
-				if (((5306 - 2693) <= (696 + 1984)) and (v209 == (697 - (335 + 362)))) then
-					if (((v91 < v109) and v58 and ((v64 and v34) or not v64)) or ((1389 + 93) >= (6454 - 2166))) then
-						if ((v101.BloodFury:IsCastable() and (not v101.Ascendance:IsAvailable() or v14:BuffUp(v101.AscendanceBuff) or (v101.Ascendance:CooldownRemains() > (136 - 86)))) or ((9148 - 6686) > (21549 - 17123))) then
-							if (((13549 - 8775) == (5340 - (237 + 329))) and v25(v101.BloodFury)) then
-								return "blood_fury main 2";
-							end
-						end
-						if (((2026 - 1460) <= (633 + 327)) and v101.Berserking:IsCastable() and (not v101.Ascendance:IsAvailable() or v14:BuffUp(v101.AscendanceBuff))) then
-							if (v25(v101.Berserking) or ((1593 + 1317) <= (3054 - (408 + 716)))) then
-								return "berserking main 4";
-							end
-						end
-						if ((v101.Fireblood:IsCastable() and (not v101.Ascendance:IsAvailable() or v14:BuffUp(v101.AscendanceBuff) or (v101.Ascendance:CooldownRemains() > (189 - 139)))) or ((840 - (344 + 477)) > (77 + 375))) then
-							if (v25(v101.Fireblood) or ((2668 - (1188 + 573)) > (8259 - 5107))) then
-								return "fireblood main 6";
-							end
-						end
-						if ((v101.AncestralCall:IsCastable() and (not v101.Ascendance:IsAvailable() or v14:BuffUp(v101.AscendanceBuff) or (v101.Ascendance:CooldownRemains() > (49 + 1)))) or ((8126 - 5621) > (6909 - 2439))) then
-							if (v25(v101.AncestralCall) or ((9177 - 5466) > (5591 - (508 + 1021)))) then
-								return "ancestral_call main 8";
-							end
-						end
-						if (((395 + 25) == (1586 - (228 + 938))) and v101.BagofTricks:IsCastable() and (not v101.Ascendance:IsAvailable() or v14:BuffUp(v101.AscendanceBuff))) then
-							if (v25(v101.BagofTricks) or ((718 - (332 + 353)) >= (4256 - 762))) then
-								return "bag_of_tricks main 10";
-							end
-						end
-					end
-					if ((v91 < v109) or ((3317 - 2050) == (4495 + 249))) then
-						if (((1218 + 1210) < (15108 - 11330)) and v57 and ((v34 and v63) or not v63)) then
-							local v281 = 423 - (18 + 405);
-							while true do
-								if ((v281 == (0 + 0)) or ((1489 + 1457) <= (2431 - 835))) then
-									v31 = v136();
-									if (((5411 - (194 + 784)) > (4897 - (694 + 1076))) and v31) then
-										return v31;
-									end
-									break;
-								end
-							end
-						end
-					end
-					v209 = 1905 - (122 + 1782);
-				end
+			if ((v172 == (17 - 10)) or ((1168 + 221) > (4974 - (179 + 870)))) then
+				v61 = EpicSettings.Settings['liquidMagmaTotemWithCD'];
+				v59 = EpicSettings.Settings['fireElementalWithCD'];
+				v60 = EpicSettings.Settings['stormElementalWithCD'];
+				v172 = 10 - 2;
+			end
+			if (((5047 - (827 + 51)) >= (8147 - 5066)) and (v172 == (2 + 1))) then
+				v45 = EpicSettings.Settings['useLightningBolt'];
+				v46 = EpicSettings.Settings['useNaturesSwiftness'];
+				v47 = EpicSettings.Settings['usePrimordialWave'];
+				v172 = 477 - (95 + 378);
+			end
+			if (((26 + 323) <= (1266 - 372)) and (v172 == (0 + 0))) then
+				v36 = EpicSettings.Settings['useChainlightning'];
+				v37 = EpicSettings.Settings['useEarthquake'];
+				v38 = EpicSettings.Settings['useEarthShock'];
+				v172 = 1012 - (334 + 677);
+			end
+			if (((2736 - 2005) <= (4034 - (1049 + 7))) and (v172 == (4 - 3))) then
+				v39 = EpicSettings.Settings['useElementalBlast'];
+				v40 = EpicSettings.Settings['useFlameShock'];
+				v41 = EpicSettings.Settings['useFrostShock'];
+				v172 = 3 - 1;
 			end
 		end
 	end
 	local function v142()
-		local v172 = 0 + 0;
+		local v173 = 0 + 0;
 		while true do
-			if (((4009 + 291) >= (2460 + 273)) and (v172 == (0 + 0))) then
-				v37 = EpicSettings.Settings['useChainlightning'];
-				v38 = EpicSettings.Settings['useEarthquake'];
-				v39 = EpicSettings.Settings['useEarthShock'];
-				v40 = EpicSettings.Settings['useElementalBlast'];
-				v172 = 2 - 1;
+			if (((10 - 6) == v173) or ((1786 - 894) > (1733 + 2159))) then
+				v99 = EpicSettings.Settings['healOOCHP'] or (1420 - (1004 + 416));
+				v97 = EpicSettings.Settings['usePurgeTarget'];
+				v80 = EpicSettings.Settings['useCleanseSpiritWithAfflicted'];
+				v81 = EpicSettings.Settings['useTremorTotemWithAfflicted'];
+				v173 = 1962 - (1621 + 336);
 			end
-			if (((4474 + 355) == (6799 - (214 + 1756))) and ((9 - 7) == v172)) then
-				v45 = EpicSettings.Settings['useLavaBurst'];
-				v46 = EpicSettings.Settings['useLightningBolt'];
-				v47 = EpicSettings.Settings['useNaturesSwiftness'];
-				v48 = EpicSettings.Settings['usePrimordialWave'];
-				v172 = 1 + 2;
+			if ((v173 == (1941 - (337 + 1602))) or ((5983 - (1014 + 503)) == (1915 - (446 + 569)))) then
+				v77 = EpicSettings.Settings['astralShiftHP'] or (0 + 0);
+				v78 = EpicSettings.Settings['healingStreamTotemHP'] or (0 - 0);
+				v79 = EpicSettings.Settings['healingStreamTotemGroup'] or (0 + 0);
+				v51 = EpicSettings.Settings['earthquakeSetting'] or "";
+				v173 = 5 - 2;
 			end
-			if (((93 + 1590) <= (5311 - (217 + 368))) and (v172 == (18 - 12))) then
-				v65 = EpicSettings.Settings['primordialWaveWithMiniCD'];
-				v66 = EpicSettings.Settings['stormkeeperWithMiniCD'];
+			if ((v173 == (1 + 2)) or ((2589 - (223 + 282)) >= (84 + 2804))) then
+				v66 = EpicSettings.Settings['liquidMagmaTotemSetting'] or "";
+				v73 = EpicSettings.Settings['autoShield'];
+				v74 = EpicSettings.Settings['shieldUse'] or "Lightning Shield";
+				v98 = EpicSettings.Settings['healOOC'];
+				v173 = 5 - 1;
+			end
+			if (((698 - 219) < (2533 - (623 + 47))) and (v173 == (46 - (32 + 13)))) then
+				v71 = EpicSettings.Settings['useAstralShift'];
+				v72 = EpicSettings.Settings['useHealingStreamTotem'];
+				v75 = EpicSettings.Settings['ancestralGuidanceHP'] or (0 + 0);
+				v76 = EpicSettings.Settings['ancestralGuidanceGroup'] or (0 + 0);
+				v173 = 1803 - (1070 + 731);
+			end
+			if ((v173 == (0 + 0)) or ((3832 - (1257 + 147)) >= (1601 + 2437))) then
+				v67 = EpicSettings.Settings['useWindShear'];
+				v68 = EpicSettings.Settings['useCapacitorTotem'];
+				v69 = EpicSettings.Settings['useThunderstorm'];
+				v70 = EpicSettings.Settings['useAncestralGuidance'];
+				v173 = 1 - 0;
+			end
+			if (((138 - (98 + 35)) == v173) or ((1208 + 1670) > (10259 - 7362))) then
+				v82 = EpicSettings.Settings['usePoisonCleansingTotemWithAfflicted'];
 				break;
-			end
-			if (((3184 + 1651) >= (2722 + 947)) and (v172 == (1 + 0))) then
-				v41 = EpicSettings.Settings['useFlameShock'];
-				v42 = EpicSettings.Settings['useFrostShock'];
-				v43 = EpicSettings.Settings['useIceFury'];
-				v44 = EpicSettings.Settings['useLavaBeam'];
-				v172 = 891 - (844 + 45);
-			end
-			if (((3135 - (242 + 42)) > (3720 - 1861)) and (v172 == (11 - 6))) then
-				v59 = EpicSettings.Settings['ascendanceWithCD'];
-				v62 = EpicSettings.Settings['liquidMagmaTotemWithCD'];
-				v60 = EpicSettings.Settings['fireElementalWithCD'];
-				v61 = EpicSettings.Settings['stormElementalWithCD'];
-				v172 = 1206 - (132 + 1068);
-			end
-			if (((6143 - 2295) > (3946 - (214 + 1409))) and (v172 == (4 + 0))) then
-				v53 = EpicSettings.Settings['useAscendance'];
-				v55 = EpicSettings.Settings['useLiquidMagmaTotem'];
-				v54 = EpicSettings.Settings['useFireElemental'];
-				v56 = EpicSettings.Settings['useStormElemental'];
-				v172 = 1639 - (497 + 1137);
-			end
-			if (((3776 - (9 + 931)) > (758 - (181 + 108))) and (v172 == (2 + 1))) then
-				v49 = EpicSettings.Settings['useStormkeeper'];
-				v50 = EpicSettings.Settings['useTotemicRecall'];
-				v51 = EpicSettings.Settings['useWeaponEnchant'];
-				v92 = EpicSettings.Settings['useWeapon'];
-				v172 = 9 - 5;
 			end
 		end
 	end
 	local function v143()
-		local v173 = 0 - 0;
+		local v174 = 0 - 0;
 		while true do
-			if ((v173 == (2 + 4)) or ((1307 + 789) <= (1016 - (296 + 180)))) then
-				v81 = EpicSettings.Settings['useCleanseSpiritWithAfflicted'];
-				v82 = EpicSettings.Settings['useTremorTotemWithAfflicted'];
-				v83 = EpicSettings.Settings['usePoisonCleansingTotemWithAfflicted'];
+			if ((v174 == (1 + 0)) or ((2173 + 296) > (1610 + 2066))) then
+				v89 = EpicSettings.Settings['InterruptThreshold'];
+				v84 = EpicSettings.Settings['DispelDebuffs'];
+				v83 = EpicSettings.Settings['DispelBuffs'];
+				v174 = 559 - (395 + 162);
+			end
+			if (((205 + 28) < (2428 - (816 + 1125))) and (v174 == (2 - 0))) then
+				v56 = EpicSettings.Settings['useTrinkets'];
+				v57 = EpicSettings.Settings['useRacials'];
+				v62 = EpicSettings.Settings['trinketsWithCD'];
+				v174 = 1151 - (701 + 447);
+			end
+			if (((3809 - 1336) >= (351 - 150)) and ((1346 - (391 + 950)) == v174)) then
+				v85 = EpicSettings.Settings['handleAfflicted'];
+				v86 = EpicSettings.Settings['HandleIncorporeal'];
 				break;
 			end
-			if (((1408 - (1183 + 220)) == v173) or ((4448 - (1037 + 228)) < (4281 - 1636))) then
-				v99 = EpicSettings.Settings['healOOC'];
-				v100 = EpicSettings.Settings['healOOCHP'] or (0 - 0);
-				v98 = EpicSettings.Settings['usePurgeTarget'];
-				v173 = 20 - 14;
+			if (((11102 - 6982) >= (332 - 199)) and (v174 == (9 - 5))) then
+				v95 = EpicSettings.Settings['healthstoneHP'] or (0 + 0);
+				v94 = EpicSettings.Settings['healingPotionHP'] or (0 + 0);
+				v96 = EpicSettings.Settings['HealingPotionName'] or "";
+				v174 = 18 - 13;
 			end
-			if (((3964 - (527 + 207)) <= (4287 - (187 + 340))) and ((1874 - (1298 + 572)) == v173)) then
-				v67 = EpicSettings.Settings['liquidMagmaTotemSetting'] or "";
-				v74 = EpicSettings.Settings['autoShield'];
-				v75 = EpicSettings.Settings['shieldUse'] or "Lightning Shield";
-				v173 = 12 - 7;
+			if (((4602 - (251 + 1271)) >= (1769 + 217)) and (v174 == (0 - 0))) then
+				v90 = EpicSettings.Settings['fightRemainsCheck'] or (0 - 0);
+				v87 = EpicSettings.Settings['InterruptWithStun'];
+				v88 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v174 = 1 - 0;
 			end
-			if (((3998 - (144 + 26)) == (9538 - 5710)) and (v173 == (6 - 3))) then
-				v79 = EpicSettings.Settings['healingStreamTotemHP'] or (0 + 0);
-				v80 = EpicSettings.Settings['healingStreamTotemGroup'] or (0 - 0);
-				v52 = EpicSettings.Settings['earthquakeSetting'] or "";
-				v173 = 9 - 5;
-			end
-			if (((2685 - 2131) == (282 + 272)) and (v173 == (1 - 0))) then
-				v71 = EpicSettings.Settings['useAncestralGuidance'];
-				v72 = EpicSettings.Settings['useAstralShift'];
-				v73 = EpicSettings.Settings['useHealingStreamTotem'];
-				v173 = 2 + 0;
-			end
-			if ((v173 == (1 + 1)) or ((2765 - (5 + 197)) == (858 - (339 + 347)))) then
-				v76 = EpicSettings.Settings['ancestralGuidanceHP'] or (0 - 0);
-				v77 = EpicSettings.Settings['ancestralGuidanceGroup'] or (0 - 0);
-				v78 = EpicSettings.Settings['astralShiftHP'] or (376 - (365 + 11));
-				v173 = 3 + 0;
-			end
-			if (((14957 - 11068) >= (307 - 176)) and (v173 == (924 - (837 + 87)))) then
-				v68 = EpicSettings.Settings['useWindShear'];
-				v69 = EpicSettings.Settings['useCapacitorTotem'];
-				v70 = EpicSettings.Settings['useThunderstorm'];
-				v173 = 1 - 0;
+			if ((v174 == (1262 - (1147 + 112))) or ((360 + 1079) > (7185 - 3647))) then
+				v63 = EpicSettings.Settings['racialsWithCD'];
+				v93 = EpicSettings.Settings['useHealthstone'];
+				v92 = EpicSettings.Settings['useHealingPotion'];
+				v174 = 2 + 2;
 			end
 		end
 	end
 	local function v144()
-		v91 = EpicSettings.Settings['fightRemainsCheck'] or (1670 - (837 + 833));
-		v88 = EpicSettings.Settings['InterruptWithStun'];
-		v89 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-		v90 = EpicSettings.Settings['InterruptThreshold'];
-		v85 = EpicSettings.Settings['DispelDebuffs'];
-		v84 = EpicSettings.Settings['DispelBuffs'];
-		v57 = EpicSettings.Settings['useTrinkets'];
-		v58 = EpicSettings.Settings['useRacials'];
-		v63 = EpicSettings.Settings['trinketsWithCD'];
-		v64 = EpicSettings.Settings['racialsWithCD'];
-		v94 = EpicSettings.Settings['useHealthstone'];
-		v93 = EpicSettings.Settings['useHealingPotion'];
-		v96 = EpicSettings.Settings['healthstoneHP'] or (0 + 0);
-		v95 = EpicSettings.Settings['healingPotionHP'] or (1387 - (356 + 1031));
-		v97 = EpicSettings.Settings['HealingPotionName'] or "";
-		v86 = EpicSettings.Settings['handleAfflicted'];
-		v87 = EpicSettings.Settings['HandleIncorporeal'];
-	end
-	local function v145()
-		v143();
 		v142();
-		v144();
-		v32 = EpicSettings.Toggles['ooc'];
-		v33 = EpicSettings.Toggles['aoe'];
-		v34 = EpicSettings.Toggles['cds'];
-		v36 = EpicSettings.Toggles['dispel'];
-		v35 = EpicSettings.Toggles['minicds'];
-		if (v14:IsDeadOrGhost() or ((224 + 268) == (6224 - (73 + 1573)))) then
-			return v31;
+		v141();
+		v143();
+		v31 = EpicSettings.Toggles['ooc'];
+		v32 = EpicSettings.Toggles['aoe'];
+		v33 = EpicSettings.Toggles['cds'];
+		v35 = EpicSettings.Toggles['dispel'];
+		v34 = EpicSettings.Toggles['minicds'];
+		if (v13:IsDeadOrGhost() or ((1116 - (335 + 362)) < (7 + 0))) then
+			return v30;
 		end
-		v112 = v14:GetEnemiesInRange(1428 - (1307 + 81));
-		v113 = v17:GetEnemiesInSplashRange(239 - (7 + 227));
-		if (v33 or ((6753 - 2641) < (1982 - (90 + 76)))) then
-			local v211 = 0 - 0;
-			while true do
-				if (((2218 + 2307) >= (1010 + 213)) and (v211 == (0 + 0))) then
-					v114 = #v112;
-					v115 = v28(v17:GetEnemiesInSplashRangeCount(19 - 14), v114);
-					break;
-				end
-			end
+		v111 = v13:GetEnemiesInRange(60 - 20);
+		v112 = v16:GetEnemiesInSplashRange(13 - 8);
+		if (((10478 - 7658) == (13730 - 10910)) and v32) then
+			v113 = #v111;
+			v114 = v27(v16:GetEnemiesInSplashRangeCount(14 - 9), v113);
 		else
-			local v212 = 260 - (197 + 63);
+			local v193 = 566 - (237 + 329);
 			while true do
-				if (((231 + 859) <= (1144 + 3683)) and ((0 + 0) == v212)) then
-					v114 = 1 + 0;
-					v115 = 1 - 0;
+				if ((v193 == (0 - 0)) or ((2876 + 1486) <= (1930 + 1597))) then
+					v113 = 1125 - (408 + 716);
+					v114 = 3 - 2;
 					break;
 				end
 			end
 		end
-		if ((v36 and v85) or ((1608 - (618 + 751)) > (1007 + 338))) then
-			local v213 = 1910 - (206 + 1704);
+		if (((3434 - (344 + 477)) <= (457 + 2223)) and v35 and v84) then
+			local v194 = 1761 - (1188 + 573);
 			while true do
-				if ((v213 == (0 - 0)) or ((7406 - 3696) >= (1631 + 2107))) then
-					if ((v14:AffectingCombat() and v101.CleanseSpirit:IsAvailable()) or ((5113 - (155 + 1120)) < (3567 - (396 + 1110)))) then
-						local v277 = v85 and v101.CleanseSpirit:IsReady() and v36;
-						v31 = v105.FocusUnit(v277, v103, 45 - 25, nil, 9 + 16);
-						if (v31 or ((521 + 169) > (1004 + 168))) then
-							return v31;
+				if ((v194 == (0 - 0)) or ((1444 + 38) >= (13911 - 9623))) then
+					if ((v13:AffectingCombat() and v100.CleanseSpirit:IsAvailable()) or ((3805 - 1343) > (10946 - 6520))) then
+						local v263 = v84 and v100.CleanseSpirit:IsReady() and v35;
+						v30 = v104.FocusUnit(v263, nil, 1549 - (508 + 1021), nil, 24 + 1, v100.HealingSurge);
+						if (((5940 - (228 + 938)) == (5459 - (332 + 353))) and v30) then
+							return v30;
 						end
 					end
-					if (v101.CleanseSpirit:IsAvailable() or ((2568 - (230 + 746)) > (3200 - (473 + 128)))) then
-						if (((3622 - (39 + 9)) <= (4663 - (38 + 228))) and v15 and v15:Exists() and v15:IsAPlayer() and v105.UnitHasCurseDebuff(v15)) then
-							if (((5694 - 2559) > (1803 - (106 + 367))) and v101.CleanseSpirit:IsReady()) then
-								if (v25(v103.CleanseSpiritMouseover) or ((345 + 3555) <= (5503 - (354 + 1508)))) then
+					if (((689 - 123) <= (2513 - 1553)) and v100.CleanseSpirit:IsAvailable()) then
+						if ((v14 and v14:Exists() and v14:IsAPlayer() and v104.UnitHasCurseDebuff(v14)) or ((2758 + 152) <= (968 + 962))) then
+							if (v100.CleanseSpirit:IsReady() or ((75 - 56) > (875 - (18 + 405)))) then
+								if (v24(v102.CleanseSpiritMouseover) or ((416 + 491) > (1593 + 1559))) then
 									return "cleanse_spirit mouseover";
 								end
 							end
@@ -1800,72 +1723,81 @@ v0["Epix_Shaman_Elemental.lua"] = function(...)
 				end
 			end
 		end
-		if (((5532 - 3808) == (1260 + 464)) and (v105.TargetIsValid() or v14:AffectingCombat())) then
-			v108 = v10.BossFightRemains();
-			v109 = v108;
-			if (((267 + 188) <= (1723 - 441)) and (v109 == (12355 - (334 + 910)))) then
-				v109 = v10.FightRemains(v112, false);
+		if (v104.TargetIsValid() or v13:AffectingCombat() or ((3817 - 1312) > (5448 - (194 + 784)))) then
+			v107 = v9.BossFightRemains();
+			v108 = v107;
+			if ((v108 == (12881 - (694 + 1076))) or ((5615 - (122 + 1782)) > (3823 + 239))) then
+				v108 = v9.FightRemains(v111, false);
 			end
 		end
-		if (((5501 - (92 + 803)) < (2687 + 2189)) and not v14:IsChanneling() and not v14:IsCasting()) then
-			local v214 = 1181 - (1035 + 146);
+		if (((392 + 28) == (379 + 41)) and not v13:IsChanneling() and not v13:IsCasting()) then
+			local v195 = 0 + 0;
 			while true do
-				if ((v214 == (616 - (230 + 386))) or ((839 + 603) > (4150 - (353 + 1157)))) then
-					if (((1250 - (53 + 1061)) < (5303 - (1568 + 67))) and v86) then
-						local v278 = 0 + 0;
+				if ((v195 == (0 - 0)) or ((31 + 2) >= (5464 - (214 + 1756)))) then
+					if (v85 or ((6124 - 4857) == (524 + 4220))) then
+						local v264 = 0 + 0;
 						while true do
-							if ((v278 == (1 + 0)) or ((4516 - 2732) > (14067 - 9286))) then
-								if (((11559 - 6974) > (3112 + 186)) and v83) then
-									local v293 = 1212 - (615 + 597);
+							if (((3013 - (217 + 368)) < (11413 - 7635)) and (v264 == (0 + 0))) then
+								if (v80 or ((2186 + 760) <= (54 + 1542))) then
+									v30 = v104.HandleAfflicted(v100.CleanseSpirit, v102.CleanseSpiritMouseover, 929 - (844 + 45));
+									if (((4717 - (242 + 42)) > (6259 - 3132)) and v30) then
+										return v30;
+									end
+								end
+								if (((9996 - 5696) >= (3933 - (132 + 1068))) and v81) then
+									local v278 = 0 - 0;
 									while true do
-										if ((v293 == (0 + 0)) or ((2488 - 824) > (1397 + 301))) then
-											v31 = v105.HandleAfflicted(v101.PoisonCleansingTotem, v101.PoisonCleansingTotem, 1 + 29);
-											if (v31 or ((1886 + 1541) < (4748 - (1056 + 843)))) then
-												return v31;
+										if (((6452 - (214 + 1409)) == (3736 + 1093)) and (v278 == (1634 - (497 + 1137)))) then
+											v30 = v104.HandleAfflicted(v100.TremorTotem, v100.TremorTotem, 970 - (9 + 931));
+											if (((1972 - (181 + 108)) <= (2815 + 1911)) and v30) then
+												return v30;
 											end
 											break;
 										end
+									end
+								end
+								v264 = 2 - 1;
+							end
+							if (((14359 - 9524) >= (866 + 2803)) and (v264 == (1 + 0))) then
+								if (((3327 - (296 + 180)) > (3262 - (1183 + 220))) and v82) then
+									v30 = v104.HandleAfflicted(v100.PoisonCleansingTotem, v100.PoisonCleansingTotem, 1295 - (1037 + 228));
+									if (((6228 - 2380) > (6694 - 4371)) and v30) then
+										return v30;
 									end
 								end
 								break;
 							end
-							if (((7884 - 4268) <= (7367 - 2938)) and (v278 == (0 - 0))) then
-								if (((2332 + 1656) >= (2042 - (286 + 1690))) and v81) then
-									local v294 = 911 - (98 + 813);
-									while true do
-										if ((v294 == (0 + 0)) or ((2090 - 1228) > (2634 + 2010))) then
-											v31 = v105.HandleAfflicted(v101.CleanseSpirit, v103.CleanseSpiritMouseover, 547 - (263 + 244));
-											if (((967 + 254) == (2908 - (1502 + 185))) and v31) then
-												return v31;
-											end
-											break;
-										end
-									end
-								end
-								if (v82 or ((9 + 36) > (6213 - 4942))) then
-									v31 = v105.HandleAfflicted(v101.TremorTotem, v101.TremorTotem, 79 - 49);
-									if (((5404 - (629 + 898)) > (4166 - 2636)) and v31) then
-										return v31;
-									end
-								end
-								v278 = 2 - 1;
-							end
 						end
 					end
-					if (v14:AffectingCombat() or ((5163 - (12 + 353)) == (3166 - (1680 + 231)))) then
-						if ((v34 and v92 and (v102.Dreambinder:IsEquippedAndReady() or v102.Iridal:IsEquippedAndReady())) or ((162 + 2379) > (1752 + 1108))) then
-							if (v25(v103.UseWeapon, nil) or ((4051 - (212 + 937)) > (2418 + 1211))) then
-								return "Using Weapon Macro";
+					if (((9690 - 6854) > (1203 - (527 + 207))) and v13:AffectingCombat()) then
+						local v265 = 527 - (187 + 340);
+						while true do
+							if (((1871 - (1298 + 572)) == v265) or ((5212 - 3116) <= (710 - (144 + 26)))) then
+								if (v30 or ((7931 - 4748) < (6168 - 3523))) then
+									return v30;
+								end
+								break;
+							end
+							if (((1155 + 2075) <= (10248 - 6488)) and (v265 == (0 - 0))) then
+								if (((18556 - 14728) == (1945 + 1883)) and v33 and v91 and (v101.Dreambinder:IsEquippedAndReady() or v101.Iridal:IsEquippedAndReady())) then
+									if (((751 - 197) == (518 + 36)) and v24(v102.UseWeapon, nil)) then
+										return "Using Weapon Macro";
+									end
+								end
+								v30 = v140();
+								v265 = 1 + 0;
 							end
 						end
-						v31 = v141();
-						if (((1489 - (111 + 951)) < (705 + 2763)) and v31) then
-							return v31;
-						end
 					else
-						v31 = v140();
-						if (((4217 - (18 + 9)) >= (562 + 2242)) and v31) then
-							return v31;
+						local v266 = 202 - (5 + 197);
+						while true do
+							if ((v266 == (686 - (339 + 347))) or ((5808 - 3245) == (605 - 433))) then
+								v30 = v139();
+								if (((4265 - (365 + 11)) >= (125 + 6)) and v30) then
+									return v30;
+								end
+								break;
+							end
 						end
 					end
 					break;
@@ -1873,21 +1805,12 @@ v0["Epix_Shaman_Elemental.lua"] = function(...)
 			end
 		end
 	end
-	local function v146()
-		local v192 = 534 - (31 + 503);
-		while true do
-			if (((3718 - (595 + 1037)) == (3530 - (189 + 1255))) and (v192 == (1 + 0))) then
-				v22.Print("Elemental Shaman by Epic. Supported by xKaneto.");
-				break;
-			end
-			if (((6419 - 2271) > (4012 - (1170 + 109))) and (v192 == (1817 - (348 + 1469)))) then
-				v101.FlameShockDebuff:RegisterAuraTracking();
-				v107();
-				v192 = 1290 - (1115 + 174);
-			end
-		end
+	local function v145()
+		v100.FlameShockDebuff:RegisterAuraTracking();
+		v106();
+		v21.Print("Elemental Shaman by Epic. Supported by xKaneto.");
 	end
-	v22.SetAPL(638 - 376, v145, v146);
+	v21.SetAPL(1007 - 745, v144, v145);
 end;
 return v0["Epix_Shaman_Elemental.lua"]();
 

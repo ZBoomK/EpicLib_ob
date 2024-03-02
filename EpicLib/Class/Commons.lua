@@ -1098,7 +1098,7 @@ do
   local RaidUnits = {};
   function Commons.FriendlyUnits(ExcludePlayer, maxRaid)
     PartyUnits = {}
-    local raidunits = maxRaid or 30
+    local raidunits = maxRaid or 40
     if #PartyUnits == 0 then
       if ExcludePlayer then
         --Skipping player on friendly units
@@ -1131,8 +1131,8 @@ end
 do
   Commons.DispellableDebuffs = {};
   -- Get dispellable friendly units.
-  function Commons.DispellableFriendlyUnits(maxRaid)
-    local FriendlyUnits = Commons.FriendlyUnits(false,maxRaid);
+  function Commons.DispellableFriendlyUnits(maxRaid, excludePlayer)
+    local FriendlyUnits = Commons.FriendlyUnits(excludePlayer,maxRaid);
     local DispellableUnits = {};
     for i = 1, #FriendlyUnits do
       local DispellableUnit = FriendlyUnits[i];
@@ -1144,8 +1144,8 @@ do
     end
     return DispellableUnits;
   end
-  function Commons.DispellableFriendlyUnit(maxRaid)
-    local DispellableFriendlyUnits = Commons.DispellableFriendlyUnits(maxRaid);
+  function Commons.DispellableFriendlyUnit(maxRaid,excludePlayer)
+    local DispellableFriendlyUnits = Commons.DispellableFriendlyUnits(maxRaid,excludePlayer);
     local DispellableFriendlyUnitsCount = #DispellableFriendlyUnits;
     if DispellableFriendlyUnitsCount > 0 then
       for i = 1, DispellableFriendlyUnitsCount do
@@ -1182,14 +1182,15 @@ do
 end
 
 -- Get friendly unit with a heal absorb
-function Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid)
+function Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid, FriendlySpell)
   if not Range then Range = 40; end
+
   local AbsorbUnit;
   local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
     if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
-      if FriendlyUnit and FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
+      if FriendlyUnit and FriendlyUnit:Exists() and (FriendlyUnit:IsInRange(Range) or FriendlyUnit:IsSpellInRange(FriendlySpell)) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
         if FriendlyUnit:HasHealAbsorb() > 100000 then
           AbsorbUnit = FriendlyUnit;
         end
@@ -1200,13 +1201,14 @@ function Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid)
 end
 
 -- Get named friendly unit.
-function Commons.NamedUnit(Range, Name, maxRaid)
+function Commons.NamedUnit(Range, Name, maxRaid, FriendlySpell)
   if not Range then Range = 40; end
+
   local NamedUnit;
   local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
-    if FriendlyUnit and FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
+    if FriendlyUnit and FriendlyUnit:Exists() and (FriendlyUnit:IsInRange(Range) or FriendlyUnit:IsSpellInRange(FriendlySpell)) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
       if FriendlyUnit:Name() == Name then
         NamedUnit = FriendlyUnit;
       end
@@ -1216,14 +1218,15 @@ function Commons.NamedUnit(Range, Name, maxRaid)
 end
 
 -- Get lowest friendly unit.
-function Commons.LowestFriendlyUnit(Range, Role, maxRaid)
+function Commons.LowestFriendlyUnit(Range, Role, maxRaid, FriendlySpell)
   if not Range then Range = 40; end
+
   local LowestUnit;
   local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
     if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
-      if FriendlyUnit and FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
+      if FriendlyUnit and FriendlyUnit:Exists() and (FriendlyUnit:IsInRange(Range) or FriendlyUnit:IsSpellInRange(FriendlySpell)) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
         if (not LowestUnit) or FriendlyUnit:HealthPercentage() < LowestUnit:HealthPercentage() then
           LowestUnit = FriendlyUnit;
         end
@@ -1234,14 +1237,15 @@ function Commons.LowestFriendlyUnit(Range, Role, maxRaid)
 end
 
 -- Get lowest friendly unit with Buff's remaining time under Time
-function Commons.LowestFriendlyUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid)
+function Commons.LowestFriendlyUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid, FriendlySpell)
   if not Range then Range = 40; end
+
   local LowestUnit;
   local FriendlyUnits = Commons.FriendlyUnits(ExcludePlayer, maxRaid);
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
     if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
-      if FriendlyUnit and (FriendlyUnit:BuffDown(Buff) or FriendlyUnit:BuffRemains(Buff) < Time) and FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
+      if FriendlyUnit and (FriendlyUnit:BuffDown(Buff) or FriendlyUnit:BuffRemains(Buff) < Time) and FriendlyUnit:Exists() and (FriendlyUnit:IsInRange(Range) or FriendlyUnit:IsSpellInRange(FriendlySpell)) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
         if (not LowestUnit) or FriendlyUnit:HealthPercentage() < LowestUnit:HealthPercentage() then
           LowestUnit = FriendlyUnit;
         end
@@ -1252,13 +1256,14 @@ function Commons.LowestFriendlyUnitRefreshableBuff(Buff, Time, Range, Role, Excl
 end
 
 -- Get friendly units count below health percentage.
-function Commons.FriendlyUnitsBelowHealthPercentageCount(HealthPercentage, maxRaid, Range)
+function Commons.FriendlyUnitsBelowHealthPercentageCount(HealthPercentage, maxRaid, Range, FriendlySpell)
   if not Range then Range = 40; end
+
   local Count = 0;
   local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
-    if FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and not FriendlyUnit:IsDeadOrGhost() then
+    if FriendlyUnit:Exists() and (FriendlyUnit:IsInRange(Range) or FriendlyUnit:IsSpellInRange(FriendlySpell)) and not FriendlyUnit:IsDeadOrGhost() then
       if FriendlyUnit:HealthPercentage() <= HealthPercentage then
         Count = Count + 1;
       end
@@ -1299,14 +1304,15 @@ function Commons.FriendlyUnitsWithBuffCount(Buff, OnlyTanks, OnlyNonTanks, maxRa
 end
 
 -- Get friendly units with a debuff from a list
-function Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid)
+function Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell)
   local UnitsWithDebuff = {}
   if not Range then Range = 40; end
+
   local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
   local j = 1
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
-    if FriendlyUnit:Exists() and FriendlyUnit:IsInRange(Range) and not FriendlyUnit:IsDeadOrGhost() then
+    if FriendlyUnit:Exists() and (FriendlyUnit:IsInRange(Range) or FriendlyUnit:IsSpellInRange(FriendlySpell)) and not FriendlyUnit:IsDeadOrGhost() then
       if Commons.UnitHasDebuffFromList(FriendlyUnit, DebuffList) then
         UnitsWithDebuff[j] = FriendlyUnits[i]
         j = j+1
@@ -1377,10 +1383,11 @@ end
 
 Commons.LastFocusSwap = 0
 -- Focus Specified Unit
-function Commons.FocusSpecifiedUnit(UnitToFocus, Range)
+function Commons.FocusSpecifiedUnit(UnitToFocus, Range, FriendlySpell)
   local cycleDelay = 800
   if not Range then Range = 40; end
-  if UnitToFocus ~= nil and (Focus == nil or not Focus:Exists() or UnitToFocus:GUID() ~= Focus:GUID()) then
+
+  if UnitToFocus ~= nil and (Focus == nil or not Focus:Exists() or UnitToFocus:GUID() ~= Focus:GUID()) and UnitToFocus:IsSpellInRange(FriendlySpell) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(UnitToFocus:ID())
     if (GetTime() - Commons.LastFocusSwap)*1000 >= cycleDelay then
       Commons.LastFocusSwap = GetTime()
@@ -1412,12 +1419,13 @@ function Commons.FocusSpecifiedUnit(UnitToFocus, Range)
 end
 
 -- Focus Unit With a Debuff From a List
-function Commons.FocusUnitWithDebuffFromList(DebuffList, Range, maxRaid)
+function Commons.FocusUnitWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell)
   local cycleDelay = 800
   if not Range then Range = 40; end
+
   local NewFocusUnit = nil
-  if Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid) then
-    NewFocusUnit = Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid)[1]
+  if Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell) then
+    NewFocusUnit = Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell)[1]
   end
   if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(NewFocusUnit:ID())
@@ -1447,8 +1455,9 @@ function Commons.FocusUnitWithDebuffFromList(DebuffList, Range, maxRaid)
 end
 
 -- Get Focus Unit
-function Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid)
+function Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid, FriendlySpell)
   if not Range then Range = 40; end
+
   if Commons.TargetIsValidHealableNpc() then return Target; end
   if Commons.IsSoloMode() then
      return Player; end
@@ -1461,15 +1470,16 @@ function Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid)
   end
   --local LowestAbsorbUnit = Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid);
   --if LowestAbsorbUnit then return LowestAbsorbUnit; end
-  local LowestFriendlyUnit = Commons.LowestFriendlyUnit(Range, Role, maxRaid);
+  local LowestFriendlyUnit = Commons.LowestFriendlyUnit(Range, Role, maxRaid, FriendlySpell);
   if LowestFriendlyUnit then return LowestFriendlyUnit; end
 end
 
 -- Focus Unit
-function Commons.FocusUnit(IncludeDispellableUnits, Macros, Range, Role, maxRaid)
+function Commons.FocusUnit(IncludeDispellableUnits, Macros, Range, Role, maxRaid, FriendlySpell)
   local cycleDelay = 800
   if not Range then Range = 40; end
-  local NewFocusUnit = Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid);
+
+  local NewFocusUnit = Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid, FriendlySpell);
   if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(NewFocusUnit:ID())
     if (GetTime() - Commons.LastFocusSwap)*1000 >= cycleDelay then
@@ -1502,19 +1512,21 @@ function Commons.FocusUnit(IncludeDispellableUnits, Macros, Range, Role, maxRaid
 end
 
 -- Get Focus Unit With Buff Remaining less than Time
-function Commons.GetFocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid)
+function Commons.GetFocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid, FriendlySpell)
   if not Range then Range = 40; end
+
   if Commons.TargetIsValidHealableNpc() then return Target; end
   if Commons.IsSoloMode() then return Player; end
-  local LowestFriendlyUnit = Commons.LowestFriendlyUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid);
+  local LowestFriendlyUnit = Commons.LowestFriendlyUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid, FriendlySpell);
   if LowestFriendlyUnit then return LowestFriendlyUnit; end
 end
 
 -- Focus Unit With Buff Remaining less than Time
-function Commons.FocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid)
+function Commons.FocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid, FriendlySpell)
   local cycleDelay = 800
   if not Range then Range = 40; end
-  local NewFocusUnit = Commons.GetFocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid);
+
+  local NewFocusUnit = Commons.GetFocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer, maxRaid, FriendlySpell);
   if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(NewFocusUnit:ID())
     if (GetTime() - Commons.LastFocusSwap)*1000 >= cycleDelay then
@@ -1550,11 +1562,11 @@ function Commons.IsTankBelowHealthPercentage(HPSetting, maxRaid)
 end
 
 -- Settings Utils
-function Commons.AreUnitsBelowHealthPercentage(HPSetting, MinPlayersSetting)
+function Commons.AreUnitsBelowHealthPercentage(HPSetting, MinPlayersSetting ,FriendlySpell)
   if Commons.IsSoloMode() or (Player:IsInParty() and (not Player:IsInRaid())) then
-    return Commons.FriendlyUnitsBelowHealthPercentageCount(HPSetting) >= MinPlayersSetting
+    return Commons.FriendlyUnitsBelowHealthPercentageCount(HPSetting,nil,nil,FriendlySpell) >= MinPlayersSetting
   elseif Player:IsInRaid() then
-    return Commons.FriendlyUnitsBelowHealthPercentageCount(HPSetting) >= MinPlayersSetting
+    return Commons.FriendlyUnitsBelowHealthPercentageCount(HPSetting,nil,nil,FriendlySpell) >= MinPlayersSetting
   end
 end
 
