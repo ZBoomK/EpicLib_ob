@@ -1552,8 +1552,8 @@ function Commons.FocusUnitRefreshableBuff(Buff, Time, Range, Role, ExcludePlayer
   end
 end
 
-function Commons.IsTankBelowHealthPercentage(HPSetting, maxRaid)
-    local lowestUnit = Commons.LowestFriendlyUnit(40, "TANK", maxRaid);
+function Commons.IsTankBelowHealthPercentage(HPSetting, maxRaid, FriendlySpell)
+    local lowestUnit = Commons.LowestFriendlyUnit(40, "TANK", maxRaid, FriendlySpell);
     if lowestUnit then
       return lowestUnit:HealthPercentage() < HPSetting
     else
