@@ -1079,6 +1079,7 @@ end
 
 --Debuffs the Player can dispell
 function Commons.UnitHasDispellableDebuffByPlayer(U)
+  if not U then return false; end
   for i= 1,21 do
     local b = UnitAura(U:ID(),i,"HARMFUL|RAID")
     if b ~= nil then

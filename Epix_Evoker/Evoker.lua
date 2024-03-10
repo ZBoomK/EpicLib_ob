@@ -4,15 +4,15 @@ local function v2(v4, ...)
 	local v5 = 0 - 0;
 	local v6;
 	while true do
-		if (((5057 - 1233) >= (650 - (187 + 54))) and (v5 == (781 - (162 + 618)))) then
+		if ((v5 == (1 - 0)) or ((5028 - (71 + 3)) == (2856 + 47))) then
 			return v6(...);
 		end
-		if (((1463 + 624) == (1391 + 696)) and (v5 == (0 - 0))) then
+		if (((7547 - 4463) > (52 - 12)) and (v5 == (241 - (187 + 54)))) then
 			v6 = v0[v4];
-			if (not v6 or ((5722 - 2318) > (353 + 4150))) then
+			if (((4192 - (162 + 618)) > (574 + 245)) and not v6) then
 				return v1(v4, ...);
 			end
-			v5 = 1637 - (1373 + 263);
+			v5 = 1 + 0;
 		end
 	end
 end
@@ -31,356 +31,375 @@ v0["Epix_Evoker_Evoker.lua"] = function(...)
 	local v19 = v10.Utils.MergeTableByKey;
 	local v20 = EpicLib;
 	local v21 = v20.Macro;
-	if (not v16.Evoker or ((4506 - (451 + 549)) <= (414 + 895))) then
+	if (((6743 - 3581) <= (5784 - 2343)) and not v16.Evoker) then
 		v16.Evoker = {};
 	end
-	v16.Evoker.Commons = {TailSwipe=v16(574209 - 205239, nil, 1 - 0),WingBuffet=v16(358598 - (746 + 638), nil, 1 + 1),AzureStrike=v16(551089 - 188120, nil, 344 - (218 + 123)),BlessingoftheBronze=v16(365923 - (1535 + 46), nil, 4 + 0),DeepBreath=v16(51689 + 305521, nil, 565 - (306 + 254)),Disintegrate=v16(22101 + 334894, nil, 11 - 5),EmeraldBlossom=v16(357380 - (899 + 568), nil, 5 + 2),FireBreath=v17(232 - 136, 357811 - (268 + 335), 382556 - (60 + 230)),LivingFlame=v16(362041 - (426 + 146), nil, 1 + 7),OppressingRoar=v16(373504 - (282 + 1174), nil, 913 - (569 + 242)),Expunge=v16(1053102 - 687517, nil, 6 + 97),Sleepwalk=v16(361830 - (706 + 318), nil, 1355 - (721 + 530)),RenewingBlaze=v16(375619 - (945 + 326), nil, 262 - 157),Hover=v16(318793 + 39474, nil, 806 - (271 + 429)),AncientFlame=v16(339874 + 30116, nil, 1509 - (1408 + 92)),BlastFurnace=v16(376596 - (461 + 625), nil, 1298 - (993 + 295)),LeapingFlames=v16(19210 + 350729, nil, 1182 - (418 + 753)),ObsidianScales=v16(138599 + 225317, nil, 2 + 10),ScarletAdaptation=v16(108941 + 263528, nil, 4 + 9),SourceofMagic=v16(369988 - (406 + 123), nil, 1783 - (1749 + 20)),TipTheScales=v16(88017 + 282536, nil, 1337 - (1249 + 73)),Unravel=v16(131445 + 236987, nil, 1161 - (466 + 679)),VerdantEmbrace=v16(868362 - 507367, nil, 48 - 31),AncientFlameBuff=v16(377483 - (106 + 1794), nil, 6 + 12),BlessingoftheBronzeBuff=v16(96498 + 285250, nil, 55 - 36),FireBreathDebuff=v16(967300 - 610091, nil, 134 - (4 + 110)),HoverBuff=v16(358851 - (57 + 527), nil, 1448 - (41 + 1386)),LeapingFlamesBuff=v16(371004 - (17 + 86), nil, 15 + 7),PowerInfusionBuff=v16(22434 - 12374, nil, 66 - 43),ScarletAdaptationBuff=v16(372636 - (122 + 44), nil, 40 - 16),SourceofMagicBuff=v16(1225669 - 856210, nil, 21 + 4),SpoilsofNeltharusCrit=v16(55240 + 326714, nil, 52 - 26),SpoilsofNeltharusHaste=v16(382020 - (30 + 35), nil, 19 + 8),SpoilsofNeltharusMastery=v16(383213 - (1043 + 214), nil, 105 - 77),SpoilsofNeltharusVers=v16(383169 - (323 + 889), nil, 77 - 48),Quell=v16(351918 - (361 + 219), nil, 350 - (53 + 267)),Pool=v16(225900 + 774010, nil, 444 - (15 + 398))};
-	v16.Evoker.Augmentation = v19(v16.Evoker.Commons, {BlackAttunement=v16(404246 - (18 + 964), nil, 120 - 88),BronzeAttunement=v16(233476 + 169789, nil, 21 + 12),BlisteringScales=v16(361677 - (20 + 830), nil, 27 + 7),BreathofEons=v16(403757 - (116 + 10), nil, 3 + 32),DreamofSpring=v16(415707 - (542 + 196), nil, 76 - 40),EbonMight=v16(115391 + 279761, nil, 19 + 18),Eruption=v16(142245 + 252915, nil, 99 - 61),FontofMagic=v16(1046238 - 638155, nil, 1590 - (1126 + 425)),InterwovenThreads=v16(413118 - (118 + 287), nil, 156 - 116),Prescience=v16(410432 - (118 + 1003), nil, 119 - 78),PupilofAlexstrasza=v16(408191 - (142 + 235), nil, 190 - 148),TimeSkip=v16(88119 + 316858, nil, 1020 - (553 + 424)),Upheaval=v16(771684 - 363592, nil, 39 + 5),BlackAttunementBuff=v16(400031 + 3233, nil, 27 + 18),BlisteringScalesBuff=v16(153384 + 207443, nil, 27 + 19),BronzeAttunementBuff=v16(874236 - 470971, nil, 130 - 83),EbonMightOtherBuff=v16(884761 - 489609, nil, 14 + 34),EbonMightSelfBuff=v16(1910330 - 1515034, nil, 802 - (239 + 514)),EssenceBurstBuff=v16(137769 + 254499, nil, 1379 - (797 + 532)),PrescienceBuff=v16(297978 + 112111, nil, 85 + 165),TemporalWoundDebuff=v16(962979 - 553419, nil, 1253 - (373 + 829))});
-	v16.Evoker.Devastation = v19(v16.Evoker.Commons, {Animosity=v16(376528 - (476 + 255), nil, 1182 - (369 + 761)),ArcaneVigor=v16(223489 + 162853, nil, 96 - 43),Burnout=v16(712144 - 336343, nil, 292 - (64 + 174)),Catalyze=v16(55016 + 331267, nil, 81 - 26),Causality=v16(376113 - (144 + 192), nil, 272 - (42 + 174)),ChargedBlast=v16(278299 + 92156, nil, 48 + 9),Dragonrage=v16(159353 + 215734, nil, 1562 - (363 + 1141)),EngulfingBlaze=v16(372417 - (1183 + 397), nil, 179 - 120),EssenceAttunement=v16(275422 + 100300, nil, 45 + 15),EternitySurge=v17(2072 - (1913 + 62), 226137 + 132936, 1012358 - 629947),EternitysSpan=v16(377690 - (565 + 1368), nil, 229 - 168),EventHorizon=v16(412825 - (1477 + 184), nil, 83 - 21),EverburningFlame=v16(345512 + 25307, nil, 919 - (564 + 292)),EyeofInfinity=v16(637329 - 267954, nil, 192 - 128),FeedtheFlames=v16(370150 - (244 + 60), nil, 50 + 15),Firestorm=v16(369323 - (41 + 435), nil, 1067 - (938 + 63)),FontofMagic=v16(289007 + 86776, nil, 1192 - (936 + 189)),ImminentDestruction=v16(122025 + 248756, nil, 1681 - (1565 + 48)),Pyre=v16(220656 + 136555, nil, 1207 - (782 + 356)),RagingInferno=v16(405926 - (176 + 91), nil, 182 - 112),RubyEmbers=v16(539321 - 173384, nil, 1163 - (975 + 117)),Scintillation=v16(372696 - (157 + 1718), nil, 59 + 13),ShatteringStar=v16(1315076 - 944624, nil, 249 - 176),Snapfire=v16(371801 - (697 + 321), nil, 201 - 127),Tyranny=v16(798479 - 421591, nil, 172 - 97),Volatility=v16(143666 + 225423, nil, 142 - 66),BlazingShardsBuff=v16(1098684 - 688836, nil, 1304 - (322 + 905)),BurnoutBuff=v16(376413 - (602 + 9), nil, 1267 - (449 + 740)),ChargedBlastBuff=v16(371326 - (826 + 46), nil, 1026 - (245 + 702)),EmeraldTranceBuff=v16(1340312 - 916157, nil, XXXXX),EssenceBurstBuff=v16(115607 + 244011, nil, 1978 - (260 + 1638)),IridescenceBlueBuff=v17(538 - (382 + 58), 1239595 - 853196, 331859 + 67511),IridescenceRedBuff=v16(798475 - 412122, nil, 240 - 159),LimitlessPotentialBuff=v16(395607 - (902 + 303), nil, 179 - 97),PowerSwellBuff=v16(907644 - 530794, nil, 8 + 75),SnapfireBuff=v16(372508 - (1121 + 569), nil, 298 - (22 + 192)),LivingFlameDebuff=v16(362183 - (483 + 200), nil, 1548 - (1404 + 59))});
-	v16.Evoker.Preservation = v19(v16.Evoker.Commons, {DreamBreath=v17(270 - 171, 478388 - 122452, 383379 - (468 + 297)),DreamFlight=v16(360378 - (334 + 228), nil, 289 - 203),Echo=v16(844514 - 480171, nil, 157 - 70),MassReturn=v16(102562 + 258616, nil, 324 - (141 + 95)),Spiritbloom=v17(99 + 1, 945242 - 578016, 920052 - 537321),Stasis=v16(86794 + 283743, nil, 243 - 154),StasisReactivate=v16(260504 + 110060, nil, 47 + 43),TemporalAnomaly=v16(526487 - 152626, nil, 54 + 37),TimeDilation=v16(357333 - (92 + 71), nil, 46 + 46),Reversion=v17(169 - 68, 366920 - (574 + 191), 303026 + 64338),Rewind=v16(910763 - 547229, nil, 48 + 45),FontofMagic=v16(376632 - (254 + 595), nil, 193 - (55 + 71)),CauterizingFlame=v16(493036 - 118785, nil, 2733 - (573 + 1217)),EssenceBurstBuff=v16(1022744 - 653445, nil, 8 + 86),StasisBuff=v16(597122 - 226560, nil, 1034 - (714 + 225))});
-	if (((8635 - 5680) == (4119 - 1164)) and not v18.Evoker) then
+	v16.Evoker.Commons = {TailSwipe=v16(28850 + 340120, nil, 1637 - (1373 + 263)),WingBuffet=v16(358214 - (451 + 549), nil, 1 + 1),AzureStrike=v16(564870 - 201901, nil, 4 - 1),BlessingoftheBronze=v16(365726 - (746 + 638), nil, 2 + 2),DeepBreath=v16(542346 - 185136, nil, 346 - (218 + 123)),Disintegrate=v16(358576 - (1535 + 46), nil, 6 + 0),EmeraldBlossom=v16(51502 + 304411, nil, 567 - (306 + 254)),FireBreath=v17(6 + 90, 701035 - 343827, 383733 - (899 + 568)),LivingFlame=v16(237594 + 123875, nil, 19 - 11),OppressingRoar=v16(372651 - (268 + 335), nil, 392 - (60 + 230)),Expunge=v16(366157 - (426 + 146), nil, 13 + 90),Sleepwalk=v16(362262 - (282 + 1174), nil, 915 - (569 + 242)),RenewingBlaze=v16(1078344 - 703996, nil, 7 + 98),Hover=v16(359291 - (706 + 318), nil, 1357 - (721 + 530)),AncientFlame=v16(371261 - (945 + 326), nil, 22 - 13),BlastFurnace=v16(334136 + 41374, nil, 710 - (271 + 429)),LeapingFlames=v16(339827 + 30112, nil, 1511 - (1408 + 92)),ObsidianScales=v16(365002 - (461 + 625), nil, 1300 - (993 + 295)),ScarletAdaptation=v16(19341 + 353128, nil, 1184 - (418 + 753)),SourceofMagic=v16(140710 + 228749, nil, 2 + 12),TipTheScales=v16(108381 + 262172, nil, 4 + 11),Unravel=v16(368961 - (406 + 123), nil, 1785 - (1749 + 20)),VerdantEmbrace=v16(85746 + 275249, nil, 1339 - (1249 + 73)),AncientFlameBuff=v16(133996 + 241587, nil, 1163 - (466 + 679)),BlessingoftheBronzeBuff=v16(918283 - 536535, nil, 54 - 35),FireBreathDebuff=v16(359109 - (106 + 1794), nil, 7 + 13),HoverBuff=v16(90563 + 267704, nil, 61 - 40),LeapingFlamesBuff=v16(1004377 - 633476, nil, 136 - (4 + 110)),PowerInfusionBuff=v16(10644 - (57 + 527), nil, 1450 - (41 + 1386)),ScarletAdaptationBuff=v16(372573 - (17 + 86), nil, 17 + 7),SourceofMagicBuff=v16(823935 - 454476, nil, 72 - 47),SpoilsofNeltharusCrit=v16(382120 - (122 + 44), nil, 44 - 18),SpoilsofNeltharusHaste=v16(1267124 - 885169, nil, 22 + 5),SpoilsofNeltharusMastery=v16(55240 + 326716, nil, 56 - 28),SpoilsofNeltharusVers=v16(382022 - (30 + 35), nil, 20 + 9),Quell=v16(352595 - (1043 + 214), nil, 113 - 83),Pool=v16(1001122 - (323 + 889), nil, 83 - 52)};
+	v16.Evoker.Augmentation = v19(v16.Evoker.Commons, {BlackAttunement=v16(403844 - (361 + 219), nil, 352 - (53 + 267)),BronzeAttunement=v16(91106 + 312159, nil, 446 - (15 + 398)),BlisteringScales=v16(361809 - (18 + 964), nil, 127 - 93),BreathofEons=v16(233688 + 169943, nil, 23 + 12),DreamofSpring=v16(415819 - (20 + 830), nil, 29 + 7),EbonMight=v16(395278 - (116 + 10), nil, 3 + 34),Eruption=v16(395898 - (542 + 196), nil, 81 - 43),FontofMagic=v16(119167 + 288916, nil, 20 + 19),InterwovenThreads=v16(148563 + 264150, nil, 105 - 65),Prescience=v16(1049387 - 640076, nil, 1592 - (1126 + 425)),PupilofAlexstrasza=v16(408219 - (118 + 287), nil, 164 - 122),TimeSkip=v16(406098 - (118 + 1003), nil, 125 - 82),Upheaval=v16(408469 - (142 + 235), nil, 199 - 155),BlackAttunementBuff=v16(87746 + 315518, nil, 1022 - (553 + 424)),BlisteringScalesBuff=v16(682308 - 321481, nil, 41 + 5),BronzeAttunementBuff=v16(400032 + 3233, nil, 28 + 19),EbonMightOtherBuff=v16(167976 + 227176, nil, 28 + 20),EbonMightSelfBuff=v16(856959 - 461663, nil, 136 - 87),EssenceBurstBuff=v16(878304 - 486036, nil, 15 + 35),PrescienceBuff=v16(1981820 - 1571731, nil, 1003 - (239 + 514)),TemporalWoundDebuff=v16(143842 + 265718, nil, 1380 - (797 + 532))});
+	v16.Evoker.Devastation = v19(v16.Evoker.Commons, {Animosity=v16(273060 + 102737, nil, 18 + 34),ArcaneVigor=v16(908388 - 522046, nil, 1255 - (373 + 829)),Burnout=v16(376532 - (476 + 255), nil, 1184 - (369 + 761)),Catalyze=v16(223454 + 162829, nil, 99 - 44),Causality=v16(712099 - 336322, nil, 294 - (64 + 174)),ChargedBlast=v16(52762 + 317693, nil, 84 - 27),Dragonrage=v16(375423 - (144 + 192), nil, 274 - (42 + 174)),EngulfingBlaze=v16(278586 + 92251, nil, 49 + 10),EssenceAttunement=v16(159623 + 216099, nil, 1564 - (363 + 1141)),EternitySurge=v17(1677 - (1183 + 397), 1093141 - 734068, 280325 + 102086),EternitysSpan=v16(280863 + 94894, nil, 2036 - (1913 + 62)),EventHorizon=v16(258943 + 152221, nil, 163 - 101),EverburningFlame=v16(372752 - (565 + 1368), nil, 236 - 173),EyeofInfinity=v16(371036 - (1477 + 184), nil, 87 - 23),FeedtheFlames=v16(344605 + 25241, nil, 921 - (564 + 292)),Firestorm=v16(636418 - 267571, nil, 198 - 132),FontofMagic=v16(376087 - (244 + 60), nil, 52 + 15),ImminentDestruction=v16(371257 - (41 + 435), nil, 1069 - (938 + 63)),Pyre=v16(274723 + 82488, nil, 1194 - (936 + 189)),RagingInferno=v16(133503 + 272156, nil, 1683 - (1565 + 48)),RubyEmbers=v16(226046 + 139891, nil, 1209 - (782 + 356)),Scintillation=v16(371088 - (176 + 91), nil, 187 - 115),ShatteringStar=v16(545975 - 175523, nil, 1165 - (975 + 117)),Snapfire=v16(372658 - (157 + 1718), nil, 61 + 13),Tyranny=v16(1337923 - 961035, nil, 256 - 181),Volatility=v16(370107 - (697 + 321), nil, 206 - 130),BlazingShardsBuff=v16(868308 - 458460, nil, 177 - 100),BurnoutBuff=v16(146279 + 229523, nil, 145 - 67),ChargedBlastBuff=v16(993080 - 622626, nil, 1306 - (322 + 905)),EmeraldTranceBuff=v16(424766 - (602 + 9), nil, 1319 - (449 + 740)),EssenceBurstBuff=v16(360490 - (826 + 46), nil, 1027 - (245 + 702)),IridescenceBlueBuff=v17(309 - 211, 124216 + 262183, 401268 - (260 + 1638)),IridescenceRedBuff=v16(386793 - (382 + 58), nil, 259 - 178),LimitlessPotentialBuff=v16(327731 + 66671, nil, 169 - 87),PowerSwellBuff=v16(1120226 - 743376, nil, 1288 - (902 + 303)),SnapfireBuff=v16(814183 - 443365, nil, 202 - 118),LivingFlameDebuff=v16(31065 + 330435, nil, 1775 - (1121 + 569))});
+	v16.Evoker.Preservation = v19(v16.Evoker.Commons, {DreamBreath=v17(313 - (22 + 192), 356619 - (483 + 200), 384077 - (1404 + 59)),DreamFlight=v16(984722 - 624906, nil, 115 - 29),Echo=v16(365108 - (468 + 297), nil, 649 - (334 + 228)),MassReturn=v16(1218248 - 857070, nil, 203 - 115),Spiritbloom=v17(181 - 81, 104279 + 262947, 382967 - (141 + 95)),Stasis=v16(363982 + 6555, nil, 228 - 139),StasisReactivate=v16(890803 - 520239, nil, 22 + 68),TemporalAnomaly=v16(1024334 - 650473, nil, 64 + 27),TimeDilation=v16(185988 + 171182, nil, 128 - 36),Reversion=v17(60 + 41, 366318 - (92 + 71), 181458 + 185906),Rewind=v16(611208 - 247674, nil, 858 - (574 + 191)),FontofMagic=v16(309970 + 65813, nil, 167 - 100),CauterizingFlame=v16(191164 + 183087, nil, 1792 - (254 + 595)),EssenceBurstBuff=v16(369425 - (55 + 71), nil, 123 - 29),StasisBuff=v16(372352 - (573 + 1217), nil, 263 - 168)});
+	if (((359 + 4347) > (7136 - 2707)) and not v18.Evoker) then
 		v18.Evoker = {};
 	end
-	v18.Evoker.Commons = {Healthstone=v18(597 + 4915),CrimsonAspirantsBadgeofFerocity=v18(291687 - 90238, {(61 - (25 + 23)),(1900 - (927 + 959))}),BelorrelostheSuncaller=v18(698355 - 491183, {(24 - 11),(33 - 19)}),DragonfireBombDispenser=v18(202895 - (175 + 110), {(64 - 51),(39 - 25)}),NymuesUnravelingSpindle=v18(150863 + 57752, {(10 + 3),(13 + 1)}),Dreambinder=v18(209149 - (43 + 490), {(61 - 45)}),Iridal=v18(209180 - (240 + 619), {(25 - 9)}),KharnalexTheFirstLight=v18(12940 + 182579),SpoilsofNeltharus=v18(195517 - (1344 + 400), {(11 + 2),(59 - 45)}),ShadowedOrbofTorment=v18(602147 - 415719, {(419 - (183 + 223)),(10 + 4)}),RefreshingHealingPotion=v18(68874 + 122506)};
+	v18.Evoker.Commons = {Healthstone=v18(6451 - (714 + 225)),CrimsonAspirantsBadgeofFerocity=v18(588714 - 387265, {(2 + 11),(820 - (118 + 688))}),BelorrelostheSuncaller=v18(207220 - (25 + 23), {(1899 - (927 + 959)),(746 - (16 + 716))}),DragonfireBombDispenser=v18(391119 - 188509, {(31 - 18),(35 - 21)}),NymuesUnravelingSpindle=v18(1028941 - 820326, {(36 - 23),(1075 - (810 + 251))}),Dreambinder=v18(144775 + 63841, {(15 + 1)}),Iridal=v18(208854 - (43 + 490), {(61 - 45)}),KharnalexTheFirstLight=v18(196378 - (240 + 619)),SpoilsofNeltharus=v18(46760 + 147013, {(1 + 12),(419 - (255 + 150))}),ShadowedOrbofTorment=v18(146845 + 39583, {(55 - 42),(1753 - (404 + 1335))}),RefreshingHealingPotion=v18(191786 - (183 + 223))};
 	v18.Evoker.Devastation = v19(v18.Evoker.Commons, {});
 	v18.Evoker.Preservation = v19(v18.Evoker.Commons, {});
 	v18.Evoker.Augmentation = v19(v18.Evoker.Commons, {});
-	if (not v21.Evoker or ((3240 - (10 + 327)) == (1042 + 453))) then
+	if (((3472 - 618) < (2714 + 1381)) and not v21.Evoker) then
 		v21.Evoker = {};
 	end
-	v21.Evoker.Commons = {Healthstone=v21(375 - (118 + 220)),AzureStrikeMouseover=v21(13 + 25),DeepBreathCursor=v21(488 - (108 + 341)),CauterizingFlameFocus=v21(18 + 22),EmeraldBlossomFocus=v21(173 - 132),FireBreathMacro=v21(1535 - (711 + 782)),LivingFlameFocus=v21(82 - 39),QuellMouseover=v21(513 - (270 + 199)),VerdantEmbraceFocus=v21(4 + 6),RefreshingHealingPotion=v21(1852 - (580 + 1239)),ExpungeMouseover=v21(100 - 66),ExpungeFocus=v21(34 + 1),SleepwalkMouseover=v21(2 + 34),VerdantEmbracePlayer=v21(13 + 16),EmeraldBlossomPlayer=v21(80 - 49),SourceofMagicFocus=v21(14 + 8),SourceofMagicName=v21(1190 - (645 + 522))};
-	v21.Evoker.Devastation = v19(v21.Evoker.Commons, {EternitySurgeMacro=v21(1801 - (1010 + 780))});
-	v21.Evoker.Preservation = v19(v21.Evoker.Commons, {DreamBreathMacro=v21(12 + 0),DreamFlightCursor=v21(61 - 48),EchoFocus=v21(41 - 27),SpiritbloomFocus=v21(1851 - (1045 + 791)),TimeDilationFocus=v21(40 - 24),TipTheScalesDreamBreath=v21(25 - 8),TipTheScalesSpiritbloom=v21(523 - (351 + 154)),ReversionFocus=v21(1593 - (1281 + 293)),EchoMouseover=v21(312 - (28 + 238)),LivingFlameMouseover=v21(104 - 57)});
-	v21.Evoker.Augmentation = v19(v21.Evoker.Commons, {BlisteringScalesFocus=v21(1579 - (1381 + 178)),BlisteringScalesName=v21(20 + 1),PrescienceName1=v21(20 + 4),PrescienceName2=v21(11 + 14),PrescienceName3=v21(89 - 63),PrescienceName4=v21(14 + 13),PrescienceFocus=v21(498 - (381 + 89)),BreathofEonsCursor=v21(40 + 5)});
+	v21.Evoker.Commons = {Healthstone=v21(14 + 23),AzureStrikeMouseover=v21(375 - (10 + 327)),DeepBreathCursor=v21(28 + 11),CauterizingFlameFocus=v21(378 - (118 + 220)),EmeraldBlossomFocus=v21(14 + 27),FireBreathMacro=v21(491 - (108 + 341)),LivingFlameFocus=v21(20 + 23),QuellMouseover=v21(185 - 141),VerdantEmbraceFocus=v21(1503 - (711 + 782)),RefreshingHealingPotion=v21(63 - 30),ExpungeMouseover=v21(503 - (270 + 199)),ExpungeFocus=v21(12 + 23),SleepwalkMouseover=v21(1855 - (580 + 1239)),VerdantEmbracePlayer=v21(85 - 56),EmeraldBlossomPlayer=v21(30 + 1),SourceofMagicFocus=v21(1 + 21),SourceofMagicName=v21(11 + 12)};
+	v21.Evoker.Devastation = v19(v21.Evoker.Commons, {EternitySurgeMacro=v21(28 - 17)});
+	v21.Evoker.Preservation = v19(v21.Evoker.Commons, {DreamBreathMacro=v21(8 + 4),DreamFlightCursor=v21(1180 - (645 + 522)),EchoFocus=v21(1804 - (1010 + 780)),SpiritbloomFocus=v21(15 + 0),TimeDilationFocus=v21(76 - 60),TipTheScalesDreamBreath=v21(49 - 32),TipTheScalesSpiritbloom=v21(1854 - (1045 + 791)),ReversionFocus=v21(47 - 28),EchoMouseover=v21(69 - 23),LivingFlameMouseover=v21(552 - (351 + 154))});
+	v21.Evoker.Augmentation = v19(v21.Evoker.Commons, {BlisteringScalesFocus=v21(1594 - (1281 + 293)),BlisteringScalesName=v21(287 - (28 + 238)),PrescienceName1=v21(53 - 29),PrescienceName2=v21(1584 - (1381 + 178)),PrescienceName3=v21(25 + 1),PrescienceName4=v21(22 + 5),PrescienceFocus=v21(12 + 16),BreathofEonsCursor=v21(155 - 110)});
 	v20.Commons.Evoker = {};
 	local v35 = v20.Commons.Evoker;
 	v35.FirestormTracker = {};
 	v10:RegisterForEvent(function(v42, v43, v44)
-		if (((3075 + 1471) >= (3897 - 1622)) and (v43 ~= "player")) then
-			return;
-		end
-		if (((1975 - (1074 + 82)) >= (47 - 25)) and (v44 == "ESSENCE")) then
-			v11.Persistent.Player.LastPowerUpdate = GetTime();
+		local v45 = 0 + 0;
+		while true do
+			if ((v45 == (470 - (381 + 89))) or ((939 + 119) >= (813 + 389))) then
+				if (((6356 - 2645) > (4511 - (1074 + 82))) and (v43 ~= "player")) then
+					return;
+				end
+				if ((v44 == "ESSENCE") or ((1985 - 1079) >= (4013 - (214 + 1570)))) then
+					v11.Persistent.Player.LastPowerUpdate = GetTime();
+				end
+				break;
+			end
 		end
 	end, "UNIT_POWER_UPDATE");
-	v10:RegisterForSelfCombatEvent(function(v45, v45, v45, v45, v45, v45, v45, v46, v45, v45, v45, v47)
-		if (((4946 - (214 + 1570)) == (4617 - (990 + 465))) and (v47 == (152272 + 217102))) then
-			v35.FirestormTracker[v46] = GetTime();
+	v10:RegisterForSelfCombatEvent(function(v46, v46, v46, v46, v46, v46, v46, v47, v46, v46, v46, v48)
+		if (((2743 - (990 + 465)) > (516 + 735)) and (v48 == (160723 + 208651))) then
+			v35.FirestormTracker[v47] = GetTime();
 		end
 	end, "SPELL_DAMAGE");
-	v10:RegisterForCombatEvent(function(v48, v48, v48, v48, v48, v48, v48, v49)
-		if (v35.FirestormTracker[v49] or ((1031 + 1338) > (4307 + 122))) then
-			v35.FirestormTracker[v49] = nil;
+	v10:RegisterForCombatEvent(function(v49, v49, v49, v49, v49, v49, v49, v50)
+		if (v35.FirestormTracker[v50] or ((4389 + 124) < (13191 - 9839))) then
+			v35.FirestormTracker[v50] = nil;
 		end
 	end, "UNIT_DIED", "UNIT_DESTROYED");
 	local v37;
-	v37 = v10.AddCoreOverride("Spell.IsCastable", function(v50, v51, v52, v53, v54, v55)
-		local v56 = true;
-		if (((16115 - 12020) >= (4909 - (1668 + 58))) and v52) then
-			local v138 = 626 - (512 + 114);
-			local v139;
-			while true do
-				if ((v138 == (0 - 0)) or ((7671 - 3960) < (3507 - 2499))) then
-					v139 = v54 or v14;
-					v56 = v139:IsInRange(v52, v53);
-					break;
+	v37 = v10.AddCoreOverride("Spell.IsCastable", function(v51, v52, v53, v54, v55, v56)
+		local v57 = 1726 - (1668 + 58);
+		local v58;
+		local v59;
+		while true do
+			if ((v57 == (627 - (512 + 114))) or ((5383 - 3318) >= (6606 - 3410))) then
+				v59 = v37(v51, v52, v53, v54, v55, v56);
+				if ((v51 == v16.Evoker.Devastation.Firestorm) or ((15226 - 10850) <= (689 + 792))) then
+					return v59 and not v13:IsCasting(v51);
+				elseif ((v51 == v16.Evoker.Devastation.TipTheScales) or ((635 + 2757) >= (4122 + 619))) then
+					return v59 and not v13:BuffUp(v51);
+				else
+					return v59;
 				end
+				break;
+			end
+			if (((11215 - 7890) >= (4148 - (109 + 1885))) and (v57 == (1469 - (1269 + 200)))) then
+				v58 = true;
+				if (v53 or ((2482 - 1187) >= (4048 - (98 + 717)))) then
+					local v144 = 826 - (802 + 24);
+					local v145;
+					while true do
+						if (((7547 - 3170) > (2073 - 431)) and (v144 == (0 + 0))) then
+							v145 = v55 or v14;
+							v58 = v145:IsInRange(v53, v54);
+							break;
+						end
+					end
+				end
+				v57 = 1 + 0;
 			end
 		end
-		local v57 = v37(v50, v51, v52, v53, v54, v55);
-		if ((v50 == v16.Evoker.Devastation.Firestorm) or ((489 + 560) <= (170 + 736))) then
-			return v57 and not v13:IsCasting(v50);
-		elseif (((3924 + 589) > (9194 - 6468)) and (v50 == v16.Evoker.Devastation.TipTheScales)) then
-			return v57 and not v13:BuffUp(v50);
-		else
-			return v57;
-		end
-	end, 3461 - (109 + 1885));
+	end, 241 + 1226);
 	v10.AddCoreOverride("Player.EssenceTimeToMax", function()
-		local v58 = 1469 - (1269 + 200);
-		local v59;
-		local v60;
+		local v60 = 0 + 0;
 		local v61;
 		local v62;
+		local v63;
+		local v64;
 		while true do
-			if ((v58 == (5 - 2)) or ((2296 - (98 + 717)) >= (3484 - (802 + 24)))) then
-				return (v59 * v61) - (GetTime() - v62);
+			if (((13139 - 8416) > (4521 - 3165)) and (v60 == (2 + 1))) then
+				return (v61 * v63) - (GetTime() - v64);
 			end
-			if ((v58 == (0 - 0)) or ((4066 - 846) == (202 + 1162))) then
-				v59 = v13:EssenceDeficit();
-				if ((v59 == (0 + 0)) or ((174 + 880) > (732 + 2660))) then
-					return 0 - 0;
+			if ((v60 == (0 + 0)) or ((3412 + 724) <= (2497 + 936))) then
+				v61 = v13:EssenceDeficit();
+				if (((1982 + 2263) <= (6064 - (797 + 636))) and (v61 == (0 - 0))) then
+					return 1619 - (1427 + 192);
 				end
-				v58 = 3 - 2;
+				v60 = 1 + 0;
 			end
-			if ((v58 == (1 + 1)) or ((276 + 400) >= (1355 + 287))) then
-				v61 = (1 + 0) / v60;
-				v62 = v11.Persistent.Player.LastPowerUpdate;
-				v58 = 2 + 1;
+			if (((9927 - 5651) >= (3519 + 395)) and (v60 == (1 + 1))) then
+				v63 = (327 - (192 + 134)) / v62;
+				v64 = v11.Persistent.Player.LastPowerUpdate;
+				v60 = 1279 - (316 + 960);
 			end
-			if (((5569 - (797 + 636)) > (11638 - 9241)) and (v58 == (1620 - (1427 + 192)))) then
-				v60 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
-				if (not v60 or (v60 < (0.2 + 0)) or ((10062 - 5728) == (3816 + 429))) then
-					v60 = 0.2 + 0;
+			if (((111 + 87) <= (3369 + 996)) and (v60 == (1 + 0))) then
+				v62 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
+				if (((18281 - 13499) > (5227 - (83 + 468))) and (not v62 or (v62 < (1806.2 - (1202 + 604))))) then
+					v62 = 0.2 - 0;
 				end
-				v58 = 328 - (192 + 134);
+				v60 = 2 - 0;
 			end
 		end
-	end, 2743 - (316 + 960));
-	v10.AddCoreOverride("Player.EssenceTimeToX", function(v63)
-		local v64 = 0 + 0;
-		local v65;
-		local v66;
+	end, 4061 - 2594);
+	v10.AddCoreOverride("Player.EssenceTimeToX", function(v65)
+		local v66 = 325 - (45 + 280);
 		local v67;
 		local v68;
+		local v69;
+		local v70;
 		while true do
-			if ((v64 == (1 + 0)) or ((3953 + 323) <= (11587 - 8556))) then
-				v66 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
-				v67 = (552 - (83 + 468)) / v66;
-				v64 = 1808 - (1202 + 604);
+			if (((4695 + 169) > (1920 + 277)) and (v66 == (1 + 1))) then
+				v70 = v11.Persistent.Player.LastPowerUpdate;
+				return ((v65 - v67) * v69) - (GetTime() - v70);
 			end
-			if ((v64 == (0 - 0)) or ((7958 - 3176) <= (3319 - 2120))) then
-				v65 = v13:Essence();
-				if ((v65 >= v63) or ((5189 - (45 + 280)) < (1836 + 66))) then
-					return 0 + 0;
+			if ((v66 == (1 + 0)) or ((651 + 3049) == (4642 - 2135))) then
+				v68 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
+				v69 = (1912 - (340 + 1571)) / v68;
+				v66 = 1 + 1;
+			end
+			if (((6246 - (1733 + 39)) >= (752 - 478)) and (v66 == (1034 - (125 + 909)))) then
+				v67 = v13:Essence();
+				if ((v67 >= v65) or ((3842 - (1096 + 852)) <= (631 + 775))) then
+					return 0 - 0;
 				end
-				v64 = 1 + 0;
-			end
-			if (((2678 + 2161) >= (651 + 3049)) and (v64 == (3 - 1))) then
-				v68 = v11.Persistent.Player.LastPowerUpdate;
-				return ((v63 - v65) * v67) - (GetTime() - v68);
+				v66 = 1 + 0;
 			end
 		end
-	end, 3378 - (340 + 1571));
+	end, 1979 - (409 + 103));
 	v10.AddCoreOverride("Player.EssenceTimeToMax", function()
-		local v69 = 0 + 0;
-		local v70;
-		local v71;
+		local v71 = 236 - (46 + 190);
 		local v72;
 		local v73;
+		local v74;
+		local v75;
 		while true do
-			if ((v69 == (1774 - (1733 + 39))) or ((2953 - 1878) > (2952 - (125 + 909)))) then
-				v72 = (1949 - (1096 + 852)) / v71;
-				v73 = v11.Persistent.Player.LastPowerUpdate;
-				v69 = 2 + 1;
+			if (((1667 - (51 + 44)) >= (432 + 1099)) and (v71 == (1320 - (1114 + 203)))) then
+				return (v72 * v74) - (GetTime() - v75);
 			end
-			if (((564 - 168) <= (3690 + 114)) and (v69 == (513 - (409 + 103)))) then
-				v71 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
-				if (not v71 or (v71 < (236.2 - (46 + 190))) or ((4264 - (51 + 44)) == (617 + 1570))) then
-					v71 = 1317.2 - (1114 + 203);
-				end
-				v69 = 728 - (228 + 498);
+			if ((v71 == (728 - (228 + 498))) or ((1016 + 3671) < (2510 + 2032))) then
+				v74 = (664 - (174 + 489)) / v73;
+				v75 = v11.Persistent.Player.LastPowerUpdate;
+				v71 = 7 - 4;
 			end
-			if (((305 + 1101) == (777 + 629)) and (v69 == (666 - (174 + 489)))) then
-				return (v70 * v72) - (GetTime() - v73);
-			end
-			if (((3988 - 2457) < (6176 - (830 + 1075))) and (v69 == (524 - (303 + 221)))) then
-				v70 = v13:EssenceDeficit();
-				if (((1904 - (231 + 1038)) == (530 + 105)) and (v70 == (1162 - (171 + 991)))) then
+			if (((5196 - (830 + 1075)) > (2191 - (303 + 221))) and (v71 == (1269 - (231 + 1038)))) then
+				v72 = v13:EssenceDeficit();
+				if ((v72 == (0 + 0)) or ((2035 - (171 + 991)) == (8382 - 6348))) then
 					return 0 - 0;
 				end
-				v69 = 2 - 1;
+				v71 = 2 - 1;
 			end
-		end
-	end, 3663 - 2195);
-	v10.AddCoreOverride("Player.EssenceTimeToX", function(v74)
-		local v75 = 0 + 0;
-		local v76;
-		local v77;
-		local v78;
-		local v79;
-		while true do
-			if (((11823 - 8450) <= (10258 - 6702)) and (v75 == (1 - 0))) then
-				v77 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
-				v78 = (3 - 2) / v77;
-				v75 = 1250 - (111 + 1137);
-			end
-			if ((v75 == (160 - (91 + 67))) or ((9794 - 6503) < (819 + 2461))) then
-				v79 = v11.Persistent.Player.LastPowerUpdate;
-				return ((v74 - v76) * v78) - (GetTime() - v79);
-			end
-			if (((4909 - (423 + 100)) >= (7 + 866)) and (v75 == (0 - 0))) then
-				v76 = v13:Essence();
-				if (((481 + 440) <= (1873 - (326 + 445))) and (v76 >= v74)) then
-					return 0 - 0;
+			if ((v71 == (1 + 0)) or ((9871 - 7055) < (31 - 20))) then
+				v73 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
+				if (((5962 - 2263) < (14547 - 9841)) and (not v73 or (v73 < (1248.2 - (111 + 1137))))) then
+					v73 = 158.2 - (91 + 67);
 				end
-				v75 = 2 - 1;
+				v71 = 5 - 3;
 			end
 		end
-	end, 3426 - 1958);
+	end, 367 + 1101);
+	v10.AddCoreOverride("Player.EssenceTimeToX", function(v76)
+		local v77 = v13:Essence();
+		if (((3169 - (423 + 100)) >= (7 + 869)) and (v77 >= v76)) then
+			return 0 - 0;
+		end
+		local v78 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
+		local v79 = (1 + 0) / v78;
+		local v80 = v11.Persistent.Player.LastPowerUpdate;
+		return ((v76 - v77) * v79) - (GetTime() - v80);
+	end, 2239 - (326 + 445));
 	local v38;
-	v38 = v10.AddCoreOverride("Spell.IsCastable", function(v80, v81, v82, v83, v84, v85)
-		local v86 = true;
-		if (((5417 - (530 + 181)) >= (1844 - (614 + 267))) and v82) then
-			local v140 = 32 - (19 + 13);
-			local v141;
-			while true do
-				if ((v140 == (0 - 0)) or ((2237 - 1277) <= (2502 - 1626))) then
-					v141 = v84 or v14;
-					v86 = v141:IsInRange(v82, v83);
-					break;
+	v38 = v10.AddCoreOverride("Spell.IsCastable", function(v81, v82, v83, v84, v85, v86)
+		local v87 = 0 - 0;
+		local v88;
+		local v89;
+		while true do
+			if (((1367 - 753) <= (7432 - 4248)) and (v87 == (711 - (530 + 181)))) then
+				v88 = true;
+				if (((4007 - (614 + 267)) == (3158 - (19 + 13))) and v83) then
+					local v146 = 0 - 0;
+					local v147;
+					while true do
+						if (((0 - 0) == v146) or ((6247 - 4060) >= (1287 + 3667))) then
+							v147 = v85 or v14;
+							v88 = v147:IsInRange(v83, v84);
+							break;
+						end
+					end
 				end
+				v87 = 1 - 0;
+			end
+			if ((v87 == (1 - 0)) or ((5689 - (1293 + 519)) == (7294 - 3719))) then
+				v89 = v38(v81, v82, v83, v84, v85, v86);
+				if (((1845 - 1138) > (1208 - 576)) and ((v81 == v16.Evoker.Augmentation.TipTheScales) or (v81 == v16.Evoker.Augmentation.Upheaval) or (v81 == v16.Evoker.Augmentation.FireBreath))) then
+					return v89 and not v13:BuffUp(v81);
+				else
+					return v89;
+				end
+				break;
 			end
 		end
-		local v87 = v38(v80, v81, v82, v83, v84, v85);
-		if ((v80 == v16.Evoker.Augmentation.TipTheScales) or (v80 == v16.Evoker.Augmentation.Upheaval) or (v80 == v16.Evoker.Augmentation.FireBreath) or ((537 + 1529) == (1638 - 706))) then
-			return v87 and not v13:BuffUp(v80);
-		else
-			return v87;
-		end
-	end, 3054 - 1581);
+	end, 6351 - 4878);
 	local v39;
-	v39 = v10.AddCoreOverride("Spell.IsReady", function(v88, v89, v90, v91, v92, v93)
-		local v94 = true;
-		if (((6637 - (1293 + 519)) < (9881 - 5038)) and v90) then
-			local v142 = v92 or v14;
-			v94 = v142:IsInRange(v90, v91);
+	v39 = v10.AddCoreOverride("Spell.IsReady", function(v90, v91, v92, v93, v94, v95)
+		local v96 = 0 - 0;
+		local v97;
+		local v98;
+		while true do
+			if ((v96 == (0 + 0)) or ((112 + 434) >= (6236 - 3552))) then
+				v97 = true;
+				if (((339 + 1126) <= (1429 + 2872)) and v92) then
+					local v148 = 0 + 0;
+					local v149;
+					while true do
+						if (((2800 - (709 + 387)) > (3283 - (673 + 1185))) and (v148 == (0 - 0))) then
+							v149 = v94 or v14;
+							v97 = v149:IsInRange(v92, v93);
+							break;
+						end
+					end
+				end
+				v96 = 3 - 2;
+			end
+			if ((v96 == (1 - 0)) or ((492 + 195) == (3164 + 1070))) then
+				v98 = v39(v90, v91, v92, v93, v94, v95);
+				if ((v90 == v16.Evoker.Augmentation.Eruption) or ((4496 - 1166) < (351 + 1078))) then
+					return v98 and (v13:EssenceP() >= (3 - 1));
+				elseif (((2251 - 1104) >= (2215 - (446 + 1434))) and (v90 == v16.Evoker.Augmentation.EbonMight)) then
+					return v98 and not v13:IsCasting(v90);
+				elseif (((4718 - (1040 + 243)) > (6258 - 4161)) and (v90 == v16.Evoker.Augmentation.Unravel)) then
+					return v98 and v14:EnemyAbsorb();
+				else
+					return v98;
+				end
+				break;
+			end
 		end
-		local v95 = v39(v88, v89, v90, v91, v92, v93);
-		if ((v88 == v16.Evoker.Augmentation.Eruption) or ((10122 - 6245) >= (8675 - 4138))) then
-			return v95 and (v13:EssenceP() >= (8 - 6));
-		elseif ((v88 == v16.Evoker.Augmentation.EbonMight) or ((10164 - 5849) < (915 + 811))) then
-			return v95 and not v13:IsCasting(v88);
-		elseif ((v88 == v16.Evoker.Augmentation.Unravel) or ((751 + 2928) < (1451 - 826))) then
-			return v95 and v14:EnemyAbsorb();
-		else
-			return v95;
-		end
-	end, 341 + 1132);
+	end, 3320 - (559 + 1288));
 	local v40;
-	v40 = v10.AddCoreOverride("Player.IsMoving", function(v96)
-		local v97 = v40(v96);
-		return v97 and v13:BuffDown(v16.Evoker.Augmentation.HoverBuff);
-	end, 490 + 983);
+	v40 = v10.AddCoreOverride("Player.IsMoving", function(v99)
+		local v100 = v40(v99);
+		return v100 and v13:BuffDown(v16.Evoker.Augmentation.HoverBuff);
+	end, 3404 - (609 + 1322));
 	local v41;
-	v41 = v10.AddCoreOverride("Player.BuffRemains", function(v98, v99, v100, v101)
-		if ((v99 == v99.Evoker.Augmentation.EbonMightSelfBuff) or ((2891 + 1734) < (1728 - (709 + 387)))) then
-			return (v98:IsCasting(v99.Evoker.Augmentation.EbonMight) and (1868 - (673 + 1185))) or v41(v98, v99, v100, v101);
+	v41 = v10.AddCoreOverride("Player.BuffRemains", function(v101, v102, v103, v104)
+		if ((v102 == v102.Evoker.Augmentation.EbonMightSelfBuff) or ((4224 - (13 + 441)) >= (15100 - 11059))) then
+			return (v101:IsCasting(v102.Evoker.Augmentation.EbonMight) and (26 - 16)) or v41(v101, v102, v103, v104);
 		else
-			return v41(v98, v99, v100, v101);
+			return v41(v101, v102, v103, v104);
 		end
-	end, 4271 - 2798);
-	v10.AddCoreOverride("Player.EmpowerCastTime", function(v102, v103)
-		local v104 = 0 - 0;
-		local v105;
-		local v106;
-		local v107;
+	end, 7336 - 5863);
+	v10.AddCoreOverride("Player.EmpowerCastTime", function(v105, v106)
+		local v107 = 0 + 0;
+		local v108;
+		local v109;
+		local v110;
 		while true do
-			if ((v104 == (0 - 0)) or ((60 + 23) > (1331 + 449))) then
-				v105 = v13:SpellHaste();
-				v106 = ((v16.Evoker.Augmentation.FontofMagic:IsAvailable()) and (0.8 - 0)) or (1 + 0);
-				v104 = 1 - 0;
+			if ((v107 == (7 - 5)) or ((1347 + 2444) <= (706 + 905))) then
+				return ((2 - 1) + ((0.75 + 0) * (v106 - (1 - 0)))) * v108 * v109;
 			end
-			if (((1071 - 525) <= (2957 - (446 + 1434))) and (v104 == (1284 - (1040 + 243)))) then
-				v107 = ((v16.Evoker.Augmentation.FontofMagic:IsAvailable()) and (11 - 7)) or (1850 - (559 + 1288));
-				if (not v103 or ((2927 - (609 + 1322)) > (4755 - (13 + 441)))) then
-					v103 = v107;
+			if ((v107 == (1 + 0)) or ((2547 + 2031) <= (1443 + 565))) then
+				v110 = ((v16.Evoker.Augmentation.FontofMagic:IsAvailable()) and (4 + 0)) or (3 + 0);
+				if (((1558 - (153 + 280)) <= (5994 - 3918)) and not v106) then
+					v106 = v110;
 				end
-				v104 = 7 - 5;
+				v107 = 2 + 0;
 			end
-			if (((10660 - 6590) > (3421 - 2734)) and (v104 == (1 + 1))) then
-				return ((3 - 2) + ((0.75 + 0) * (v103 - (1 + 0)))) * v105 * v106;
+			if ((v107 == (0 + 0)) or ((389 + 354) >= (3993 + 406))) then
+				v108 = v13:SpellHaste();
+				v109 = ((v16.Evoker.Augmentation.FontofMagic:IsAvailable()) and (0.8 + 0)) or (1 - 0);
+				v107 = 1 + 0;
 			end
 		end
-	end, 4371 - 2898);
-	v10.AddCoreOverride("Player.EmpowerCastTime", function(v108, v109)
-		local v110 = 0 + 0;
-		local v111;
-		local v112;
-		local v113;
+	end, 2140 - (89 + 578));
+	v10.AddCoreOverride("Player.EmpowerCastTime", function(v111, v112)
+		local v113 = 0 + 0;
+		local v114;
+		local v115;
+		local v116;
 		while true do
-			if ((v110 == (1 - 0)) or ((434 + 222) >= (1853 + 1477))) then
-				v113 = ((v16.Evoker.Devastation.FontofMagic:IsAvailable()) and (3 + 1)) or (3 + 0);
-				if (not v109 or ((2439 + 53) <= (768 - (153 + 280)))) then
-					v109 = v113;
+			if (((2400 - 1245) < (2722 - (572 + 477))) and ((1 + 1) == v113)) then
+				return (1 + 0 + ((0.75 + 0) * (v112 - (87 - (84 + 2))))) * v114 * v115;
+			end
+			if ((v113 == (0 - 0)) or ((1675 + 649) <= (1420 - (497 + 345)))) then
+				v114 = v13:SpellHaste();
+				v115 = ((v16.Evoker.Devastation.FontofMagic:IsAvailable()) and (0.8 + 0)) or (1 + 0);
+				v113 = 1334 - (605 + 728);
+			end
+			if (((2688 + 1079) == (8374 - 4607)) and ((1 + 0) == v113)) then
+				v116 = ((v16.Evoker.Devastation.FontofMagic:IsAvailable()) and (14 - 10)) or (3 + 0);
+				if (((11328 - 7239) == (3088 + 1001)) and not v112) then
+					v112 = v116;
 				end
-				v110 = 5 - 3;
-			end
-			if (((3881 + 441) >= (1012 + 1550)) and (v110 == (2 + 0))) then
-				return (1 + 0 + ((0.75 + 0) * (v109 - (1 - 0)))) * v111 * v112;
-			end
-			if ((v110 == (0 + 0)) or ((4304 - (89 + 578)) >= (2694 + 1076))) then
-				v111 = v13:SpellHaste();
-				v112 = ((v16.Evoker.Devastation.FontofMagic:IsAvailable()) and (0.8 - 0)) or (1050 - (572 + 477));
-				v110 = 1 + 0;
+				v113 = 491 - (457 + 32);
 			end
 		end
-	end, 881 + 586);
-	v10.AddCoreOverride("Player.EmpowerCastTime", function(v114, v115)
-		local v116 = v13:SpellHaste();
-		local v117 = 1 + 0;
-		local v118 = ((v16.Evoker.Preservation.FontofMagic:IsAvailable()) and (90 - (84 + 2))) or (4 - 1);
-		if (not v115 or ((1714 + 665) > (5420 - (497 + 345)))) then
-			v115 = v118;
-		end
-		return (1 + 0 + ((0.75 + 0) * (v115 - (1334 - (605 + 728))))) * v116 * v117;
-	end, 1048 + 420);
-	v10.AddCoreOverride("Player.EssenceP", function()
-		local v119 = v13:Essence();
-		if ((not v13:IsCasting() and not v13:IsChanneling()) or ((1073 - 590) > (35 + 708))) then
-			return v119;
-		elseif (((9072 - 6618) > (522 + 56)) and v13:IsCasting(v16.Evoker.Augmentation.Eruption) and v13:BuffDown(v16.Evoker.Augmentation.EssenceBurstBuff)) then
-			return v119 - (5 - 3);
-		else
-			return v119;
-		end
-	end, 1113 + 360);
-	v10.AddCoreOverride("Player.EssenceTimeToMax", function()
-		local v120 = 489 - (457 + 32);
+	end, 623 + 844);
+	v10.AddCoreOverride("Player.EmpowerCastTime", function(v117, v118)
+		local v119 = 1402 - (832 + 570);
+		local v120;
 		local v121;
 		local v122;
-		local v123;
+		while true do
+			if (((4200 + 258) >= (437 + 1237)) and ((0 - 0) == v119)) then
+				v120 = v13:SpellHaste();
+				v121 = 1 + 0;
+				v119 = 797 - (588 + 208);
+			end
+			if (((2619 - 1647) <= (3218 - (884 + 916))) and (v119 == (1 - 0))) then
+				v122 = ((v16.Evoker.Preservation.FontofMagic:IsAvailable()) and (3 + 1)) or (656 - (232 + 421));
+				if (not v118 or ((6827 - (1569 + 320)) < (1169 + 3593))) then
+					v118 = v122;
+				end
+				v119 = 1 + 1;
+			end
+			if ((v119 == (6 - 4)) or ((3109 - (316 + 289)) > (11161 - 6897))) then
+				return (1 + 0 + ((1453.75 - (666 + 787)) * (v118 - (426 - (360 + 65))))) * v120 * v121;
+			end
+		end
+	end, 1372 + 96);
+	v10.AddCoreOverride("Player.EssenceP", function()
+		local v123 = 254 - (79 + 175);
 		local v124;
 		while true do
-			if (((395 + 535) < (5860 - (832 + 570))) and (v120 == (0 + 0))) then
-				v121 = v13:EssenceDeficit();
-				if (((173 + 489) <= (3439 - 2467)) and (v121 == (0 + 0))) then
-					return 796 - (588 + 208);
+			if (((3394 - 1241) == (1681 + 472)) and ((0 - 0) == v123)) then
+				v124 = v13:Essence();
+				if ((not v13:IsCasting() and not v13:IsChanneling()) or ((975 - 468) >= (3490 - (503 + 396)))) then
+					return v124;
+				elseif (((4662 - (92 + 89)) == (8692 - 4211)) and v13:IsCasting(v16.Evoker.Augmentation.Eruption) and v13:BuffDown(v16.Evoker.Augmentation.EssenceBurstBuff)) then
+					return v124 - (2 + 0);
+				else
+					return v124;
 				end
-				v120 = 2 - 1;
-			end
-			if (((6170 - (884 + 916)) == (9148 - 4778)) and (v120 == (2 + 0))) then
-				v123 = (654 - (232 + 421)) / v122;
-				v124 = v11.Persistent.Player.LastPowerUpdate;
-				v120 = 1892 - (1569 + 320);
-			end
-			if ((v120 == (1 + 0)) or ((905 + 3857) <= (2901 - 2040))) then
-				v122 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
-				if (not v122 or (v122 < (605.2 - (316 + 289))) or ((3696 - 2284) == (197 + 4067))) then
-					v122 = 1453.2 - (666 + 787);
-				end
-				v120 = 427 - (360 + 65);
-			end
-			if ((v120 == (3 + 0)) or ((3422 - (79 + 175)) < (3394 - 1241))) then
-				return (v121 * v123) - (GetTime() - v124);
+				break;
 			end
 		end
-	end, 1150 + 323);
-	v10.AddCoreOverride("Player.EssenceTimeToX", function(v125)
-		local v126 = 0 - 0;
-		local v127;
-		local v128;
-		local v129;
-		local v130;
-		while true do
-			if ((v126 == (1 - 0)) or ((5875 - (503 + 396)) < (1513 - (92 + 89)))) then
-				v128 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
-				v129 = (1 - 0) / v128;
-				v126 = 2 + 0;
-			end
-			if (((2740 + 1888) == (18123 - 13495)) and ((0 + 0) == v126)) then
-				v127 = v13:Essence();
-				if ((v127 >= v125) or ((122 - 68) == (345 + 50))) then
-					return 0 + 0;
-				end
-				v126 = 2 - 1;
-			end
-			if (((11 + 71) == (124 - 42)) and (v126 == (1246 - (485 + 759)))) then
-				v130 = v11.Persistent.Player.LastPowerUpdate;
-				return ((v125 - v127) * v129) - (GetTime() - v130);
-			end
+	end, 872 + 601);
+	v10.AddCoreOverride("Player.EssenceTimeToMax", function()
+		local v125 = v13:EssenceDeficit();
+		if ((v125 == (0 - 0)) or ((319 + 2009) < (1579 - 886))) then
+			return 0 + 0;
 		end
+		local v126 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
+		if (((2068 + 2260) == (13181 - 8853)) and (not v126 or (v126 < (0.2 + 0)))) then
+			v126 = 0.2 - 0;
+		end
+		local v127 = (1245 - (485 + 759)) / v126;
+		local v128 = v11.Persistent.Player.LastPowerUpdate;
+		return (v125 * v127) - (GetTime() - v128);
 	end, 3408 - 1935);
+	v10.AddCoreOverride("Player.EssenceTimeToX", function(v129)
+		local v130 = v13:Essence();
+		if (((2777 - (442 + 747)) >= (2467 - (832 + 303))) and (v130 >= v129)) then
+			return 946 - (88 + 858);
+		end
+		local v131 = GetPowerRegenForPowerType(Enum.PowerType.Essence);
+		local v132 = (1 + 0) / v131;
+		local v133 = v11.Persistent.Player.LastPowerUpdate;
+		return ((v129 - v130) * v132) - (GetTime() - v133);
+	end, 1220 + 253);
 end;
 return v0["Epix_Evoker_Evoker.lua"]();
 
