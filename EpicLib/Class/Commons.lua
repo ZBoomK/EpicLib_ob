@@ -1201,6 +1201,23 @@ function Commons.FriendlyUnitWithHealAbsorb(Range, Role, maxRaid, FriendlySpell)
   return AbsorbUnit;
 end
 
+-- Get friendly unit with a heal absorb without checking range
+function Commons.FriendlyUnitWithHealAbsorbIgnoreRange(Role, maxRaid)
+  local AbsorbUnit;
+  local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
+  for i = 1, #FriendlyUnits do
+    local FriendlyUnit = FriendlyUnits[i];
+    if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
+      if FriendlyUnit and FriendlyUnit:Exists() and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
+        if FriendlyUnit:HasHealAbsorb() > 0 then
+          AbsorbUnit = FriendlyUnit;
+        end
+      end
+    end
+  end
+  return AbsorbUnit;
+end
+
 -- Get named friendly unit.
 function Commons.NamedUnit(Range, Name, maxRaid, FriendlySpell)
   if not Range then Range = 40; end
@@ -1228,6 +1245,23 @@ function Commons.LowestFriendlyUnit(Range, Role, maxRaid, FriendlySpell)
     local FriendlyUnit = FriendlyUnits[i];
     if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
       if FriendlyUnit and FriendlyUnit:Exists() and (FriendlyUnit:IsInRange(Range) or FriendlyUnit:IsSpellInRange(FriendlySpell)) and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
+        if (not LowestUnit) or FriendlyUnit:HealthPercentage() < LowestUnit:HealthPercentage() then
+          LowestUnit = FriendlyUnit;
+        end
+      end
+    end
+  end
+  return LowestUnit;
+end
+
+-- Get lowest friendly unit without checking range
+function Commons.LowestFriendlyUnitIgnoreRange(Role, maxRaid)
+  local LowestUnit;
+  local FriendlyUnits = Commons.FriendlyUnits(false, maxRaid);
+  for i = 1, #FriendlyUnits do
+    local FriendlyUnit = FriendlyUnits[i];
+    if Role == nil or Commons.UnitGroupRole(FriendlyUnit) == Role then
+      if FriendlyUnit and FriendlyUnit:Exists() and (not FriendlyUnit:IsDeadOrGhost()) and (not Commons.IsMindControlled(FriendlyUnit)) then
         if (not LowestUnit) or FriendlyUnit:HealthPercentage() < LowestUnit:HealthPercentage() then
           LowestUnit = FriendlyUnit;
         end
@@ -1475,12 +1509,65 @@ function Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid, Fri
   if LowestFriendlyUnit then return LowestFriendlyUnit; end
 end
 
+-- Get Focus Unit without checking range
+function Commons.GetFocusUnitIgnoreRange(IncludeDispellableUnits, Role, maxRaid)
+  if Commons.TargetIsValidHealableNpc() then return Target; end
+  if Commons.IsSoloMode() then
+     return Player; end
+
+  if IncludeDispellableUnits then
+    local DispellableFriendlyUnit = Commons.DispellableFriendlyUnit(maxRaid);
+    if DispellableFriendlyUnit then
+      return DispellableFriendlyUnit;
+    end
+  end
+  local LowestFriendlyUnit = Commons.LowestFriendlyUnitIgnoreRange(Role, maxRaid);
+  local LowestFriendlyUnitWithAbsorbs = Commons.FriendlyUnitWithHealAbsorbIgnoreRange(Role, maxRaid);
+  if LowestFriendlyUnitWithAbsorbs then return LowestFriendlyUnitWithAbsorbs; end
+  if LowestFriendlyUnit then return LowestFriendlyUnit; end
+end
+
 -- Focus Unit
 function Commons.FocusUnit(IncludeDispellableUnits, Macros, Range, Role, maxRaid, FriendlySpell)
   local cycleDelay = 800
   if not Range then Range = 40; end
 
   local NewFocusUnit = Commons.GetFocusUnit(IncludeDispellableUnits, Range, Role, maxRaid, FriendlySpell);
+  if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
+    local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(NewFocusUnit:ID())
+    if (GetTime() - Commons.LastFocusSwap)*1000 >= cycleDelay then
+      Commons.LastFocusSwap = GetTime()
+      --if EL.Press(Macros[FocusUnitKey], nil, nil, true) then return "focus " .. NewFocusUnit:ID() .. " focus_unit 1"; end
+      if NewFocusUnit:ID() == "player" then
+        --EL.Print("Focusing "..NewFocusUnit:ID());
+        EL.ReturnFocus = 50;
+        return "Changing Focus to player"
+      elseif NewFocusUnit:ID() == "Target" then
+        --EL.Print("Focusing "..NewFocusUnit:ID());
+        EL.ReturnFocus = 60;
+        return "Changing Focus to target"
+      elseif string.find(NewFocusUnit:ID(), "Party") then
+        --EL.Print("Focusing "..NewFocusUnit:ID());
+        EL.ReturnFocus = 50+tonumber(string.sub(NewFocusUnit:ID(), 6));
+        return "Changing Focus to party"..tonumber(string.sub(NewFocusUnit:ID(), 6))
+      elseif string.find(NewFocusUnit:ID(), "Raid") then
+        --EL.Print("Focusing "..NewFocusUnit:ID());
+        EL.ReturnFocus = string.sub(NewFocusUnit:ID(), 5);
+        return "Changing Focus to raid"..string.sub(NewFocusUnit:ID(), 5)
+      end
+      --return EL.Press(Macros[FocusUnitKey], nil, nil, true);
+      return "Changing Focus"
+    end
+  else
+    EL.ReturnFocus = 0
+    return false
+  end
+end
+
+-- Focus Unit without checking range
+function Commons.FocusUnitIgnoreRange(IncludeDispellableUnits, Macros, Role, maxRaid)
+  local cycleDelay = 800
+  local NewFocusUnit = Commons.GetFocusUnitIgnoreRange(IncludeDispellableUnits, Role, maxRaid);
   if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(NewFocusUnit:ID())
     if (GetTime() - Commons.LastFocusSwap)*1000 >= cycleDelay then
