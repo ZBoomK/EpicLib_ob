@@ -1,42 +1,50 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = v0[v4];
-	if (not v5 or ((16733 - 12207) <= (2545 + 277))) then
-		return v1(v4, ...);
+	local v5 = 0 + 0;
+	local v6;
+	while true do
+		if ((v5 == (0 - 0)) or ((7454 - 3049) <= (2085 - (35 + 1064)))) then
+			v6 = v0[v4];
+			if (((2306 + 862) <= (7727 - 4115)) and not v6) then
+				return v1(v4, ...);
+			end
+			v5 = 1 + 0;
+		end
+		if (((3827 - (298 + 938)) > (1766 - (233 + 1026))) and (v5 == (1667 - (636 + 1030)))) then
+			return v6(...);
+		end
 	end
-	return v5(...);
 end
 v0["Epix_Monk_Mistweaver.lua"] = function(...)
-	local v6, v7 = ...;
-	local v8 = EpicDBC.DBC;
-	local v9 = EpicLib;
-	local v10 = EpicCache;
-	local v11 = v9.Unit;
-	local v12 = v11.Player;
-	local v13 = v11.Pet;
-	local v14 = v11.Target;
-	local v15 = v11.MouseOver;
-	local v16 = v11.Focus;
-	local v17 = v9.Spell;
-	local v18 = v9.MultiSpell;
-	local v19 = v9.Item;
-	local v20 = v9.Utils;
-	local v21 = EpicLib;
-	local v22 = v21.Cast;
-	local v23 = v21.Press;
-	local v24 = v21.Macro;
-	local v25 = v21.Commons.Everyone.num;
-	local v26 = v21.Commons.Everyone.bool;
-	local v27 = GetNumGroupMembers;
-	local v28;
-	local v29 = false;
+	local v7, v8 = ...;
+	local v9 = EpicDBC.DBC;
+	local v10 = EpicLib;
+	local v11 = EpicCache;
+	local v12 = v10.Unit;
+	local v13 = v12.Player;
+	local v14 = v12.Pet;
+	local v15 = v12.Target;
+	local v16 = v12.MouseOver;
+	local v17 = v12.Focus;
+	local v18 = v10.Spell;
+	local v19 = v10.MultiSpell;
+	local v20 = v10.Item;
+	local v21 = v10.Utils;
+	local v22 = EpicLib;
+	local v23 = v22.Cast;
+	local v24 = v22.Press;
+	local v25 = v22.Macro;
+	local v26 = v22.Commons.Everyone.num;
+	local v27 = v22.Commons.Everyone.bool;
+	local v28 = GetNumGroupMembers;
+	local v29;
 	local v30 = false;
 	local v31 = false;
 	local v32 = false;
 	local v33 = false;
 	local v34 = false;
-	local v35;
+	local v35 = false;
 	local v36;
 	local v37;
 	local v38;
@@ -111,607 +119,565 @@ v0["Epix_Monk_Mistweaver.lua"] = function(...)
 	local v107;
 	local v108;
 	local v109;
-	local v110 = 30784 - 19673;
-	local v111 = 8390 + 2721;
-	local v112;
-	local v113 = v17.Monk.Mistweaver;
-	local v114 = v19.Monk.Mistweaver;
-	local v115 = v24.Monk.Mistweaver;
-	local v116 = {};
-	local v117;
+	local v110;
+	local v111 = 5681 + 5430;
+	local v112 = 10853 + 258;
+	local v113;
+	local v114 = v18.Monk.Mistweaver;
+	local v115 = v20.Monk.Mistweaver;
+	local v116 = v25.Monk.Mistweaver;
+	local v117 = {};
 	local v118;
-	local v119 = v21.Commons.Everyone;
-	local v120 = v21.Commons.Monk;
-	local function v121()
-		if (v113.ImprovedDetox:IsAvailable() or ((5120 - (457 + 32)) == (869 + 1179))) then
-			v119.DispellableDebuffs = v20.MergeTable(v119.DispellableMagicDebuffs, v119.DispellablePoisonDebuffs, v119.DispellableDiseaseDebuffs);
+	local v119;
+	local v120 = v22.Commons.Everyone;
+	local v121 = v22.Commons.Monk;
+	local function v122()
+		if (((1332 + 3149) == (303 + 4178)) and v114.ImprovedDetox:IsAvailable()) then
+			v120.DispellableDebuffs = v21.MergeTable(v120.DispellableMagicDebuffs, v120.DispellablePoisonDebuffs, v120.DispellableDiseaseDebuffs);
 		else
-			v119.DispellableDebuffs = v119.DispellableMagicDebuffs;
+			v120.DispellableDebuffs = v120.DispellableMagicDebuffs;
 		end
 	end
-	v9:RegisterForEvent(function()
-		v121();
+	v10:RegisterForEvent(function()
+		v122();
 	end, "ACTIVE_PLAYER_SPECIALIZATION_CHANGED");
-	local function v122()
-		local v137 = 1402 - (832 + 570);
+	local function v123()
+		local v138 = 221 - (55 + 166);
 		while true do
-			if ((v137 == (2 + 0)) or ((1021 + 2893) == (7696 - 5521))) then
-				if ((v85 and (v12:HealthPercentage() <= v86)) or ((2304 + 2478) < (1995 - (588 + 208)))) then
-					if ((v87 == "Refreshing Healing Potion") or ((13109 - 8245) < (3702 - (884 + 916)))) then
-						if (((10130 - 5291) >= (2146 + 1554)) and v114.RefreshingHealingPotion:IsReady() and v114.RefreshingHealingPotion:IsUsable()) then
-							if (v23(v115.RefreshingHealingPotion) or ((1728 - (232 + 421)) > (3807 - (1569 + 320)))) then
-								return "refreshing healing potion defensive 5";
-							end
-						end
-					end
-					if (((98 + 298) <= (723 + 3081)) and (v87 == "Dreamwalker's Healing Potion")) then
-						if ((v114.DreamwalkersHealingPotion:IsReady() and v114.DreamwalkersHealingPotion:IsUsable()) or ((14048 - 9879) == (2792 - (316 + 289)))) then
-							if (((3680 - 2274) == (65 + 1341)) and v23(v115.RefreshingHealingPotion)) then
-								return "dreamwalkers healing potion defensive 5";
-							end
-						end
-					end
-				end
-				break;
-			end
-			if (((2984 - (666 + 787)) < (4696 - (360 + 65))) and (v137 == (0 + 0))) then
-				if (((889 - (79 + 175)) == (1001 - 366)) and v113.DampenHarm:IsCastable() and v12:BuffDown(v113.FortifyingBrew) and (v12:HealthPercentage() <= v41) and v40) then
-					if (((2633 + 740) <= (10899 - 7343)) and v23(v113.DampenHarm, nil)) then
-						return "dampen_harm defensives 1";
-					end
-				end
-				if ((v113.FortifyingBrew:IsCastable() and v12:BuffDown(v113.DampenHarmBuff) and (v12:HealthPercentage() <= v39) and v38) or ((6337 - 3046) < (4179 - (503 + 396)))) then
-					if (((4567 - (92 + 89)) >= (1692 - 819)) and v23(v113.FortifyingBrew, nil)) then
-						return "fortifying_brew defensives 2";
-					end
-				end
-				v137 = 1 + 0;
-			end
-			if (((546 + 375) <= (4315 - 3213)) and (v137 == (1 + 0))) then
-				if (((10730 - 6024) >= (841 + 122)) and v113.ExpelHarm:IsCastable() and (v12:HealthPercentage() <= v54) and v53 and v12:BuffUp(v113.ChiHarmonyBuff)) then
-					if (v23(v113.ExpelHarm, nil) or ((459 + 501) <= (2667 - 1791))) then
+			if (((1 + 0) == v138) or ((235 + 2093) < (2646 - 1953))) then
+				if (((4625 - (36 + 261)) == (7568 - 3240)) and v114.ExpelHarm:IsCastable() and (v13:HealthPercentage() <= v55) and v54 and v13:BuffUp(v114.ChiHarmonyBuff)) then
+					if (((2956 - (34 + 1334)) >= (513 + 819)) and v24(v114.ExpelHarm, nil)) then
 						return "expel_harm defensives 3";
 					end
 				end
-				if ((v114.Healthstone:IsReady() and v114.Healthstone:IsUsable() and v83 and (v12:HealthPercentage() <= v84)) or ((258 + 1808) == (1420 - 488))) then
-					if (((6069 - (485 + 759)) < (11205 - 6362)) and v23(v115.Healthstone)) then
+				if ((v115.Healthstone:IsReady() and v115.Healthstone:IsUsable() and v84 and (v13:HealthPercentage() <= v85)) or ((3244 + 930) > (5531 - (1035 + 248)))) then
+					if (v24(v116.Healthstone) or ((4607 - (20 + 1)) <= (43 + 39))) then
 						return "healthstone defensive 4";
 					end
 				end
-				v137 = 1191 - (442 + 747);
+				v138 = 321 - (134 + 185);
 			end
-		end
-	end
-	local function v123()
-		if (v101 or ((5012 - (832 + 303)) >= (5483 - (88 + 858)))) then
-			v28 = v119.HandleIncorporeal(v113.Paralysis, v115.ParalysisMouseover, 10 + 20, true);
-			if (v28 or ((3572 + 743) < (72 + 1654))) then
-				return v28;
-			end
-		end
-		if (v100 or ((4468 - (766 + 23)) < (3085 - 2460))) then
-			local v152 = 0 - 0;
-			while true do
-				if ((v152 == (0 - 0)) or ((15697 - 11072) < (1705 - (1036 + 37)))) then
-					v28 = v119.HandleAfflicted(v113.Detox, v115.DetoxMouseover, 22 + 8);
-					if (v28 or ((161 - 78) > (1401 + 379))) then
-						return v28;
-					end
-					v152 = 1481 - (641 + 839);
-				end
-				if (((1459 - (910 + 3)) <= (2745 - 1668)) and (v152 == (1685 - (1466 + 218)))) then
-					if (v113.Detox:CooldownRemains() or ((458 + 538) > (5449 - (556 + 592)))) then
-						local v244 = 0 + 0;
-						while true do
-							if (((4878 - (329 + 479)) > (1541 - (174 + 680))) and (v244 == (0 - 0))) then
-								v28 = v119.HandleAfflicted(v113.Vivify, v115.VivifyMouseover, 62 - 32);
-								if (v28 or ((469 + 187) >= (4069 - (396 + 343)))) then
-									return v28;
-								end
-								break;
-							end
-						end
-					end
-					break;
-				end
-			end
-		end
-		if (v102 or ((221 + 2271) <= (1812 - (29 + 1448)))) then
-			local v153 = 1389 - (135 + 1254);
-			while true do
-				if (((16281 - 11959) >= (11962 - 9400)) and (v153 == (0 + 0))) then
-					v28 = v119.HandleChromie(v113.Riptide, v115.RiptideMouseover, 1567 - (389 + 1138));
-					if (v28 or ((4211 - (102 + 472)) >= (3558 + 212))) then
-						return v28;
-					end
-					v153 = 1 + 0;
-				end
-				if ((v153 == (1 + 0)) or ((3924 - (320 + 1225)) > (8149 - 3571))) then
-					v28 = v119.HandleChromie(v113.HealingSurge, v115.HealingSurgeMouseover, 25 + 15);
-					if (v28 or ((1947 - (157 + 1307)) > (2602 - (821 + 1038)))) then
-						return v28;
-					end
-					break;
-				end
-			end
-		end
-		if (((6122 - 3668) > (64 + 514)) and v103) then
-			local v154 = 0 - 0;
-			while true do
-				if (((347 + 583) < (11049 - 6591)) and (v154 == (1028 - (834 + 192)))) then
-					v28 = v119.HandleCharredTreant(v113.Vivify, v115.VivifyMouseover, 3 + 37);
-					if (((170 + 492) <= (21 + 951)) and v28) then
-						return v28;
-					end
-					v154 = 4 - 1;
-				end
-				if (((4674 - (300 + 4)) == (1168 + 3202)) and ((2 - 1) == v154)) then
-					v28 = v119.HandleCharredTreant(v113.SoothingMist, v115.SoothingMistMouseover, 402 - (112 + 250));
-					if (v28 or ((1899 + 2863) <= (2156 - 1295))) then
-						return v28;
-					end
-					v154 = 2 + 0;
-				end
-				if ((v154 == (0 + 0)) or ((1057 + 355) == (2115 + 2149))) then
-					v28 = v119.HandleCharredTreant(v113.RenewingMist, v115.RenewingMistMouseover, 30 + 10);
-					if (v28 or ((4582 - (1001 + 413)) < (4800 - 2647))) then
-						return v28;
-					end
-					v154 = 883 - (244 + 638);
-				end
-				if ((v154 == (696 - (627 + 66))) or ((14826 - 9850) < (1934 - (512 + 90)))) then
-					v28 = v119.HandleCharredTreant(v113.EnvelopingMist, v115.EnvelopingMistMouseover, 1946 - (1665 + 241));
-					if (((5345 - (373 + 344)) == (2088 + 2540)) and v28) then
-						return v28;
-					end
-					break;
-				end
-			end
-		end
-		if (v104 or ((15 + 39) == (1041 - 646))) then
-			local v155 = 0 - 0;
-			while true do
-				if (((1181 - (35 + 1064)) == (60 + 22)) and (v155 == (2 - 1))) then
-					v28 = v119.HandleCharredBrambles(v113.SoothingMist, v115.SoothingMistMouseover, 1 + 39);
-					if (v28 or ((1817 - (298 + 938)) < (1541 - (233 + 1026)))) then
-						return v28;
-					end
-					v155 = 1668 - (636 + 1030);
-				end
-				if ((v155 == (2 + 0)) or ((4502 + 107) < (742 + 1753))) then
-					v28 = v119.HandleCharredBrambles(v113.Vivify, v115.VivifyMouseover, 3 + 37);
-					if (((1373 - (55 + 166)) == (224 + 928)) and v28) then
-						return v28;
-					end
-					v155 = 1 + 2;
-				end
-				if (((7240 - 5344) <= (3719 - (36 + 261))) and ((0 - 0) == v155)) then
-					v28 = v119.HandleCharredBrambles(v113.RenewingMist, v115.RenewingMistMouseover, 1408 - (34 + 1334));
-					if (v28 or ((381 + 609) > (1259 + 361))) then
-						return v28;
-					end
-					v155 = 1284 - (1035 + 248);
-				end
-				if ((v155 == (24 - (20 + 1))) or ((457 + 420) > (5014 - (134 + 185)))) then
-					v28 = v119.HandleCharredBrambles(v113.EnvelopingMist, v115.EnvelopingMistMouseover, 1173 - (549 + 584));
-					if (((3376 - (314 + 371)) >= (6354 - 4503)) and v28) then
-						return v28;
-					end
-					break;
-				end
-			end
-		end
-		if (v105 or ((3953 - (478 + 490)) >= (2573 + 2283))) then
-			local v156 = 1172 - (786 + 386);
-			while true do
-				if (((13849 - 9573) >= (2574 - (1055 + 324))) and (v156 == (1342 - (1093 + 247)))) then
-					v28 = v119.HandleFyrakkNPC(v113.Vivify, v115.VivifyMouseover, 36 + 4);
-					if (((340 + 2892) <= (18620 - 13930)) and v28) then
-						return v28;
-					end
-					v156 = 9 - 6;
-				end
-				if ((v156 == (2 - 1)) or ((2251 - 1355) >= (1120 + 2026))) then
-					v28 = v119.HandleFyrakkNPC(v113.SoothingMist, v115.SoothingMistMouseover, 154 - 114);
-					if (((10550 - 7489) >= (2231 + 727)) and v28) then
-						return v28;
-					end
-					v156 = 4 - 2;
-				end
-				if (((3875 - (364 + 324)) >= (1765 - 1121)) and (v156 == (0 - 0))) then
-					v28 = v119.HandleFyrakkNPC(v113.RenewingMist, v115.RenewingMistMouseover, 14 + 26);
-					if (((2694 - 2050) <= (1126 - 422)) and v28) then
-						return v28;
-					end
-					v156 = 2 - 1;
-				end
-				if (((2226 - (1249 + 19)) > (855 + 92)) and (v156 == (11 - 8))) then
-					v28 = v119.HandleFyrakkNPC(v113.EnvelopingMist, v115.EnvelopingMistMouseover, 1126 - (686 + 400));
-					if (((3525 + 967) >= (2883 - (73 + 156))) and v28) then
-						return v28;
-					end
-					break;
-				end
-			end
-		end
-	end
-	local function v124()
-		local v138 = 0 + 0;
-		while true do
-			if (((4253 - (721 + 90)) >= (17 + 1486)) and (v138 == (3 - 2))) then
-				if ((v113.TigerPalm:IsCastable() and v47) or ((3640 - (224 + 246)) <= (2371 - 907))) then
-					if (v23(v113.TigerPalm, not v14:IsInMeleeRange(9 - 4)) or ((871 + 3926) == (105 + 4283))) then
-						return "tiger_palm precombat 8";
+			if (((4996 - (549 + 584)) == (4548 - (314 + 371))) and (v138 == (0 - 0))) then
+				if ((v114.DampenHarm:IsCastable() and v13:BuffDown(v114.FortifyingBrew) and (v13:HealthPercentage() <= v42) and v41) or ((1250 - (478 + 490)) <= (23 + 19))) then
+					if (((5781 - (786 + 386)) >= (2480 - 1714)) and v24(v114.DampenHarm, nil)) then
+						return "dampen_harm defensives 1";
 					end
 				end
-				break;
-			end
-			if (((405 + 146) <= (1353 - 672)) and (v138 == (0 - 0))) then
-				if (((3790 - (203 + 310)) > (2400 - (1238 + 755))) and v113.ChiBurst:IsCastable() and v49) then
-					if (((329 + 4366) >= (2949 - (709 + 825))) and v23(v113.ChiBurst, not v14:IsInRange(73 - 33))) then
-						return "chi_burst precombat 4";
-					end
-				end
-				if ((v113.SpinningCraneKick:IsCastable() and v45 and (v118 >= (2 - 0))) or ((4076 - (196 + 668)) <= (3726 - 2782))) then
-					if (v23(v113.SpinningCraneKick, not v14:IsInMeleeRange(16 - 8)) or ((3929 - (171 + 662)) <= (1891 - (4 + 89)))) then
-						return "spinning_crane_kick precombat 6";
+				if ((v114.FortifyingBrew:IsCastable() and v13:BuffDown(v114.DampenHarmBuff) and (v13:HealthPercentage() <= v40) and v39) or ((2531 - (1055 + 324)) == (3828 - (1093 + 247)))) then
+					if (((3041 + 381) > (353 + 2997)) and v24(v114.FortifyingBrew, nil)) then
+						return "fortifying_brew defensives 2";
 					end
 				end
 				v138 = 3 - 2;
 			end
-		end
-	end
-	local function v125()
-		if (((1288 + 2249) == (15535 - 11998)) and v113.SummonWhiteTigerStatue:IsReady() and (v118 >= (2 + 1)) and v43) then
-			if (((5323 - (35 + 1451)) >= (3023 - (28 + 1425))) and (v42 == "Player")) then
-				if (v23(v115.SummonWhiteTigerStatuePlayer, not v14:IsInRange(2033 - (941 + 1052))) or ((2829 + 121) == (5326 - (822 + 692)))) then
-					return "summon_white_tiger_statue aoe player 1";
-				end
-			elseif (((6742 - 2019) >= (1092 + 1226)) and (v42 == "Cursor")) then
-				if (v23(v115.SummonWhiteTigerStatueCursor, not v14:IsInRange(337 - (45 + 252))) or ((2006 + 21) > (982 + 1870))) then
-					return "summon_white_tiger_statue aoe cursor 1";
-				end
-			elseif (((v42 == "Friendly under Cursor") and v15:Exists() and not v12:CanAttack(v15)) or ((2764 - 1628) > (4750 - (114 + 319)))) then
-				if (((6816 - 2068) == (6083 - 1335)) and v23(v115.SummonWhiteTigerStatueCursor, not v14:IsInRange(26 + 14))) then
-					return "summon_white_tiger_statue aoe cursor friendly 1";
-				end
-			elseif (((5565 - 1829) <= (9931 - 5191)) and (v42 == "Enemy under Cursor") and v15:Exists() and v12:CanAttack(v15)) then
-				if (v23(v115.SummonWhiteTigerStatueCursor, not v14:IsInRange(2003 - (556 + 1407))) or ((4596 - (741 + 465)) <= (3525 - (170 + 295)))) then
-					return "summon_white_tiger_statue aoe cursor enemy 1";
-				end
-			elseif ((v42 == "Confirmation") or ((527 + 472) > (2474 + 219))) then
-				if (((1139 - 676) < (499 + 102)) and v23(v115.SummonWhiteTigerStatue, not v14:IsInRange(26 + 14))) then
-					return "summon_white_tiger_statue aoe confirmation 1";
-				end
-			end
-		end
-		if ((v113.TouchofDeath:IsCastable() and v50) or ((1237 + 946) < (1917 - (957 + 273)))) then
-			if (((1217 + 3332) == (1822 + 2727)) and v23(v113.TouchofDeath, not v14:IsInMeleeRange(19 - 14))) then
-				return "touch_of_death aoe 2";
-			end
-		end
-		if (((12311 - 7639) == (14270 - 9598)) and v113.JadefireStomp:IsReady() and v48) then
-			if (v23(v113.JadefireStomp, not v14:IsInMeleeRange(39 - 31)) or ((5448 - (389 + 1391)) < (248 + 147))) then
-				return "JadefireStomp aoe3";
-			end
-		end
-		if ((v113.ChiBurst:IsCastable() and v49) or ((434 + 3732) == (1035 - 580))) then
-			if (v23(v113.ChiBurst, not v14:IsInRange(991 - (783 + 168))) or ((14931 - 10482) == (2620 + 43))) then
-				return "chi_burst aoe 4";
-			end
-		end
-		if ((v113.SpinningCraneKick:IsCastable() and v45 and (v14:DebuffDown(v113.MysticTouchDebuff) or (v119.EnemiesWithDebuffCount(v113.MysticTouchDebuff) <= (v118 - (312 - (309 + 2))))) and v113.MysticTouch:IsAvailable()) or ((13133 - 8856) < (4201 - (1090 + 122)))) then
-			if (v23(v113.SpinningCraneKick, not v14:IsInMeleeRange(3 + 5)) or ((2921 - 2051) >= (2840 + 1309))) then
-				return "spinning_crane_kick aoe 5";
-			end
-		end
-		if (((3330 - (628 + 490)) < (571 + 2612)) and v113.BlackoutKick:IsCastable() and v113.AncientConcordance:IsAvailable() and v12:BuffUp(v113.JadefireStomp) and v44 and (v118 >= (7 - 4))) then
-			if (((21232 - 16586) > (3766 - (431 + 343))) and v23(v113.BlackoutKick, not v14:IsInMeleeRange(10 - 5))) then
-				return "blackout_kick aoe 6";
-			end
-		end
-		if (((4148 - 2714) < (2454 + 652)) and v113.TigerPalm:IsCastable() and v113.TeachingsoftheMonastery:IsAvailable() and (v113.BlackoutKick:CooldownRemains() > (0 + 0)) and v47 and (v118 >= (1698 - (556 + 1139)))) then
-			if (((801 - (6 + 9)) < (554 + 2469)) and v23(v113.TigerPalm, not v14:IsInMeleeRange(3 + 2))) then
-				return "tiger_palm aoe 7";
-			end
-		end
-		if ((v113.SpinningCraneKick:IsCastable() and v45) or ((2611 - (28 + 141)) < (29 + 45))) then
-			if (((5597 - 1062) == (3212 + 1323)) and v23(v113.SpinningCraneKick, not v14:IsInMeleeRange(1325 - (486 + 831)))) then
-				return "spinning_crane_kick aoe 8";
-			end
-		end
-	end
-	local function v126()
-		if ((v113.TouchofDeath:IsCastable() and v50) or ((7829 - 4820) <= (7410 - 5305))) then
-			if (((346 + 1484) < (11601 - 7932)) and v23(v113.TouchofDeath, not v14:IsInMeleeRange(1268 - (668 + 595)))) then
-				return "touch_of_death st 1";
-			end
-		end
-		if ((v113.JadefireStomp:IsReady() and v48) or ((1287 + 143) >= (729 + 2883))) then
-			if (((7316 - 4633) >= (2750 - (23 + 267))) and v23(v113.JadefireStomp, nil)) then
-				return "JadefireStomp st 2";
-			end
-		end
-		if ((v113.RisingSunKick:IsReady() and v46) or ((3748 - (1129 + 815)) >= (3662 - (371 + 16)))) then
-			if (v23(v113.RisingSunKick, not v14:IsInMeleeRange(1755 - (1326 + 424))) or ((2683 - 1266) > (13261 - 9632))) then
-				return "rising_sun_kick st 3";
-			end
-		end
-		if (((4913 - (88 + 30)) > (1173 - (720 + 51))) and v113.ChiBurst:IsCastable() and v49) then
-			if (((10706 - 5893) > (5341 - (421 + 1355))) and v23(v113.ChiBurst, not v14:IsInRange(65 - 25))) then
-				return "chi_burst st 4";
-			end
-		end
-		if (((1922 + 1990) == (4995 - (286 + 797))) and v113.BlackoutKick:IsCastable() and (v12:BuffStack(v113.TeachingsoftheMonasteryBuff) >= (10 - 7)) and (v113.RisingSunKick:CooldownRemains() > v12:GCD()) and v44) then
-			if (((4672 - 1851) <= (5263 - (397 + 42))) and v23(v113.BlackoutKick, not v14:IsInMeleeRange(2 + 3))) then
-				return "blackout_kick st 5";
-			end
-		end
-		if (((2538 - (24 + 776)) <= (3381 - 1186)) and v113.TigerPalm:IsCastable() and ((v12:BuffStack(v113.TeachingsoftheMonasteryBuff) < (788 - (222 + 563))) or (v12:BuffRemains(v113.TeachingsoftheMonasteryBuff) < (3 - 1))) and v47) then
-			if (((30 + 11) <= (3208 - (23 + 167))) and v23(v113.TigerPalm, not v14:IsInMeleeRange(1803 - (690 + 1108)))) then
-				return "tiger_palm st 6";
-			end
-		end
-	end
-	local function v127()
-		if (((774 + 1371) <= (3386 + 718)) and v51 and v113.RenewingMist:IsReady() and v16:BuffDown(v113.RenewingMistBuff) and (v113.RenewingMist:ChargesFractional() >= (849.8 - (40 + 808)))) then
-			if (((443 + 2246) < (18527 - 13682)) and (v16:HealthPercentage() <= v52)) then
-				if (v23(v115.RenewingMistFocus, not v16:IsSpellInRange(v113.RenewingMist)) or ((2220 + 102) > (1388 + 1234))) then
-					return "RenewingMist healing st";
-				end
-			end
-		end
-		if ((v46 and v113.RisingSunKick:IsReady() and (v119.FriendlyUnitsWithBuffCount(v113.RenewingMistBuff, false, false, 14 + 11) > (572 - (47 + 524)))) or ((2943 + 1591) == (5691 - 3609))) then
-			if (v23(v113.RisingSunKick, not v14:IsInMeleeRange(7 - 2)) or ((3582 - 2011) > (3593 - (1165 + 561)))) then
-				return "RisingSunKick healing st";
-			end
-		end
-		if ((v51 and v113.RenewingMist:IsReady() and v16:BuffDown(v113.RenewingMistBuff)) or ((79 + 2575) >= (9279 - 6283))) then
-			if (((1518 + 2460) > (2583 - (341 + 138))) and (v16:HealthPercentage() <= v52)) then
-				if (((809 + 2186) > (3180 - 1639)) and v23(v115.RenewingMistFocus, not v16:IsSpellInRange(v113.RenewingMist))) then
-					return "RenewingMist healing st";
-				end
-			end
-		end
-		if (((3575 - (89 + 237)) > (3065 - 2112)) and v55 and v113.Vivify:IsReady() and v12:BuffUp(v113.VivaciousVivificationBuff)) then
-			if ((v16:HealthPercentage() <= v56) or ((6890 - 3617) > (5454 - (581 + 300)))) then
-				if (v23(v115.VivifyFocus, not v16:IsSpellInRange(v113.Vivify)) or ((4371 - (855 + 365)) < (3049 - 1765))) then
-					return "Vivify instant healing st";
-				end
-			end
-		end
-		if ((v59 and v113.SoothingMist:IsReady() and v16:BuffDown(v113.SoothingMist)) or ((605 + 1245) == (2764 - (1030 + 205)))) then
-			if (((771 + 50) < (1975 + 148)) and (v16:HealthPercentage() <= v60)) then
-				if (((1188 - (156 + 130)) < (5282 - 2957)) and v23(v115.SoothingMistFocus, not v16:IsSpellInRange(v113.SoothingMist))) then
-					return "SoothingMist healing st";
-				end
-			end
-		end
-	end
-	local function v128()
-		if (((1445 - 587) <= (6065 - 3103)) and v46 and v113.RisingSunKick:IsReady() and (v119.FriendlyUnitsWithBuffCount(v113.RenewingMistBuff, false, false, 7 + 18) > (1 + 0))) then
-			if (v23(v113.RisingSunKick, not v14:IsInMeleeRange(74 - (10 + 59))) or ((1117 + 2829) < (6343 - 5055))) then
-				return "RisingSunKick healing aoe";
-			end
-		end
-		if (v119.AreUnitsBelowHealthPercentage(v63, v62, v113.EnvelopingMist) or ((4405 - (671 + 492)) == (452 + 115))) then
-			local v157 = 1215 - (369 + 846);
-			while true do
-				if ((v157 == (0 + 0)) or ((723 + 124) >= (3208 - (1036 + 909)))) then
-					if ((v35 and (v12:BuffStack(v113.ManaTeaCharges) > v36) and v113.EssenceFont:IsReady() and v113.ManaTea:IsCastable()) or ((1792 + 461) == (3107 - 1256))) then
-						if (v23(v113.ManaTea, nil) or ((2290 - (11 + 192)) > (1199 + 1173))) then
-							return "EssenceFont healing aoe";
+			if (((2976 - 2099) > (1069 - 693)) and (v138 == (4 - 2))) then
+				if ((v86 and (v13:HealthPercentage() <= v87)) or ((1110 + 2008) <= (7130 - 5279))) then
+					local v237 = 0 - 0;
+					while true do
+						if ((v237 == (0 + 0)) or ((421 - 256) >= (4180 - (364 + 324)))) then
+							if (((10825 - 6876) < (11652 - 6796)) and (v88 == "Refreshing Healing Potion")) then
+								if ((v115.RefreshingHealingPotion:IsReady() and v115.RefreshingHealingPotion:IsUsable()) or ((1418 + 2858) < (12619 - 9603))) then
+									if (((7511 - 2821) > (12528 - 8403)) and v24(v116.RefreshingHealingPotion)) then
+										return "refreshing healing potion defensive 5";
+									end
+								end
+							end
+							if ((v88 == "Dreamwalker's Healing Potion") or ((1318 - (1249 + 19)) >= (809 + 87))) then
+								if ((v115.DreamwalkersHealingPotion:IsReady() and v115.DreamwalkersHealingPotion:IsUsable()) or ((6671 - 4957) >= (4044 - (686 + 400)))) then
+									if (v24(v116.RefreshingHealingPotion) or ((1170 + 321) < (873 - (73 + 156)))) then
+										return "dreamwalkers healing potion defensive 5";
+									end
+								end
+							end
+							break;
 						end
 					end
-					if ((v37 and v113.ThunderFocusTea:IsReady() and (v113.EssenceFont:CooldownRemains() < v12:GCD())) or ((4620 - (135 + 40)) < (10052 - 5903))) then
-						if (v23(v113.ThunderFocusTea, nil) or ((1096 + 722) == (187 - 102))) then
-							return "ThunderFocusTea healing aoe";
-						end
-					end
-					v157 = 1 - 0;
 				end
-				if (((806 - (50 + 126)) < (5922 - 3795)) and (v157 == (1 + 0))) then
-					if ((v61 and v113.EssenceFont:IsReady() and (v12:BuffUp(v113.ThunderFocusTea) or (v113.ThunderFocusTea:CooldownRemains() > (1421 - (1233 + 180))))) or ((2907 - (522 + 447)) == (3935 - (107 + 1314)))) then
-						if (((1975 + 2280) >= (167 - 112)) and v23(v113.EssenceFont, nil)) then
-							return "EssenceFont healing aoe";
-						end
-					end
-					if (((1274 + 1725) > (2295 - 1139)) and v61 and v113.EssenceFont:IsReady() and v113.AncientTeachings:IsAvailable() and v12:BuffDown(v113.EssenceFontBuff)) then
-						if (((9298 - 6948) > (3065 - (716 + 1194))) and v23(v113.EssenceFont, nil)) then
-							return "EssenceFont healing aoe";
-						end
-					end
-					break;
-				end
-			end
-		end
-		if (((69 + 3960) <= (520 + 4333)) and v66 and v113.ZenPulse:IsReady() and v119.AreUnitsBelowHealthPercentage(v68, v67, v113.EnvelopingMist)) then
-			if (v23(v115.ZenPulseFocus, not v16:IsSpellInRange(v113.ZenPulse)) or ((1019 - (74 + 429)) > (6623 - 3189))) then
-				return "ZenPulse healing aoe";
-			end
-		end
-		if (((2006 + 2040) >= (6942 - 3909)) and v69 and v113.SheilunsGift:IsReady() and v113.SheilunsGift:IsCastable() and v119.AreUnitsBelowHealthPercentage(v71, v70, v113.EnvelopingMist)) then
-			if (v23(v113.SheilunsGift, nil) or ((1924 + 795) <= (4460 - 3013))) then
-				return "SheilunsGift healing aoe";
+				break;
 			end
 		end
 	end
-	local function v129()
-		if ((v57 and v113.EnvelopingMist:IsReady() and (v119.FriendlyUnitsWithBuffCount(v113.EnvelopingMist, false, false, 61 - 36) < (436 - (279 + 154)))) or ((4912 - (454 + 324)) < (3089 + 837))) then
-			v28 = v119.FocusUnitRefreshableBuff(v113.EnvelopingMist, 19 - (12 + 5), 22 + 18, nil, false, 63 - 38, v113.EnvelopingMist);
-			if (v28 or ((61 + 103) >= (3878 - (277 + 816)))) then
-				return v28;
-			end
-			if (v23(v115.EnvelopingMistFocus, not v16:IsSpellInRange(v113.EnvelopingMist)) or ((2243 - 1718) == (3292 - (1058 + 125)))) then
-				return "Enveloping Mist YuLon";
-			end
-		end
-		if (((7 + 26) == (1008 - (815 + 160))) and v46 and v113.RisingSunKick:IsReady() and (v119.FriendlyUnitsWithBuffCount(v113.EnvelopingMist, false, false, 107 - 82) > (4 - 2))) then
-			if (((729 + 2325) <= (11736 - 7721)) and v23(v113.RisingSunKick, not v14:IsInMeleeRange(1903 - (41 + 1857)))) then
-				return "Rising Sun Kick YuLon";
-			end
-		end
-		if (((3764 - (1222 + 671)) < (8740 - 5358)) and v59 and v113.SoothingMist:IsReady() and v16:BuffUp(v113.ChiHarmonyBuff) and v16:BuffDown(v113.SoothingMist)) then
-			if (((1857 - 564) <= (3348 - (229 + 953))) and v23(v115.SoothingMistFocus, not v16:IsSpellInRange(v113.SoothingMist))) then
-				return "Soothing Mist YuLon";
-			end
-		end
-	end
-	local function v130()
-		if ((v44 and v113.BlackoutKick:IsReady() and (v12:BuffStack(v113.TeachingsoftheMonastery) >= (1777 - (1111 + 663)))) or ((4158 - (874 + 705)) < (18 + 105))) then
-			if (v23(v113.BlackoutKick, not v14:IsInMeleeRange(4 + 1)) or ((1758 - 912) >= (67 + 2301))) then
-				return "Blackout Kick ChiJi";
-			end
-		end
-		if ((v57 and v113.EnvelopingMist:IsReady() and (v12:BuffStack(v113.InvokeChiJiBuff) == (682 - (642 + 37)))) or ((915 + 3097) <= (538 + 2820))) then
-			if (((3750 - 2256) <= (3459 - (233 + 221))) and (v16:HealthPercentage() <= v58)) then
-				if (v23(v115.EnvelopingMistFocus, not v16:IsSpellInRange(v113.EnvelopingMist)) or ((7193 - 4082) == (1879 + 255))) then
-					return "Enveloping Mist 3 Stacks ChiJi";
-				end
-			end
-		end
-		if (((3896 - (718 + 823)) == (1482 + 873)) and v46 and v113.RisingSunKick:IsReady()) then
-			if (v23(v113.RisingSunKick, not v14:IsInMeleeRange(810 - (266 + 539))) or ((1664 - 1076) <= (1657 - (636 + 589)))) then
-				return "Rising Sun Kick ChiJi";
-			end
-		end
-		if (((11386 - 6589) >= (8033 - 4138)) and v57 and v113.EnvelopingMist:IsReady() and (v12:BuffStack(v113.InvokeChiJiBuff) >= (2 + 0))) then
-			if (((1300 + 2277) == (4592 - (657 + 358))) and (v16:HealthPercentage() <= v58)) then
-				if (((10045 - 6251) > (8413 - 4720)) and v23(v115.EnvelopingMistFocus, not v16:IsSpellInRange(v113.EnvelopingMist))) then
-					return "Enveloping Mist 2 Stacks ChiJi";
-				end
-			end
-		end
-		if ((v61 and v113.EssenceFont:IsReady() and v113.AncientTeachings:IsAvailable() and v12:BuffDown(v113.AncientTeachings)) or ((2462 - (1151 + 36)) == (3960 + 140))) then
-			if (v23(v113.EssenceFont, nil) or ((419 + 1172) >= (10691 - 7111))) then
-				return "Essence Font ChiJi";
-			end
-		end
-	end
-	local function v131()
-		local v139 = 1832 - (1552 + 280);
+	local function v124()
+		local v139 = 0 + 0;
 		while true do
-			if (((1817 - (64 + 770)) <= (1228 + 580)) and (v139 == (2 - 1))) then
-				if ((v80 and v113.Restoral:IsReady() and v113.Restoral:IsAvailable() and v119.AreUnitsBelowHealthPercentage(v82, v81, v113.EnvelopingMist)) or ((382 + 1768) <= (2440 - (157 + 1086)))) then
-					if (((7543 - 3774) >= (5137 - 3964)) and v23(v113.Restoral, nil)) then
-						return "Restoral CD";
+			if (((1515 - (721 + 90)) < (12 + 975)) and (v139 == (0 - 0))) then
+				if (((4188 - (224 + 246)) > (3087 - 1181)) and v102) then
+					local v238 = 0 - 0;
+					while true do
+						if ((v238 == (0 + 0)) or ((23 + 935) > (2670 + 965))) then
+							v29 = v120.HandleIncorporeal(v114.Paralysis, v116.ParalysisMouseover, 59 - 29, true);
+							if (((11650 - 8149) <= (5005 - (203 + 310))) and v29) then
+								return v29;
+							end
+							break;
+						end
 					end
 				end
-				if (((2277 - 792) == (2026 - 541)) and v72 and v113.InvokeYulonTheJadeSerpent:IsAvailable() and v113.InvokeYulonTheJadeSerpent:IsReady() and v119.AreUnitsBelowHealthPercentage(v74, v73, v113.EnvelopingMist)) then
-					if ((v51 and v113.RenewingMist:IsReady() and (v113.RenewingMist:ChargesFractional() >= (820 - (599 + 220)))) or ((6601 - 3286) <= (4713 - (1813 + 118)))) then
-						local v245 = 0 + 0;
-						while true do
-							if ((v245 == (1218 - (841 + 376))) or ((1226 - 350) >= (689 + 2275))) then
-								if (v23(v115.RenewingMistFocus, not v16:IsSpellInRange(v113.RenewingMist)) or ((6092 - 3860) > (3356 - (464 + 395)))) then
-									return "Renewing Mist YuLon prep";
+				if (v101 or ((5435 - (1238 + 755)) < (179 + 2369))) then
+					local v239 = 1534 - (709 + 825);
+					while true do
+						if (((5297 - 2422) >= (2132 - 668)) and (v239 == (865 - (196 + 668)))) then
+							if (v114.Detox:CooldownRemains() or ((18939 - 14142) >= (10135 - 5242))) then
+								v29 = v120.HandleAfflicted(v114.Vivify, v116.VivifyMouseover, 863 - (171 + 662));
+								if (v29 or ((644 - (4 + 89)) > (7248 - 5180))) then
+									return v29;
 								end
-								break;
 							end
-							if ((v245 == (0 - 0)) or ((1014 + 1096) <= (1169 - (467 + 370)))) then
-								v28 = v119.FocusUnitRefreshableBuff(v113.RenewingMistBuff, 11 - 5, 30 + 10, nil, false, 85 - 60, v113.EnvelopingMist);
-								if (((576 + 3110) > (7379 - 4207)) and v28) then
-									return v28;
-								end
-								v245 = 521 - (150 + 370);
+							break;
+						end
+						if (((770 + 1344) > (4146 - 3202)) and (v239 == (0 + 0))) then
+							v29 = v120.HandleAfflicted(v114.Detox, v116.DetoxMouseover, 1516 - (35 + 1451));
+							if (v29 or ((3715 - (28 + 1425)) >= (5089 - (941 + 1052)))) then
+								return v29;
 							end
+							v239 = 1 + 0;
 						end
 					end
-					if ((v35 and v113.ManaTea:IsCastable() and (v12:BuffStack(v113.ManaTeaCharges) >= (1285 - (74 + 1208))) and v12:BuffDown(v113.ManaTeaBuff)) or ((11003 - 6529) < (3888 - 3068))) then
-						if (((3045 + 1234) >= (3272 - (14 + 376))) and v23(v113.ManaTea, nil)) then
-							return "ManaTea YuLon prep";
+				end
+				v139 = 1515 - (822 + 692);
+			end
+			if (((1 - 0) == v139) or ((1063 + 1192) >= (3834 - (45 + 252)))) then
+				if (v103 or ((3797 + 40) < (450 + 856))) then
+					local v240 = 0 - 0;
+					while true do
+						if (((3383 - (114 + 319)) == (4235 - 1285)) and (v240 == (0 - 0))) then
+							v29 = v120.HandleChromie(v114.Riptide, v116.RiptideMouseover, 26 + 14);
+							if (v29 or ((7036 - 2313) < (6909 - 3611))) then
+								return v29;
+							end
+							v240 = 1964 - (556 + 1407);
+						end
+						if (((2342 - (741 + 465)) >= (619 - (170 + 295))) and (v240 == (1 + 0))) then
+							v29 = v120.HandleChromie(v114.HealingSurge, v116.HealingSurgeMouseover, 37 + 3);
+							if (v29 or ((667 - 396) > (3936 + 812))) then
+								return v29;
+							end
+							break;
 						end
 					end
-					if ((v69 and v113.SheilunsGift:IsReady() and (v113.SheilunsGift:TimeSinceLastCast() > (34 - 14))) or ((1313 + 716) >= (3094 + 427))) then
-						if (v23(v113.SheilunsGift, nil) or ((1943 + 94) >= (13601 - 8959))) then
-							return "Sheilun's Gift YuLon prep";
+				end
+				if (((3040 + 1700) >= (1785 + 1367)) and v104) then
+					local v241 = 1230 - (957 + 273);
+					while true do
+						if ((v241 == (1 + 1)) or ((1033 + 1545) >= (12917 - 9527))) then
+							v29 = v120.HandleCharredTreant(v114.Vivify, v116.VivifyMouseover, 105 - 65);
+							if (((125 - 84) <= (8224 - 6563)) and v29) then
+								return v29;
+							end
+							v241 = 1783 - (389 + 1391);
 						end
-					end
-					if (((1294 + 426) < (4536 - (23 + 55))) and v113.InvokeYulonTheJadeSerpent:IsReady() and (v113.RenewingMist:ChargesFractional() < (2 - 1)) and v12:BuffUp(v113.ManaTeaBuff) and (v113.SheilunsGift:TimeSinceLastCast() < ((3 + 1) * v12:GCD()))) then
-						if (v23(v113.InvokeYulonTheJadeSerpent, nil) or ((392 + 44) > (4683 - 1662))) then
-							return "Invoke Yu'lon GO";
+						if (((378 + 223) < (371 + 3189)) and ((2 - 1) == v241)) then
+							v29 = v120.HandleCharredTreant(v114.SoothingMist, v116.SoothingMistMouseover, 991 - (783 + 168));
+							if (((788 - 553) < (676 + 11)) and v29) then
+								return v29;
+							end
+							v241 = 313 - (309 + 2);
+						end
+						if (((13969 - 9420) > (2365 - (1090 + 122))) and ((0 + 0) == v241)) then
+							v29 = v120.HandleCharredTreant(v114.RenewingMist, v116.RenewingMistMouseover, 134 - 94);
+							if (v29 or ((3199 + 1475) < (5790 - (628 + 490)))) then
+								return v29;
+							end
+							v241 = 1 + 0;
+						end
+						if (((9081 - 5413) < (20843 - 16282)) and (v241 == (777 - (431 + 343)))) then
+							v29 = v120.HandleCharredTreant(v114.EnvelopingMist, v116.EnvelopingMistMouseover, 80 - 40);
+							if (v29 or ((1316 - 861) == (2848 + 757))) then
+								return v29;
+							end
+							break;
 						end
 					end
 				end
 				v139 = 1 + 1;
 			end
-			if (((1614 - (652 + 249)) <= (2266 - 1419)) and (v139 == (1870 - (708 + 1160)))) then
-				if (((5846 - 3692) <= (7349 - 3318)) and (v113.InvokeYulonTheJadeSerpent:TimeSinceLastCast() <= (52 - (10 + 17)))) then
-					local v240 = 0 + 0;
-					while true do
-						if (((6347 - (1400 + 332)) == (8851 - 4236)) and (v240 == (1908 - (242 + 1666)))) then
-							v28 = v129();
-							if (v28 or ((1622 + 2168) == (184 + 316))) then
-								return v28;
-							end
-							break;
-						end
-					end
-				end
-				if (((76 + 13) < (1161 - (850 + 90))) and v75 and v113.InvokeChiJiTheRedCrane:IsReady() and v113.InvokeChiJiTheRedCrane:IsAvailable() and v119.AreUnitsBelowHealthPercentage(v77, v76, v113.EnvelopingMist)) then
-					local v241 = 0 - 0;
-					while true do
-						if (((3444 - (360 + 1030)) >= (1258 + 163)) and (v241 == (0 - 0))) then
-							if (((951 - 259) < (4719 - (909 + 752))) and v51 and v113.RenewingMist:IsReady() and (v113.RenewingMist:ChargesFractional() >= (1224 - (109 + 1114)))) then
-								local v246 = 0 - 0;
-								while true do
-									if (((1 + 0) == v246) or ((3496 - (6 + 236)) == (1043 + 612))) then
-										if (v23(v115.RenewingMistFocus, not v16:IsSpellInRange(v113.RenewingMist)) or ((1044 + 252) == (11579 - 6669))) then
-											return "Renewing Mist ChiJi prep";
-										end
-										break;
-									end
-									if (((5882 - 2514) == (4501 - (1076 + 57))) and (v246 == (0 + 0))) then
-										v28 = v119.FocusUnitRefreshableBuff(v113.RenewingMistBuff, 695 - (579 + 110), 4 + 36, nil, false, 23 + 2, v113.EnvelopingMist);
-										if (((1403 + 1240) < (4222 - (174 + 233))) and v28) then
-											return v28;
-										end
-										v246 = 2 - 1;
-									end
-								end
-							end
-							if (((3357 - 1444) > (220 + 273)) and v69 and v113.SheilunsGift:IsReady() and (v113.SheilunsGift:TimeSinceLastCast() > (1194 - (663 + 511)))) then
-								if (((4243 + 512) > (745 + 2683)) and v23(v113.SheilunsGift, nil)) then
-									return "Sheilun's Gift ChiJi prep";
-								end
-							end
-							v241 = 2 - 1;
-						end
-						if (((837 + 544) <= (5577 - 3208)) and (v241 == (2 - 1))) then
-							if ((v113.InvokeChiJiTheRedCrane:IsReady() and (v113.RenewingMist:ChargesFractional() < (1 + 0)) and v12:BuffUp(v113.AncientTeachings) and (v12:BuffStack(v113.TeachingsoftheMonastery) == (5 - 2)) and (v113.SheilunsGift:TimeSinceLastCast() < ((3 + 1) * v12:GCD()))) or ((443 + 4400) == (4806 - (478 + 244)))) then
-								if (((5186 - (440 + 77)) > (166 + 197)) and v23(v113.InvokeChiJiTheRedCrane, nil)) then
-									return "Invoke Chi'ji GO";
-								end
-							end
-							break;
-						end
-					end
-				end
-				v139 = 10 - 7;
-			end
-			if ((v139 == (1556 - (655 + 901))) or ((349 + 1528) >= (2403 + 735))) then
-				if (((3202 + 1540) >= (14607 - 10981)) and v78 and v113.LifeCocoon:IsReady() and (v16:HealthPercentage() <= v79)) then
-					if (v23(v115.LifeCocoonFocus, not v16:IsSpellInRange(v113.LifeCocoon)) or ((5985 - (695 + 750)) == (3127 - 2211))) then
-						return "Life Cocoon CD";
-					end
-				end
-				if ((v80 and v113.Revival:IsReady() and v113.Revival:IsAvailable() and v119.AreUnitsBelowHealthPercentage(v82, v81, v113.EnvelopingMist)) or ((1783 - 627) > (17474 - 13129))) then
-					if (((2588 - (285 + 66)) < (9904 - 5655)) and v23(v113.Revival, nil)) then
-						return "Revival CD";
-					end
-				end
-				v139 = 1311 - (682 + 628);
-			end
-			if (((1 + 2) == v139) or ((2982 - (176 + 123)) < (10 + 13))) then
-				if (((506 + 191) <= (1095 - (239 + 30))) and (v113.InvokeChiJiTheRedCrane:TimeSinceLastCast() <= (7 + 18))) then
+			if ((v139 == (1697 - (556 + 1139))) or ((2678 - (6 + 9)) == (607 + 2705))) then
+				if (((2192 + 2085) <= (4644 - (28 + 141))) and v105) then
 					local v242 = 0 + 0;
 					while true do
-						if (((1955 - 850) <= (3668 - 2492)) and ((315 - (306 + 9)) == v242)) then
-							v28 = v130();
-							if (((11791 - 8412) <= (663 + 3149)) and v28) then
-								return v28;
+						if ((v242 == (0 - 0)) or ((617 + 253) == (2506 - (486 + 831)))) then
+							v29 = v120.HandleCharredBrambles(v114.RenewingMist, v116.RenewingMistMouseover, 104 - 64);
+							if (((5467 - 3914) <= (593 + 2540)) and v29) then
+								return v29;
+							end
+							v242 = 3 - 2;
+						end
+						if ((v242 == (1264 - (668 + 595))) or ((2013 + 224) >= (708 + 2803))) then
+							v29 = v120.HandleCharredBrambles(v114.SoothingMist, v116.SoothingMistMouseover, 109 - 69);
+							if (v29 or ((1614 - (23 + 267)) > (4964 - (1129 + 815)))) then
+								return v29;
+							end
+							v242 = 389 - (371 + 16);
+						end
+						if ((v242 == (1753 - (1326 + 424))) or ((5666 - 2674) == (6873 - 4992))) then
+							v29 = v120.HandleCharredBrambles(v114.EnvelopingMist, v116.EnvelopingMistMouseover, 158 - (88 + 30));
+							if (((3877 - (720 + 51)) > (3394 - 1868)) and v29) then
+								return v29;
 							end
 							break;
 						end
+						if (((4799 - (421 + 1355)) < (6384 - 2514)) and (v242 == (1 + 1))) then
+							v29 = v120.HandleCharredBrambles(v114.Vivify, v116.VivifyMouseover, 1123 - (286 + 797));
+							if (((522 - 379) > (122 - 48)) and v29) then
+								return v29;
+							end
+							v242 = 442 - (397 + 42);
+						end
+					end
+				end
+				if (((6 + 12) < (2912 - (24 + 776))) and v106) then
+					local v243 = 0 - 0;
+					while true do
+						if (((1882 - (222 + 563)) <= (3586 - 1958)) and (v243 == (1 + 0))) then
+							v29 = v120.HandleFyrakkNPC(v114.SoothingMist, v116.SoothingMistMouseover, 230 - (23 + 167));
+							if (((6428 - (690 + 1108)) == (1671 + 2959)) and v29) then
+								return v29;
+							end
+							v243 = 2 + 0;
+						end
+						if (((4388 - (40 + 808)) > (442 + 2241)) and (v243 == (7 - 5))) then
+							v29 = v120.HandleFyrakkNPC(v114.Vivify, v116.VivifyMouseover, 39 + 1);
+							if (((2537 + 2257) >= (1796 + 1479)) and v29) then
+								return v29;
+							end
+							v243 = 574 - (47 + 524);
+						end
+						if (((964 + 520) == (4056 - 2572)) and (v243 == (4 - 1))) then
+							v29 = v120.HandleFyrakkNPC(v114.EnvelopingMist, v116.EnvelopingMistMouseover, 91 - 51);
+							if (((3158 - (1165 + 561)) < (106 + 3449)) and v29) then
+								return v29;
+							end
+							break;
+						end
+						if ((v243 == (0 - 0)) or ((407 + 658) > (4057 - (341 + 138)))) then
+							v29 = v120.HandleFyrakkNPC(v114.RenewingMist, v116.RenewingMistMouseover, 11 + 29);
+							if (v29 or ((9895 - 5100) < (1733 - (89 + 237)))) then
+								return v29;
+							end
+							v243 = 3 - 2;
+						end
+					end
+				end
+				break;
+			end
+		end
+	end
+	local function v125()
+		local v140 = 0 - 0;
+		while true do
+			if (((2734 - (581 + 300)) < (6033 - (855 + 365))) and (v140 == (0 - 0))) then
+				if ((v114.ChiBurst:IsCastable() and v50) or ((922 + 1899) < (3666 - (1030 + 205)))) then
+					if (v24(v114.ChiBurst, not v15:IsInRange(38 + 2)) or ((2674 + 200) < (2467 - (156 + 130)))) then
+						return "chi_burst precombat 4";
+					end
+				end
+				if ((v114.SpinningCraneKick:IsCastable() and v46 and (v119 >= (4 - 2))) or ((4531 - 1842) <= (702 - 359))) then
+					if (v24(v114.SpinningCraneKick, not v15:IsInMeleeRange(3 + 5)) or ((1090 + 779) == (2078 - (10 + 59)))) then
+						return "spinning_crane_kick precombat 6";
+					end
+				end
+				v140 = 1 + 0;
+			end
+			if ((v140 == (4 - 3)) or ((4709 - (671 + 492)) < (1849 + 473))) then
+				if ((v114.TigerPalm:IsCastable() and v48) or ((3297 - (369 + 846)) == (1264 + 3509))) then
+					if (((2769 + 475) > (3000 - (1036 + 909))) and v24(v114.TigerPalm, not v15:IsInMeleeRange(4 + 1))) then
+						return "tiger_palm precombat 8";
+					end
+				end
+				break;
+			end
+		end
+	end
+	local function v126()
+		local v141 = 0 - 0;
+		while true do
+			if (((206 - (11 + 192)) == v141) or ((1675 + 1638) <= (1953 - (135 + 40)))) then
+				if ((v114.TigerPalm:IsCastable() and v114.TeachingsoftheMonastery:IsAvailable() and (v114.BlackoutKick:CooldownRemains() > (0 - 0)) and v48 and (v119 >= (2 + 1))) or ((3130 - 1709) >= (3153 - 1049))) then
+					if (((1988 - (50 + 126)) <= (9046 - 5797)) and v24(v114.TigerPalm, not v15:IsInMeleeRange(2 + 3))) then
+						return "tiger_palm aoe 7";
+					end
+				end
+				if (((3036 - (1233 + 180)) <= (2926 - (522 + 447))) and v114.SpinningCraneKick:IsCastable() and v46) then
+					if (((5833 - (107 + 1314)) == (2048 + 2364)) and v24(v114.SpinningCraneKick, not v15:IsInMeleeRange(24 - 16))) then
+						return "spinning_crane_kick aoe 8";
+					end
+				end
+				break;
+			end
+			if (((744 + 1006) >= (1671 - 829)) and (v141 == (0 - 0))) then
+				if (((6282 - (716 + 1194)) > (32 + 1818)) and v114.SummonWhiteTigerStatue:IsReady() and (v119 >= (1 + 2)) and v44) then
+					if (((735 - (74 + 429)) < (1583 - 762)) and (v43 == "Player")) then
+						if (((257 + 261) < (2064 - 1162)) and v24(v116.SummonWhiteTigerStatuePlayer, not v15:IsInRange(29 + 11))) then
+							return "summon_white_tiger_statue aoe player 1";
+						end
+					elseif (((9230 - 6236) > (2121 - 1263)) and (v43 == "Cursor")) then
+						if (v24(v116.SummonWhiteTigerStatueCursor, not v15:IsInRange(473 - (279 + 154))) or ((4533 - (454 + 324)) <= (720 + 195))) then
+							return "summon_white_tiger_statue aoe cursor 1";
+						end
+					elseif (((3963 - (12 + 5)) > (2019 + 1724)) and (v43 == "Friendly under Cursor") and v16:Exists() and not v13:CanAttack(v16)) then
+						if (v24(v116.SummonWhiteTigerStatueCursor, not v15:IsInRange(101 - 61)) or ((494 + 841) >= (4399 - (277 + 816)))) then
+							return "summon_white_tiger_statue aoe cursor friendly 1";
+						end
+					elseif (((20698 - 15854) > (3436 - (1058 + 125))) and (v43 == "Enemy under Cursor") and v16:Exists() and v13:CanAttack(v16)) then
+						if (((85 + 367) == (1427 - (815 + 160))) and v24(v116.SummonWhiteTigerStatueCursor, not v15:IsInRange(171 - 131))) then
+							return "summon_white_tiger_statue aoe cursor enemy 1";
+						end
+					elseif ((v43 == "Confirmation") or ((10817 - 6260) < (498 + 1589))) then
+						if (((11324 - 7450) == (5772 - (41 + 1857))) and v24(v116.SummonWhiteTigerStatue, not v15:IsInRange(1933 - (1222 + 671)))) then
+							return "summon_white_tiger_statue aoe confirmation 1";
+						end
+					end
+				end
+				if ((v114.TouchofDeath:IsCastable() and v51) or ((5008 - 3070) > (7093 - 2158))) then
+					if (v24(v114.TouchofDeath, not v15:IsInMeleeRange(1187 - (229 + 953))) or ((6029 - (1111 + 663)) < (5002 - (874 + 705)))) then
+						return "touch_of_death aoe 2";
+					end
+				end
+				v141 = 1 + 0;
+			end
+			if (((993 + 461) <= (5177 - 2686)) and ((1 + 0) == v141)) then
+				if ((v114.JadefireStomp:IsReady() and v49) or ((4836 - (642 + 37)) <= (640 + 2163))) then
+					if (((777 + 4076) >= (7486 - 4504)) and v24(v114.JadefireStomp, not v15:IsInMeleeRange(462 - (233 + 221)))) then
+						return "JadefireStomp aoe3";
+					end
+				end
+				if (((9559 - 5425) > (2955 + 402)) and v114.ChiBurst:IsCastable() and v50) then
+					if (v24(v114.ChiBurst, not v15:IsInRange(1581 - (718 + 823))) or ((2151 + 1266) < (3339 - (266 + 539)))) then
+						return "chi_burst aoe 4";
+					end
+				end
+				v141 = 5 - 3;
+			end
+			if ((v141 == (1227 - (636 + 589))) or ((6461 - 3739) <= (338 - 174))) then
+				if ((v114.SpinningCraneKick:IsCastable() and v46 and (v15:DebuffDown(v114.MysticTouchDebuff) or (v120.EnemiesWithDebuffCount(v114.MysticTouchDebuff) <= (v119 - (1 + 0)))) and v114.MysticTouch:IsAvailable()) or ((875 + 1533) < (3124 - (657 + 358)))) then
+					if (v24(v114.SpinningCraneKick, not v15:IsInMeleeRange(21 - 13)) or ((75 - 42) == (2642 - (1151 + 36)))) then
+						return "spinning_crane_kick aoe 5";
+					end
+				end
+				if ((v114.BlackoutKick:IsCastable() and v114.AncientConcordance:IsAvailable() and v13:BuffUp(v114.JadefireStomp) and v45 and (v119 >= (3 + 0))) or ((117 + 326) >= (11990 - 7975))) then
+					if (((5214 - (1552 + 280)) > (1000 - (64 + 770))) and v24(v114.BlackoutKick, not v15:IsInMeleeRange(4 + 1))) then
+						return "blackout_kick aoe 6";
+					end
+				end
+				v141 = 6 - 3;
+			end
+		end
+	end
+	local function v127()
+		local v142 = 0 + 0;
+		while true do
+			if ((v142 == (1243 - (157 + 1086))) or ((560 - 280) == (13397 - 10338))) then
+				if (((2885 - 1004) > (1763 - 470)) and v114.TouchofDeath:IsCastable() and v51) then
+					if (((3176 - (599 + 220)) == (4693 - 2336)) and v24(v114.TouchofDeath, not v15:IsInMeleeRange(1936 - (1813 + 118)))) then
+						return "touch_of_death st 1";
+					end
+				end
+				if (((90 + 33) == (1340 - (841 + 376))) and v114.JadefireStomp:IsReady() and v49) then
+					if (v24(v114.JadefireStomp, nil) or ((1478 - 422) >= (788 + 2604))) then
+						return "JadefireStomp st 2";
+					end
+				end
+				v142 = 2 - 1;
+			end
+			if ((v142 == (861 - (464 + 395))) or ((2774 - 1693) < (517 + 558))) then
+				if ((v114.BlackoutKick:IsCastable() and (v13:BuffStack(v114.TeachingsoftheMonasteryBuff) >= (840 - (467 + 370))) and (v114.RisingSunKick:CooldownRemains() > v13:GCD()) and v45) or ((2167 - 1118) >= (3254 + 1178))) then
+					if (v24(v114.BlackoutKick, not v15:IsInMeleeRange(17 - 12)) or ((744 + 4024) <= (1968 - 1122))) then
+						return "blackout_kick st 5";
+					end
+				end
+				if ((v114.TigerPalm:IsCastable() and ((v13:BuffStack(v114.TeachingsoftheMonasteryBuff) < (523 - (150 + 370))) or (v13:BuffRemains(v114.TeachingsoftheMonasteryBuff) < (1284 - (74 + 1208)))) and v48) or ((8259 - 4901) <= (6734 - 5314))) then
+					if (v24(v114.TigerPalm, not v15:IsInMeleeRange(4 + 1)) or ((4129 - (14 + 376)) <= (5212 - 2207))) then
+						return "tiger_palm st 6";
+					end
+				end
+				break;
+			end
+			if ((v142 == (1 + 0)) or ((1458 + 201) >= (2036 + 98))) then
+				if ((v114.RisingSunKick:IsReady() and v47) or ((9552 - 6292) < (1772 + 583))) then
+					if (v24(v114.RisingSunKick, not v15:IsInMeleeRange(83 - (23 + 55))) or ((1585 - 916) == (2819 + 1404))) then
+						return "rising_sun_kick st 3";
+					end
+				end
+				if ((v114.ChiBurst:IsCastable() and v50) or ((1520 + 172) < (911 - 323))) then
+					if (v24(v114.ChiBurst, not v15:IsInRange(13 + 27)) or ((5698 - (652 + 249)) < (9770 - 6119))) then
+						return "chi_burst st 4";
+					end
+				end
+				v142 = 1870 - (708 + 1160);
+			end
+		end
+	end
+	local function v128()
+		local v143 = 0 - 0;
+		while true do
+			if ((v143 == (1 - 0)) or ((4204 - (10 + 17)) > (1090 + 3760))) then
+				if ((v52 and v114.RenewingMist:IsReady() and v17:BuffDown(v114.RenewingMistBuff)) or ((2132 - (1400 + 332)) > (2130 - 1019))) then
+					if (((4959 - (242 + 1666)) > (431 + 574)) and (v17:HealthPercentage() <= v53)) then
+						if (((1354 + 2339) <= (3735 + 647)) and v24(v116.RenewingMistFocus, not v17:IsSpellInRange(v114.RenewingMist))) then
+							return "RenewingMist healing st";
+						end
+					end
+				end
+				if ((v56 and v114.Vivify:IsReady() and v13:BuffUp(v114.VivaciousVivificationBuff)) or ((4222 - (850 + 90)) > (7181 - 3081))) then
+					if ((v17:HealthPercentage() <= v57) or ((4970 - (360 + 1030)) < (2517 + 327))) then
+						if (((250 - 161) < (6177 - 1687)) and v24(v116.VivifyFocus, not v17:IsSpellInRange(v114.Vivify))) then
+							return "Vivify instant healing st";
+						end
+					end
+				end
+				v143 = 1663 - (909 + 752);
+			end
+			if ((v143 == (1225 - (109 + 1114))) or ((9122 - 4139) < (704 + 1104))) then
+				if (((4071 - (6 + 236)) > (2375 + 1394)) and v60 and v114.SoothingMist:IsReady() and v17:BuffDown(v114.SoothingMist)) then
+					if (((1196 + 289) <= (6848 - 3944)) and (v17:HealthPercentage() <= v61)) then
+						if (((7456 - 3187) == (5402 - (1076 + 57))) and v24(v116.SoothingMistFocus, not v17:IsSpellInRange(v114.SoothingMist))) then
+							return "SoothingMist healing st";
+						end
+					end
+				end
+				break;
+			end
+			if (((64 + 323) <= (3471 - (579 + 110))) and ((0 + 0) == v143)) then
+				if ((v52 and v114.RenewingMist:IsReady() and v17:BuffDown(v114.RenewingMistBuff) and (v114.RenewingMist:ChargesFractional() >= (1.8 + 0))) or ((1008 + 891) <= (1324 - (174 + 233)))) then
+					if ((v17:HealthPercentage() <= v53) or ((12044 - 7732) <= (1537 - 661))) then
+						if (((993 + 1239) <= (3770 - (663 + 511))) and v24(v116.RenewingMistFocus, not v17:IsSpellInRange(v114.RenewingMist))) then
+							return "RenewingMist healing st";
+						end
+					end
+				end
+				if (((1869 + 226) < (801 + 2885)) and v47 and v114.RisingSunKick:IsReady() and (v120.FriendlyUnitsWithBuffCount(v114.RenewingMistBuff, false, false, 77 - 52) > (1 + 0))) then
+					if (v24(v114.RisingSunKick, not v15:IsInMeleeRange(11 - 6)) or ((3861 - 2266) >= (2135 + 2339))) then
+						return "RisingSunKick healing st";
+					end
+				end
+				v143 = 1 - 0;
+			end
+		end
+	end
+	local function v129()
+		local v144 = 0 + 0;
+		while true do
+			if ((v144 == (1 + 0)) or ((5341 - (478 + 244)) < (3399 - (440 + 77)))) then
+				if ((v67 and v114.ZenPulse:IsReady() and v120.AreUnitsBelowHealthPercentage(v69, v68, v114.EnvelopingMist)) or ((134 + 160) >= (17681 - 12850))) then
+					if (((3585 - (655 + 901)) <= (572 + 2512)) and v24(v116.ZenPulseFocus, not v17:IsSpellInRange(v114.ZenPulse))) then
+						return "ZenPulse healing aoe";
+					end
+				end
+				if ((v70 and v114.SheilunsGift:IsReady() and v114.SheilunsGift:IsCastable() and v120.AreUnitsBelowHealthPercentage(v72, v71, v114.EnvelopingMist)) or ((1560 + 477) == (1635 + 785))) then
+					if (((17959 - 13501) > (5349 - (695 + 750))) and v24(v114.SheilunsGift, nil)) then
+						return "SheilunsGift healing aoe";
+					end
+				end
+				break;
+			end
+			if (((1488 - 1052) >= (189 - 66)) and (v144 == (0 - 0))) then
+				if (((851 - (285 + 66)) < (4232 - 2416)) and v47 and v114.RisingSunKick:IsReady() and (v120.FriendlyUnitsWithBuffCount(v114.RenewingMistBuff, false, false, 1335 - (682 + 628)) > (1 + 0))) then
+					if (((3873 - (176 + 123)) == (1495 + 2079)) and v24(v114.RisingSunKick, not v15:IsInMeleeRange(4 + 1))) then
+						return "RisingSunKick healing aoe";
+					end
+				end
+				if (((490 - (239 + 30)) < (107 + 283)) and v120.AreUnitsBelowHealthPercentage(v64, v63, v114.EnvelopingMist)) then
+					local v244 = 0 + 0;
+					while true do
+						if ((v244 == (0 - 0)) or ((6903 - 4690) <= (1736 - (306 + 9)))) then
+							if (((10671 - 7613) < (846 + 4014)) and v36 and (v13:BuffStack(v114.ManaTeaCharges) > v37) and v114.EssenceFont:IsReady() and v114.ManaTea:IsCastable()) then
+								if (v24(v114.ManaTea, nil) or ((796 + 500) >= (2141 + 2305))) then
+									return "EssenceFont healing aoe";
+								end
+							end
+							if ((v38 and v114.ThunderFocusTea:IsReady() and (v114.EssenceFont:CooldownRemains() < v13:GCD())) or ((3983 - 2590) > (5864 - (1140 + 235)))) then
+								if (v24(v114.ThunderFocusTea, nil) or ((2816 + 1608) < (25 + 2))) then
+									return "ThunderFocusTea healing aoe";
+								end
+							end
+							v244 = 1 + 0;
+						end
+						if ((v244 == (53 - (33 + 19))) or ((722 + 1275) > (11434 - 7619))) then
+							if (((1527 + 1938) > (3751 - 1838)) and v62 and v114.EssenceFont:IsReady() and (v13:BuffUp(v114.ThunderFocusTea) or (v114.ThunderFocusTea:CooldownRemains() > (8 + 0)))) then
+								if (((1422 - (586 + 103)) < (166 + 1653)) and v24(v114.EssenceFont, nil)) then
+									return "EssenceFont healing aoe";
+								end
+							end
+							if ((v62 and v114.EssenceFont:IsReady() and v114.AncientTeachings:IsAvailable() and v13:BuffDown(v114.EssenceFontBuff)) or ((13530 - 9135) == (6243 - (1309 + 179)))) then
+								if (v24(v114.EssenceFont, nil) or ((6847 - 3054) < (1032 + 1337))) then
+									return "EssenceFont healing aoe";
+								end
+							end
+							break;
+						end
+					end
+				end
+				v144 = 2 - 1;
+			end
+		end
+	end
+	local function v130()
+		if ((v58 and v114.EnvelopingMist:IsReady() and (v120.FriendlyUnitsWithBuffCount(v114.EnvelopingMist, false, false, 19 + 6) < (5 - 2))) or ((8137 - 4053) == (874 - (295 + 314)))) then
+			local v155 = 0 - 0;
+			while true do
+				if (((6320 - (1300 + 662)) == (13684 - 9326)) and (v155 == (1756 - (1178 + 577)))) then
+					if (v24(v116.EnvelopingMistFocus, not v17:IsSpellInRange(v114.EnvelopingMist)) or ((1630 + 1508) < (2935 - 1942))) then
+						return "Enveloping Mist YuLon";
+					end
+					break;
+				end
+				if (((4735 - (851 + 554)) > (2055 + 268)) and (v155 == (0 - 0))) then
+					v29 = v120.FocusUnitRefreshableBuff(v114.EnvelopingMist, 3 - 1, 342 - (115 + 187), nil, false, 20 + 5, v114.EnvelopingMist);
+					if (v29 or ((3433 + 193) == (15719 - 11730))) then
+						return v29;
+					end
+					v155 = 1162 - (160 + 1001);
+				end
+			end
+		end
+		if ((v47 and v114.RisingSunKick:IsReady() and (v120.FriendlyUnitsWithBuffCount(v114.EnvelopingMist, false, false, 22 + 3) > (2 + 0))) or ((1874 - 958) == (3029 - (237 + 121)))) then
+			if (((1169 - (525 + 372)) == (515 - 243)) and v24(v114.RisingSunKick, not v15:IsInMeleeRange(16 - 11))) then
+				return "Rising Sun Kick YuLon";
+			end
+		end
+		if (((4391 - (96 + 46)) <= (5616 - (643 + 134))) and v60 and v114.SoothingMist:IsReady() and v17:BuffUp(v114.ChiHarmonyBuff) and v17:BuffDown(v114.SoothingMist)) then
+			if (((1003 + 1774) < (7672 - 4472)) and v24(v116.SoothingMistFocus, not v17:IsSpellInRange(v114.SoothingMist))) then
+				return "Soothing Mist YuLon";
+			end
+		end
+	end
+	local function v131()
+		local v145 = 0 - 0;
+		while true do
+			if (((92 + 3) < (3840 - 1883)) and (v145 == (1 - 0))) then
+				if (((1545 - (316 + 403)) < (1142 + 575)) and v47 and v114.RisingSunKick:IsReady()) then
+					if (((3920 - 2494) >= (400 + 705)) and v24(v114.RisingSunKick, not v15:IsInMeleeRange(12 - 7))) then
+						return "Rising Sun Kick ChiJi";
+					end
+				end
+				if (((1952 + 802) <= (1089 + 2290)) and v58 and v114.EnvelopingMist:IsReady() and (v13:BuffStack(v114.InvokeChiJiBuff) >= (6 - 4))) then
+					if ((v17:HealthPercentage() <= v59) or ((18754 - 14827) == (2935 - 1522))) then
+						if (v24(v116.EnvelopingMistFocus, not v17:IsSpellInRange(v114.EnvelopingMist)) or ((67 + 1087) <= (1550 - 762))) then
+							return "Enveloping Mist 2 Stacks ChiJi";
+						end
+					end
+				end
+				v145 = 1 + 1;
+			end
+			if ((v145 == (0 - 0)) or ((1660 - (12 + 5)) > (13123 - 9744))) then
+				if ((v45 and v114.BlackoutKick:IsReady() and (v13:BuffStack(v114.TeachingsoftheMonastery) >= (5 - 2))) or ((5958 - 3155) > (11280 - 6731))) then
+					if (v24(v114.BlackoutKick, not v15:IsInMeleeRange(2 + 3)) or ((2193 - (1656 + 317)) >= (2693 + 329))) then
+						return "Blackout Kick ChiJi";
+					end
+				end
+				if (((2262 + 560) == (7503 - 4681)) and v58 and v114.EnvelopingMist:IsReady() and (v13:BuffStack(v114.InvokeChiJiBuff) == (14 - 11))) then
+					if ((v17:HealthPercentage() <= v59) or ((1415 - (5 + 349)) == (8820 - 6963))) then
+						if (((4031 - (266 + 1005)) > (899 + 465)) and v24(v116.EnvelopingMistFocus, not v17:IsSpellInRange(v114.EnvelopingMist))) then
+							return "Enveloping Mist 3 Stacks ChiJi";
+						end
+					end
+				end
+				v145 = 3 - 2;
+			end
+			if ((v145 == (2 - 0)) or ((6598 - (561 + 1135)) <= (4684 - 1089))) then
+				if ((v62 and v114.EssenceFont:IsReady() and v114.AncientTeachings:IsAvailable() and v13:BuffDown(v114.AncientTeachings)) or ((12661 - 8809) == (1359 - (507 + 559)))) then
+					if (v24(v114.EssenceFont, nil) or ((3911 - 2352) == (14189 - 9601))) then
+						return "Essence Font ChiJi";
 					end
 				end
 				break;
@@ -719,429 +685,619 @@ v0["Epix_Monk_Mistweaver.lua"] = function(...)
 		end
 	end
 	local function v132()
-		local v140 = 0 + 0;
+		local v146 = 388 - (212 + 176);
 		while true do
-			if ((v140 == (1 + 0)) or ((2253 - 1465) >= (2991 - (1140 + 235)))) then
-				v41 = EpicSettings.Settings['DampenHarmHP'];
-				v42 = EpicSettings.Settings['WhiteTigerUsage'];
-				v43 = EpicSettings.Settings['UseSummonWhiteTigerStatue'];
-				v44 = EpicSettings.Settings['UseBlackoutKick'];
-				v45 = EpicSettings.Settings['UseSpinningCraneKick'];
-				v46 = EpicSettings.Settings['UseRisingSunKick'];
-				v140 = 2 + 0;
-			end
-			if (((1701 + 153) <= (868 + 2511)) and (v140 == (55 - (33 + 19)))) then
-				v53 = EpicSettings.Settings['UseExpelHarm'];
-				v54 = EpicSettings.Settings['ExpelHarmHP'];
-				v55 = EpicSettings.Settings['UseVivify'];
-				v56 = EpicSettings.Settings['VivifyHP'];
-				v57 = EpicSettings.Settings['UseEnvelopingMist'];
-				v58 = EpicSettings.Settings['EnvelopingMistHP'];
-				v140 = 2 + 2;
-			end
-			if (((13634 - 9085) == (2004 + 2545)) and ((0 - 0) == v140)) then
-				v35 = EpicSettings.Settings['UseManaTea'];
-				v36 = EpicSettings.Settings['ManaTeaStacks'];
-				v37 = EpicSettings.Settings['UseThunderFocusTea'];
-				v38 = EpicSettings.Settings['UseFortifyingBrew'];
-				v39 = EpicSettings.Settings['FortifyingBrewHP'];
-				v40 = EpicSettings.Settings['UseDampenHarm'];
-				v140 = 1 + 0;
-			end
-			if ((v140 == (693 - (586 + 103))) or ((276 + 2746) >= (9309 - 6285))) then
-				v59 = EpicSettings.Settings['UseSoothingMist'];
-				v60 = EpicSettings.Settings['SoothingMistHP'];
-				v61 = EpicSettings.Settings['UseEssenceFont'];
-				v63 = EpicSettings.Settings['EssenceFontHP'];
-				v62 = EpicSettings.Settings['EssenceFontGroup'];
-				v65 = EpicSettings.Settings['UseJadeSerpent'];
-				v140 = 1493 - (1309 + 179);
-			end
-			if (((8701 - 3881) > (957 + 1241)) and (v140 == (13 - 8))) then
-				v64 = EpicSettings.Settings['JadeSerpentUsage'];
-				v66 = EpicSettings.Settings['UseZenPulse'];
-				v68 = EpicSettings.Settings['ZenPulseHP'];
-				v67 = EpicSettings.Settings['ZenPulseGroup'];
-				v69 = EpicSettings.Settings['UseSheilunsGift'];
-				v71 = EpicSettings.Settings['SheilunsGiftHP'];
-				v140 = 5 + 1;
-			end
-			if ((v140 == (3 - 1)) or ((2114 - 1053) >= (5500 - (295 + 314)))) then
-				v47 = EpicSettings.Settings['UseTigerPalm'];
-				v48 = EpicSettings.Settings['UseJadefireStomp'];
-				v49 = EpicSettings.Settings['UseChiBurst'];
-				v50 = EpicSettings.Settings['UseTouchOfDeath'];
-				v51 = EpicSettings.Settings['UseRenewingMist'];
-				v52 = EpicSettings.Settings['RenewingMistHP'];
-				v140 = 6 - 3;
-			end
-			if (((3326 - (1300 + 662)) <= (14045 - 9572)) and (v140 == (1761 - (1178 + 577)))) then
-				v70 = EpicSettings.Settings['SheilunsGiftGroup'];
-				break;
-			end
-		end
-	end
-	local function v133()
-		local v141 = 0 + 0;
-		while true do
-			if ((v141 == (8 - 5)) or ((5000 - (851 + 554)) <= (3 + 0))) then
-				v90 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-				v92 = EpicSettings.Settings['useSpearHandStrike'];
-				v93 = EpicSettings.Settings['useLegSweep'];
-				v100 = EpicSettings.Settings['handleAfflicted'];
-				v101 = EpicSettings.Settings['HandleIncorporeal'];
-				v102 = EpicSettings.Settings['HandleChromie'];
-				v141 = 10 - 6;
-			end
-			if (((3 - 1) == v141) or ((4974 - (115 + 187)) == (2950 + 902))) then
-				v106 = EpicSettings.Settings['useManaPotion'];
-				v107 = EpicSettings.Settings['manaPotionSlider'];
-				v108 = EpicSettings.Settings['RevivalBurstingGroup'];
-				v109 = EpicSettings.Settings['RevivalBurstingStacks'];
-				v91 = EpicSettings.Settings['InterruptThreshold'];
-				v89 = EpicSettings.Settings['InterruptWithStun'];
-				v141 = 3 + 0;
-			end
-			if (((6143 - 4584) == (2720 - (160 + 1001))) and (v141 == (0 + 0))) then
-				v95 = EpicSettings.Settings['racialsWithCD'];
-				v94 = EpicSettings.Settings['useRacials'];
-				v97 = EpicSettings.Settings['trinketsWithCD'];
-				v96 = EpicSettings.Settings['useTrinkets'];
-				v98 = EpicSettings.Settings['fightRemainsCheck'];
-				v99 = EpicSettings.Settings['useWeapon'];
-				v141 = 1 + 0;
-			end
-			if ((v141 == (7 - 3)) or ((2110 - (237 + 121)) <= (1685 - (525 + 372)))) then
-				v104 = EpicSettings.Settings['HandleCharredBrambles'];
-				v103 = EpicSettings.Settings['HandleCharredTreant'];
-				v105 = EpicSettings.Settings['HandleFyrakkNPC'];
-				v72 = EpicSettings.Settings['UseInvokeYulon'];
-				v74 = EpicSettings.Settings['InvokeYulonHP'];
-				v73 = EpicSettings.Settings['InvokeYulonGroup'];
-				v141 = 9 - 4;
-			end
-			if ((v141 == (16 - 11)) or ((4049 - (96 + 46)) == (954 - (643 + 134)))) then
-				v75 = EpicSettings.Settings['UseInvokeChiJi'];
-				v77 = EpicSettings.Settings['InvokeChiJiHP'];
-				v76 = EpicSettings.Settings['InvokeChiJiGroup'];
-				v78 = EpicSettings.Settings['UseLifeCocoon'];
-				v79 = EpicSettings.Settings['LifeCocoonHP'];
-				v80 = EpicSettings.Settings['UseRevival'];
-				v141 = 3 + 3;
-			end
-			if (((8320 - 4850) > (2060 - 1505)) and (v141 == (6 + 0))) then
-				v82 = EpicSettings.Settings['RevivalHP'];
-				v81 = EpicSettings.Settings['RevivalGroup'];
-				break;
-			end
-			if ((v141 == (1 - 0)) or ((1986 - 1014) == (1364 - (316 + 403)))) then
-				v88 = EpicSettings.Settings['dispelDebuffs'];
-				v85 = EpicSettings.Settings['useHealingPotion'];
-				v86 = EpicSettings.Settings['healingPotionHP'];
-				v87 = EpicSettings.Settings['HealingPotionName'];
-				v83 = EpicSettings.Settings['useHealthstone'];
-				v84 = EpicSettings.Settings['healthstoneHP'];
-				v141 = 2 + 0;
-			end
-		end
-	end
-	local v134 = 0 - 0;
-	local function v135()
-		v132();
-		v133();
-		v29 = EpicSettings.Toggles['ooc'];
-		v30 = EpicSettings.Toggles['aoe'];
-		v31 = EpicSettings.Toggles['cds'];
-		v32 = EpicSettings.Toggles['dispel'];
-		v33 = EpicSettings.Toggles['healing'];
-		v34 = EpicSettings.Toggles['dps'];
-		if (((1150 + 2032) >= (5326 - 3211)) and v12:IsDeadOrGhost()) then
-			return;
-		end
-		v117 = v12:GetEnemiesInMeleeRange(6 + 2);
-		if (((1255 + 2638) < (15346 - 10917)) and v30) then
-			v118 = #v117;
-		else
-			v118 = 4 - 3;
-		end
-		if (v119.TargetIsValid() or v12:AffectingCombat() or ((5955 - 3088) < (110 + 1795))) then
-			local v158 = 0 - 0;
-			while true do
-				if ((v158 == (1 + 0)) or ((5283 - 3487) >= (4068 - (12 + 5)))) then
-					v111 = v110;
-					if (((6288 - 4669) <= (8013 - 4257)) and (v111 == (23618 - 12507))) then
-						v111 = v9.FightRemains(v112, false);
-					end
-					break;
-				end
-				if (((1497 - 893) == (123 + 481)) and (v158 == (1973 - (1656 + 317)))) then
-					v112 = v12:GetEnemiesInRange(36 + 4);
-					v110 = v9.BossFightRemains(nil, true);
-					v158 = 1 + 0;
-				end
-			end
-		end
-		v28 = v123();
-		if (v28 or ((11922 - 7438) == (4429 - 3529))) then
-			return v28;
-		end
-		if (v12:AffectingCombat() or v29 or ((4813 - (5 + 349)) <= (5286 - 4173))) then
-			local v159 = v88 and v113.Detox:IsReady() and v32;
-			v28 = v119.FocusUnit(v159, nil, 1311 - (266 + 1005), nil, 17 + 8, v113.EnvelopingMist);
-			if (((12392 - 8760) > (4473 - 1075)) and v28) then
-				return v28;
-			end
-			if (((5778 - (561 + 1135)) <= (6407 - 1490)) and v32 and v88) then
-				local v235 = 0 - 0;
-				while true do
-					if (((5898 - (507 + 559)) >= (3477 - 2091)) and (v235 == (0 - 0))) then
-						if (((525 - (212 + 176)) == (1042 - (250 + 655))) and v16 and v16:Exists() and v16:IsAPlayer() and v119.UnitHasDispellableDebuffByPlayer(v16)) then
-							if (v113.Detox:IsCastable() or ((4281 - 2711) >= (7568 - 3236))) then
-								if ((v134 == (0 - 0)) or ((6020 - (1869 + 87)) <= (6308 - 4489))) then
-									v134 = GetTime();
-								end
-								if (v119.Wait(2401 - (484 + 1417), v134) or ((10686 - 5700) < (2637 - 1063))) then
-									if (((5199 - (48 + 725)) > (280 - 108)) and v23(v115.DetoxFocus, not v16:IsSpellInRange(v113.Detox))) then
-										return "detox dispel focus";
-									end
-									v134 = 0 - 0;
-								end
-							end
-						end
-						if (((341 + 245) > (1215 - 760)) and v15 and v15:Exists() and v15:IsAPlayer() and v119.UnitHasDispellableDebuffByPlayer(v15)) then
-							if (((232 + 594) == (241 + 585)) and v113.Detox:IsCastable()) then
-								if (v23(v115.DetoxMouseover, not v15:IsSpellInRange(v113.Detox)) or ((4872 - (152 + 701)) > (5752 - (430 + 881)))) then
-									return "detox dispel mouseover";
-								end
-							end
-						end
-						break;
-					end
-				end
-			end
-		end
-		if (((773 + 1244) < (5156 - (557 + 338))) and not v12:AffectingCombat()) then
-			if (((1394 + 3322) > (225 - 145)) and v15 and v15:Exists() and v15:IsAPlayer() and v15:IsDeadOrGhost() and not v12:CanAttack(v15)) then
-				local v236 = 0 - 0;
-				local v237;
-				while true do
-					if ((v236 == (0 - 0)) or ((7558 - 4051) == (4073 - (499 + 302)))) then
-						v237 = v119.DeadFriendlyUnitsCount();
-						if ((v237 > (867 - (39 + 827))) or ((2417 - 1541) >= (6867 - 3792))) then
-							if (((17285 - 12933) > (3920 - 1366)) and v23(v113.Reawaken, nil)) then
-								return "reawaken";
-							end
-						elseif (v23(v115.ResuscitateMouseover, not v14:IsInRange(4 + 36)) or ((12895 - 8489) < (647 + 3396))) then
-							return "resuscitate";
-						end
-						break;
-					end
-				end
-			end
-		end
-		if ((not v12:AffectingCombat() and v29) or ((2988 - 1099) >= (3487 - (103 + 1)))) then
-			v28 = v124();
-			if (((2446 - (475 + 79)) <= (5910 - 3176)) and v28) then
-				return v28;
-			end
-		end
-		if (((6153 - 4230) < (287 + 1931)) and (v29 or v12:AffectingCombat())) then
-			if (((1913 + 260) > (1882 - (1395 + 108))) and v31 and v99 and (v114.Dreambinder:IsEquippedAndReady() or v114.Iridal:IsEquippedAndReady())) then
-				if (v23(v115.UseWeapon, nil) or ((7539 - 4948) == (4613 - (7 + 1197)))) then
-					return "Using Weapon Macro";
-				end
-			end
-			if (((1969 + 2545) > (1160 + 2164)) and v106 and v114.AeratedManaPotion:IsReady() and (v12:ManaPercentage() <= v107)) then
-				if (v23(v115.ManaPotion, nil) or ((527 - (27 + 292)) >= (14147 - 9319))) then
-					return "Mana Potion main";
-				end
-			end
-			if ((v12:DebuffStack(v113.Bursting) > (6 - 1)) or ((6638 - 5055) > (7034 - 3467))) then
-				if ((v113.DiffuseMagic:IsReady() and v113.DiffuseMagic:IsAvailable()) or ((2500 - 1187) == (933 - (43 + 96)))) then
-					if (((12946 - 9772) > (6560 - 3658)) and v23(v113.DiffuseMagic, nil)) then
-						return "Diffues Magic Bursting Player";
-					end
-				end
-			end
-			if (((3419 + 701) <= (1203 + 3057)) and (v113.Bursting:MaxDebuffStack() > v109) and (v113.Bursting:AuraActiveCount() > v108)) then
-				if ((v80 and v113.Revival:IsReady() and v113.Revival:IsAvailable()) or ((1745 - 862) > (1832 + 2946))) then
-					if (v23(v113.Revival, nil) or ((6784 - 3164) >= (1540 + 3351))) then
-						return "Revival Bursting";
-					end
-				end
-			end
-			if (((313 + 3945) > (2688 - (1414 + 337))) and v33) then
-				local v238 = 1940 - (1642 + 298);
-				while true do
-					if ((v238 == (7 - 4)) or ((14007 - 9138) < (2688 - 1782))) then
-						v28 = v127();
-						if (v28 or ((404 + 821) > (3290 + 938))) then
-							return v28;
-						end
-						break;
-					end
-					if (((4300 - (357 + 615)) > (1571 + 667)) and (v238 == (2 - 1))) then
-						if (((3290 + 549) > (3010 - 1605)) and v59 and v113.SoothingMist:IsReady() and v14:BuffDown(v113.SoothingMist) and not v12:CanAttack(v14)) then
-							if ((v14:HealthPercentage() <= v60) or ((1035 + 258) <= (35 + 472))) then
-								if (v23(v113.SoothingMist, not v14:IsSpellInRange(v113.SoothingMist)) or ((1821 + 1075) < (2106 - (384 + 917)))) then
-									return "SoothingMist main";
-								end
-							end
-						end
-						if (((3013 - (128 + 569)) == (3859 - (1407 + 136))) and v35 and (v12:BuffStack(v113.ManaTeaCharges) >= (1905 - (687 + 1200))) and v113.ManaTea:IsCastable()) then
-							if (v23(v113.ManaTea, nil) or ((4280 - (556 + 1154)) == (5393 - 3860))) then
-								return "Mana Tea main avoid overcap";
-							end
-						end
-						v238 = 97 - (9 + 86);
-					end
-					if ((v238 == (421 - (275 + 146))) or ((144 + 739) == (1524 - (29 + 35)))) then
-						if ((v113.SummonJadeSerpentStatue:IsReady() and v113.SummonJadeSerpentStatue:IsAvailable() and (v113.SummonJadeSerpentStatue:TimeSinceLastCast() > (398 - 308)) and v65) or ((13796 - 9177) <= (4409 - 3410))) then
-							if ((v64 == "Player") or ((2222 + 1188) > (5128 - (53 + 959)))) then
-								if (v23(v115.SummonJadeSerpentStatuePlayer, not v14:IsInRange(448 - (312 + 96))) or ((1566 - 663) >= (3344 - (147 + 138)))) then
-									return "jade serpent main player";
-								end
-							elseif ((v64 == "Cursor") or ((4875 - (813 + 86)) < (2582 + 275))) then
-								if (((9134 - 4204) > (2799 - (18 + 474))) and v23(v115.SummonJadeSerpentStatueCursor, not v14:IsInRange(14 + 26))) then
-									return "jade serpent main cursor";
-								end
-							elseif ((v64 == "Confirmation") or ((13205 - 9159) < (2377 - (860 + 226)))) then
-								if (v23(v113.SummonJadeSerpentStatue, not v14:IsInRange(343 - (121 + 182))) or ((523 + 3718) == (4785 - (988 + 252)))) then
-									return "jade serpent main confirmation";
-								end
-							end
-						end
-						if ((v51 and v113.RenewingMist:IsReady() and v14:BuffDown(v113.RenewingMistBuff) and not v12:CanAttack(v14)) or ((458 + 3590) > (1326 + 2906))) then
-							if ((v14:HealthPercentage() <= v52) or ((3720 - (49 + 1921)) >= (4363 - (223 + 667)))) then
-								if (((3218 - (51 + 1)) == (5448 - 2282)) and v23(v113.RenewingMist, not v14:IsSpellInRange(v113.RenewingMist))) then
-									return "RenewingMist main";
-								end
-							end
-						end
-						v238 = 1 - 0;
-					end
-					if (((2888 - (146 + 979)) < (1052 + 2672)) and (v238 == (607 - (311 + 294)))) then
-						if (((158 - 101) <= (1154 + 1569)) and (v111 > v98) and v31 and v12:AffectingCombat()) then
-							v28 = v131();
-							if (v28 or ((3513 - (496 + 947)) == (1801 - (1233 + 125)))) then
-								return v28;
-							end
-						end
-						if (v30 or ((1098 + 1607) == (1250 + 143))) then
-							v28 = v128();
-							if (v28 or ((875 + 3726) < (1706 - (963 + 682)))) then
-								return v28;
-							end
-						end
-						v238 = 3 + 0;
-					end
-				end
-			end
-		end
-		if (((v29 or v12:AffectingCombat()) and v119.TargetIsValid() and v12:CanAttack(v14)) or ((2894 - (504 + 1000)) >= (3195 + 1549))) then
-			v28 = v122();
-			if (v28 or ((1825 + 178) > (362 + 3472))) then
-				return v28;
-			end
-			if ((v96 and ((v31 and v97) or not v97)) or ((229 - 73) > (3344 + 569))) then
-				local v239 = 0 + 0;
-				while true do
-					if (((377 - (156 + 26)) == (113 + 82)) and (v239 == (0 - 0))) then
-						v28 = v119.HandleTopTrinket(v116, v31, 204 - (149 + 15), nil);
-						if (((4065 - (890 + 70)) >= (1913 - (39 + 78))) and v28) then
-							return v28;
-						end
-						v239 = 483 - (14 + 468);
-					end
-					if (((9629 - 5250) >= (5956 - 3825)) and (v239 == (1 + 0))) then
-						v28 = v119.HandleBottomTrinket(v116, v31, 25 + 15, nil);
-						if (((817 + 3027) >= (923 + 1120)) and v28) then
-							return v28;
-						end
-						break;
-					end
-				end
-			end
-			if (v34 or ((847 + 2385) <= (5227 - 2496))) then
-				if (((4848 + 57) == (17236 - 12331)) and v94 and ((v31 and v95) or not v95) and (v111 < (1 + 17))) then
-					local v243 = 51 - (12 + 39);
+			if ((v146 == (908 - (250 + 655))) or ((12227 - 7743) == (1376 - 588))) then
+				if (((7146 - 2578) >= (5863 - (1869 + 87))) and (v114.InvokeChiJiTheRedCrane:TimeSinceLastCast() <= (86 - 61))) then
+					local v245 = 1901 - (484 + 1417);
 					while true do
-						if ((v243 == (1 + 0)) or ((12802 - 8666) >= (15709 - 11298))) then
-							if (v113.LightsJudgment:IsCastable() or ((877 + 2081) == (2115 + 1902))) then
-								if (((3113 - 1885) >= (542 + 271)) and v23(v113.LightsJudgment, not v14:IsInRange(193 - 153))) then
-									return "lights_judgment main 8";
-								end
+						if (((2670 - 1424) < (5815 - 2345)) and (v245 == (773 - (48 + 725)))) then
+							v29 = v131();
+							if (((6645 - 2577) >= (2607 - 1635)) and v29) then
+								return v29;
 							end
-							if (v113.Fireblood:IsCastable() or ((5165 - (1596 + 114)) > (10574 - 6524))) then
-								if (((956 - (164 + 549)) == (1681 - (1059 + 379))) and v23(v113.Fireblood, nil)) then
-									return "fireblood main 10";
-								end
-							end
-							v243 = 2 - 0;
+							break;
 						end
-						if (((2 + 0) == v243) or ((46 + 225) > (1964 - (145 + 247)))) then
-							if (((2248 + 491) < (1522 + 1771)) and v113.AncestralCall:IsCastable()) then
-								if (v23(v113.AncestralCall, nil) or ((11686 - 7744) < (218 + 916))) then
-									return "ancestral_call main 12";
+					end
+				end
+				break;
+			end
+			if (((287 + 206) < (10403 - 6510)) and ((1 + 0) == v146)) then
+				if ((v81 and v114.Restoral:IsReady() and v114.Restoral:IsAvailable() and v120.AreUnitsBelowHealthPercentage(v83, v82, v114.EnvelopingMist)) or ((430 + 1043) >= (4185 - (152 + 701)))) then
+					if (v24(v114.Restoral, nil) or ((5362 - (430 + 881)) <= (444 + 713))) then
+						return "Restoral CD";
+					end
+				end
+				if (((1499 - (557 + 338)) < (852 + 2029)) and v73 and v114.InvokeYulonTheJadeSerpent:IsAvailable() and v114.InvokeYulonTheJadeSerpent:IsReady() and v120.AreUnitsBelowHealthPercentage(v75, v74, v114.EnvelopingMist)) then
+					if ((v52 and v114.RenewingMist:IsReady() and (v114.RenewingMist:ChargesFractional() >= (2 - 1))) or ((3151 - 2251) == (8971 - 5594))) then
+						local v252 = 0 - 0;
+						while true do
+							if (((5260 - (499 + 302)) > (1457 - (39 + 827))) and (v252 == (2 - 1))) then
+								if (((7588 - 4190) >= (9512 - 7117)) and v24(v116.RenewingMistFocus, not v17:IsSpellInRange(v114.RenewingMist))) then
+									return "Renewing Mist YuLon prep";
 								end
+								break;
 							end
-							if (v113.BagofTricks:IsCastable() or ((2320 + 373) == (8074 - 3101))) then
-								if (((2866 - (254 + 466)) == (2706 - (544 + 16))) and v23(v113.BagofTricks, not v14:IsInRange(127 - 87))) then
-									return "bag_of_tricks main 14";
+							if ((v252 == (0 - 0)) or ((187 + 1996) >= (8265 - 5441))) then
+								v29 = v120.FocusUnitRefreshableBuff(v114.RenewingMistBuff, 1 + 5, 63 - 23, nil, false, 129 - (103 + 1), v114.EnvelopingMist);
+								if (((2490 - (475 + 79)) == (4185 - 2249)) and v29) then
+									return v29;
+								end
+								v252 = 3 - 2;
+							end
+						end
+					end
+					if ((v36 and v114.ManaTea:IsCastable() and (v13:BuffStack(v114.ManaTeaCharges) >= (1 + 2)) and v13:BuffDown(v114.ManaTeaBuff)) or ((4253 + 579) < (5816 - (1395 + 108)))) then
+						if (((11895 - 7807) > (5078 - (7 + 1197))) and v24(v114.ManaTea, nil)) then
+							return "ManaTea YuLon prep";
+						end
+					end
+					if (((1889 + 2443) == (1512 + 2820)) and v70 and v114.SheilunsGift:IsReady() and (v114.SheilunsGift:TimeSinceLastCast() > (339 - (27 + 292)))) then
+						if (((11718 - 7719) >= (3698 - 798)) and v24(v114.SheilunsGift, nil)) then
+							return "Sheilun's Gift YuLon prep";
+						end
+					end
+					if ((v114.InvokeYulonTheJadeSerpent:IsReady() and (v114.RenewingMist:ChargesFractional() < (4 - 3)) and v13:BuffUp(v114.ManaTeaBuff) and (v114.SheilunsGift:TimeSinceLastCast() < ((7 - 3) * v13:GCD()))) or ((4808 - 2283) > (4203 - (43 + 96)))) then
+						if (((17829 - 13458) == (9882 - 5511)) and v24(v114.InvokeYulonTheJadeSerpent, nil)) then
+							return "Invoke Yu'lon GO";
+						end
+					end
+				end
+				v146 = 2 + 0;
+			end
+			if ((v146 == (1 + 1)) or ((525 - 259) > (1911 + 3075))) then
+				if (((3731 - 1740) >= (292 + 633)) and (v114.InvokeYulonTheJadeSerpent:TimeSinceLastCast() <= (2 + 23))) then
+					v29 = v130();
+					if (((2206 - (1414 + 337)) < (3993 - (1642 + 298))) and v29) then
+						return v29;
+					end
+				end
+				if ((v76 and v114.InvokeChiJiTheRedCrane:IsReady() and v114.InvokeChiJiTheRedCrane:IsAvailable() and v120.AreUnitsBelowHealthPercentage(v78, v77, v114.EnvelopingMist)) or ((2152 - 1326) == (13955 - 9104))) then
+					local v246 = 0 - 0;
+					while true do
+						if (((61 + 122) == (143 + 40)) and (v246 == (973 - (357 + 615)))) then
+							if (((814 + 345) <= (4387 - 2599)) and v114.InvokeChiJiTheRedCrane:IsReady() and (v114.RenewingMist:ChargesFractional() < (1 + 0)) and v13:BuffUp(v114.AncientTeachings) and (v13:BuffStack(v114.TeachingsoftheMonastery) == (6 - 3)) and (v114.SheilunsGift:TimeSinceLastCast() < ((4 + 0) * v13:GCD()))) then
+								if (v24(v114.InvokeChiJiTheRedCrane, nil) or ((239 + 3268) > (2715 + 1603))) then
+									return "Invoke Chi'ji GO";
 								end
 							end
 							break;
 						end
-						if ((v243 == (628 - (294 + 334))) or ((2497 - (236 + 17)) == (1390 + 1834))) then
-							if (v113.BloodFury:IsCastable() or ((3818 + 1086) <= (7215 - 5299))) then
-								if (((426 - 336) <= (549 + 516)) and v23(v113.BloodFury, nil)) then
-									return "blood_fury main 4";
+						if ((v246 == (1301 - (384 + 917))) or ((3772 - (128 + 569)) <= (4508 - (1407 + 136)))) then
+							if (((3252 - (687 + 1200)) <= (3721 - (556 + 1154))) and v52 and v114.RenewingMist:IsReady() and (v114.RenewingMist:ChargesFractional() >= (3 - 2))) then
+								local v254 = 95 - (9 + 86);
+								while true do
+									if ((v254 == (421 - (275 + 146))) or ((452 + 2324) > (3639 - (29 + 35)))) then
+										v29 = v120.FocusUnitRefreshableBuff(v114.RenewingMistBuff, 26 - 20, 119 - 79, nil, false, 110 - 85, v114.EnvelopingMist);
+										if (v29 or ((1664 + 890) == (5816 - (53 + 959)))) then
+											return v29;
+										end
+										v254 = 409 - (312 + 96);
+									end
+									if (((4472 - 1895) == (2862 - (147 + 138))) and (v254 == (900 - (813 + 86)))) then
+										if (v24(v116.RenewingMistFocus, not v17:IsSpellInRange(v114.RenewingMist)) or ((6 + 0) >= (3499 - 1610))) then
+											return "Renewing Mist ChiJi prep";
+										end
+										break;
+									end
 								end
 							end
-							if (((3955 + 847) == (5596 - (413 + 381))) and v113.Berserking:IsCastable()) then
-								if (v23(v113.Berserking, nil) or ((96 + 2184) <= (1086 - 575))) then
-									return "berserking main 6";
+							if (((998 - (18 + 474)) <= (639 + 1253)) and v70 and v114.SheilunsGift:IsReady() and (v114.SheilunsGift:TimeSinceLastCast() > (65 - 45))) then
+								if (v24(v114.SheilunsGift, nil) or ((3094 - (860 + 226)) > (2521 - (121 + 182)))) then
+									return "Sheilun's Gift ChiJi prep";
 								end
 							end
-							v243 = 2 - 1;
+							v246 = 1 + 0;
 						end
 					end
 				end
-				if ((v37 and v113.ThunderFocusTea:IsReady() and not v113.EssenceFont:IsAvailable() and (v113.RisingSunKick:CooldownRemains() < v12:GCD())) or ((3646 - (582 + 1388)) <= (788 - 325))) then
-					if (((2770 + 1099) == (4233 - (326 + 38))) and v23(v113.ThunderFocusTea, nil)) then
-						return "ThunderFocusTea main 16";
+				v146 = 1243 - (988 + 252);
+			end
+			if (((43 + 336) <= (1299 + 2848)) and ((1970 - (49 + 1921)) == v146)) then
+				if ((v79 and v114.LifeCocoon:IsReady() and (v17:HealthPercentage() <= v80)) or ((5404 - (223 + 667)) <= (1061 - (51 + 1)))) then
+					if (v24(v116.LifeCocoonFocus, not v17:IsSpellInRange(v114.LifeCocoon)) or ((6016 - 2520) == (2552 - 1360))) then
+						return "Life Cocoon CD";
 					end
 				end
-				if (((3425 - 2267) <= (3729 - 1116)) and (v118 >= (623 - (47 + 573))) and v30) then
-					v28 = v125();
-					if (v28 or ((834 + 1530) <= (8489 - 6490))) then
-						return v28;
+				if ((v81 and v114.Revival:IsReady() and v114.Revival:IsAvailable() and v120.AreUnitsBelowHealthPercentage(v83, v82, v114.EnvelopingMist)) or ((1333 - (146 + 979)) == (836 + 2123))) then
+					if (((4882 - (311 + 294)) >= (3661 - 2348)) and v24(v114.Revival, nil)) then
+						return "Revival CD";
 					end
 				end
-				if ((v118 < (4 - 1)) or ((6586 - (1269 + 395)) < (686 - (76 + 416)))) then
-					v28 = v126();
-					if (v28 or ((2534 - (319 + 124)) < (70 - 39))) then
-						return v28;
-					end
-				end
+				v146 = 1 + 0;
 			end
 		end
 	end
-	local function v136()
-		local v148 = 1007 - (564 + 443);
+	local function v133()
+		local v147 = 1443 - (496 + 947);
 		while true do
-			if ((v148 == (2 - 1)) or ((2888 - (337 + 121)) >= (14275 - 9403))) then
-				v21.Print("Mistweaver Monk rotation by Epic. Supported by xKaneto.");
+			if (((3945 - (1233 + 125)) < (1288 + 1886)) and (v147 == (1 + 0))) then
+				v42 = EpicSettings.Settings['DampenHarmHP'];
+				v43 = EpicSettings.Settings['WhiteTigerUsage'];
+				v44 = EpicSettings.Settings['UseSummonWhiteTigerStatue'];
+				v45 = EpicSettings.Settings['UseBlackoutKick'];
+				v46 = EpicSettings.Settings['UseSpinningCraneKick'];
+				v47 = EpicSettings.Settings['UseRisingSunKick'];
+				v147 = 1 + 1;
+			end
+			if ((v147 == (1650 - (963 + 682))) or ((3439 + 681) <= (3702 - (504 + 1000)))) then
+				v65 = EpicSettings.Settings['JadeSerpentUsage'];
+				v67 = EpicSettings.Settings['UseZenPulse'];
+				v69 = EpicSettings.Settings['ZenPulseHP'];
+				v68 = EpicSettings.Settings['ZenPulseGroup'];
+				v70 = EpicSettings.Settings['UseSheilunsGift'];
+				v72 = EpicSettings.Settings['SheilunsGiftHP'];
+				v147 = 5 + 1;
+			end
+			if ((v147 == (4 + 0)) or ((151 + 1445) == (1265 - 407))) then
+				v60 = EpicSettings.Settings['UseSoothingMist'];
+				v61 = EpicSettings.Settings['SoothingMistHP'];
+				v62 = EpicSettings.Settings['UseEssenceFont'];
+				v64 = EpicSettings.Settings['EssenceFontHP'];
+				v63 = EpicSettings.Settings['EssenceFontGroup'];
+				v66 = EpicSettings.Settings['UseJadeSerpent'];
+				v147 = 5 + 0;
+			end
+			if (((1873 + 1347) == (3402 - (156 + 26))) and (v147 == (2 + 0))) then
+				v48 = EpicSettings.Settings['UseTigerPalm'];
+				v49 = EpicSettings.Settings['UseJadefireStomp'];
+				v50 = EpicSettings.Settings['UseChiBurst'];
+				v51 = EpicSettings.Settings['UseTouchOfDeath'];
+				v52 = EpicSettings.Settings['UseRenewingMist'];
+				v53 = EpicSettings.Settings['RenewingMistHP'];
+				v147 = 3 - 0;
+			end
+			if ((v147 == (170 - (149 + 15))) or ((2362 - (890 + 70)) > (3737 - (39 + 78)))) then
+				v71 = EpicSettings.Settings['SheilunsGiftGroup'];
 				break;
 			end
-			if ((v148 == (0 - 0)) or ((6681 - (1261 + 650)) < (735 + 1000))) then
-				v121();
-				v113.Bursting:RegisterAuraTracking();
-				v148 = 1 - 0;
+			if (((3056 - (14 + 468)) == (5659 - 3085)) and ((8 - 5) == v147)) then
+				v54 = EpicSettings.Settings['UseExpelHarm'];
+				v55 = EpicSettings.Settings['ExpelHarmHP'];
+				v56 = EpicSettings.Settings['UseVivify'];
+				v57 = EpicSettings.Settings['VivifyHP'];
+				v58 = EpicSettings.Settings['UseEnvelopingMist'];
+				v59 = EpicSettings.Settings['EnvelopingMistHP'];
+				v147 = 3 + 1;
+			end
+			if (((1080 + 718) < (586 + 2171)) and (v147 == (0 + 0))) then
+				v36 = EpicSettings.Settings['UseManaTea'];
+				v37 = EpicSettings.Settings['ManaTeaStacks'];
+				v38 = EpicSettings.Settings['UseThunderFocusTea'];
+				v39 = EpicSettings.Settings['UseFortifyingBrew'];
+				v40 = EpicSettings.Settings['FortifyingBrewHP'];
+				v41 = EpicSettings.Settings['UseDampenHarm'];
+				v147 = 1 + 0;
 			end
 		end
 	end
-	v21.SetAPL(2087 - (772 + 1045), v135, v136);
+	local function v134()
+		local v148 = 0 - 0;
+		while true do
+			if ((v148 == (1 + 0)) or ((1324 - 947) > (66 + 2538))) then
+				v100 = EpicSettings.Settings['useWeapon'];
+				v89 = EpicSettings.Settings['dispelDebuffs'];
+				v86 = EpicSettings.Settings['useHealingPotion'];
+				v87 = EpicSettings.Settings['healingPotionHP'];
+				v88 = EpicSettings.Settings['HealingPotionName'];
+				v148 = 53 - (12 + 39);
+			end
+			if (((529 + 39) < (2819 - 1908)) and (v148 == (24 - 17))) then
+				v81 = EpicSettings.Settings['UseRevival'];
+				v83 = EpicSettings.Settings['RevivalHP'];
+				v82 = EpicSettings.Settings['RevivalGroup'];
+				break;
+			end
+			if (((974 + 2311) < (2226 + 2002)) and (v148 == (14 - 8))) then
+				v76 = EpicSettings.Settings['UseInvokeChiJi'];
+				v78 = EpicSettings.Settings['InvokeChiJiHP'];
+				v77 = EpicSettings.Settings['InvokeChiJiGroup'];
+				v79 = EpicSettings.Settings['UseLifeCocoon'];
+				v80 = EpicSettings.Settings['LifeCocoonHP'];
+				v148 = 5 + 2;
+			end
+			if (((18925 - 15009) > (5038 - (1596 + 114))) and (v148 == (0 - 0))) then
+				v96 = EpicSettings.Settings['racialsWithCD'];
+				v95 = EpicSettings.Settings['useRacials'];
+				v98 = EpicSettings.Settings['trinketsWithCD'];
+				v97 = EpicSettings.Settings['useTrinkets'];
+				v99 = EpicSettings.Settings['fightRemainsCheck'];
+				v148 = 714 - (164 + 549);
+			end
+			if (((3938 - (1059 + 379)) < (4766 - 927)) and (v148 == (2 + 0))) then
+				v84 = EpicSettings.Settings['useHealthstone'];
+				v85 = EpicSettings.Settings['healthstoneHP'];
+				v107 = EpicSettings.Settings['useManaPotion'];
+				v108 = EpicSettings.Settings['manaPotionSlider'];
+				v109 = EpicSettings.Settings['RevivalBurstingGroup'];
+				v148 = 1 + 2;
+			end
+			if (((899 - (145 + 247)) == (417 + 90)) and (v148 == (2 + 2))) then
+				v94 = EpicSettings.Settings['useLegSweep'];
+				v101 = EpicSettings.Settings['handleAfflicted'];
+				v102 = EpicSettings.Settings['HandleIncorporeal'];
+				v103 = EpicSettings.Settings['HandleChromie'];
+				v105 = EpicSettings.Settings['HandleCharredBrambles'];
+				v148 = 14 - 9;
+			end
+			if (((47 + 193) <= (2727 + 438)) and (v148 == (4 - 1))) then
+				v110 = EpicSettings.Settings['RevivalBurstingStacks'];
+				v92 = EpicSettings.Settings['InterruptThreshold'];
+				v90 = EpicSettings.Settings['InterruptWithStun'];
+				v91 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v93 = EpicSettings.Settings['useSpearHandStrike'];
+				v148 = 724 - (254 + 466);
+			end
+			if (((1394 - (544 + 16)) >= (2558 - 1753)) and (v148 == (633 - (294 + 334)))) then
+				v104 = EpicSettings.Settings['HandleCharredTreant'];
+				v106 = EpicSettings.Settings['HandleFyrakkNPC'];
+				v73 = EpicSettings.Settings['UseInvokeYulon'];
+				v75 = EpicSettings.Settings['InvokeYulonHP'];
+				v74 = EpicSettings.Settings['InvokeYulonGroup'];
+				v148 = 259 - (236 + 17);
+			end
+		end
+	end
+	local v135 = 0 + 0;
+	local function v136()
+		local v149 = 0 + 0;
+		while true do
+			if ((v149 == (14 - 10)) or ((18047 - 14235) < (1193 + 1123))) then
+				v29 = v124();
+				if (v29 or ((2185 + 467) <= (2327 - (413 + 381)))) then
+					return v29;
+				end
+				if (v13:AffectingCombat() or v30 or ((152 + 3446) < (3105 - 1645))) then
+					local v247 = 0 - 0;
+					local v248;
+					while true do
+						if ((v247 == (1970 - (582 + 1388))) or ((7012 - 2896) < (854 + 338))) then
+							v248 = v89 and v114.Detox:IsReady() and v33;
+							v29 = v120.FocusUnit(v248, nil, 404 - (326 + 38), nil, 73 - 48, v114.EnvelopingMist);
+							v247 = 1 - 0;
+						end
+						if ((v247 == (621 - (47 + 573))) or ((1191 + 2186) <= (3834 - 2931))) then
+							if (((6453 - 2477) >= (2103 - (1269 + 395))) and v29) then
+								return v29;
+							end
+							if (((4244 - (76 + 416)) == (4195 - (319 + 124))) and v33 and v89) then
+								local v255 = 0 - 0;
+								while true do
+									if (((5053 - (564 + 443)) > (7460 - 4765)) and (v255 == (458 - (337 + 121)))) then
+										if ((v17 and v17:Exists() and v17:IsAPlayer() and (v120.UnitHasDispellableDebuffByPlayer(v17) or v120.DispellableFriendlyUnit(73 - 48))) or ((11808 - 8263) == (5108 - (1261 + 650)))) then
+											if (((1013 + 1381) > (593 - 220)) and v114.Detox:IsCastable()) then
+												local v261 = 1817 - (772 + 1045);
+												while true do
+													if (((587 + 3568) <= (4376 - (102 + 42))) and (v261 == (1844 - (1524 + 320)))) then
+														if ((v135 == (1270 - (1049 + 221))) or ((3737 - (18 + 138)) == (8500 - 5027))) then
+															v135 = GetTime();
+														end
+														if (((6097 - (67 + 1035)) > (3696 - (136 + 212))) and v120.Wait(2124 - 1624, v135)) then
+															if (v24(v116.DetoxFocus, not v17:IsSpellInRange(v114.Detox)) or ((605 + 149) > (3433 + 291))) then
+																return "detox dispel focus";
+															end
+															v135 = 1604 - (240 + 1364);
+														end
+														break;
+													end
+												end
+											end
+										end
+										if (((1299 - (1050 + 32)) >= (203 - 146)) and v16 and v16:Exists() and not v13:CanAttack(v16) and v120.UnitHasDispellableDebuffByPlayer(v16)) then
+											if (v114.Detox:IsCastable() or ((1225 + 845) >= (5092 - (331 + 724)))) then
+												if (((219 + 2486) == (3349 - (269 + 375))) and v24(v116.DetoxMouseover, not v16:IsSpellInRange(v114.Detox))) then
+													return "detox dispel mouseover";
+												end
+											end
+										end
+										break;
+									end
+								end
+							end
+							break;
+						end
+					end
+				end
+				v149 = 730 - (267 + 458);
+			end
+			if (((19 + 42) == (117 - 56)) and (v149 == (824 - (667 + 151)))) then
+				if (((v30 or v13:AffectingCombat()) and v120.TargetIsValid() and v13:CanAttack(v15)) or ((2196 - (1410 + 87)) >= (3193 - (1504 + 393)))) then
+					local v249 = 0 - 0;
+					while true do
+						if ((v249 == (2 - 1)) or ((2579 - (461 + 335)) >= (463 + 3153))) then
+							if ((v97 and ((v32 and v98) or not v98)) or ((5674 - (1730 + 31)) > (6194 - (728 + 939)))) then
+								local v256 = 0 - 0;
+								while true do
+									if (((8875 - 4499) > (1871 - 1054)) and (v256 == (1069 - (138 + 930)))) then
+										v29 = v120.HandleBottomTrinket(v117, v32, 37 + 3, nil);
+										if (((3801 + 1060) > (707 + 117)) and v29) then
+											return v29;
+										end
+										break;
+									end
+									if ((v256 == (0 - 0)) or ((3149 - (459 + 1307)) >= (4001 - (474 + 1396)))) then
+										v29 = v120.HandleTopTrinket(v117, v32, 69 - 29, nil);
+										if (v29 or ((1759 + 117) >= (9 + 2532))) then
+											return v29;
+										end
+										v256 = 2 - 1;
+									end
+								end
+							end
+							if (((226 + 1556) <= (12591 - 8819)) and v35) then
+								local v257 = 0 - 0;
+								while true do
+									if ((v257 == (591 - (562 + 29))) or ((4007 + 693) < (2232 - (374 + 1045)))) then
+										if (((2532 + 667) < (12576 - 8526)) and v95 and ((v32 and v96) or not v96) and (v112 < (656 - (448 + 190)))) then
+											if (v114.BloodFury:IsCastable() or ((1599 + 3352) < (2000 + 2430))) then
+												if (((63 + 33) == (369 - 273)) and v24(v114.BloodFury, nil)) then
+													return "blood_fury main 4";
+												end
+											end
+											if (v114.Berserking:IsCastable() or ((8510 - 5771) > (5502 - (1307 + 187)))) then
+												if (v24(v114.Berserking, nil) or ((91 - 68) == (2654 - 1520))) then
+													return "berserking main 6";
+												end
+											end
+											if (v114.LightsJudgment:IsCastable() or ((8257 - 5564) >= (4794 - (232 + 451)))) then
+												if (v24(v114.LightsJudgment, not v15:IsInRange(39 + 1)) or ((3813 + 503) <= (2710 - (510 + 54)))) then
+													return "lights_judgment main 8";
+												end
+											end
+											if (v114.Fireblood:IsCastable() or ((7144 - 3598) <= (2845 - (13 + 23)))) then
+												if (((9559 - 4655) > (3111 - 945)) and v24(v114.Fireblood, nil)) then
+													return "fireblood main 10";
+												end
+											end
+											if (((197 - 88) >= (1178 - (830 + 258))) and v114.AncestralCall:IsCastable()) then
+												if (((17560 - 12582) > (1818 + 1087)) and v24(v114.AncestralCall, nil)) then
+													return "ancestral_call main 12";
+												end
+											end
+											if (v114.BagofTricks:IsCastable() or ((2575 + 451) <= (3721 - (860 + 581)))) then
+												if (v24(v114.BagofTricks, not v15:IsInRange(147 - 107)) or ((1312 + 341) <= (1349 - (237 + 4)))) then
+													return "bag_of_tricks main 14";
+												end
+											end
+										end
+										if (((6836 - 3927) > (6600 - 3991)) and v38 and v114.ThunderFocusTea:IsReady() and not v114.EssenceFont:IsAvailable() and (v114.RisingSunKick:CooldownRemains() < v13:GCD())) then
+											if (((1434 - 677) > (159 + 35)) and v24(v114.ThunderFocusTea, nil)) then
+												return "ThunderFocusTea main 16";
+											end
+										end
+										v257 = 1 + 0;
+									end
+									if ((v257 == (3 - 2)) or ((14 + 17) >= (761 + 637))) then
+										if (((4622 - (85 + 1341)) <= (8313 - 3441)) and (v119 >= (8 - 5)) and v31) then
+											v29 = v126();
+											if (((3698 - (45 + 327)) == (6275 - 2949)) and v29) then
+												return v29;
+											end
+										end
+										if (((1935 - (444 + 58)) <= (1686 + 2192)) and (v119 < (1 + 2))) then
+											local v259 = 0 + 0;
+											while true do
+												if ((v259 == (0 - 0)) or ((3315 - (64 + 1668)) == (3708 - (1227 + 746)))) then
+													v29 = v127();
+													if (v29 or ((9162 - 6181) == (4361 - 2011))) then
+														return v29;
+													end
+													break;
+												end
+											end
+										end
+										break;
+									end
+								end
+							end
+							break;
+						end
+						if ((v249 == (494 - (415 + 79))) or ((115 + 4351) <= (984 - (142 + 349)))) then
+							v29 = v123();
+							if (v29 or ((1092 + 1455) <= (2731 - 744))) then
+								return v29;
+							end
+							v249 = 1 + 0;
+						end
+					end
+				end
+				break;
+			end
+			if (((2087 + 874) > (7462 - 4722)) and (v149 == (1866 - (1710 + 154)))) then
+				v34 = EpicSettings.Toggles['healing'];
+				v35 = EpicSettings.Toggles['dps'];
+				if (((4014 - (200 + 118)) >= (1432 + 2180)) and v13:IsDeadOrGhost()) then
+					return;
+				end
+				v149 = 5 - 2;
+			end
+			if ((v149 == (7 - 2)) or ((2639 + 331) == (1858 + 20))) then
+				if (not v13:AffectingCombat() or ((1982 + 1711) < (316 + 1661))) then
+					if ((v16 and v16:Exists() and v16:IsAPlayer() and v16:IsDeadOrGhost() and not v13:CanAttack(v16)) or ((2014 - 1084) > (3351 - (363 + 887)))) then
+						local v253 = v120.DeadFriendlyUnitsCount();
+						if (((7251 - 3098) > (14688 - 11602)) and (v253 > (1 + 0))) then
+							if (v24(v114.Reawaken, nil) or ((10889 - 6235) <= (2768 + 1282))) then
+								return "reawaken";
+							end
+						elseif (v24(v116.ResuscitateMouseover, not v15:IsInRange(1704 - (674 + 990))) or ((746 + 1856) < (613 + 883))) then
+							return "resuscitate";
+						end
+					end
+				end
+				if ((not v13:AffectingCombat() and v30) or ((1616 - 596) > (3343 - (507 + 548)))) then
+					v29 = v125();
+					if (((1165 - (289 + 548)) == (2146 - (821 + 997))) and v29) then
+						return v29;
+					end
+				end
+				if (((1766 - (195 + 60)) < (1024 + 2784)) and (v30 or v13:AffectingCombat())) then
+					local v250 = 1501 - (251 + 1250);
+					while true do
+						if ((v250 == (2 - 1)) or ((1725 + 785) > (5951 - (809 + 223)))) then
+							if (((6950 - 2187) == (14303 - 9540)) and (v13:DebuffStack(v114.Bursting) > (16 - 11))) then
+								if (((3047 + 1090) > (968 + 880)) and v114.DiffuseMagic:IsReady() and v114.DiffuseMagic:IsAvailable()) then
+									if (((3053 - (14 + 603)) <= (3263 - (118 + 11))) and v24(v114.DiffuseMagic, nil)) then
+										return "Diffues Magic Bursting Player";
+									end
+								end
+							end
+							if (((603 + 3120) == (3101 + 622)) and (v114.Bursting:MaxDebuffStack() > v110) and (v114.Bursting:AuraActiveCount() > v109)) then
+								if ((v81 and v114.Revival:IsReady() and v114.Revival:IsAvailable()) or ((11790 - 7744) >= (5265 - (551 + 398)))) then
+									if (v24(v114.Revival, nil) or ((1269 + 739) < (687 + 1242))) then
+										return "Revival Bursting";
+									end
+								end
+							end
+							v250 = 2 + 0;
+						end
+						if (((8866 - 6482) > (4089 - 2314)) and ((0 + 0) == v250)) then
+							if ((v32 and v100 and (v115.Dreambinder:IsEquippedAndReady() or v115.Iridal:IsEquippedAndReady())) or ((18034 - 13491) <= (1209 + 3167))) then
+								if (((817 - (40 + 49)) == (2772 - 2044)) and v24(v116.UseWeapon, nil)) then
+									return "Using Weapon Macro";
+								end
+							end
+							if ((v107 and v115.AeratedManaPotion:IsReady() and (v13:ManaPercentage() <= v108)) or ((1566 - (99 + 391)) > (3864 + 807))) then
+								if (((8136 - 6285) >= (935 - 557)) and v24(v116.ManaPotion, nil)) then
+									return "Mana Potion main";
+								end
+							end
+							v250 = 1 + 0;
+						end
+						if ((v250 == (5 - 3)) or ((3552 - (1032 + 572)) >= (3893 - (203 + 214)))) then
+							if (((6611 - (568 + 1249)) >= (652 + 181)) and v34) then
+								local v258 = 0 - 0;
+								while true do
+									if (((15797 - 11707) == (5396 - (913 + 393))) and (v258 == (0 - 0))) then
+										if ((v114.SummonJadeSerpentStatue:IsReady() and v114.SummonJadeSerpentStatue:IsAvailable() and (v114.SummonJadeSerpentStatue:TimeSinceLastCast() > (127 - 37)) and v66) or ((4168 - (269 + 141)) == (5555 - 3057))) then
+											if ((v65 == "Player") or ((4654 - (362 + 1619)) < (3200 - (950 + 675)))) then
+												if (v24(v116.SummonJadeSerpentStatuePlayer, not v15:IsInRange(16 + 24)) or ((4900 - (216 + 963)) <= (2742 - (485 + 802)))) then
+													return "jade serpent main player";
+												end
+											elseif (((1493 - (432 + 127)) < (3343 - (1065 + 8))) and (v65 == "Cursor")) then
+												if (v24(v116.SummonJadeSerpentStatueCursor, not v15:IsInRange(23 + 17)) or ((3213 - (635 + 966)) == (903 + 352))) then
+													return "jade serpent main cursor";
+												end
+											elseif ((v65 == "Confirmation") or ((4394 - (5 + 37)) < (10460 - 6254))) then
+												if (v24(v114.SummonJadeSerpentStatue, not v15:IsInRange(17 + 23)) or ((4526 - 1666) <= (85 + 96))) then
+													return "jade serpent main confirmation";
+												end
+											end
+										end
+										if (((6694 - 3472) >= (5789 - 4262)) and v52 and v114.RenewingMist:IsReady() and v15:BuffDown(v114.RenewingMistBuff) and not v13:CanAttack(v15)) then
+											if (((2838 - 1333) <= (5070 - 2949)) and (v15:HealthPercentage() <= v53)) then
+												if (((535 + 209) == (1273 - (318 + 211))) and v24(v114.RenewingMist, not v15:IsSpellInRange(v114.RenewingMist))) then
+													return "RenewingMist main";
+												end
+											end
+										end
+										v258 = 4 - 3;
+									end
+									if ((v258 == (1589 - (963 + 624))) or ((846 + 1133) >= (3682 - (518 + 328)))) then
+										if (((4272 - 2439) <= (4264 - 1596)) and (v112 > v99) and v32 and v13:AffectingCombat()) then
+											local v260 = 317 - (301 + 16);
+											while true do
+												if (((10803 - 7117) == (10351 - 6665)) and (v260 == (0 - 0))) then
+													v29 = v132();
+													if (((3141 + 326) > (271 + 206)) and v29) then
+														return v29;
+													end
+													break;
+												end
+											end
+										end
+										if (v31 or ((7019 - 3731) >= (2131 + 1410))) then
+											v29 = v129();
+											if (v29 or ((339 + 3218) == (14434 - 9894))) then
+												return v29;
+											end
+										end
+										v258 = 1 + 2;
+									end
+									if (((1022 - (829 + 190)) == v258) or ((931 - 670) > (1602 - 335))) then
+										v29 = v128();
+										if (((1757 - 485) < (9583 - 5725)) and v29) then
+											return v29;
+										end
+										break;
+									end
+									if (((869 + 2795) == (1197 + 2467)) and ((2 - 1) == v258)) then
+										if (((1832 + 109) >= (1063 - (520 + 93))) and v60 and v114.SoothingMist:IsReady() and v15:BuffDown(v114.SoothingMist) and not v13:CanAttack(v15)) then
+											if ((v15:HealthPercentage() <= v61) or ((4922 - (259 + 17)) < (19 + 305))) then
+												if (((1380 + 2453) == (12976 - 9143)) and v24(v114.SoothingMist, not v15:IsSpellInRange(v114.SoothingMist))) then
+													return "SoothingMist main";
+												end
+											end
+										end
+										if ((v36 and (v13:BuffStack(v114.ManaTeaCharges) >= (609 - (396 + 195))) and v114.ManaTea:IsCastable()) or ((3597 - 2357) > (5131 - (440 + 1321)))) then
+											if (v24(v114.ManaTea, nil) or ((4310 - (1059 + 770)) == (21650 - 16968))) then
+												return "Mana Tea main avoid overcap";
+											end
+										end
+										v258 = 547 - (424 + 121);
+									end
+								end
+							end
+							break;
+						end
+					end
+				end
+				v149 = 2 + 4;
+			end
+			if (((6074 - (641 + 706)) >= (83 + 125)) and (v149 == (440 - (249 + 191)))) then
+				v133();
+				v134();
+				v30 = EpicSettings.Toggles['ooc'];
+				v149 = 4 - 3;
+			end
+			if (((126 + 154) < (14842 - 10991)) and (v149 == (428 - (183 + 244)))) then
+				v31 = EpicSettings.Toggles['aoe'];
+				v32 = EpicSettings.Toggles['cds'];
+				v33 = EpicSettings.Toggles['dispel'];
+				v149 = 1 + 1;
+			end
+			if ((v149 == (733 - (434 + 296))) or ((9595 - 6588) > (3706 - (169 + 343)))) then
+				v118 = v13:GetEnemiesInMeleeRange(8 + 0);
+				if (v31 or ((3757 - 1621) >= (8647 - 5701))) then
+					v119 = #v118;
+				else
+					v119 = 1 + 0;
+				end
+				if (((6139 - 3974) <= (3644 - (651 + 472))) and (v120.TargetIsValid() or v13:AffectingCombat())) then
+					local v251 = 0 + 0;
+					while true do
+						if (((1235 + 1626) > (806 - 145)) and (v251 == (483 - (397 + 86)))) then
+							v113 = v13:GetEnemiesInRange(916 - (423 + 453));
+							v111 = v10.BossFightRemains(nil, true);
+							v251 = 1 + 0;
+						end
+						if (((597 + 3928) > (3946 + 573)) and (v251 == (1 + 0))) then
+							v112 = v111;
+							if (((2839 + 339) > (2162 - (50 + 1140))) and (v112 == (9605 + 1506))) then
+								v112 = v10.FightRemains(v113, false);
+							end
+							break;
+						end
+					end
+				end
+				v149 = 3 + 1;
+			end
+		end
+	end
+	local function v137()
+		local v150 = 0 + 0;
+		while true do
+			if (((6844 - 2078) == (3449 + 1317)) and (v150 == (596 - (157 + 439)))) then
+				v122();
+				v114.Bursting:RegisterAuraTracking();
+				v150 = 1 - 0;
+			end
+			if ((v150 == (3 - 2)) or ((8119 - 5374) > (4046 - (782 + 136)))) then
+				v22.Print("Mistweaver Monk rotation by Epic. Supported by xKaneto.");
+				break;
+			end
+		end
+	end
+	v22.SetAPL(1125 - (112 + 743), v136, v137);
 end;
 return v0["Epix_Monk_Mistweaver.lua"]();
 
