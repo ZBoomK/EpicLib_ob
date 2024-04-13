@@ -1,46 +1,38 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 962 - (531 + 431);
-	local v6;
-	while true do
-		if ((v5 == (0 - 0)) or ((5623 - (711 + 782)) <= (5664 - 2709))) then
-			v6 = v0[v4];
-			if (not v6 or ((2433 - (270 + 199)) <= (435 + 905))) then
-				return v1(v4, ...);
-			end
-			v5 = 1820 - (580 + 1239);
-		end
-		if (((7428 - 4929) == (2390 + 109)) and (v5 == (1 + 0))) then
-			return v6(...);
-		end
+	local v5 = v0[v4];
+	if (((115 + 3980) >= (5489 - 2306)) and not v5) then
+		return v1(v4, ...);
 	end
+	return v5(...);
 end
 v0["Epix_Warlock_Affliction.lua"] = function(...)
-	local v7, v8 = ...;
-	local v9 = EpicDBC.DBC;
-	local v10 = EpicLib;
-	local v11 = EpicCache;
-	local v12 = v10.Unit;
-	local v13 = v12.Player;
-	local v14 = v12.Focus;
-	local v15 = v12.MouseOver;
-	local v16 = v12.Pet;
-	local v17 = v12.Target;
-	local v18 = v10.Spell;
-	local v19 = v10.Item;
-	local v20 = EpicLib;
-	local v21 = v20.Bind;
-	local v22 = v20.Macro;
-	local v23 = v20.AoEON;
-	local v24 = v20.CDsON;
-	local v25 = v20.Cast;
-	local v26 = v20.Press;
-	local v27 = v20.Commons.Everyone.num;
-	local v28 = v20.Commons.Everyone.bool;
+	local v6, v7 = ...;
+	local v8 = EpicDBC.DBC;
+	local v9 = EpicLib;
+	local v10 = EpicCache;
+	local v11 = v9.Unit;
+	local v12 = v11.Player;
+	local v13 = v11.Focus;
+	local v14 = v11.MouseOver;
+	local v15 = v11.Pet;
+	local v16 = v11.Target;
+	local v17 = v9.Spell;
+	local v18 = v9.Item;
+	local v19 = EpicLib;
+	local v20 = v19.Bind;
+	local v21 = v19.Macro;
+	local v22 = v19.AoEON;
+	local v23 = v19.CDsON;
+	local v24 = v19.Cast;
+	local v25 = v19.Press;
+	local v26 = v19.Commons.Everyone.num;
+	local v27 = v19.Commons.Everyone.bool;
+	local v28 = false;
 	local v29 = false;
 	local v30 = false;
-	local v31 = false;
+	local v31;
 	local v32;
 	local v33;
 	local v34;
@@ -56,797 +48,847 @@ v0["Epix_Warlock_Affliction.lua"] = function(...)
 	local v44;
 	local v45;
 	local v46;
-	local v47;
-	local function v48()
-		v33 = EpicSettings.Settings['UseTrinkets'];
-		v32 = EpicSettings.Settings['UseRacials'];
-		v34 = EpicSettings.Settings['UseHealingPotion'];
-		v35 = EpicSettings.Settings['HealingPotionName'] or (0 + 0);
-		v36 = EpicSettings.Settings['HealingPotionHP'] or (0 - 0);
-		v37 = EpicSettings.Settings['UseHealthstone'];
-		v38 = EpicSettings.Settings['HealthstoneHP'] or (0 + 0);
-		v39 = EpicSettings.Settings['InterruptWithStun'] or (1167 - (645 + 522));
-		v40 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (1790 - (1010 + 780));
-		v41 = EpicSettings.Settings['InterruptThreshold'] or (0 + 0);
-		v43 = EpicSettings.Settings['SummonPet'];
-		v44 = EpicSettings.Settings['DarkPactHP'] or (0 - 0);
-		v45 = EpicSettings.Settings['VileTaint'];
-		v46 = EpicSettings.Settings['PhantomSingularity'];
-		v47 = EpicSettings.Settings['SummonDarkglare'];
-	end
-	local v49 = v20.Commons.Everyone;
-	local v50 = v18.Warlock.Affliction;
-	local v51 = v19.Warlock.Affliction;
-	local v52 = {v51.ConjuredChillglobe:ID(),v51.DesperateInvokersCodex:ID(),v51.BelorrelostheSuncaller:ID()};
-	local v53 = v13:GetEquipment();
-	local v54 = (v53[19 - 6] and v19(v53[518 - (351 + 154)])) or v19(1574 - (1281 + 293));
-	local v55 = (v53[280 - (28 + 238)] and v19(v53[31 - 17])) or v19(1559 - (1381 + 178));
-	local v56 = v22.Warlock.Affliction;
-	local v57, v58, v59;
-	local v60, v61, v62, v63, v64, v65, v66;
-	local v67;
-	local v68;
-	local v69 = 10422 + 689;
-	local v70 = 8960 + 2151;
-	v10:RegisterForEvent(function()
-		v50.SeedofCorruption:RegisterInFlight();
-		v50.ShadowBolt:RegisterInFlight();
-		v50.Haunt:RegisterInFlight();
-	end, "LEARNED_SPELL_IN_TAB");
-	v50.SeedofCorruption:RegisterInFlight();
-	v50.ShadowBolt:RegisterInFlight();
-	v50.Haunt:RegisterInFlight();
-	v10:RegisterForEvent(function()
-		local v103 = 0 + 0;
+	local function v47()
+		local v94 = 0 - 0;
 		while true do
-			if ((v103 == (0 - 0)) or ((1169 + 1086) < (492 - (381 + 89)))) then
-				v53 = v13:GetEquipment();
-				v54 = (v53[12 + 1] and v19(v53[9 + 4])) or v19(0 - 0);
-				v103 = 1157 - (1074 + 82);
+			if ((v94 == (0 + 0)) or ((2852 + 859) < (166 + 842))) then
+				v32 = EpicSettings.Settings['UseTrinkets'];
+				v31 = EpicSettings.Settings['UseRacials'];
+				v33 = EpicSettings.Settings['UseHealingPotion'];
+				v94 = 1 + 0;
 			end
-			if ((v103 == (1 - 0)) or ((2870 - (214 + 1570)) >= (2860 - (990 + 465)))) then
-				v55 = (v53[6 + 8] and v19(v53[7 + 7])) or v19(0 + 0);
+			if ((v94 == (11 - 7)) or ((3497 - 2448) <= (325 + 581))) then
+				v44 = EpicSettings.Settings['VileTaint'];
+				v45 = EpicSettings.Settings['PhantomSingularity'];
+				v46 = EpicSettings.Settings['SummonDarkglare'];
+				break;
+			end
+			if (((1838 + 2675) > (2249 + 477)) and (v94 == (2 + 0))) then
+				v37 = EpicSettings.Settings['HealthstoneHP'] or (0 + 0);
+				v38 = EpicSettings.Settings['InterruptWithStun'] or (1433 - (797 + 636));
+				v39 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (0 - 0);
+				v94 = 1622 - (1427 + 192);
+			end
+			if ((v94 == (1 + 0)) or ((3438 - 1957) >= (2390 + 268))) then
+				v34 = EpicSettings.Settings['HealingPotionName'] or (0 + 0);
+				v35 = EpicSettings.Settings['HealingPotionHP'] or (326 - (192 + 134));
+				v36 = EpicSettings.Settings['UseHealthstone'];
+				v94 = 1278 - (316 + 960);
+			end
+			if ((v94 == (2 + 1)) or ((2485 + 735) == (1261 + 103))) then
+				v40 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
+				v42 = EpicSettings.Settings['SummonPet'];
+				v43 = EpicSettings.Settings['DarkPactHP'] or (551 - (83 + 468));
+				v94 = 1810 - (1202 + 604);
+			end
+		end
+	end
+	local v48 = v19.Commons.Everyone;
+	local v49 = v17.Warlock.Affliction;
+	local v50 = v18.Warlock.Affliction;
+	local v51 = {v50.ConjuredChillglobe:ID(),v50.DesperateInvokersCodex:ID(),v50.BelorrelostheSuncaller:ID()};
+	local v52 = v12:GetEquipment();
+	local v53 = (v52[338 - (45 + 280)] and v18(v52[13 + 0])) or v18(0 + 0);
+	local v54 = (v52[6 + 8] and v18(v52[8 + 6])) or v18(0 + 0);
+	local v55 = v21.Warlock.Affliction;
+	local v56, v57, v58;
+	local v59, v60, v61, v62, v63, v64, v65;
+	local v66;
+	local v67;
+	local v68 = 20574 - 9463;
+	local v69 = 13022 - (340 + 1571);
+	v9:RegisterForEvent(function()
+		local v95 = 0 + 0;
+		while true do
+			if ((v95 == (1773 - (1733 + 39))) or ((2896 - 1842) > (4426 - (125 + 909)))) then
+				v49.Haunt:RegisterInFlight();
+				break;
+			end
+			if ((v95 == (1948 - (1096 + 852))) or ((304 + 372) >= (2344 - 702))) then
+				v49.SeedofCorruption:RegisterInFlight();
+				v49.ShadowBolt:RegisterInFlight();
+				v95 = 1 + 0;
+			end
+		end
+	end, "LEARNED_SPELL_IN_TAB");
+	v49.SeedofCorruption:RegisterInFlight();
+	v49.ShadowBolt:RegisterInFlight();
+	v49.Haunt:RegisterInFlight();
+	v9:RegisterForEvent(function()
+		local v96 = 512 - (409 + 103);
+		while true do
+			if (((4372 - (46 + 190)) > (2492 - (51 + 44))) and (v96 == (0 + 0))) then
+				v52 = v12:GetEquipment();
+				v53 = (v52[1330 - (1114 + 203)] and v18(v52[739 - (228 + 498)])) or v18(0 + 0);
+				v96 = 1 + 0;
+			end
+			if ((v96 == (664 - (174 + 489))) or ((11291 - 6957) == (6150 - (830 + 1075)))) then
+				v54 = (v52[538 - (303 + 221)] and v18(v52[1283 - (231 + 1038)])) or v18(0 + 0);
 				break;
 			end
 		end
 	end, "PLAYER_EQUIPMENT_CHANGED");
-	v10:RegisterForEvent(function()
-		local v104 = 0 - 0;
-		while true do
-			if ((v104 == (1726 - (1668 + 58))) or ((2995 - (512 + 114)) == (1110 - 684))) then
-				v69 = 22970 - 11859;
-				v70 = 38662 - 27551;
-				break;
-			end
-		end
+	v9:RegisterForEvent(function()
+		v68 = 12273 - (171 + 991);
+		v69 = 45790 - 34679;
 	end, "PLAYER_REGEN_ENABLED");
-	local function v71(v105)
-		local v106 = 0 + 0;
-		local v107;
-		while true do
-			if ((v106 == (1 + 0)) or ((2675 + 401) > (10736 - 7553))) then
-				return v107 or (1994 - (109 + 1885));
-			end
-			if (((2671 - (1269 + 200)) > (2027 - 969)) and (v106 == (815 - (98 + 717)))) then
-				v107 = nil;
-				for v138, v139 in pairs(v105) do
-					local v140 = 826 - (802 + 24);
-					local v141;
-					while true do
-						if (((6399 - 2688) > (4237 - 882)) and (v140 == (0 + 0))) then
-							v141 = v139:DebuffRemains(v50.AgonyDebuff) + ((77 + 22) * v27(v139:DebuffDown(v50.AgonyDebuff)));
-							if ((v107 == nil) or (v141 < v107) or ((149 + 757) >= (481 + 1748))) then
-								v107 = v141;
-							end
-							break;
-						end
+	local function v70(v97)
+		local v98;
+		for v124, v125 in pairs(v97) do
+			local v126 = 0 - 0;
+			local v127;
+			while true do
+				if ((v126 == (0 - 0)) or ((3423 + 853) <= (10624 - 7593))) then
+					v127 = v125:DebuffRemains(v49.AgonyDebuff) + ((285 - 186) * v26(v125:DebuffDown(v49.AgonyDebuff)));
+					if ((v98 == nil) or (v127 < v98) or ((7707 - 2925) <= (3706 - 2507))) then
+						v98 = v127;
 					end
+					break;
 				end
-				v106 = 2 - 1;
 			end
 		end
+		return v98 or (1248 - (111 + 1137));
 	end
-	local function v72(v108)
-		local v109 = 0 - 0;
-		local v110;
-		local v111;
-		while true do
-			if (((461 + 827) > (510 + 741)) and (v109 == (2 + 0))) then
-				return v110 == v111;
-			end
-			if ((v109 == (1 + 0)) or ((2108 + 2405) < (4785 - (797 + 636)))) then
-				v111 = 0 - 0;
-				for v142, v143 in pairs(v108) do
-					local v144 = 1619 - (1427 + 192);
-					while true do
-						if (((0 + 0) == v144) or ((4794 - 2729) >= (2873 + 323))) then
-							v110 = v110 + 1 + 0;
-							if (v143:DebuffUp(v50.SeedofCorruptionDebuff) or ((4702 - (192 + 134)) <= (2757 - (316 + 960)))) then
-								v111 = v111 + 1 + 0;
-							end
-							break;
-						end
+	local function v71(v99)
+		if (v49.SeedofCorruption:InFlight() or v12:PrevGCDP(159 - (91 + 67), v49.SeedofCorruption) or ((14476 - 9612) < (475 + 1427))) then
+			return false;
+		end
+		local v100 = 523 - (423 + 100);
+		local v101 = 0 + 0;
+		for v128, v129 in pairs(v99) do
+			local v130 = 0 - 0;
+			while true do
+				if (((2523 + 2316) >= (4471 - (326 + 445))) and (v130 == (0 - 0))) then
+					v100 = v100 + (2 - 1);
+					if (v129:DebuffUp(v49.SeedofCorruptionDebuff) or ((2508 - 1433) > (2629 - (530 + 181)))) then
+						v101 = v101 + (882 - (614 + 267));
 					end
+					break;
 				end
-				v109 = 2 + 0;
-			end
-			if ((v109 == (0 + 0)) or ((12967 - 9575) >= (5292 - (83 + 468)))) then
-				if (((5131 - (1202 + 604)) >= (10055 - 7901)) and (v50.SeedofCorruption:InFlight() or v13:PrevGCDP(1 - 0, v50.SeedofCorruption))) then
-					return false;
-				end
-				v110 = 0 - 0;
-				v109 = 326 - (45 + 280);
 			end
 		end
+		return v100 == v101;
 	end
-	local function v73(v112)
-		return (v112:DebuffRemains(v50.AgonyDebuff));
+	local function v72(v102)
+		return (v102:DebuffRemains(v49.AgonyDebuff));
 	end
-	local function v74(v113)
-		return (v113:DebuffRemains(v50.CorruptionDebuff));
+	local function v73(v103)
+		return (v103:DebuffRemains(v49.CorruptionDebuff));
 	end
-	local function v75(v114)
-		return (v114:DebuffRemains(v50.SiphonLifeDebuff));
+	local function v74(v104)
+		return (v104:DebuffRemains(v49.SiphonLifeDebuff));
 	end
-	local function v76(v115)
-		return (v115:DebuffRemains(v50.AgonyDebuff) < (v115:DebuffRemains(v50.VileTaintDebuff) + v50.VileTaint:CastTime())) and (v115:DebuffRemains(v50.AgonyDebuff) < (5 + 0));
+	local function v75(v105)
+		return (v105:DebuffRemains(v49.AgonyDebuff) < (v105:DebuffRemains(v49.VileTaintDebuff) + v49.VileTaint:CastTime())) and (v105:DebuffRemains(v49.AgonyDebuff) < (37 - (19 + 13)));
 	end
-	local function v77(v116)
-		return v116:DebuffRemains(v50.AgonyDebuff) < (5 + 0);
+	local function v76(v106)
+		return v106:DebuffRemains(v49.AgonyDebuff) < (7 - 2);
 	end
-	local function v78(v117)
-		return v117:DebuffRemains(v50.CorruptionDebuff) < (2 + 3);
+	local function v77(v107)
+		return v107:DebuffRemains(v49.CorruptionDebuff) < (11 - 6);
 	end
-	local function v79(v118)
-		return (v118:DebuffRefreshable(v50.SiphonLifeDebuff));
+	local function v78(v108)
+		return (v108:DebuffRefreshable(v49.SiphonLifeDebuff));
 	end
-	local function v80(v119)
-		return v119:DebuffRemains(v50.AgonyDebuff) < (3 + 2);
+	local function v79(v109)
+		return v109:DebuffRemains(v49.AgonyDebuff) < (14 - 9);
 	end
-	local function v81(v120)
-		return (v120:DebuffRefreshable(v50.AgonyDebuff));
+	local function v80(v110)
+		return (v110:DebuffRefreshable(v49.AgonyDebuff));
 	end
-	local function v82(v121)
-		return v121:DebuffRemains(v50.CorruptionDebuff) < (1 + 4);
+	local function v81(v111)
+		return v111:DebuffRemains(v49.CorruptionDebuff) < (2 + 3);
 	end
-	local function v83(v122)
-		return (v122:DebuffRefreshable(v50.CorruptionDebuff));
+	local function v82(v112)
+		return (v112:DebuffRefreshable(v49.CorruptionDebuff));
 	end
-	local function v84(v123)
-		return (v123:DebuffStack(v50.ShadowEmbraceDebuff) < (5 - 2)) or (v123:DebuffRemains(v50.ShadowEmbraceDebuff) < (1914 - (340 + 1571)));
+	local function v83(v113)
+		return (v113:DebuffStack(v49.ShadowEmbraceDebuff) < (4 - 1)) or (v113:DebuffRemains(v49.ShadowEmbraceDebuff) < (6 - 3));
 	end
-	local function v85(v124)
-		return v124:DebuffRemains(v50.SiphonLifeDebuff) < (2 + 3);
+	local function v84(v114)
+		return v114:DebuffRemains(v49.SiphonLifeDebuff) < (1817 - (1293 + 519));
+	end
+	local function v85()
+		if (((807 - 411) <= (9931 - 6127)) and v49.GrimoireofSacrifice:IsCastable()) then
+			if (v25(v49.GrimoireofSacrifice) or ((7971 - 3802) == (9430 - 7243))) then
+				return "grimoire_of_sacrifice precombat 2";
+			end
+		end
+		if (((3311 - 1905) == (745 + 661)) and v49.Haunt:IsReady()) then
+			if (((313 + 1218) < (9923 - 5652)) and v25(v49.Haunt, not v16:IsSpellInRange(v49.Haunt), true)) then
+				return "haunt precombat 6";
+			end
+		end
+		if (((147 + 488) == (211 + 424)) and v49.UnstableAffliction:IsReady() and not v49.SoulSwap:IsAvailable()) then
+			if (((2108 + 1265) <= (4652 - (709 + 387))) and v25(v49.UnstableAffliction, not v16:IsSpellInRange(v49.UnstableAffliction), true)) then
+				return "unstable_affliction precombat 8";
+			end
+		end
+		if (v49.ShadowBolt:IsReady() or ((5149 - (673 + 1185)) < (9512 - 6232))) then
+			if (((14084 - 9698) >= (1436 - 563)) and v25(v49.ShadowBolt, not v16:IsSpellInRange(v49.ShadowBolt), true)) then
+				return "shadow_bolt precombat 10";
+			end
+		end
 	end
 	local function v86()
-		local v125 = 1772 - (1733 + 39);
+		local v115 = 0 + 0;
 		while true do
-			if ((v125 == (0 - 0)) or ((2329 - (125 + 909)) >= (5181 - (1096 + 852)))) then
-				if (((1964 + 2413) > (2344 - 702)) and v50.GrimoireofSacrifice:IsCastable()) then
-					if (((4581 + 142) > (1868 - (409 + 103))) and v26(v50.GrimoireofSacrifice)) then
-						return "grimoire_of_sacrifice precombat 2";
-					end
-				end
-				if (v50.Haunt:IsReady() or ((4372 - (46 + 190)) <= (3528 - (51 + 44)))) then
-					if (((1198 + 3047) <= (5948 - (1114 + 203))) and v26(v50.Haunt, not v17:IsSpellInRange(v50.Haunt), true)) then
-						return "haunt precombat 6";
-					end
-				end
-				v125 = 727 - (228 + 498);
-			end
-			if (((927 + 3349) >= (2163 + 1751)) and (v125 == (664 - (174 + 489)))) then
-				if (((515 - 317) <= (6270 - (830 + 1075))) and v50.UnstableAffliction:IsReady() and not v50.SoulSwap:IsAvailable()) then
-					if (((5306 - (303 + 221)) > (5945 - (231 + 1038))) and v26(v50.UnstableAffliction, not v17:IsSpellInRange(v50.UnstableAffliction), true)) then
-						return "unstable_affliction precombat 8";
-					end
-				end
-				if (((4054 + 810) > (3359 - (171 + 991))) and v50.ShadowBolt:IsReady()) then
-					if (v26(v50.ShadowBolt, not v17:IsSpellInRange(v50.ShadowBolt), true) or ((15248 - 11548) == (6731 - 4224))) then
-						return "shadow_bolt precombat 10";
-					end
-				end
+			if (((689 + 232) <= (1487 - 385)) and (v115 == (1 + 2))) then
+				v65 = not v64 or (v9.GuardiansTable.DarkglareDuration > (0 - 0)) or (v63 and (v49.SummonDarkglare:CooldownRemains() > (39 - 19))) or v12:PowerInfusionUp();
 				break;
+			end
+			if (((6586 - (446 + 1434)) >= (2246 - (1040 + 243))) and ((2 - 1) == v115)) then
+				v61 = v16:DebuffUp(v49.VileTaintDebuff) or v16:DebuffUp(v49.PhantomSingularityDebuff) or (not v49.VileTaint:IsAvailable() and not v49.PhantomSingularity:IsAvailable());
+				v62 = v16:DebuffUp(v49.SoulRotDebuff) or not v49.SoulRot:IsAvailable();
+				v115 = 1849 - (559 + 1288);
+			end
+			if ((v115 == (1931 - (609 + 1322))) or ((1414 - (13 + 441)) <= (3273 - 2397))) then
+				v59 = v16:DebuffUp(v49.PhantomSingularityDebuff) or not v49.PhantomSingularity:IsAvailable();
+				v60 = v16:DebuffUp(v49.VileTaintDebuff) or not v49.VileTaint:IsAvailable();
+				v115 = 2 - 1;
+			end
+			if ((v115 == (9 - 7)) or ((77 + 1989) == (3384 - 2452))) then
+				v63 = v59 and v60 and v62;
+				v64 = v49.PhantomSingularity:IsAvailable() or v49.VileTaint:IsAvailable() or v49.SoulRot:IsAvailable() or v49.SummonDarkglare:IsAvailable();
+				v115 = 2 + 1;
 			end
 		end
 	end
 	local function v87()
-		v60 = v17:DebuffUp(v50.PhantomSingularityDebuff) or not v50.PhantomSingularity:IsAvailable();
-		v61 = v17:DebuffUp(v50.VileTaintDebuff) or not v50.VileTaint:IsAvailable();
-		v62 = v17:DebuffUp(v50.VileTaintDebuff) or v17:DebuffUp(v50.PhantomSingularityDebuff) or (not v50.VileTaint:IsAvailable() and not v50.PhantomSingularity:IsAvailable());
-		v63 = v17:DebuffUp(v50.SoulRotDebuff) or not v50.SoulRot:IsAvailable();
-		v64 = v60 and v61 and v63;
-		v65 = v50.PhantomSingularity:IsAvailable() or v50.VileTaint:IsAvailable() or v50.SoulRot:IsAvailable() or v50.SummonDarkglare:IsAvailable();
-		v66 = not v65 or (v10.GuardiansTable.DarkglareDuration > (0 - 0)) or (v64 and (v50.SummonDarkglare:CooldownRemains() > (17 + 3))) or v13:PowerInfusionUp();
+		local v116 = 0 + 0;
+		while true do
+			if (((14318 - 9493) < (2651 + 2192)) and (v116 == (1 - 0))) then
+				ShouldReturn = v48.HandleBottomTrinket(v51, v30, 27 + 13, nil);
+				if (ShouldReturn or ((2157 + 1720) >= (3260 + 1277))) then
+					return ShouldReturn;
+				end
+				break;
+			end
+			if (((0 + 0) == v116) or ((4222 + 93) < (2159 - (153 + 280)))) then
+				ShouldReturn = v48.HandleTopTrinket(v51, v30, 115 - 75, nil);
+				if (ShouldReturn or ((3304 + 375) < (247 + 378))) then
+					return ShouldReturn;
+				end
+				v116 = 1 + 0;
+			end
+		end
 	end
 	local function v88()
-		ShouldReturn = v49.HandleTopTrinket(v52, v31, 140 - 100, nil);
-		if (((12906 - 8432) >= (441 - 167)) and ShouldReturn) then
-			return ShouldReturn;
+		local v117 = v87();
+		if (v117 or ((4198 + 427) < (458 + 174))) then
+			return v117;
 		end
-		ShouldReturn = v49.HandleBottomTrinket(v52, v31, 123 - 83, nil);
-		if (ShouldReturn or ((3142 - (111 + 1137)) <= (1564 - (91 + 67)))) then
-			return ShouldReturn;
-		end
-	end
-	local function v89()
-		local v126 = v88();
-		if (((4678 - 3106) >= (382 + 1149)) and v126) then
-			return v126;
-		end
-		if (v51.DesperateInvokersCodex:IsEquippedAndReady() or ((5210 - (423 + 100)) < (32 + 4510))) then
-			if (((9112 - 5821) > (869 + 798)) and v26(v56.DesperateInvokersCodex, not v17:IsInRange(816 - (326 + 445)))) then
+		if (v50.DesperateInvokersCodex:IsEquippedAndReady() or ((126 - 43) > (1101 + 679))) then
+			if (((1213 - (89 + 578)) <= (770 + 307)) and v25(v55.DesperateInvokersCodex, not v16:IsInRange(93 - 48))) then
 				return "desperate_invokers_codex items 2";
 			end
 		end
-		if (v51.ConjuredChillglobe:IsEquippedAndReady() or ((3809 - 2936) == (4531 - 2497))) then
-			if (v26(v56.ConjuredChillglobe) or ((6572 - 3756) < (722 - (530 + 181)))) then
+		if (v50.ConjuredChillglobe:IsEquippedAndReady() or ((2045 - (572 + 477)) > (581 + 3720))) then
+			if (((2443 + 1627) > (83 + 604)) and v25(v55.ConjuredChillglobe)) then
 				return "conjured_chillglobe items 4";
 			end
 		end
 	end
-	local function v90()
-		if (((4580 - (614 + 267)) < (4738 - (19 + 13))) and v66) then
-			local v134 = v49.HandleDPSPotion();
-			if (((4305 - 1659) >= (2040 - 1164)) and v134) then
-				return v134;
+	local function v89()
+		if (v65 or ((742 - (84 + 2)) >= (5488 - 2158))) then
+			local v131 = v48.HandleDPSPotion();
+			if (v131 or ((1796 + 696) <= (1177 - (497 + 345)))) then
+				return v131;
 			end
-			if (((1753 - 1139) <= (827 + 2357)) and v50.Berserking:IsCastable()) then
-				if (((5497 - 2371) == (6482 - 3356)) and v26(v50.Berserking)) then
+			if (((111 + 4211) >= (434 + 2128)) and v49.Berserking:IsCastable()) then
+				if (v25(v49.Berserking) or ((4970 - (605 + 728)) >= (2690 + 1080))) then
 					return "berserking ogcd 4";
 				end
 			end
-			if (v50.BloodFury:IsCastable() or ((3999 - (1293 + 519)) >= (10107 - 5153))) then
-				if (v26(v50.BloodFury) or ((10122 - 6245) == (6836 - 3261))) then
+			if (v49.BloodFury:IsCastable() or ((5288 - 2909) > (210 + 4368))) then
+				if (v25(v49.BloodFury) or ((1785 - 1302) > (670 + 73))) then
 					return "blood_fury ogcd 6";
 				end
 			end
-			if (((3048 - 2341) > (1488 - 856)) and v50.Fireblood:IsCastable()) then
-				if (v26(v50.Fireblood) or ((290 + 256) >= (548 + 2136))) then
+			if (((6799 - 4345) > (437 + 141)) and v49.Fireblood:IsCastable()) then
+				if (((1419 - (457 + 32)) < (1892 + 2566)) and v25(v49.Fireblood)) then
 					return "fireblood ogcd 8";
 				end
 			end
 		end
 	end
-	local function v91()
-		if (((3403 - 1938) <= (994 + 3307)) and v31) then
-			local v135 = v90();
-			if (((567 + 1137) > (891 + 534)) and v135) then
-				return v135;
+	local function v90()
+		local v118 = 1402 - (832 + 570);
+		local v119;
+		while true do
+			if (((624 + 38) <= (254 + 718)) and (v118 == (17 - 12))) then
+				if (((2106 + 2264) == (5166 - (588 + 208))) and v49.SiphonLife:IsReady() and (v49.SiphonLifeDebuff:AuraActiveCount() < (13 - 8))) then
+					if (v48.CastCycle(v49.SiphonLife, v56, v84, not v16:IsSpellInRange(v49.SiphonLife)) or ((6562 - (884 + 916)) <= (1802 - 941))) then
+						return "siphon_life aoe 34";
+					end
+				end
+				if (v49.DrainSoul:IsReady() or ((819 + 593) == (4917 - (232 + 421)))) then
+					if (v24(v49.DrainSoul, nil, nil, not v16:IsSpellInRange(v49.DrainSoul)) or ((5057 - (1569 + 320)) < (529 + 1624))) then
+						return "drain_soul aoe 36";
+					end
+				end
+				if (v49.ShadowBolt:IsReady() or ((946 + 4030) < (4488 - 3156))) then
+					if (((5233 - (316 + 289)) == (12114 - 7486)) and v24(v49.ShadowBolt, nil, nil, not v16:IsSpellInRange(v49.ShadowBolt))) then
+						return "shadow_bolt aoe 38";
+					end
+				end
+				break;
 			end
-		end
-		local v127 = v89();
-		if (v127 or ((1783 - (709 + 387)) == (6092 - (673 + 1185)))) then
-			return v127;
-		end
-		v67 = v71(v58);
-		if ((v50.Haunt:IsReady() and (v17:DebuffRemains(v50.HauntDebuff) < (8 - 5))) or ((10693 - 7363) < (2350 - 921))) then
-			if (((821 + 326) >= (251 + 84)) and v25(v50.Haunt, nil, nil, not v17:IsSpellInRange(v50.Haunt))) then
-				return "haunt aoe 2";
+			if ((v118 == (1 + 1)) or ((1507 - (666 + 787)) == (820 - (360 + 65)))) then
+				if (((77 + 5) == (336 - (79 + 175))) and v49.SiphonLife:IsReady() and (v49.SiphonLifeDebuff:AuraActiveCount() < (9 - 3)) and v49.SummonDarkglare:CooldownUp()) then
+					if (v48.CastCycle(v49.SiphonLife, v56, v84, not v16:IsSpellInRange(v49.SiphonLife)) or ((454 + 127) < (864 - 582))) then
+						return "siphon_life aoe 10";
+					end
+				end
+				if ((v49.SoulRot:IsReady() and v60 and v59) or ((8875 - 4266) < (3394 - (503 + 396)))) then
+					if (((1333 - (92 + 89)) == (2234 - 1082)) and v24(v49.SoulRot, nil, nil, not v16:IsSpellInRange(v49.SoulRot))) then
+						return "soul_rot aoe 12";
+					end
+				end
+				if (((973 + 923) <= (2026 + 1396)) and v49.SeedofCorruption:IsReady() and (v16:DebuffRemains(v49.CorruptionDebuff) < (19 - 14)) and not (v49.SeedofCorruption:InFlight() or v16:DebuffUp(v49.SeedofCorruptionDebuff))) then
+					if (v24(v49.SeedofCorruption, nil, nil, not v16:IsSpellInRange(v49.SeedofCorruption)) or ((136 + 854) > (3693 - 2073))) then
+						return "seed_of_corruption aoe 14";
+					end
+				end
+				if ((v49.Agony:IsReady() and (v49.AgonyDebuff:AuraActiveCount() < (7 + 1))) or ((419 + 458) > (14299 - 9604))) then
+					if (((336 + 2355) >= (2822 - 971)) and v48.CastTargetIf(v49.Agony, v56, "min", v72, v75, not v16:IsSpellInRange(v49.Agony))) then
+						return "agony aoe 16";
+					end
+				end
+				v118 = 1247 - (485 + 759);
 			end
-		end
-		if (((4637 - 1202) > (516 + 1581)) and v50.VileTaint:IsReady() and (((v50.SouleatersGluttony:TalentRank() == (3 - 1)) and ((v67 < (1.5 - 0)) or (v50.SoulRot:CooldownRemains() <= v50.VileTaint:ExecuteTime()))) or ((v50.SouleatersGluttony:TalentRank() == (1881 - (446 + 1434))) and (v50.SoulRot:CooldownRemains() <= v50.VileTaint:ExecuteTime())) or (not v50.SouleatersGluttony:IsAvailable() and ((v50.SoulRot:CooldownRemains() <= v50.VileTaint:ExecuteTime()) or (v50.VileTaint:CooldownRemains() > (1308 - (1040 + 243))))))) then
-			if (v25(v56.VileTaintCursor, nil, nil, not v17:IsInRange(119 - 79)) or ((5617 - (559 + 1288)) >= (5972 - (609 + 1322)))) then
-				return "vile_taint aoe 4";
+			if ((v118 == (6 - 3)) or ((4174 - (442 + 747)) >= (5991 - (832 + 303)))) then
+				if (((5222 - (88 + 858)) >= (365 + 830)) and v30 and v49.SummonDarkglare:IsCastable() and v59 and v60 and v62) then
+					if (((2675 + 557) <= (194 + 4496)) and v24(v49.SummonDarkglare, v46)) then
+						return "summon_darkglare aoe 18";
+					end
+				end
+				if ((v49.MaleficRapture:IsReady() and (v12:BuffUp(v49.UmbrafireKindlingBuff))) or ((1685 - (766 + 23)) >= (15530 - 12384))) then
+					if (((4186 - 1125) >= (7793 - 4835)) and v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(339 - 239))) then
+						return "malefic_rapture aoe 20";
+					end
+				end
+				if (((4260 - (1036 + 37)) >= (457 + 187)) and v49.SeedofCorruption:IsReady() and v49.SowTheSeeds:IsAvailable()) then
+					if (((1253 - 609) <= (554 + 150)) and v24(v49.SeedofCorruption, nil, nil, not v16:IsSpellInRange(v49.SeedofCorruption))) then
+						return "seed_of_corruption aoe 22";
+					end
+				end
+				if (((2438 - (641 + 839)) > (1860 - (910 + 3))) and v49.MaleficRapture:IsReady() and ((((v49.SummonDarkglare:CooldownRemains() > (38 - 23)) or (v67 > (1687 - (1466 + 218)))) and not v49.SowTheSeeds:IsAvailable()) or v12:BuffUp(v49.TormentedCrescendoBuff))) then
+					if (((2065 + 2427) >= (3802 - (556 + 592))) and v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(36 + 64))) then
+						return "malefic_rapture aoe 24";
+					end
+				end
+				v118 = 812 - (329 + 479);
 			end
-		end
-		if (v50.PhantomSingularity:IsCastable() or ((4245 - (13 + 441)) <= (6019 - 4408))) then
-			if (v25(v50.PhantomSingularity, v46, nil, not v17:IsSpellInRange(v50.PhantomSingularity)) or ((11991 - 7413) <= (10000 - 7992))) then
-				return "phantom_singularity aoe 6";
+			if (((4296 - (174 + 680)) >= (5164 - 3661)) and (v118 == (0 - 0))) then
+				if (v30 or ((2264 + 906) <= (2203 - (396 + 343)))) then
+					local v143 = 0 + 0;
+					local v144;
+					while true do
+						if ((v143 == (1477 - (29 + 1448))) or ((6186 - (135 + 1254)) == (16530 - 12142))) then
+							v144 = v89();
+							if (((2572 - 2021) <= (454 + 227)) and v144) then
+								return v144;
+							end
+							break;
+						end
+					end
+				end
+				v119 = v88();
+				if (((4804 - (389 + 1138)) > (981 - (102 + 472))) and v119) then
+					return v119;
+				end
+				v66 = v70(v57);
+				v118 = 1 + 0;
 			end
-		end
-		if (((42 + 1083) <= (7539 - 5463)) and v50.UnstableAffliction:IsReady() and (v17:DebuffRemains(v50.UnstableAfflictionDebuff) < (2 + 3))) then
-			if (v25(v50.UnstableAffliction, nil, nil, not v17:IsSpellInRange(v50.UnstableAffliction)) or ((326 + 417) >= (13054 - 8655))) then
-				return "unstable_affliction aoe 8";
+			if (((2604 + 2091) >= (1320 + 95)) and (v118 == (1546 - (320 + 1225)))) then
+				if ((v49.Haunt:IsReady() and (v16:DebuffRemains(v49.HauntDebuff) < (5 - 2))) or ((1966 + 1246) <= (2408 - (157 + 1307)))) then
+					if (v24(v49.Haunt, nil, nil, not v16:IsSpellInRange(v49.Haunt)) or ((4955 - (821 + 1038)) <= (4485 - 2687))) then
+						return "haunt aoe 2";
+					end
+				end
+				if (((387 + 3150) == (6282 - 2745)) and v49.VileTaint:IsReady() and (((v49.SouleatersGluttony:TalentRank() == (1 + 1)) and ((v66 < (2.5 - 1)) or (v49.SoulRot:CooldownRemains() <= v49.VileTaint:ExecuteTime()))) or ((v49.SouleatersGluttony:TalentRank() == (1027 - (834 + 192))) and (v49.SoulRot:CooldownRemains() <= v49.VileTaint:ExecuteTime())) or (not v49.SouleatersGluttony:IsAvailable() and ((v49.SoulRot:CooldownRemains() <= v49.VileTaint:ExecuteTime()) or (v49.VileTaint:CooldownRemains() > (2 + 23)))))) then
+					if (((985 + 2852) >= (34 + 1536)) and v24(v55.VileTaintCursor, nil, nil, not v16:IsInRange(61 - 21))) then
+						return "vile_taint aoe 4";
+					end
+				end
+				if (v49.PhantomSingularity:IsCastable() or ((3254 - (300 + 4)) == (1019 + 2793))) then
+					if (((12363 - 7640) >= (2680 - (112 + 250))) and v24(v49.PhantomSingularity, v45, nil, not v16:IsSpellInRange(v49.PhantomSingularity))) then
+						return "phantom_singularity aoe 6";
+					end
+				end
+				if ((v49.UnstableAffliction:IsReady() and (v16:DebuffRemains(v49.UnstableAfflictionDebuff) < (2 + 3))) or ((5077 - 3050) > (1634 + 1218))) then
+					if (v24(v49.UnstableAffliction, nil, nil, not v16:IsSpellInRange(v49.UnstableAffliction)) or ((588 + 548) > (3229 + 1088))) then
+						return "unstable_affliction aoe 8";
+					end
+				end
+				v118 = 1 + 1;
 			end
-		end
-		if (((633 + 522) < (3076 - 1403)) and v50.SiphonLife:IsReady() and (v50.SiphonLifeDebuff:AuraActiveCount() < (4 + 2)) and v50.SummonDarkglare:CooldownUp()) then
-			if (v49.CastCycle(v50.SiphonLife, v57, v85, not v17:IsSpellInRange(v50.SiphonLife)) or ((1293 + 1031) <= (416 + 162))) then
-				return "siphon_life aoe 10";
-			end
-		end
-		if (((3163 + 604) == (3686 + 81)) and v50.SoulRot:IsReady() and v61 and v60) then
-			if (((4522 - (153 + 280)) == (11807 - 7718)) and v25(v50.SoulRot, nil, nil, not v17:IsSpellInRange(v50.SoulRot))) then
-				return "soul_rot aoe 12";
-			end
-		end
-		if (((4003 + 455) >= (661 + 1013)) and v50.SeedofCorruption:IsReady() and (v17:DebuffRemains(v50.CorruptionDebuff) < (3 + 2)) and not (v50.SeedofCorruption:InFlight() or v17:DebuffUp(v50.SeedofCorruptionDebuff))) then
-			if (((883 + 89) <= (1028 + 390)) and v25(v50.SeedofCorruption, nil, nil, not v17:IsSpellInRange(v50.SeedofCorruption))) then
-				return "seed_of_corruption aoe 14";
-			end
-		end
-		if ((v50.Agony:IsReady() and (v50.AgonyDebuff:AuraActiveCount() < (11 - 3))) or ((3052 + 1886) < (5429 - (89 + 578)))) then
-			if (v49.CastTargetIf(v50.Agony, v57, "min", v73, v76, not v17:IsSpellInRange(v50.Agony)) or ((1789 + 715) > (8864 - 4600))) then
-				return "agony aoe 16";
-			end
-		end
-		if (((3202 - (572 + 477)) == (291 + 1862)) and v31 and v50.SummonDarkglare:IsCastable() and v60 and v61 and v63) then
-			if (v25(v50.SummonDarkglare, v47) or ((305 + 202) >= (310 + 2281))) then
-				return "summon_darkglare aoe 18";
-			end
-		end
-		if (((4567 - (84 + 2)) == (7384 - 2903)) and v50.MaleficRapture:IsReady() and (v13:BuffUp(v50.UmbrafireKindlingBuff))) then
-			if (v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(73 + 27)) or ((3170 - (497 + 345)) < (18 + 675))) then
-				return "malefic_rapture aoe 20";
-			end
-		end
-		if (((732 + 3596) == (5661 - (605 + 728))) and v50.SeedofCorruption:IsReady() and v50.SowTheSeeds:IsAvailable()) then
-			if (((1134 + 454) >= (2960 - 1628)) and v25(v50.SeedofCorruption, nil, nil, not v17:IsSpellInRange(v50.SeedofCorruption))) then
-				return "seed_of_corruption aoe 22";
-			end
-		end
-		if ((v50.MaleficRapture:IsReady() and ((((v50.SummonDarkglare:CooldownRemains() > (1 + 14)) or (v68 > (10 - 7))) and not v50.SowTheSeeds:IsAvailable()) or v13:BuffUp(v50.TormentedCrescendoBuff))) or ((3763 + 411) > (11769 - 7521))) then
-			if (v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(76 + 24)) or ((5075 - (457 + 32)) <= (35 + 47))) then
-				return "malefic_rapture aoe 24";
-			end
-		end
-		if (((5265 - (832 + 570)) == (3640 + 223)) and v50.DrainLife:IsReady() and (v17:DebuffUp(v50.SoulRotDebuff) or not v50.SoulRot:IsAvailable()) and (v13:BuffStack(v50.InevitableDemiseBuff) > (3 + 7))) then
-			if (v25(v50.DrainLife, nil, nil, not v17:IsSpellInRange(v50.DrainLife)) or ((997 - 715) <= (21 + 21))) then
-				return "drain_life aoe 26";
-			end
-		end
-		if (((5405 - (588 + 208)) >= (2064 - 1298)) and v50.DrainSoul:IsReady() and v13:BuffUp(v50.NightfallBuff) and v50.ShadowEmbrace:IsAvailable()) then
-			if (v49.CastCycle(v50.DrainSoul, v57, v84, not v17:IsSpellInRange(v50.DrainSoul)) or ((2952 - (884 + 916)) == (5208 - 2720))) then
-				return "drain_soul aoe 28";
-			end
-		end
-		if (((1985 + 1437) > (4003 - (232 + 421))) and v50.DrainSoul:IsReady() and (v13:BuffUp(v50.NightfallBuff))) then
-			if (((2766 - (1569 + 320)) > (93 + 283)) and v25(v50.DrainSoul, nil, nil, not v17:IsSpellInRange(v50.DrainSoul))) then
-				return "drain_soul aoe 30";
-			end
-		end
-		if ((v50.SummonSoulkeeper:IsReady() and ((v50.SummonSoulkeeper:Count() == (2 + 8)) or ((v50.SummonSoulkeeper:Count() > (9 - 6)) and (v70 < (615 - (316 + 289)))))) or ((8161 - 5043) <= (86 + 1765))) then
-			if (v25(v50.SummonSoulkeeper) or ((1618 - (666 + 787)) >= (3917 - (360 + 65)))) then
-				return "soul_strike aoe 32";
-			end
-		end
-		if (((3691 + 258) < (5110 - (79 + 175))) and v50.SiphonLife:IsReady() and (v50.SiphonLifeDebuff:AuraActiveCount() < (7 - 2))) then
-			if (v49.CastCycle(v50.SiphonLife, v57, v85, not v17:IsSpellInRange(v50.SiphonLife)) or ((3337 + 939) < (9244 - 6228))) then
-				return "siphon_life aoe 34";
-			end
-		end
-		if (((9032 - 4342) > (5024 - (503 + 396))) and v50.DrainSoul:IsReady()) then
-			if (v25(v50.DrainSoul, nil, nil, not v17:IsSpellInRange(v50.DrainSoul)) or ((231 - (92 + 89)) >= (1737 - 841))) then
-				return "drain_soul aoe 36";
-			end
-		end
-		if (v50.ShadowBolt:IsReady() or ((880 + 834) >= (1751 + 1207))) then
-			if (v25(v50.ShadowBolt, nil, nil, not v17:IsSpellInRange(v50.ShadowBolt)) or ((5838 - 4347) < (89 + 555))) then
-				return "shadow_bolt aoe 38";
+			if (((3528 + 1220) == (6162 - (1001 + 413))) and (v118 == (8 - 4))) then
+				if (((4618 - (244 + 638)) <= (5433 - (627 + 66))) and v49.DrainLife:IsReady() and (v16:DebuffUp(v49.SoulRotDebuff) or not v49.SoulRot:IsAvailable()) and (v12:BuffStack(v49.InevitableDemiseBuff) > (29 - 19))) then
+					if (v24(v49.DrainLife, nil, nil, not v16:IsSpellInRange(v49.DrainLife)) or ((3992 - (512 + 90)) <= (4966 - (1665 + 241)))) then
+						return "drain_life aoe 26";
+					end
+				end
+				if ((v49.DrainSoul:IsReady() and v12:BuffUp(v49.NightfallBuff) and v49.ShadowEmbrace:IsAvailable()) or ((1716 - (373 + 344)) > (1215 + 1478))) then
+					if (((123 + 340) < (1585 - 984)) and v48.CastCycle(v49.DrainSoul, v56, v83, not v16:IsSpellInRange(v49.DrainSoul))) then
+						return "drain_soul aoe 28";
+					end
+				end
+				if ((v49.DrainSoul:IsReady() and (v12:BuffUp(v49.NightfallBuff))) or ((3693 - 1510) < (1786 - (35 + 1064)))) then
+					if (((3310 + 1239) == (9732 - 5183)) and v24(v49.DrainSoul, nil, nil, not v16:IsSpellInRange(v49.DrainSoul))) then
+						return "drain_soul aoe 30";
+					end
+				end
+				if (((19 + 4653) == (5908 - (298 + 938))) and v49.SummonSoulkeeper:IsReady() and ((v49.SummonSoulkeeper:Count() == (1269 - (233 + 1026))) or ((v49.SummonSoulkeeper:Count() > (1669 - (636 + 1030))) and (v69 < (6 + 4))))) then
+					if (v24(v49.SummonSoulkeeper) or ((3583 + 85) < (118 + 277))) then
+						return "soul_strike aoe 32";
+					end
+				end
+				v118 = 1 + 4;
 			end
 		end
 	end
-	local function v92()
-		local v128 = 0 - 0;
-		local v129;
+	local function v91()
+		local v120 = 221 - (55 + 166);
+		local v121;
 		while true do
-			if (((615 + 89) < (472 + 515)) and (v128 == (15 - 10))) then
-				if (((465 + 3253) > (2906 - 1000)) and v50.DrainSoul:IsReady() and v13:BuffUp(v50.NightfallBuff) and v50.ShadowEmbrace:IsAvailable()) then
-					if (v49.CastCycle(v50.DrainSoul, v57, v84, not v17:IsSpellInRange(v50.DrainSoul)) or ((2202 - (485 + 759)) > (8410 - 4775))) then
-						return "drain_soul cleave 36";
-					end
-				end
-				if (((4690 - (442 + 747)) <= (5627 - (832 + 303))) and v50.DrainSoul:IsReady() and v13:BuffUp(v50.NightfallBuff)) then
-					if (v25(v50.DrainSoul, nil, nil, not v17:IsSpellInRange(v50.DrainSoul)) or ((4388 - (88 + 858)) < (777 + 1771))) then
-						return "drain_soul cleave 38";
-					end
-				end
-				if (((2380 + 495) >= (61 + 1403)) and v50.ShadowBolt:IsReady() and v13:BuffUp(v50.NightfallBuff)) then
-					if (v25(v50.ShadowBolt, nil, nil, not v17:IsSpellInRange(v50.ShadowBolt)) or ((5586 - (766 + 23)) >= (24155 - 19262))) then
-						return "shadow_bolt cleave 40";
-					end
-				end
-				if ((v50.MaleficRapture:IsReady() and (v68 > (3 - 0))) or ((1451 - 900) > (7018 - 4950))) then
-					if (((3187 - (1036 + 37)) > (670 + 274)) and v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(194 - 94))) then
-						return "malefic_rapture cleave 42";
-					end
-				end
-				v128 = 5 + 1;
-			end
-			if ((v128 == (1482 - (641 + 839))) or ((3175 - (910 + 3)) >= (7892 - 4796))) then
-				if ((v50.PhantomSingularity:IsReady() and (v50.AgonyDebuff:AuraActiveCount() == (1686 - (1466 + 218))) and (v50.CorruptionDebuff:AuraActiveCount() == (1 + 1)) and (not v50.SiphonLife:IsAvailable() or (v50.SiphonLifeDebuff:AuraActiveCount() == (1150 - (556 + 592)))) and (v50.SoulRot:IsAvailable() or (v50.SoulRot:CooldownRemains() <= v50.PhantomSingularity:ExecuteTime()) or (v50.SoulRot:CooldownRemains() >= (9 + 16)))) or ((3063 - (329 + 479)) >= (4391 - (174 + 680)))) then
-					if (v25(v50.PhantomSingularity, v46, nil, not v17:IsSpellInRange(v50.PhantomSingularity)) or ((13184 - 9347) < (2706 - 1400))) then
-						return "phantom_singularity cleave 12";
-					end
-				end
-				if (((2107 + 843) == (3689 - (396 + 343))) and v50.UnstableAffliction:IsReady() and (v17:DebuffRemains(v50.UnstableAfflictionDebuff) < (1 + 4))) then
-					if (v25(v50.UnstableAffliction, nil, nil, not v17:IsSpellInRange(v50.UnstableAffliction)) or ((6200 - (29 + 1448)) < (4687 - (135 + 1254)))) then
-						return "unstable_affliction cleave 14";
-					end
-				end
-				if (((4279 - 3143) >= (718 - 564)) and v50.SeedofCorruption:IsReady() and not v50.AbsoluteCorruption:IsAvailable() and (v17:DebuffRemains(v50.CorruptionDebuff) < (4 + 1)) and v50.SowTheSeeds:IsAvailable() and v72()) then
-					if (v25(v50.SeedofCorruption, nil, nil, not v17:IsSpellInRange(v50.SeedofCorruption)) or ((1798 - (389 + 1138)) > (5322 - (102 + 472)))) then
-						return "seed_of_corruption cleave 16";
-					end
-				end
-				if (((4474 + 266) >= (1748 + 1404)) and v50.Corruption:IsReady()) then
-					if (v49.CastTargetIf(v50.Corruption, v57, "min", v74, v78, not v17:IsSpellInRange(v50.Corruption)) or ((2404 + 174) >= (4935 - (320 + 1225)))) then
-						return "corruption cleave 18";
-					end
-				end
-				v128 = 5 - 2;
-			end
-			if (((26 + 15) <= (3125 - (157 + 1307))) and (v128 == (1862 - (821 + 1038)))) then
-				if (((1499 - 898) < (390 + 3170)) and v50.SiphonLife:IsReady()) then
-					if (((417 - 182) < (256 + 431)) and v49.CastTargetIf(v50.SiphonLife, v57, "min", v75, v79, not v17:IsSpellInRange(v50.SiphonLife))) then
-						return "siphon_life cleave 20";
-					end
-				end
-				if (((11274 - 6725) > (2179 - (834 + 192))) and v50.Haunt:IsReady() and (v17:DebuffRemains(v50.HauntDebuff) < (1 + 2))) then
-					if (v25(v50.Haunt, nil, nil, not v17:IsSpellInRange(v50.Haunt)) or ((1200 + 3474) < (101 + 4571))) then
-						return "haunt cleave 22";
-					end
-				end
-				if (((5682 - 2014) < (4865 - (300 + 4))) and v50.PhantomSingularity:IsReady() and ((v50.SoulRot:CooldownRemains() <= v50.PhantomSingularity:ExecuteTime()) or (not v50.SouleatersGluttony:IsAvailable() and (not v50.SoulRot:IsAvailable() or (v50.SoulRot:CooldownRemains() <= v50.PhantomSingularity:ExecuteTime()) or (v50.SoulRot:CooldownRemains() >= (7 + 18)))))) then
-					if (v25(v50.PhantomSingularity, v46, nil, not v17:IsSpellInRange(v50.PhantomSingularity)) or ((1191 - 736) == (3967 - (112 + 250)))) then
-						return "phantom_singularity cleave 24";
-					end
-				end
-				if (v50.SoulRot:IsReady() or ((1062 + 1601) == (8297 - 4985))) then
-					if (((2451 + 1826) <= (2315 + 2160)) and v25(v50.SoulRot, nil, nil, not v17:IsSpellInRange(v50.SoulRot))) then
-						return "soul_rot cleave 26";
-					end
-				end
-				v128 = 3 + 1;
-			end
-			if ((v128 == (0 + 0)) or ((647 + 223) == (2603 - (1001 + 413)))) then
-				if (((3462 - 1909) <= (4015 - (244 + 638))) and v31) then
-					local v145 = 693 - (627 + 66);
+			if ((v120 == (0 + 0)) or ((419 + 3747) == (1737 - 1282))) then
+				if (v30 or ((4746 - (36 + 261)) == (4656 - 1993))) then
+					local v145 = 1368 - (34 + 1334);
 					local v146;
 					while true do
-						if ((v145 == (0 - 0)) or ((2839 - (512 + 90)) >= (5417 - (1665 + 241)))) then
-							v146 = v90();
-							if (v146 or ((2041 - (373 + 344)) > (1363 + 1657))) then
+						if ((v145 == (0 + 0)) or ((3324 + 953) < (4272 - (1035 + 248)))) then
+							v146 = v89();
+							if (v146 or ((891 - (20 + 1)) >= (2162 + 1987))) then
 								return v146;
 							end
 							break;
 						end
 					end
 				end
-				v129 = v89();
-				if (v129 or ((792 + 2200) == (4961 - 3080))) then
-					return v129;
+				v121 = v88();
+				if (((2531 - (134 + 185)) < (4316 - (549 + 584))) and v121) then
+					return v121;
 				end
-				if (((5255 - 2149) > (2625 - (35 + 1064))) and v31 and v50.SummonDarkglare:IsCastable() and v60 and v61 and v63) then
-					if (((2200 + 823) < (8279 - 4409)) and v25(v50.SummonDarkglare, v47)) then
+				if (((5331 - (314 + 371)) > (10271 - 7279)) and v30 and v49.SummonDarkglare:IsCastable() and v59 and v60 and v62) then
+					if (((2402 - (478 + 490)) < (1646 + 1460)) and v24(v49.SummonDarkglare, v46)) then
 						return "summon_darkglare cleave 2";
 					end
 				end
-				v128 = 1 + 0;
+				if (((1958 - (786 + 386)) < (9791 - 6768)) and v49.MaleficRapture:IsReady() and ((v49.DreadTouch:IsAvailable() and (v16:DebuffRemains(v49.DreadTouchDebuff) < (1381 - (1055 + 324))) and v16:DebuffUp(v49.AgonyDebuff) and v16:DebuffUp(v49.CorruptionDebuff) and (not v49.SiphonLife:IsAvailable() or v16:DebuffUp(v49.SiphonLifeDebuff)) and (not v49.PhantomSingularity:IsAvailable() or v49.PhantomSingularity:CooldownDown()) and (not v49.VileTaint:IsAvailable() or v49.VileTaint:CooldownDown()) and (not v49.SoulRot:IsAvailable() or v49.SoulRot:CooldownDown())) or (v67 > (1344 - (1093 + 247))) or v12:BuffUp(v49.UmbrafireKindlingBuff))) then
+					if (v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(89 + 11)) or ((257 + 2185) < (293 - 219))) then
+						return "malefic_rapture cleave 4";
+					end
+				end
+				if (((15390 - 10855) == (12904 - 8369)) and v49.Agony:IsReady()) then
+					if (v48.CastTargetIf(v49.Agony, v56, "min", v72, v76, not v16:IsSpellInRange(v49.Agony)) or ((7561 - 4552) <= (749 + 1356))) then
+						return "agony cleave 6";
+					end
+				end
+				v120 = 3 - 2;
 			end
-			if (((1379 - (298 + 938)) > (1333 - (233 + 1026))) and (v128 == (1673 - (636 + 1030)))) then
-				if (((10 + 8) < (2063 + 49)) and v50.MaleficRapture:IsReady() and (v68 > (1 + 0))) then
-					if (((75 + 1022) <= (1849 - (55 + 166))) and v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(20 + 80))) then
-						return "malefic_rapture cleave 52";
+			if (((6307 - 4477) < (2767 + 902)) and (v120 == (4 - 2))) then
+				if (v49.SiphonLife:IsReady() or ((2118 - (364 + 324)) >= (9901 - 6289))) then
+					if (((6437 - 3754) >= (816 + 1644)) and v48.CastTargetIf(v49.SiphonLife, v56, "min", v74, v78, not v16:IsSpellInRange(v49.SiphonLife))) then
+						return "siphon_life cleave 20";
 					end
 				end
-				if (((466 + 4164) == (17682 - 13052)) and v50.DrainSoul:IsReady()) then
-					if (((3837 - (36 + 261)) > (4691 - 2008)) and v25(v50.DrainSoul, nil, nil, not v17:IsSpellInRange(v50.DrainSoul))) then
-						return "drain_soul cleave 54";
+				if ((v49.Haunt:IsReady() and (v16:DebuffRemains(v49.HauntDebuff) < (12 - 9))) or ((2888 - 1084) >= (9946 - 6671))) then
+					if (v24(v49.Haunt, nil, nil, not v16:IsSpellInRange(v49.Haunt)) or ((2685 - (1249 + 19)) > (3276 + 353))) then
+						return "haunt cleave 22";
 					end
 				end
-				if (((6162 - (34 + 1334)) >= (1259 + 2016)) and v50.ShadowBolt:IsReady()) then
-					if (((1154 + 330) == (2767 - (1035 + 248))) and v25(v50.ShadowBolt, nil, nil, not v17:IsSpellInRange(v50.ShadowBolt))) then
+				if (((18664 - 13869) > (1488 - (686 + 400))) and v49.PhantomSingularity:IsReady() and ((v49.SoulRot:CooldownRemains() <= v49.PhantomSingularity:ExecuteTime()) or (not v49.SouleatersGluttony:IsAvailable() and (not v49.SoulRot:IsAvailable() or (v49.SoulRot:CooldownRemains() <= v49.PhantomSingularity:ExecuteTime()) or (v49.SoulRot:CooldownRemains() >= (20 + 5)))))) then
+					if (((5042 - (73 + 156)) > (17 + 3548)) and v24(v49.PhantomSingularity, v45, nil, not v16:IsSpellInRange(v49.PhantomSingularity))) then
+						return "phantom_singularity cleave 24";
+					end
+				end
+				if (((4723 - (721 + 90)) == (44 + 3868)) and v49.SoulRot:IsReady()) then
+					if (((9159 - 6338) <= (5294 - (224 + 246))) and v24(v49.SoulRot, nil, nil, not v16:IsSpellInRange(v49.SoulRot))) then
+						return "soul_rot cleave 26";
+					end
+				end
+				if (((2815 - 1077) <= (4041 - 1846)) and v49.MaleficRapture:IsReady() and ((v67 > (1 + 3)) or (v49.TormentedCrescendo:IsAvailable() and (v12:BuffStack(v49.TormentedCrescendoBuff) == (1 + 0)) and (v67 > (3 + 0))))) then
+					if (((81 - 40) <= (10043 - 7025)) and v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(613 - (203 + 310)))) then
+						return "malefic_rapture cleave 28";
+					end
+				end
+				if (((4138 - (1238 + 755)) <= (287 + 3817)) and v49.MaleficRapture:IsReady() and v49.DreadTouch:IsAvailable() and (v16:DebuffRemains(v49.DreadTouchDebuff) < v12:GCD())) then
+					if (((4223 - (709 + 825)) < (8927 - 4082)) and v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(145 - 45))) then
+						return "malefic_rapture cleave 30";
+					end
+				end
+				v120 = 867 - (196 + 668);
+			end
+			if (((11 - 8) == v120) or ((4809 - 2487) > (3455 - (171 + 662)))) then
+				if ((v49.MaleficRapture:IsReady() and not v49.DreadTouch:IsAvailable() and v12:BuffUp(v49.TormentedCrescendoBuff)) or ((4627 - (4 + 89)) == (7297 - 5215))) then
+					if (v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(37 + 63)) or ((6900 - 5329) > (733 + 1134))) then
+						return "malefic_rapture cleave 32";
+					end
+				end
+				if ((v49.MaleficRapture:IsReady() and (v63 or v61)) or ((4140 - (35 + 1451)) >= (4449 - (28 + 1425)))) then
+					if (((5971 - (941 + 1052)) > (2018 + 86)) and v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(1614 - (822 + 692)))) then
+						return "malefic_rapture cleave 34";
+					end
+				end
+				if (((4275 - 1280) > (726 + 815)) and v49.DrainSoul:IsReady() and v12:BuffUp(v49.NightfallBuff) and v49.ShadowEmbrace:IsAvailable()) then
+					if (((3546 - (45 + 252)) > (943 + 10)) and v48.CastCycle(v49.DrainSoul, v56, v83, not v16:IsSpellInRange(v49.DrainSoul))) then
+						return "drain_soul cleave 36";
+					end
+				end
+				if ((v49.DrainSoul:IsReady() and v12:BuffUp(v49.NightfallBuff)) or ((1127 + 2146) > (11129 - 6556))) then
+					if (v24(v49.DrainSoul, nil, nil, not v16:IsSpellInRange(v49.DrainSoul)) or ((3584 - (114 + 319)) < (1843 - 559))) then
+						return "drain_soul cleave 38";
+					end
+				end
+				if ((v49.ShadowBolt:IsReady() and v12:BuffUp(v49.NightfallBuff)) or ((2370 - 520) == (975 + 554))) then
+					if (((1222 - 401) < (4447 - 2324)) and v24(v49.ShadowBolt, nil, nil, not v16:IsSpellInRange(v49.ShadowBolt))) then
+						return "shadow_bolt cleave 40";
+					end
+				end
+				if (((2865 - (556 + 1407)) < (3531 - (741 + 465))) and v49.MaleficRapture:IsReady() and (v67 > (468 - (170 + 295)))) then
+					if (((453 + 405) <= (2721 + 241)) and v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(246 - 146))) then
+						return "malefic_rapture cleave 42";
+					end
+				end
+				v120 = 4 + 0;
+			end
+			if (((4 + 1) == v120) or ((2235 + 1711) < (2518 - (957 + 273)))) then
+				if (v49.ShadowBolt:IsReady() or ((868 + 2374) == (227 + 340))) then
+					if (v24(v49.ShadowBolt, nil, nil, not v16:IsSpellInRange(v49.ShadowBolt)) or ((3227 - 2380) >= (3328 - 2065))) then
 						return "shadow_bolt cleave 56";
 					end
 				end
 				break;
 			end
-			if (((1453 - (20 + 1)) < (1853 + 1702)) and (v128 == (325 - (134 + 185)))) then
-				if ((v50.DrainLife:IsReady() and ((v13:BuffStack(v50.InevitableDemiseBuff) > (1181 - (549 + 584))) or ((v13:BuffStack(v50.InevitableDemiseBuff) > (705 - (314 + 371))) and (v70 < (13 - 9))))) or ((2033 - (478 + 490)) > (1896 + 1682))) then
-					if (v25(v50.DrainLife, nil, nil, not v17:IsSpellInRange(v50.DrainLife)) or ((5967 - (786 + 386)) < (4557 - 3150))) then
-						return "drain_life cleave 44";
-					end
-				end
-				if (((3232 - (1055 + 324)) < (6153 - (1093 + 247))) and v50.DrainLife:IsReady() and v17:DebuffUp(v50.SoulRotDebuff) and (v13:BuffStack(v50.InevitableDemiseBuff) > (9 + 1))) then
-					if (v25(v50.DrainLife, nil, nil, not v17:IsSpellInRange(v50.DrainLife)) or ((297 + 2524) < (9651 - 7220))) then
-						return "drain_life cleave 46";
-					end
-				end
-				if (v50.Agony:IsReady() or ((9753 - 6879) < (6205 - 4024))) then
-					if (v49.CastCycle(v50.Agony, v57, v81, not v17:IsSpellInRange(v50.Agony)) or ((6757 - 4068) <= (123 + 220))) then
-						return "agony cleave 48";
-					end
-				end
-				if (v50.Corruption:IsCastable() or ((7200 - 5331) == (6924 - 4915))) then
-					if (v49.CastCycle(v50.Corruption, v57, v83, not v17:IsSpellInRange(v50.Corruption)) or ((2674 + 872) < (5938 - 3616))) then
-						return "corruption cleave 50";
-					end
-				end
-				v128 = 695 - (364 + 324);
-			end
-			if ((v128 == (10 - 6)) or ((4995 - 2913) == (1582 + 3191))) then
-				if (((13573 - 10329) > (1689 - 634)) and v50.MaleficRapture:IsReady() and ((v68 > (11 - 7)) or (v50.TormentedCrescendo:IsAvailable() and (v13:BuffStack(v50.TormentedCrescendoBuff) == (1269 - (1249 + 19))) and (v68 > (3 + 0))))) then
-					if (v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(389 - 289)) or ((4399 - (686 + 400)) <= (1396 + 382))) then
-						return "malefic_rapture cleave 28";
-					end
-				end
-				if ((v50.MaleficRapture:IsReady() and v50.DreadTouch:IsAvailable() and (v17:DebuffRemains(v50.DreadTouchDebuff) < v13:GCD())) or ((1650 - (73 + 156)) >= (10 + 2094))) then
-					if (((2623 - (721 + 90)) <= (37 + 3212)) and v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(324 - 224))) then
-						return "malefic_rapture cleave 30";
-					end
-				end
-				if (((2093 - (224 + 246)) <= (3170 - 1213)) and v50.MaleficRapture:IsReady() and not v50.DreadTouch:IsAvailable() and v13:BuffUp(v50.TormentedCrescendoBuff)) then
-					if (((8123 - 3711) == (801 + 3611)) and v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(3 + 97))) then
-						return "malefic_rapture cleave 32";
-					end
-				end
-				if (((1286 + 464) >= (1673 - 831)) and v50.MaleficRapture:IsReady() and (v64 or v62)) then
-					if (((14549 - 10177) > (2363 - (203 + 310))) and v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(2093 - (1238 + 755)))) then
-						return "malefic_rapture cleave 34";
-					end
-				end
-				v128 = 1 + 4;
-			end
-			if (((1766 - (709 + 825)) < (1512 - 691)) and ((1 - 0) == v128)) then
-				if (((1382 - (196 + 668)) < (3561 - 2659)) and v50.MaleficRapture:IsReady() and ((v50.DreadTouch:IsAvailable() and (v17:DebuffRemains(v50.DreadTouchDebuff) < (3 - 1)) and v17:DebuffUp(v50.AgonyDebuff) and v17:DebuffUp(v50.CorruptionDebuff) and (not v50.SiphonLife:IsAvailable() or v17:DebuffUp(v50.SiphonLifeDebuff)) and (not v50.PhantomSingularity:IsAvailable() or v50.PhantomSingularity:CooldownDown()) and (not v50.VileTaint:IsAvailable() or v50.VileTaint:CooldownDown()) and (not v50.SoulRot:IsAvailable() or v50.SoulRot:CooldownDown())) or (v68 > (837 - (171 + 662))) or v13:BuffUp(v50.UmbrafireKindlingBuff))) then
-					if (((3087 - (4 + 89)) > (3007 - 2149)) and v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(37 + 63))) then
-						return "malefic_rapture cleave 4";
-					end
-				end
-				if (v50.Agony:IsReady() or ((16492 - 12737) <= (359 + 556))) then
-					if (((5432 - (35 + 1451)) > (5196 - (28 + 1425))) and v49.CastTargetIf(v50.Agony, v57, "min", v73, v77, not v17:IsSpellInRange(v50.Agony))) then
-						return "agony cleave 6";
-					end
-				end
-				if ((v50.SoulRot:IsReady() and v61 and v60) or ((3328 - (941 + 1052)) >= (3170 + 136))) then
-					if (((6358 - (822 + 692)) > (3215 - 962)) and v25(v50.SoulRot, nil, nil, not v17:IsSpellInRange(v50.SoulRot))) then
+			if ((v120 == (2 - 1)) or ((11156 - 8903) == (3631 - (389 + 1391)))) then
+				if ((v49.SoulRot:IsReady() and v60 and v59) or ((1310 + 777) > (247 + 2125))) then
+					if (v24(v49.SoulRot, nil, nil, not v16:IsSpellInRange(v49.SoulRot)) or ((10119 - 5674) < (5100 - (783 + 168)))) then
 						return "soul_rot cleave 8";
 					end
 				end
-				if (((213 + 239) == (749 - (45 + 252))) and v50.VileTaint:IsReady() and (v50.AgonyDebuff:AuraActiveCount() == (2 + 0)) and (v50.CorruptionDebuff:AuraActiveCount() == (1 + 1)) and (not v50.SiphonLife:IsAvailable() or (v50.SiphonLifeDebuff:AuraActiveCount() == (4 - 2))) and (not v50.SoulRot:IsAvailable() or (v50.SoulRot:CooldownRemains() <= v50.VileTaint:ExecuteTime()) or (not v50.SouleatersGluttony:IsAvailable() and (v50.SoulRot:CooldownRemains() >= (445 - (114 + 319)))))) then
-					if (v25(v56.VileTaintCursor, nil, nil, not v17:IsSpellInRange(v50.VileTaint)) or ((6542 - 1985) < (2673 - 586))) then
+				if ((v49.VileTaint:IsReady() and (v49.AgonyDebuff:AuraActiveCount() == (6 - 4)) and (v49.CorruptionDebuff:AuraActiveCount() == (2 + 0)) and (not v49.SiphonLife:IsAvailable() or (v49.SiphonLifeDebuff:AuraActiveCount() == (313 - (309 + 2)))) and (not v49.SoulRot:IsAvailable() or (v49.SoulRot:CooldownRemains() <= v49.VileTaint:ExecuteTime()) or (not v49.SouleatersGluttony:IsAvailable() and (v49.SoulRot:CooldownRemains() >= (36 - 24))))) or ((3030 - (1090 + 122)) == (28 + 57))) then
+					if (((2115 - 1485) < (1456 + 671)) and v24(v55.VileTaintCursor, nil, nil, not v16:IsSpellInRange(v49.VileTaint))) then
 						return "vile_taint cleave 10";
 					end
 				end
-				v128 = 2 + 0;
+				if ((v49.PhantomSingularity:IsReady() and (v49.AgonyDebuff:AuraActiveCount() == (1120 - (628 + 490))) and (v49.CorruptionDebuff:AuraActiveCount() == (1 + 1)) and (not v49.SiphonLife:IsAvailable() or (v49.SiphonLifeDebuff:AuraActiveCount() == (4 - 2))) and (v49.SoulRot:IsAvailable() or (v49.SoulRot:CooldownRemains() <= v49.PhantomSingularity:ExecuteTime()) or (v49.SoulRot:CooldownRemains() >= (114 - 89)))) or ((2712 - (431 + 343)) == (5076 - 2562))) then
+					if (((12309 - 8054) >= (44 + 11)) and v24(v49.PhantomSingularity, v45, nil, not v16:IsSpellInRange(v49.PhantomSingularity))) then
+						return "phantom_singularity cleave 12";
+					end
+				end
+				if (((384 + 2615) > (2851 - (556 + 1139))) and v49.UnstableAffliction:IsReady() and (v16:DebuffRemains(v49.UnstableAfflictionDebuff) < (20 - (6 + 9)))) then
+					if (((431 + 1919) > (592 + 563)) and v24(v49.UnstableAffliction, nil, nil, not v16:IsSpellInRange(v49.UnstableAffliction))) then
+						return "unstable_affliction cleave 14";
+					end
+				end
+				if (((4198 - (28 + 141)) <= (1880 + 2973)) and v49.SeedofCorruption:IsReady() and not v49.AbsoluteCorruption:IsAvailable() and (v16:DebuffRemains(v49.CorruptionDebuff) < (6 - 1)) and v49.SowTheSeeds:IsAvailable() and v71(v57)) then
+					if (v24(v49.SeedofCorruption, nil, nil, not v16:IsSpellInRange(v49.SeedofCorruption)) or ((366 + 150) > (4751 - (486 + 831)))) then
+						return "seed_of_corruption cleave 16";
+					end
+				end
+				if (((10528 - 6482) >= (10677 - 7644)) and v49.Corruption:IsReady()) then
+					if (v48.CastTargetIf(v49.Corruption, v56, "min", v73, v77, not v16:IsSpellInRange(v49.Corruption)) or ((514 + 2205) <= (4575 - 3128))) then
+						return "corruption cleave 18";
+					end
+				end
+				v120 = 1265 - (668 + 595);
+			end
+			if ((v120 == (4 + 0)) or ((834 + 3300) < (10706 - 6780))) then
+				if ((v49.DrainLife:IsReady() and ((v12:BuffStack(v49.InevitableDemiseBuff) > (338 - (23 + 267))) or ((v12:BuffStack(v49.InevitableDemiseBuff) > (1964 - (1129 + 815))) and (v69 < (391 - (371 + 16)))))) or ((1914 - (1326 + 424)) >= (5274 - 2489))) then
+					if (v24(v49.DrainLife, nil, nil, not v16:IsSpellInRange(v49.DrainLife)) or ((1918 - 1393) == (2227 - (88 + 30)))) then
+						return "drain_life cleave 44";
+					end
+				end
+				if (((804 - (720 + 51)) == (73 - 40)) and v49.DrainLife:IsReady() and v16:DebuffUp(v49.SoulRotDebuff) and (v12:BuffStack(v49.InevitableDemiseBuff) > (1786 - (421 + 1355)))) then
+					if (((5037 - 1983) <= (1973 + 2042)) and v24(v49.DrainLife, nil, nil, not v16:IsSpellInRange(v49.DrainLife))) then
+						return "drain_life cleave 46";
+					end
+				end
+				if (((2954 - (286 + 797)) < (12363 - 8981)) and v49.Agony:IsReady()) then
+					if (((2140 - 847) <= (2605 - (397 + 42))) and v48.CastCycle(v49.Agony, v56, v80, not v16:IsSpellInRange(v49.Agony))) then
+						return "agony cleave 48";
+					end
+				end
+				if (v49.Corruption:IsCastable() or ((806 + 1773) < (923 - (24 + 776)))) then
+					if (v48.CastCycle(v49.Corruption, v56, v82, not v16:IsSpellInRange(v49.Corruption)) or ((1302 - 456) >= (3153 - (222 + 563)))) then
+						return "corruption cleave 50";
+					end
+				end
+				if ((v49.MaleficRapture:IsReady() and (v67 > (1 - 0))) or ((2889 + 1123) <= (3548 - (23 + 167)))) then
+					if (((3292 - (690 + 1108)) <= (1085 + 1920)) and v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(83 + 17))) then
+						return "malefic_rapture cleave 52";
+					end
+				end
+				if (v49.DrainSoul:IsReady() or ((3959 - (40 + 808)) == (352 + 1782))) then
+					if (((9005 - 6650) == (2251 + 104)) and v24(v49.DrainSoul, nil, nil, not v16:IsSpellInRange(v49.DrainSoul))) then
+						return "drain_soul cleave 54";
+					end
+				end
+				v120 = 3 + 2;
 			end
 		end
 	end
-	local function v93()
-		v48();
-		v29 = EpicSettings.Toggles['ooc'];
-		v30 = EpicSettings.Toggles['aoe'];
-		v31 = EpicSettings.Toggles['cds'];
-		v57 = v13:GetEnemiesInRange(59 - 19);
-		v58 = v17:GetEnemiesInSplashRange(20 - 10);
-		if (((5837 - (556 + 1407)) == (5080 - (741 + 465))) and v30) then
-			v59 = v17:GetEnemiesInSplashRangeCount(475 - (170 + 295));
-		else
-			v59 = 1 + 0;
-		end
-		if (v49.TargetIsValid() or v13:AffectingCombat() or ((1781 + 157) > (12150 - 7215))) then
-			local v136 = 0 + 0;
-			while true do
-				if ((v136 == (1 + 0)) or ((2410 + 1845) < (4653 - (957 + 273)))) then
-					if (((389 + 1065) <= (998 + 1493)) and (v70 == (42337 - 31226))) then
-						v70 = v10.FightRemains(v58, false);
-					end
-					break;
-				end
-				if ((v136 == (0 - 0)) or ((12697 - 8540) <= (13879 - 11076))) then
-					v69 = v10.BossFightRemains(nil, true);
-					v70 = v69;
-					v136 = 1781 - (389 + 1391);
-				end
+	local function v92()
+		local v122 = 0 + 0;
+		while true do
+			if ((v122 == (572 - (47 + 524))) or ((382 + 206) <= (1180 - 748))) then
+				v30 = EpicSettings.Toggles['cds'];
+				v56 = v12:GetEnemiesInRange(59 - 19);
+				v57 = v16:GetEnemiesInSplashRange(22 - 12);
+				v122 = 1728 - (1165 + 561);
 			end
-		end
-		v68 = v13:SoulShardsP();
-		if (((3045 + 1808) >= (311 + 2671)) and v50.SummonPet:IsCastable() and v43 and not v16:IsActive()) then
-			if (((9411 - 5277) > (4308 - (783 + 168))) and v26(v50.SummonPet)) then
-				return "summon_pet ooc";
+			if (((143 + 4654) >= (12063 - 8168)) and (v122 == (1 + 1))) then
+				if (((4056 - (341 + 138)) == (966 + 2611)) and v29) then
+					v58 = v16:GetEnemiesInSplashRangeCount(20 - 10);
+				else
+					v58 = 327 - (89 + 237);
+				end
+				if (((12205 - 8411) > (7774 - 4081)) and (v48.TargetIsValid() or v12:AffectingCombat())) then
+					local v147 = 881 - (581 + 300);
+					while true do
+						if ((v147 == (1221 - (855 + 365))) or ((3028 - 1753) == (1339 + 2761))) then
+							if ((v69 == (12346 - (1030 + 205))) or ((1494 + 97) >= (3331 + 249))) then
+								v69 = v9.FightRemains(v57, false);
+							end
+							break;
+						end
+						if (((1269 - (156 + 130)) <= (4107 - 2299)) and (v147 == (0 - 0))) then
+							v68 = v9.BossFightRemains(nil, true);
+							v69 = v68;
+							v147 = 1 - 0;
+						end
+					end
+				end
+				v67 = v12:SoulShardsP();
+				v122 = 1 + 2;
 			end
-		end
-		if (v49.TargetIsValid() or ((11468 - 8051) < (2493 + 41))) then
-			local v137 = 311 - (309 + 2);
-			while true do
-				if ((v137 == (9 - 6)) or ((3934 - (1090 + 122)) <= (54 + 110))) then
-					if ((v50.Agony:IsCastable() and (v17:DebuffRemains(v50.AgonyDebuff) < (16 - 11))) or ((1648 + 760) < (3227 - (628 + 490)))) then
-						if (v25(v50.Agony, nil, nil, not v17:IsSpellInRange(v50.Agony)) or ((6 + 27) == (3602 - 2147))) then
-							return "agony main 6";
-						end
+			if ((v122 == (2 + 1)) or ((2219 - (10 + 59)) <= (339 + 858))) then
+				if (((18561 - 14792) >= (2336 - (671 + 492))) and v49.SummonPet:IsCastable() and v42 and not v15:IsActive()) then
+					if (((1183 + 302) == (2700 - (369 + 846))) and v25(v49.SummonPet)) then
+						return "summon_pet ooc";
 					end
-					if ((v50.UnstableAffliction:IsReady() and (v17:DebuffRemains(v50.UnstableAfflictionDebuff) < (22 - 17))) or ((1217 - (431 + 343)) >= (8108 - 4093))) then
-						if (((9783 - 6401) > (132 + 34)) and v25(v50.UnstableAffliction, nil, nil, not v17:IsSpellInRange(v50.UnstableAffliction))) then
-							return "unstable_affliction main 8";
-						end
-					end
-					if ((v50.Corruption:IsCastable() and (v17:DebuffRefreshable(v50.CorruptionDebuff))) or ((36 + 244) == (4754 - (556 + 1139)))) then
-						if (((1896 - (6 + 9)) > (237 + 1056)) and v25(v50.Corruption, nil, nil, not v17:IsSpellInRange(v50.Corruption))) then
-							return "corruption main 10";
-						end
-					end
-					v137 = 3 + 1;
 				end
-				if (((2526 - (28 + 141)) == (913 + 1444)) and (v137 == (8 - 1))) then
-					if (((88 + 35) == (1440 - (486 + 831))) and v50.DrainSoul:IsReady() and (v13:BuffUp(v50.NightfallBuff))) then
-						if (v25(v50.DrainSoul, nil, nil, not v17:IsSpellInRange(v50.DrainSoul)) or ((2747 - 1691) >= (11941 - 8549))) then
-							return "drain_soul main 30";
+				if (v48.TargetIsValid() or ((878 + 2437) <= (2375 + 407))) then
+					if ((not v12:AffectingCombat() and v28) or ((2821 - (1036 + 909)) >= (2357 + 607))) then
+						local v148 = v85();
+						if (v148 or ((3746 - 1514) > (2700 - (11 + 192)))) then
+							return v148;
 						end
 					end
-					if ((v50.ShadowBolt:IsReady() and (v13:BuffUp(v50.NightfallBuff))) or ((205 + 876) < (3398 - 2323))) then
-						if (v25(v50.ShadowBolt, nil, nil, not v17:IsSpellInRange(v50.ShadowBolt)) or ((2312 - (668 + 595)) >= (3989 + 443))) then
-							return "shadow_bolt main 32";
-						end
-					end
-					if ((v50.Agony:IsCastable() and (v17:DebuffRefreshable(v50.AgonyDebuff))) or ((962 + 3806) <= (2307 - 1461))) then
-						if (v25(v50.Agony, nil, nil, not v17:IsSpellInRange(v50.Agony)) or ((3648 - (23 + 267)) <= (3364 - (1129 + 815)))) then
-							return "agony main 34";
-						end
-					end
-					v137 = 395 - (371 + 16);
-				end
-				if ((v137 == (1754 - (1326 + 424))) or ((7081 - 3342) <= (10980 - 7975))) then
-					if ((v50.SiphonLife:IsCastable() and (v17:DebuffRefreshable(v50.SiphonLifeDebuff))) or ((1777 - (88 + 30)) >= (2905 - (720 + 51)))) then
-						if (v25(v50.SiphonLife, nil, nil, not v17:IsSpellInRange(v50.SiphonLife)) or ((7251 - 3991) < (4131 - (421 + 1355)))) then
-							return "siphon_life main 12";
-						end
-					end
-					if ((v50.Haunt:IsReady() and (v17:DebuffRemains(v50.HauntDebuff) < (4 - 1))) or ((329 + 340) == (5306 - (286 + 797)))) then
-						if (v25(v50.Haunt, nil, nil, not v17:IsSpellInRange(v50.Haunt)) or ((6185 - 4493) < (973 - 385))) then
-							return "haunt main 14";
-						end
-					end
-					if ((v50.DrainSoul:IsReady() and v50.ShadowEmbrace:IsAvailable() and ((v17:DebuffStack(v50.ShadowEmbraceDebuff) < (442 - (397 + 42))) or (v17:DebuffRemains(v50.ShadowEmbraceDebuff) < (1 + 2)))) or ((5597 - (24 + 776)) < (5624 - 1973))) then
-						if (v25(v50.DrainSoul, nil, nil, not v17:IsSpellInRange(v50.DrainSoul)) or ((4962 - (222 + 563)) > (10686 - 5836))) then
-							return "drain_soul main 16";
-						end
-					end
-					v137 = 4 + 1;
-				end
-				if ((v137 == (198 - (23 + 167))) or ((2198 - (690 + 1108)) > (401 + 710))) then
-					if (((2517 + 534) > (1853 - (40 + 808))) and v50.Corruption:IsCastable() and (v17:DebuffRefreshable(v50.CorruptionDebuff))) then
-						if (((609 + 3084) <= (16756 - 12374)) and v25(v50.Corruption, nil, nil, not v17:IsSpellInRange(v50.Corruption))) then
-							return "corruption main 36";
-						end
-					end
-					if (v50.DrainSoul:IsReady() or ((3137 + 145) > (2169 + 1931))) then
-						if (v25(v50.DrainSoul, nil, nil, not v17:IsSpellInRange(v50.DrainSoul)) or ((1964 + 1616) < (3415 - (47 + 524)))) then
-							return "drain_soul main 40";
-						end
-					end
-					if (((58 + 31) < (12273 - 7783)) and v50.ShadowBolt:IsReady()) then
-						if (v25(v50.ShadowBolt, nil, nil, not v17:IsSpellInRange(v50.ShadowBolt)) or ((7450 - 2467) < (4123 - 2315))) then
-							return "shadow_bolt main 42";
-						end
-					end
-					break;
-				end
-				if (((5555 - (1165 + 561)) > (112 + 3657)) and (v137 == (6 - 4))) then
-					if (((567 + 918) <= (3383 - (341 + 138))) and v33) then
-						local v147 = v89();
-						if (((1153 + 3116) == (8809 - 4540)) and v147) then
-							return v147;
-						end
-					end
-					if (((713 - (89 + 237)) <= (8949 - 6167)) and v50.MaleficRapture:IsReady() and v50.DreadTouch:IsAvailable() and (v17:DebuffRemains(v50.DreadTouchDebuff) < (3 - 1)) and v17:DebuffUp(v50.AgonyDebuff) and v17:DebuffUp(v50.CorruptionDebuff) and (not v50.SiphonLife:IsAvailable() or v17:DebuffUp(v50.SiphonLifeDebuff)) and (not v50.PhantomSingularity:IsAvailable() or v50.PhantomSingularity:CooldownDown()) and (not v50.VileTaint:IsAvailable() or v50.VileTaint:CooldownDown()) and (not v50.SoulRot:IsAvailable() or v50.SoulRot:CooldownDown())) then
-						if (v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(981 - (581 + 300))) or ((3119 - (855 + 365)) <= (2178 - 1261))) then
-							return "malefic_rapture main 2";
-						end
-					end
-					if ((v50.SummonDarkglare:IsReady() and v60 and v61 and v63) or ((1408 + 2904) <= (2111 - (1030 + 205)))) then
-						if (((2096 + 136) <= (2415 + 181)) and v25(v50.SummonDarkglare, v47)) then
-							return "summon_darkglare main 4";
-						end
-					end
-					v137 = 289 - (156 + 130);
-				end
-				if (((4760 - 2665) < (6212 - 2526)) and (v137 == (10 - 5))) then
-					if ((v50.ShadowBolt:IsReady() and v50.ShadowEmbrace:IsAvailable() and ((v17:DebuffStack(v50.ShadowEmbraceDebuff) < (1 + 2)) or (v17:DebuffRemains(v50.ShadowEmbraceDebuff) < (2 + 1)))) or ((1664 - (10 + 59)) >= (1266 + 3208))) then
-						if (v25(v50.ShadowBolt, nil, nil, not v17:IsSpellInRange(v50.ShadowBolt)) or ((22747 - 18128) < (4045 - (671 + 492)))) then
-							return "shadow_bolt main 18";
-						end
-					end
-					if ((v50.PhantomSingularity:IsCastable() and ((v50.SoulRot:CooldownRemains() <= v50.PhantomSingularity:ExecuteTime()) or (not v50.SouleatersGluttony:IsAvailable() and (not v50.SoulRot:IsAvailable() or (v50.SoulRot:CooldownRemains() <= v50.PhantomSingularity:ExecuteTime()) or (v50.SoulRot:CooldownRemains() >= (20 + 5)))))) or ((1509 - (369 + 846)) >= (1279 + 3552))) then
-						if (((1732 + 297) <= (5029 - (1036 + 909))) and v25(v50.PhantomSingularity, v46, nil, not v17:IsSpellInRange(v50.PhantomSingularity))) then
-							return "phantom_singularity main 20";
-						end
-					end
-					if ((v50.VileTaint:IsReady() and (not v50.SoulRot:IsAvailable() or (v50.SoulRot:CooldownRemains() <= v50.VileTaint:ExecuteTime()) or (not v50.SouleatersGluttony:IsAvailable() and (v50.SoulRot:CooldownRemains() >= (10 + 2))))) or ((3419 - 1382) == (2623 - (11 + 192)))) then
-						if (((2253 + 2205) > (4079 - (135 + 40))) and v25(v56.VileTaintCursor, nil, nil, not v17:IsInRange(96 - 56))) then
-							return "vile_taint main 22";
-						end
-					end
-					v137 = 4 + 2;
-				end
-				if (((960 - 524) >= (184 - 61)) and (v137 == (177 - (50 + 126)))) then
-					if (((1392 - 892) < (402 + 1414)) and (v59 > (1414 - (1233 + 180))) and (v59 < (972 - (522 + 447)))) then
-						local v148 = 1421 - (107 + 1314);
-						local v149;
+					if ((not v12:IsCasting() and not v12:IsChanneling()) or ((1067 + 1043) <= (507 - (135 + 40)))) then
+						local v149 = 0 - 0;
+						local v150;
 						while true do
-							if (((1659 + 1915) == (10890 - 7316)) and (v148 == (0 + 0))) then
-								v149 = v92();
-								if (((438 - 217) < (1543 - 1153)) and v149) then
-									return v149;
+							if (((2222 + 1464) > (6987 - 3815)) and (v149 == (2 - 0))) then
+								v150 = v48.InterruptWithStun(v49.AxeToss, 216 - (50 + 126), true);
+								if (v150 or ((12458 - 7984) < (182 + 638))) then
+									return v150;
+								end
+								v150 = v48.InterruptWithStun(v49.AxeToss, 1453 - (1233 + 180), true, v14, v55.AxeTossMouseover);
+								if (((5248 - (522 + 447)) >= (4303 - (107 + 1314))) and v150) then
+									return v150;
 								end
 								break;
 							end
+							if ((v149 == (1 + 0)) or ((6182 - 4153) >= (1496 + 2025))) then
+								v150 = v48.Interrupt(v49.AxeToss, 79 - 39, true);
+								if (v150 or ((8059 - 6022) >= (6552 - (716 + 1194)))) then
+									return v150;
+								end
+								v150 = v48.Interrupt(v49.AxeToss, 1 + 39, true, v14, v55.AxeTossMouseover);
+								if (((185 + 1535) < (4961 - (74 + 429))) and v150) then
+									return v150;
+								end
+								v149 = 3 - 1;
+							end
+							if ((v149 == (0 + 0)) or ((997 - 561) > (2138 + 883))) then
+								v150 = v48.Interrupt(v49.SpellLock, 123 - 83, true);
+								if (((1762 - 1049) <= (1280 - (279 + 154))) and v150) then
+									return v150;
+								end
+								v150 = v48.Interrupt(v49.SpellLock, 818 - (454 + 324), true, v14, v55.SpellLockMouseover);
+								if (((1695 + 459) <= (4048 - (12 + 5))) and v150) then
+									return v150;
+								end
+								v149 = 1 + 0;
+							end
 						end
 					end
-					if ((v59 > (1912 - (716 + 1194))) or ((38 + 2175) <= (153 + 1268))) then
-						local v150 = v91();
-						if (((3561 - (74 + 429)) < (9375 - 4515)) and v150) then
-							return v150;
-						end
-					end
-					if (v24() or ((643 + 653) >= (10177 - 5731))) then
-						local v151 = 0 + 0;
+					v86();
+					if (((11758 - 7143) == (1706 + 2909)) and (v58 > (1094 - (277 + 816))) and (v58 < (12 - 9))) then
+						local v151 = 1183 - (1058 + 125);
 						local v152;
 						while true do
-							if ((v151 == (0 - 0)) or ((3444 - 2051) > (4922 - (279 + 154)))) then
-								v152 = v90();
-								if (v152 or ((5202 - (454 + 324)) < (22 + 5))) then
+							if ((v151 == (0 + 0)) or ((4765 - (815 + 160)) == (2145 - 1645))) then
+								v152 = v91();
+								if (((211 - 122) < (53 + 168)) and v152) then
 									return v152;
 								end
 								break;
 							end
 						end
 					end
-					v137 = 19 - (12 + 5);
-				end
-				if ((v137 == (0 + 0)) or ((5088 - 3091) > (1410 + 2405))) then
-					if (((4558 - (277 + 816)) > (8174 - 6261)) and not v13:AffectingCombat() and v29) then
-						local v153 = v86();
-						if (((1916 - (1058 + 125)) < (342 + 1477)) and v153) then
+					if (((6004 - 3950) >= (3319 - (41 + 1857))) and (v58 > (1895 - (1222 + 671)))) then
+						local v153 = v90();
+						if (((1788 - 1096) < (4395 - 1337)) and v153) then
 							return v153;
 						end
 					end
-					if ((not v13:IsCasting() and not v13:IsChanneling()) or ((5370 - (815 + 160)) == (20402 - 15647))) then
-						local v154 = v49.Interrupt(v50.SpellLock, 94 - 54, true);
-						if (v154 or ((905 + 2888) < (6924 - 4555))) then
-							return v154;
-						end
-						v154 = v49.Interrupt(v50.SpellLock, 1938 - (41 + 1857), true, v15, v56.SpellLockMouseover);
-						if (v154 or ((5977 - (1222 + 671)) == (684 - 419))) then
-							return v154;
-						end
-						v154 = v49.Interrupt(v50.AxeToss, 57 - 17, true);
-						if (((5540 - (229 + 953)) == (6132 - (1111 + 663))) and v154) then
-							return v154;
-						end
-						v154 = v49.Interrupt(v50.AxeToss, 1619 - (874 + 705), true, v15, v56.AxeTossMouseover);
-						if (v154 or ((440 + 2698) < (678 + 315))) then
-							return v154;
-						end
-						v154 = v49.InterruptWithStun(v50.AxeToss, 83 - 43, true);
-						if (((94 + 3236) > (3002 - (642 + 37))) and v154) then
-							return v154;
-						end
-						v154 = v49.InterruptWithStun(v50.AxeToss, 10 + 30, true, v15, v56.AxeTossMouseover);
-						if (v154 or ((581 + 3045) == (10015 - 6026))) then
-							return v154;
+					if (v23() or ((4436 - (229 + 953)) == (3429 - (1111 + 663)))) then
+						local v154 = 1579 - (874 + 705);
+						local v155;
+						while true do
+							if ((v154 == (0 + 0)) or ((885 + 411) == (10206 - 5296))) then
+								v155 = v89();
+								if (((95 + 3273) == (4047 - (642 + 37))) and v155) then
+									return v155;
+								end
+								break;
+							end
 						end
 					end
-					v87();
-					v137 = 455 - (233 + 221);
-				end
-				if ((v137 == (13 - 7)) or ((807 + 109) == (4212 - (718 + 823)))) then
-					if (((172 + 100) == (1077 - (266 + 539))) and v50.SoulRot:IsReady() and v61 and (v60 or (v50.SouleatersGluttony:TalentRank() ~= (2 - 1)))) then
-						if (((5474 - (636 + 589)) <= (11486 - 6647)) and v25(v50.SoulRot, nil, nil, not v17:IsSpellInRange(v50.SoulRot))) then
+					if (((603 + 2040) < (611 + 3204)) and v32) then
+						local v156 = 0 - 0;
+						local v157;
+						while true do
+							if (((2367 - (233 + 221)) > (1139 - 646)) and ((0 + 0) == v156)) then
+								v157 = v88();
+								if (((6296 - (718 + 823)) > (2158 + 1270)) and v157) then
+									return v157;
+								end
+								break;
+							end
+						end
+					end
+					if (((2186 - (266 + 539)) <= (6706 - 4337)) and v49.MaleficRapture:IsReady() and v49.DreadTouch:IsAvailable() and (v16:DebuffRemains(v49.DreadTouchDebuff) < (1227 - (636 + 589))) and v16:DebuffUp(v49.AgonyDebuff) and v16:DebuffUp(v49.CorruptionDebuff) and (not v49.SiphonLife:IsAvailable() or v16:DebuffUp(v49.SiphonLifeDebuff)) and (not v49.PhantomSingularity:IsAvailable() or v49.PhantomSingularity:CooldownDown()) and (not v49.VileTaint:IsAvailable() or v49.VileTaint:CooldownDown()) and (not v49.SoulRot:IsAvailable() or v49.SoulRot:CooldownDown())) then
+						if (v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(237 - 137)) or ((9988 - 5145) == (3237 + 847))) then
+							return "malefic_rapture main 2";
+						end
+					end
+					if (((1697 + 2972) > (1378 - (657 + 358))) and v49.SummonDarkglare:IsReady() and v59 and v60 and v62) then
+						if (v24(v49.SummonDarkglare, v46) or ((4969 - 3092) >= (7149 - 4011))) then
+							return "summon_darkglare main 4";
+						end
+					end
+					if (((5929 - (1151 + 36)) >= (3502 + 124)) and v49.Agony:IsCastable() and (v16:DebuffRemains(v49.AgonyDebuff) < (2 + 3))) then
+						if (v24(v49.Agony, nil, nil, not v16:IsSpellInRange(v49.Agony)) or ((13558 - 9018) == (2748 - (1552 + 280)))) then
+							return "agony main 6";
+						end
+					end
+					if ((v49.UnstableAffliction:IsReady() and (v16:DebuffRemains(v49.UnstableAfflictionDebuff) < (839 - (64 + 770)))) or ((785 + 371) > (9863 - 5518))) then
+						if (((398 + 1839) < (5492 - (157 + 1086))) and v24(v49.UnstableAffliction, nil, nil, not v16:IsSpellInRange(v49.UnstableAffliction))) then
+							return "unstable_affliction main 8";
+						end
+					end
+					if ((v49.Corruption:IsCastable() and (v16:DebuffRefreshable(v49.CorruptionDebuff))) or ((5370 - 2687) < (100 - 77))) then
+						if (((1069 - 372) <= (1126 - 300)) and v24(v49.Corruption, nil, nil, not v16:IsSpellInRange(v49.Corruption))) then
+							return "corruption main 10";
+						end
+					end
+					if (((1924 - (599 + 220)) <= (2341 - 1165)) and v49.SiphonLife:IsCastable() and (v16:DebuffRefreshable(v49.SiphonLifeDebuff))) then
+						if (((5310 - (1813 + 118)) <= (2787 + 1025)) and v24(v49.SiphonLife, nil, nil, not v16:IsSpellInRange(v49.SiphonLife))) then
+							return "siphon_life main 12";
+						end
+					end
+					if ((v49.Haunt:IsReady() and (v16:DebuffRemains(v49.HauntDebuff) < (1220 - (841 + 376)))) or ((1103 - 315) >= (376 + 1240))) then
+						if (((5060 - 3206) <= (4238 - (464 + 395))) and v24(v49.Haunt, nil, nil, not v16:IsSpellInRange(v49.Haunt))) then
+							return "haunt main 14";
+						end
+					end
+					if (((11674 - 7125) == (2185 + 2364)) and v49.DrainSoul:IsReady() and v49.ShadowEmbrace:IsAvailable() and ((v16:DebuffStack(v49.ShadowEmbraceDebuff) < (840 - (467 + 370))) or (v16:DebuffRemains(v49.ShadowEmbraceDebuff) < (5 - 2)))) then
+						if (v24(v49.DrainSoul, nil, nil, not v16:IsSpellInRange(v49.DrainSoul)) or ((2219 + 803) >= (10366 - 7342))) then
+							return "drain_soul main 16";
+						end
+					end
+					if (((752 + 4068) > (5113 - 2915)) and v49.ShadowBolt:IsReady() and v49.ShadowEmbrace:IsAvailable() and ((v16:DebuffStack(v49.ShadowEmbraceDebuff) < (523 - (150 + 370))) or (v16:DebuffRemains(v49.ShadowEmbraceDebuff) < (1285 - (74 + 1208))))) then
+						if (v24(v49.ShadowBolt, nil, nil, not v16:IsSpellInRange(v49.ShadowBolt)) or ((2609 - 1548) >= (23196 - 18305))) then
+							return "shadow_bolt main 18";
+						end
+					end
+					if (((971 + 393) <= (4863 - (14 + 376))) and v49.PhantomSingularity:IsCastable() and ((v49.SoulRot:CooldownRemains() <= v49.PhantomSingularity:ExecuteTime()) or (not v49.SouleatersGluttony:IsAvailable() and (not v49.SoulRot:IsAvailable() or (v49.SoulRot:CooldownRemains() <= v49.PhantomSingularity:ExecuteTime()) or (v49.SoulRot:CooldownRemains() >= (43 - 18)))))) then
+						if (v24(v49.PhantomSingularity, v45, nil, not v16:IsSpellInRange(v49.PhantomSingularity)) or ((2327 + 1268) <= (3 + 0))) then
+							return "phantom_singularity main 20";
+						end
+					end
+					if ((v49.VileTaint:IsReady() and (not v49.SoulRot:IsAvailable() or (v49.SoulRot:CooldownRemains() <= v49.VileTaint:ExecuteTime()) or (not v49.SouleatersGluttony:IsAvailable() and (v49.SoulRot:CooldownRemains() >= (12 + 0))))) or ((13689 - 9017) == (2898 + 954))) then
+						if (((1637 - (23 + 55)) == (3694 - 2135)) and v24(v55.VileTaintCursor, nil, nil, not v16:IsInRange(27 + 13))) then
+							return "vile_taint main 22";
+						end
+					end
+					if ((v49.SoulRot:IsReady() and v60 and (v59 or (v49.SouleatersGluttony:TalentRank() ~= (1 + 0)))) or ((2716 - 964) <= (248 + 540))) then
+						if (v24(v49.SoulRot, nil, nil, not v16:IsSpellInRange(v49.SoulRot)) or ((4808 - (652 + 249)) == (473 - 296))) then
 							return "soul_rot main 24";
 						end
 					end
-					if (((5727 - 2950) < (2536 + 664)) and v50.MaleficRapture:IsReady() and ((v68 > (2 + 2)) or (v50.TormentedCrescendo:IsAvailable() and (v13:BuffStack(v50.TormentedCrescendoBuff) == (1016 - (657 + 358))) and (v68 > (7 - 4))) or (v50.TormentedCrescendo:IsAvailable() and v13:BuffUp(v50.TormentedCrescendoBuff) and v17:DebuffDown(v50.DreadTouchDebuff)) or (v50.TormentedCrescendo:IsAvailable() and (v13:BuffStack(v50.TormentedCrescendoBuff) == (4 - 2))) or v64 or (v62 and (v68 > (1188 - (1151 + 36)))) or (v50.TormentedCrescendo:IsAvailable() and v50.Nightfall:IsAvailable() and v13:BuffUp(v50.TormentedCrescendoBuff) and v13:BuffUp(v50.NightfallBuff)))) then
-						if (((92 + 3) < (515 + 1442)) and v25(v50.MaleficRapture, nil, nil, not v17:IsInRange(298 - 198))) then
+					if (((5338 - (708 + 1160)) > (1506 - 951)) and v49.MaleficRapture:IsReady() and ((v67 > (6 - 2)) or (v49.TormentedCrescendo:IsAvailable() and (v12:BuffStack(v49.TormentedCrescendoBuff) == (28 - (10 + 17))) and (v67 > (1 + 2))) or (v49.TormentedCrescendo:IsAvailable() and v12:BuffUp(v49.TormentedCrescendoBuff) and v16:DebuffDown(v49.DreadTouchDebuff)) or (v49.TormentedCrescendo:IsAvailable() and (v12:BuffStack(v49.TormentedCrescendoBuff) == (1734 - (1400 + 332)))) or v63 or (v61 and (v67 > (1 - 0))) or (v49.TormentedCrescendo:IsAvailable() and v49.Nightfall:IsAvailable() and v12:BuffUp(v49.TormentedCrescendoBuff) and v12:BuffUp(v49.NightfallBuff)))) then
+						if (v24(v49.MaleficRapture, nil, nil, not v16:IsInRange(2008 - (242 + 1666))) or ((416 + 556) == (237 + 408))) then
 							return "malefic_rapture main 26";
 						end
 					end
-					if (((2658 - (1552 + 280)) < (2551 - (64 + 770))) and v50.DrainLife:IsReady() and ((v13:BuffStack(v50.InevitableDemiseBuff) > (33 + 15)) or ((v13:BuffStack(v50.InevitableDemiseBuff) > (45 - 25)) and (v70 < (1 + 3))))) then
-						if (((2669 - (157 + 1086)) >= (2211 - 1106)) and v25(v50.DrainLife, nil, nil, not v17:IsSpellInRange(v50.DrainLife))) then
+					if (((2712 + 470) >= (3055 - (850 + 90))) and v49.DrainLife:IsReady() and ((v12:BuffStack(v49.InevitableDemiseBuff) > (83 - 35)) or ((v12:BuffStack(v49.InevitableDemiseBuff) > (1410 - (360 + 1030))) and (v69 < (4 + 0))))) then
+						if (((10987 - 7094) < (6092 - 1663)) and v24(v49.DrainLife, nil, nil, not v16:IsSpellInRange(v49.DrainLife))) then
 							return "drain_life main 28";
 						end
 					end
-					v137 = 30 - 23;
+					if ((v49.DrainSoul:IsReady() and (v12:BuffUp(v49.NightfallBuff))) or ((4528 - (909 + 752)) < (3128 - (109 + 1114)))) then
+						if (v24(v49.DrainSoul, nil, nil, not v16:IsSpellInRange(v49.DrainSoul)) or ((3287 - 1491) >= (1577 + 2474))) then
+							return "drain_soul main 30";
+						end
+					end
+					if (((1861 - (6 + 236)) <= (2367 + 1389)) and v49.ShadowBolt:IsReady() and (v12:BuffUp(v49.NightfallBuff))) then
+						if (((487 + 117) == (1424 - 820)) and v24(v49.ShadowBolt, nil, nil, not v16:IsSpellInRange(v49.ShadowBolt))) then
+							return "shadow_bolt main 32";
+						end
+					end
+					if ((v49.Agony:IsCastable() and (v16:DebuffRefreshable(v49.AgonyDebuff))) or ((7831 - 3347) == (2033 - (1076 + 57)))) then
+						if (v24(v49.Agony, nil, nil, not v16:IsSpellInRange(v49.Agony)) or ((734 + 3725) <= (1802 - (579 + 110)))) then
+							return "agony main 34";
+						end
+					end
+					if (((287 + 3345) > (3005 + 393)) and v49.Corruption:IsCastable() and (v16:DebuffRefreshable(v49.CorruptionDebuff))) then
+						if (((2167 + 1915) <= (5324 - (174 + 233))) and v24(v49.Corruption, nil, nil, not v16:IsSpellInRange(v49.Corruption))) then
+							return "corruption main 36";
+						end
+					end
+					if (((13497 - 8665) >= (2432 - 1046)) and v49.DrainSoul:IsReady()) then
+						if (((61 + 76) == (1311 - (663 + 511))) and v24(v49.DrainSoul, nil, nil, not v16:IsSpellInRange(v49.DrainSoul))) then
+							return "drain_soul main 40";
+						end
+					end
+					if (v49.ShadowBolt:IsReady() or ((1401 + 169) >= (941 + 3391))) then
+						if (v24(v49.ShadowBolt, nil, nil, not v16:IsSpellInRange(v49.ShadowBolt)) or ((12529 - 8465) <= (1102 + 717))) then
+							return "shadow_bolt main 42";
+						end
+					end
 				end
+				break;
+			end
+			if ((v122 == (0 - 0)) or ((12069 - 7083) < (752 + 822))) then
+				v47();
+				v28 = EpicSettings.Toggles['ooc'];
+				v29 = EpicSettings.Toggles['aoe'];
+				v122 = 1 - 0;
 			end
 		end
 	end
-	local function v94()
-		v20.Print("Affliction Warlock rotation by Epic. Supported by Gojira");
-		v50.AgonyDebuff:RegisterAuraTracking();
-		v50.SiphonLifeDebuff:RegisterAuraTracking();
-		v50.CorruptionDebuff:RegisterAuraTracking();
+	local function v93()
+		local v123 = 0 + 0;
+		while true do
+			if (((405 + 4021) > (894 - (478 + 244))) and (v123 == (517 - (440 + 77)))) then
+				v19.Print("Affliction Warlock rotation by Epic. Supported by Gojira");
+				v49.AgonyDebuff:RegisterAuraTracking();
+				v123 = 1 + 0;
+			end
+			if (((2144 - 1558) > (2011 - (655 + 901))) and (v123 == (1 + 0))) then
+				v49.SiphonLifeDebuff:RegisterAuraTracking();
+				v49.CorruptionDebuff:RegisterAuraTracking();
+				break;
+			end
+		end
 	end
-	v20.SetAPL(406 - 141, v93, v94);
+	v19.SetAPL(203 + 62, v92, v93);
 end;
 return v0["Epix_Warlock_Affliction.lua"]();
 
