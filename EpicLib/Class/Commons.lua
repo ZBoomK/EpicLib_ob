@@ -1067,6 +1067,10 @@ do
   end
 end
 
+Commons.DispellableRootDebuffs = {
+  Spell(408556), -- Entangling Debuff Affix
+}
+
 --Check if Unit has a debuff from a list
 function Commons.UnitHasDebuffFromList(U, L)
   for i = 1, #L do
