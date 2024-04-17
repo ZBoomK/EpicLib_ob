@@ -1069,6 +1069,7 @@ end
 
 Commons.DispellableRootDebuffs = {
   Spell(408556), -- Entangling Debuff Affix
+  Spell(424497), -- Tyndral
 }
 
 --Check if Unit has a debuff from a list
