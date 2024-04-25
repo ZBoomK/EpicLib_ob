@@ -550,7 +550,7 @@ do
   };
 --Press(Object, OutofRange, Immovable, OffGCD)
   function Commons.Interrupt(spell, Range, OffGCD, unit, macro)
-    local InterruptDelay = math.random(1,20)
+    local InterruptDelay = math.random(1,200)
     if not unit then
       unit = Target;
     end
@@ -566,7 +566,7 @@ do
   end
 
   function Commons.InterruptCursor(spell, Macro, Range, OffGCD, unit)
-    local InterruptDelay = math.random(1,20)
+    local InterruptDelay = math.random(1,200)
     if not unit then
       unit = Target;
     end
@@ -578,7 +578,7 @@ do
   end
 
   function Commons.InterruptWithStun(spell, Range, OffGCD, unit)
-    local InterruptDelay = math.random(1,20)
+    local InterruptDelay = math.random(1,200)
     if not unit then
       unit = Target;
     end
@@ -593,7 +593,7 @@ do
 
 
   function Commons.InterruptWithStunCursor(spell, Macro, Range, OffGCD, unit)
-    local InterruptDelay = math.random(1,20)
+    local InterruptDelay = math.random(1,200)
     if not unit then
       unit = Target;
     end

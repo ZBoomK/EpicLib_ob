@@ -1,17 +1,17 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 874 - (69 + 805);
+	local v5 = 0 - 0;
 	local v6;
 	while true do
-		if (((12310 - 9090) == (3771 - (83 + 468))) and (v5 == (1806 - (1202 + 604)))) then
+		if ((v5 == (0 - 0)) or ((2803 - (466 + 145)) > (2856 + 911))) then
 			v6 = v0[v4];
-			if (((9961 - 7827) == (3551 - 1417)) and not v6) then
+			if (not v6 or ((1738 - (255 + 896)) > (12533 - 8444))) then
 				return v1(v4, ...);
 			end
-			v5 = 2 - 1;
+			v5 = 1 - 0;
 		end
-		if ((v5 == (326 - (45 + 280))) or ((2080 + 74) >= (2905 + 420))) then
+		if ((v5 == (900 - (503 + 396))) or ((4639 - (92 + 89)) < (1804 - 874))) then
 			return v6(...);
 		end
 	end
@@ -116,147 +116,158 @@ v0["Epix_Mage_Frost.lua"] = function(...)
 	local v105, v106;
 	local v107 = 0 + 0;
 	local v108 = 0 + 0;
-	local v109 = 3 + 12;
-	local v110 = 20574 - 9463;
-	local v111 = 13022 - (340 + 1571);
+	local v109 = 58 - 43;
+	local v110 = 1520 + 9591;
+	local v111 = 25334 - 14223;
 	local v112;
 	local v113 = v22.Commons.Everyone;
 	local function v114()
-		if (v99.RemoveCurse:IsAvailable() or ((511 + 784) >= (5005 - (1733 + 39)))) then
+		if (((578 + 84) <= (465 + 507)) and v99.RemoveCurse:IsAvailable()) then
 			v113.DispellableDebuffs = v113.DispellableCurseDebuffs;
 		end
 	end
 	v10:RegisterForEvent(function()
 		v114();
 	end, "ACTIVE_PLAYER_SPECIALIZATION_CHANGED");
-	v99.FrozenOrb:RegisterInFlightEffect(232804 - 148083);
+	v99.FrozenOrb:RegisterInFlightEffect(258032 - 173311);
 	v99.FrozenOrb:RegisterInFlight();
 	v10:RegisterForEvent(function()
 		v99.FrozenOrb:RegisterInFlight();
 	end, "LEARNED_SPELL_IN_TAB");
-	v99.Frostbolt:RegisterInFlightEffect(229631 - (125 + 909));
+	v99.Frostbolt:RegisterInFlightEffect(28532 + 200065);
 	v99.Frostbolt:RegisterInFlight();
-	v99.Flurry:RegisterInFlightEffect(230302 - (1096 + 852));
+	v99.Flurry:RegisterInFlightEffect(348242 - 119888);
 	v99.Flurry:RegisterInFlight();
-	v99.IceLance:RegisterInFlightEffect(102544 + 126054);
+	v99.IceLance:RegisterInFlightEffect(229842 - (485 + 759));
 	v99.IceLance:RegisterInFlight();
-	v99.GlacialSpike:RegisterInFlightEffect(326465 - 97865);
+	v99.GlacialSpike:RegisterInFlightEffect(528953 - 300353);
 	v99.GlacialSpike:RegisterInFlight();
 	v10:RegisterForEvent(function()
-		v110 = 10777 + 334;
-		v111 = 11623 - (409 + 103);
-		v107 = 236 - (46 + 190);
+		v110 = 12300 - (442 + 747);
+		v111 = 12246 - (832 + 303);
+		v107 = 946 - (88 + 858);
 	end, "PLAYER_REGEN_ENABLED");
 	local function v115(v133)
-		if (((4472 - (51 + 44)) > (464 + 1178)) and (v133 == nil)) then
-			v133 = v15;
+		local v134 = 0 + 0;
+		while true do
+			if (((3617 + 753) == (180 + 4190)) and (v134 == (789 - (766 + 23)))) then
+				if ((v133 == nil) or ((23508 - 18746) <= (1177 - 316))) then
+					v133 = v15;
+				end
+				return not v133:IsInBossList() or (v133:Level() < (192 - 119));
+			end
 		end
-		return not v133:IsInBossList() or (v133:Level() < (1390 - (1114 + 203)));
 	end
 	local function v116()
 		return v30(v14:BuffRemains(v99.FingersofFrostBuff), v15:DebuffRemains(v99.WintersChillDebuff), v15:DebuffRemains(v99.Frostbite), v15:DebuffRemains(v99.Freeze), v15:DebuffRemains(v99.FrostNova));
 	end
-	local function v117(v134)
-		return (v134:DebuffStack(v99.WintersChillDebuff));
+	local function v117(v135)
+		return (v135:DebuffStack(v99.WintersChillDebuff));
 	end
-	local function v118(v135)
-		return (v135:DebuffDown(v99.WintersChillDebuff));
+	local function v118(v136)
+		return (v136:DebuffDown(v99.WintersChillDebuff));
 	end
 	local function v119()
-		if (((5449 - (228 + 498)) > (294 + 1062)) and v99.IceBarrier:IsCastable() and v63 and v14:BuffDown(v99.IceBarrier) and (v14:HealthPercentage() <= v70)) then
-			if (v24(v99.IceBarrier) or ((2285 + 1851) <= (4096 - (174 + 489)))) then
-				return "ice_barrier defensive 1";
-			end
-		end
-		if (((11059 - 6814) <= (6536 - (830 + 1075))) and v99.MassBarrier:IsCastable() and v67 and v14:BuffDown(v99.IceBarrier) and v113.AreUnitsBelowHealthPercentage(v75, 526 - (303 + 221), v99.ArcaneIntellect)) then
-			if (((5545 - (231 + 1038)) >= (3262 + 652)) and v24(v99.MassBarrier)) then
-				return "mass_barrier defensive 2";
-			end
-		end
-		if (((1360 - (171 + 991)) <= (17988 - 13623)) and v99.IceColdTalent:IsAvailable() and v99.IceColdAbility:IsCastable() and v66 and (v14:HealthPercentage() <= v73)) then
-			if (((12840 - 8058) > (11668 - 6992)) and v24(v99.IceColdAbility)) then
-				return "ice_cold defensive 3";
-			end
-		end
-		if (((3893 + 971) > (7701 - 5504)) and v99.IceBlock:IsReady() and v65 and (v14:HealthPercentage() <= v72)) then
-			if (v24(v99.IceBlock) or ((10673 - 6973) == (4040 - 1533))) then
-				return "ice_block defensive 4";
-			end
-		end
-		if (((13830 - 9356) >= (1522 - (111 + 1137))) and v99.MirrorImage:IsCastable() and v68 and (v14:HealthPercentage() <= v74)) then
-			if (v24(v99.MirrorImage) or ((2052 - (91 + 67)) <= (4184 - 2778))) then
-				return "mirror_image defensive 5";
-			end
-		end
-		if (((393 + 1179) >= (2054 - (423 + 100))) and v99.GreaterInvisibility:IsReady() and v64 and (v14:HealthPercentage() <= v71)) then
-			if (v24(v99.GreaterInvisibility) or ((33 + 4654) < (12575 - 8033))) then
-				return "greater_invisibility defensive 6";
-			end
-		end
-		if (((1716 + 1575) > (2438 - (326 + 445))) and v99.AlterTime:IsReady() and v62 and (v14:HealthPercentage() <= v69)) then
-			if (v24(v99.AlterTime) or ((3809 - 2936) == (4531 - 2497))) then
-				return "alter_time defensive 7";
-			end
-		end
-		if ((v100.Healthstone:IsReady() and v86 and (v14:HealthPercentage() <= v88)) or ((6572 - 3756) < (722 - (530 + 181)))) then
-			if (((4580 - (614 + 267)) < (4738 - (19 + 13))) and v24(v101.Healthstone)) then
-				return "healthstone defensive";
-			end
-		end
-		if (((4305 - 1659) >= (2040 - 1164)) and v85 and (v14:HealthPercentage() <= v87)) then
-			if (((1753 - 1139) <= (827 + 2357)) and (v89 == "Refreshing Healing Potion")) then
-				if (((5497 - 2371) == (6482 - 3356)) and v100.RefreshingHealingPotion:IsReady()) then
-					if (v24(v101.RefreshingHealingPotion) or ((3999 - (1293 + 519)) >= (10107 - 5153))) then
-						return "refreshing healing potion defensive";
+		local v137 = 0 - 0;
+		while true do
+			if ((v137 == (1073 - (1036 + 37))) or ((1002 + 410) == (8303 - 4039))) then
+				if ((v99.IceBarrier:IsCastable() and v63 and v14:BuffDown(v99.IceBarrier) and (v14:HealthPercentage() <= v70)) or ((2493 + 675) < (3633 - (641 + 839)))) then
+					if (v24(v99.IceBarrier) or ((5889 - (910 + 3)) < (3395 - 2063))) then
+						return "ice_barrier defensive 1";
 					end
 				end
-			end
-			if ((v89 == "Dreamwalker's Healing Potion") or ((10122 - 6245) == (6836 - 3261))) then
-				if (((3048 - 2341) > (1488 - 856)) and v100.DreamwalkersHealingPotion:IsReady()) then
-					if (v24(v101.RefreshingHealingPotion) or ((290 + 256) >= (548 + 2136))) then
-						return "dreamwalkers healing potion defensive";
+				if (((6312 - (1466 + 218)) == (2127 + 2501)) and v99.MassBarrier:IsCastable() and v67 and v14:BuffDown(v99.IceBarrier) and v113.AreUnitsBelowHealthPercentage(v75, 1150 - (556 + 592), v99.ArcaneIntellect)) then
+					if (v24(v99.MassBarrier) or ((20 + 34) == (1203 - (329 + 479)))) then
+						return "mass_barrier defensive 2";
 					end
 				end
+				v137 = 855 - (174 + 680);
 			end
-		end
-	end
-	local v120 = 0 - 0;
-	local function v121()
-		if (((339 + 1126) <= (1429 + 2872)) and v99.RemoveCurse:IsReady() and (v113.UnitHasDispellableDebuffByPlayer(v16) or v113.DispellableFriendlyUnit(16 + 9))) then
-			if (((2800 - (709 + 387)) > (3283 - (673 + 1185))) and (v120 == (0 - 0))) then
-				v120 = GetTime();
-			end
-			if (v113.Wait(1605 - 1105, v120) or ((1129 - 442) == (3029 + 1205))) then
-				if (v24(v101.RemoveCurseFocus) or ((2489 + 841) < (1928 - 499))) then
-					return "remove_curse dispel";
+			if (((281 - 199) == (169 - 87)) and (v137 == (2 + 0))) then
+				if ((v99.MirrorImage:IsCastable() and v68 and (v14:HealthPercentage() <= v74)) or ((1320 - (396 + 343)) < (25 + 257))) then
+					if (v24(v99.MirrorImage) or ((6086 - (29 + 1448)) < (3884 - (135 + 1254)))) then
+						return "mirror_image defensive 5";
+					end
 				end
-				v120 = 0 + 0;
+				if (((4339 - 3187) == (5378 - 4226)) and v99.GreaterInvisibility:IsReady() and v64 and (v14:HealthPercentage() <= v71)) then
+					if (((1264 + 632) <= (4949 - (389 + 1138))) and v24(v99.GreaterInvisibility)) then
+						return "greater_invisibility defensive 6";
+					end
+				end
+				v137 = 577 - (102 + 472);
 			end
-		end
-	end
-	local function v122()
-		v31 = v113.HandleTopTrinket(v102, v34, 79 - 39, nil);
-		if (((2251 - 1104) >= (2215 - (446 + 1434))) and v31) then
-			return v31;
-		end
-		v31 = v113.HandleBottomTrinket(v102, v34, 1323 - (1040 + 243), nil);
-		if (((10252 - 6817) > (3944 - (559 + 1288))) and v31) then
-			return v31;
-		end
-	end
-	local function v123()
-		if (v113.TargetIsValid() or ((5701 - (609 + 1322)) >= (4495 - (13 + 441)))) then
-			local v184 = 0 - 0;
-			while true do
-				if ((v184 == (0 - 0)) or ((18880 - 15089) <= (60 + 1551))) then
-					if ((v99.MirrorImage:IsCastable() and v68 and v97) or ((16626 - 12048) <= (714 + 1294))) then
-						if (((493 + 632) <= (6160 - 4084)) and v24(v99.MirrorImage)) then
-							return "mirror_image precombat 2";
+			if ((v137 == (1 + 0)) or ((549 + 441) > (1511 + 109))) then
+				if ((v99.IceColdTalent:IsAvailable() and v99.IceColdAbility:IsCastable() and v66 and (v14:HealthPercentage() <= v73)) or ((2422 - (320 + 1225)) > (8358 - 3663))) then
+					if (((1647 + 1044) >= (3315 - (157 + 1307))) and v24(v99.IceColdAbility)) then
+						return "ice_cold defensive 3";
+					end
+				end
+				if ((v99.IceBlock:IsReady() and v65 and (v14:HealthPercentage() <= v72)) or ((4844 - (821 + 1038)) >= (12115 - 7259))) then
+					if (((468 + 3808) >= (2122 - 927)) and v24(v99.IceBlock)) then
+						return "ice_block defensive 4";
+					end
+				end
+				v137 = 1 + 1;
+			end
+			if (((8010 - 4778) <= (5716 - (834 + 192))) and (v137 == (1 + 2))) then
+				if ((v99.AlterTime:IsReady() and v62 and (v14:HealthPercentage() <= v69)) or ((230 + 666) >= (68 + 3078))) then
+					if (((4741 - 1680) >= (3262 - (300 + 4))) and v24(v99.AlterTime)) then
+						return "alter_time defensive 7";
+					end
+				end
+				if (((852 + 2335) >= (1685 - 1041)) and v100.Healthstone:IsReady() and v86 and (v14:HealthPercentage() <= v88)) then
+					if (((1006 - (112 + 250)) <= (281 + 423)) and v24(v101.Healthstone)) then
+						return "healthstone defensive";
+					end
+				end
+				v137 = 9 - 5;
+			end
+			if (((549 + 409) > (490 + 457)) and ((3 + 1) == v137)) then
+				if (((2228 + 2264) >= (1972 + 682)) and v85 and (v14:HealthPercentage() <= v87)) then
+					local v208 = 1414 - (1001 + 413);
+					while true do
+						if (((7675 - 4233) >= (2385 - (244 + 638))) and (v208 == (693 - (627 + 66)))) then
+							if ((v89 == "Refreshing Healing Potion") or ((9445 - 6275) <= (2066 - (512 + 90)))) then
+								if (v100.RefreshingHealingPotion:IsReady() or ((6703 - (1665 + 241)) == (5105 - (373 + 344)))) then
+									if (((249 + 302) <= (181 + 500)) and v24(v101.RefreshingHealingPotion)) then
+										return "refreshing healing potion defensive";
+									end
+								end
+							end
+							if (((8643 - 5366) > (688 - 281)) and (v89 == "Dreamwalker's Healing Potion")) then
+								if (((5794 - (35 + 1064)) >= (1030 + 385)) and v100.DreamwalkersHealingPotion:IsReady()) then
+									if (v24(v101.RefreshingHealingPotion) or ((6871 - 3659) <= (4 + 940))) then
+										return "dreamwalkers healing potion defensive";
+									end
+								end
+							end
+							break;
 						end
 					end
-					if ((v99.Frostbolt:IsCastable() and not v14:IsCasting(v99.Frostbolt)) or ((407 + 336) >= (8090 - 3691))) then
-						if (((764 + 391) < (931 + 742)) and v24(v99.Frostbolt, not v15:IsSpellInRange(v99.Frostbolt))) then
-							return "frostbolt precombat 4";
+				end
+				break;
+			end
+		end
+	end
+	local v120 = 1236 - (298 + 938);
+	local function v121()
+		if ((v99.RemoveCurse:IsReady() and (v113.UnitHasDispellableDebuffByPlayer(v16) or v113.DispellableFriendlyUnit(1284 - (233 + 1026)) or v113.UnitHasCurseDebuff(v16))) or ((4762 - (636 + 1030)) <= (920 + 878))) then
+			local v150 = 0 + 0;
+			while true do
+				if (((1051 + 2486) == (239 + 3298)) and (v150 == (221 - (55 + 166)))) then
+					if (((744 + 3093) >= (158 + 1412)) and (v120 == (0 - 0))) then
+						v120 = GetTime();
+					end
+					if (v113.Wait(797 - (36 + 261), v120) or ((5159 - 2209) == (5180 - (34 + 1334)))) then
+						local v219 = 0 + 0;
+						while true do
+							if (((3670 + 1053) >= (3601 - (1035 + 248))) and (v219 == (21 - (20 + 1)))) then
+								if (v24(v101.RemoveCurseFocus) or ((1057 + 970) > (3171 - (134 + 185)))) then
+									return "remove_curse dispel";
+								end
+								v120 = 1133 - (549 + 584);
+								break;
+							end
 						end
 					end
 					break;
@@ -264,157 +275,180 @@ v0["Epix_Mage_Frost.lua"] = function(...)
 			end
 		end
 	end
-	local function v124()
-		if ((v96 and v99.TimeWarp:IsCastable() and v14:BloodlustExhaustUp() and v99.TemporalWarp:IsAvailable() and v14:BloodlustDown() and v14:PrevGCDP(1 + 0, v99.IcyVeins)) or ((1952 + 372) <= (566 + 12))) then
-			if (((4200 - (153 + 280)) == (10877 - 7110)) and v24(v99.TimeWarp, not v15:IsInRange(36 + 4))) then
-				return "time_warp cd 2";
-			end
-		end
-		local v136 = v113.HandleDPSPotion(v14:BuffUp(v99.IcyVeinsBuff));
-		if (((1615 + 2474) == (2140 + 1949)) and v136) then
-			return v136;
-		end
-		if (((4046 + 412) >= (1213 + 461)) and v99.IcyVeins:IsCastable() and v34 and v52 and v57 and (v83 < v111)) then
-			if (((1479 - 507) <= (877 + 541)) and v24(v99.IcyVeins)) then
-				return "icy_veins cd 6";
-			end
-		end
-		if ((v83 < v111) or ((5605 - (89 + 578)) < (3402 + 1360))) then
-			if ((v91 and ((v34 and v92) or not v92)) or ((5205 - 2701) > (5313 - (572 + 477)))) then
-				v31 = v122();
-				if (((291 + 1862) == (1293 + 860)) and v31) then
+	local function v122()
+		local v138 = 685 - (314 + 371);
+		while true do
+			if (((3 - 2) == v138) or ((2104 - (478 + 490)) > (2287 + 2030))) then
+				v31 = v113.HandleBottomTrinket(v102, v34, 1212 - (786 + 386), nil);
+				if (((15378 - 10630) == (6127 - (1055 + 324))) and v31) then
 					return v31;
 				end
+				break;
+			end
+			if (((5076 - (1093 + 247)) <= (4213 + 527)) and (v138 == (0 + 0))) then
+				v31 = v113.HandleTopTrinket(v102, v34, 158 - 118, nil);
+				if (v31 or ((11504 - 8114) <= (8707 - 5647))) then
+					return v31;
+				end
+				v138 = 2 - 1;
 			end
 		end
-		if ((v90 and ((v93 and v34) or not v93) and (v83 < v111)) or ((61 + 446) >= (2677 - (84 + 2)))) then
-			if (((7384 - 2903) == (3229 + 1252)) and v99.BloodFury:IsCastable()) then
-				if (v24(v99.BloodFury) or ((3170 - (497 + 345)) < (18 + 675))) then
-					return "blood_fury cd 10";
+	end
+	local function v123()
+		if (v113.TargetIsValid() or ((356 + 643) > (10374 - 7681))) then
+			if (((1595 - 1132) < (454 + 147)) and v99.MirrorImage:IsCastable() and v68 and v97) then
+				if (v24(v99.MirrorImage) or ((5582 - 3399) < (1375 - (364 + 324)))) then
+					return "mirror_image precombat 2";
 				end
 			end
-			if (((732 + 3596) == (5661 - (605 + 728))) and v99.Berserking:IsCastable()) then
-				if (((1134 + 454) >= (2960 - 1628)) and v24(v99.Berserking)) then
-					return "berserking cd 12";
-				end
-			end
-			if (v99.LightsJudgment:IsCastable() or ((192 + 3982) > (15705 - 11457))) then
-				if (v24(v99.LightsJudgment, not v15:IsSpellInRange(v99.LightsJudgment)) or ((4135 + 451) <= (226 - 144))) then
-					return "lights_judgment cd 14";
-				end
-			end
-			if (((2917 + 946) == (4352 - (457 + 32))) and v99.Fireblood:IsCastable()) then
-				if (v24(v99.Fireblood) or ((120 + 162) <= (1444 - (832 + 570)))) then
-					return "fireblood cd 16";
-				end
-			end
-			if (((4343 + 266) >= (200 + 566)) and v99.AncestralCall:IsCastable()) then
-				if (v24(v99.AncestralCall) or ((4076 - 2924) == (1199 + 1289))) then
-					return "ancestral_call cd 18";
+			if (((12470 - 7921) == (10915 - 6366)) and v99.Frostbolt:IsCastable() and not v14:IsCasting(v99.Frostbolt)) then
+				if (((1549 + 3123) == (19549 - 14877)) and v24(v99.Frostbolt, not v15:IsSpellInRange(v99.Frostbolt))) then
+					return "frostbolt precombat 4";
 				end
 			end
 		end
 	end
-	local function v125()
-		local v137 = 796 - (588 + 208);
+	local function v124()
+		local v139 = 0 - 0;
+		local v140;
 		while true do
-			if (((9222 - 5800) > (5150 - (884 + 916))) and (v137 == (1 - 0))) then
-				if (((509 + 368) > (1029 - (232 + 421))) and v99.ArcaneExplosion:IsCastable() and v36 and (v14:ManaPercentage() > (1919 - (1569 + 320))) and (v104 >= (1 + 1))) then
-					if (v24(v99.ArcaneExplosion, not v15:IsInRange(2 + 6)) or ((10506 - 7388) <= (2456 - (316 + 289)))) then
-						return "arcane_explosion movement";
+			if ((v139 == (0 - 0)) or ((4936 - (1249 + 19)) < (357 + 38))) then
+				if ((v96 and v99.TimeWarp:IsCastable() and v14:BloodlustExhaustUp() and v99.TemporalWarp:IsAvailable() and v14:BloodlustDown() and v14:PrevGCDP(3 - 2, v99.IcyVeins)) or ((5252 - (686 + 400)) == (357 + 98))) then
+					if (v24(v99.TimeWarp, not v15:IsInRange(269 - (73 + 156))) or ((22 + 4427) == (3474 - (721 + 90)))) then
+						return "time_warp cd 2";
 					end
 				end
-				if ((v99.FireBlast:IsCastable() and v40) or ((431 - 266) >= (162 + 3330))) then
-					if (((5402 - (666 + 787)) < (5281 - (360 + 65))) and v24(v99.FireBlast, not v15:IsSpellInRange(v99.FireBlast))) then
-						return "fire_blast movement";
-					end
-				end
-				v137 = 2 + 0;
+				v140 = v113.HandleDPSPotion(v14:BuffUp(v99.IcyVeinsBuff));
+				v139 = 1 + 0;
 			end
-			if ((v137 == (256 - (79 + 175))) or ((6742 - 2466) < (2354 + 662))) then
-				if (((14376 - 9686) > (7944 - 3819)) and v99.IceLance:IsCastable() and v47) then
-					if (v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance)) or ((949 - (503 + 396)) >= (1077 - (92 + 89)))) then
+			if ((v139 == (6 - 4)) or ((4747 - (224 + 246)) < (4841 - 1852))) then
+				if ((v83 < v111) or ((1601 - 731) >= (753 + 3396))) then
+					if (((53 + 2159) < (2338 + 845)) and v91 and ((v34 and v92) or not v92)) then
+						local v220 = 0 - 0;
+						while true do
+							if (((15460 - 10814) > (3505 - (203 + 310))) and (v220 == (1993 - (1238 + 755)))) then
+								v31 = v122();
+								if (((101 + 1333) < (4640 - (709 + 825))) and v31) then
+									return v31;
+								end
+								break;
+							end
+						end
+					end
+				end
+				if (((1447 - 661) < (4402 - 1379)) and v90 and ((v93 and v34) or not v93) and (v83 < v111)) then
+					local v209 = 864 - (196 + 668);
+					while true do
+						if ((v209 == (7 - 5)) or ((5058 - 2616) < (907 - (171 + 662)))) then
+							if (((4628 - (4 + 89)) == (15894 - 11359)) and v99.AncestralCall:IsCastable()) then
+								if (v24(v99.AncestralCall) or ((1096 + 1913) <= (9245 - 7140))) then
+									return "ancestral_call cd 18";
+								end
+							end
+							break;
+						end
+						if (((718 + 1112) < (5155 - (35 + 1451))) and (v209 == (1453 - (28 + 1425)))) then
+							if (v99.BloodFury:IsCastable() or ((3423 - (941 + 1052)) >= (3464 + 148))) then
+								if (((4197 - (822 + 692)) >= (3512 - 1052)) and v24(v99.BloodFury)) then
+									return "blood_fury cd 10";
+								end
+							end
+							if (v99.Berserking:IsCastable() or ((850 + 954) >= (3572 - (45 + 252)))) then
+								if (v24(v99.Berserking) or ((1403 + 14) > (1249 + 2380))) then
+									return "berserking cd 12";
+								end
+							end
+							v209 = 2 - 1;
+						end
+						if (((5228 - (114 + 319)) > (576 - 174)) and (v209 == (1 - 0))) then
+							if (((3069 + 1744) > (5311 - 1746)) and v99.LightsJudgment:IsCastable()) then
+								if (((8196 - 4284) == (5875 - (556 + 1407))) and v24(v99.LightsJudgment, not v15:IsSpellInRange(v99.LightsJudgment))) then
+									return "lights_judgment cd 14";
+								end
+							end
+							if (((4027 - (741 + 465)) <= (5289 - (170 + 295))) and v99.Fireblood:IsCastable()) then
+								if (((916 + 822) <= (2017 + 178)) and v24(v99.Fireblood)) then
+									return "fireblood cd 16";
+								end
+							end
+							v209 = 4 - 2;
+						end
+					end
+				end
+				break;
+			end
+			if (((34 + 7) <= (1936 + 1082)) and (v139 == (1 + 0))) then
+				if (((3375 - (957 + 273)) <= (1098 + 3006)) and v140) then
+					return v140;
+				end
+				if (((1077 + 1612) < (18461 - 13616)) and v99.IcyVeins:IsCastable() and v34 and v52 and v57 and (v83 < v111)) then
+					if (v24(v99.IcyVeins) or ((6118 - 3796) > (8008 - 5386))) then
+						return "icy_veins cd 6";
+					end
+				end
+				v139 = 9 - 7;
+			end
+		end
+	end
+	local function v125()
+		local v141 = 1780 - (389 + 1391);
+		while true do
+			if ((v141 == (2 + 0)) or ((472 + 4062) == (4739 - 2657))) then
+				if ((v99.IceLance:IsCastable() and v47) or ((2522 - (783 + 168)) > (6265 - 4398))) then
+					if (v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance)) or ((2611 + 43) >= (3307 - (309 + 2)))) then
 						return "ice_lance movement";
 					end
 				end
 				break;
 			end
-			if ((v137 == (0 - 0)) or ((880 + 834) >= (1751 + 1207))) then
-				if ((v99.IceFloes:IsCastable() and v46 and v14:BuffDown(v99.IceFloes)) or ((5838 - 4347) < (89 + 555))) then
-					if (((1604 - 900) < (862 + 125)) and v24(v99.IceFloes)) then
+			if (((12215 - 8237) > (3316 - (1090 + 122))) and (v141 == (1 + 0))) then
+				if (((10058 - 7063) > (1055 + 486)) and v99.ArcaneExplosion:IsCastable() and v36 and (v14:ManaPercentage() > (1148 - (628 + 490))) and (v104 >= (1 + 1))) then
+					if (((8043 - 4794) > (4355 - 3402)) and v24(v99.ArcaneExplosion, not v15:IsInRange(782 - (431 + 343)))) then
+						return "arcane_explosion movement";
+					end
+				end
+				if ((v99.FireBlast:IsCastable() and v40) or ((6610 - 3337) > (13229 - 8656))) then
+					if (v24(v99.FireBlast, not v15:IsSpellInRange(v99.FireBlast)) or ((2490 + 661) < (165 + 1119))) then
+						return "fire_blast movement";
+					end
+				end
+				v141 = 1697 - (556 + 1139);
+			end
+			if ((v141 == (15 - (6 + 9))) or ((339 + 1511) == (784 + 745))) then
+				if (((990 - (28 + 141)) < (823 + 1300)) and v99.IceFloes:IsCastable() and v46 and v14:BuffDown(v99.IceFloes)) then
+					if (((1112 - 210) < (1647 + 678)) and v24(v99.IceFloes)) then
 						return "ice_floes movement";
 					end
 				end
-				if (((1776 + 1942) > (5804 - 3898)) and v99.IceNova:IsCastable() and v48) then
-					if (v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova)) or ((120 + 838) > (5543 - 1908))) then
+				if (((2175 - (486 + 831)) <= (7707 - 4745)) and v99.IceNova:IsCastable() and v48) then
+					if (v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova)) or ((13892 - 9946) < (244 + 1044))) then
 						return "ice_nova movement";
 					end
 				end
-				v137 = 1245 - (485 + 759);
+				v141 = 3 - 2;
 			end
 		end
 	end
 	local function v126()
-		local v138 = 0 - 0;
+		local v142 = 1263 - (668 + 595);
 		while true do
-			if (((4690 - (442 + 747)) <= (5627 - (832 + 303))) and ((948 - (88 + 858)) == v138)) then
-				if ((v99.ShiftingPower:IsCastable() and v56 and ((v61 and v34) or not v61) and (v83 < v111)) or ((1050 + 2392) < (2109 + 439))) then
-					if (((119 + 2756) >= (2253 - (766 + 23))) and v24(v99.ShiftingPower, not v15:IsInRange(197 - 157), true)) then
-						return "shifting_power aoe 16";
+			if ((v142 == (5 + 0)) or ((654 + 2588) == (1546 - 979))) then
+				if ((v99.ArcaneExplosion:IsCastable() and v36 and (v14:ManaPercentage() > (320 - (23 + 267))) and (v104 >= (1951 - (1129 + 815)))) or ((1234 - (371 + 16)) >= (3013 - (1326 + 424)))) then
+					if (v24(v99.ArcaneExplosion, not v15:IsInRange(14 - 6)) or ((8232 - 5979) == (1969 - (88 + 30)))) then
+						return "arcane_explosion aoe 28";
 					end
 				end
-				if ((v99.GlacialSpike:IsReady() and v45 and (v108 == (6 - 1)) and (v99.Blizzard:CooldownRemains() > v112)) or ((12638 - 7841) >= (16606 - 11713))) then
-					if (v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes)) or ((1624 - (1036 + 37)) > (1467 + 601))) then
-						return "glacial_spike aoe 18";
-					end
-				end
-				if (((4116 - 2002) > (743 + 201)) and v99.Flurry:IsCastable() and v43 and not v115() and (v107 == (1480 - (641 + 839))) and (v14:PrevGCDP(914 - (910 + 3), v99.GlacialSpike) or (v99.Flurry:ChargesFractional() > (2.8 - 1)))) then
-					if (v24(v99.Flurry, not v15:IsSpellInRange(v99.Flurry), v14:BuffDown(v99.IceFloes)) or ((3946 - (1466 + 218)) >= (1423 + 1673))) then
-						return "flurry aoe 20";
-					end
-				end
-				if ((v99.Flurry:IsCastable() and v43 and (v107 == (1148 - (556 + 592))) and (v14:BuffUp(v99.BrainFreezeBuff) or v14:BuffUp(v99.FingersofFrostBuff))) or ((802 + 1453) >= (4345 - (329 + 479)))) then
-					if (v24(v99.Flurry, not v15:IsSpellInRange(v99.Flurry), v14:BuffDown(v99.IceFloes)) or ((4691 - (174 + 680)) < (4487 - 3181))) then
-						return "flurry aoe 21";
-					end
-				end
-				v138 = 5 - 2;
-			end
-			if (((2107 + 843) == (3689 - (396 + 343))) and ((0 + 0) == v138)) then
-				if ((v99.ConeofCold:IsCastable() and v55 and ((v60 and v34) or not v60) and (v83 < v111) and v99.ColdestSnap:IsAvailable() and (v14:PrevGCDP(1478 - (29 + 1448), v99.CometStorm) or (v14:PrevGCDP(1390 - (135 + 1254), v99.FrozenOrb) and not v99.CometStorm:IsAvailable()))) or ((17792 - 13069) < (15398 - 12100))) then
-					if (((758 + 378) >= (1681 - (389 + 1138))) and v24(v99.ConeofCold, not v15:IsInRange(582 - (102 + 472)))) then
-						return "cone_of_cold aoe 2";
-					end
-				end
-				if ((v99.FrozenOrb:IsCastable() and ((v58 and v34) or not v58) and v53 and (v83 < v111) and (not v14:PrevGCDP(1 + 0, v99.GlacialSpike) or not v115())) or ((151 + 120) > (4428 + 320))) then
-					if (((6285 - (320 + 1225)) >= (5610 - 2458)) and v24(v101.FrozenOrbCast, not v15:IsInRange(25 + 15))) then
-						return "frozen_orb aoe 4";
-					end
-				end
-				if ((v99.Blizzard:IsCastable() and v38 and (not v14:PrevGCDP(1465 - (157 + 1307), v99.GlacialSpike) or not v115())) or ((4437 - (821 + 1038)) >= (8458 - 5068))) then
-					if (((5 + 36) <= (2950 - 1289)) and v24(v101.BlizzardCursor, not v15:IsInRange(15 + 25), v14:BuffDown(v99.IceFloes))) then
-						return "blizzard aoe 6";
-					end
-				end
-				if (((1489 - 888) < (4586 - (834 + 192))) and v99.CometStorm:IsCastable() and ((v59 and v34) or not v59) and v54 and (v83 < v111) and not v14:PrevGCDP(1 + 0, v99.GlacialSpike) and (not v99.ColdestSnap:IsAvailable() or (v99.ConeofCold:CooldownUp() and (v99.FrozenOrb:CooldownRemains() > (7 + 18))) or (v99.ConeofCold:CooldownRemains() > (1 + 19)))) then
-					if (((364 - 129) < (991 - (300 + 4))) and v24(v99.CometStorm, not v15:IsSpellInRange(v99.CometStorm))) then
-						return "comet_storm aoe 8";
-					end
-				end
-				v138 = 1 + 0;
-			end
-			if (((11908 - 7359) > (1515 - (112 + 250))) and (v138 == (2 + 2))) then
-				if ((v99.Frostbolt:IsCastable() and v41) or ((11709 - 7035) < (2677 + 1995))) then
-					if (((1897 + 1771) < (3412 + 1149)) and v24(v99.Frostbolt, not v15:IsSpellInRange(v99.Frostbolt), v14:BuffDown(v99.IceFloes))) then
+				if ((v99.Frostbolt:IsCastable() and v41) or ((2858 - (720 + 51)) > (5276 - 2904))) then
+					if (v24(v99.Frostbolt, not v15:IsSpellInRange(v99.Frostbolt), v14:BuffDown(v99.IceFloes)) or ((6221 - (421 + 1355)) < (6844 - 2695))) then
 						return "frostbolt aoe 32";
 					end
 				end
-				if ((v14:IsMoving() and v95) or ((226 + 229) == (2679 + 926))) then
-					local v203 = 1414 - (1001 + 413);
+				if ((v14:IsMoving() and v95) or ((894 + 924) == (1168 - (286 + 797)))) then
+					local v210 = 0 - 0;
 					while true do
-						if ((v203 == (0 - 0)) or ((3545 - (244 + 638)) == (4005 - (627 + 66)))) then
+						if (((1043 - 413) < (2566 - (397 + 42))) and (v210 == (0 + 0))) then
 							v31 = v125();
-							if (((12743 - 8466) <= (5077 - (512 + 90))) and v31) then
+							if (v31 or ((2738 - (24 + 776)) == (3872 - 1358))) then
 								return v31;
 							end
 							break;
@@ -423,234 +457,113 @@ v0["Epix_Mage_Frost.lua"] = function(...)
 				end
 				break;
 			end
-			if ((v138 == (1907 - (1665 + 241))) or ((1587 - (373 + 344)) == (537 + 652))) then
-				if (((411 + 1142) <= (8263 - 5130)) and v18:IsActive() and v44 and v99.Freeze:IsReady() and v115() and (v116() == (0 - 0)) and ((not v99.GlacialSpike:IsAvailable() and not v99.Snowstorm:IsAvailable()) or v14:PrevGCDP(1100 - (35 + 1064), v99.GlacialSpike) or (v99.ConeofCold:CooldownUp() and (v14:BuffStack(v99.SnowstormBuff) == v109)))) then
-					if (v24(v101.FreezePet, not v15:IsSpellInRange(v99.Freeze)) or ((1628 + 609) >= (7511 - 4000))) then
+			if (((5040 - (222 + 563)) >= (121 - 66)) and (v142 == (1 + 0))) then
+				if (((3189 - (23 + 167)) > (2954 - (690 + 1108))) and v99.CometStorm:IsCastable() and ((v59 and v34) or not v59) and v54 and (v83 < v111) and not v14:PrevGCDP(1 + 0, v99.GlacialSpike) and (not v99.ColdestSnap:IsAvailable() or (v99.ConeofCold:CooldownUp() and (v99.FrozenOrb:CooldownRemains() > (21 + 4))) or (v99.ConeofCold:CooldownRemains() > (868 - (40 + 808))))) then
+					if (((387 + 1963) > (4416 - 3261)) and v24(v99.CometStorm, not v15:IsSpellInRange(v99.CometStorm))) then
+						return "comet_storm aoe 8";
+					end
+				end
+				if (((3851 + 178) <= (2568 + 2285)) and v18:IsActive() and v44 and v99.Freeze:IsReady() and v115() and (v116() == (0 + 0)) and ((not v99.GlacialSpike:IsAvailable() and not v99.Snowstorm:IsAvailable()) or v14:PrevGCDP(572 - (47 + 524), v99.GlacialSpike) or (v99.ConeofCold:CooldownUp() and (v14:BuffStack(v99.SnowstormBuff) == v109)))) then
+					if (v24(v101.FreezePet, not v15:IsSpellInRange(v99.Freeze)) or ((335 + 181) > (9386 - 5952))) then
 						return "freeze aoe 10";
 					end
 				end
-				if ((v99.IceNova:IsCastable() and v48 and v115() and not v14:PrevOffGCDP(1 + 0, v99.Freeze) and (v14:PrevGCDP(1237 - (298 + 938), v99.GlacialSpike) or (v99.ConeofCold:CooldownUp() and (v14:BuffStack(v99.SnowstormBuff) == v109) and (v112 < (1260 - (233 + 1026)))))) or ((2990 - (636 + 1030)) > (1545 + 1475))) then
-					if (v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova)) or ((2923 + 69) == (559 + 1322))) then
+				if (((6049 - 2003) >= (6916 - 3883)) and v99.IceNova:IsCastable() and v48 and v115() and not v14:PrevOffGCDP(1727 - (1165 + 561), v99.Freeze) and (v14:PrevGCDP(1 + 0, v99.GlacialSpike) or (v99.ConeofCold:CooldownUp() and (v14:BuffStack(v99.SnowstormBuff) == v109) and (v112 < (3 - 2))))) then
+					if (v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova)) or ((1038 + 1681) <= (1926 - (341 + 138)))) then
 						return "ice_nova aoe 11";
 					end
 				end
-				if (((210 + 2896) > (1747 - (55 + 166))) and v99.FrostNova:IsCastable() and v42 and v115() and not v14:PrevOffGCDP(1 + 0, v99.Freeze) and ((v14:PrevGCDP(1 + 0, v99.GlacialSpike) and (v107 == (0 - 0))) or (v99.ConeofCold:CooldownUp() and (v14:BuffStack(v99.SnowstormBuff) == v109) and (v112 < (298 - (36 + 261)))))) then
-					if (((5286 - 2263) < (5238 - (34 + 1334))) and v24(v99.FrostNova)) then
+				v142 = 1 + 1;
+			end
+			if ((v142 == (3 - 1)) or ((4460 - (89 + 237)) < (12629 - 8703))) then
+				if ((v99.FrostNova:IsCastable() and v42 and v115() and not v14:PrevOffGCDP(1 - 0, v99.Freeze) and ((v14:PrevGCDP(882 - (581 + 300), v99.GlacialSpike) and (v107 == (1220 - (855 + 365)))) or (v99.ConeofCold:CooldownUp() and (v14:BuffStack(v99.SnowstormBuff) == v109) and (v112 < (2 - 1))))) or ((54 + 110) >= (4020 - (1030 + 205)))) then
+					if (v24(v99.FrostNova) or ((493 + 32) == (1962 + 147))) then
 						return "frost_nova aoe 12";
 					end
 				end
-				if (((55 + 88) > (58 + 16)) and v99.ConeofCold:IsCastable() and v55 and ((v60 and v34) or not v60) and (v83 < v111) and (v14:BuffStackP(v99.SnowstormBuff) == v109)) then
-					if (((1301 - (1035 + 248)) < (2133 - (20 + 1))) and v24(v99.ConeofCold, not v15:IsInRange(5 + 3))) then
+				if (((319 - (156 + 130)) == (74 - 41)) and v99.ConeofCold:IsCastable() and v55 and ((v60 and v34) or not v60) and (v83 < v111) and (v14:BuffStackP(v99.SnowstormBuff) == v109)) then
+					if (((5146 - 2092) <= (8223 - 4208)) and v24(v99.ConeofCold, not v15:IsInRange(3 + 5))) then
 						return "cone_of_cold aoe 14";
 					end
 				end
-				v138 = 321 - (134 + 185);
+				if (((1092 + 779) < (3451 - (10 + 59))) and v99.ShiftingPower:IsCastable() and v56 and ((v61 and v34) or not v61) and (v83 < v111)) then
+					if (((366 + 927) <= (10667 - 8501)) and v24(v99.ShiftingPower, not v15:IsInRange(1203 - (671 + 492)), true)) then
+						return "shifting_power aoe 16";
+					end
+				end
+				v142 = 3 + 0;
 			end
-			if (((2230 - (549 + 584)) <= (2313 - (314 + 371))) and (v138 == (10 - 7))) then
-				if (((5598 - (478 + 490)) == (2453 + 2177)) and v99.IceLance:IsCastable() and v47 and (v14:BuffUp(v99.FingersofFrostBuff) or (v116() > v99.IceLance:TravelTime()) or v29(v107))) then
-					if (((4712 - (786 + 386)) > (8689 - 6006)) and v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance))) then
+			if (((1215 - (369 + 846)) == v142) or ((683 + 1896) < (105 + 18))) then
+				if ((v99.ConeofCold:IsCastable() and v55 and ((v60 and v34) or not v60) and (v83 < v111) and v99.ColdestSnap:IsAvailable() and (v14:PrevGCDP(1946 - (1036 + 909), v99.CometStorm) or (v14:PrevGCDP(1 + 0, v99.FrozenOrb) and not v99.CometStorm:IsAvailable()))) or ((1420 - 574) >= (2571 - (11 + 192)))) then
+					if (v24(v99.ConeofCold, not v15:IsInRange(5 + 3)) or ((4187 - (135 + 40)) <= (8135 - 4777))) then
+						return "cone_of_cold aoe 2";
+					end
+				end
+				if (((901 + 593) <= (6619 - 3614)) and v99.FrozenOrb:IsCastable() and ((v58 and v34) or not v58) and v53 and (v83 < v111) and (not v14:PrevGCDP(1 - 0, v99.GlacialSpike) or not v115())) then
+					if (v24(v101.FrozenOrbCast, not v15:IsInRange(216 - (50 + 126))) or ((8662 - 5551) == (473 + 1661))) then
+						return "frozen_orb aoe 4";
+					end
+				end
+				if (((3768 - (1233 + 180)) == (3324 - (522 + 447))) and v99.Blizzard:IsCastable() and v38 and (not v14:PrevGCDP(1422 - (107 + 1314), v99.GlacialSpike) or not v115())) then
+					if (v24(v101.BlizzardCursor, not v15:IsInRange(19 + 21), v14:BuffDown(v99.IceFloes)) or ((1791 - 1203) <= (184 + 248))) then
+						return "blizzard aoe 6";
+					end
+				end
+				v142 = 1 - 0;
+			end
+			if (((18979 - 14182) >= (5805 - (716 + 1194))) and (v142 == (1 + 3))) then
+				if (((384 + 3193) == (4080 - (74 + 429))) and v99.IceLance:IsCastable() and v47 and (v14:BuffUp(v99.FingersofFrostBuff) or (v116() > v99.IceLance:TravelTime()) or v29(v107))) then
+					if (((7318 - 3524) > (1831 + 1862)) and v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance))) then
 						return "ice_lance aoe 22";
 					end
 				end
-				if (((6173 - (1055 + 324)) >= (4615 - (1093 + 247))) and v99.IceNova:IsCastable() and v48 and (v103 >= (4 + 0)) and ((not v99.Snowstorm:IsAvailable() and not v99.GlacialSpike:IsAvailable()) or not v115())) then
-					if (((157 + 1327) == (5891 - 4407)) and v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova))) then
+				if ((v99.IceNova:IsCastable() and v48 and (v103 >= (8 - 4)) and ((not v99.Snowstorm:IsAvailable() and not v99.GlacialSpike:IsAvailable()) or not v115())) or ((903 + 372) == (12640 - 8540))) then
+					if (v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova)) or ((3933 - 2342) >= (4013 - (279 + 154)))) then
 						return "ice_nova aoe 23";
 					end
 				end
-				if (((4859 - 3427) < (10115 - 6560)) and v99.DragonsBreath:IsCastable() and v39 and (v104 >= (17 - 10))) then
-					if (v24(v99.DragonsBreath, not v15:IsInRange(4 + 6)) or ((4102 - 3037) > (12332 - 8754))) then
+				if (((1761 - (454 + 324)) <= (1423 + 385)) and v99.DragonsBreath:IsCastable() and v39 and (v104 >= (24 - (12 + 5)))) then
+					if (v24(v99.DragonsBreath, not v15:IsInRange(6 + 4)) or ((5478 - 3328) <= (443 + 754))) then
 						return "dragons_breath aoe 26";
 					end
 				end
-				if ((v99.ArcaneExplosion:IsCastable() and v36 and (v14:ManaPercentage() > (23 + 7)) and (v104 >= (17 - 10))) or ((5483 - (364 + 324)) < (3857 - 2450))) then
-					if (((4446 - 2593) < (1596 + 3217)) and v24(v99.ArcaneExplosion, not v15:IsInRange(33 - 25))) then
-						return "arcane_explosion aoe 28";
+				v142 = 1098 - (277 + 816);
+			end
+			if (((16105 - 12336) >= (2356 - (1058 + 125))) and (v142 == (1 + 2))) then
+				if (((2460 - (815 + 160)) == (6371 - 4886)) and v99.GlacialSpike:IsReady() and v45 and (v108 == (11 - 6)) and (v99.Blizzard:CooldownRemains() > v112)) then
+					if (v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes)) or ((791 + 2524) <= (8132 - 5350))) then
+						return "glacial_spike aoe 18";
 					end
 				end
-				v138 = 5 - 1;
+				if ((v99.Flurry:IsCastable() and v43 and not v115() and (v107 == (1898 - (41 + 1857))) and (v14:PrevGCDP(1894 - (1222 + 671), v99.GlacialSpike) or (v99.Flurry:ChargesFractional() > (2.8 - 1)))) or ((1258 - 382) >= (4146 - (229 + 953)))) then
+					if (v24(v99.Flurry, not v15:IsSpellInRange(v99.Flurry), v14:BuffDown(v99.IceFloes)) or ((4006 - (1111 + 663)) > (4076 - (874 + 705)))) then
+						return "flurry aoe 20";
+					end
+				end
+				if ((v99.Flurry:IsCastable() and v43 and (v107 == (0 + 0)) and (v14:BuffUp(v99.BrainFreezeBuff) or v14:BuffUp(v99.FingersofFrostBuff))) or ((1440 + 670) <= (689 - 357))) then
+					if (((104 + 3582) > (3851 - (642 + 37))) and v24(v99.Flurry, not v15:IsSpellInRange(v99.Flurry), v14:BuffDown(v99.IceFloes))) then
+						return "flurry aoe 21";
+					end
+				end
+				v142 = 1 + 3;
 			end
 		end
 	end
 	local function v127()
-		local v139 = 0 - 0;
+		local v143 = 0 + 0;
 		while true do
-			if (((1269 - (1249 + 19)) == v139) or ((2547 + 274) < (9462 - 7031))) then
-				if ((v99.GlacialSpike:IsReady() and v45 and (v108 == (1091 - (686 + 400))) and (v99.Flurry:CooldownUp() or (v107 > (0 + 0)))) or ((3103 - (73 + 156)) < (11 + 2170))) then
-					if (v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes)) or ((3500 - (721 + 90)) <= (4 + 339))) then
-						return "glacial_spike cleave 10";
-					end
-				end
-				if ((v99.FrozenOrb:IsCastable() and ((v58 and v34) or not v58) and v53 and (v83 < v111) and (v14:BuffStackP(v99.FingersofFrostBuff) < (6 - 4)) and (not v99.RayofFrost:IsAvailable() or v99.RayofFrost:CooldownDown())) or ((2339 - (224 + 246)) == (3254 - 1245))) then
-					if (v24(v101.FrozenOrbCast, not v15:IsSpellInRange(v99.FrozenOrb)) or ((6528 - 2982) < (422 + 1900))) then
-						return "frozen_orb cleave 12";
-					end
-				end
-				if ((v99.ConeofCold:IsCastable() and v55 and ((v60 and v34) or not v60) and (v83 < v111) and v99.ColdestSnap:IsAvailable() and (v99.CometStorm:CooldownRemains() > (1 + 9)) and (v99.FrozenOrb:CooldownRemains() > (8 + 2)) and (v107 == (0 - 0)) and (v104 >= (9 - 6))) or ((2595 - (203 + 310)) == (6766 - (1238 + 755)))) then
-					if (((227 + 3017) > (2589 - (709 + 825))) and v24(v99.ConeofCold)) then
-						return "cone_of_cold cleave 14";
-					end
-				end
-				if ((v99.Blizzard:IsCastable() and v38 and (v104 >= (3 - 1)) and v99.IceCaller:IsAvailable() and v99.FreezingRain:IsAvailable() and ((not v99.SplinteringCold:IsAvailable() and not v99.RayofFrost:IsAvailable()) or v14:BuffUp(v99.FreezingRainBuff) or (v104 >= (3 - 0)))) or ((4177 - (196 + 668)) <= (7019 - 5241))) then
-					if (v24(v101.BlizzardCursor, not v15:IsSpellInRange(v99.Blizzard), v14:BuffDown(v99.IceFloes)) or ((2943 - 1522) >= (2937 - (171 + 662)))) then
-						return "blizzard cleave 16";
-					end
-				end
-				v139 = 95 - (4 + 89);
-			end
-			if (((6350 - 4538) <= (1184 + 2065)) and (v139 == (0 - 0))) then
-				if (((637 + 986) <= (3443 - (35 + 1451))) and v99.CometStorm:IsCastable() and (v14:PrevGCDP(1454 - (28 + 1425), v99.Flurry) or v14:PrevGCDP(1994 - (941 + 1052), v99.ConeofCold)) and ((v59 and v34) or not v59) and v54 and (v83 < v111)) then
-					if (((4231 + 181) == (5926 - (822 + 692))) and v24(v99.CometStorm, not v15:IsSpellInRange(v99.CometStorm))) then
-						return "comet_storm cleave 2";
-					end
-				end
-				if (((2498 - 748) >= (397 + 445)) and v99.Flurry:IsCastable() and v43 and ((v14:PrevGCDP(298 - (45 + 252), v99.Frostbolt) and (v108 >= (3 + 0))) or v14:PrevGCDP(1 + 0, v99.GlacialSpike) or ((v108 >= (7 - 4)) and (v108 < (438 - (114 + 319))) and (v99.Flurry:ChargesFractional() == (2 - 0))))) then
-					if (((5601 - 1229) > (1180 + 670)) and v113.CastTargetIf(v99.Flurry, v105, "min", v117, nil, not v15:IsSpellInRange(v99.Flurry))) then
-						return "flurry cleave 4";
-					end
-					if (((344 - 112) < (1720 - 899)) and v24(v99.Flurry, not v15:IsSpellInRange(v99.Flurry), v14:BuffDown(v99.IceFloes))) then
-						return "flurry cleave 4";
-					end
-				end
-				if (((2481 - (556 + 1407)) < (2108 - (741 + 465))) and v99.IceLance:IsReady() and v47 and v99.GlacialSpike:IsAvailable() and (v99.WintersChillDebuff:AuraActiveCount() == (465 - (170 + 295))) and (v108 == (3 + 1)) and v14:BuffUp(v99.FingersofFrostBuff)) then
-					local v204 = 0 + 0;
-					while true do
-						if (((7371 - 4377) > (712 + 146)) and (v204 == (0 + 0))) then
-							if (v113.CastTargetIf(v99.IceLance, v105, "max", v118, nil, not v15:IsSpellInRange(v99.IceLance)) or ((2127 + 1628) <= (2145 - (957 + 273)))) then
-								return "ice_lance cleave 6";
-							end
-							if (((1056 + 2890) > (1499 + 2244)) and v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance))) then
-								return "ice_lance cleave 6";
-							end
-							break;
-						end
-					end
-				end
-				if ((v99.RayofFrost:IsCastable() and (v107 == (3 - 2)) and v49) or ((3518 - 2183) >= (10097 - 6791))) then
-					if (((23985 - 19141) > (4033 - (389 + 1391))) and v113.CastTargetIf(v99.RayofFrost, v105, "max", v117, nil, not v15:IsSpellInRange(v99.RayofFrost))) then
-						return "ray_of_frost cleave 8";
-					end
-					if (((284 + 168) == (48 + 404)) and v24(v99.RayofFrost, not v15:IsSpellInRange(v99.RayofFrost))) then
-						return "ray_of_frost cleave 8";
-					end
-				end
-				v139 = 2 - 1;
-			end
-			if (((954 - (783 + 168)) == v139) or ((15294 - 10737) < (2053 + 34))) then
-				if (((4185 - (309 + 2)) == (11896 - 8022)) and v99.Frostbolt:IsCastable() and v41) then
-					if (v24(v99.Frostbolt, not v15:IsSpellInRange(v99.Frostbolt), v14:BuffDown(v99.IceFloes)) or ((3150 - (1090 + 122)) > (1600 + 3335))) then
+			if ((v143 == (9 - 5)) or ((4928 - (233 + 221)) < (1896 - 1076))) then
+				if (((3767 + 512) >= (4423 - (718 + 823))) and v99.Frostbolt:IsCastable() and v41) then
+					if (v24(v99.Frostbolt, not v15:IsSpellInRange(v99.Frostbolt), v14:BuffDown(v99.IceFloes)) or ((1277 + 752) >= (4326 - (266 + 539)))) then
 						return "frostbolt cleave 26";
 					end
 				end
-				if ((v14:IsMoving() and v95) or ((14290 - 10035) < (2343 + 1080))) then
-					v31 = v125();
-					if (((2572 - (628 + 490)) <= (447 + 2044)) and v31) then
-						return v31;
-					end
-				end
-				break;
-			end
-			if ((v139 == (4 - 2)) or ((18997 - 14840) <= (3577 - (431 + 343)))) then
-				if (((9801 - 4948) >= (8626 - 5644)) and v99.ShiftingPower:IsCastable() and v56 and ((v61 and v34) or not v61) and (v83 < v111) and (((v99.FrozenOrb:CooldownRemains() > (8 + 2)) and (not v99.CometStorm:IsAvailable() or (v99.CometStorm:CooldownRemains() > (2 + 8))) and (not v99.RayofFrost:IsAvailable() or (v99.RayofFrost:CooldownRemains() > (1705 - (556 + 1139))))) or (v99.IcyVeins:CooldownRemains() < (35 - (6 + 9))))) then
-					if (((757 + 3377) > (1720 + 1637)) and v24(v99.ShiftingPower, not v15:IsSpellInRange(v99.ShiftingPower), true)) then
-						return "shifting_power cleave 18";
-					end
-				end
-				if ((v99.GlacialSpike:IsReady() and v45 and (v108 == (174 - (28 + 141)))) or ((1324 + 2093) < (3127 - 593))) then
-					if (v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes)) or ((1928 + 794) <= (1481 - (486 + 831)))) then
-						return "glacial_spike cleave 20";
-					end
-				end
-				if ((v99.IceLance:IsReady() and v47 and ((v14:BuffStackP(v99.FingersofFrostBuff) and not v14:PrevGCDP(2 - 1, v99.GlacialSpike)) or (v107 > (0 - 0)))) or ((456 + 1952) < (6668 - 4559))) then
-					local v205 = 1263 - (668 + 595);
+				if ((v14:IsMoving() and v95) or ((5767 - 3730) >= (5867 - (636 + 589)))) then
+					local v211 = 0 - 0;
 					while true do
-						if ((v205 == (0 + 0)) or ((7 + 26) == (3967 - 2512))) then
-							if (v113.CastTargetIf(v99.IceLance, v105, "max", v117, nil, not v15:IsSpellInRange(v99.IceLance)) or ((733 - (23 + 267)) >= (5959 - (1129 + 815)))) then
-								return "ice_lance cleave 22";
-							end
-							if (((3769 - (371 + 16)) > (1916 - (1326 + 424))) and v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance))) then
-								return "ice_lance cleave 22";
-							end
-							break;
-						end
-					end
-				end
-				if ((v99.IceNova:IsCastable() and v48 and (v104 >= (7 - 3))) or ((1023 - 743) == (3177 - (88 + 30)))) then
-					if (((2652 - (720 + 51)) > (2876 - 1583)) and v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova))) then
-						return "ice_nova cleave 24";
-					end
-				end
-				v139 = 1779 - (421 + 1355);
-			end
-		end
-	end
-	local function v128()
-		local v140 = 0 - 0;
-		while true do
-			if (((1158 + 1199) == (3440 - (286 + 797))) and (v140 == (7 - 5))) then
-				if (((202 - 79) == (562 - (397 + 42))) and v99.ShiftingPower:IsCastable() and v56 and ((v61 and v34) or not v61) and (v83 < v111) and (v107 == (0 + 0)) and (((v99.FrozenOrb:CooldownRemains() > (810 - (24 + 776))) and (not v99.CometStorm:IsAvailable() or (v99.CometStorm:CooldownRemains() > (15 - 5))) and (not v99.RayofFrost:IsAvailable() or (v99.RayofFrost:CooldownRemains() > (795 - (222 + 563))))) or (v99.IcyVeins:CooldownRemains() < (44 - 24)))) then
-					if (v24(v99.ShiftingPower, not v15:IsInRange(29 + 11)) or ((1246 - (23 + 167)) >= (5190 - (690 + 1108)))) then
-						return "shifting_power single 18";
-					end
-				end
-				if ((v99.GlacialSpike:IsReady() and v45 and (v108 == (2 + 3))) or ((892 + 189) < (1923 - (40 + 808)))) then
-					if (v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes)) or ((173 + 876) >= (16947 - 12515))) then
-						return "glacial_spike single 20";
-					end
-				end
-				if ((v99.IceLance:IsReady() and v47 and ((v14:BuffUp(v99.FingersofFrostBuff) and not v14:PrevGCDP(1 + 0, v99.GlacialSpike) and not v99.GlacialSpike:InFlight()) or v29(v107))) or ((2523 + 2245) <= (464 + 382))) then
-					if (v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance)) or ((3929 - (47 + 524)) <= (922 + 498))) then
-						return "ice_lance single 22";
-					end
-				end
-				if ((v99.IceNova:IsCastable() and v48 and (v104 >= (10 - 6))) or ((5590 - 1851) <= (6853 - 3848))) then
-					if (v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova)) or ((3385 - (1165 + 561)) >= (64 + 2070))) then
-						return "ice_nova single 24";
-					end
-				end
-				v140 = 9 - 6;
-			end
-			if ((v140 == (0 + 0)) or ((3739 - (341 + 138)) < (636 + 1719))) then
-				if ((v99.CometStorm:IsCastable() and v54 and ((v59 and v34) or not v59) and (v83 < v111) and (v14:PrevGCDP(1 - 0, v99.Flurry) or v14:PrevGCDP(327 - (89 + 237), v99.ConeofCold))) or ((2151 - 1482) == (8890 - 4667))) then
-					if (v24(v99.CometStorm, not v15:IsSpellInRange(v99.CometStorm)) or ((2573 - (581 + 300)) < (1808 - (855 + 365)))) then
-						return "comet_storm single 2";
-					end
-				end
-				if ((v99.Flurry:IsCastable() and (v107 == (0 - 0)) and v15:DebuffDown(v99.WintersChillDebuff) and ((v14:PrevGCDP(1 + 0, v99.Frostbolt) and (v108 >= (1238 - (1030 + 205)))) or (v14:PrevGCDP(1 + 0, v99.Frostbolt) and v14:BuffUp(v99.BrainFreezeBuff)) or v14:PrevGCDP(1 + 0, v99.GlacialSpike) or (v99.GlacialSpike:IsAvailable() and (v108 == (290 - (156 + 130))) and v14:BuffDown(v99.FingersofFrostBuff)))) or ((10899 - 6102) < (6153 - 2502))) then
-					if (v24(v99.Flurry, not v15:IsSpellInRange(v99.Flurry), v14:BuffDown(v99.IceFloes)) or ((8554 - 4377) > (1278 + 3572))) then
-						return "flurry single 4";
-					end
-				end
-				if ((v99.IceLance:IsReady() and v47 and v99.GlacialSpike:IsAvailable() and not v99.GlacialSpike:InFlight() and (v107 == (0 + 0)) and (v108 == (73 - (10 + 59))) and v14:BuffUp(v99.FingersofFrostBuff)) or ((114 + 286) > (5471 - 4360))) then
-					if (((4214 - (671 + 492)) > (801 + 204)) and v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance))) then
-						return "ice_lance single 6";
-					end
-				end
-				if (((4908 - (369 + 846)) <= (1161 + 3221)) and v99.RayofFrost:IsCastable() and v49 and (v15:DebuffRemains(v99.WintersChillDebuff) > v99.RayofFrost:CastTime()) and (v107 == (1 + 0))) then
-					if (v24(v99.RayofFrost, not v15:IsSpellInRange(v99.RayofFrost)) or ((5227 - (1036 + 909)) > (3260 + 840))) then
-						return "ray_of_frost single 8";
-					end
-				end
-				v140 = 1 - 0;
-			end
-			if ((v140 == (206 - (11 + 192))) or ((1810 + 1770) < (3019 - (135 + 40)))) then
-				if (((215 - 126) < (2707 + 1783)) and v90 and ((v93 and v34) or not v93)) then
-					if (v99.BagofTricks:IsCastable() or ((10977 - 5994) < (2710 - 902))) then
-						if (((4005 - (50 + 126)) > (10494 - 6725)) and v24(v99.BagofTricks, not v15:IsSpellInRange(v99.BagofTricks))) then
-							return "bag_of_tricks cd 40";
-						end
-					end
-				end
-				if (((329 + 1156) <= (4317 - (1233 + 180))) and v99.Frostbolt:IsCastable() and v41) then
-					if (((5238 - (522 + 447)) == (5690 - (107 + 1314))) and v24(v99.Frostbolt, not v15:IsSpellInRange(v99.Frostbolt), v14:BuffDown(v99.IceFloes))) then
-						return "frostbolt single 26";
-					end
-				end
-				if (((180 + 207) <= (8476 - 5694)) and v14:IsMoving() and v95) then
-					local v206 = 0 + 0;
-					while true do
-						if ((v206 == (0 - 0)) or ((7513 - 5614) <= (2827 - (716 + 1194)))) then
+						if (((3547 - 1827) < (3533 + 925)) and (v211 == (0 + 0))) then
 							v31 = v125();
-							if (v31 or ((74 + 4238) <= (94 + 782))) then
+							if (v31 or ((1451 - (657 + 358)) > (7998 - 4977))) then
 								return v31;
 							end
 							break;
@@ -659,310 +572,347 @@ v0["Epix_Mage_Frost.lua"] = function(...)
 				end
 				break;
 			end
-			if (((2735 - (74 + 429)) <= (5007 - 2411)) and (v140 == (1 + 0))) then
-				if (((4795 - 2700) < (2608 + 1078)) and v99.GlacialSpike:IsReady() and v45 and (v108 == (15 - 10)) and ((v99.Flurry:Charges() >= (2 - 1)) or ((v107 > (433 - (279 + 154))) and (v99.GlacialSpike:CastTime() < v15:DebuffRemains(v99.WintersChillDebuff))))) then
-					if (v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes)) or ((2373 - (454 + 324)) >= (3520 + 954))) then
-						return "glacial_spike single 10";
+			if (((1624 - 911) <= (2034 - (1151 + 36))) and (v143 == (0 + 0))) then
+				if (((567 + 1587) <= (12038 - 8007)) and v99.CometStorm:IsCastable() and (v14:PrevGCDP(1833 - (1552 + 280), v99.Flurry) or v14:PrevGCDP(835 - (64 + 770), v99.ConeofCold)) and ((v59 and v34) or not v59) and v54 and (v83 < v111)) then
+					if (((3134 + 1481) == (10476 - 5861)) and v24(v99.CometStorm, not v15:IsSpellInRange(v99.CometStorm))) then
+						return "comet_storm cleave 2";
 					end
 				end
-				if ((v99.FrozenOrb:IsCastable() and v53 and ((v58 and v34) or not v58) and (v83 < v111) and (v107 == (17 - (12 + 5))) and (v14:BuffStackP(v99.FingersofFrostBuff) < (2 + 0)) and (not v99.RayofFrost:IsAvailable() or v99.RayofFrost:CooldownDown())) or ((11769 - 7150) < (1065 + 1817))) then
-					if (v24(v101.FrozenOrbCast, not v15:IsInRange(1133 - (277 + 816))) or ((1256 - 962) >= (6014 - (1058 + 125)))) then
-						return "frozen_orb single 12";
+				if ((v99.Flurry:IsCastable() and v43 and ((v14:PrevGCDP(1 + 0, v99.Frostbolt) and (v108 >= (1246 - (157 + 1086)))) or v14:PrevGCDP(1 - 0, v99.GlacialSpike) or ((v108 >= (13 - 10)) and (v108 < (7 - 2)) and (v99.Flurry:ChargesFractional() == (2 - 0))))) or ((4609 - (599 + 220)) == (995 - 495))) then
+					local v212 = 1931 - (1813 + 118);
+					while true do
+						if (((66 + 23) < (1438 - (841 + 376))) and ((0 - 0) == v212)) then
+							if (((478 + 1576) >= (3878 - 2457)) and v113.CastTargetIf(v99.Flurry, v105, "min", v117, nil, not v15:IsSpellInRange(v99.Flurry))) then
+								return "flurry cleave 4";
+							end
+							if (((1551 - (464 + 395)) < (7847 - 4789)) and v24(v99.Flurry, not v15:IsSpellInRange(v99.Flurry), v14:BuffDown(v99.IceFloes))) then
+								return "flurry cleave 4";
+							end
+							break;
+						end
 					end
 				end
-				if (((381 + 1648) <= (4059 - (815 + 160))) and v99.ConeofCold:IsCastable() and v55 and ((v60 and v34) or not v60) and (v83 < v111) and v99.ColdestSnap:IsAvailable() and (v99.CometStorm:CooldownRemains() > (42 - 32)) and (v99.FrozenOrb:CooldownRemains() > (23 - 13)) and (v107 == (0 + 0)) and (v103 >= (8 - 5))) then
-					if (v24(v99.ConeofCold, not v15:IsInRange(1906 - (41 + 1857))) or ((3930 - (1222 + 671)) == (6254 - 3834))) then
-						return "cone_of_cold single 14";
+				if ((v99.IceLance:IsReady() and v47 and v99.GlacialSpike:IsAvailable() and (v99.WintersChillDebuff:AuraActiveCount() == (0 + 0)) and (v108 == (841 - (467 + 370))) and v14:BuffUp(v99.FingersofFrostBuff)) or ((6724 - 3470) == (1215 + 440))) then
+					local v213 = 0 - 0;
+					while true do
+						if ((v213 == (0 + 0)) or ((3015 - 1719) == (5430 - (150 + 370)))) then
+							if (((4650 - (74 + 1208)) == (8283 - 4915)) and v113.CastTargetIf(v99.IceLance, v105, "max", v118, nil, not v15:IsSpellInRange(v99.IceLance))) then
+								return "ice_lance cleave 6";
+							end
+							if (((12534 - 9891) < (2715 + 1100)) and v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance))) then
+								return "ice_lance cleave 6";
+							end
+							break;
+						end
 					end
 				end
-				if (((6407 - 1949) > (5086 - (229 + 953))) and v99.Blizzard:IsCastable() and v38 and (v103 >= (1776 - (1111 + 663))) and v99.IceCaller:IsAvailable() and v99.FreezingRain:IsAvailable() and ((not v99.SplinteringCold:IsAvailable() and not v99.RayofFrost:IsAvailable()) or v14:BuffUp(v99.FreezingRainBuff) or (v103 >= (1582 - (874 + 705))))) then
-					if (((62 + 374) >= (84 + 39)) and v24(v101.BlizzardCursor, not v15:IsInRange(83 - 43), v14:BuffDown(v99.IceFloes))) then
-						return "blizzard single 16";
+				v143 = 391 - (14 + 376);
+			end
+			if (((3317 - 1404) > (320 + 173)) and (v143 == (2 + 0))) then
+				if (((4535 + 220) > (10044 - 6616)) and v99.ConeofCold:IsCastable() and v55 and ((v60 and v34) or not v60) and (v83 < v111) and v99.ColdestSnap:IsAvailable() and (v99.CometStorm:CooldownRemains() > (8 + 2)) and (v99.FrozenOrb:CooldownRemains() > (88 - (23 + 55))) and (v107 == (0 - 0)) and (v104 >= (3 + 0))) then
+					if (((1241 + 140) <= (3672 - 1303)) and v24(v99.ConeofCold)) then
+						return "cone_of_cold cleave 14";
 					end
 				end
-				v140 = 1 + 1;
+				if ((v99.Blizzard:IsCastable() and v38 and (v104 >= (1 + 1)) and v99.IceCaller:IsAvailable() and v99.FreezingRain:IsAvailable() and ((not v99.SplinteringCold:IsAvailable() and not v99.RayofFrost:IsAvailable()) or v14:BuffUp(v99.FreezingRainBuff) or (v104 >= (904 - (652 + 249))))) or ((12960 - 8117) == (5952 - (708 + 1160)))) then
+					if (((12673 - 8004) > (661 - 298)) and v24(v101.BlizzardCursor, not v15:IsSpellInRange(v99.Blizzard), v14:BuffDown(v99.IceFloes))) then
+						return "blizzard cleave 16";
+					end
+				end
+				if ((v99.ShiftingPower:IsCastable() and v56 and ((v61 and v34) or not v61) and (v83 < v111) and (((v99.FrozenOrb:CooldownRemains() > (37 - (10 + 17))) and (not v99.CometStorm:IsAvailable() or (v99.CometStorm:CooldownRemains() > (3 + 7))) and (not v99.RayofFrost:IsAvailable() or (v99.RayofFrost:CooldownRemains() > (1742 - (1400 + 332))))) or (v99.IcyVeins:CooldownRemains() < (38 - 18)))) or ((3785 - (242 + 1666)) >= (1343 + 1795))) then
+					if (((1738 + 3004) >= (3091 + 535)) and v24(v99.ShiftingPower, not v15:IsSpellInRange(v99.ShiftingPower), true)) then
+						return "shifting_power cleave 18";
+					end
+				end
+				v143 = 943 - (850 + 90);
+			end
+			if ((v143 == (4 - 1)) or ((5930 - (360 + 1030)) == (811 + 105))) then
+				if ((v99.GlacialSpike:IsReady() and v45 and (v108 == (13 - 8))) or ((1589 - 433) > (6006 - (909 + 752)))) then
+					if (((3460 - (109 + 1114)) < (7778 - 3529)) and v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes))) then
+						return "glacial_spike cleave 20";
+					end
+				end
+				if ((v99.IceLance:IsReady() and v47 and ((v14:BuffStackP(v99.FingersofFrostBuff) and not v14:PrevGCDP(1 + 0, v99.GlacialSpike)) or (v107 > (242 - (6 + 236))))) or ((1691 + 992) < (19 + 4))) then
+					local v214 = 0 - 0;
+					while true do
+						if (((1217 - 520) <= (1959 - (1076 + 57))) and (v214 == (0 + 0))) then
+							if (((1794 - (579 + 110)) <= (93 + 1083)) and v113.CastTargetIf(v99.IceLance, v105, "max", v117, nil, not v15:IsSpellInRange(v99.IceLance))) then
+								return "ice_lance cleave 22";
+							end
+							if (((2988 + 391) <= (2024 + 1788)) and v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance))) then
+								return "ice_lance cleave 22";
+							end
+							break;
+						end
+					end
+				end
+				if ((v99.IceNova:IsCastable() and v48 and (v104 >= (411 - (174 + 233)))) or ((2201 - 1413) >= (2836 - 1220))) then
+					if (((825 + 1029) <= (4553 - (663 + 511))) and v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova))) then
+						return "ice_nova cleave 24";
+					end
+				end
+				v143 = 4 + 0;
+			end
+			if (((988 + 3561) == (14024 - 9475)) and (v143 == (1 + 0))) then
+				if ((v99.RayofFrost:IsCastable() and (v107 == (2 - 1)) and v49) or ((7315 - 4293) >= (1443 + 1581))) then
+					if (((9381 - 4561) > (1567 + 631)) and v113.CastTargetIf(v99.RayofFrost, v105, "max", v117, nil, not v15:IsSpellInRange(v99.RayofFrost))) then
+						return "ray_of_frost cleave 8";
+					end
+					if (v24(v99.RayofFrost, not v15:IsSpellInRange(v99.RayofFrost)) or ((97 + 964) >= (5613 - (478 + 244)))) then
+						return "ray_of_frost cleave 8";
+					end
+				end
+				if (((1881 - (440 + 77)) <= (2034 + 2439)) and v99.GlacialSpike:IsReady() and v45 and (v108 == (18 - 13)) and (v99.Flurry:CooldownUp() or (v107 > (1556 - (655 + 901))))) then
+					if (v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes)) or ((667 + 2928) <= (3 + 0))) then
+						return "glacial_spike cleave 10";
+					end
+				end
+				if ((v99.FrozenOrb:IsCastable() and ((v58 and v34) or not v58) and v53 and (v83 < v111) and (v14:BuffStackP(v99.FingersofFrostBuff) < (2 + 0)) and (not v99.RayofFrost:IsAvailable() or v99.RayofFrost:CooldownDown())) or ((18821 - 14149) == (5297 - (695 + 750)))) then
+					if (((5323 - 3764) == (2405 - 846)) and v24(v101.FrozenOrbCast, not v15:IsSpellInRange(v99.FrozenOrb))) then
+						return "frozen_orb cleave 12";
+					end
+				end
+				v143 = 7 - 5;
+			end
+		end
+	end
+	local function v128()
+		if ((v99.CometStorm:IsCastable() and v54 and ((v59 and v34) or not v59) and (v83 < v111) and (v14:PrevGCDP(352 - (285 + 66), v99.Flurry) or v14:PrevGCDP(2 - 1, v99.ConeofCold))) or ((3062 - (682 + 628)) <= (128 + 660))) then
+			if (v24(v99.CometStorm, not v15:IsSpellInRange(v99.CometStorm)) or ((4206 - (176 + 123)) == (75 + 102))) then
+				return "comet_storm single 2";
+			end
+		end
+		if (((2518 + 952) > (824 - (239 + 30))) and v99.Flurry:IsCastable() and (v107 == (0 + 0)) and v15:DebuffDown(v99.WintersChillDebuff) and ((v14:PrevGCDP(1 + 0, v99.Frostbolt) and (v108 >= (4 - 1))) or (v14:PrevGCDP(2 - 1, v99.Frostbolt) and v14:BuffUp(v99.BrainFreezeBuff)) or v14:PrevGCDP(316 - (306 + 9), v99.GlacialSpike) or (v99.GlacialSpike:IsAvailable() and (v108 == (13 - 9)) and v14:BuffDown(v99.FingersofFrostBuff)))) then
+			if (v24(v99.Flurry, not v15:IsSpellInRange(v99.Flurry), v14:BuffDown(v99.IceFloes)) or ((170 + 802) == (396 + 249))) then
+				return "flurry single 4";
+			end
+		end
+		if (((1532 + 1650) >= (6048 - 3933)) and v99.IceLance:IsReady() and v47 and v99.GlacialSpike:IsAvailable() and not v99.GlacialSpike:InFlight() and (v107 == (1375 - (1140 + 235))) and (v108 == (3 + 1)) and v14:BuffUp(v99.FingersofFrostBuff)) then
+			if (((3570 + 323) < (1137 + 3292)) and v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance))) then
+				return "ice_lance single 6";
+			end
+		end
+		if ((v99.RayofFrost:IsCastable() and v49 and (v15:DebuffRemains(v99.WintersChillDebuff) > v99.RayofFrost:CastTime()) and (v107 == (53 - (33 + 19)))) or ((1036 + 1831) < (5709 - 3804))) then
+			if (v24(v99.RayofFrost, not v15:IsSpellInRange(v99.RayofFrost)) or ((792 + 1004) >= (7944 - 3893))) then
+				return "ray_of_frost single 8";
+			end
+		end
+		if (((1519 + 100) <= (4445 - (586 + 103))) and v99.GlacialSpike:IsReady() and v45 and (v108 == (1 + 4)) and ((v99.Flurry:Charges() >= (2 - 1)) or ((v107 > (1488 - (1309 + 179))) and (v99.GlacialSpike:CastTime() < v15:DebuffRemains(v99.WintersChillDebuff))))) then
+			if (((1089 - 485) == (263 + 341)) and v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes))) then
+				return "glacial_spike single 10";
+			end
+		end
+		if ((v99.FrozenOrb:IsCastable() and v53 and ((v58 and v34) or not v58) and (v83 < v111) and (v107 == (0 - 0)) and (v14:BuffStackP(v99.FingersofFrostBuff) < (2 + 0)) and (not v99.RayofFrost:IsAvailable() or v99.RayofFrost:CooldownDown())) or ((9526 - 5042) == (1793 - 893))) then
+			if (v24(v101.FrozenOrbCast, not v15:IsInRange(649 - (295 + 314))) or ((10951 - 6492) <= (3075 - (1300 + 662)))) then
+				return "frozen_orb single 12";
+			end
+		end
+		if (((11404 - 7772) > (5153 - (1178 + 577))) and v99.ConeofCold:IsCastable() and v55 and ((v60 and v34) or not v60) and (v83 < v111) and v99.ColdestSnap:IsAvailable() and (v99.CometStorm:CooldownRemains() > (6 + 4)) and (v99.FrozenOrb:CooldownRemains() > (29 - 19)) and (v107 == (1405 - (851 + 554))) and (v103 >= (3 + 0))) then
+			if (((11320 - 7238) <= (10678 - 5761)) and v24(v99.ConeofCold, not v15:IsInRange(310 - (115 + 187)))) then
+				return "cone_of_cold single 14";
+			end
+		end
+		if (((3701 + 1131) >= (1313 + 73)) and v99.Blizzard:IsCastable() and v38 and (v103 >= (7 - 5)) and v99.IceCaller:IsAvailable() and v99.FreezingRain:IsAvailable() and ((not v99.SplinteringCold:IsAvailable() and not v99.RayofFrost:IsAvailable()) or v14:BuffUp(v99.FreezingRainBuff) or (v103 >= (1164 - (160 + 1001))))) then
+			if (((120 + 17) == (95 + 42)) and v24(v101.BlizzardCursor, not v15:IsInRange(81 - 41), v14:BuffDown(v99.IceFloes))) then
+				return "blizzard single 16";
+			end
+		end
+		if ((v99.ShiftingPower:IsCastable() and v56 and ((v61 and v34) or not v61) and (v83 < v111) and (v107 == (358 - (237 + 121))) and (((v99.FrozenOrb:CooldownRemains() > (907 - (525 + 372))) and (not v99.CometStorm:IsAvailable() or (v99.CometStorm:CooldownRemains() > (18 - 8))) and (not v99.RayofFrost:IsAvailable() or (v99.RayofFrost:CooldownRemains() > (32 - 22)))) or (v99.IcyVeins:CooldownRemains() < (162 - (96 + 46))))) or ((2347 - (643 + 134)) >= (1564 + 2768))) then
+			if (v24(v99.ShiftingPower, not v15:IsInRange(95 - 55)) or ((15088 - 11024) <= (1745 + 74))) then
+				return "shifting_power single 18";
+			end
+		end
+		if ((v99.GlacialSpike:IsReady() and v45 and (v108 == (9 - 4))) or ((10191 - 5205) < (2293 - (316 + 403)))) then
+			if (((2942 + 1484) > (472 - 300)) and v24(v99.GlacialSpike, not v15:IsSpellInRange(v99.GlacialSpike), v14:BuffDown(v99.IceFloes))) then
+				return "glacial_spike single 20";
+			end
+		end
+		if (((212 + 374) > (1145 - 690)) and v99.IceLance:IsReady() and v47 and ((v14:BuffUp(v99.FingersofFrostBuff) and not v14:PrevGCDP(1 + 0, v99.GlacialSpike) and not v99.GlacialSpike:InFlight()) or v29(v107))) then
+			if (((267 + 559) == (2861 - 2035)) and v24(v99.IceLance, not v15:IsSpellInRange(v99.IceLance))) then
+				return "ice_lance single 22";
+			end
+		end
+		if ((v99.IceNova:IsCastable() and v48 and (v104 >= (19 - 15))) or ((8348 - 4329) > (255 + 4186))) then
+			if (((3970 - 1953) < (209 + 4052)) and v24(v99.IceNova, not v15:IsSpellInRange(v99.IceNova))) then
+				return "ice_nova single 24";
+			end
+		end
+		if (((13874 - 9158) > (97 - (12 + 5))) and v90 and ((v93 and v34) or not v93)) then
+			if (v99.BagofTricks:IsCastable() or ((13621 - 10114) == (6980 - 3708))) then
+				if (v24(v99.BagofTricks, not v15:IsSpellInRange(v99.BagofTricks)) or ((1861 - 985) >= (7625 - 4550))) then
+					return "bag_of_tricks cd 40";
+				end
+			end
+		end
+		if (((884 + 3468) > (4527 - (1656 + 317))) and v99.Frostbolt:IsCastable() and v41) then
+			if (v24(v99.Frostbolt, not v15:IsSpellInRange(v99.Frostbolt), v14:BuffDown(v99.IceFloes)) or ((3927 + 479) < (3240 + 803))) then
+				return "frostbolt single 26";
+			end
+		end
+		if ((v14:IsMoving() and v95) or ((5022 - 3133) >= (16649 - 13266))) then
+			local v151 = 354 - (5 + 349);
+			while true do
+				if (((8986 - 7094) <= (4005 - (266 + 1005))) and (v151 == (0 + 0))) then
+					v31 = v125();
+					if (((6561 - 4638) < (2919 - 701)) and v31) then
+						return v31;
+					end
+					break;
+				end
 			end
 		end
 	end
 	local function v129()
-		v36 = EpicSettings.Settings['useArcaneExplosion'];
-		v37 = EpicSettings.Settings['useArcaneIntellect'];
-		v38 = EpicSettings.Settings['useBlizzard'];
-		v39 = EpicSettings.Settings['useDragonsBreath'];
-		v40 = EpicSettings.Settings['useFireBlast'];
-		v41 = EpicSettings.Settings['useFrostbolt'];
-		v42 = EpicSettings.Settings['useFrostNova'];
-		v43 = EpicSettings.Settings['useFlurry'];
-		v44 = EpicSettings.Settings['useFreezePet'];
-		v45 = EpicSettings.Settings['useGlacialSpike'];
-		v46 = EpicSettings.Settings['useIceFloes'];
-		v47 = EpicSettings.Settings['useIceLance'];
-		v48 = EpicSettings.Settings['useIceNova'];
-		v49 = EpicSettings.Settings['useRayOfFrost'];
-		v50 = EpicSettings.Settings['useCounterspell'];
-		v51 = EpicSettings.Settings['useBlastWave'];
-		v52 = EpicSettings.Settings['useIcyVeins'];
-		v53 = EpicSettings.Settings['useFrozenOrb'];
-		v54 = EpicSettings.Settings['useCometStorm'];
-		v55 = EpicSettings.Settings['useConeOfCold'];
-		v56 = EpicSettings.Settings['useShiftingPower'];
-		v57 = EpicSettings.Settings['icyVeinsWithCD'];
-		v58 = EpicSettings.Settings['frozenOrbWithCD'];
-		v59 = EpicSettings.Settings['cometStormWithCD'];
-		v60 = EpicSettings.Settings['coneOfColdWithCD'];
-		v61 = EpicSettings.Settings['shiftingPowerWithCD'];
-		v62 = EpicSettings.Settings['useAlterTime'];
-		v63 = EpicSettings.Settings['useIceBarrier'];
-		v64 = EpicSettings.Settings['useGreaterInvisibility'];
-		v65 = EpicSettings.Settings['useIceBlock'];
-		v66 = EpicSettings.Settings['useIceCold'];
-		v67 = EpicSettings.Settings['useMassBarrier'];
-		v68 = EpicSettings.Settings['useMirrorImage'];
-		v69 = EpicSettings.Settings['alterTimeHP'] or (679 - (642 + 37));
-		v70 = EpicSettings.Settings['iceBarrierHP'] or (0 + 0);
-		v73 = EpicSettings.Settings['iceColdHP'] or (0 + 0);
-		v71 = EpicSettings.Settings['greaterInvisibilityHP'] or (0 - 0);
-		v72 = EpicSettings.Settings['iceBlockHP'] or (454 - (233 + 221));
-		v74 = EpicSettings.Settings['mirrorImageHP'] or (0 - 0);
-		v75 = EpicSettings.Settings['massBarrierHP'] or (0 + 0);
-		v94 = EpicSettings.Settings['useSpellStealTarget'];
-		v95 = EpicSettings.Settings['useSpellsWhileMoving'];
-		v96 = EpicSettings.Settings['useTimeWarpWithTalent'];
-		v97 = EpicSettings.Settings['mirrorImageBeforePull'];
-		v98 = EpicSettings.Settings['useRemoveCurseWithAfflicted'];
+		local v144 = 1696 - (561 + 1135);
+		while true do
+			if (((2830 - 657) > (1245 - 866)) and (v144 == (1067 - (507 + 559)))) then
+				v42 = EpicSettings.Settings['useFrostNova'];
+				v43 = EpicSettings.Settings['useFlurry'];
+				v44 = EpicSettings.Settings['useFreezePet'];
+				v45 = EpicSettings.Settings['useGlacialSpike'];
+				v46 = EpicSettings.Settings['useIceFloes'];
+				v47 = EpicSettings.Settings['useIceLance'];
+				v144 = 4 - 2;
+			end
+			if ((v144 == (9 - 6)) or ((2979 - (212 + 176)) == (4314 - (250 + 655)))) then
+				v54 = EpicSettings.Settings['useCometStorm'];
+				v55 = EpicSettings.Settings['useConeOfCold'];
+				v56 = EpicSettings.Settings['useShiftingPower'];
+				v57 = EpicSettings.Settings['icyVeinsWithCD'];
+				v58 = EpicSettings.Settings['frozenOrbWithCD'];
+				v59 = EpicSettings.Settings['cometStormWithCD'];
+				v144 = 10 - 6;
+			end
+			if (((7887 - 3373) > (5199 - 1875)) and (v144 == (1956 - (1869 + 87)))) then
+				v36 = EpicSettings.Settings['useArcaneExplosion'];
+				v37 = EpicSettings.Settings['useArcaneIntellect'];
+				v38 = EpicSettings.Settings['useBlizzard'];
+				v39 = EpicSettings.Settings['useDragonsBreath'];
+				v40 = EpicSettings.Settings['useFireBlast'];
+				v41 = EpicSettings.Settings['useFrostbolt'];
+				v144 = 3 - 2;
+			end
+			if (((1908 - (484 + 1417)) == v144) or ((445 - 237) >= (8090 - 3262))) then
+				v96 = EpicSettings.Settings['useTimeWarpWithTalent'];
+				v97 = EpicSettings.Settings['mirrorImageBeforePull'];
+				v98 = EpicSettings.Settings['useRemoveCurseWithAfflicted'];
+				break;
+			end
+			if ((v144 == (778 - (48 + 725))) or ((2585 - 1002) > (9569 - 6002))) then
+				v66 = EpicSettings.Settings['useIceCold'];
+				v67 = EpicSettings.Settings['useMassBarrier'];
+				v68 = EpicSettings.Settings['useMirrorImage'];
+				v69 = EpicSettings.Settings['alterTimeHP'] or (0 + 0);
+				v70 = EpicSettings.Settings['iceBarrierHP'] or (0 - 0);
+				v73 = EpicSettings.Settings['iceColdHP'] or (0 + 0);
+				v144 = 2 + 4;
+			end
+			if ((v144 == (859 - (152 + 701))) or ((2624 - (430 + 881)) == (305 + 489))) then
+				v71 = EpicSettings.Settings['greaterInvisibilityHP'] or (895 - (557 + 338));
+				v72 = EpicSettings.Settings['iceBlockHP'] or (0 + 0);
+				v74 = EpicSettings.Settings['mirrorImageHP'] or (0 - 0);
+				v75 = EpicSettings.Settings['massBarrierHP'] or (0 - 0);
+				v94 = EpicSettings.Settings['useSpellStealTarget'];
+				v95 = EpicSettings.Settings['useSpellsWhileMoving'];
+				v144 = 18 - 11;
+			end
+			if (((6840 - 3666) > (3703 - (499 + 302))) and (v144 == (870 - (39 + 827)))) then
+				v60 = EpicSettings.Settings['coneOfColdWithCD'];
+				v61 = EpicSettings.Settings['shiftingPowerWithCD'];
+				v62 = EpicSettings.Settings['useAlterTime'];
+				v63 = EpicSettings.Settings['useIceBarrier'];
+				v64 = EpicSettings.Settings['useGreaterInvisibility'];
+				v65 = EpicSettings.Settings['useIceBlock'];
+				v144 = 13 - 8;
+			end
+			if (((9201 - 5081) <= (16920 - 12660)) and ((2 - 0) == v144)) then
+				v48 = EpicSettings.Settings['useIceNova'];
+				v49 = EpicSettings.Settings['useRayOfFrost'];
+				v50 = EpicSettings.Settings['useCounterspell'];
+				v51 = EpicSettings.Settings['useBlastWave'];
+				v52 = EpicSettings.Settings['useIcyVeins'];
+				v53 = EpicSettings.Settings['useFrozenOrb'];
+				v144 = 1 + 2;
+			end
+		end
 	end
 	local function v130()
-		local v179 = 1541 - (718 + 823);
+		local v145 = 0 - 0;
 		while true do
-			if (((315 + 185) < (2621 - (266 + 539))) and (v179 == (2 - 1))) then
+			if ((v145 == (1 + 0)) or ((1397 - 514) > (4882 - (103 + 1)))) then
 				v82 = EpicSettings.Settings['InterruptThreshold'];
 				v77 = EpicSettings.Settings['DispelDebuffs'];
 				v76 = EpicSettings.Settings['DispelBuffs'];
 				v91 = EpicSettings.Settings['useTrinkets'];
-				v179 = 1227 - (636 + 589);
+				v145 = 556 - (475 + 79);
 			end
-			if (((8483 - 4909) == (7371 - 3797)) and (v179 == (4 + 0))) then
+			if (((8 - 4) == v145) or ((11584 - 7964) >= (633 + 4258))) then
 				v78 = EpicSettings.Settings['handleAfflicted'];
 				v79 = EpicSettings.Settings['HandleIncorporeal'];
 				break;
 			end
-			if (((81 + 140) < (1405 - (657 + 358))) and ((4 - 2) == v179)) then
+			if (((3748 + 510) > (2440 - (1395 + 108))) and (v145 == (0 - 0))) then
+				v83 = EpicSettings.Settings['fightRemainsCheck'] or (1204 - (7 + 1197));
+				v84 = EpicSettings.Settings['useWeapon'];
+				v80 = EpicSettings.Settings['InterruptWithStun'];
+				v81 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v145 = 1 + 0;
+			end
+			if ((v145 == (1 + 1)) or ((5188 - (27 + 292)) < (2654 - 1748))) then
 				v90 = EpicSettings.Settings['useRacials'];
 				v92 = EpicSettings.Settings['trinketsWithCD'];
 				v93 = EpicSettings.Settings['racialsWithCD'];
 				v86 = EpicSettings.Settings['useHealthstone'];
-				v179 = 6 - 3;
+				v145 = 3 - 0;
 			end
-			if (((1187 - (1151 + 36)) == v179) or ((2138 + 75) <= (374 + 1047))) then
-				v83 = EpicSettings.Settings['fightRemainsCheck'] or (0 - 0);
-				v84 = EpicSettings.Settings['useWeapon'];
-				v80 = EpicSettings.Settings['InterruptWithStun'];
-				v81 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-				v179 = 1833 - (1552 + 280);
-			end
-			if (((3892 - (64 + 770)) < (3300 + 1560)) and (v179 == (6 - 3))) then
+			if ((v145 == (12 - 9)) or ((2415 - 1190) > (8051 - 3823))) then
 				v85 = EpicSettings.Settings['useHealingPotion'];
-				v88 = EpicSettings.Settings['healthstoneHP'] or (0 + 0);
-				v87 = EpicSettings.Settings['healingPotionHP'] or (1243 - (157 + 1086));
+				v88 = EpicSettings.Settings['healthstoneHP'] or (139 - (43 + 96));
+				v87 = EpicSettings.Settings['healingPotionHP'] or (0 - 0);
 				v89 = EpicSettings.Settings['HealingPotionName'] or "";
-				v179 = 7 - 3;
+				v145 = 8 - 4;
 			end
 		end
 	end
 	local function v131()
-		local v180 = 0 - 0;
+		local v146 = 0 + 0;
 		while true do
-			if (((2 - 0) == v180) or ((1768 - 472) >= (5265 - (599 + 220)))) then
-				if (v14:IsDeadOrGhost() or ((2773 - 1380) > (6420 - (1813 + 118)))) then
-					return v31;
-				end
-				v105 = v15:GetEnemiesInSplashRange(4 + 1);
-				v106 = v14:GetEnemiesInRange(1257 - (841 + 376));
-				v180 = 3 - 0;
-			end
-			if (((1 + 0) == v180) or ((12075 - 7651) < (886 - (464 + 395)))) then
+			if (((940 + 2388) > (4423 - 2185)) and (v146 == (1 + 0))) then
 				v33 = EpicSettings.Toggles['aoe'];
 				v34 = EpicSettings.Toggles['cds'];
 				v35 = EpicSettings.Toggles['dispel'];
-				v180 = 5 - 3;
+				v146 = 3 - 1;
 			end
-			if ((v180 == (2 + 1)) or ((2834 - (467 + 370)) > (7883 - 4068))) then
-				if (((2544 + 921) > (6557 - 4644)) and v33) then
-					local v207 = 0 + 0;
-					while true do
-						if (((1705 - 972) < (2339 - (150 + 370))) and (v207 == (1282 - (74 + 1208)))) then
-							v103 = v30(v15:GetEnemiesInSplashRangeCount(12 - 7), #v106);
-							v104 = v30(v15:GetEnemiesInSplashRangeCount(23 - 18), #v106);
-							break;
-						end
-					end
-				else
-					local v208 = 0 + 0;
-					while true do
-						if (((390 - (14 + 376)) == v208) or ((7623 - 3228) == (3077 + 1678))) then
-							v103 = 1 + 0;
-							v104 = 1 + 0;
-							break;
-						end
-					end
-				end
-				if (not v14:AffectingCombat() or ((11113 - 7320) < (1783 + 586))) then
-					if ((v99.ArcaneIntellect:IsCastable() and v37 and (v14:BuffDown(v99.ArcaneIntellect, true) or v113.GroupBuffMissing(v99.ArcaneIntellect))) or ((4162 - (23 + 55)) == (628 - 363))) then
-						if (((2909 + 1449) == (3914 + 444)) and v24(v99.ArcaneIntellect)) then
-							return "arcane_intellect";
-						end
-					end
-				end
-				if (v113.TargetIsValid() or v14:AffectingCombat() or ((4864 - 1726) < (313 + 680))) then
-					local v209 = 901 - (652 + 249);
-					while true do
-						if (((8911 - 5581) > (4191 - (708 + 1160))) and (v209 == (2 - 1))) then
-							if ((v111 == (20257 - 9146)) or ((3653 - (10 + 17)) == (896 + 3093))) then
-								v111 = v10.FightRemains(v106, false);
-							end
-							v107 = v15:DebuffStack(v99.WintersChillDebuff);
-							v209 = 1734 - (1400 + 332);
-						end
-						if ((v209 == (3 - 1)) or ((2824 - (242 + 1666)) == (1143 + 1528))) then
-							v108 = v14:BuffStackP(v99.IciclesBuff);
-							v112 = v14:GCD();
-							break;
-						end
-						if (((100 + 172) == (232 + 40)) and (v209 == (940 - (850 + 90)))) then
-							v110 = v10.BossFightRemains(nil, true);
-							v111 = v110;
-							v209 = 1 - 0;
-						end
-					end
-				end
-				v180 = 1394 - (360 + 1030);
+			if (((1209 + 2630) > (104 + 1301)) and (v146 == (1751 - (1414 + 337)))) then
+				v129();
+				v130();
+				v32 = EpicSettings.Toggles['ooc'];
+				v146 = 1941 - (1642 + 298);
 			end
-			if (((3761 + 488) <= (13657 - 8818)) and (v180 == (5 - 1))) then
-				if (((4438 - (909 + 752)) < (4423 - (109 + 1114))) and v113.TargetIsValid()) then
-					local v210 = 0 - 0;
+			if (((10 - 6) == v146) or ((3719 - 2426) <= (1504 - 997))) then
+				if (v113.TargetIsValid() or ((954 + 1942) < (627 + 178))) then
+					local v215 = 972 - (357 + 615);
 					while true do
-						if (((37 + 58) < (2199 - (6 + 236))) and ((2 + 0) == v210)) then
-							if (((665 + 161) < (4048 - 2331)) and (v14:AffectingCombat() or v77)) then
-								local v211 = 0 - 0;
-								local v212;
+						if (((1626 + 690) == (5682 - 3366)) and (v215 == (0 + 0))) then
+							if ((v77 and v35 and v99.RemoveCurse:IsAvailable()) or ((5507 - 2937) == (1227 + 306))) then
+								local v221 = 0 + 0;
 								while true do
-									if (((2559 - (1076 + 57)) >= (182 + 923)) and (v211 == (690 - (579 + 110)))) then
-										if (((218 + 2536) <= (2988 + 391)) and v31) then
-											return v31;
-										end
-										break;
-									end
-									if ((v211 == (0 + 0)) or ((4334 - (174 + 233)) == (3946 - 2533))) then
-										v212 = v77 and v99.RemoveCurse:IsReady() and v35;
-										v31 = v113.FocusUnit(v212, nil, 35 - 15, nil, 9 + 11, v99.ArcaneIntellect);
-										v211 = 1175 - (663 + 511);
-									end
-								end
-							end
-							if (v78 or ((1030 + 124) <= (172 + 616))) then
-								if (v98 or ((5065 - 3422) > (2047 + 1332))) then
-									v31 = v113.HandleAfflicted(v99.RemoveCurse, v101.RemoveCurseMouseover, 70 - 40);
-									if (v31 or ((6785 - 3982) > (2171 + 2378))) then
-										return v31;
-									end
-								end
-							end
-							v210 = 5 - 2;
-						end
-						if ((v210 == (3 + 1)) or ((21 + 199) >= (3744 - (478 + 244)))) then
-							if (((3339 - (440 + 77)) == (1284 + 1538)) and v14:AffectingCombat() and v113.TargetIsValid() and not v14:IsChanneling() and not v14:IsCasting()) then
-								local v213 = 0 - 0;
-								while true do
-									if ((v213 == (1558 - (655 + 901))) or ((197 + 864) == (1422 + 435))) then
-										v31 = v128();
-										if (((1864 + 896) > (5494 - 4130)) and v31) then
-											return v31;
-										end
-										v213 = 1448 - (695 + 750);
-									end
-									if ((v213 == (9 - 6)) or ((7564 - 2662) <= (14458 - 10863))) then
-										if (v24(v99.Pool) or ((4203 - (285 + 66)) == (682 - 389))) then
-											return "pool for ST()";
-										end
-										if ((v14:IsMoving() and v95) or ((2869 - (682 + 628)) == (740 + 3848))) then
-											local v215 = 299 - (176 + 123);
+									if ((v221 == (0 + 0)) or ((2184 - (384 + 917)) == (2157 - (128 + 569)))) then
+										if (v16 or ((6162 - (1407 + 136)) <= (2886 - (687 + 1200)))) then
+											local v230 = 1710 - (556 + 1154);
 											while true do
-												if ((v215 == (0 + 0)) or ((3253 + 1231) == (1057 - (239 + 30)))) then
-													v31 = v125();
-													if (((1242 + 3326) >= (3756 + 151)) and v31) then
-														return v31;
-													end
-													break;
-												end
-											end
-										end
-										break;
-									end
-									if (((2204 - 958) < (10826 - 7356)) and (v213 == (315 - (306 + 9)))) then
-										if (((14195 - 10127) >= (170 + 802)) and v34 and v84 and (v100.Dreambinder:IsEquippedAndReady() or v100.Iridal:IsEquippedAndReady())) then
-											if (((303 + 190) < (1874 + 2019)) and v24(v101.UseWeapon, nil)) then
-												return "Using Weapon Macro";
-											end
-										end
-										if (v34 or ((4212 - 2739) >= (4707 - (1140 + 235)))) then
-											local v216 = 0 + 0;
-											while true do
-												if ((v216 == (0 + 0)) or ((1040 + 3011) <= (1209 - (33 + 19)))) then
-													v31 = v124();
-													if (((219 + 385) < (8635 - 5754)) and v31) then
-														return v31;
-													end
-													break;
-												end
-											end
-										end
-										v213 = 1 + 0;
-									end
-									if ((v213 == (1 - 0)) or ((844 + 56) == (4066 - (586 + 103)))) then
-										if (((406 + 4053) > (1819 - 1228)) and v33 and (((v104 >= (1495 - (1309 + 179))) and not v14:HasTier(54 - 24, 1 + 1)) or ((v104 >= (7 - 4)) and v99.IceCaller:IsAvailable()))) then
-											v31 = v126();
-											if (((2567 + 831) >= (5088 - 2693)) and v31) then
-												return v31;
-											end
-											if (v24(v99.Pool) or ((4349 - 2166) >= (3433 - (295 + 314)))) then
-												return "pool for Aoe()";
-											end
-										end
-										if (((4755 - 2819) == (3898 - (1300 + 662))) and v33 and (v104 == (6 - 4))) then
-											v31 = v127();
-											if (v31 or ((6587 - (1178 + 577)) < (2240 + 2073))) then
-												return v31;
-											end
-											if (((12084 - 7996) > (5279 - (851 + 554))) and v24(v99.Pool)) then
-												return "pool for Cleave()";
-											end
-										end
-										v213 = 2 + 0;
-									end
-								end
-							end
-							break;
-						end
-						if (((12013 - 7681) == (9408 - 5076)) and (v210 == (302 - (115 + 187)))) then
-							if (((3063 + 936) >= (2746 + 154)) and v77 and v35 and v99.RemoveCurse:IsAvailable()) then
-								local v214 = 0 - 0;
-								while true do
-									if ((v214 == (1161 - (160 + 1001))) or ((2209 + 316) > (2805 + 1259))) then
-										if (((8947 - 4576) == (4729 - (237 + 121))) and v16) then
-											local v217 = 897 - (525 + 372);
-											while true do
-												if ((v217 == (0 - 0)) or ((873 - 607) > (5128 - (96 + 46)))) then
+												if ((v230 == (0 - 0)) or ((3505 - (9 + 86)) > (4537 - (275 + 146)))) then
 													v31 = v121();
-													if (((2768 - (643 + 134)) >= (334 + 591)) and v31) then
+													if (v31 or ((147 + 756) >= (3123 - (29 + 35)))) then
 														return v31;
 													end
 													break;
 												end
 											end
 										end
-										if (((1090 - 635) < (7622 - 5569)) and v17 and v17:Exists() and not v14:CanAttack(v17) and v113.UnitHasCurseDebuff(v17)) then
-											if (v99.RemoveCurse:IsReady() or ((793 + 33) == (9520 - 4669))) then
-												if (((373 - 190) == (902 - (316 + 403))) and v24(v101.RemoveCurseMouseover)) then
+										if ((v17 and v17:Exists() and not v14:CanAttack(v17) and v113.UnitHasCurseDebuff(v17)) or ((17621 - 13645) < (8533 - 5676))) then
+											if (((21763 - 16833) > (1503 + 804)) and v99.RemoveCurse:IsReady()) then
+												if (v24(v101.RemoveCurseMouseover) or ((5058 - (53 + 959)) < (1699 - (312 + 96)))) then
 													return "remove_curse dispel";
 												end
 											end
@@ -971,44 +921,214 @@ v0["Epix_Mage_Frost.lua"] = function(...)
 									end
 								end
 							end
-							if (((771 + 388) <= (4915 - 3127)) and not v14:AffectingCombat() and v32) then
-								v31 = v123();
-								if (v31 or ((1268 + 2239) > (10874 - 6556))) then
-									return v31;
+							if ((not v14:AffectingCombat() and v32) or ((7360 - 3119) == (3830 - (147 + 138)))) then
+								local v222 = 899 - (813 + 86);
+								while true do
+									if ((v222 == (0 + 0)) or ((7499 - 3451) > (4724 - (18 + 474)))) then
+										v31 = v123();
+										if (v31 or ((591 + 1159) >= (11335 - 7862))) then
+											return v31;
+										end
+										break;
+									end
 								end
 							end
-							v210 = 1 + 0;
+							v215 = 1087 - (860 + 226);
 						end
-						if ((v210 == (1 + 0)) or ((10654 - 7579) <= (14160 - 11195))) then
+						if (((3469 - (121 + 182)) == (390 + 2776)) and (v215 == (1241 - (988 + 252)))) then
 							v31 = v119();
-							if (((2835 - 1470) <= (116 + 1895)) and v31) then
+							if (((200 + 1563) < (1167 + 2557)) and v31) then
 								return v31;
 							end
-							v210 = 3 - 1;
+							v215 = 1972 - (49 + 1921);
 						end
-						if (((1 + 2) == v210) or ((8167 - 5391) > (3592 - (12 + 5)))) then
-							if (v79 or ((9919 - 7365) == (10249 - 5445))) then
-								v31 = v113.HandleIncorporeal(v99.Polymorph, v101.PolymorphMouseover, 63 - 33);
-								if (((6390 - 3813) == (524 + 2053)) and v31) then
-									return v31;
+						if (((947 - (223 + 667)) <= (2775 - (51 + 1))) and (v215 == (5 - 2))) then
+							if (v79 or ((4432 - 2362) == (1568 - (146 + 979)))) then
+								local v223 = 0 + 0;
+								while true do
+									if (((605 - (311 + 294)) == v223) or ((7543 - 4838) == (591 + 802))) then
+										v31 = v113.HandleIncorporeal(v99.Polymorph, v101.PolymorphMouseover, 1473 - (496 + 947));
+										if (v31 or ((5959 - (1233 + 125)) < (25 + 36))) then
+											return v31;
+										end
+										break;
+									end
 								end
 							end
-							if ((v99.Spellsteal:IsAvailable() and v94 and v99.Spellsteal:IsReady() and v35 and v76 and not v14:IsCasting() and not v14:IsChanneling() and v113.UnitHasMagicBuff(v15)) or ((1979 - (1656 + 317)) >= (1684 + 205))) then
-								if (((406 + 100) <= (5030 - 3138)) and v24(v99.Spellsteal, not v15:IsSpellInRange(v99.Spellsteal))) then
+							if ((v99.Spellsteal:IsAvailable() and v94 and v99.Spellsteal:IsReady() and v35 and v76 and not v14:IsCasting() and not v14:IsChanneling() and v113.UnitHasMagicBuff(v15)) or ((1248 + 142) >= (902 + 3842))) then
+								if (v24(v99.Spellsteal, not v15:IsSpellInRange(v99.Spellsteal)) or ((3648 - (963 + 682)) > (3200 + 634))) then
 									return "spellsteal damage";
 								end
 							end
-							v210 = 19 - 15;
+							v215 = 1508 - (504 + 1000);
+						end
+						if ((v215 == (2 + 0)) or ((143 + 13) > (370 + 3543))) then
+							if (((287 - 92) == (167 + 28)) and (v14:AffectingCombat() or v77)) then
+								local v224 = 0 + 0;
+								local v225;
+								while true do
+									if (((3287 - (156 + 26)) >= (1035 + 761)) and (v224 == (1 - 0))) then
+										if (((4543 - (149 + 15)) >= (3091 - (890 + 70))) and v31) then
+											return v31;
+										end
+										break;
+									end
+									if (((3961 - (39 + 78)) >= (2525 - (14 + 468))) and (v224 == (0 - 0))) then
+										v225 = v77 and v99.RemoveCurse:IsReady() and v35;
+										v31 = v113.FocusUnit(v225, nil, 55 - 35, nil, 11 + 9, v99.ArcaneIntellect);
+										v224 = 1 + 0;
+									end
+								end
+							end
+							if (v78 or ((687 + 2545) <= (1234 + 1497))) then
+								if (((1286 + 3619) == (9389 - 4484)) and v98) then
+									local v226 = 0 + 0;
+									while true do
+										if ((v226 == (0 - 0)) or ((105 + 4031) >= (4462 - (12 + 39)))) then
+											v31 = v113.HandleAfflicted(v99.RemoveCurse, v101.RemoveCurseMouseover, 28 + 2);
+											if (v31 or ((9155 - 6197) == (14306 - 10289))) then
+												return v31;
+											end
+											break;
+										end
+									end
+								end
+							end
+							v215 = 1 + 2;
+						end
+						if (((647 + 581) >= (2061 - 1248)) and (v215 == (3 + 1))) then
+							if ((v14:AffectingCombat() and v113.TargetIsValid() and not v14:IsChanneling() and not v14:IsCasting()) or ((16697 - 13242) > (5760 - (1596 + 114)))) then
+								if (((633 - 390) == (956 - (164 + 549))) and v34 and v84 and (v100.Dreambinder:IsEquippedAndReady() or v100.Iridal:IsEquippedAndReady())) then
+									if (v24(v101.UseWeapon, nil) or ((1709 - (1059 + 379)) > (1951 - 379))) then
+										return "Using Weapon Macro";
+									end
+								end
+								if (((1420 + 1319) < (556 + 2737)) and v34) then
+									v31 = v124();
+									if (v31 or ((4334 - (145 + 247)) < (931 + 203))) then
+										return v31;
+									end
+								end
+								if ((v33 and (((v104 >= (4 + 3)) and not v14:HasTier(88 - 58, 1 + 1)) or ((v104 >= (3 + 0)) and v99.IceCaller:IsAvailable()))) or ((4371 - 1678) == (5693 - (254 + 466)))) then
+									local v227 = 560 - (544 + 16);
+									while true do
+										if (((6819 - 4673) == (2774 - (294 + 334))) and ((253 - (236 + 17)) == v227)) then
+											v31 = v126();
+											if (v31 or ((968 + 1276) == (2510 + 714))) then
+												return v31;
+											end
+											v227 = 3 - 2;
+										end
+										if ((v227 == (4 - 3)) or ((2525 + 2379) <= (1579 + 337))) then
+											if (((884 - (413 + 381)) <= (45 + 1020)) and v24(v99.Pool)) then
+												return "pool for Aoe()";
+											end
+											break;
+										end
+									end
+								end
+								if (((10212 - 5410) == (12473 - 7671)) and v33 and (v104 == (1972 - (582 + 1388)))) then
+									local v228 = 0 - 0;
+									while true do
+										if ((v228 == (1 + 0)) or ((2644 - (326 + 38)) <= (1511 - 1000))) then
+											if (v24(v99.Pool) or ((2392 - 716) <= (1083 - (47 + 573)))) then
+												return "pool for Cleave()";
+											end
+											break;
+										end
+										if (((1364 + 2505) == (16431 - 12562)) and (v228 == (0 - 0))) then
+											v31 = v127();
+											if (((2822 - (1269 + 395)) <= (3105 - (76 + 416))) and v31) then
+												return v31;
+											end
+											v228 = 444 - (319 + 124);
+										end
+									end
+								end
+								v31 = v128();
+								if (v31 or ((5403 - 3039) <= (3006 - (564 + 443)))) then
+									return v31;
+								end
+								if (v24(v99.Pool) or ((13625 - 8703) < (652 - (337 + 121)))) then
+									return "pool for ST()";
+								end
+								if ((v14:IsMoving() and v95) or ((6126 - 4035) < (103 - 72))) then
+									local v229 = 1911 - (1261 + 650);
+									while true do
+										if ((v229 == (0 + 0)) or ((3872 - 1442) >= (6689 - (772 + 1045)))) then
+											v31 = v125();
+											if (v31 or ((673 + 4097) < (1879 - (102 + 42)))) then
+												return v31;
+											end
+											break;
+										end
+									end
+								end
+							end
+							break;
 						end
 					end
 				end
 				break;
 			end
-			if ((v180 == (354 - (5 + 349))) or ((9537 - 7529) > (3489 - (266 + 1005)))) then
-				v129();
-				v130();
-				v32 = EpicSettings.Toggles['ooc'];
-				v180 = 1 + 0;
+			if ((v146 == (1846 - (1524 + 320))) or ((5709 - (1049 + 221)) <= (2506 - (18 + 138)))) then
+				if (v14:IsDeadOrGhost() or ((10963 - 6484) < (5568 - (67 + 1035)))) then
+					return v31;
+				end
+				v105 = v15:GetEnemiesInSplashRange(353 - (136 + 212));
+				v106 = v14:GetEnemiesInRange(169 - 129);
+				v146 = 3 + 0;
+			end
+			if (((2348 + 199) > (2829 - (240 + 1364))) and ((1085 - (1050 + 32)) == v146)) then
+				if (((16678 - 12007) > (1582 + 1092)) and v33) then
+					local v216 = 1055 - (331 + 724);
+					while true do
+						if ((v216 == (0 + 0)) or ((4340 - (269 + 375)) < (4052 - (267 + 458)))) then
+							v103 = v30(v15:GetEnemiesInSplashRangeCount(2 + 3), #v106);
+							v104 = v30(v15:GetEnemiesInSplashRangeCount(9 - 4), #v106);
+							break;
+						end
+					end
+				else
+					local v217 = 818 - (667 + 151);
+					while true do
+						if ((v217 == (1497 - (1410 + 87))) or ((6439 - (1504 + 393)) == (8028 - 5058))) then
+							v103 = 2 - 1;
+							v104 = 797 - (461 + 335);
+							break;
+						end
+					end
+				end
+				if (((33 + 219) <= (3738 - (1730 + 31))) and not v14:AffectingCombat()) then
+					if ((v99.ArcaneIntellect:IsCastable() and v37 and (v14:BuffDown(v99.ArcaneIntellect, true) or v113.GroupBuffMissing(v99.ArcaneIntellect))) or ((3103 - (728 + 939)) == (13369 - 9594))) then
+						if (v24(v99.ArcaneIntellect) or ((3281 - 1663) < (2130 - 1200))) then
+							return "arcane_intellect";
+						end
+					end
+				end
+				if (((5791 - (138 + 930)) > (3796 + 357)) and (v113.TargetIsValid() or v14:AffectingCombat())) then
+					local v218 = 0 + 0;
+					while true do
+						if ((v218 == (1 + 0)) or ((14920 - 11266) >= (6420 - (459 + 1307)))) then
+							if (((2821 - (474 + 1396)) <= (2612 - 1116)) and (v111 == (10414 + 697))) then
+								v111 = v10.FightRemains(v106, false);
+							end
+							v107 = v15:DebuffStack(v99.WintersChillDebuff);
+							v218 = 1 + 1;
+						end
+						if ((v218 == (5 - 3)) or ((220 + 1516) == (1906 - 1335))) then
+							v108 = v14:BuffStackP(v99.IciclesBuff);
+							v112 = v14:GCD();
+							break;
+						end
+						if ((v218 == (0 - 0)) or ((1487 - (562 + 29)) > (4066 + 703))) then
+							v110 = v10.BossFightRemains(nil, true);
+							v111 = v110;
+							v218 = 1420 - (374 + 1045);
+						end
+					end
+				end
+				v146 = 4 + 0;
 			end
 		end
 	end
@@ -1017,7 +1137,7 @@ v0["Epix_Mage_Frost.lua"] = function(...)
 		v99.WintersChillDebuff:RegisterAuraTracking();
 		v22.Print("Frost Mage rotation by Epic. Supported by xKaneto.");
 	end
-	v22.SetAPL(218 - 154, v131, v132);
+	v22.SetAPL(198 - 134, v131, v132);
 end;
 return v0["Epix_Mage_Frost.lua"]();
 
