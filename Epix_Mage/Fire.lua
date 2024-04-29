@@ -1,43 +1,51 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = v0[v4];
-	if (not v5 or ((573 + 62) > (12985 - 8298))) then
-		return v1(v4, ...);
+	local v5 = 0 + 0;
+	local v6;
+	while true do
+		if ((v5 == (2 - 1)) or ((2271 - (1466 + 218)) > (1880 + 2209))) then
+			return v6(...);
+		end
+		if ((v5 == (1148 - (556 + 592))) or ((1586 + 2872) < (1738 - (329 + 479)))) then
+			v6 = v0[v4];
+			if (((1516 - (174 + 680)) <= (3339 - 2367)) and not v6) then
+				return v1(v4, ...);
+			end
+			v5 = 1 - 0;
+		end
 	end
-	return v5(...);
 end
 v0["Epix_Mage_Fire.lua"] = function(...)
-	local v6, v7 = ...;
-	local v8 = EpicDBC.DBC;
-	local v9 = EpicLib;
-	local v10 = EpicCache;
-	local v11 = v9.Unit;
-	local v12 = v9.Utils;
-	local v13 = v11.Player;
-	local v14 = v11.Target;
-	local v15 = v11.Focus;
-	local v16 = v11.Pet;
-	local v17 = v11.Mouseover;
-	local v18 = v9.Spell;
-	local v19 = v9.MultiSpell;
-	local v20 = v9.Item;
-	local v21 = EpicLib;
-	local v22 = v21.Cast;
-	local v23 = v21.Press;
-	local v24 = v21.PressCursor;
-	local v25 = v21.Macro;
-	local v26 = v21.Bind;
-	local v27 = v21.Commons.Everyone.num;
-	local v28 = v21.Commons.Everyone.bool;
-	local v29 = math.max;
-	local v30 = math.ceil;
-	local v31;
-	local v32 = false;
+	local v7, v8 = ...;
+	local v9 = EpicDBC.DBC;
+	local v10 = EpicLib;
+	local v11 = EpicCache;
+	local v12 = v10.Unit;
+	local v13 = v10.Utils;
+	local v14 = v12.Player;
+	local v15 = v12.Target;
+	local v16 = v12.Focus;
+	local v17 = v12.Pet;
+	local v18 = v12.Mouseover;
+	local v19 = v10.Spell;
+	local v20 = v10.MultiSpell;
+	local v21 = v10.Item;
+	local v22 = EpicLib;
+	local v23 = v22.Cast;
+	local v24 = v22.Press;
+	local v25 = v22.PressCursor;
+	local v26 = v22.Macro;
+	local v27 = v22.Bind;
+	local v28 = v22.Commons.Everyone.num;
+	local v29 = v22.Commons.Everyone.bool;
+	local v30 = math.max;
+	local v31 = math.ceil;
+	local v32;
 	local v33 = false;
 	local v34 = false;
 	local v35 = false;
-	local v36;
+	local v36 = false;
 	local v37;
 	local v38;
 	local v39;
@@ -90,1056 +98,1141 @@ v0["Epix_Mage_Fire.lua"] = function(...)
 	local v86;
 	local v87;
 	local v88;
-	local v89 = v18.Mage.Fire;
-	local v90 = v20.Mage.Fire;
-	local v91 = v25.Mage.Fire;
-	local v92 = {};
-	local v93 = v21.Commons.Everyone;
-	local function v94()
-		if (((2547 + 826) <= (4045 - (457 + 32))) and v89.RemoveCurse:IsAvailable()) then
-			v93.DispellableDebuffs = v93.DispellableCurseDebuffs;
+	local v89;
+	local v90 = v19.Mage.Fire;
+	local v91 = v21.Mage.Fire;
+	local v92 = v26.Mage.Fire;
+	local v93 = {};
+	local v94 = v22.Commons.Everyone;
+	local function v95()
+		if (((3121 + 1249) == (5109 - (396 + 343))) and v90.RemoveCurse:IsAvailable()) then
+			v94.DispellableDebuffs = v94.DispellableCurseDebuffs;
 		end
 	end
-	v9:RegisterForEvent(function()
-		v94();
+	v10:RegisterForEvent(function()
+		v95();
 	end, "ACTIVE_PLAYER_SPECIALIZATION_CHANGED");
-	local v95 = not v34;
-	local v96 = v89.SunKingsBlessing:IsAvailable();
-	local v97 = ((v89.FlamePatch:IsAvailable()) and (2 + 2)) or (2401 - (832 + 570));
-	local v98 = 942 + 57;
-	local v99 = v97;
-	local v100 = ((1 + 2) * v27(v89.FueltheFire:IsAvailable())) + ((3535 - 2536) * v27(not v89.FueltheFire:IsAvailable()));
-	local v101 = 482 + 517;
-	local v102 = 836 - (588 + 208);
-	local v103 = 2692 - 1693;
-	local v104 = 1800.3 - (884 + 916);
-	local v105 = 0 - 0;
-	local v106 = 4 + 2;
-	local v107 = false;
-	local v108 = (v107 and (673 - (232 + 421))) or (1889 - (1569 + 320));
-	local v109;
-	local v110 = ((v89.Kindling:IsAvailable()) and (0.4 + 0)) or (1 + 0);
-	local v111 = false;
+	local v96 = not v35;
+	local v97 = v90.SunKingsBlessing:IsAvailable();
+	local v98 = ((v90.FlamePatch:IsAvailable()) and (1 + 3)) or (2476 - (29 + 1448));
+	local v99 = 2388 - (135 + 1254);
+	local v100 = v98;
+	local v101 = ((11 - 8) * v28(v90.FueltheFire:IsAvailable())) + ((4664 - 3665) * v28(not v90.FueltheFire:IsAvailable()));
+	local v102 = 666 + 333;
+	local v103 = 1567 - (389 + 1138);
+	local v104 = 1573 - (102 + 472);
+	local v105 = 0.3 + 0;
+	local v106 = 0 + 0;
+	local v107 = 6 + 0;
+	local v108 = false;
+	local v109 = (v108 and (1565 - (320 + 1225))) or (0 - 0);
+	local v110;
+	local v111 = ((v90.Kindling:IsAvailable()) and (0.4 + 0)) or (1465 - (157 + 1307));
 	local v112 = false;
 	local v113 = false;
-	local v114 = 0 - 0;
-	local v115 = 605 - (316 + 289);
-	local v116 = 20 - 12;
-	local v117 = 1 + 2;
-	local v118;
+	local v114 = false;
+	local v115 = 1859 - (821 + 1038);
+	local v116 = 0 - 0;
+	local v117 = 1 + 7;
+	local v118 = 4 - 1;
 	local v119;
 	local v120;
-	local v121 = 1456 - (666 + 787);
-	local v122 = 11536 - (360 + 65);
-	local v123 = 10384 + 727;
-	local v124;
-	local v125, v126, v127;
-	local v128;
-	local v129;
-	local v130;
-	local v131;
-	v9:RegisterForEvent(function()
-		local v156 = 254 - (79 + 175);
+	local v121;
+	local v122 = 2 + 1;
+	local v123 = 27539 - 16428;
+	local v124 = 12137 - (834 + 192);
+	local v125;
+	local v126, v127, v128, v129;
+	local v130, v131;
+	local v132;
+	v10:RegisterForEvent(function()
+		local v157 = 0 + 0;
 		while true do
-			if ((v156 == (0 - 0)) or ((2569 + 722) < (10054 - 6774))) then
-				v107 = false;
-				v108 = (v107 and (38 - 18)) or (899 - (503 + 396));
+			if ((v157 == (0 + 0)) or ((103 + 4659) <= (1333 - 472))) then
+				v108 = false;
+				v109 = (v108 and (324 - (300 + 4))) or (0 + 0);
 				break;
 			end
 		end
 	end, "PLAYER_EQUIPMENT_CHANGED");
-	v9:RegisterForEvent(function()
-		local v157 = 181 - (92 + 89);
+	v10:RegisterForEvent(function()
+		local v158 = 0 - 0;
 		while true do
-			if (((8507 - 4121) >= (448 + 425)) and (v157 == (2 + 1))) then
-				v89.Pyroblast:RegisterInFlight(v89.CombustionBuff);
-				v89.Fireball:RegisterInFlight(v89.CombustionBuff);
+			if ((v158 == (362 - (112 + 250))) or ((563 + 849) == (10681 - 6417))) then
+				v90.Pyroblast:RegisterInFlight();
+				v90.Fireball:RegisterInFlight();
+				v158 = 1 + 0;
+			end
+			if (((1 + 0) == v158) or ((2370 + 798) < (1068 + 1085))) then
+				v90.Meteor:RegisterInFlightEffect(260854 + 90286);
+				v90.Meteor:RegisterInFlight();
+				v158 = 1416 - (1001 + 413);
+			end
+			if ((v158 == (6 - 3)) or ((5858 - (244 + 638)) < (2025 - (627 + 66)))) then
+				v90.Pyroblast:RegisterInFlight(v90.CombustionBuff);
+				v90.Fireball:RegisterInFlight(v90.CombustionBuff);
 				break;
 			end
-			if (((3606 - 2685) <= (151 + 951)) and (v157 == (0 - 0))) then
-				v89.Pyroblast:RegisterInFlight();
-				v89.Fireball:RegisterInFlight();
-				v157 = 1 + 0;
-			end
-			if (((2248 + 2458) >= (2932 - 1969)) and (v157 == (1 + 1))) then
-				v89.PhoenixFlames:RegisterInFlightEffect(392754 - 135212);
-				v89.PhoenixFlames:RegisterInFlight();
-				v157 = 1247 - (485 + 759);
-			end
-			if ((v157 == (2 - 1)) or ((2149 - (442 + 747)) <= (2011 - (832 + 303)))) then
-				v89.Meteor:RegisterInFlightEffect(352086 - (88 + 858));
-				v89.Meteor:RegisterInFlight();
-				v157 = 1 + 1;
+			if (((13789 - 9161) == (5230 - (512 + 90))) and ((1908 - (1665 + 241)) == v158)) then
+				v90.PhoenixFlames:RegisterInFlightEffect(258259 - (373 + 344));
+				v90.PhoenixFlames:RegisterInFlight();
+				v158 = 2 + 1;
 			end
 		end
 	end, "LEARNED_SPELL_IN_TAB");
-	v89.Pyroblast:RegisterInFlight();
-	v89.Fireball:RegisterInFlight();
-	v89.Meteor:RegisterInFlightEffect(290604 + 60536);
-	v89.Meteor:RegisterInFlight();
-	v89.PhoenixFlames:RegisterInFlightEffect(10608 + 246934);
-	v89.PhoenixFlames:RegisterInFlight();
-	v89.Pyroblast:RegisterInFlight(v89.CombustionBuff);
-	v89.Fireball:RegisterInFlight(v89.CombustionBuff);
-	v9:RegisterForEvent(function()
-		local v158 = 789 - (766 + 23);
-		while true do
-			if ((v158 == (0 - 0)) or ((2824 - 758) == (2455 - 1523))) then
-				v122 = 37711 - 26600;
-				v123 = 12184 - (1036 + 37);
-				break;
-			end
-		end
+	v90.Pyroblast:RegisterInFlight();
+	v90.Fireball:RegisterInFlight();
+	v90.Meteor:RegisterInFlightEffect(92909 + 258231);
+	v90.Meteor:RegisterInFlight();
+	v90.PhoenixFlames:RegisterInFlightEffect(679324 - 421782);
+	v90.PhoenixFlames:RegisterInFlight();
+	v90.Pyroblast:RegisterInFlight(v90.CombustionBuff);
+	v90.Fireball:RegisterInFlight(v90.CombustionBuff);
+	v10:RegisterForEvent(function()
+		v123 = 18802 - 7691;
+		v124 = 12210 - (35 + 1064);
 	end, "PLAYER_REGEN_ENABLED");
-	v9:RegisterForEvent(function()
+	v10:RegisterForEvent(function()
 		local v159 = 0 + 0;
 		while true do
-			if (((9396 - 4571) < (3810 + 1033)) and (v159 == (1481 - (641 + 839)))) then
-				v99 = v97;
-				v110 = ((v89.Kindling:IsAvailable()) and (913.4 - (910 + 3))) or (2 - 1);
+			if ((v159 == (2 - 1)) or ((1 + 53) == (1631 - (298 + 938)))) then
+				v100 = v98;
+				v111 = ((v90.Kindling:IsAvailable()) and (1259.4 - (233 + 1026))) or (1667 - (636 + 1030));
 				break;
 			end
-			if ((v159 == (1684 - (1466 + 218))) or ((1782 + 2095) >= (5685 - (556 + 592)))) then
-				v96 = v89.SunKingsBlessing:IsAvailable();
-				v97 = ((v89.FlamePatch:IsAvailable()) and (2 + 1)) or (1807 - (329 + 479));
-				v159 = 855 - (174 + 680);
+			if (((42 + 40) == (81 + 1)) and (v159 == (0 + 0))) then
+				v97 = v90.SunKingsBlessing:IsAvailable();
+				v98 = ((v90.FlamePatch:IsAvailable()) and (1 + 2)) or (1220 - (55 + 166));
+				v159 = 1 + 0;
 			end
 		end
 	end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
-	local function v132()
-		return v89.Firestarter:IsAvailable() and (v14:HealthPercentage() > (309 - 219));
-	end
 	local function v133()
-		return (v89.Firestarter:IsAvailable() and (((v14:HealthPercentage() > (186 - 96)) and v14:TimeToX(65 + 25)) or (739 - (396 + 343)))) or (0 + 0);
+		return v90.Firestarter:IsAvailable() and (v15:HealthPercentage() > (10 + 80));
 	end
 	local function v134()
-		return v89.SearingTouch:IsAvailable() and (v14:HealthPercentage() < (1507 - (29 + 1448)));
+		return (v90.Firestarter:IsAvailable() and (((v15:HealthPercentage() > (343 - 253)) and v15:TimeToX(387 - (36 + 261))) or (0 - 0))) or (1368 - (34 + 1334));
 	end
 	local function v135()
-		return v89.ImprovedScorch:IsAvailable() and (v14:HealthPercentage() < (1419 - (135 + 1254)));
+		return v90.SearingTouch:IsAvailable() and (v15:HealthPercentage() < (12 + 18));
 	end
 	local function v136()
-		return (v121 * v89.ShiftingPower:BaseDuration()) / v89.ShiftingPower:BaseTickTime();
+		return v90.ImprovedScorch:IsAvailable() and (v15:HealthPercentage() < (24 + 6));
 	end
 	local function v137()
-		local v160 = 0 - 0;
+		return (v122 * v90.ShiftingPower:BaseDuration()) / v90.ShiftingPower:BaseTickTime();
+	end
+	local function v138()
+		local v160 = 1283 - (1035 + 248);
 		local v161;
 		while true do
-			if ((v160 == (0 - 0)) or ((2876 + 1439) < (3253 - (389 + 1138)))) then
-				v161 = (v132() and (v27(v89.Pyroblast:InFlight()) + v27(v89.Fireball:InFlight()))) or (574 - (102 + 472));
-				v161 = v161 + v27(v89.PhoenixFlames:InFlight() or v13:PrevGCDP(1 + 0, v89.PhoenixFlames));
-				v160 = 1 + 0;
+			if ((v160 == (22 - (20 + 1))) or ((303 + 278) < (601 - (134 + 185)))) then
+				return v14:BuffUp(v90.HotStreakBuff) or v14:BuffUp(v90.HyperthermiaBuff) or (v14:BuffUp(v90.HeatingUpBuff) and ((v136() and v14:IsCasting(v90.Scorch)) or (v133() and (v14:IsCasting(v90.Fireball) or (v161 > (1133 - (549 + 584)))))));
 			end
-			if ((v160 == (1 + 0)) or ((5224 - (320 + 1225)) < (1112 - 487))) then
-				return v13:BuffUp(v89.HotStreakBuff) or v13:BuffUp(v89.HyperthermiaBuff) or (v13:BuffUp(v89.HeatingUpBuff) and ((v135() and v13:IsCasting(v89.Scorch)) or (v132() and (v13:IsCasting(v89.Fireball) or v13:IsCasting(v89.Pyroblast) or (v161 > (0 + 0))))));
+			if ((v160 == (685 - (314 + 371))) or ((15822 - 11213) < (3463 - (478 + 490)))) then
+				v161 = (v133() and (v28(v90.Pyroblast:InFlight()) + v28(v90.Fireball:InFlight()))) or (0 + 0);
+				v161 = v161 + v28(v90.PhoenixFlames:InFlight() or v14:PrevGCDP(1173 - (786 + 386), v90.PhoenixFlames));
+				v160 = 3 - 2;
 			end
 		end
 	end
-	local function v138(v162)
-		local v163 = 1464 - (157 + 1307);
+	local function v139(v162)
+		local v163 = 1379 - (1055 + 324);
 		local v164;
 		while true do
-			if (((1860 - (821 + 1038)) == v163) or ((11539 - 6914) < (70 + 562))) then
+			if (((2492 - (1093 + 247)) == (1024 + 128)) and (v163 == (0 + 0))) then
+				v164 = 0 - 0;
+				for v230, v231 in pairs(v162) do
+					if (((6434 - 4538) <= (9737 - 6315)) and v231:DebuffUp(v90.IgniteDebuff)) then
+						v164 = v164 + (2 - 1);
+					end
+				end
+				v163 = 1 + 0;
+			end
+			if ((v163 == (3 - 2)) or ((3412 - 2422) > (1222 + 398))) then
 				return v164;
 			end
-			if (((0 - 0) == v163) or ((31 + 52) > (4411 - 2631))) then
-				v164 = 1026 - (834 + 192);
-				for v224, v225 in pairs(v162) do
-					if (((35 + 511) <= (277 + 800)) and v225:DebuffUp(v89.IgniteDebuff)) then
-						v164 = v164 + 1 + 0;
-					end
-				end
-				v163 = 1 - 0;
-			end
 		end
-	end
-	local function v139()
-		local v165 = 304 - (300 + 4);
-		if (v89.Fireball:InFlight() or v89.PhoenixFlames:InFlight() or ((266 + 730) > (11258 - 6957))) then
-			v165 = v165 + (363 - (112 + 250));
-		end
-		return v165;
 	end
 	local function v140()
-		v31 = v93.HandleTopTrinket(v92, v34, 16 + 24, nil);
-		if (((10196 - 6126) > (394 + 293)) and v31) then
-			return v31;
-		end
-		v31 = v93.HandleBottomTrinket(v92, v34, 21 + 19, nil);
-		if (v31 or ((491 + 165) >= (1652 + 1678))) then
-			return v31;
-		end
-	end
-	local v141 = 0 + 0;
-	local function v142()
-		if ((v89.RemoveCurse:IsReady() and (v93.UnitHasDispellableDebuffByPlayer(v15) or v93.DispellableFriendlyUnit(1439 - (1001 + 413)) or v93.UnitHasCurseDebuff(v15))) or ((5556 - 3064) <= (1217 - (244 + 638)))) then
-			if (((5015 - (627 + 66)) >= (7633 - 5071)) and (v141 == (602 - (512 + 90)))) then
-				v141 = GetTime();
-			end
-			if (v93.Wait(2406 - (1665 + 241), v141) or ((4354 - (373 + 344)) >= (1701 + 2069))) then
-				local v226 = 0 + 0;
-				while true do
-					if ((v226 == (0 - 0)) or ((4025 - 1646) > (5677 - (35 + 1064)))) then
-						if (v23(v91.RemoveCurseFocus) or ((352 + 131) > (1589 - 846))) then
-							return "remove_curse dispel";
-						end
-						v141 = 0 + 0;
-						break;
-					end
-				end
-			end
-		end
-	end
-	local function v143()
-		local v166 = 1236 - (298 + 938);
+		local v165 = 0 - 0;
+		local v166;
 		while true do
-			if (((3713 - (233 + 1026)) > (2244 - (636 + 1030))) and (v166 == (1 + 0))) then
-				if (((909 + 21) < (1325 + 3133)) and v89.IceBlock:IsCastable() and v56 and (v13:HealthPercentage() <= v63)) then
-					if (((45 + 617) <= (1193 - (55 + 166))) and v23(v89.IceBlock)) then
-						return "ice_block defensive 3";
-					end
+			if ((v165 == (688 - (364 + 324))) or ((2404 - 1527) > (11266 - 6571))) then
+				v166 = 0 + 0;
+				if (((11259 - 8568) >= (2964 - 1113)) and (v90.Fireball:InFlight() or v90.PhoenixFlames:InFlight())) then
+					v166 = v166 + (2 - 1);
 				end
-				if (((847 + 3523) == (440 + 3930)) and v89.IceColdTalent:IsAvailable() and v89.IceColdAbility:IsCastable() and v57 and (v13:HealthPercentage() <= v64)) then
-					if (v23(v89.IceColdAbility) or ((18186 - 13424) <= (1158 - (36 + 261)))) then
-						return "ice_cold defensive 3";
-					end
-				end
-				v166 = 3 - 1;
+				v165 = 1269 - (1249 + 19);
 			end
-			if (((1368 - (34 + 1334)) == v166) or ((543 + 869) == (3314 + 950))) then
-				if ((v89.BlazingBarrier:IsCastable() and v54 and v13:BuffDown(v89.BlazingBarrier) and (v13:HealthPercentage() <= v61)) or ((4451 - (1035 + 248)) < (2174 - (20 + 1)))) then
-					if (v23(v89.BlazingBarrier) or ((2593 + 2383) < (1651 - (134 + 185)))) then
-						return "blazing_barrier defensive 1";
-					end
-				end
-				if (((5761 - (549 + 584)) == (5313 - (314 + 371))) and v89.MassBarrier:IsCastable() and v59 and v13:BuffDown(v89.BlazingBarrier) and v93.AreUnitsBelowHealthPercentage(v66, 6 - 4, v89.ArcaneIntellect)) then
-					if (v23(v89.MassBarrier) or ((1022 - (478 + 490)) == (210 + 185))) then
-						return "mass_barrier defensive 2";
-					end
-				end
-				v166 = 1173 - (786 + 386);
+			if ((v165 == (1 + 0)) or ((11619 - 8634) >= (5942 - (686 + 400)))) then
+				return v166;
 			end
-			if (((265 - 183) == (1461 - (1055 + 324))) and (v166 == (1342 - (1093 + 247)))) then
-				if ((v89.MirrorImage:IsCastable() and v58 and (v13:HealthPercentage() <= v65)) or ((517 + 64) < (30 + 252))) then
-					if (v23(v89.MirrorImage) or ((18298 - 13689) < (8467 - 5972))) then
-						return "mirror_image defensive 4";
-					end
-				end
-				if (((3277 - 2125) == (2894 - 1742)) and v89.GreaterInvisibility:IsReady() and v55 and (v13:HealthPercentage() <= v62)) then
-					if (((675 + 1221) <= (13182 - 9760)) and v23(v89.GreaterInvisibility)) then
-						return "greater_invisibility defensive 5";
-					end
-				end
-				v166 = 10 - 7;
-			end
-			if ((v166 == (4 + 0)) or ((2531 - 1541) > (2308 - (364 + 324)))) then
-				if ((v76 and (v13:HealthPercentage() <= v78)) or ((2404 - 1527) > (11266 - 6571))) then
-					if (((892 + 1799) >= (7745 - 5894)) and (v80 == "Refreshing Healing Potion")) then
-						if (v90.RefreshingHealingPotion:IsReady() or ((4780 - 1795) >= (14748 - 9892))) then
-							if (((5544 - (1249 + 19)) >= (1079 + 116)) and v23(v91.RefreshingHealingPotion)) then
-								return "refreshing healing potion defensive";
-							end
-						end
-					end
-					if (((12580 - 9348) <= (5776 - (686 + 400))) and (v80 == "Dreamwalker's Healing Potion")) then
-						if (v90.DreamwalkersHealingPotion:IsReady() or ((704 + 192) >= (3375 - (73 + 156)))) then
-							if (((15 + 3046) >= (3769 - (721 + 90))) and v23(v91.RefreshingHealingPotion)) then
-								return "dreamwalkers healing potion defensive";
-							end
-						end
-					end
+		end
+	end
+	local function v141()
+		local v167 = 0 + 0;
+		while true do
+			if (((4505 - (73 + 156)) >= (6 + 1189)) and ((812 - (721 + 90)) == v167)) then
+				v32 = v94.HandleBottomTrinket(v93, v35, 1 + 39, nil);
+				if (((10493 - 7261) <= (5160 - (224 + 246))) and v32) then
+					return v32;
 				end
 				break;
 			end
-			if (((36 + 3151) >= (2090 - 1446)) and (v166 == (473 - (224 + 246)))) then
-				if (((1042 - 398) <= (1295 - 591)) and v89.AlterTime:IsReady() and v53 and (v13:HealthPercentage() <= v60)) then
-					if (((174 + 784) > (23 + 924)) and v23(v89.AlterTime)) then
-						return "alter_time defensive 6";
-					end
+			if ((v167 == (0 - 0)) or ((1649 - 753) >= (571 + 2575))) then
+				v32 = v94.HandleTopTrinket(v93, v35, 1 + 39, nil);
+				if (((2249 + 812) >= (5880 - 2922)) and v32) then
+					return v32;
 				end
-				if (((3300 + 1192) >= (5276 - 2622)) and v90.Healthstone:IsReady() and v77 and (v13:HealthPercentage() <= v79)) then
-					if (((11454 - 8012) >= (2016 - (203 + 310))) and v23(v91.Healthstone)) then
-						return "healthstone defensive";
-					end
-				end
-				v166 = 1997 - (1238 + 755);
+				v167 = 3 - 2;
 			end
 		end
 	end
-	local function v144()
-		if ((v89.ArcaneIntellect:IsCastable() and v37 and (v13:BuffDown(v89.ArcaneIntellect, true) or v93.GroupBuffMissing(v89.ArcaneIntellect))) or ((222 + 2948) <= (2998 - (709 + 825)))) then
-			if (v23(v89.ArcaneIntellect) or ((8839 - 4042) == (6391 - 2003))) then
-				return "arcane_intellect precombat 2";
-			end
-		end
-		if (((1415 - (196 + 668)) <= (2688 - 2007)) and v89.MirrorImage:IsCastable() and v93.TargetIsValid() and v58 and v85) then
-			if (((6787 - 3510) > (1240 - (171 + 662))) and v23(v89.MirrorImage)) then
-				return "mirror_image precombat 2";
-			end
-		end
-		if (((4788 - (4 + 89)) >= (4959 - 3544)) and v89.Pyroblast:IsReady() and v45 and not v13:IsCasting(v89.Pyroblast)) then
-			if (v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), true) or ((1170 + 2042) <= (4146 - 3202))) then
-				return "pyroblast precombat 4";
-			end
-		end
-		if ((v89.Fireball:IsReady() and v40) or ((1215 + 1881) <= (3284 - (35 + 1451)))) then
-			if (((4990 - (28 + 1425)) == (5530 - (941 + 1052))) and v23(v89.Fireball, not v14:IsSpellInRange(v89.Fireball), true)) then
-				return "fireball precombat 6";
-			end
-		end
-	end
-	local function v145()
-		if (((3680 + 157) >= (3084 - (822 + 692))) and v89.LivingBomb:IsReady() and v42 and (v126 > (1 - 0)) and v119 and ((v109 > v89.LivingBomb:CooldownRemains()) or (v109 <= (0 + 0)))) then
-			if (v23(v89.LivingBomb, not v14:IsSpellInRange(v89.LivingBomb), v13:BuffDown(v89.IceFloes)) or ((3247 - (45 + 252)) == (3772 + 40))) then
-				return "living_bomb active_talents 2";
-			end
-		end
-		if (((1626 + 3097) >= (5641 - 3323)) and v89.Meteor:IsReady() and v43 and (v74 < v123) and ((v109 <= (433 - (114 + 319))) or (v13:BuffRemains(v89.CombustionBuff) > v89.Meteor:TravelTime()) or (not v89.SunKingsBlessing:IsAvailable() and (((64 - 19) < v109) or (v123 < v109))))) then
-			if (v23(v91.MeteorCursor, not v14:IsInRange(51 - 11)) or ((1293 + 734) > (4248 - 1396))) then
-				return "meteor active_talents 4";
-			end
-		end
-		if ((v89.DragonsBreath:IsReady() and v38 and v89.AlexstraszasFury:IsAvailable() and v119 and v13:BuffDown(v89.HotStreakBuff) and (v13:BuffUp(v89.FeeltheBurnBuff) or (v9.CombatTime() > (31 - 16))) and not v135() and (v133() == (1963 - (556 + 1407))) and not v89.TemperedFlames:IsAvailable()) or ((2342 - (741 + 465)) > (4782 - (170 + 295)))) then
-			if (((2502 + 2246) == (4362 + 386)) and v23(v89.DragonsBreath, not v14:IsInRange(24 - 14))) then
-				return "dragons_breath active_talents 6";
-			end
-		end
-		if (((3098 + 638) <= (3040 + 1700)) and v89.DragonsBreath:IsReady() and v38 and v89.AlexstraszasFury:IsAvailable() and v119 and v13:BuffDown(v89.HotStreakBuff) and (v13:BuffUp(v89.FeeltheBurnBuff) or (v9.CombatTime() > (9 + 6))) and not v135() and v89.TemperedFlames:IsAvailable()) then
-			if (v23(v89.DragonsBreath, not v14:IsInRange(1240 - (957 + 273))) or ((907 + 2483) <= (1225 + 1835))) then
-				return "dragons_breath active_talents 8";
-			end
-		end
-	end
-	local function v146()
-		local v167 = v93.HandleDPSPotion(v13:BuffUp(v89.CombustionBuff));
-		if (v167 or ((3806 - 2807) > (7096 - 4403))) then
-			return v167;
-		end
-		if (((1414 - 951) < (2975 - 2374)) and v81 and ((v84 and v34) or not v84) and (v74 < v123)) then
-			local v177 = 1780 - (389 + 1391);
+	local v142 = 513 - (203 + 310);
+	local function v143()
+		if (((5180 - (1238 + 755)) >= (45 + 599)) and v90.RemoveCurse:IsReady() and (v94.UnitHasDispellableDebuffByPlayer(v16) or v94.DispellableFriendlyUnit(1559 - (709 + 825)) or v94.UnitHasCurseDebuff(v16))) then
+			local v183 = 0 - 0;
 			while true do
-				if ((v177 == (1 + 0)) or ((228 + 1955) < (1563 - 876))) then
-					if (((5500 - (783 + 168)) == (15267 - 10718)) and v89.Fireblood:IsCastable()) then
-						if (((4596 + 76) == (4983 - (309 + 2))) and v23(v89.Fireblood)) then
-							return "fireblood combustion_cooldowns 8";
-						end
+				if (((937 - 293) <= (1568 - (196 + 668))) and (v183 == (0 - 0))) then
+					if (((1984 - 1026) > (1780 - (171 + 662))) and (v142 == (93 - (4 + 89)))) then
+						v142 = GetTime();
 					end
-					if (v89.AncestralCall:IsCastable() or ((11264 - 7596) < (1607 - (1090 + 122)))) then
-						if (v23(v89.AncestralCall) or ((1351 + 2815) == (1527 - 1072))) then
-							return "ancestral_call combustion_cooldowns 10";
+					if (((15744 - 11252) >= (967 + 1687)) and v94.Wait(2196 - 1696, v142)) then
+						local v241 = 0 + 0;
+						while true do
+							if (((4928 - (35 + 1451)) >= (2956 - (28 + 1425))) and (v241 == (1993 - (941 + 1052)))) then
+								if (v24(v92.RemoveCurseFocus) or ((3040 + 130) <= (2978 - (822 + 692)))) then
+									return "remove_curse dispel";
+								end
+								v142 = 0 - 0;
+								break;
+							end
 						end
 					end
 					break;
 				end
-				if ((v177 == (0 + 0)) or ((5567 - (628 + 490)) == (478 + 2185))) then
-					if (v89.BloodFury:IsCastable() or ((10588 - 6311) < (13659 - 10670))) then
-						if (v23(v89.BloodFury) or ((1644 - (431 + 343)) >= (8378 - 4229))) then
-							return "blood_fury combustion_cooldowns 4";
-						end
-					end
-					if (((6398 - 4186) < (2515 + 668)) and v89.Berserking:IsCastable() and v118) then
-						if (((595 + 4051) > (4687 - (556 + 1139))) and v23(v89.Berserking)) then
-							return "berserking combustion_cooldowns 6";
-						end
-					end
-					v177 = 16 - (6 + 9);
-				end
-			end
-		end
-		if (((263 + 1171) < (1592 + 1514)) and v87 and v89.TimeWarp:IsReady() and v89.TemporalWarp:IsAvailable() and v13:BloodlustExhaustUp()) then
-			if (((955 - (28 + 141)) < (1171 + 1852)) and v23(v89.TimeWarp, nil, nil, true)) then
-				return "time_warp combustion_cooldowns 12";
-			end
-		end
-		if ((v74 < v123) or ((3013 - 571) < (53 + 21))) then
-			if (((5852 - (486 + 831)) == (11801 - 7266)) and v82 and ((v34 and v83) or not v83)) then
-				local v227 = 0 - 0;
-				while true do
-					if ((v227 == (0 + 0)) or ((9514 - 6505) <= (3368 - (668 + 595)))) then
-						v31 = v140();
-						if (((1647 + 183) < (740 + 2929)) and v31) then
-							return v31;
-						end
-						break;
-					end
-				end
 			end
 		end
 	end
-	local function v147()
-		local v168 = 0 - 0;
+	local function v144()
+		local v168 = 0 + 0;
 		while true do
-			if ((v168 == (298 - (23 + 267))) or ((3374 - (1129 + 815)) >= (3999 - (371 + 16)))) then
-				if (((4433 - (1326 + 424)) >= (4659 - 2199)) and v89.Scorch:IsReady() and v46 and (v13:BuffRemains(v89.CombustionBuff) > v89.Scorch:CastTime()) and (v89.Scorch:CastTime() >= v124)) then
-					if (v23(v89.Scorch, not v14:IsSpellInRange(v89.Scorch), false) or ((6592 - 4788) >= (3393 - (88 + 30)))) then
-						return "scorch combustion_phase 44";
+			if (((300 - (45 + 252)) == v168) or ((4747 + 50) == (1511 + 2877))) then
+				if (((1340 - 789) <= (1114 - (114 + 319))) and v90.AlterTime:IsReady() and v54 and (v14:HealthPercentage() <= v61)) then
+					if (((4705 - 1428) > (521 - 114)) and v24(v90.AlterTime)) then
+						return "alter_time defensive 6";
 					end
 				end
-				if ((v89.Fireball:IsReady() and v40 and (v13:BuffRemains(v89.CombustionBuff) > v89.Fireball:CastTime())) or ((2188 - (720 + 51)) > (8072 - 4443))) then
-					if (((6571 - (421 + 1355)) > (662 - 260)) and v23(v89.Fireball, not v14:IsSpellInRange(v89.Fireball), v13:BuffDown(v89.IceFloes))) then
-						return "fireball combustion_phase 46";
+				if (((2993 + 1702) >= (2108 - 693)) and v91.Healthstone:IsReady() and v78 and (v14:HealthPercentage() <= v80)) then
+					if (v24(v92.Healthstone) or ((6729 - 3517) <= (2907 - (556 + 1407)))) then
+						return "healthstone defensive";
 					end
 				end
-				if (((2365 + 2448) > (4648 - (286 + 797))) and v89.LivingBomb:IsReady() and v42 and (v13:BuffRemains(v89.CombustionBuff) < v124) and (v126 > (3 - 2))) then
-					if (((6479 - 2567) == (4351 - (397 + 42))) and v23(v89.LivingBomb, not v14:IsSpellInRange(v89.LivingBomb), v13:BuffDown(v89.IceFloes))) then
-						return "living_bomb combustion_phase 48";
+				v168 = 1210 - (741 + 465);
+			end
+			if ((v168 == (469 - (170 + 295))) or ((1632 + 1464) <= (1652 + 146))) then
+				if (((8708 - 5171) == (2933 + 604)) and v77 and (v14:HealthPercentage() <= v79)) then
+					local v232 = 0 + 0;
+					while true do
+						if (((2173 + 1664) >= (2800 - (957 + 273))) and (v232 == (0 + 0))) then
+							if ((v81 == "Refreshing Healing Potion") or ((1181 + 1769) == (14525 - 10713))) then
+								if (((12446 - 7723) >= (7080 - 4762)) and v91.RefreshingHealingPotion:IsReady()) then
+									if (v24(v92.RefreshingHealingPotion) or ((10037 - 8010) > (4632 - (389 + 1391)))) then
+										return "refreshing healing potion defensive";
+									end
+								end
+							end
+							if ((v81 == "Dreamwalker's Healing Potion") or ((713 + 423) > (450 + 3867))) then
+								if (((10809 - 6061) == (5699 - (783 + 168))) and v91.DreamwalkersHealingPotion:IsReady()) then
+									if (((12538 - 8802) <= (4663 + 77)) and v24(v92.RefreshingHealingPotion)) then
+										return "dreamwalkers healing potion defensive";
+									end
+								end
+							end
+							break;
+						end
 					end
 				end
 				break;
 			end
-			if (((882 + 1939) <= (5624 - (24 + 776))) and (v168 == (4 - 1))) then
-				if (((2523 - (222 + 563)) <= (4836 - 2641)) and v89.Pyroblast:IsReady() and v45 and not v13:IsCasting(v89.Pyroblast) and v119 and v13:BuffUp(v89.FuryoftheSunKingBuff) and (v13:BuffRemains(v89.FuryoftheSunKingBuff) > v89.Pyroblast:CastTime())) then
-					if (((30 + 11) <= (3208 - (23 + 167))) and v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), v13:BuffDown(v89.IceFloes) and v13:BuffDown(v89.HotStreakBuff) and v13:BuffDown(v89.HyperthermiaBuff))) then
-						return "pyroblast combustion_phase 14";
+			if ((v168 == (312 - (309 + 2))) or ((10410 - 7020) <= (4272 - (1090 + 122)))) then
+				if ((v90.IceBlock:IsCastable() and v57 and (v14:HealthPercentage() <= v64)) or ((324 + 675) > (9044 - 6351))) then
+					if (((317 + 146) < (1719 - (628 + 490))) and v24(v90.IceBlock)) then
+						return "ice_block defensive 3";
 					end
 				end
-				if (((3943 - (690 + 1108)) <= (1481 + 2623)) and v89.Fireball:IsReady() and v40 and v119 and (v89.Combustion:CooldownRemains() < v89.Fireball:CastTime()) and (v125 < (2 + 0)) and not v135()) then
-					if (((3537 - (40 + 808)) < (798 + 4047)) and v23(v89.Fireball, not v14:IsSpellInRange(v89.Fireball), v13:BuffDown(v89.IceFloes))) then
-						return "fireball combustion_phase 16";
+				if ((v90.IceColdTalent:IsAvailable() and v90.IceColdAbility:IsCastable() and v58 and (v14:HealthPercentage() <= v65)) or ((392 + 1791) < (1700 - 1013))) then
+					if (((20788 - 16239) == (5323 - (431 + 343))) and v24(v90.IceColdAbility)) then
+						return "ice_cold defensive 3";
 					end
 				end
-				if ((v89.Scorch:IsReady() and v46 and v119 and (v89.Combustion:CooldownRemains() < v89.Scorch:CastTime())) or ((8879 - 6557) > (2507 + 115))) then
-					if (v23(v89.Scorch, not v14:IsSpellInRange(v89.Scorch), false) or ((2399 + 2135) == (1142 + 940))) then
-						return "scorch combustion_phase 18";
-					end
-				end
-				v168 = 575 - (47 + 524);
+				v168 = 3 - 1;
 			end
-			if ((v168 == (0 + 0)) or ((4294 - 2723) > (2790 - 923))) then
-				if ((v89.LightsJudgment:IsCastable() and v81 and ((v84 and v34) or not v84) and (v74 < v123) and v119) or ((6052 - 3398) >= (4722 - (1165 + 561)))) then
-					if (((119 + 3859) > (6516 - 4412)) and v23(v89.LightsJudgment, not v14:IsSpellInRange(v89.LightsJudgment))) then
-						return "lights_judgment combustion_phase 2";
+			if (((13515 - 8843) == (3691 + 981)) and (v168 == (0 + 0))) then
+				if ((v90.BlazingBarrier:IsCastable() and v55 and v14:BuffDown(v90.BlazingBarrier) and (v14:HealthPercentage() <= v62)) or ((5363 - (556 + 1139)) < (410 - (6 + 9)))) then
+					if (v24(v90.BlazingBarrier) or ((763 + 3403) == (234 + 221))) then
+						return "blazing_barrier defensive 1";
 					end
 				end
-				if (((1143 + 1852) > (2020 - (341 + 138))) and v89.BagofTricks:IsCastable() and v81 and ((v84 and v34) or not v84) and (v74 < v123) and v119) then
-					if (((878 + 2371) > (1966 - 1013)) and v23(v89.BagofTricks)) then
-						return "bag_of_tricks combustion_phase 4";
-					end
-				end
-				if ((v89.LivingBomb:IsReady() and v33 and v42 and (v126 > (327 - (89 + 237))) and v119) or ((10529 - 7256) > (9627 - 5054))) then
-					if (v23(v89.LivingBomb, not v14:IsSpellInRange(v89.LivingBomb), v13:BuffDown(v89.IceFloes)) or ((4032 - (581 + 300)) < (2504 - (855 + 365)))) then
-						return "living_bomb combustion_phase 6";
+				if ((v90.MassBarrier:IsCastable() and v60 and v14:BuffDown(v90.BlazingBarrier) and v94.AreUnitsBelowHealthPercentage(v67, 171 - (28 + 141), v90.ArcaneIntellect)) or ((1724 + 2725) == (3286 - 623))) then
+					if (v24(v90.MassBarrier) or ((3030 + 1247) < (4306 - (486 + 831)))) then
+						return "mass_barrier defensive 2";
 					end
 				end
 				v168 = 2 - 1;
 			end
-			if ((v168 == (1 + 1)) or ((3085 - (1030 + 205)) == (1436 + 93))) then
-				if (((764 + 57) < (2409 - (156 + 130))) and v31) then
-					return v31;
-				end
-				if (((2049 - 1147) < (3918 - 1593)) and v89.Combustion:IsReady() and v49 and ((v51 and v34) or not v51) and (v74 < v123) and (v139() == (0 - 0)) and v119 and (v109 <= (0 + 0)) and ((v13:IsCasting(v89.Scorch) and (v89.Scorch:ExecuteRemains() < v104)) or (v13:IsCasting(v89.Fireball) and (v89.Fireball:ExecuteRemains() < v104)) or (v13:IsCasting(v89.Pyroblast) and (v89.Pyroblast:ExecuteRemains() < v104)) or (v13:IsCasting(v89.Flamestrike) and (v89.Flamestrike:ExecuteRemains() < v104)) or (v89.Meteor:InFlight() and (v89.Meteor:InFlightRemains() < v104)))) then
-					if (((501 + 357) <= (3031 - (10 + 59))) and v23(v89.Combustion, not v14:IsInRange(12 + 28), nil, true)) then
-						return "combustion combustion_phase 10";
+			if ((v168 == (6 - 4)) or ((165 + 705) >= (13118 - 8969))) then
+				if (((3475 - (668 + 595)) < (2865 + 318)) and v90.MirrorImage:IsCastable() and v59 and (v14:HealthPercentage() <= v66)) then
+					if (((937 + 3709) > (8159 - 5167)) and v24(v90.MirrorImage)) then
+						return "mirror_image defensive 4";
 					end
 				end
-				if ((v33 and v89.Flamestrike:IsReady() and v41 and not v13:IsCasting(v89.Flamestrike) and v119 and v13:BuffUp(v89.FuryoftheSunKingBuff) and (v13:BuffRemains(v89.FuryoftheSunKingBuff) > v89.Flamestrike:CastTime()) and (v89.Combustion:CooldownRemains() < v89.Flamestrike:CastTime()) and (v125 >= v100)) or ((19433 - 15487) < (2451 - (671 + 492)))) then
-					if (v23(v91.FlamestrikeCursor, not v14:IsInRange(32 + 8), v13:BuffDown(v89.IceFloes)) or ((4457 - (369 + 846)) == (151 + 416))) then
-						return "flamestrike combustion_phase 12";
+				if (((1724 - (23 + 267)) < (5050 - (1129 + 815))) and v90.GreaterInvisibility:IsReady() and v56 and (v14:HealthPercentage() <= v63)) then
+					if (((1173 - (371 + 16)) < (4773 - (1326 + 424))) and v24(v90.GreaterInvisibility)) then
+						return "greater_invisibility defensive 5";
 					end
 				end
-				v168 = 3 + 0;
-			end
-			if ((v168 == (1952 - (1036 + 909))) or ((674 + 173) >= (2120 - 857))) then
-				if ((v89.PhoenixFlames:IsCastable() and v44 and v13:HasTier(233 - (11 + 192), 2 + 0) and (v89.PhoenixFlames:TravelTime() < v13:BuffRemains(v89.CombustionBuff)) and ((v27(v13:BuffUp(v89.HeatingUpBuff)) + v139()) < (177 - (135 + 40))) and ((v14:DebuffRemains(v89.CharringEmbersDebuff) < ((9 - 5) * v124)) or (v13:BuffStack(v89.FlamesFuryBuff) > (1 + 0)) or v13:BuffUp(v89.FlamesFuryBuff))) or ((4963 - 2710) == (2774 - 923))) then
-					if (v23(v89.PhoenixFlames, not v14:IsSpellInRange(v89.PhoenixFlames), false) or ((2263 - (50 + 126)) > (6604 - 4232))) then
-						return "phoenix_flames combustion_phase 38";
-					end
-				end
-				if ((v89.Fireball:IsReady() and v40 and (v13:BuffRemains(v89.CombustionBuff) > v89.Fireball:CastTime()) and v13:BuffUp(v89.FlameAccelerantBuff)) or ((984 + 3461) < (5562 - (1233 + 180)))) then
-					if (v23(v89.Fireball, not v14:IsSpellInRange(v89.Fireball), v13:BuffDown(v89.IceFloes)) or ((2787 - (522 + 447)) == (1506 - (107 + 1314)))) then
-						return "fireball combustion_phase 40";
-					end
-				end
-				if (((293 + 337) < (6481 - 4354)) and v89.PhoenixFlames:IsCastable() and v44 and not v13:HasTier(13 + 17, 3 - 1) and not v89.AlexstraszasFury:IsAvailable() and (v89.PhoenixFlames:TravelTime() < v13:BuffRemains(v89.CombustionBuff)) and ((v27(v13:BuffUp(v89.HeatingUpBuff)) + v139()) < (7 - 5))) then
-					if (v23(v89.PhoenixFlames, not v14:IsSpellInRange(v89.PhoenixFlames), false) or ((3848 - (716 + 1194)) == (43 + 2471))) then
-						return "phoenix_flames combustion_phase 42";
-					end
-				end
-				v168 = 1 + 7;
-			end
-			if (((4758 - (74 + 429)) >= (106 - 51)) and (v168 == (3 + 2))) then
-				if (((6864 - 3865) > (818 + 338)) and v89.Pyroblast:IsReady() and v45 and v13:BuffUp(v89.HotStreakBuff) and v118) then
-					if (((7244 - 4894) > (2855 - 1700)) and v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), v13:BuffDown(v89.IceFloes) and v13:BuffDown(v89.HotStreakBuff) and v13:BuffDown(v89.HyperthermiaBuff))) then
-						return "pyroblast combustion_phase 26";
-					end
-				end
-				if (((4462 - (279 + 154)) <= (5631 - (454 + 324))) and v89.Pyroblast:IsReady() and v45 and v13:PrevGCDP(1 + 0, v89.Scorch) and v13:BuffUp(v89.HeatingUpBuff) and (v125 < v99) and v118) then
-					if (v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), v13:BuffDown(v89.IceFloes) and v13:BuffDown(v89.HotStreakBuff) and v13:BuffDown(v89.HyperthermiaBuff)) or ((533 - (12 + 5)) > (1852 + 1582))) then
-						return "pyroblast combustion_phase 28";
-					end
-				end
-				if (((10308 - 6262) >= (1121 + 1912)) and v89.ShiftingPower:IsReady() and v50 and ((v52 and v34) or not v52) and (v74 < v123) and v118 and (v89.FireBlast:Charges() == (1093 - (277 + 816))) and ((v89.PhoenixFlames:Charges() < v89.PhoenixFlames:MaxCharges()) or v89.AlexstraszasFury:IsAvailable()) and (v103 <= v125)) then
-					if (v23(v89.ShiftingPower, not v14:IsInRange(170 - 130)) or ((3902 - (1058 + 125)) <= (272 + 1175))) then
-						return "shifting_power combustion_phase 30";
-					end
-				end
-				v168 = 981 - (815 + 160);
-			end
-			if ((v168 == (4 - 3)) or ((9813 - 5679) < (937 + 2989))) then
-				if ((v13:BuffRemains(v89.CombustionBuff) > v106) or (v123 < (58 - 38)) or ((2062 - (41 + 1857)) >= (4678 - (1222 + 671)))) then
-					v31 = v146();
-					if (v31 or ((1356 - 831) == (3030 - 921))) then
-						return v31;
-					end
-				end
-				if (((1215 - (229 + 953)) == (1807 - (1111 + 663))) and v89.PhoenixFlames:IsCastable() and v44 and v13:BuffDown(v89.CombustionBuff) and v13:HasTier(1609 - (874 + 705), 1 + 1) and not v89.PhoenixFlames:InFlight() and (v14:DebuffRemains(v89.CharringEmbersDebuff) < ((3 + 1) * v124)) and v13:BuffDown(v89.HotStreakBuff)) then
-					if (((6347 - 3293) <= (113 + 3902)) and v23(v89.PhoenixFlames, not v14:IsSpellInRange(v89.PhoenixFlames), false)) then
-						return "phoenix_flames combustion_phase 8";
-					end
-				end
-				v31 = v145();
-				v168 = 681 - (642 + 37);
-			end
-			if (((427 + 1444) < (542 + 2840)) and (v168 == (14 - 8))) then
-				if (((1747 - (233 + 221)) <= (5008 - 2842)) and v33 and v89.Flamestrike:IsReady() and v41 and not v13:IsCasting(v89.Flamestrike) and v13:BuffUp(v89.FuryoftheSunKingBuff) and (v13:BuffRemains(v89.FuryoftheSunKingBuff) > v89.Flamestrike:CastTime()) and (v125 >= v100)) then
-					if (v23(v91.FlamestrikeCursor, not v14:IsInRange(36 + 4), v13:BuffDown(v89.IceFloes)) or ((4120 - (718 + 823)) < (78 + 45))) then
-						return "flamestrike combustion_phase 32";
-					end
-				end
-				if ((v89.Pyroblast:IsReady() and v45 and not v13:IsCasting(v89.Pyroblast) and v13:BuffUp(v89.FuryoftheSunKingBuff) and (v13:BuffRemains(v89.FuryoftheSunKingBuff) > v89.Pyroblast:CastTime())) or ((1651 - (266 + 539)) >= (6704 - 4336))) then
-					if (v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), v13:BuffDown(v89.IceFloes) and v13:BuffDown(v89.HotStreakBuff) and v13:BuffDown(v89.HyperthermiaBuff)) or ((5237 - (636 + 589)) <= (7970 - 4612))) then
-						return "pyroblast combustion_phase 34";
-					end
-				end
-				if (((3081 - 1587) <= (2382 + 623)) and v89.Scorch:IsReady() and v46 and v135() and (v14:DebuffRemains(v89.ImprovedScorchDebuff) < ((2 + 2) * v124)) and (v127 < v99)) then
-					if (v23(v89.Scorch, not v14:IsSpellInRange(v89.Scorch), false) or ((4126 - (657 + 358)) == (5650 - 3516))) then
-						return "scorch combustion_phase 36";
-					end
-				end
-				v168 = 15 - 8;
-			end
-			if (((3542 - (1151 + 36)) == (2275 + 80)) and (v168 == (2 + 2))) then
-				if ((v89.FireBlast:IsReady() and v39 and not v137() and not v113 and (not v135() or v13:IsCasting(v89.Scorch) or (v14:DebuffRemains(v89.ImprovedScorchDebuff) > ((11 - 7) * v124))) and (v13:BuffDown(v89.FuryoftheSunKingBuff) or v13:IsCasting(v89.Pyroblast)) and v118 and v13:BuffDown(v89.HyperthermiaBuff) and v13:BuffDown(v89.HotStreakBuff) and ((v139() + (v27(v13:BuffUp(v89.HeatingUpBuff)) * v27(v13:GCDRemains() > (1832 - (1552 + 280))))) < (836 - (64 + 770)))) or ((400 + 188) <= (980 - 548))) then
-					if (((852 + 3945) >= (5138 - (157 + 1086))) and v23(v89.FireBlast, not v14:IsSpellInRange(v89.FireBlast), false, true)) then
-						return "fire_blast combustion_phase 20";
-					end
-				end
-				if (((7159 - 3582) == (15666 - 12089)) and v33 and v89.Flamestrike:IsReady() and v41 and ((v13:BuffUp(v89.HotStreakBuff) and (v125 >= v99)) or (v13:BuffUp(v89.HyperthermiaBuff) and (v125 >= (v99 - v27(v89.Hyperthermia:IsAvailable())))))) then
-					if (((5819 - 2025) > (5039 - 1346)) and v23(v91.FlamestrikeCursor, not v14:IsInRange(859 - (599 + 220)), v13:BuffDown(v89.IceFloes))) then
-						return "flamestrike combustion_phase 22";
-					end
-				end
-				if ((v89.Pyroblast:IsReady() and v45 and (v13:BuffUp(v89.HyperthermiaBuff))) or ((2538 - 1263) == (6031 - (1813 + 118)))) then
-					if (v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), v13:BuffDown(v89.IceFloes) and v13:BuffDown(v89.HotStreakBuff) and v13:BuffDown(v89.HyperthermiaBuff)) or ((1163 + 428) >= (4797 - (841 + 376)))) then
-						return "pyroblast combustion_phase 24";
-					end
-				end
-				v168 = 6 - 1;
+				v168 = 5 - 2;
 			end
 		end
 	end
-	local function v148()
+	local function v145()
+		if ((v90.ArcaneIntellect:IsCastable() and v38 and (v14:BuffDown(v90.ArcaneIntellect, true) or v94.GroupBuffMissing(v90.ArcaneIntellect))) or ((8923 - 6481) < (192 - (88 + 30)))) then
+			if (((5306 - (720 + 51)) == (10088 - 5553)) and v24(v90.ArcaneIntellect)) then
+				return "arcane_intellect precombat 2";
+			end
+		end
+		if ((v90.MirrorImage:IsCastable() and v94.TargetIsValid() and v59 and v86) or ((4785 - (421 + 1355)) <= (3472 - 1367))) then
+			if (((899 + 931) < (4752 - (286 + 797))) and v24(v90.MirrorImage)) then
+				return "mirror_image precombat 2";
+			end
+		end
+		if ((v90.Pyroblast:IsReady() and v46 and not v14:IsCasting(v90.Pyroblast)) or ((5227 - 3797) >= (5982 - 2370))) then
+			if (((3122 - (397 + 42)) >= (769 + 1691)) and v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), true)) then
+				return "pyroblast precombat 4";
+			end
+		end
+		if ((v90.Fireball:IsReady() and v41) or ((2604 - (24 + 776)) >= (5045 - 1770))) then
+			if (v24(v90.Fireball, not v15:IsSpellInRange(v90.Fireball), true) or ((2202 - (222 + 563)) > (7995 - 4366))) then
+				return "fireball precombat 6";
+			end
+		end
+	end
+	local function v146()
 		local v169 = 0 + 0;
 		while true do
-			if (((2683 - 1700) <= (2667 - (464 + 395))) and ((2 - 1) == v169)) then
-				v109 = v114;
-				if ((v89.Firestarter:IsAvailable() and not v96) or ((1033 + 1117) <= (2034 - (467 + 370)))) then
-					v109 = v29(v133(), v109);
+			if (((4985 - (23 + 167)) > (2200 - (690 + 1108))) and (v169 == (1 + 0))) then
+				if (((3970 + 843) > (4413 - (40 + 808))) and v90.DragonsBreath:IsReady() and v39 and v90.AlexstraszasFury:IsAvailable() and v120 and v14:BuffDown(v90.HotStreakBuff) and (v14:BuffUp(v90.FeeltheBurnBuff) or (v10.CombatTime() > (3 + 12))) and not v136() and (v134() == (0 - 0)) and not v90.TemperedFlames:IsAvailable()) then
+					if (((3739 + 173) == (2070 + 1842)) and v24(v90.DragonsBreath, not v15:IsInRange(6 + 4))) then
+						return "dragons_breath active_talents 6";
+					end
 				end
-				v169 = 3 - 1;
-			end
-			if (((2767 + 1002) >= (4021 - 2848)) and (v169 == (1 + 1))) then
-				if (((3454 - 1969) == (2005 - (150 + 370))) and v89.SunKingsBlessing:IsAvailable() and v132() and v13:BuffDown(v89.FuryoftheSunKingBuff)) then
-					v109 = v29((v116 - v13:BuffStack(v89.SunKingsBlessingBuff)) * (1285 - (74 + 1208)) * v124, v109);
-				end
-				v109 = v29(v13:BuffRemains(v89.CombustionBuff), v109);
-				v169 = 7 - 4;
-			end
-			if ((v169 == (14 - 11)) or ((2359 + 956) <= (3172 - (14 + 376)))) then
-				if (((v114 + ((208 - 88) * ((1 + 0) - ((0.4 + 0 + ((0.2 + 0) * v27(v89.Firestarter:IsAvailable()))) * v27(v89.Kindling:IsAvailable()))))) <= v109) or (v109 > (v123 - (58 - 38))) or ((660 + 216) >= (3042 - (23 + 55)))) then
-					v109 = v114;
+				if (((3392 - (47 + 524)) <= (3131 + 1693)) and v90.DragonsBreath:IsReady() and v39 and v90.AlexstraszasFury:IsAvailable() and v120 and v14:BuffDown(v90.HotStreakBuff) and (v14:BuffUp(v90.FeeltheBurnBuff) or (v10.CombatTime() > (41 - 26))) and not v136() and v90.TemperedFlames:IsAvailable()) then
+					if (((2598 - 860) <= (5006 - 2811)) and v24(v90.DragonsBreath, not v15:IsInRange(1736 - (1165 + 561)))) then
+						return "dragons_breath active_talents 8";
+					end
 				end
 				break;
 			end
-			if (((0 - 0) == v169) or ((1490 + 742) > (2243 + 254))) then
-				v114 = v89.Combustion:CooldownRemains() * v110;
-				v115 = ((v89.Fireball:CastTime() * v27(v125 < v99)) + (v89.Flamestrike:CastTime() * v27(v125 >= v99))) - v104;
-				v169 = 1 - 0;
-			end
-		end
-	end
-	local function v149()
-		if ((v89.FireBlast:IsReady() and v39 and not v137() and not v113 and v13:BuffDown(v89.HotStreakBuff) and ((v27(v13:BuffUp(v89.HeatingUpBuff)) + v139()) == (1 + 0)) and (v89.ShiftingPower:CooldownUp() or (v89.FireBlast:Charges() > (902 - (652 + 249))) or (v13:BuffRemains(v89.FeeltheBurnBuff) < ((5 - 3) * v124)))) or ((3978 - (708 + 1160)) <= (901 - 569))) then
-			if (((6720 - 3034) > (3199 - (10 + 17))) and v23(v89.FireBlast, not v14:IsSpellInRange(v89.FireBlast), false, true)) then
-				return "fire_blast firestarter_fire_blasts 2";
-			end
-		end
-		if ((v89.FireBlast:IsReady() and v39 and not v137() and not v113 and ((v27(v13:BuffUp(v89.HeatingUpBuff)) + v139()) == (1 + 0)) and v89.ShiftingPower:CooldownUp() and (not v13:HasTier(1762 - (1400 + 332), 3 - 1) or (v14:DebuffRemains(v89.CharringEmbersDebuff) > ((1910 - (242 + 1666)) * v124)))) or ((1915 + 2559) < (301 + 519))) then
-			if (((3647 + 632) >= (3822 - (850 + 90))) and v23(v89.FireBlast, not v14:IsSpellInRange(v89.FireBlast), false, true)) then
-				return "fire_blast firestarter_fire_blasts 4";
-			end
-		end
-	end
-	local function v150()
-		if ((v33 and v89.Flamestrike:IsReady() and v41 and (v125 >= v97) and v137()) or ((3553 - 1524) >= (4911 - (360 + 1030)))) then
-			if (v23(v91.FlamestrikeCursor, not v14:IsInRange(36 + 4), v13:BuffDown(v89.IceFloes)) or ((5749 - 3712) >= (6386 - 1744))) then
-				return "flamestrike standard_rotation 2";
-			end
-		end
-		if (((3381 - (909 + 752)) < (5681 - (109 + 1114))) and v89.Pyroblast:IsReady() and v45 and (v137())) then
-			if (v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), true) or ((797 - 361) > (1176 + 1845))) then
-				return "pyroblast standard_rotation 4";
-			end
-		end
-		if (((955 - (6 + 236)) <= (534 + 313)) and v33 and v89.Flamestrike:IsReady() and v41 and not v13:IsCasting(v89.Flamestrike) and (v125 >= v100) and v13:BuffUp(v89.FuryoftheSunKingBuff)) then
-			if (((1734 + 420) <= (9506 - 5475)) and v23(v91.FlamestrikeCursor, not v14:IsInRange(69 - 29), v13:BuffDown(v89.IceFloes))) then
-				return "flamestrike standard_rotation 12";
-			end
-		end
-		if (((5748 - (1076 + 57)) == (759 + 3856)) and v89.Scorch:IsReady() and v46 and v135() and (v14:DebuffRemains(v89.ImprovedScorchDebuff) < (v89.Pyroblast:CastTime() + ((694 - (579 + 110)) * v124))) and v13:BuffUp(v89.FuryoftheSunKingBuff) and not v13:IsCasting(v89.Scorch)) then
-			if (v23(v89.Scorch, not v14:IsSpellInRange(v89.Scorch), false) or ((300 + 3490) == (443 + 57))) then
-				return "scorch standard_rotation 13";
-			end
-		end
-		if (((48 + 41) < (628 - (174 + 233))) and v89.Pyroblast:IsReady() and v45 and not v13:IsCasting(v89.Pyroblast) and (v13:BuffUp(v89.FuryoftheSunKingBuff))) then
-			if (((5737 - 3683) >= (2493 - 1072)) and v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), v13:BuffDown(v89.IceFloes) and v13:BuffDown(v89.HotStreakBuff) and v13:BuffDown(v89.HyperthermiaBuff))) then
-				return "pyroblast standard_rotation 14";
-			end
-		end
-		if (((308 + 384) < (4232 - (663 + 511))) and v89.FireBlast:IsReady() and v39 and not v137() and not v132() and not v113 and v13:BuffDown(v89.FuryoftheSunKingBuff) and ((((v13:IsCasting(v89.Fireball) and ((v89.Fireball:ExecuteRemains() < (0.5 + 0)) or not v89.Hyperthermia:IsAvailable())) or (v13:IsCasting(v89.Pyroblast) and ((v89.Pyroblast:ExecuteRemains() < (0.5 + 0)) or not v89.Hyperthermia:IsAvailable()))) and v13:BuffUp(v89.HeatingUpBuff)) or (v134() and (not v135() or (v14:DebuffStack(v89.ImprovedScorchDebuff) == v117) or (v89.FireBlast:FullRechargeTime() < (9 - 6))) and ((v13:BuffUp(v89.HeatingUpBuff) and not v13:IsCasting(v89.Scorch)) or (v13:BuffDown(v89.HotStreakBuff) and v13:BuffDown(v89.HeatingUpBuff) and v13:IsCasting(v89.Scorch) and (v139() == (0 + 0))))))) then
-			if (v23(v89.FireBlast, not v14:IsSpellInRange(v89.FireBlast), false, true) or ((7660 - 4406) == (4006 - 2351))) then
-				return "fire_blast standard_rotation 16";
-			end
-		end
-		if ((v89.Pyroblast:IsReady() and v45 and (v13:IsCasting(v89.Scorch) or v13:PrevGCDP(1 + 0, v89.Scorch)) and v13:BuffUp(v89.HeatingUpBuff) and v134() and (v125 < v97)) or ((2522 - 1226) == (3500 + 1410))) then
-			if (((308 + 3060) == (4090 - (478 + 244))) and v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), v13:BuffDown(v89.IceFloes) and v13:BuffDown(v89.HotStreakBuff) and v13:BuffDown(v89.HyperthermiaBuff))) then
-				return "pyroblast standard_rotation 18";
-			end
-		end
-		if (((3160 - (440 + 77)) < (1735 + 2080)) and v89.Scorch:IsReady() and v46 and v135() and (v14:DebuffRemains(v89.ImprovedScorchDebuff) < ((14 - 10) * v124))) then
-			if (((3469 - (655 + 901)) > (92 + 401)) and v23(v89.Scorch, not v14:IsSpellInRange(v89.Scorch), false)) then
-				return "scorch standard_rotation 19";
-			end
-		end
-		if (((3641 + 1114) > (2315 + 1113)) and v89.PhoenixFlames:IsCastable() and v44 and v89.AlexstraszasFury:IsAvailable() and (not v89.FeeltheBurn:IsAvailable() or (v13:BuffRemains(v89.FeeltheBurnBuff) < ((7 - 5) * v124)))) then
-			if (((2826 - (695 + 750)) <= (8089 - 5720)) and v23(v89.PhoenixFlames, not v14:IsSpellInRange(v89.PhoenixFlames), false)) then
-				return "phoenix_flames standard_rotation 20";
-			end
-		end
-		if ((v89.PhoenixFlames:IsCastable() and v44 and v13:HasTier(46 - 16, 7 - 5) and (v14:DebuffRemains(v89.CharringEmbersDebuff) < ((353 - (285 + 66)) * v124)) and v13:BuffDown(v89.HotStreakBuff)) or ((11289 - 6446) == (5394 - (682 + 628)))) then
-			if (((753 + 3916) > (662 - (176 + 123))) and v23(v89.PhoenixFlames, not v14:IsSpellInRange(v89.PhoenixFlames), false)) then
-				return "phoenix_flames standard_rotation 21";
-			end
-		end
-		if ((v89.Scorch:IsReady() and v46 and v135() and (v14:DebuffStack(v89.ImprovedScorchDebuff) < v117)) or ((786 + 1091) >= (2277 + 861))) then
-			if (((5011 - (239 + 30)) >= (986 + 2640)) and v23(v89.Scorch, not v14:IsSpellInRange(v89.Scorch), false)) then
-				return "scorch standard_rotation 22";
-			end
-		end
-		if ((v89.PhoenixFlames:IsCastable() and v44 and not v89.AlexstraszasFury:IsAvailable() and v13:BuffDown(v89.HotStreakBuff) and not v112 and v13:BuffUp(v89.FlamesFuryBuff)) or ((4364 + 176) == (1620 - 704))) then
-			if (v23(v89.PhoenixFlames, not v14:IsSpellInRange(v89.PhoenixFlames), false) or ((3606 - 2450) > (4660 - (306 + 9)))) then
-				return "phoenix_flames standard_rotation 24";
-			end
-		end
-		if (((7806 - 5569) < (739 + 3510)) and v89.PhoenixFlames:IsCastable() and v44 and v89.AlexstraszasFury:IsAvailable() and v13:BuffDown(v89.HotStreakBuff) and (v139() == (0 + 0)) and ((not v112 and v13:BuffUp(v89.FlamesFuryBuff)) or (v89.PhoenixFlames:ChargesFractional() > (1.5 + 1)) or ((v89.PhoenixFlames:ChargesFractional() > (2.5 - 1)) and (not v89.FeeltheBurn:IsAvailable() or (v13:BuffRemains(v89.FeeltheBurnBuff) < ((1378 - (1140 + 235)) * v124)))))) then
-			if (v23(v89.PhoenixFlames, not v14:IsSpellInRange(v89.PhoenixFlames), false) or ((1708 + 975) < (22 + 1))) then
-				return "phoenix_flames standard_rotation 26";
-			end
-		end
-		v31 = v145();
-		if (((179 + 518) <= (878 - (33 + 19))) and v31) then
-			return v31;
-		end
-		if (((399 + 706) <= (3524 - 2348)) and v33 and v89.DragonsBreath:IsReady() and v38 and (v127 > (1 + 0)) and v89.AlexstraszasFury:IsAvailable()) then
-			if (((6626 - 3247) <= (3575 + 237)) and v23(v89.DragonsBreath, not v14:IsInRange(699 - (586 + 103)))) then
-				return "dragons_breath standard_rotation 28";
-			end
-		end
-		if ((v89.Scorch:IsReady() and v46 and (v134())) or ((72 + 716) >= (4974 - 3358))) then
-			if (((3342 - (1309 + 179)) <= (6099 - 2720)) and v23(v89.Scorch, not v14:IsSpellInRange(v89.Scorch), false)) then
-				return "scorch standard_rotation 30";
-			end
-		end
-		if (((1980 + 2569) == (12216 - 7667)) and v33 and v89.ArcaneExplosion:IsReady() and v36 and (v128 >= v101) and (v13:ManaPercentageP() >= v102)) then
-			if (v23(v89.ArcaneExplosion, not v14:IsInRange(7 + 1)) or ((6420 - 3398) >= (6025 - 3001))) then
-				return "arcane_explosion standard_rotation 32";
-			end
-		end
-		if (((5429 - (295 + 314)) > (5398 - 3200)) and v33 and v89.Flamestrike:IsReady() and v41 and (v125 >= v98)) then
-			if (v23(v91.FlamestrikeCursor, not v14:IsInRange(2002 - (1300 + 662))) or ((3331 - 2270) >= (6646 - (1178 + 577)))) then
-				return "flamestrike standard_rotation 34";
-			end
-		end
-		if (((709 + 655) <= (13222 - 8749)) and v89.Pyroblast:IsReady() and v45 and v89.TemperedFlames:IsAvailable() and v13:BuffDown(v89.FlameAccelerantBuff)) then
-			if (v23(v89.Pyroblast, not v14:IsSpellInRange(v89.Pyroblast), v13:BuffDown(v89.IceFloes) and v13:BuffDown(v89.HotStreakBuff) and v13:BuffDown(v89.HyperthermiaBuff)) or ((5000 - (851 + 554)) <= (3 + 0))) then
-				return "pyroblast standard_rotation 35";
-			end
-		end
-		if ((v89.Fireball:IsReady() and v40 and not v137()) or ((12956 - 8284) == (8365 - 4513))) then
-			if (((1861 - (115 + 187)) == (1194 + 365)) and v23(v89.Fireball, not v14:IsSpellInRange(v89.Fireball), v13:BuffDown(v89.IceFloes))) then
-				return "fireball standard_rotation 36";
-			end
-		end
-	end
-	local function v151()
-		local v170 = 0 + 0;
-		while true do
-			if ((v170 == (0 - 0)) or ((2913 - (160 + 1001)) <= (690 + 98))) then
-				if (not v95 or ((2696 + 1211) == (361 - 184))) then
-					v148();
-				end
-				if (((3828 - (237 + 121)) > (1452 - (525 + 372))) and v34 and v87 and v89.TimeWarp:IsReady() and v13:BloodlustExhaustUp() and v89.TemporalWarp:IsAvailable() and (v132() or (v123 < (75 - 35)))) then
-					if (v23(v89.TimeWarp, not v14:IsInRange(131 - 91)) or ((1114 - (96 + 46)) == (1422 - (643 + 134)))) then
-						return "time_warp combustion_cooldowns 12";
+			if (((2 + 39) <= (9347 - 6329)) and (v169 == (0 + 0))) then
+				if (((2624 - (341 + 138)) <= (1108 + 2996)) and v90.LivingBomb:IsReady() and v43 and (v128 > (1 - 0)) and v120 and ((v110 > v90.LivingBomb:CooldownRemains()) or (v110 <= (326 - (89 + 237))))) then
+					if (((8650 - 5961) < (10200 - 5355)) and v24(v90.LivingBomb, not v15:IsSpellInRange(v90.LivingBomb), v14:BuffDown(v90.IceFloes))) then
+						return "living_bomb active_talents 2";
 					end
 				end
-				if (((1149 + 2033) >= (5071 - 2956)) and (v74 < v123)) then
-					if (((14453 - 10560) < (4248 + 181)) and v82 and ((v34 and v83) or not v83)) then
-						local v236 = 0 - 0;
+				if ((v90.Meteor:IsReady() and v44 and (v75 < v124) and ((v110 <= (881 - (581 + 300))) or (v14:BuffRemains(v90.CombustionBuff) > v90.Meteor:TravelTime()) or (not v90.SunKingsBlessing:IsAvailable() and (((1265 - (855 + 365)) < v110) or (v124 < v110))))) or ((5515 - 3193) > (857 + 1765))) then
+					if (v24(v92.MeteorCursor, not v15:IsInRange(1275 - (1030 + 205))) or ((4257 + 277) == (1937 + 145))) then
+						return "meteor active_talents 4";
+					end
+				end
+				v169 = 287 - (156 + 130);
+			end
+		end
+	end
+	local function v147()
+		local v170 = 0 - 0;
+		local v171;
+		while true do
+			if (((0 - 0) == v170) or ((3217 - 1646) > (492 + 1375))) then
+				v171 = v94.HandleDPSPotion(v14:BuffUp(v90.CombustionBuff));
+				if (v171 or ((1548 + 1106) >= (3065 - (10 + 59)))) then
+					return v171;
+				end
+				v170 = 1 + 0;
+			end
+			if (((19590 - 15612) > (3267 - (671 + 492))) and (v170 == (2 + 0))) then
+				if (((4210 - (369 + 846)) > (408 + 1133)) and (v75 < v124)) then
+					if (((2773 + 476) > (2898 - (1036 + 909))) and v83 and ((v35 and v84) or not v84)) then
+						local v242 = 0 + 0;
 						while true do
-							if (((0 - 0) == v236) or ((3586 - (316 + 403)) < (1267 + 638))) then
-								v31 = v140();
-								if (v31 or ((4937 - 3141) >= (1465 + 2586))) then
-									return v31;
+							if ((v242 == (0 - 0)) or ((3476 - (11 + 192)) > (2311 + 2262))) then
+								v32 = v141();
+								if (v32 or ((3326 - (135 + 40)) < (3110 - 1826))) then
+									return v32;
 								end
 								break;
 							end
 						end
 					end
 				end
-				v111 = v109 > v89.ShiftingPower:CooldownRemains();
-				v170 = 2 - 1;
+				break;
 			end
-			if (((1148 + 471) <= (1211 + 2545)) and (v170 == (3 - 2))) then
-				v113 = v119 and (((v89.FireBlast:ChargesFractional() + ((v109 + (v136() * v27(v111))) / v89.FireBlast:Cooldown())) - (4 - 3)) < ((v89.FireBlast:MaxCharges() + (v105 / v89.FireBlast:Cooldown())) - (((24 - 12) / v89.FireBlast:Cooldown()) % (1 + 0)))) and (v109 < v123);
-				if (((1188 - 584) == (30 + 574)) and not v95 and ((v109 <= (0 - 0)) or v118 or ((v109 < v115) and (v89.Combustion:CooldownRemains() < v115)))) then
-					local v228 = 17 - (12 + 5);
+			if ((v170 == (1 + 0)) or ((4075 - 2225) == (2291 - 762))) then
+				if (((997 - (50 + 126)) < (5911 - 3788)) and v82 and ((v85 and v35) or not v85) and (v75 < v124)) then
+					local v233 = 0 + 0;
 					while true do
-						if (((0 - 0) == v228) or ((9567 - 5083) == (1913 - 1013))) then
-							v31 = v147();
-							if (v31 or ((11057 - 6598) <= (226 + 887))) then
-								return v31;
+						if (((2315 - (1233 + 180)) < (3294 - (522 + 447))) and (v233 == (1421 - (107 + 1314)))) then
+							if (((399 + 459) <= (9025 - 6063)) and v90.BloodFury:IsCastable()) then
+								if (v24(v90.BloodFury) or ((1676 + 2270) < (2557 - 1269))) then
+									return "blood_fury combustion_cooldowns 4";
+								end
+							end
+							if ((v90.Berserking:IsCastable() and v119) or ((12827 - 9585) == (2477 - (716 + 1194)))) then
+								if (v24(v90.Berserking) or ((15 + 832) >= (136 + 1127))) then
+									return "berserking combustion_cooldowns 6";
+								end
+							end
+							v233 = 504 - (74 + 429);
+						end
+						if ((v233 == (1 - 0)) or ((1117 + 1136) == (4236 - 2385))) then
+							if (v90.Fireblood:IsCastable() or ((1477 + 610) > (7312 - 4940))) then
+								if (v24(v90.Fireblood) or ((10990 - 6545) < (4582 - (279 + 154)))) then
+									return "fireblood combustion_cooldowns 8";
+								end
+							end
+							if (v90.AncestralCall:IsCastable() or ((2596 - (454 + 324)) == (67 + 18))) then
+								if (((647 - (12 + 5)) < (1147 + 980)) and v24(v90.AncestralCall)) then
+									return "ancestral_call combustion_cooldowns 10";
+								end
 							end
 							break;
 						end
 					end
 				end
-				if (((5605 - (1656 + 317)) > (3028 + 370)) and not v113 and v89.SunKingsBlessing:IsAvailable()) then
-					v113 = v134() and (v89.FireBlast:FullRechargeTime() > ((3 + 0) * v124));
+				if ((v88 and v90.TimeWarp:IsReady() and v90.TemporalWarp:IsAvailable() and v14:BloodlustExhaustUp()) or ((4937 - 2999) == (929 + 1585))) then
+					if (((5348 - (277 + 816)) >= (234 - 179)) and v24(v90.TimeWarp, nil, nil, true)) then
+						return "time_warp combustion_cooldowns 12";
+					end
 				end
-				if (((10853 - 6771) <= (24199 - 19282)) and v89.ShiftingPower:IsReady() and ((v34 and v52) or not v52) and v50 and (v74 < v123) and v119 and ((v89.FireBlast:Charges() == (354 - (5 + 349))) or v113) and (not v135() or ((v14:DebuffRemains(v89.ImprovedScorchDebuff) > (v89.ShiftingPower:CastTime() + v89.Scorch:CastTime())) and v13:BuffDown(v89.FuryoftheSunKingBuff))) and v13:BuffDown(v89.HotStreakBuff) and v111) then
-					if (((22951 - 18119) >= (2657 - (266 + 1005))) and v23(v89.ShiftingPower, not v14:IsInRange(27 + 13), true)) then
+				v170 = 1185 - (1058 + 125);
+			end
+		end
+	end
+	local function v148()
+		if (((563 + 2436) > (2131 - (815 + 160))) and v90.LightsJudgment:IsCastable() and v82 and ((v85 and v35) or not v85) and (v75 < v124) and v120) then
+			if (((10083 - 7733) > (2741 - 1586)) and v24(v90.LightsJudgment, not v15:IsSpellInRange(v90.LightsJudgment))) then
+				return "lights_judgment combustion_phase 2";
+			end
+		end
+		if (((962 + 3067) <= (14186 - 9333)) and v90.BagofTricks:IsCastable() and v82 and ((v85 and v35) or not v85) and (v75 < v124) and v120) then
+			if (v24(v90.BagofTricks) or ((2414 - (41 + 1857)) > (5327 - (1222 + 671)))) then
+				return "bag_of_tricks combustion_phase 4";
+			end
+		end
+		if (((10456 - 6410) >= (4358 - 1325)) and v90.LivingBomb:IsReady() and v34 and v43 and (v128 > (1183 - (229 + 953))) and v120) then
+			if (v24(v90.LivingBomb, not v15:IsSpellInRange(v90.LivingBomb), v14:BuffDown(v90.IceFloes)) or ((4493 - (1111 + 663)) <= (3026 - (874 + 705)))) then
+				return "living_bomb combustion_phase 6";
+			end
+		end
+		if ((v14:BuffRemains(v90.CombustionBuff) > v107) or (v124 < (3 + 17)) or ((2821 + 1313) < (8160 - 4234))) then
+			v32 = v147();
+			if (v32 or ((5 + 159) >= (3464 - (642 + 37)))) then
+				return v32;
+			end
+		end
+		if ((v90.PhoenixFlames:IsCastable() and v45 and v14:BuffDown(v90.CombustionBuff) and v14:HasTier(7 + 23, 1 + 1) and not v90.PhoenixFlames:InFlight() and (v15:DebuffRemains(v90.CharringEmbersDebuff) < ((9 - 5) * v125)) and v14:BuffDown(v90.HotStreakBuff)) or ((979 - (233 + 221)) == (4876 - 2767))) then
+			if (((30 + 3) == (1574 - (718 + 823))) and v24(v90.PhoenixFlames, not v15:IsSpellInRange(v90.PhoenixFlames), false)) then
+				return "phoenix_flames combustion_phase 8";
+			end
+		end
+		v32 = v146();
+		if (((1922 + 1132) <= (4820 - (266 + 539))) and v32) then
+			return v32;
+		end
+		if (((5297 - 3426) < (4607 - (636 + 589))) and v90.Combustion:IsReady() and v50 and ((v52 and v35) or not v52) and (v75 < v124) and (v140() == (0 - 0)) and v120 and (v110 <= (0 - 0)) and ((v14:IsCasting(v90.Scorch) and (v90.Scorch:ExecuteRemains() < v105)) or (v14:IsCasting(v90.Fireball) and (v90.Fireball:ExecuteRemains() < v105)) or (v14:IsCasting(v90.Pyroblast) and (v90.Pyroblast:ExecuteRemains() < v105)) or (v14:IsCasting(v90.Flamestrike) and (v90.Flamestrike:ExecuteRemains() < v105)) or (v90.Meteor:InFlight() and (v90.Meteor:InFlightRemains() < v105)))) then
+			if (((1025 + 268) <= (787 + 1379)) and v24(v90.Combustion, not v15:IsInRange(1055 - (657 + 358)), nil, true)) then
+				return "combustion combustion_phase 10";
+			end
+		end
+		if ((v90.FireBlast:IsReady() and v40 and not v138() and not v114 and (not v136() or v14:IsCasting(v90.Scorch) or (v15:DebuffRemains(v90.ImprovedScorchDebuff) > ((10 - 6) * v125))) and (v14:BuffDown(v90.FuryoftheSunKingBuff) or v14:IsCasting(v90.Pyroblast)) and v119 and v14:BuffDown(v90.HyperthermiaBuff) and v14:BuffDown(v90.HotStreakBuff) and ((v140() + (v28(v14:BuffUp(v90.HeatingUpBuff)) * v28(v14:GCDRemains() > (0 - 0)))) < (1189 - (1151 + 36)))) or ((2491 + 88) < (33 + 90))) then
+			if (v24(v90.FireBlast, not v15:IsSpellInRange(v90.FireBlast), false, true) or ((2526 - 1680) >= (4200 - (1552 + 280)))) then
+				return "fire_blast combustion_phase 12";
+			end
+		end
+		if ((v34 and v90.Flamestrike:IsReady() and v42 and not v14:IsCasting(v90.Flamestrike) and v120 and v14:BuffUp(v90.FuryoftheSunKingBuff) and (v14:BuffRemains(v90.FuryoftheSunKingBuff) > v90.Flamestrike:CastTime()) and (v90.Combustion:CooldownRemains() < v90.Flamestrike:CastTime()) and (v127 >= v101)) or ((4846 - (64 + 770)) <= (2280 + 1078))) then
+			if (((3391 - 1897) <= (534 + 2471)) and v24(v92.FlamestrikeCursor, not v15:IsInRange(1283 - (157 + 1086)), v14:BuffDown(v90.IceFloes))) then
+				return "flamestrike combustion_phase 12";
+			end
+		end
+		if ((v90.Pyroblast:IsReady() and v46 and not v14:IsCasting(v90.Pyroblast) and v120 and v14:BuffUp(v90.FuryoftheSunKingBuff) and (v14:BuffRemains(v90.FuryoftheSunKingBuff) > v90.Pyroblast:CastTime())) or ((6226 - 3115) == (9346 - 7212))) then
+			if (((3612 - 1257) == (3213 - 858)) and v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), v14:BuffDown(v90.IceFloes) and v14:BuffDown(v90.HotStreakBuff) and v14:BuffDown(v90.HyperthermiaBuff))) then
+				return "pyroblast combustion_phase 14";
+			end
+		end
+		if ((v90.Fireball:IsReady() and v41 and v120 and (v90.Combustion:CooldownRemains() < v90.Fireball:CastTime()) and (v127 < (821 - (599 + 220))) and not v136()) or ((1170 - 582) <= (2363 - (1813 + 118)))) then
+			if (((3507 + 1290) >= (5112 - (841 + 376))) and v24(v90.Fireball, not v15:IsSpellInRange(v90.Fireball), v14:BuffDown(v90.IceFloes))) then
+				return "fireball combustion_phase 16";
+			end
+		end
+		if (((5012 - 1435) == (831 + 2746)) and v90.Scorch:IsReady() and v47 and v120 and (v90.Combustion:CooldownRemains() < v90.Scorch:CastTime())) then
+			if (((10355 - 6561) > (4552 - (464 + 395))) and v24(v90.Scorch, not v15:IsSpellInRange(v90.Scorch), false)) then
+				return "scorch combustion_phase 18";
+			end
+		end
+		if ((v90.FireBlast:IsReady() and v40 and not v138() and not v114 and (not v136() or v14:IsCasting(v90.Scorch) or (v15:DebuffRemains(v90.ImprovedScorchDebuff) > ((10 - 6) * v125))) and (v14:BuffDown(v90.FuryoftheSunKingBuff) or v14:IsCasting(v90.Pyroblast)) and v119 and v14:BuffDown(v90.HyperthermiaBuff) and v14:BuffDown(v90.HotStreakBuff) and ((v140() + (v28(v14:BuffUp(v90.HeatingUpBuff)) * v28(v14:GCDRemains() > (0 + 0)))) < (839 - (467 + 370)))) or ((2634 - 1359) == (3010 + 1090))) then
+			if (v24(v90.FireBlast, not v15:IsSpellInRange(v90.FireBlast), false, true) or ((5453 - 3862) >= (559 + 3021))) then
+				return "fire_blast combustion_phase 20";
+			end
+		end
+		if (((2286 - 1303) <= (2328 - (150 + 370))) and v34 and v90.Flamestrike:IsReady() and v42 and ((v14:BuffUp(v90.HotStreakBuff) and (v127 >= v100)) or (v14:BuffUp(v90.HyperthermiaBuff) and (v127 >= (v100 - v28(v90.Hyperthermia:IsAvailable())))))) then
+			if (v24(v92.FlamestrikeCursor, not v15:IsInRange(1322 - (74 + 1208)), v14:BuffDown(v90.IceFloes)) or ((5288 - 3138) <= (5676 - 4479))) then
+				return "flamestrike combustion_phase 22";
+			end
+		end
+		if (((2682 + 1087) >= (1563 - (14 + 376))) and v90.Pyroblast:IsReady() and v46 and (v14:BuffUp(v90.HyperthermiaBuff))) then
+			if (((2575 - 1090) == (961 + 524)) and v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), v14:BuffDown(v90.IceFloes) and v14:BuffDown(v90.HotStreakBuff) and v14:BuffDown(v90.HyperthermiaBuff))) then
+				return "pyroblast combustion_phase 24";
+			end
+		end
+		if ((v90.Pyroblast:IsReady() and v46 and v14:BuffUp(v90.HotStreakBuff) and v119) or ((2913 + 402) <= (2654 + 128))) then
+			if (v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), v14:BuffDown(v90.IceFloes) and v14:BuffDown(v90.HotStreakBuff) and v14:BuffDown(v90.HyperthermiaBuff)) or ((2566 - 1690) >= (2230 + 734))) then
+				return "pyroblast combustion_phase 26";
+			end
+		end
+		if ((v90.Pyroblast:IsReady() and v46 and v14:PrevGCDP(79 - (23 + 55), v90.Scorch) and v14:BuffUp(v90.HeatingUpBuff) and (v127 < v100) and v119) or ((5289 - 3057) > (1667 + 830))) then
+			if (v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), v14:BuffDown(v90.IceFloes) and v14:BuffDown(v90.HotStreakBuff) and v14:BuffDown(v90.HyperthermiaBuff)) or ((1895 + 215) <= (514 - 182))) then
+				return "pyroblast combustion_phase 28";
+			end
+		end
+		if (((1160 + 2526) > (4073 - (652 + 249))) and v90.ShiftingPower:IsReady() and v51 and ((v53 and v35) or not v53) and (v75 < v124) and v119 and (v90.FireBlast:Charges() == (0 - 0)) and ((v90.PhoenixFlames:Charges() < v90.PhoenixFlames:MaxCharges()) or v90.AlexstraszasFury:IsAvailable()) and (v104 <= v127)) then
+			if (v24(v90.ShiftingPower, not v15:IsInRange(1908 - (708 + 1160))) or ((12144 - 7670) < (1495 - 675))) then
+				return "shifting_power combustion_phase 30";
+			end
+		end
+		if (((4306 - (10 + 17)) >= (648 + 2234)) and v34 and v90.Flamestrike:IsReady() and v42 and not v14:IsCasting(v90.Flamestrike) and v14:BuffUp(v90.FuryoftheSunKingBuff) and (v14:BuffRemains(v90.FuryoftheSunKingBuff) > v90.Flamestrike:CastTime()) and (v127 >= v101)) then
+			if (v24(v92.FlamestrikeCursor, not v15:IsInRange(1772 - (1400 + 332)), v14:BuffDown(v90.IceFloes)) or ((3891 - 1862) >= (5429 - (242 + 1666)))) then
+				return "flamestrike combustion_phase 32";
+			end
+		end
+		if ((v90.Pyroblast:IsReady() and v46 and not v14:IsCasting(v90.Pyroblast) and v14:BuffUp(v90.FuryoftheSunKingBuff) and (v14:BuffRemains(v90.FuryoftheSunKingBuff) > v90.Pyroblast:CastTime())) or ((872 + 1165) >= (1702 + 2940))) then
+			if (((1466 + 254) < (5398 - (850 + 90))) and v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), v14:BuffDown(v90.IceFloes) and v14:BuffDown(v90.HotStreakBuff) and v14:BuffDown(v90.HyperthermiaBuff))) then
+				return "pyroblast combustion_phase 34";
+			end
+		end
+		if ((v90.Scorch:IsReady() and v47 and v136() and (v15:DebuffRemains(v90.ImprovedScorchDebuff) < ((6 - 2) * v125)) and (v129 < v100)) or ((1826 - (360 + 1030)) > (2674 + 347))) then
+			if (((2011 - 1298) <= (1165 - 318)) and v24(v90.Scorch, not v15:IsSpellInRange(v90.Scorch), false)) then
+				return "scorch combustion_phase 36";
+			end
+		end
+		if (((3815 - (909 + 752)) <= (5254 - (109 + 1114))) and v90.PhoenixFlames:IsCastable() and v45 and v14:HasTier(54 - 24, 1 + 1) and (v90.PhoenixFlames:TravelTime() < v14:BuffRemains(v90.CombustionBuff)) and ((v28(v14:BuffUp(v90.HeatingUpBuff)) + v140()) < (244 - (6 + 236))) and ((v15:DebuffRemains(v90.CharringEmbersDebuff) < ((3 + 1) * v125)) or (v14:BuffStack(v90.FlamesFuryBuff) > (1 + 0)) or v14:BuffUp(v90.FlamesFuryBuff))) then
+			if (((10884 - 6269) == (8061 - 3446)) and v24(v90.PhoenixFlames, not v15:IsSpellInRange(v90.PhoenixFlames), false)) then
+				return "phoenix_flames combustion_phase 38";
+			end
+		end
+		if ((v90.Fireball:IsReady() and v41 and (v14:BuffRemains(v90.CombustionBuff) > v90.Fireball:CastTime()) and v14:BuffUp(v90.FlameAccelerantBuff)) or ((4923 - (1076 + 57)) == (83 + 417))) then
+			if (((778 - (579 + 110)) < (18 + 203)) and v24(v90.Fireball, not v15:IsSpellInRange(v90.Fireball), v14:BuffDown(v90.IceFloes))) then
+				return "fireball combustion_phase 40";
+			end
+		end
+		if (((1817 + 237) >= (755 + 666)) and v90.PhoenixFlames:IsCastable() and v45 and v14:HasTier(437 - (174 + 233), 5 - 3) and (v90.PhoenixFlames:TravelTime() < v121) and ((v28(v14:BuffUp(v90.HeatingUpBuff)) + v140()) < (3 - 1)) and ((v15:DebuffRemains(v90.CharringEmbersDebuff) < ((2 + 2) * v125)) or (v14:BuffStack(v90.FlamesFuryBuff) > (1175 - (663 + 511))) or v14:BuffUp(v90.FlamesFuryBuff))) then
+			if (((618 + 74) < (664 + 2394)) and v24(v90.PhoenixFlames, not v15:IsSpellInRange(v90.PhoenixFlames), false)) then
+				return "phoenix_flames combustion_phase 42";
+			end
+		end
+		if ((v90.Scorch:IsReady() and v47 and (v14:BuffRemains(v90.CombustionBuff) > v90.Scorch:CastTime()) and (v90.Scorch:CastTime() >= v125)) or ((10031 - 6777) == (1003 + 652))) then
+			if (v24(v90.Scorch, not v15:IsSpellInRange(v90.Scorch), false) or ((3050 - 1754) == (11886 - 6976))) then
+				return "scorch combustion_phase 44";
+			end
+		end
+		if (((1608 + 1760) == (6554 - 3186)) and v90.Fireball:IsReady() and v41 and (v14:BuffRemains(v90.CombustionBuff) > v90.Fireball:CastTime())) then
+			if (((1884 + 759) < (349 + 3466)) and v24(v90.Fireball, not v15:IsSpellInRange(v90.Fireball), v14:BuffDown(v90.IceFloes))) then
+				return "fireball combustion_phase 46";
+			end
+		end
+		if (((2635 - (478 + 244)) > (1010 - (440 + 77))) and v90.LivingBomb:IsReady() and v43 and (v14:BuffRemains(v90.CombustionBuff) < v125) and (v128 > (1 + 0))) then
+			if (((17403 - 12648) > (4984 - (655 + 901))) and v24(v90.LivingBomb, not v15:IsSpellInRange(v90.LivingBomb), v14:BuffDown(v90.IceFloes))) then
+				return "living_bomb combustion_phase 48";
+			end
+		end
+	end
+	local function v149()
+		local v172 = 0 + 0;
+		while true do
+			if (((1058 + 323) <= (1600 + 769)) and (v172 == (7 - 5))) then
+				if ((v90.SunKingsBlessing:IsAvailable() and v133() and v14:BuffDown(v90.FuryoftheSunKingBuff)) or ((6288 - (695 + 750)) == (13945 - 9861))) then
+					v110 = v30((v117 - v14:BuffStack(v90.SunKingsBlessingBuff)) * (3 - 0) * v125, v110);
+				end
+				v110 = v30(v14:BuffRemains(v90.CombustionBuff), v110);
+				v172 = 11 - 8;
+			end
+			if (((5020 - (285 + 66)) > (846 - 483)) and (v172 == (1310 - (682 + 628)))) then
+				v115 = v90.Combustion:CooldownRemains() * v111;
+				v116 = ((v90.Fireball:CastTime() * v28(v127 < v100)) + (v90.Flamestrike:CastTime() * v28(v127 >= v100))) - v105;
+				v172 = 1 + 0;
+			end
+			if ((v172 == (300 - (176 + 123))) or ((786 + 1091) >= (2277 + 861))) then
+				v110 = v115;
+				if (((5011 - (239 + 30)) >= (986 + 2640)) and v90.Firestarter:IsAvailable() and not v97) then
+					v110 = v30(v134(), v110);
+				end
+				v172 = 2 + 0;
+			end
+			if ((v172 == (4 - 1)) or ((14164 - 9624) == (1231 - (306 + 9)))) then
+				if (((v115 + ((418 - 298) * ((1 + 0) - ((0.4 + 0 + ((0.2 + 0) * v28(v90.Firestarter:IsAvailable()))) * v28(v90.Kindling:IsAvailable()))))) <= v110) or (v110 > (v124 - (57 - 37))) or ((2531 - (1140 + 235)) > (2766 + 1579))) then
+					v110 = v115;
+				end
+				break;
+			end
+		end
+	end
+	local function v150()
+		local v173 = 0 + 0;
+		while true do
+			if (((575 + 1662) < (4301 - (33 + 19))) and ((0 + 0) == v173)) then
+				if ((v90.FireBlast:IsReady() and v40 and not v138() and not v114 and v14:BuffDown(v90.HotStreakBuff) and ((v28(v14:BuffUp(v90.HeatingUpBuff)) + v140()) == (2 - 1)) and (v90.ShiftingPower:CooldownUp() or (v90.FireBlast:Charges() > (1 + 0)) or (v14:BuffRemains(v90.FeeltheBurnBuff) < ((3 - 1) * v125)))) or ((2516 + 167) < (712 - (586 + 103)))) then
+					if (((64 + 633) <= (2542 - 1716)) and v24(v90.FireBlast, not v15:IsSpellInRange(v90.FireBlast), false, true)) then
+						return "fire_blast firestarter_fire_blasts 2";
+					end
+				end
+				if (((2593 - (1309 + 179)) <= (2122 - 946)) and v90.FireBlast:IsReady() and v40 and not v138() and not v114 and ((v28(v14:BuffUp(v90.HeatingUpBuff)) + v140()) == (1 + 0)) and v90.ShiftingPower:CooldownUp() and (not v14:HasTier(80 - 50, 2 + 0) or (v15:DebuffRemains(v90.CharringEmbersDebuff) > ((3 - 1) * v125)))) then
+					if (((6732 - 3353) <= (4421 - (295 + 314))) and v24(v90.FireBlast, not v15:IsSpellInRange(v90.FireBlast), false, true)) then
+						return "fire_blast firestarter_fire_blasts 4";
+					end
+				end
+				break;
+			end
+		end
+	end
+	local function v151()
+		local v174 = 0 - 0;
+		while true do
+			if ((v174 == (1964 - (1300 + 662))) or ((2474 - 1686) >= (3371 - (1178 + 577)))) then
+				if (((963 + 891) <= (9988 - 6609)) and v90.Pyroblast:IsReady() and v46 and (v14:IsCasting(v90.Scorch) or v14:PrevGCDP(1406 - (851 + 554), v90.Scorch)) and v14:BuffUp(v90.HeatingUpBuff) and v135() and (v127 < v98)) then
+					if (((4023 + 526) == (12615 - 8066)) and v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), v14:BuffDown(v90.IceFloes) and v14:BuffDown(v90.HotStreakBuff) and v14:BuffDown(v90.HyperthermiaBuff))) then
+						return "pyroblast standard_rotation 18";
+					end
+				end
+				if ((v90.Scorch:IsReady() and v47 and v136() and (v15:DebuffRemains(v90.ImprovedScorchDebuff) < ((8 - 4) * v125))) or ((3324 - (115 + 187)) >= (2316 + 708))) then
+					if (((4564 + 256) > (8661 - 6463)) and v24(v90.Scorch, not v15:IsSpellInRange(v90.Scorch), false)) then
+						return "scorch standard_rotation 19";
+					end
+				end
+				if ((v90.PhoenixFlames:IsCastable() and v45 and v90.AlexstraszasFury:IsAvailable() and (not v90.FeeltheBurn:IsAvailable() or (v14:BuffRemains(v90.FeeltheBurnBuff) < ((1163 - (160 + 1001)) * v125)))) or ((929 + 132) >= (3375 + 1516))) then
+					if (((2791 - 1427) <= (4831 - (237 + 121))) and v24(v90.PhoenixFlames, not v15:IsSpellInRange(v90.PhoenixFlames), false)) then
+						return "phoenix_flames standard_rotation 20";
+					end
+				end
+				v174 = 900 - (525 + 372);
+			end
+			if ((v174 == (10 - 4)) or ((11811 - 8216) <= (145 - (96 + 46)))) then
+				if ((v34 and v90.Flamestrike:IsReady() and v42 and (v127 >= v99)) or ((5449 - (643 + 134)) == (1391 + 2461))) then
+					if (((3737 - 2178) == (5787 - 4228)) and v24(v92.FlamestrikeCursor, not v15:IsInRange(39 + 1))) then
+						return "flamestrike standard_rotation 34";
+					end
+				end
+				if ((v90.Pyroblast:IsReady() and v46 and v90.TemperedFlames:IsAvailable() and v14:BuffDown(v90.FlameAccelerantBuff)) or ((3438 - 1686) <= (1610 - 822))) then
+					if (v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), v14:BuffDown(v90.IceFloes) and v14:BuffDown(v90.HotStreakBuff) and v14:BuffDown(v90.HyperthermiaBuff)) or ((4626 - (316 + 403)) == (118 + 59))) then
+						return "pyroblast standard_rotation 35";
+					end
+				end
+				if (((9540 - 6070) > (201 + 354)) and v90.Fireball:IsReady() and v41 and not v138()) then
+					if (v24(v90.Fireball, not v15:IsSpellInRange(v90.Fireball), v14:BuffDown(v90.IceFloes)) or ((2447 - 1475) == (458 + 187))) then
+						return "fireball standard_rotation 36";
+					end
+				end
+				break;
+			end
+			if (((1026 + 2156) >= (7328 - 5213)) and (v174 == (19 - 15))) then
+				if (((8087 - 4194) < (254 + 4175)) and v90.PhoenixFlames:IsCastable() and v45 and v90.AlexstraszasFury:IsAvailable() and v14:BuffDown(v90.HotStreakBuff) and (v140() == (0 - 0)) and ((not v113 and v14:BuffUp(v90.FlamesFuryBuff)) or (v90.PhoenixFlames:ChargesFractional() > (1.5 + 1)) or ((v90.PhoenixFlames:ChargesFractional() > (2.5 - 1)) and (not v90.FeeltheBurn:IsAvailable() or (v14:BuffRemains(v90.FeeltheBurnBuff) < ((20 - (12 + 5)) * v125)))))) then
+					if (v24(v90.PhoenixFlames, not v15:IsSpellInRange(v90.PhoenixFlames), false) or ((11135 - 8268) < (4064 - 2159))) then
+						return "phoenix_flames standard_rotation 26";
+					end
+				end
+				v32 = v146();
+				if (v32 or ((3817 - 2021) >= (10045 - 5994))) then
+					return v32;
+				end
+				v174 = 2 + 3;
+			end
+			if (((3592 - (1656 + 317)) <= (3347 + 409)) and (v174 == (3 + 0))) then
+				if (((1605 - 1001) == (2972 - 2368)) and v90.PhoenixFlames:IsCastable() and v45 and v14:HasTier(384 - (5 + 349), 9 - 7) and (v15:DebuffRemains(v90.CharringEmbersDebuff) < ((1273 - (266 + 1005)) * v125)) and v14:BuffDown(v90.HotStreakBuff)) then
+					if (v24(v90.PhoenixFlames, not v15:IsSpellInRange(v90.PhoenixFlames), false) or ((2955 + 1529) == (3070 - 2170))) then
+						return "phoenix_flames standard_rotation 21";
+					end
+				end
+				if ((v90.Scorch:IsReady() and v47 and v136() and (v15:DebuffStack(v90.ImprovedScorchDebuff) < v118)) or ((5869 - 1410) <= (2809 - (561 + 1135)))) then
+					if (((4732 - 1100) > (11169 - 7771)) and v24(v90.Scorch, not v15:IsSpellInRange(v90.Scorch), false)) then
+						return "scorch standard_rotation 22";
+					end
+				end
+				if (((5148 - (507 + 559)) <= (12338 - 7421)) and v90.PhoenixFlames:IsCastable() and v45 and not v90.AlexstraszasFury:IsAvailable() and v14:BuffDown(v90.HotStreakBuff) and not v113 and v14:BuffUp(v90.FlamesFuryBuff)) then
+					if (((14943 - 10111) >= (1774 - (212 + 176))) and v24(v90.PhoenixFlames, not v15:IsSpellInRange(v90.PhoenixFlames), false)) then
+						return "phoenix_flames standard_rotation 24";
+					end
+				end
+				v174 = 909 - (250 + 655);
+			end
+			if (((373 - 236) == (238 - 101)) and (v174 == (1 - 0))) then
+				if ((v34 and v90.Flamestrike:IsReady() and v42 and not v14:IsCasting(v90.Flamestrike) and (v127 >= v101) and v14:BuffUp(v90.FuryoftheSunKingBuff)) or ((3526 - (1869 + 87)) >= (15025 - 10693))) then
+					if (v24(v92.FlamestrikeCursor, not v15:IsInRange(1941 - (484 + 1417)), v14:BuffDown(v90.IceFloes)) or ((8710 - 4646) <= (3047 - 1228))) then
+						return "flamestrike standard_rotation 12";
+					end
+				end
+				if ((v90.Scorch:IsReady() and v47 and v136() and (v15:DebuffRemains(v90.ImprovedScorchDebuff) < (v90.Pyroblast:CastTime() + ((778 - (48 + 725)) * v125))) and v14:BuffUp(v90.FuryoftheSunKingBuff) and not v14:IsCasting(v90.Scorch)) or ((8145 - 3159) < (4222 - 2648))) then
+					if (((2573 + 1853) > (459 - 287)) and v24(v90.Scorch, not v15:IsSpellInRange(v90.Scorch), false)) then
+						return "scorch standard_rotation 13";
+					end
+				end
+				if (((164 + 422) > (133 + 322)) and v90.Pyroblast:IsReady() and v46 and not v14:IsCasting(v90.Pyroblast) and (v14:BuffUp(v90.FuryoftheSunKingBuff))) then
+					if (((1679 - (152 + 701)) == (2137 - (430 + 881))) and v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), v14:BuffDown(v90.IceFloes) and v14:BuffDown(v90.HotStreakBuff) and v14:BuffDown(v90.HyperthermiaBuff))) then
+						return "pyroblast standard_rotation 14";
+					end
+				end
+				v174 = 1 + 1;
+			end
+			if ((v174 == (895 - (557 + 338))) or ((1188 + 2831) > (12514 - 8073))) then
+				if (((7063 - 5046) < (11320 - 7059)) and v34 and v90.Flamestrike:IsReady() and v42 and (v127 >= v98) and v138()) then
+					if (((10163 - 5447) > (881 - (499 + 302))) and v24(v92.FlamestrikeCursor, not v15:IsInRange(906 - (39 + 827)), v14:BuffDown(v90.IceFloes))) then
+						return "flamestrike standard_rotation 2";
+					end
+				end
+				if ((v90.Pyroblast:IsReady() and v46 and (v138())) or ((9681 - 6174) == (7307 - 4035))) then
+					if (v24(v90.Pyroblast, not v15:IsSpellInRange(v90.Pyroblast), true) or ((3479 - 2603) >= (4720 - 1645))) then
+						return "pyroblast standard_rotation 4";
+					end
+				end
+				if (((373 + 3979) > (7475 - 4921)) and v90.FireBlast:IsReady() and v40 and not v138() and not v133() and not v114 and v14:BuffDown(v90.FuryoftheSunKingBuff) and (((v14:IsCasting(v90.Fireball) or v14:IsCasting(v90.Pyroblast)) and v14:BuffUp(v90.HeatingUpBuff)) or (v135() and (not v136() or (v15:DebuffStack(v90.ImprovedScorchDebuff) == v118) or (v90.FireBlast:FullRechargeTime() < (1 + 2))) and ((v14:BuffUp(v90.HeatingUpBuff) and not v14:IsCasting(v90.Scorch)) or (v14:BuffDown(v90.HotStreakBuff) and v14:BuffDown(v90.HeatingUpBuff) and v14:IsCasting(v90.Scorch) and (v140() == (0 - 0))))))) then
+					if (v24(v90.FireBlast, not v15:IsSpellInRange(v90.FireBlast), false, true) or ((4510 - (103 + 1)) < (4597 - (475 + 79)))) then
+						return "fire_blast standard_rotation 6";
+					end
+				end
+				v174 = 2 - 1;
+			end
+			if ((v174 == (16 - 11)) or ((245 + 1644) >= (2978 + 405))) then
+				if (((3395 - (1395 + 108)) <= (7955 - 5221)) and v34 and v90.DragonsBreath:IsReady() and v39 and (v129 > (1205 - (7 + 1197))) and v90.AlexstraszasFury:IsAvailable()) then
+					if (((839 + 1084) < (774 + 1444)) and v24(v90.DragonsBreath, not v15:IsInRange(329 - (27 + 292)))) then
+						return "dragons_breath standard_rotation 28";
+					end
+				end
+				if (((6367 - 4194) > (482 - 103)) and v90.Scorch:IsReady() and v47 and (v135())) then
+					if (v24(v90.Scorch, not v15:IsSpellInRange(v90.Scorch), false) or ((10866 - 8275) == (6722 - 3313))) then
+						return "scorch standard_rotation 30";
+					end
+				end
+				if (((8596 - 4082) > (3463 - (43 + 96))) and v34 and v90.ArcaneExplosion:IsReady() and v37 and (v131 >= v102) and (v14:ManaPercentageP() >= v103)) then
+					if (v24(v90.ArcaneExplosion, not v15:IsInRange(32 - 24)) or ((470 - 262) >= (4007 + 821))) then
+						return "arcane_explosion standard_rotation 32";
+					end
+				end
+				v174 = 2 + 4;
+			end
+		end
+	end
+	local function v152()
+		local v175 = 0 - 0;
+		while true do
+			if (((1 + 1) == v175) or ((2966 - 1383) > (1123 + 2444))) then
+				if ((not v114 and v90.SunKingsBlessing:IsAvailable()) or ((97 + 1216) == (2545 - (1414 + 337)))) then
+					v114 = v135() and (v90.FireBlast:FullRechargeTime() > ((1943 - (1642 + 298)) * v125));
+				end
+				if (((8274 - 5100) > (8348 - 5446)) and v90.ShiftingPower:IsReady() and ((v35 and v53) or not v53) and v51 and (v75 < v124) and v120 and ((v90.FireBlast:Charges() == (0 - 0)) or v114) and (not v136() or ((v15:DebuffRemains(v90.ImprovedScorchDebuff) > (v90.ShiftingPower:CastTime() + v90.Scorch:CastTime())) and v14:BuffDown(v90.FuryoftheSunKingBuff))) and v14:BuffDown(v90.HotStreakBuff) and v112) then
+					if (((1356 + 2764) <= (3315 + 945)) and v24(v90.ShiftingPower, not v15:IsInRange(990 - (357 + 615)), true)) then
 						return "shifting_power main 12";
 					end
 				end
-				v170 = 6 - 4;
+				if ((v127 < v100) or ((620 + 263) > (11723 - 6945))) then
+					v113 = (v90.SunKingsBlessing:IsAvailable() or (((v110 + 6 + 1) < ((v90.PhoenixFlames:FullRechargeTime() + v90.PhoenixFlames:Cooldown()) - (v137() * v28(v112)))) and (v110 < v124))) and not v90.AlexstraszasFury:IsAvailable();
+				end
+				v175 = 6 - 3;
 			end
-			if (((179 - 42) == (1833 - (561 + 1135))) and ((2 - 0) == v170)) then
-				if ((v125 < v99) or ((5160 - 3590) >= (5398 - (507 + 559)))) then
-					v112 = (v89.SunKingsBlessing:IsAvailable() or (((v109 + (17 - 10)) < ((v89.PhoenixFlames:FullRechargeTime() + v89.PhoenixFlames:Cooldown()) - (v136() * v27(v111)))) and (v109 < v123))) and not v89.AlexstraszasFury:IsAvailable();
+			if (((0 + 0) == v175) or ((246 + 3374) >= (3075 + 1816))) then
+				if (((5559 - (384 + 917)) > (1634 - (128 + 569))) and not v96) then
+					v149();
 				end
-				if ((v125 >= v99) or ((12568 - 8504) <= (2207 - (212 + 176)))) then
-					v112 = (v89.SunKingsBlessing:IsAvailable() or ((v109 < (v89.PhoenixFlames:FullRechargeTime() - (v136() * v27(v111)))) and (v109 < v123))) and not v89.AlexstraszasFury:IsAvailable();
-				end
-				if ((v89.FireBlast:IsReady() and v39 and not v137() and not v113 and (v109 > (905 - (250 + 655))) and (v125 >= v98) and not v132() and v13:BuffDown(v89.HotStreakBuff) and ((v13:BuffUp(v89.HeatingUpBuff) and (v89.Flamestrike:ExecuteRemains() < (0.5 - 0))) or (v89.FireBlast:ChargesFractional() >= (2 - 0)))) or ((7800 - 2814) < (3530 - (1869 + 87)))) then
-					if (((15351 - 10925) > (2073 - (484 + 1417))) and v23(v89.FireBlast, not v14:IsSpellInRange(v89.FireBlast), false, true)) then
-						return "fire_blast main 14";
+				if ((v35 and v88 and v90.TimeWarp:IsReady() and v14:BloodlustExhaustUp() and v90.TemporalWarp:IsAvailable() and (v133() or (v124 < (1583 - (1407 + 136))))) or ((6756 - (687 + 1200)) < (2616 - (556 + 1154)))) then
+					if (v24(v90.TimeWarp, not v15:IsInRange(140 - 100)) or ((1320 - (9 + 86)) > (4649 - (275 + 146)))) then
+						return "time_warp combustion_cooldowns 12";
 					end
 				end
-				if (((1255 - 669) > (762 - 307)) and v119 and v132() and (v109 > (773 - (48 + 725)))) then
-					local v229 = 0 - 0;
+				if (((542 + 2786) > (2302 - (29 + 35))) and (v75 < v124)) then
+					if (((17014 - 13175) > (4196 - 2791)) and v83 and ((v35 and v84) or not v84)) then
+						local v243 = 0 - 0;
+						while true do
+							if ((v243 == (0 + 0)) or ((2305 - (53 + 959)) <= (915 - (312 + 96)))) then
+								v32 = v141();
+								if (v32 or ((5026 - 2130) < (1090 - (147 + 138)))) then
+									return v32;
+								end
+								break;
+							end
+						end
+					end
+				end
+				v175 = 900 - (813 + 86);
+			end
+			if (((2093 + 223) == (4290 - 1974)) and ((493 - (18 + 474)) == v175)) then
+				v112 = v110 > v90.ShiftingPower:CooldownRemains();
+				v114 = v120 and (((v90.FireBlast:ChargesFractional() + ((v110 + (v137() * v28(v112))) / v90.FireBlast:Cooldown())) - (1 + 0)) < ((v90.FireBlast:MaxCharges() + (v106 / v90.FireBlast:Cooldown())) - (((39 - 27) / v90.FireBlast:Cooldown()) % (1087 - (860 + 226))))) and (v110 < v124);
+				if ((not v96 and ((v110 <= (303 - (121 + 182))) or v119 or ((v110 < v116) and (v90.Combustion:CooldownRemains() < v116)))) or ((317 + 2253) == (2773 - (988 + 252)))) then
+					local v234 = 0 + 0;
 					while true do
-						if (((2215 - 1389) == (481 + 345)) and (v229 == (0 - 0))) then
-							v31 = v149();
-							if (v31 or ((1125 + 2894) > (1295 + 3146))) then
-								return v31;
+						if ((v234 == (0 + 0)) or ((2853 - (49 + 1921)) == (2350 - (223 + 667)))) then
+							v32 = v148();
+							if (v32 or ((4671 - (51 + 1)) <= (1718 - 719))) then
+								return v32;
 							end
 							break;
 						end
 					end
 				end
-				v170 = 856 - (152 + 701);
+				v175 = 3 - 1;
 			end
-			if (((3328 - (430 + 881)) < (1632 + 2629)) and (v170 == (898 - (557 + 338)))) then
-				if (((1394 + 3322) > (225 - 145)) and v89.FireBlast:IsReady() and v39 and not v137() and v13:IsCasting(v89.ShiftingPower) and (v89.FireBlast:FullRechargeTime() < v121)) then
-					if (v23(v89.FireBlast, not v14:IsSpellInRange(v89.FireBlast), false, true) or ((12280 - 8773) == (8692 - 5420))) then
-						return "fire_blast main 16";
-					end
-				end
-				if (((v109 > (0 - 0)) and v119) or ((1677 - (499 + 302)) >= (3941 - (39 + 827)))) then
-					local v230 = 0 - 0;
-					while true do
-						if (((9719 - 5367) > (10144 - 7590)) and (v230 == (0 - 0))) then
-							v31 = v150();
-							if (v31 or ((378 + 4028) < (11833 - 7790))) then
-								return v31;
-							end
-							break;
-						end
-					end
-				end
-				if ((v89.IceNova:IsCastable() and not v134()) or ((303 + 1586) >= (5353 - 1970))) then
-					if (((1996 - (103 + 1)) <= (3288 - (475 + 79))) and v23(v89.IceNova, not v14:IsSpellInRange(v89.IceNova))) then
-						return "ice_nova main 18";
-					end
-				end
-				if (((4156 - 2233) < (7097 - 4879)) and v89.Scorch:IsReady() and v46) then
-					if (((281 + 1892) > (334 + 45)) and v23(v89.Scorch, not v14:IsSpellInRange(v89.Scorch), false)) then
+			if ((v175 == (1130 - (146 + 979))) or ((963 + 2447) > (4721 - (311 + 294)))) then
+				if ((v90.Scorch:IsReady() and v47) or ((2518 - 1615) >= (1296 + 1763))) then
+					if (v24(v90.Scorch, not v15:IsSpellInRange(v90.Scorch), false) or ((5419 - (496 + 947)) < (4215 - (1233 + 125)))) then
 						return "scorch main 20";
 					end
 				end
 				break;
 			end
-		end
-	end
-	local function v152()
-		local v171 = 1503 - (1395 + 108);
-		while true do
-			if ((v171 == (17 - 11)) or ((3795 - (7 + 1197)) == (1487 + 1922))) then
-				v60 = EpicSettings.Settings['alterTimeHP'] or (0 + 0);
-				v61 = EpicSettings.Settings['blazingBarrierHP'] or (319 - (27 + 292));
-				v62 = EpicSettings.Settings['greaterInvisibilityHP'] or (0 - 0);
-				v63 = EpicSettings.Settings['iceBlockHP'] or (0 - 0);
-				v171 = 29 - 22;
+			if (((2001 + 2929) > (2070 + 237)) and (v175 == (1 + 3))) then
+				if ((v90.FireBlast:IsReady() and v40 and not v138() and v14:IsCasting(v90.ShiftingPower) and (v90.FireBlast:FullRechargeTime() < v122)) or ((5691 - (963 + 682)) < (1078 + 213))) then
+					if (v24(v90.FireBlast, not v15:IsSpellInRange(v90.FireBlast), false, true) or ((5745 - (504 + 1000)) == (2388 + 1157))) then
+						return "fire_blast main 16";
+					end
+				end
+				if (((v110 > (0 + 0)) and v120) or ((382 + 3666) > (6239 - 2007))) then
+					local v235 = 0 + 0;
+					while true do
+						if ((v235 == (0 + 0)) or ((1932 - (156 + 26)) >= (2001 + 1472))) then
+							v32 = v151();
+							if (((4952 - 1786) == (3330 - (149 + 15))) and v32) then
+								return v32;
+							end
+							break;
+						end
+					end
+				end
+				if (((2723 - (890 + 70)) < (3841 - (39 + 78))) and v90.IceNova:IsCastable() and not v135()) then
+					if (((539 - (14 + 468)) <= (5987 - 3264)) and v24(v90.IceNova, not v15:IsSpellInRange(v90.IceNova))) then
+						return "ice_nova main 18";
+					end
+				end
+				v175 = 13 - 8;
 			end
-			if (((8901 - 4387) > (6330 - 3006)) and (v171 == (141 - (43 + 96)))) then
-				v44 = EpicSettings.Settings['usePhoenixFlames'];
-				v45 = EpicSettings.Settings['usePyroblast'];
-				v46 = EpicSettings.Settings['useScorch'];
-				v47 = EpicSettings.Settings['useCounterspell'];
-				v171 = 12 - 9;
-			end
-			if ((v171 == (0 - 0)) or ((173 + 35) >= (1364 + 3464))) then
-				v36 = EpicSettings.Settings['useArcaneExplosion'];
-				v37 = EpicSettings.Settings['useArcaneIntellect'];
-				v38 = EpicSettings.Settings['useDragonsBreath'];
-				v39 = EpicSettings.Settings['useFireBlast'];
-				v171 = 1 - 0;
-			end
-			if ((v171 == (4 + 4)) or ((2966 - 1383) > (1123 + 2444))) then
-				v86 = EpicSettings.Settings['useSpellStealTarget'];
-				v87 = EpicSettings.Settings['useTimeWarpWithTalent'];
-				v88 = EpicSettings.Settings['useRemoveCurseWithAfflicted'];
-				break;
-			end
-			if ((v171 == (1 + 6)) or ((3064 - (1414 + 337)) == (2734 - (1642 + 298)))) then
-				v64 = EpicSettings.Settings['iceColdHP'] or (0 - 0);
-				v65 = EpicSettings.Settings['mirrorImageHP'] or (0 - 0);
-				v66 = EpicSettings.Settings['massBarrierHP'] or (0 - 0);
-				v85 = EpicSettings.Settings['mirrorImageBeforePull'];
-				v171 = 3 + 5;
-			end
-			if (((2470 + 704) > (3874 - (357 + 615))) and (v171 == (3 + 0))) then
-				v48 = EpicSettings.Settings['useBlastWave'];
-				v49 = EpicSettings.Settings['useCombustion'];
-				v50 = EpicSettings.Settings['useShiftingPower'];
-				v51 = EpicSettings.Settings['combustionWithCD'];
-				v171 = 9 - 5;
-			end
-			if (((3531 + 589) <= (9129 - 4869)) and (v171 == (4 + 0))) then
-				v52 = EpicSettings.Settings['shiftingPowerWithCD'];
-				v53 = EpicSettings.Settings['useAlterTime'];
-				v54 = EpicSettings.Settings['useBlazingBarrier'];
-				v55 = EpicSettings.Settings['useGreaterInvisibility'];
-				v171 = 1 + 4;
-			end
-			if ((v171 == (4 + 1)) or ((2184 - (384 + 917)) > (5475 - (128 + 569)))) then
-				v56 = EpicSettings.Settings['useIceBlock'];
-				v57 = EpicSettings.Settings['useIceCold'];
-				v59 = EpicSettings.Settings['useMassBarrier'];
-				v58 = EpicSettings.Settings['useMirrorImage'];
-				v171 = 1549 - (1407 + 136);
-			end
-			if ((v171 == (1888 - (687 + 1200))) or ((5330 - (556 + 1154)) >= (17206 - 12315))) then
-				v40 = EpicSettings.Settings['useFireball'];
-				v41 = EpicSettings.Settings['useFlamestrike'];
-				v42 = EpicSettings.Settings['useLivingBomb'];
-				v43 = EpicSettings.Settings['useMeteor'];
-				v171 = 97 - (9 + 86);
+			if ((v175 == (2 + 1)) or ((1244 + 826) == (95 + 348))) then
+				if ((v127 >= v100) or ((1222 + 1483) == (365 + 1028))) then
+					v113 = (v90.SunKingsBlessing:IsAvailable() or ((v110 < (v90.PhoenixFlames:FullRechargeTime() - (v137() * v28(v112)))) and (v110 < v124))) and not v90.AlexstraszasFury:IsAvailable();
+				end
+				if ((v90.FireBlast:IsReady() and v40 and not v138() and not v114 and (v110 > (0 - 0)) and (v127 >= v99) and not v133() and v14:BuffDown(v90.HotStreakBuff) and ((v14:BuffUp(v90.HeatingUpBuff) and (v90.Flamestrike:ExecuteRemains() < (0.5 + 0))) or (v90.FireBlast:ChargesFractional() >= (6 - 4)))) or ((117 + 4484) < (112 - (12 + 39)))) then
+					if (v24(v90.FireBlast, not v15:IsSpellInRange(v90.FireBlast), false, true) or ((1294 + 96) >= (14684 - 9940))) then
+						return "fire_blast main 14";
+					end
+				end
+				if ((v120 and v133() and (v110 > (0 - 0))) or ((594 + 1409) > (2019 + 1815))) then
+					local v236 = 0 - 0;
+					while true do
+						if (((0 + 0) == v236) or ((753 - 597) > (5623 - (1596 + 114)))) then
+							v32 = v150();
+							if (((508 - 313) == (908 - (164 + 549))) and v32) then
+								return v32;
+							end
+							break;
+						end
+					end
+				end
+				v175 = 1442 - (1059 + 379);
 			end
 		end
 	end
 	local function v153()
-		local v172 = 421 - (275 + 146);
+		local v176 = 0 - 0;
 		while true do
-			if (((693 + 3565) > (1001 - (29 + 35))) and ((22 - 17) == v172)) then
-				v80 = EpicSettings.Settings['HealingPotionName'] or "";
-				v69 = EpicSettings.Settings['handleAfflicted'];
-				v70 = EpicSettings.Settings['HandleIncorporeal'];
+			if (((1610 + 1495) >= (303 + 1493)) and ((396 - (145 + 247)) == v176)) then
+				v57 = EpicSettings.Settings['useIceBlock'];
+				v58 = EpicSettings.Settings['useIceCold'];
+				v60 = EpicSettings.Settings['useMassBarrier'];
+				v59 = EpicSettings.Settings['useMirrorImage'];
+				v61 = EpicSettings.Settings['alterTimeHP'] or (0 + 0);
+				v176 = 3 + 2;
+			end
+			if (((12982 - 8603) >= (409 + 1722)) and ((1 + 0) == v176)) then
+				v42 = EpicSettings.Settings['useFlamestrike'];
+				v43 = EpicSettings.Settings['useLivingBomb'];
+				v44 = EpicSettings.Settings['useMeteor'];
+				v45 = EpicSettings.Settings['usePhoenixFlames'];
+				v46 = EpicSettings.Settings['usePyroblast'];
+				v176 = 2 - 0;
+			end
+			if (((4564 - (254 + 466)) >= (2603 - (544 + 16))) and (v176 == (9 - 6))) then
+				v52 = EpicSettings.Settings['combustionWithCD'];
+				v53 = EpicSettings.Settings['shiftingPowerWithCD'];
+				v54 = EpicSettings.Settings['useAlterTime'];
+				v55 = EpicSettings.Settings['useBlazingBarrier'];
+				v56 = EpicSettings.Settings['useGreaterInvisibility'];
+				v176 = 632 - (294 + 334);
+			end
+			if (((258 - (236 + 17)) == v176) or ((1394 + 1838) <= (2126 + 605))) then
+				v62 = EpicSettings.Settings['blazingBarrierHP'] or (0 - 0);
+				v63 = EpicSettings.Settings['greaterInvisibilityHP'] or (0 - 0);
+				v64 = EpicSettings.Settings['iceBlockHP'] or (0 + 0);
+				v65 = EpicSettings.Settings['iceColdHP'] or (0 + 0);
+				v66 = EpicSettings.Settings['mirrorImageHP'] or (794 - (413 + 381));
+				v176 = 1 + 5;
+			end
+			if (((10431 - 5526) == (12741 - 7836)) and ((1972 - (582 + 1388)) == v176)) then
+				v47 = EpicSettings.Settings['useScorch'];
+				v48 = EpicSettings.Settings['useCounterspell'];
+				v49 = EpicSettings.Settings['useBlastWave'];
+				v50 = EpicSettings.Settings['useCombustion'];
+				v51 = EpicSettings.Settings['useShiftingPower'];
+				v176 = 4 - 1;
+			end
+			if ((v176 == (0 + 0)) or ((4500 - (326 + 38)) >= (13048 - 8637))) then
+				v37 = EpicSettings.Settings['useArcaneExplosion'];
+				v38 = EpicSettings.Settings['useArcaneIntellect'];
+				v39 = EpicSettings.Settings['useDragonsBreath'];
+				v40 = EpicSettings.Settings['useFireBlast'];
+				v41 = EpicSettings.Settings['useFireball'];
+				v176 = 1 - 0;
+			end
+			if ((v176 == (626 - (47 + 573))) or ((1043 + 1915) == (17060 - 13043))) then
+				v67 = EpicSettings.Settings['massBarrierHP'] or (0 - 0);
+				v86 = EpicSettings.Settings['mirrorImageBeforePull'];
+				v87 = EpicSettings.Settings['useSpellStealTarget'];
+				v88 = EpicSettings.Settings['useTimeWarpWithTalent'];
+				v89 = EpicSettings.Settings['useRemoveCurseWithAfflicted'];
 				break;
-			end
-			if ((v172 == (0 - 0)) or ((21494 - 16625) < (591 + 315))) then
-				v74 = EpicSettings.Settings['fightRemainsCheck'] or (1012 - (53 + 959));
-				v75 = EpicSettings.Settings['useWeapon'];
-				v71 = EpicSettings.Settings['InterruptWithStun'];
-				v172 = 409 - (312 + 96);
-			end
-			if ((v172 == (3 - 1)) or ((1510 - (147 + 138)) > (5127 - (813 + 86)))) then
-				v67 = EpicSettings.Settings['DispelBuffs'];
-				v82 = EpicSettings.Settings['useTrinkets'];
-				v81 = EpicSettings.Settings['useRacials'];
-				v172 = 3 + 0;
-			end
-			if (((6165 - 2837) > (2730 - (18 + 474))) and ((1 + 0) == v172)) then
-				v72 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-				v73 = EpicSettings.Settings['InterruptThreshold'];
-				v68 = EpicSettings.Settings['DispelDebuffs'];
-				v172 = 6 - 4;
-			end
-			if (((4925 - (860 + 226)) > (1708 - (121 + 182))) and (v172 == (1 + 2))) then
-				v83 = EpicSettings.Settings['trinketsWithCD'];
-				v84 = EpicSettings.Settings['racialsWithCD'];
-				v77 = EpicSettings.Settings['useHealthstone'];
-				v172 = 1244 - (988 + 252);
-			end
-			if ((v172 == (1 + 3)) or ((406 + 887) <= (2477 - (49 + 1921)))) then
-				v76 = EpicSettings.Settings['useHealingPotion'];
-				v79 = EpicSettings.Settings['healthstoneHP'] or (890 - (223 + 667));
-				v78 = EpicSettings.Settings['healingPotionHP'] or (52 - (51 + 1));
-				v172 = 8 - 3;
 			end
 		end
 	end
 	local function v154()
-		local v173 = 0 - 0;
+		local v177 = 1664 - (1269 + 395);
 		while true do
-			if ((v173 == (1127 - (146 + 979))) or ((818 + 2078) < (1410 - (311 + 294)))) then
-				v129 = v13:GetEnemiesInRange(111 - 71);
-				if (((982 + 1334) == (3759 - (496 + 947))) and v33) then
-					local v231 = 1358 - (1233 + 125);
-					while true do
-						if ((v231 == (1 + 0)) or ((2306 + 264) == (292 + 1241))) then
-							v127 = v29(v14:GetEnemiesInSplashRangeCount(1650 - (963 + 682)), #v129);
-							v128 = #v129;
-							break;
-						end
-						if ((v231 == (0 + 0)) or ((2387 - (504 + 1000)) == (984 + 476))) then
-							v125 = v29(v14:GetEnemiesInSplashRangeCount(5 + 0), #v129);
-							v126 = v29(v14:GetEnemiesInSplashRangeCount(1 + 4), #v129);
-							v231 = 1 - 0;
-						end
-					end
-				else
-					local v232 = 0 + 0;
-					while true do
-						if ((v232 == (0 + 0)) or ((4801 - (156 + 26)) <= (576 + 423))) then
-							v125 = 1 - 0;
-							v126 = 165 - (149 + 15);
-							v232 = 961 - (890 + 70);
-						end
-						if ((v232 == (118 - (39 + 78))) or ((3892 - (14 + 468)) > (9051 - 4935))) then
-							v127 = 2 - 1;
-							v128 = 1 + 0;
-							break;
-						end
-					end
-				end
-				if (v93.TargetIsValid() or v13:AffectingCombat() or ((543 + 360) >= (650 + 2409))) then
-					local v233 = 0 + 0;
-					while true do
-						if ((v233 == (2 + 2)) or ((7610 - 3634) < (2824 + 33))) then
-							v118 = v13:BuffUp(v89.CombustionBuff);
-							v119 = not v118;
-							break;
-						end
-						if (((17324 - 12394) > (59 + 2248)) and (v233 == (51 - (12 + 39)))) then
-							if (v13:AffectingCombat() or v68 or ((3765 + 281) < (3995 - 2704))) then
-								local v237 = v68 and v89.RemoveCurse:IsReady() and v35;
-								v31 = v93.FocusUnit(v237, nil, 71 - 51, nil, 6 + 14, v89.ArcaneIntellect);
-								if (v31 or ((2233 + 2008) == (8989 - 5444))) then
-									return v31;
-								end
-							end
-							v122 = v9.BossFightRemains(nil, true);
-							v233 = 1 + 0;
-						end
-						if ((v233 == (9 - 7)) or ((5758 - (1596 + 114)) > (11048 - 6816))) then
-							v131 = v138(v129);
-							v95 = not v34;
-							v233 = 716 - (164 + 549);
-						end
-						if (((1441 - (1059 + 379)) == v233) or ((2173 - 423) >= (1800 + 1673))) then
-							if (((534 + 2632) == (3558 - (145 + 247))) and v95) then
-								v109 = 82053 + 17946;
-							end
-							v124 = v13:GCD();
-							v233 = 2 + 2;
-						end
-						if (((5226 - 3463) < (715 + 3009)) and ((1 + 0) == v233)) then
-							v123 = v122;
-							if (((92 - 35) <= (3443 - (254 + 466))) and (v123 == (11671 - (544 + 16)))) then
-								v123 = v9.FightRemains(v129, false);
-							end
-							v233 = 5 - 3;
-						end
-					end
-				end
-				if ((not v13:AffectingCombat() and v32) or ((2698 - (294 + 334)) == (696 - (236 + 17)))) then
-					local v234 = 0 + 0;
-					while true do
-						if ((v234 == (0 + 0)) or ((10187 - 7482) == (6595 - 5202))) then
-							v31 = v144();
-							if (v31 or ((2369 + 2232) < (51 + 10))) then
-								return v31;
-							end
-							break;
-						end
-					end
-				end
-				v173 = 797 - (413 + 381);
+			if (((1720 - (76 + 416)) >= (1256 - (319 + 124))) and (v177 == (0 - 0))) then
+				v75 = EpicSettings.Settings['fightRemainsCheck'] or (1007 - (564 + 443));
+				v76 = EpicSettings.Settings['useWeapon'];
+				v72 = EpicSettings.Settings['InterruptWithStun'];
+				v73 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v177 = 2 - 1;
 			end
-			if ((v173 == (1 + 2)) or ((2956 - 1566) >= (12322 - 7578))) then
-				if ((v13:AffectingCombat() and v93.TargetIsValid()) or ((3973 - (582 + 1388)) > (6532 - 2698))) then
-					local v235 = 0 + 0;
+			if ((v177 == (462 - (337 + 121))) or ((10123 - 6668) > (13491 - 9441))) then
+				v70 = EpicSettings.Settings['handleAfflicted'];
+				v71 = EpicSettings.Settings['HandleIncorporeal'];
+				break;
+			end
+			if (((2154 - (1261 + 650)) == (103 + 140)) and (v177 == (1 - 0))) then
+				v74 = EpicSettings.Settings['InterruptThreshold'];
+				v69 = EpicSettings.Settings['DispelDebuffs'];
+				v68 = EpicSettings.Settings['DispelBuffs'];
+				v83 = EpicSettings.Settings['useTrinkets'];
+				v177 = 1819 - (772 + 1045);
+			end
+			if ((v177 == (1 + 2)) or ((415 - (102 + 42)) > (3416 - (1524 + 320)))) then
+				v77 = EpicSettings.Settings['useHealingPotion'];
+				v80 = EpicSettings.Settings['healthstoneHP'] or (1270 - (1049 + 221));
+				v79 = EpicSettings.Settings['healingPotionHP'] or (156 - (18 + 138));
+				v81 = EpicSettings.Settings['HealingPotionName'] or "";
+				v177 = 9 - 5;
+			end
+			if (((3841 - (67 + 1035)) < (3641 - (136 + 212))) and ((8 - 6) == v177)) then
+				v82 = EpicSettings.Settings['useRacials'];
+				v84 = EpicSettings.Settings['trinketsWithCD'];
+				v85 = EpicSettings.Settings['racialsWithCD'];
+				v78 = EpicSettings.Settings['useHealthstone'];
+				v177 = 3 + 0;
+			end
+		end
+	end
+	local function v155()
+		local v178 = 0 + 0;
+		while true do
+			if ((v178 == (1604 - (240 + 1364))) or ((5024 - (1050 + 32)) < (4048 - 2914))) then
+				v153();
+				v154();
+				v33 = EpicSettings.Toggles['ooc'];
+				v178 = 1 + 0;
+			end
+			if (((1058 - (331 + 724)) == v178) or ((218 + 2475) == (5617 - (269 + 375)))) then
+				if (((2871 - (267 + 458)) == (668 + 1478)) and v34) then
+					v127 = v30(v15:GetEnemiesInSplashRangeCount(9 - 4), #v130);
+					v128 = v30(v15:GetEnemiesInSplashRangeCount(823 - (667 + 151)), #v130);
+					v129 = v30(v15:GetEnemiesInSplashRangeCount(1502 - (1410 + 87)), #v130);
+					v131 = #v130;
+				else
+					local v237 = 1897 - (1504 + 393);
 					while true do
-						if (((365 - (326 + 38)) == v235) or ((461 - 305) > (5585 - 1672))) then
-							if (((815 - (47 + 573)) == (69 + 126)) and v69) then
-								if (((13187 - 10082) >= (2914 - 1118)) and v88) then
-									v31 = v93.HandleAfflicted(v89.RemoveCurse, v91.RemoveCurseMouseover, 1694 - (1269 + 395));
-									if (((4871 - (76 + 416)) >= (2574 - (319 + 124))) and v31) then
-										return v31;
-									end
-								end
+						if ((v237 == (2 - 1)) or ((5821 - 3577) == (4020 - (461 + 335)))) then
+							v129 = 1 + 0;
+							v131 = 1762 - (1730 + 31);
+							break;
+						end
+						if ((v237 == (1667 - (728 + 939))) or ((17368 - 12464) <= (3885 - 1969))) then
+							v127 = 2 - 1;
+							v128 = 1069 - (138 + 930);
+							v237 = 1 + 0;
+						end
+					end
+				end
+				if (((71 + 19) <= (913 + 152)) and (v94.TargetIsValid() or v14:AffectingCombat())) then
+					local v238 = 0 - 0;
+					while true do
+						if (((6568 - (459 + 1307)) == (6672 - (474 + 1396))) and (v238 == (6 - 2))) then
+							v119 = v14:BuffUp(v90.CombustionBuff);
+							v120 = not v119;
+							break;
+						end
+						if ((v238 == (1 + 0)) or ((8 + 2272) <= (1463 - 952))) then
+							v124 = v123;
+							if ((v124 == (1408 + 9703)) or ((5594 - 3918) <= (2019 - 1556))) then
+								v124 = v10.FightRemains(v130, false);
 							end
-							if (((8786 - 4942) >= (3050 - (564 + 443))) and v70) then
-								local v238 = 0 - 0;
+							v238 = 593 - (562 + 29);
+						end
+						if (((3299 + 570) == (5288 - (374 + 1045))) and (v238 == (3 + 0))) then
+							if (((3595 - 2437) <= (3251 - (448 + 190))) and v96) then
+								v110 = 32284 + 67715;
+							end
+							v125 = v14:GCD();
+							v238 = 2 + 2;
+						end
+						if ((v238 == (2 + 0)) or ((9089 - 6725) <= (6211 - 4212))) then
+							UnitsWithIgniteCount = v139(v130);
+							v96 = not v35;
+							v238 = 1497 - (1307 + 187);
+						end
+						if ((v238 == (0 - 0)) or ((11524 - 6602) < (594 - 400))) then
+							if (v14:AffectingCombat() or v69 or ((2774 - (232 + 451)) < (30 + 1))) then
+								local v244 = 0 + 0;
+								local v245;
 								while true do
-									if ((v238 == (458 - (337 + 121))) or ((9469 - 6237) <= (9097 - 6366))) then
-										v31 = v93.HandleIncorporeal(v89.Polymorph, v91.PolymorphMouseover, 1941 - (1261 + 650));
-										if (((2076 + 2829) == (7816 - 2911)) and v31) then
-											return v31;
+									if ((v244 == (564 - (510 + 54))) or ((4895 - 2465) >= (4908 - (13 + 23)))) then
+										v245 = v69 and v90.RemoveCurse:IsReady() and v36;
+										v32 = v94.FocusUnit(v245, nil, 38 - 18, nil, 28 - 8, v90.ArcaneIntellect);
+										v244 = 1 - 0;
+									end
+									if ((v244 == (1089 - (830 + 258))) or ((16826 - 12056) < (1086 + 649))) then
+										if (v32 or ((3777 + 662) <= (3791 - (860 + 581)))) then
+											return v32;
 										end
 										break;
 									end
 								end
 							end
-							if ((v89.Spellsteal:IsAvailable() and v86 and v89.Spellsteal:IsReady() and v35 and v67 and not v13:IsCasting() and not v13:IsChanneling() and v93.UnitHasMagicBuff(v14)) or ((5953 - (772 + 1045)) >= (623 + 3788))) then
-								if (v23(v89.Spellsteal, not v14:IsSpellInRange(v89.Spellsteal)) or ((3102 - (102 + 42)) == (5861 - (1524 + 320)))) then
+							v123 = v10.BossFightRemains(nil, true);
+							v238 = 3 - 2;
+						end
+					end
+				end
+				if ((not v14:AffectingCombat() and v33) or ((3555 + 924) < (4707 - (237 + 4)))) then
+					local v239 = 0 - 0;
+					while true do
+						if (((6444 - 3897) > (2322 - 1097)) and (v239 == (0 + 0))) then
+							v32 = v145();
+							if (((2683 + 1988) > (10095 - 7421)) and v32) then
+								return v32;
+							end
+							break;
+						end
+					end
+				end
+				v178 = 2 + 2;
+			end
+			if ((v178 == (2 + 0)) or ((5122 - (85 + 1341)) < (5676 - 2349))) then
+				if (v14:IsDeadOrGhost() or ((12827 - 8285) == (3342 - (45 + 327)))) then
+					return v32;
+				end
+				v126 = v15:GetEnemiesInSplashRange(9 - 4);
+				v130 = v14:GetEnemiesInRange(542 - (444 + 58));
+				v178 = 2 + 1;
+			end
+			if (((44 + 208) <= (967 + 1010)) and (v178 == (11 - 7))) then
+				if ((v14:AffectingCombat() and v94.TargetIsValid()) or ((3168 - (64 + 1668)) == (5748 - (1227 + 746)))) then
+					local v240 = 0 - 0;
+					while true do
+						if ((v240 == (1 - 0)) or ((2112 - (415 + 79)) < (24 + 906))) then
+							if (((5214 - (142 + 349)) > (1780 + 2373)) and v32) then
+								return v32;
+							end
+							if (v70 or ((5023 - 1369) >= (2313 + 2341))) then
+								if (((671 + 280) <= (4073 - 2577)) and v89) then
+									local v248 = 1864 - (1710 + 154);
+									while true do
+										if ((v248 == (318 - (200 + 118))) or ((688 + 1048) == (998 - 427))) then
+											v32 = v94.HandleAfflicted(v90.RemoveCurse, v92.RemoveCurseMouseover, 44 - 14);
+											if (v32 or ((797 + 99) > (4718 + 51))) then
+												return v32;
+											end
+											break;
+										end
+									end
+								end
+							end
+							if (v71 or ((561 + 484) <= (163 + 857))) then
+								local v246 = 0 - 0;
+								while true do
+									if ((v246 == (1250 - (363 + 887))) or ((2025 - 865) <= (1561 - 1233))) then
+										v32 = v94.HandleIncorporeal(v90.Polymorph, v92.PolymorphMouseover, 5 + 25);
+										if (((8910 - 5102) > (1998 + 926)) and v32) then
+											return v32;
+										end
+										break;
+									end
+								end
+							end
+							v240 = 1666 - (674 + 990);
+						end
+						if (((1116 + 2775) < (2014 + 2905)) and (v240 == (2 - 0))) then
+							if ((v90.Spellsteal:IsAvailable() and v87 and v90.Spellsteal:IsReady() and v36 and v68 and not v14:IsCasting() and not v14:IsChanneling() and v94.UnitHasMagicBuff(v15)) or ((3289 - (507 + 548)) <= (2339 - (289 + 548)))) then
+								if (v24(v90.Spellsteal, not v15:IsSpellInRange(v90.Spellsteal)) or ((4330 - (821 + 997)) < (687 - (195 + 60)))) then
 									return "spellsteal damage";
 								end
 							end
-							if (((2498 - (1049 + 221)) >= (969 - (18 + 138))) and (v13:IsCasting(v89.Pyroblast) or v13:IsChanneling(v89.Pyroblast) or v13:IsCasting(v89.Flamestrike) or v13:IsChanneling(v89.Flamestrike)) and v13:BuffUp(v89.HotStreakBuff)) then
-								if (v23(v91.StopCasting, not v14:IsSpellInRange(v89.Pyroblast), false, true) or ((8456 - 5001) > (5152 - (67 + 1035)))) then
+							if (((v14:IsCasting(v90.Pyroblast) or v14:IsChanneling(v90.Pyroblast) or v14:IsCasting(v90.Flamestrike) or v14:IsChanneling(v90.Flamestrike)) and v14:BuffUp(v90.HotStreakBuff)) or ((497 + 1351) == (2366 - (251 + 1250)))) then
+								if (v24(v92.StopCasting, not v15:IsSpellInRange(v90.Pyroblast), false, true) or ((13716 - 9034) <= (3121 + 1420))) then
 									return "Stop Casting";
 								end
 							end
-							v235 = 350 - (136 + 212);
+							if ((v14:IsMoving() and v90.IceFloes:IsReady() and not v14:BuffUp(v90.IceFloes) and not v14:PrevOffGCDP(1033 - (809 + 223), v90.IceFloes)) or ((4415 - 1389) >= (12150 - 8104))) then
+								if (((6639 - 4631) > (470 + 168)) and v24(v90.IceFloes)) then
+									return "ice_floes movement";
+								end
+							end
+							v240 = 2 + 1;
 						end
-						if (((1032 - 789) == (195 + 48)) and (v235 == (0 + 0))) then
-							if ((v34 and v75 and (v90.Dreambinder:IsEquippedAndReady() or v90.Iridal:IsEquippedAndReady())) or ((1875 - (240 + 1364)) > (2654 - (1050 + 32)))) then
-								if (((9779 - 7040) < (1948 + 1345)) and v23(v91.UseWeapon, nil)) then
+						if (((2392 - (14 + 603)) <= (3362 - (118 + 11))) and ((1 + 2) == v240)) then
+							v32 = v152();
+							if (v32 or ((3784 + 759) == (5819 - 3822))) then
+								return v32;
+							end
+							break;
+						end
+						if ((v240 == (949 - (551 + 398))) or ((1961 + 1141) < (260 + 468))) then
+							if (((281 + 64) == (1283 - 938)) and v35 and v76 and (v91.Dreambinder:IsEquippedAndReady() or v91.Iridal:IsEquippedAndReady())) then
+								if (v24(v92.UseWeapon, nil) or ((6513 - 3686) < (123 + 255))) then
 									return "Using Weapon Macro";
 								end
 							end
-							if ((v68 and v35 and v89.RemoveCurse:IsAvailable()) or ((4997 - (331 + 724)) < (92 + 1042))) then
-								local v239 = 644 - (269 + 375);
+							if ((v69 and v36 and v90.RemoveCurse:IsAvailable()) or ((13799 - 10323) < (718 + 1879))) then
+								local v247 = 89 - (40 + 49);
 								while true do
-									if (((725 - (267 + 458)) == v239) or ((838 + 1855) == (9563 - 4590))) then
-										if (((2964 - (667 + 151)) == (3643 - (1410 + 87))) and v15) then
-											local v240 = 1897 - (1504 + 393);
+									if (((11725 - 8646) < (5284 - (99 + 391))) and ((0 + 0) == v247)) then
+										if (((21337 - 16483) > (11054 - 6590)) and v16) then
+											local v249 = 0 + 0;
 											while true do
-												if (((0 - 0) == v240) or ((5821 - 3577) == (4020 - (461 + 335)))) then
-													v31 = v142();
-													if (v31 or ((627 + 4277) <= (3677 - (1730 + 31)))) then
-														return v31;
+												if ((v249 == (0 - 0)) or ((6516 - (1032 + 572)) == (4175 - (203 + 214)))) then
+													v32 = v143();
+													if (((1943 - (568 + 1249)) <= (2724 + 758)) and v32) then
+														return v32;
 													end
 													break;
 												end
 											end
 										end
-										if (((1757 - (728 + 939)) <= (3771 - 2706)) and v17 and v17:Exists() and not v13:CanAttack(v17) and v93.UnitHasCurseDebuff(v17)) then
-											if (((9740 - 4938) == (11002 - 6200)) and v89.RemoveCurse:IsReady()) then
-												if (v23(v91.RemoveCurseMouseover) or ((3348 - (138 + 930)) <= (467 + 44))) then
+										if ((v18 and v18:Exists() and not v14:CanAttack(v18) and v94.UnitHasCurseDebuff(v18)) or ((5701 - 3327) == (16894 - 12520))) then
+											if (((2881 - (913 + 393)) == (4447 - 2872)) and v90.RemoveCurse:IsReady()) then
+												if (v24(v92.RemoveCurseMouseover) or ((3156 - 922) == (1865 - (269 + 141)))) then
 													return "remove_curse dispel";
 												end
 											end
@@ -1148,57 +1241,32 @@ v0["Epix_Mage_Fire.lua"] = function(...)
 									end
 								end
 							end
-							v31 = v143();
-							if (v31 or ((1311 + 365) <= (397 + 66))) then
-								return v31;
-							end
-							v235 = 4 - 3;
-						end
-						if (((5635 - (459 + 1307)) == (5739 - (474 + 1396))) and (v235 == (2 - 0))) then
-							if (((1086 + 72) <= (9 + 2604)) and v13:IsMoving() and v89.IceFloes:IsReady() and not v13:BuffUp(v89.IceFloes)) then
-								if (v23(v89.IceFloes) or ((6771 - 4407) <= (254 + 1745))) then
-									return "ice_floes movement";
-								end
-							end
-							v31 = v151();
-							if (v31 or ((16430 - 11508) < (846 - 652))) then
-								return v31;
-							end
-							break;
+							v32 = v144();
+							v240 = 2 - 1;
 						end
 					end
 				end
 				break;
 			end
-			if ((v173 == (591 - (562 + 29))) or ((1783 + 308) < (1450 - (374 + 1045)))) then
-				v152();
-				v153();
-				v32 = EpicSettings.Toggles['ooc'];
-				v33 = EpicSettings.Toggles['aoe'];
-				v173 = 1 + 0;
-			end
-			if ((v173 == (2 - 1)) or ((3068 - (448 + 190)) >= (1573 + 3299))) then
-				v34 = EpicSettings.Toggles['cds'];
-				v35 = EpicSettings.Toggles['dispel'];
-				if (v13:IsDeadOrGhost() or ((2154 + 2616) < (1131 + 604))) then
-					return v31;
-				end
-				v130 = v14:GetEnemiesInSplashRange(19 - 14);
-				v173 = 5 - 3;
+			if ((v178 == (1982 - (362 + 1619))) or ((2692 - (950 + 675)) > (686 + 1093))) then
+				v34 = EpicSettings.Toggles['aoe'];
+				v35 = EpicSettings.Toggles['cds'];
+				v36 = EpicSettings.Toggles['dispel'];
+				v178 = 1181 - (216 + 963);
 			end
 		end
 	end
-	local function v155()
-		local v174 = 1494 - (1307 + 187);
+	local function v156()
+		local v179 = 1287 - (485 + 802);
 		while true do
-			if ((v174 == (0 - 0)) or ((10393 - 5954) <= (7205 - 4855))) then
-				v94();
-				v21.Print("Fire Mage rotation by Epic. Supported by xKaneto.");
+			if (((2720 - (432 + 127)) >= (2007 - (1065 + 8))) and (v179 == (0 + 0))) then
+				v95();
+				v22.Print("Fire Mage rotation by Epic. Supported by xKaneto.");
 				break;
 			end
 		end
 	end
-	v21.SetAPL(746 - (232 + 451), v154, v155);
+	v22.SetAPL(1664 - (635 + 966), v155, v156);
 end;
 return v0["Epix_Mage_Fire.lua"]();
 
