@@ -290,11 +290,11 @@ do
     if not Item then return false end
 
     local ItemID = Item:ID()
-    if HL.GUISettings.General.Blacklist.ItemUserDefined[ItemID] then
-      if type(HL.GUISettings.General.Blacklist.ItemUserDefined[ItemID]) == "boolean" then
+    if EL.GUISettings.General.Blacklist.ItemUserDefined[ItemID] then
+      if type(EL.GUISettings.General.Blacklist.ItemUserDefined[ItemID]) == "boolean" then
         return true
       else
-        return HL.GUISettings.General.Blacklist.ItemUserDefined[ItemID](Item)
+        return EL.GUISettings.General.Blacklist.ItemUserDefined[ItemID](Item)
       end
     end
 
