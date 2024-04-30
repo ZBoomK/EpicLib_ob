@@ -2,7 +2,7 @@ local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
 	local v5 = v0[v4];
-	if (not v5 or ((14575 - 11293) > (3796 + 931))) then
+	if (((2509 - (550 + 1391)) > (909 - 481)) and not v5) then
 		return v1(v4, ...);
 	end
 	return v5(...);
@@ -24,113 +24,111 @@ v0["Epix_Mage_Mage.lua"] = function(...)
 	local v20 = v19.Macro;
 	local v21 = GetTime;
 	local v22 = math.min;
-	if (not v15.Mage or ((9458 - 5479) < (4994 - 1537))) then
+	if (((2027 - 693) <= (6397 - (599 + 1185))) and not v15.Mage) then
 		v15.Mage = {};
 	end
-	v15.Mage.Commons = {AncestralCall=v15(386164 - 111426, nil, 2 - 1),BagofTricks=v15(312696 - (134 + 151), nil, 1667 - (970 + 695)),Berserking=v15(50180 - 23883, nil, 1993 - (582 + 1408)),BloodFury=v15(71344 - 50772, nil, 4 - 0),Fireblood=v15(999447 - 734226, nil, 1829 - (1195 + 629)),LightsJudgment=v15(338092 - 82445, nil, 247 - (187 + 54)),ArcaneExplosion=v15(2229 - (162 + 618), nil, 5 + 2),ArcaneIntellect=v15(972 + 487, nil, 16 - 8),Blink=v16(14 - 5, 153 + 1800, 214289 - (1373 + 263)),Frostbolt=v15(1116 - (451 + 549), nil, 4 + 6),FrostNova=v15(189 - 67, nil, 18 - 7),Polymorph=v15(1502 - (746 + 638), nil, 5 + 7),SlowFall=v15(197 - 67, nil, 354 - (218 + 123)),TimeWarp=v15(81934 - (1535 + 46), nil, 14 + 0),AlterTime=v15(49524 + 292721, nil, 575 - (306 + 254)),BlastWave=v15(9781 + 148200, nil, 30 - 14),Counterspell=v15(3606 - (899 + 568), nil, 12 + 5),DragonsBreath=v15(76616 - 44955, nil, 621 - (268 + 335)),FocusMagic=v15(321648 - (60 + 230), nil, 591 - (426 + 146)),GreaterInvisibility=v15(13293 + 97666, nil, 1512 - (282 + 1174)),IceBlock=v15(46249 - (569 + 242), nil, 57 - 37),IceColdAbility=v15(23713 + 390945, nil, 1184 - (706 + 318)),IceColdTalent=v15(415910 - (721 + 530), nil, 1432 - (945 + 326)),IceFloes=v15(271914 - 163075, nil, 19 + 2),IceNova=v15(158697 - (271 + 429), nil, 21 + 1),Invisibility=v15(1566 - (1408 + 92), nil, 1109 - (461 + 625)),MassBarrier=v15(415948 - (993 + 295), nil, 2 + 22),Meteor=v15(154732 - (418 + 753), nil, 10 + 15),MirrorImage=v15(5704 + 49638, nil, 8 + 18),RemoveCurse=v15(121 + 354, nil, 556 - (406 + 123)),RingOfFrost=v15(115493 - (1749 + 20), nil, 7 + 21),RuneofPower=v15(117333 - (1249 + 73), nil, 11 + 18),ShiftingPower=v15(383585 - (466 + 679), nil, 72 - 42),Spellsteal=v15(87089 - 56640, nil, 1931 - (106 + 1794)),TemporalWarp=v15(122283 + 264256, nil, 9 + 23),ArcaneIntellectBuff=v15(4307 - 2848, nil, 89 - 56),BerserkingBuff=v15(26411 - (4 + 110), nil, 618 - (57 + 527)),BloodFuryBuff=v15(21999 - (41 + 1386), nil, 138 - (17 + 86)),RuneofPowerBuff=v15(78740 + 37274, nil, 79 - 43),TemporalWarpBuff=v15(1119398 - 732858, nil, 203 - (122 + 44)),Pool=v15(1727177 - 727267, nil, 663 - 463)};
-	v15.Mage.Arcane = v18(v15.Mage.Commons, {ArcaneBlast=v15(24772 + 5679, nil, 6 + 32),FireBlast=v15(647941 - 328105, nil, 104 - (30 + 35)),Amplification=v15(162637 + 73991, nil, 1297 - (1043 + 214)),ArcaneBarrage=v15(167955 - 123530, nil, 1253 - (323 + 889)),ArcaneBombardment=v15(1035154 - 650573, nil, 622 - (361 + 219)),ArcaneEcho=v15(342551 - (53 + 267), nil, 10 + 33),ArcaneFamiliar=v15(205435 - (15 + 398), nil, 1026 - (18 + 964)),ArcaneHarmony=v15(1447122 - 1062670, nil, 27 + 18),ArcaneMissiles=v15(3241 + 1902, nil, 896 - (20 + 830)),ArcaneOrb=v15(119919 + 33707, nil, 173 - (116 + 10)),ArcanePower=v15(23766 + 297973, nil, 786 - (542 + 196)),ArcaneSurge=v15(783204 - 417854, nil, 15 + 34),ArcingCleave=v15(117651 + 113913, nil, 56 + 99),CascadingPower=v15(1012601 - 628325, nil, 128 - 78),ChargedOrb=v15(386202 - (1126 + 425), nil, 456 - (118 + 287)),ConjureManaGem=v15(2974 - 2215, nil, 1173 - (118 + 1003)),Concentration=v15(1124843 - 740469, nil, 430 - (142 + 235)),Enlightened=v15(1457978 - 1136591, nil, 12 + 42),Evocation=v15(13028 - (553 + 424), nil, 103 - 48),NetherTempest=v15(101238 + 13685, nil, 57 + 0),NetherPrecision=v15(223460 + 160322, nil, 25 + 33),OrbBarrage=v15(219781 + 165077, nil, 127 - 68),Overpowered=v15(432288 - 277141, nil, 134 - 74),PresenceofMind=v15(59620 + 145405, nil, 294 - 233),PrismaticBarrier=v15(236203 - (239 + 514), nil, 22 + 40),RadiantSpark=v15(377432 - (797 + 532), nil, 46 + 17),Resonance=v15(69167 + 135861, nil, 150 - 86),RuleofThrees=v15(265556 - (373 + 829), nil, 796 - (476 + 255)),SiphonStorm=v15(385317 - (369 + 761), nil, 39 + 27),Slipstream=v15(429497 - 193040, nil, 126 - 59),Supernova=v15(158218 - (64 + 174), nil, 10 + 58),TimeAnomaly=v15(567558 - 184315, nil, 405 - (144 + 192)),TouchoftheMagi=v15(321723 - (42 + 174), nil, 53 + 17),ArcaneArtilleryBuff=v15(351504 + 72827, nil, 65 + 87),ArcaneFamiliarBuff=v15(211630 - (363 + 1141), nil, 1651 - (1183 + 397)),ArcaneHarmonyBuff=v15(1170413 - 785958, nil, 53 + 19),ArcaneOverloadBuff=v15(305727 + 103295, nil, 2048 - (1913 + 62)),ArcaneSurgeBuff=v15(230098 + 135264, nil, 195 - 121),ClearcastingBuff=v15(265658 - (565 + 1368), nil, 282 - 207),ConcentrationBuff=v15(386040 - (1477 + 184), nil, 102 - 26),NetherPrecisionBuff=v15(357591 + 26192, nil, 933 - (564 + 292)),PresenceofMindBuff=v15(353755 - 148730, nil, 234 - 156),RuleofThreesBuff=v15(265078 - (244 + 60), nil, 61 + 18),SiphonStormBuff=v15(384743 - (41 + 435), nil, 1081 - (938 + 63)),NetherTempestDebuff=v15(88385 + 26538, nil, 1206 - (936 + 189)),RadiantSparkDebuff=v15(123776 + 252327, nil, 1695 - (1565 + 48)),RadiantSparkVulnerability=v15(232326 + 143778, nil, 1221 - (782 + 356)),TouchoftheMagiDebuff=v15(211091 - (176 + 91), nil, 218 - 134)});
-	v15.Mage.Fire = v18(v15.Mage.Commons, {Fireball=v15(195 - 62, nil, 1177 - (975 + 117)),Flamestrike=v15(3995 - (157 + 1718), nil, 70 + 16),AlexstraszasFury=v15(837320 - 601450, nil, 297 - 210),BlazingBarrier=v15(236331 - (697 + 321), nil, 239 - 151),Combustion=v15(403211 - 212892, nil, 204 - 115),FeeltheBurn=v15(149233 + 234158, nil, 168 - 78),FireBlast=v16(243 - 152, 110080 - (322 + 905), 232178 - (602 + 9), 321025 - (449 + 740)),Firestarter=v15(205898 - (826 + 46), nil, 1039 - (245 + 702)),FlameOn=v15(647882 - 442853, nil, 30 + 63),FlamePatch=v15(206935 - (260 + 1638), nil, 534 - (382 + 58)),FromTheAshes=v15(1098263 - 755919, nil, 79 + 16),FueltheFire=v15(859941 - 443847, nil, 457 - 303),Hyperthermia=v15(385065 - (902 + 303), nil, 210 - 114),ImprovedScorch=v15(923911 - 540307, nil, 9 + 88),Kindling=v15(156838 - (1121 + 569), nil, 312 - (22 + 192)),LivingBomb=v15(45140 - (483 + 200), nil, 1562 - (1404 + 59)),PhoenixFlames=v15(704822 - 447281, nil, 134 - 34),Pyroblast=v15(12131 - (468 + 297), nil, 663 - (334 + 228)),Scorch=v15(9943 - 6995, nil, 235 - 133),SearingTouch=v15(489037 - 219393, nil, 30 + 73),SunKingsBlessing=v15(384122 - (141 + 95), nil, 103 + 1),TemperedFlames=v15(987540 - 603881, nil, 252 - 147),CombustionBuff=v15(44580 + 145739, nil, 290 - 184),FeeltheBurnBuff=v15(269524 + 113871, nil, 56 + 51),FlameAccelerantBuff=v15(286262 - 82985, nil, 64 + 44),FlamesFuryBuff=v15(410127 - (92 + 71), nil, 54 + 55),HeatingUpBuff=v15(80881 - 32774, nil, 875 - (574 + 191)),HotStreakBuff=v15(39683 + 8425, nil, 277 - 166),HyperthermiaBuff=v15(196079 + 187795, nil, 961 - (254 + 595)),SunKingsBlessingBuff=v15(384008 - (55 + 71), nil, 147 - 34),FuryoftheSunKingBuff=v15(385673 - (573 + 1217), nil, 315 - 201),CharringEmbersDebuff=v15(31095 + 377570, nil, 185 - 70),IgniteDebuff=v15(13593 - (714 + 225), nil, 338 - 222),ImprovedScorchDebuff=v15(534811 - 151203, nil, 13 + 104)});
-	v15.Mage.Frost = v18(v15.Mage.Commons, {ConeofCold=v15(173 - 53, nil, 924 - (118 + 688)),IciclesBuff=v15(205521 - (25 + 23), nil, 24 + 95),WintersChillDebuff=v15(230244 - (927 + 959), nil, 404 - 284),FireBlast=v15(320568 - (16 + 716), nil, 233 - 112),Blizzard=v15(190453 - (11 + 86), nil, 297 - 175),BoneChilling=v15(206051 - (175 + 110), nil, 309 - 186),ChainReaction=v15(1372689 - 1094380, nil, 1920 - (503 + 1293)),ColdestSnap=v15(1165975 - 748482, nil, 91 + 34),CometStorm=v15(154656 - (810 + 251), nil, 88 + 38),Ebonbolt=v15(79039 + 178498, nil, 115 + 12),Flurry=v15(45147 - (43 + 490), nil, 861 - (711 + 22)),FreezingRain=v15(1045316 - 775083, nil, 988 - (240 + 619)),FreezingWinds=v15(92207 + 289896, nil, 206 - 76),Frostbite=v15(13112 + 185009, nil, 1875 - (1344 + 400)),FrozenOrb=v16(537 - (255 + 150), 66728 + 17986, 106084 + 92065),GlacialSpike=v15(853601 - 653815, nil, 429 - 296),IceBarrier=v15(13165 - (404 + 1335), nil, 540 - (183 + 223)),IceCaller=v15(287985 - 51323, nil, 90 + 45),IceLance=v15(10961 + 19494, nil, 473 - (10 + 327)),IcyVeins=v15(8686 + 3786, nil, 475 - (118 + 220)),RayofFrost=v15(68324 + 136697, nil, 587 - (108 + 341)),SlickIce=v15(171635 + 210509, nil, 587 - 448),Snowstorm=v15(383199 - (711 + 782), nil, 268 - 128),SplinteringCold=v15(379518 - (270 + 199), nil, 46 + 95),SplittingIce=v15(58196 - (580 + 1239), nil, 419 - 278),SummonWaterElemental=v15(30298 + 1389, nil, 6 + 136),Freeze=v15(14548 + 18847, nil, 372 - 229),WaterJet=v15(83888 + 51141, nil, 1311 - (645 + 522)),BrainFreezeBuff=v15(192236 - (1010 + 780), nil, 145 + 0),FingersofFrostBuff=v15(212203 - 167659, nil, 427 - 281),FreezingRainBuff=v15(272068 - (1045 + 791), nil, 371 - 224),FreezingWindsBuff=v15(583455 - 201349, nil, 653 - (351 + 154)),GlacialSpikeBuff=v15(201418 - (1281 + 293), nil, 415 - (28 + 238)),IcyVeinsBuff=v15(27867 - 15395, nil, 1709 - (1381 + 178)),SnowstormBuff=v15(357844 + 23678, nil, 122 + 29),FrostbiteDebuff=v15(161564 + 217196, nil, 527 - 374)});
-	if (((222 + 206) < (2274 - (381 + 89))) and not v17.Mage) then
+	v15.Mage.Commons = {AncestralCall=v15(110794 + 163944, nil, 1 + 0),BagofTricks=v15(312985 - (507 + 67), nil, 1751 - (1013 + 736)),Berserking=v15(21773 + 4524, nil, 7 - 4),BloodFury=v15(123578 - 89876, nil, 871 - (550 + 317)),Fireblood=v15(383186 - 117965, nil, 7 - 2),LightsJudgment=v15(714400 - 458753, nil, 291 - (134 + 151)),ArcaneExplosion=v15(3114 - (970 + 695), nil, 12 - 5),ArcaneIntellect=v15(3449 - (582 + 1408), nil, 27 - 19),Blink=v16(10 - 1, 7359 - 5406, 214477 - (1195 + 629)),Frostbolt=v15(152 - 36, nil, 251 - (187 + 54)),FrostNova=v15(902 - (162 + 618), nil, 8 + 3),Polymorph=v15(79 + 39, nil, 25 - 13),SlowFall=v15(218 - 88, nil, 2 + 11),TimeWarp=v15(81989 - (1373 + 263), nil, 1014 - (451 + 549)),AlterTime=v15(108034 + 234211, nil, 23 - 8),BlastWave=v15(265512 - 107531, nil, 1400 - (746 + 638)),Counterspell=v15(805 + 1334, nil, 25 - 8),DragonsBreath=v15(32002 - (218 + 123), nil, 1599 - (1535 + 46)),FocusMagic=v15(319302 + 2056, nil, 3 + 16),GreaterInvisibility=v15(111519 - (306 + 254), nil, 4 + 52),IceBlock=v15(89173 - 43735, nil, 1487 - (899 + 568)),IceColdAbility=v15(272555 + 142103, nil, 387 - 227),IceColdTalent=v15(415262 - (268 + 335), nil, 451 - (60 + 230)),IceFloes=v15(109411 - (426 + 146), nil, 3 + 18),IceNova=v15(159453 - (282 + 1174), nil, 833 - (569 + 242)),Invisibility=v15(190 - 124, nil, 2 + 21),MassBarrier=v15(415684 - (706 + 318), nil, 1275 - (721 + 530)),Meteor=v15(154832 - (945 + 326), nil, 62 - 37),MirrorImage=v15(49245 + 6097, nil, 726 - (271 + 429)),RemoveCurse=v15(437 + 38, nil, 1527 - (1408 + 92)),RingOfFrost=v15(114810 - (461 + 625), nil, 1316 - (993 + 295)),RuneofPower=v15(6024 + 109987, nil, 1200 - (418 + 753)),ShiftingPower=v15(145654 + 236786, nil, 4 + 26),Spellsteal=v15(8906 + 21543, nil, 8 + 23),TemporalWarp=v15(387068 - (406 + 123), nil, 1801 - (1749 + 20)),ArcaneIntellectBuff=v15(347 + 1112, nil, 1355 - (1249 + 73)),BerserkingBuff=v15(9382 + 16915, nil, 1179 - (466 + 679)),BloodFuryBuff=v15(49485 - 28913, nil, 100 - 65),RuneofPowerBuff=v15(117914 - (106 + 1794), nil, 12 + 24),TemporalWarpBuff=v15(97710 + 288830, nil, 109 - 72),Pool=v15(2707697 - 1707787, nil, 314 - (4 + 110))};
+	v15.Mage.Arcane = v18(v15.Mage.Commons, {ArcaneBlast=v15(31035 - (57 + 527), nil, 1465 - (41 + 1386)),FireBlast=v15(319939 - (17 + 86), nil, 27 + 12),Amplification=v15(527707 - 291079, nil, 115 - 75),ArcaneBarrage=v15(44591 - (122 + 44), nil, 70 - 29),ArcaneBombardment=v15(1275836 - 891255, nil, 35 + 7),ArcaneEcho=v15(49495 + 292736, nil, 86 - 43),ArcaneFamiliar=v15(205087 - (30 + 35), nil, 31 + 13),ArcaneHarmony=v15(385709 - (1043 + 214), nil, 169 - 124),ArcaneMissiles=v15(6355 - (323 + 889), nil, 123 - 77),ArcaneOrb=v15(154206 - (361 + 219), nil, 367 - (53 + 267)),ArcanePower=v15(72688 + 249051, nil, 461 - (15 + 398)),ArcaneSurge=v15(366332 - (18 + 964), nil, 184 - 135),ArcingCleave=v15(134067 + 97497, nil, 98 + 57),CascadingPower=v15(385126 - (20 + 830), nil, 40 + 10),ChargedOrb=v15(384777 - (116 + 10), nil, 4 + 47),ConjureManaGem=v15(1497 - (542 + 196), nil, 110 - 58),Concentration=v15(112244 + 272130, nil, 27 + 26),Enlightened=v15(115689 + 205698, nil, 142 - 88),Evocation=v15(30896 - 18845, nil, 1606 - (1126 + 425)),NetherTempest=v15(115328 - (118 + 287), nil, 223 - 166),NetherPrecision=v15(384903 - (118 + 1003), nil, 169 - 111),OrbBarrage=v15(385235 - (142 + 235), nil, 267 - 208),Overpowered=v15(33759 + 121388, nil, 1037 - (553 + 424)),PresenceofMind=v15(387693 - 182668, nil, 54 + 7),PrismaticBarrier=v15(233562 + 1888, nil, 37 + 25),RadiantSpark=v15(159878 + 216225, nil, 36 + 27),Resonance=v15(444478 - 239450, nil, 178 - 114),RuleofThrees=v15(591899 - 327545, nil, 19 + 46),SiphonStorm=v15(1856644 - 1472457, nil, 819 - (239 + 514)),Slipstream=v15(83047 + 153410, nil, 1396 - (797 + 532)),Supernova=v15(114791 + 43189, nil, 23 + 45),TimeAnomaly=v15(901101 - 517858, nil, 1271 - (373 + 829)),TouchoftheMagi=v15(322238 - (476 + 255), nil, 1200 - (369 + 761)),ArcaneArtilleryBuff=v15(245464 + 178867, nil, 275 - 123),ArcaneFamiliarBuff=v15(398189 - 188063, nil, 309 - (64 + 174)),ArcaneHarmonyBuff=v15(54756 + 329699, nil, 106 - 34),ArcaneOverloadBuff=v15(409358 - (144 + 192), nil, 289 - (42 + 174)),ArcaneSurgeBuff=v15(274473 + 90889, nil, 62 + 12),ClearcastingBuff=v15(112042 + 151683, nil, 1579 - (363 + 1141)),ConcentrationBuff=v15(385959 - (1183 + 397), nil, 231 - 155),NetherPrecisionBuff=v15(281331 + 102452, nil, 58 + 19),PresenceofMindBuff=v15(207000 - (1913 + 62), nil, 50 + 28),RuleofThreesBuff=v15(700936 - 436162, nil, 2012 - (565 + 1368)),SiphonStormBuff=v15(1445126 - 1060859, nil, 1741 - (1477 + 184)),NetherTempestDebuff=v15(156591 - 41668, nil, 76 + 5),RadiantSparkDebuff=v15(376959 - (564 + 292), nil, 140 - 58),RadiantSparkVulnerability=v15(1133640 - 757536, nil, 387 - (244 + 60)),TouchoftheMagiDebuff=v15(162105 + 48719, nil, 560 - (41 + 435))});
+	v15.Mage.Fire = v18(v15.Mage.Commons, {Fireball=v15(1134 - (938 + 63), nil, 66 + 19),Flamestrike=v15(3245 - (936 + 189), nil, 29 + 57),AlexstraszasFury=v15(237483 - (1565 + 48), nil, 54 + 33),BlazingBarrier=v15(236451 - (782 + 356), nil, 355 - (176 + 91)),Combustion=v15(495843 - 305524, nil, 130 - 41),FeeltheBurn=v15(384483 - (975 + 117), nil, 1965 - (157 + 1718)),FireBlast=v16(74 + 17, 386419 - 277566, 791684 - 560117, 320854 - (697 + 321)),Firestarter=v15(558516 - 353490, nil, 194 - 102),FlameOn=v15(472669 - 267640, nil, 37 + 56),FlamePatch=v15(384168 - 179131, nil, 251 - 157),FromTheAshes=v15(343571 - (322 + 905), nil, 706 - (602 + 9)),FueltheFire=v15(417283 - (449 + 740), nil, 1026 - (826 + 46)),Hyperthermia=v15(384807 - (245 + 702), nil, 303 - 207),ImprovedScorch=v15(123317 + 260287, nil, 1995 - (260 + 1638)),Kindling=v15(155588 - (382 + 58), nil, 314 - 216),LivingBomb=v15(36942 + 7515, nil, 204 - 105),PhoenixFlames=v15(765568 - 508027, nil, 1305 - (902 + 303)),Pyroblast=v15(24955 - 13589, nil, 243 - 142),Scorch=v15(254 + 2694, nil, 1792 - (1121 + 569)),SearingTouch=v15(269858 - (22 + 192), nil, 786 - (483 + 200)),SunKingsBlessing=v15(385349 - (1404 + 59), nil, 284 - 180),TemperedFlames=v15(515648 - 131989, nil, 870 - (468 + 297)),CombustionBuff=v15(190881 - (334 + 228), nil, 357 - 251),FeeltheBurnBuff=v15(888675 - 505280, nil, 193 - 86),FlameAccelerantBuff=v15(57724 + 145553, nil, 344 - (141 + 95)),FlamesFuryBuff=v15(402711 + 7253, nil, 280 - 171),HeatingUpBuff=v15(115644 - 67537, nil, 26 + 84),HotStreakBuff=v15(131810 - 83702, nil, 79 + 32),HyperthermiaBuff=v15(199893 + 183981, nil, 156 - 44),SunKingsBlessingBuff=v15(226436 + 157446, nil, 276 - (92 + 71)),FuryoftheSunKingBuff=v15(189617 + 194266, nil, 191 - 77),CharringEmbersDebuff=v15(409430 - (574 + 191), nil, 95 + 20),IgniteDebuff=v15(31702 - 19048, nil, 60 + 56),ImprovedScorchDebuff=v15(384457 - (254 + 595), nil, 243 - (55 + 71))});
+	v15.Mage.Frost = v18(v15.Mage.Commons, {ConeofCold=v15(158 - 38, nil, 1908 - (573 + 1217)),IciclesBuff=v15(569041 - 363568, nil, 10 + 109),WintersChillDebuff=v15(367975 - 139617, nil, 1059 - (714 + 225)),FireBlast=v15(934689 - 614853, nil, 168 - 47),Blizzard=v15(20609 + 169747, nil, 176 - 54),BoneChilling=v15(206572 - (118 + 688), nil, 171 - (25 + 23)),ChainReaction=v15(53905 + 224404, nil, 2010 - (927 + 959)),ColdestSnap=v15(1407326 - 989833, nil, 857 - (16 + 716)),CometStorm=v15(296500 - 142905, nil, 223 - (11 + 86)),Ebonbolt=v15(628176 - 370639, nil, 412 - (175 + 110)),Flurry=v15(112641 - 68027, nil, 631 - 503),FreezingRain=v15(272029 - (503 + 1293), nil, 360 - 231),FreezingWinds=v15(276323 + 105780, nil, 1191 - (810 + 251)),Frostbite=v15(137492 + 60629, nil, 41 + 90),FrozenOrb=v16(119 + 13, 85247 - (43 + 490), 198882 - (711 + 22)),GlacialSpike=v15(772813 - 573027, nil, 992 - (240 + 619)),IceBarrier=v15(2758 + 8668, nil, 212 - 78),IceCaller=v15(15663 + 220999, nil, 1879 - (1344 + 400)),IceLance=v15(30860 - (255 + 150), nil, 108 + 28),IcyVeins=v15(6678 + 5794, nil, 585 - 448),RayofFrost=v15(662201 - 457180, nil, 1877 - (404 + 1335)),SlickIce=v15(382550 - (183 + 223), nil, 168 - 29),Snowstorm=v15(252914 + 128792, nil, 51 + 89),SplinteringCold=v15(379386 - (10 + 327), nil, 99 + 42),SplittingIce=v15(56715 - (118 + 220), nil, 47 + 94),SummonWaterElemental=v15(32136 - (108 + 341), nil, 64 + 78),Freeze=v15(141187 - 107792, nil, 1636 - (711 + 782)),WaterJet=v15(258854 - 123825, nil, 613 - (270 + 199)),BrainFreezeBuff=v15(61741 + 128705, nil, 1964 - (580 + 1239)),FingersofFrostBuff=v15(132419 - 87875, nil, 140 + 6),FreezingRainBuff=v15(9708 + 260524, nil, 65 + 82),FreezingWindsBuff=v15(997667 - 615561, nil, 92 + 56),GlacialSpikeBuff=v15(201011 - (645 + 522), nil, 1939 - (1010 + 780)),IcyVeinsBuff=v15(12466 + 6, nil, 714 - 564),SnowstormBuff=v15(1118033 - 736511, nil, 1987 - (1045 + 791)),FrostbiteDebuff=v15(958749 - 579989, nil, 233 - 80)});
+	if (not v17.Mage or ((2370 - (351 + 154)) >= (3603 - (1281 + 293)))) then
 		v17.Mage = {};
 	end
-	v17.Mage.Commons = {Dreambinder=v17(184999 + 23617),Iridal=v17(140886 + 67435),Healthstone=v17(9441 - 3929),RefreshingHealingPotion=v17(192536 - (1074 + 82)),DreamwalkersHealingPotion=v17(453685 - 246662)};
-	v17.Mage.Arcane = v18(v17.Mage.Commons, {ManaGem=v17(38583 - (214 + 1570))});
+	v17.Mage.Commons = {Dreambinder=v17(208882 - (28 + 238)),Iridal=v17(465487 - 257166),Healthstone=v17(7071 - (1381 + 178)),RefreshingHealingPotion=v17(179503 + 11877),DreamwalkersHealingPotion=v17(166931 + 40092)};
+	v17.Mage.Arcane = v18(v17.Mage.Commons, {ManaGem=v17(15697 + 21102)});
 	v17.Mage.Fire = v18(v17.Mage.Commons, {});
 	v17.Mage.Frost = v18(v17.Mage.Commons, {});
-	if (not v20.Mage or ((4780 - (990 + 465)) > (1902 + 2711))) then
+	if (((17064 - 12114) >= (838 + 778)) and not v20.Mage) then
 		v20.Mage = {};
 	end
-	v20.Mage.Commons = {Healthstone=v20(4 + 5),RefreshingHealingPotion=v20(10 + 0),UseWeapon=v20(397 - 296),CounterspellMouseover=v20(1737 - (1668 + 58)),PolymorphMouseover=v20(638 - (512 + 114)),RemoveCurseMouseover=v20(33 - 20),RemoveCurseFocus=v20(28 - 14),StopCasting=v20(52 - 37)};
-	v20.Mage.Arcane = v18(v20.Mage.Commons, {ManaGem=v20(8 + 8),CancelPOM=v20(4 + 13)});
-	v20.Mage.Fire = v18(v20.Mage.Commons, {FlamestrikeCursor=v20(16 + 2),MeteorCursor=v20(63 - 44),FireBlastMacro=v20(2017 - (109 + 1885))});
-	v20.Mage.Frost = v18(v20.Mage.Commons, {BlizzardCursor=v20(1489 - (1269 + 200)),IceLanceMouseover=v20(40 - 19),FreezePet=v20(837 - (98 + 717)),FrozenOrbCast=v20(850 - (802 + 24))});
+	v20.Mage.Commons = {Healthstone=v20(479 - (381 + 89)),RefreshingHealingPotion=v20(9 + 1),UseWeapon=v20(69 + 32),CounterspellMouseover=v20(18 - 7),PolymorphMouseover=v20(1168 - (1074 + 82)),RemoveCurseMouseover=v20(28 - 15),RemoveCurseFocus=v20(1798 - (214 + 1570)),StopCasting=v20(1470 - (990 + 465))};
+	v20.Mage.Arcane = v18(v20.Mage.Commons, {ManaGem=v20(7 + 9),CancelPOM=v20(8 + 9)});
+	v20.Mage.Fire = v18(v20.Mage.Commons, {FlamestrikeCursor=v20(18 + 0),MeteorCursor=v20(74 - 55),FireBlastMacro=v20(1749 - (1668 + 58))});
+	v20.Mage.Frost = v18(v20.Mage.Commons, {BlizzardCursor=v20(646 - (512 + 114)),IceLanceMouseover=v20(54 - 33),FreezePet=v20(45 - 23),FrozenOrbCast=v20(83 - 59)});
 	local v35 = v15.Mage.Frost.RuneofPower:BaseDuration();
 	local v36;
 	v36 = v9.AddCoreOverride("Player.AffectingCombat", function(v48)
 		return v15.Mage.Arcane.ArcaneBlast:InFlight() or v36(v48);
-	end, 106 - 44);
+	end, 29 + 33);
 	v9.AddCoreOverride("Spell.IsCastable", function(v49, v50, v51, v52, v53, v54)
-		if (((v49:CastTime() > (0 - 0)) and v12:IsMoving()) or ((732 + 4218) <= (3499 + 1054))) then
-			return false;
-		end
-		local v55 = true;
-		if (((438 + 2227) <= (849 + 3084)) and v51) then
-			local v134 = 0 - 0;
-			local v135;
-			while true do
-				if (((10914 - 7641) == (1171 + 2102)) and (v134 == (0 + 0))) then
-					v135 = v53 or v13;
-					v55 = v135:IsInRange(v51, v52);
-					break;
+		local v55 = 0 + 0;
+		local v56;
+		local v57;
+		while true do
+			if (((1500 + 225) == (5818 - 4093)) and (v55 == (1996 - (109 + 1885)))) then
+				if (((2928 - (1269 + 200)) <= (4757 - 2275)) and (v49 == v15.Mage.Arcane.PresenceofMind)) then
+					return v57 and v12:BuffDown(v15.Mage.Arcane.PresenceofMind);
+				elseif ((v49 == v15.Mage.Arcane.RadiantSpark) or ((3511 - (98 + 717)) >= (5358 - (802 + 24)))) then
+					return v57 and not v12:IsCasting(v49);
+				elseif (((1807 - 759) >= (65 - 13)) and (v49 == v15.Mage.Arcane.ShiftingPower)) then
+					return v57 and not v12:IsCasting(v49);
+				elseif (((437 + 2521) < (3460 + 1043)) and (v49 == v15.Mage.Arcane.TouchoftheMagi)) then
+					return v57 and not v12:IsCasting(v49);
+				elseif ((v49 == v15.Mage.Arcane.ConjureManaGem) or ((450 + 2285) == (283 + 1026))) then
+					local v139 = v17.Mage.Arcane.ManaGem;
+					local v140 = v139:CooldownRemains();
+					return v57 and not v12:IsCasting(v49) and not (v139:IsReady() or (v140 > (0 - 0)));
+				elseif ((v49 == v15.Mage.Arcane.ArcaneSurge) or ((13772 - 9642) <= (1057 + 1898))) then
+					return v49:IsLearned() and v49:CooldownUp() and v56;
+				else
+					return v57;
 				end
+				break;
+			end
+			if ((v55 == (0 + 0)) or ((1621 + 343) <= (975 + 365))) then
+				if (((1167 + 1332) == (3932 - (797 + 636))) and (v49:CastTime() > (0 - 0)) and v12:IsMoving()) then
+					return false;
+				end
+				v56 = true;
+				v55 = 1620 - (1427 + 192);
+			end
+			if ((v55 == (1 + 0)) or ((5235 - 2980) < (20 + 2))) then
+				if (v51 or ((493 + 593) >= (1731 - (192 + 134)))) then
+					local v133 = v53 or v13;
+					v56 = v133:IsInRange(v51, v52);
+				end
+				v57 = v49:IsLearned() and (v49:CooldownRemains(v50, v54 or "Auto") == (1276 - (316 + 960))) and v56 and (v12:Mana() >= v49:Cost());
+				v55 = 2 + 0;
 			end
 		end
-		local v56 = v49:IsLearned() and (v49:CooldownRemains(v50, v54 or "Auto") == (0 + 0)) and v55 and (v12:Mana() >= v49:Cost());
-		if (((2781 + 1043) > (191 + 218)) and (v49 == v15.Mage.Arcane.PresenceofMind)) then
-			return v56 and v12:BuffDown(v15.Mage.Arcane.PresenceofMind);
-		elseif (((3520 - (797 + 636)) == (10133 - 8046)) and (v49 == v15.Mage.Arcane.RadiantSpark)) then
-			return v56 and not v12:IsCasting(v49);
-		elseif ((v49 == v15.Mage.Arcane.ShiftingPower) or ((5023 - (1427 + 192)) > (1561 + 2942))) then
-			return v56 and not v12:IsCasting(v49);
-		elseif ((v49 == v15.Mage.Arcane.TouchoftheMagi) or ((8140 - 4634) <= (1177 + 132))) then
-			return v56 and not v12:IsCasting(v49);
-		elseif (((1340 + 1615) == (3281 - (192 + 134))) and (v49 == v15.Mage.Arcane.ConjureManaGem)) then
-			local v140 = v17.Mage.Arcane.ManaGem;
-			local v141 = v140:CooldownRemains();
-			return v56 and not v12:IsCasting(v49) and not (v140:IsReady() or (v141 > (1276 - (316 + 960))));
-		elseif ((v49 == v15.Mage.Arcane.ArcaneSurge) or ((1616 + 1287) == (1154 + 341))) then
-			return v49:IsLearned() and v49:CooldownUp() and v55;
-		else
-			return v56;
-		end
-	end, 58 + 4);
+	end, 48 + 14);
 	local v37;
-	v37 = v9.AddCoreOverride("Player.BuffStack", function(v57, v58, v59, v60)
-		local v61 = 0 - 0;
-		local v62;
+	v37 = v9.AddCoreOverride("Player.BuffStack", function(v58, v59, v60, v61)
+		local v62 = 0 + 0;
+		local v63;
 		while true do
-			if (((5097 - (83 + 468)) >= (4081 - (1202 + 604))) and (v61 == (0 - 0))) then
-				v62 = v37(v57, v58, v59, v60);
-				if (((1362 - 543) >= (60 - 38)) and (v58 == v58.Mage.Fire.PyroclasmBuff) and v57:IsCasting(v58.Mage.Fire.Pyroblast)) then
-					return 325 - (45 + 280);
+			if ((v62 == (0 - 0)) or ((2920 - (83 + 468)) == (2232 - (1202 + 604)))) then
+				v63 = v37(v58, v59, v60, v61);
+				if (((v59 == v59.Mage.Fire.PyroclasmBuff) and v58:IsCasting(v59.Mage.Fire.Pyroblast)) or ((14359 - 11283) > (5296 - 2113))) then
+					return 0 - 0;
 				else
-					return v62;
+					return v63;
 				end
 				break;
 			end
 		end
-	end, 61 + 2);
+	end, 388 - (45 + 280));
 	local v38;
-	v38 = v9.AddCoreOverride("Player.BuffRemains", function(v63, v64, v65, v66)
-		local v67 = 0 + 0;
-		local v68;
-		while true do
-			if (((1155 + 2007) == (1750 + 1412)) and (v67 == (1 + 0))) then
-				return v68;
-			end
-			if ((v67 == (0 - 0)) or ((4280 - (340 + 1571)) > (1747 + 2682))) then
-				v68 = v38(v63, v64, v65, v66);
-				if (((5867 - (1733 + 39)) >= (8746 - 5563)) and (v64 == v64.Mage.Fire.PyroclasmBuff) and v63:IsCasting(v64.Mage.Fire.Pyroblast)) then
-					return 1034 - (125 + 909);
-				end
-				v67 = 1949 - (1096 + 852);
-			end
+	v38 = v9.AddCoreOverride("Player.BuffRemains", function(v64, v65, v66, v67)
+		local v68 = v38(v64, v65, v66, v67);
+		if (((1161 + 41) > (925 + 133)) and (v65 == v65.Mage.Fire.PyroclasmBuff) and v64:IsCasting(v65.Mage.Fire.Pyroblast)) then
+			return 0 + 0;
 		end
-	end, 29 + 34);
+		return v68;
+	end, 35 + 28);
 	v9.AddCoreOverride("Spell.IsReady", function(v69, v70, v71, v72, v73, v74)
-		local v75 = 0 - 0;
+		local v75 = 0 + 0;
 		local v76;
 		local v77;
 		while true do
-			if ((v75 == (0 + 0)) or ((4223 - (409 + 103)) < (1244 - (46 + 190)))) then
+			if (((6871 - 3160) > (5266 - (340 + 1571))) and (v75 == (0 + 0))) then
 				v76 = v69:IsCastable() and v69:IsUsableP();
 				v77 = true;
-				v75 = 96 - (51 + 44);
+				v75 = 1773 - (1733 + 39);
 			end
-			if ((v75 == (1 + 0)) or ((2366 - (1114 + 203)) <= (1632 - (228 + 498)))) then
-				if (((978 + 3535) > (1507 + 1219)) and (v69:CastTime() > (663 - (174 + 489))) and v12:IsMoving()) then
-					if ((v69 == v15.Mage.Fire.Scorch) or ((v69 == v15.Mage.Fire.Pyroblast) and v12:BuffUp(v15.Mage.Fire.HotStreakBuff)) or ((v69 == v15.Mage.Fire.Flamestrike) and v12:BuffUp(v15.Mage.Fire.HotStreakBuff)) or ((3858 - 2377) >= (4563 - (830 + 1075)))) then
+			if ((v75 == (2 - 1)) or ((1940 - (125 + 909)) >= (4177 - (1096 + 852)))) then
+				if (((578 + 710) > (1786 - 535)) and (v69:CastTime() > (0 + 0)) and v12:IsMoving()) then
+					if ((v69 == v15.Mage.Fire.Scorch) or ((v69 == v15.Mage.Fire.Pyroblast) and v12:BuffUp(v15.Mage.Fire.HotStreakBuff)) or ((v69 == v15.Mage.Fire.Flamestrike) and v12:BuffUp(v15.Mage.Fire.HotStreakBuff)) or ((5025 - (409 + 103)) < (3588 - (46 + 190)))) then
 						v77 = true;
 					else
 						return false;
@@ -141,94 +139,101 @@ v0["Epix_Mage_Mage.lua"] = function(...)
 				break;
 			end
 		end
-	end, 587 - (303 + 221));
+	end, 158 - (51 + 44));
 	v9.AddCoreOverride("Spell.IsCastable", function(v78, v79, v80, v81, v82, v83)
-		local v84 = 1269 - (231 + 1038);
+		local v84 = 0 + 0;
 		local v85;
 		local v86;
 		while true do
-			if ((v84 == (2 + 0)) or ((4382 - (171 + 991)) == (5621 - 4257))) then
-				if ((v78 == v15.Mage.Fire.RadiantSpark) or ((2829 - 1775) > (8464 - 5072))) then
+			if (((1318 - (1114 + 203)) == v84) or ((2791 - (228 + 498)) >= (693 + 2503))) then
+				if (v80 or ((2418 + 1958) <= (2144 - (174 + 489)))) then
+					local v134 = v82 or v13;
+					v85 = v134:IsInRange(v80, v81);
+				end
+				v86 = v78:IsLearned() and (v78:CooldownRemains(v79, v83 or "Auto") == (0 - 0)) and v85;
+				v84 = 1907 - (830 + 1075);
+			end
+			if ((v84 == (526 - (303 + 221))) or ((4661 - (231 + 1038)) >= (3951 + 790))) then
+				if (((4487 - (171 + 991)) >= (8877 - 6723)) and (v78 == v15.Mage.Fire.RadiantSpark)) then
 					return v86 and not v12:IsCasting(v78);
-				elseif ((v78 == v15.Mage.Fire.ShiftingPower) or ((542 + 134) >= (5755 - 4113))) then
+				elseif ((v78 == v15.Mage.Fire.ShiftingPower) or ((3477 - 2182) >= (8067 - 4834))) then
 					return v86 and not v12:IsCasting(v78);
 				else
 					return v86;
 				end
 				break;
 			end
-			if (((11931 - 7795) > (3863 - 1466)) and (v84 == (0 - 0))) then
-				if (((v78:CastTime() > (1248 - (111 + 1137))) and v12:IsMoving()) or ((4492 - (91 + 67)) == (12634 - 8389))) then
+			if (((3504 + 873) > (5755 - 4113)) and (v84 == (0 - 0))) then
+				if (((7613 - 2890) > (4191 - 2835)) and (v78:CastTime() > (1248 - (111 + 1137))) and v12:IsMoving()) then
 					return false;
 				end
 				v85 = true;
-				v84 = 1 + 0;
-			end
-			if ((v84 == (524 - (423 + 100))) or ((31 + 4245) <= (8392 - 5361))) then
-				if (v80 or ((2493 + 2289) <= (1970 - (326 + 445)))) then
-					local v136 = 0 - 0;
-					local v137;
-					while true do
-						if ((v136 == (0 - 0)) or ((11353 - 6489) < (2613 - (530 + 181)))) then
-							v137 = v82 or v13;
-							v85 = v137:IsInRange(v80, v81);
-							break;
-						end
-					end
-				end
-				v86 = v78:IsLearned() and (v78:CooldownRemains(v79, v83 or "Auto") == (881 - (614 + 267))) and v85;
-				v84 = 34 - (19 + 13);
+				v84 = 159 - (91 + 67);
 			end
 		end
-	end, 101 - 38);
+	end, 187 - 124);
 	local v39;
 	v39 = v9.AddCoreOverride("Player.AffectingCombat", function(v87)
 		return v39(v87) or v12:IsCasting(v15.Mage.Fire.Pyroblast) or v12:IsCasting(v15.Mage.Fire.Fireball);
-	end, 146 - 83);
+	end, 16 + 47);
 	v9.AddCoreOverride("Spell.InFlightRemains", function(v88)
 		return v88:TravelTime() - v88:TimeSinceLastCast();
-	end, 179 - 116);
+	end, 586 - (423 + 100));
 	local v40;
 	v40 = v9.AddCoreOverride("Spell.IsCastable", function(v89, v90, v91, v92, v93, v94)
 		local v95 = 0 + 0;
 		local v96;
 		local v97;
 		while true do
-			if (((8509 - 3670) >= (7673 - 3973)) and ((1814 - (1293 + 519)) == v95)) then
-				if ((v89 == v15.Mage.Frost.GlacialSpike) or ((2193 - 1118) > (5007 - 3089))) then
-					return v89:IsLearned() and v97 and v96 and not v12:IsCasting(v89) and (v12:BuffUp(v15.Mage.Frost.GlacialSpikeBuff) or (v12:BuffStack(v15.Mage.Frost.IciclesBuff) == (9 - 4)));
+			if ((v95 == (2 - 1)) or ((2156 + 1980) <= (4204 - (326 + 445)))) then
+				v97 = true;
+				if (((18525 - 14280) <= (10316 - 5685)) and v91) then
+					local v135 = 0 - 0;
+					local v136;
+					while true do
+						if (((4987 - (530 + 181)) >= (4795 - (614 + 267))) and (v135 == (32 - (19 + 13)))) then
+							v136 = v93 or v13;
+							v97 = v136:IsInRange(v91, v92);
+							break;
+						end
+					end
+				end
+				v95 = 2 - 0;
+			end
+			if (((461 - 263) <= (12469 - 8104)) and ((1 + 1) == v95)) then
+				if (((8409 - 3627) > (9697 - 5021)) and (v89 == v15.Mage.Frost.GlacialSpike)) then
+					return v89:IsLearned() and v97 and v96 and not v12:IsCasting(v89) and (v12:BuffUp(v15.Mage.Frost.GlacialSpikeBuff) or (v12:BuffStack(v15.Mage.Frost.IciclesBuff) == (1817 - (1293 + 519))));
 				else
-					local v138 = v40(v89, v90, v91, v92, v93, v94);
-					if (((1707 - 1311) <= (8961 - 5157)) and (v89 == v15.Mage.Frost.SummonWaterElemental)) then
-						return v138 and not v14:IsActive();
-					elseif ((v89 == v15.Mage.Frost.RuneofPower) or ((2209 + 1960) == (447 + 1740))) then
-						return v138 and not v12:IsCasting(v89) and v12:BuffDown(v15.Mage.Frost.RuneofPowerBuff);
-					elseif (((3266 - 1860) == (325 + 1081)) and (v89 == v15.Mage.Frost.MirrorsofTorment)) then
-						return v138 and not v12:IsCasting(v89);
-					elseif (((509 + 1022) < (2670 + 1601)) and (v89 == v15.Mage.Frost.RadiantSpark)) then
-						return v138 and not v12:IsCasting(v89);
-					elseif (((1731 - (709 + 387)) == (2493 - (673 + 1185))) and (v89 == v15.Mage.Frost.ShiftingPower)) then
-						return v138 and not v12:IsCasting(v89);
-					elseif (((9782 - 6409) <= (11418 - 7862)) and (v89 == v15.Mage.Frost.Deathborne)) then
-						return v138 and not v12:IsCasting(v89);
-					else
-						return v138;
+					local v137 = 0 - 0;
+					local v138;
+					while true do
+						if (((12699 - 7835) > (4201 - 2004)) and (v137 == (0 - 0))) then
+							v138 = v40(v89, v90, v91, v92, v93, v94);
+							if ((v89 == v15.Mage.Frost.SummonWaterElemental) or ((8716 - 5016) == (1328 + 1179))) then
+								return v138 and not v14:IsActive();
+							elseif (((913 + 3561) >= (636 - 362)) and (v89 == v15.Mage.Frost.RuneofPower)) then
+								return v138 and not v12:IsCasting(v89) and v12:BuffDown(v15.Mage.Frost.RuneofPowerBuff);
+							elseif ((v89 == v15.Mage.Frost.MirrorsofTorment) or ((438 + 1456) <= (468 + 938))) then
+								return v138 and not v12:IsCasting(v89);
+							elseif (((983 + 589) >= (2627 - (709 + 387))) and (v89 == v15.Mage.Frost.RadiantSpark)) then
+								return v138 and not v12:IsCasting(v89);
+							elseif ((v89 == v15.Mage.Frost.ShiftingPower) or ((6545 - (673 + 1185)) < (13172 - 8630))) then
+								return v138 and not v12:IsCasting(v89);
+							elseif (((10567 - 7276) > (2742 - 1075)) and (v89 == v15.Mage.Frost.Deathborne)) then
+								return v138 and not v12:IsCasting(v89);
+							else
+								return v138;
+							end
+							break;
+						end
 					end
 				end
 				break;
 			end
-			if (((1 - 0) == v95) or ((2354 + 937) < (2451 + 829))) then
-				v97 = true;
-				if (((5921 - 1535) >= (215 + 658)) and v91) then
-					local v139 = v93 or v13;
-					v97 = v139:IsInRange(v91, v92);
-				end
-				v95 = 3 - 1;
-			end
-			if (((1807 - 886) <= (2982 - (446 + 1434))) and (v95 == (1283 - (1040 + 243)))) then
+			if ((v95 == (0 + 0)) or ((653 + 220) == (2746 - 712))) then
 				v96 = true;
-				if (((14045 - 9339) >= (2810 - (559 + 1288))) and (v89:CastTime() > (1931 - (609 + 1322))) and v12:IsMoving()) then
-					if (((v89 == v15.Mage.Frost.Blizzard) and v12:BuffUp(v15.Mage.Frost.FreezingRain)) or ((1414 - (13 + 441)) <= (3273 - 2397))) then
+				if (((v89:CastTime() > (0 + 0)) and v12:IsMoving()) or ((5614 - 2798) < (21 - 10))) then
+					if (((5579 - (446 + 1434)) < (5989 - (1040 + 243))) and (v89 == v15.Mage.Frost.Blizzard) and v12:BuffUp(v15.Mage.Frost.FreezingRain)) then
 						v96 = true;
 					else
 						return false;
@@ -237,126 +242,119 @@ v0["Epix_Mage_Mage.lua"] = function(...)
 				v95 = 2 - 1;
 			end
 		end
-	end, 318 - 254);
+	end, 1911 - (559 + 1288));
 	local v41;
 	v41 = v9.AddCoreOverride("Spell.CooldownRemains", function(v98, v99, v100)
-		if (((v98 == v15.Mage.Frost.Blizzard) and v12:IsCasting(v98)) or ((77 + 1989) == (3384 - 2452))) then
-			return 3 + 5;
-		elseif (((2115 + 2710) < (14371 - 9528)) and (v98 == v15.Mage.Frost.Ebonbolt) and v12:IsCasting(v98)) then
-			return 25 + 20;
+		if (((4577 - (609 + 1322)) >= (1330 - (13 + 441))) and (v98 == v15.Mage.Frost.Blizzard) and v12:IsCasting(v98)) then
+			return 29 - 21;
+		elseif (((1608 - 994) <= (15857 - 12673)) and (v98 == v15.Mage.Frost.Ebonbolt) and v12:IsCasting(v98)) then
+			return 2 + 43;
 		else
 			return v41(v98, v99, v100);
 		end
-	end, 117 - 53);
+	end, 232 - 168);
 	local v42;
 	v42 = v9.AddCoreOverride("Player.BuffStackP", function(v101, v102, v103, v104)
-		local v105 = 0 + 0;
-		local v106;
-		while true do
-			if ((v105 == (0 + 0)) or ((2786 + 1091) >= (3810 + 727))) then
-				v106 = v12:BuffStack(v102);
-				if ((v102 == v102.Mage.Frost.IciclesBuff) or ((4222 + 93) < (2159 - (153 + 280)))) then
-					return (v101:IsCasting(v102.Mage.Frost.GlacialSpike) and (0 - 0)) or math.min(v106 + ((v101:IsCasting(v102.Mage.Frost.Frostbolt) and (1 + 0)) or (0 + 0)), 3 + 2);
-				elseif ((v102 == v102.Mage.Frost.GlacialSpikeBuff) or ((3339 + 340) < (453 + 172))) then
-					return (v101:IsCasting(v102.Mage.Frost.GlacialSpike) and (0 - 0)) or v106;
-				elseif ((v102 == v102.Mage.Frost.WintersReachBuff) or ((2859 + 1766) < (1299 - (89 + 578)))) then
-					return (v101:IsCasting(v102.Mage.Frost.Flurry) and (0 + 0)) or v106;
-				elseif ((v102 == v102.Mage.Frost.FingersofFrostBuff) or ((171 - 88) > (2829 - (572 + 477)))) then
-					if (((74 + 472) <= (647 + 430)) and v102.Mage.Frost.IceLance:InFlight()) then
-						if ((v106 == (0 + 0)) or ((1082 - (84 + 2)) > (7088 - 2787))) then
-							return 0 + 0;
-						else
-							return v106 - (843 - (497 + 345));
-						end
-					else
-						return v106;
-					end
+		local v105 = v12:BuffStack(v102);
+		if (((1111 + 2015) == (1370 + 1756)) and (v102 == v102.Mage.Frost.IciclesBuff)) then
+			return (v101:IsCasting(v102.Mage.Frost.GlacialSpike) and (0 - 0)) or math.min(v105 + ((v101:IsCasting(v102.Mage.Frost.Frostbolt) and (1 + 0)) or (0 - 0)), 4 + 1);
+		elseif ((v102 == v102.Mage.Frost.GlacialSpikeBuff) or ((1217 + 970) >= (3560 + 1394))) then
+			return (v101:IsCasting(v102.Mage.Frost.GlacialSpike) and (0 + 0)) or v105;
+		elseif ((v102 == v102.Mage.Frost.WintersReachBuff) or ((3794 + 83) == (4008 - (153 + 280)))) then
+			return (v101:IsCasting(v102.Mage.Frost.Flurry) and (0 - 0)) or v105;
+		elseif (((635 + 72) > (250 + 382)) and (v102 == v102.Mage.Frost.FingersofFrostBuff)) then
+			if (v102.Mage.Frost.IceLance:InFlight() or ((286 + 260) >= (2436 + 248))) then
+				if (((1062 + 403) <= (6548 - 2247)) and (v105 == (0 + 0))) then
+					return 667 - (89 + 578);
 				else
-					return v106;
-				end
-				break;
-			end
-		end
-	end, 2 + 62);
-	local v43;
-	v43 = v9.AddCoreOverride("Player.BuffUpP", function(v107, v108, v109, v110)
-		local v111 = 0 + 0;
-		local v112;
-		while true do
-			if (((5403 - (605 + 728)) > (491 + 196)) and (v111 == (0 - 0))) then
-				v112 = v12:BuffUp(v108);
-				if ((v108 == v108.Mage.Frost.FingersofFrostBuff) or ((31 + 625) >= (12311 - 8981))) then
-					if (v108.Mage.Frost.IceLance:InFlight() or ((2247 + 245) <= (927 - 592))) then
-						return v12:BuffStack(v108) >= (1 + 0);
-					else
-						return v112;
-					end
-				else
-					return v112;
-				end
-				break;
-			end
-		end
-	end, 553 - (457 + 32));
-	local v44;
-	v44 = v9.AddCoreOverride("Player.BuffDownP", function(v113, v114, v115, v116)
-		local v117 = 0 + 0;
-		local v118;
-		while true do
-			if (((5724 - (832 + 570)) >= (2414 + 148)) and (v117 == (0 + 0))) then
-				v118 = v12:BuffDown(v114);
-				if ((v114 == v114.Mage.Frost.FingersofFrostBuff) or ((12870 - 9233) >= (1817 + 1953))) then
-					if (v114.Mage.Frost.IceLance:InFlight() or ((3175 - (588 + 208)) > (12338 - 7760))) then
-						return v12:BuffStack(v114) == (1800 - (884 + 916));
-					else
-						return v118;
-					end
-				else
-					return v118;
-				end
-				break;
-			end
-		end
-	end, 133 - 69);
-	local v45;
-	v45 = v9.AddCoreOverride("Target.DebuffStack", function(v119, v120, v121, v122)
-		local v123 = v45(v119, v120, v121, v122);
-		if ((v120 == v120.Mage.Frost.WintersChillDebuff) or ((281 + 202) > (1396 - (232 + 421)))) then
-			if (((4343 - (1569 + 320)) > (142 + 436)) and v120.Mage.Frost.Flurry:InFlight()) then
-				return 1 + 1;
-			elseif (((3133 - 2203) < (5063 - (316 + 289))) and v120.Mage.Frost.IceLance:InFlight()) then
-				if (((1732 - 1070) <= (45 + 927)) and (v123 == (1453 - (666 + 787)))) then
-					return 425 - (360 + 65);
-				else
-					return v123 - (1 + 0);
+					return v105 - (1 + 0);
 				end
 			else
-				return v123;
+				return v105;
 			end
 		else
-			return v123;
+			return v105;
 		end
-	end, 318 - (79 + 175));
-	local v46;
-	v46 = v9.AddCoreOverride("Target.DebuffRemains", function(v124, v125, v126, v127)
-		local v128 = 0 - 0;
-		local v129;
+	end, 132 - 68);
+	local v43;
+	v43 = v9.AddCoreOverride("Player.BuffUpP", function(v106, v107, v108, v109)
+		local v110 = v12:BuffUp(v107);
+		if (((2753 - (572 + 477)) > (193 + 1232)) and (v107 == v107.Mage.Frost.FingersofFrostBuff)) then
+			if (v107.Mage.Frost.IceLance:InFlight() or ((413 + 274) == (506 + 3728))) then
+				return v12:BuffStack(v107) >= (87 - (84 + 2));
+			else
+				return v110;
+			end
+		else
+			return v110;
+		end
+	end, 104 - 40);
+	local v44;
+	v44 = v9.AddCoreOverride("Player.BuffDownP", function(v111, v112, v113, v114)
+		local v115 = 0 + 0;
+		local v116;
 		while true do
-			if (((3411 + 959) == (13395 - 9025)) and (v128 == (0 - 0))) then
-				v129 = v46(v124, v125, v126, v127);
-				if ((v125 == v125.Mage.Frost.WintersChillDebuff) or ((5661 - (503 + 396)) <= (1042 - (92 + 89)))) then
-					return (v125.Mage.Frost.Flurry:InFlight() and (10 - 4)) or v129;
+			if ((v115 == (842 - (497 + 345))) or ((86 + 3244) < (242 + 1187))) then
+				v116 = v12:BuffDown(v112);
+				if (((2480 - (605 + 728)) >= (240 + 95)) and (v112 == v112.Mage.Frost.FingersofFrostBuff)) then
+					if (((7636 - 4201) > (97 + 2000)) and v112.Mage.Frost.IceLance:InFlight()) then
+						return v12:BuffStack(v112) == (0 - 0);
+					else
+						return v116;
+					end
 				else
-					return v129;
+					return v116;
 				end
 				break;
 			end
 		end
-	end, 33 + 31);
+	end, 58 + 6);
+	local v45;
+	v45 = v9.AddCoreOverride("Target.DebuffStack", function(v117, v118, v119, v120)
+		local v121 = 0 - 0;
+		local v122;
+		while true do
+			if ((v121 == (0 + 0)) or ((4259 - (457 + 32)) >= (1715 + 2326))) then
+				v122 = v45(v117, v118, v119, v120);
+				if ((v118 == v118.Mage.Frost.WintersChillDebuff) or ((5193 - (832 + 570)) <= (1518 + 93))) then
+					if (v118.Mage.Frost.Flurry:InFlight() or ((1194 + 3384) <= (7105 - 5097))) then
+						return 1 + 1;
+					elseif (((1921 - (588 + 208)) <= (5595 - 3519)) and v118.Mage.Frost.IceLance:InFlight()) then
+						if ((v122 == (1800 - (884 + 916))) or ((1555 - 812) >= (2551 + 1848))) then
+							return 653 - (232 + 421);
+						else
+							return v122 - (1890 - (1569 + 320));
+						end
+					else
+						return v122;
+					end
+				else
+					return v122;
+				end
+				break;
+			end
+		end
+	end, 16 + 48);
+	local v46;
+	v46 = v9.AddCoreOverride("Target.DebuffRemains", function(v123, v124, v125, v126)
+		local v127 = 0 + 0;
+		local v128;
+		while true do
+			if (((3892 - 2737) < (2278 - (316 + 289))) and (v127 == (0 - 0))) then
+				v128 = v46(v123, v124, v125, v126);
+				if ((v124 == v124.Mage.Frost.WintersChillDebuff) or ((108 + 2216) <= (2031 - (666 + 787)))) then
+					return (v124.Mage.Frost.Flurry:InFlight() and (431 - (360 + 65))) or v128;
+				else
+					return v128;
+				end
+				break;
+			end
+		end
+	end, 60 + 4);
 	local v47;
-	v47 = v9.AddCoreOverride("Player.AffectingCombat", function(v130)
-		return v15.Mage.Frost.Frostbolt:InFlight() or v47(v130);
-	end, 38 + 26);
+	v47 = v9.AddCoreOverride("Player.AffectingCombat", function(v129)
+		return v15.Mage.Frost.Frostbolt:InFlight() or v47(v129);
+	end, 318 - (79 + 175));
 end;
 return v0["Epix_Mage_Mage.lua"]();
 
