@@ -1,7 +1,7 @@
 ## Title: EpicSettings
 ## Version: 1.0
 ## Author: eliea
-## Interface: 100206
+## Interface: 100207
 
 ## DefaultState: Enabled
 

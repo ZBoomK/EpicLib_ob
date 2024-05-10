@@ -1344,7 +1344,7 @@ function Commons.FriendlyUnitsWithBuffCount(Buff, OnlyTanks, OnlyNonTanks, maxRa
 end
 
 -- Get friendly units with a debuff from a list
-function Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell)
+function Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell, AvoidClass)
   local UnitsWithDebuff = {}
   if not Range then Range = 40; end
 
@@ -1352,7 +1352,8 @@ function Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, Fri
   local j = 1
   for i = 1, #FriendlyUnits do
     local FriendlyUnit = FriendlyUnits[i];
-    if FriendlyUnit:Exists() and (FriendlyUnit:IsInRange(Range) or FriendlyUnit:IsSpellInRange(FriendlySpell)) and not FriendlyUnit:IsDeadOrGhost() then
+    local _,_,FriendlyUnitClass = UnitClass(FriendlyUnit:ID())
+    if FriendlyUnit:Exists() and (FriendlyUnit:IsInRange(Range) or FriendlyUnit:IsSpellInRange(FriendlySpell)) and not FriendlyUnit:IsDeadOrGhost() and not FriendlyUnitClass == AvoidClass then
       if Commons.UnitHasDebuffFromList(FriendlyUnit, DebuffList) then
         UnitsWithDebuff[j] = FriendlyUnits[i]
         j = j+1
@@ -1459,13 +1460,13 @@ function Commons.FocusSpecifiedUnit(UnitToFocus, Range, FriendlySpell)
 end
 
 -- Focus Unit With a Debuff From a List
-function Commons.FocusUnitWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell)
+function Commons.FocusUnitWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell, AvoidClass)
   local cycleDelay = 800
   if not Range then Range = 40; end
 
   local NewFocusUnit = nil
-  if Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell) then
-    NewFocusUnit = Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell)[1]
+  if Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell, AvoidClass) then
+    NewFocusUnit = Commons.FriendlyUnitsWithDebuffFromList(DebuffList, Range, maxRaid, FriendlySpell, AvoidClass)[1]
   end
   if NewFocusUnit ~= nil and (Focus == nil or not Focus:Exists() or NewFocusUnit:GUID() ~= Focus:GUID()) then
     local FocusUnitKey = "Focus" .. Utils.UpperCaseFirst(NewFocusUnit:ID())

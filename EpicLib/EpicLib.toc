@@ -1,4 +1,4 @@
-## Interface: 100206
+## Interface: 100207
 ## Title: |cFF40E0D0Epic|r|cFF00FF00Lib|r
 ## Notes: Epic Library for extra features.
 
@@ -17,7 +17,6 @@ DBC\SpellProjectileSpeed.lua
 DBC\SpellRPPM.lua
 DBC\SpellTickTime.lua
 
-Utils.lua
 # EpicCache Files
 EpicCache_Main.lua
 # EpicLib Files
