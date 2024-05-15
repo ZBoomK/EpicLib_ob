@@ -4,14 +4,14 @@ local function v2(v4, ...)
 	local v5 = 0 + 0;
 	local v6;
 	while true do
-		if (((1149 + 1754) >= (2239 - (717 + 27))) and (v5 == (0 + 0))) then
+		if ((v5 == (0 - 0)) or ((5190 - 1080) > (647 + 3729))) then
 			v6 = v0[v4];
-			if (((11869 - 7323) >= (1414 + 861)) and not v6) then
+			if (not v6 or ((1253 + 377) > (690 + 3508))) then
 				return v1(v4, ...);
 			end
-			v5 = 1168 - (645 + 522);
+			v5 = 1 + 0;
 		end
-		if (((2609 - (1010 + 780)) >= (22 + 0)) and (v5 == (4 - 3))) then
+		if (((2932 - 1878) == (3514 - 2460)) and (v5 == (1 + 0))) then
 			return v6(...);
 		end
 	end
@@ -118,15 +118,15 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 	local v106, v107;
 	local v108, v109;
 	local v110 = v21.Commons.Everyone;
-	local v111 = 32560 - 21449;
-	local v112 = 12947 - (1045 + 791);
-	local v113 = 0 - 0;
+	local v111 = 4523 + 6588;
+	local v112 = 9166 + 1945;
+	local v113 = 0 + 0;
 	v10:RegisterForEvent(function()
-		v111 = 16965 - 5854;
-		v112 = 11616 - (351 + 154);
+		v111 = 5188 + 5923;
+		v112 = 12544 - (797 + 636);
 	end, "PLAYER_REGEN_ENABLED");
 	local function v114()
-		if (((4736 - (1281 + 293)) == (3428 - (28 + 238))) and v100.CleanseToxins:IsAvailable()) then
+		if (v100.CleanseToxins:IsAvailable() or ((3282 - 2606) >= (3261 - (1427 + 192)))) then
 			v110.DispellableDebuffs = v13.MergeTable(v110.DispellableDiseaseDebuffs, v110.DispellablePoisonDebuffs);
 		end
 	end
@@ -139,17 +139,17 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 	local function v116()
 		return v15:BuffDown(v100.RetributionAura) and v15:BuffDown(v100.DevotionAura) and v15:BuffDown(v100.ConcentrationAura) and v15:BuffDown(v100.CrusaderAura);
 	end
-	local v117 = 0 - 0;
+	local v117 = 0 + 0;
 	local function v118()
-		if ((v100.CleanseToxins:IsReady() and (v110.UnitHasDispellableDebuffByPlayer(v14) or v110.DispellableFriendlyUnit(1579 - (1381 + 178)) or v110.UnitHasCurseDebuff(v14) or v110.UnitHasPoisonDebuff(v14))) or ((2222 + 147) > (3572 + 857))) then
-			local v183 = 0 + 0;
+		if (((9602 - 5466) > (2155 + 242)) and v100.CleanseToxins:IsReady() and (v110.UnitHasDispellableDebuffByPlayer(v14) or v110.DispellableFriendlyUnit(10 + 10) or v110.UnitHasCurseDebuff(v14) or v110.UnitHasPoisonDebuff(v14))) then
+			local v160 = 326 - (192 + 134);
 			while true do
-				if (((14117 - 10022) >= (1649 + 1534)) and (v183 == (470 - (381 + 89)))) then
-					if ((v117 == (0 + 0)) or ((2510 + 1201) < (1726 - 718))) then
+				if ((v160 == (1276 - (316 + 960))) or ((2412 + 1922) == (3276 + 969))) then
+					if ((v117 == (0 + 0)) or ((16346 - 12070) <= (3582 - (83 + 468)))) then
 						v117 = GetTime();
 					end
-					if (v110.Wait(1656 - (1074 + 82), v117) or ((2298 - 1249) <= (2690 - (214 + 1570)))) then
-						if (((5968 - (990 + 465)) > (1124 + 1602)) and v25(v102.CleanseToxinsFocus)) then
+					if (v110.Wait(2306 - (1202 + 604), v117) or ((22323 - 17541) <= (1994 - 795))) then
+						if (v25(v102.CleanseToxinsFocus) or ((13467 - 8603) < (2227 - (45 + 280)))) then
 							return "cleanse_toxins dispel";
 						end
 						v117 = 0 + 0;
@@ -160,85 +160,85 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 		end
 	end
 	local function v119()
-		if ((v98 and (v15:HealthPercentage() <= v99)) or ((1441 + 40) >= (10460 - 7802))) then
-			if (v100.FlashofLight:IsReady() or ((4946 - (1668 + 58)) == (1990 - (512 + 114)))) then
-				if (v25(v100.FlashofLight) or ((2747 - 1693) > (7012 - 3620))) then
+		if (((4228 + 611) >= (1352 + 2348)) and v98 and (v15:HealthPercentage() <= v99)) then
+			if (v100.FlashofLight:IsReady() or ((595 + 480) > (338 + 1580))) then
+				if (((733 - 337) <= (5715 - (340 + 1571))) and v25(v100.FlashofLight)) then
 					return "flash_of_light heal ooc";
 				end
 			end
 		end
 	end
 	local function v120()
-		local v132 = 0 - 0;
+		local v132 = 0 + 0;
 		while true do
-			if (((1 + 0) == v132) or ((127 + 549) >= (1428 + 214))) then
-				v29 = v110.HandleBottomTrinket(v103, v32, 134 - 94, nil);
-				if (((6130 - (109 + 1885)) > (3866 - (1269 + 200))) and v29) then
+			if (((1773 - (1733 + 39)) == v132) or ((11455 - 7286) == (3221 - (125 + 909)))) then
+				v29 = v110.HandleBottomTrinket(v103, v32, 1988 - (1096 + 852), nil);
+				if (((631 + 775) == (2007 - 601)) and v29) then
 					return v29;
 				end
 				break;
 			end
-			if ((v132 == (0 - 0)) or ((5149 - (98 + 717)) == (5071 - (802 + 24)))) then
-				v29 = v110.HandleTopTrinket(v103, v32, 68 - 28, nil);
-				if (v29 or ((5400 - 1124) <= (448 + 2583))) then
+			if (((1485 + 46) < (4783 - (409 + 103))) and (v132 == (236 - (46 + 190)))) then
+				v29 = v110.HandleTopTrinket(v103, v32, 135 - (51 + 44), nil);
+				if (((180 + 455) == (1952 - (1114 + 203))) and v29) then
 					return v29;
 				end
-				v132 = 1 + 0;
+				v132 = 727 - (228 + 498);
 			end
 		end
 	end
 	local function v121()
-		if (((v15:HealthPercentage() <= v69) and v58 and v100.DivineShield:IsCastable() and v15:DebuffDown(v100.ForbearanceDebuff)) or ((786 + 3996) <= (259 + 940))) then
-			if (v25(v100.DivineShield) or ((13531 - 8667) < (6342 - 4440))) then
+		if (((731 + 2642) <= (1965 + 1591)) and (v15:HealthPercentage() <= v69) and v58 and v100.DivineShield:IsCastable() and v15:DebuffDown(v100.ForbearanceDebuff)) then
+			if (v25(v100.DivineShield) or ((3954 - (174 + 489)) < (8545 - 5265))) then
 				return "divine_shield defensive";
 			end
 		end
-		if (((1731 + 3108) >= (1507 + 2193)) and (v15:HealthPercentage() <= v71) and v60 and v100.LayonHands:IsCastable() and v15:DebuffDown(v100.ForbearanceDebuff)) then
-			if (v25(v102.LayonHandsPlayer) or ((887 + 188) > (1395 + 523))) then
+		if (((6291 - (830 + 1075)) >= (1397 - (303 + 221))) and (v15:HealthPercentage() <= v71) and v60 and v100.LayonHands:IsCastable() and v15:DebuffDown(v100.ForbearanceDebuff)) then
+			if (((2190 - (231 + 1038)) <= (919 + 183)) and v25(v102.LayonHandsPlayer)) then
 				return "lay_on_hands defensive 2";
 			end
 		end
-		if (((185 + 211) <= (5237 - (797 + 636))) and v100.GuardianofAncientKings:IsCastable() and (v15:HealthPercentage() <= v70) and v59 and v15:BuffDown(v100.ArdentDefenderBuff)) then
-			if (v25(v100.GuardianofAncientKings) or ((20241 - 16072) == (3806 - (1427 + 192)))) then
+		if (((5868 - (171 + 991)) >= (3968 - 3005)) and v100.GuardianofAncientKings:IsCastable() and (v15:HealthPercentage() <= v70) and v59 and v15:BuffDown(v100.ArdentDefenderBuff)) then
+			if (v25(v100.GuardianofAncientKings) or ((2577 - 1617) <= (2185 - 1309))) then
 				return "guardian_of_ancient_kings defensive 4";
 			end
 		end
-		if (((488 + 918) == (3264 - 1858)) and v100.ArdentDefender:IsCastable() and (v15:HealthPercentage() <= v68) and v57 and v15:BuffDown(v100.GuardianofAncientKingsBuff)) then
-			if (((1377 + 154) < (1936 + 2335)) and v25(v100.ArdentDefender)) then
+		if ((v100.ArdentDefender:IsCastable() and (v15:HealthPercentage() <= v68) and v57 and v15:BuffDown(v100.GuardianofAncientKingsBuff)) or ((1654 + 412) == (3266 - 2334))) then
+			if (((13919 - 9094) < (7806 - 2963)) and v25(v100.ArdentDefender)) then
 				return "ardent_defender defensive 6";
 			end
 		end
-		if (((961 - (192 + 134)) == (1911 - (316 + 960))) and v100.WordofGlory:IsReady() and (v15:HealthPercentage() <= v72) and v61 and not v15:HealingAbsorbed()) then
-			if (((1878 + 1495) <= (2745 + 811)) and ((v15:BuffRemains(v100.ShieldoftheRighteousBuff) >= (5 + 0)) or v15:BuffUp(v100.DivinePurposeBuff) or v15:BuffUp(v100.ShiningLightFreeBuff))) then
-				if (v25(v102.WordofGloryPlayer) or ((12581 - 9290) < (3831 - (83 + 468)))) then
+		if ((v100.WordofGlory:IsReady() and (v15:HealthPercentage() <= v72) and v61 and not v15:HealingAbsorbed()) or ((11984 - 8107) >= (5785 - (111 + 1137)))) then
+			if ((v15:BuffRemains(v100.ShieldoftheRighteousBuff) >= (163 - (91 + 67))) or v15:BuffUp(v100.DivinePurposeBuff) or v15:BuffUp(v100.ShiningLightFreeBuff) or ((12842 - 8527) < (431 + 1295))) then
+				if (v25(v102.WordofGloryPlayer) or ((4202 - (423 + 100)) < (5 + 620))) then
 					return "word_of_glory defensive 8";
 				end
 			end
 		end
-		if (((6192 - (1202 + 604)) >= (4075 - 3202)) and v100.ShieldoftheRighteous:IsCastable() and (v15:HolyPower() > (2 - 0)) and v15:BuffRefreshable(v100.ShieldoftheRighteousBuff) and v62 and (v104 or (v15:HealthPercentage() <= v73))) then
-			if (((2549 - 1628) <= (1427 - (45 + 280))) and v25(v100.ShieldoftheRighteous)) then
+		if ((v100.ShieldoftheRighteous:IsCastable() and (v15:HolyPower() > (5 - 3)) and v15:BuffRefreshable(v100.ShieldoftheRighteousBuff) and v62 and (v104 or (v15:HealthPercentage() <= v73))) or ((2411 + 2214) < (1403 - (326 + 445)))) then
+			if (v25(v100.ShieldoftheRighteous) or ((362 - 279) > (3965 - 2185))) then
 				return "shield_of_the_righteous defensive 12";
 			end
 		end
-		if (((4543 + 163) >= (842 + 121)) and v101.Healthstone:IsReady() and v94 and (v15:HealthPercentage() <= v96)) then
-			if (v25(v102.Healthstone) or ((351 + 609) <= (485 + 391))) then
+		if (((1273 - 727) <= (1788 - (530 + 181))) and v101.Healthstone:IsReady() and v94 and (v15:HealthPercentage() <= v96)) then
+			if (v25(v102.Healthstone) or ((1877 - (614 + 267)) > (4333 - (19 + 13)))) then
 				return "healthstone defensive";
 			end
 		end
-		if ((v93 and (v15:HealthPercentage() <= v95)) or ((364 + 1702) == (1725 - 793))) then
-			local v184 = 1911 - (340 + 1571);
+		if (((6624 - 2554) > (1600 - 913)) and v93 and (v15:HealthPercentage() <= v95)) then
+			local v161 = 0 - 0;
 			while true do
-				if (((1904 + 2921) < (6615 - (1733 + 39))) and (v184 == (0 - 0))) then
-					if ((v97 == "Refreshing Healing Potion") or ((4911 - (125 + 909)) >= (6485 - (1096 + 852)))) then
-						if (v101.RefreshingHealingPotion:IsReady() or ((1936 + 2379) < (2464 - 738))) then
-							if (v25(v102.RefreshingHealingPotion) or ((3569 + 110) < (1137 - (409 + 103)))) then
+				if ((v161 == (0 + 0)) or ((1153 - 497) >= (6905 - 3575))) then
+					if ((v97 == "Refreshing Healing Potion") or ((4304 - (1293 + 519)) <= (683 - 348))) then
+						if (((11284 - 6962) >= (4899 - 2337)) and v101.RefreshingHealingPotion:IsReady()) then
+							if (v25(v102.RefreshingHealingPotion) or ((15682 - 12045) >= (8881 - 5111))) then
 								return "refreshing healing potion defensive";
 							end
 						end
 					end
-					if ((v97 == "Dreamwalker's Healing Potion") or ((4861 - (46 + 190)) < (727 - (51 + 44)))) then
-						if (v101.DreamwalkersHealingPotion:IsReady() or ((24 + 59) > (3097 - (1114 + 203)))) then
-							if (((1272 - (228 + 498)) <= (234 + 843)) and v25(v102.RefreshingHealingPotion)) then
+					if ((v97 == "Dreamwalker's Healing Potion") or ((1261 + 1118) > (934 + 3644))) then
+						if (v101.DreamwalkersHealingPotion:IsReady() or ((1121 - 638) > (172 + 571))) then
+							if (((816 + 1638) > (362 + 216)) and v25(v102.RefreshingHealingPotion)) then
 								return "dreamwalkers healing potion defensive";
 							end
 						end
@@ -249,89 +249,83 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 		end
 	end
 	local function v122()
-		if (v16:Exists() or ((551 + 445) > (4964 - (174 + 489)))) then
-			if (((10603 - 6533) > (2592 - (830 + 1075))) and v100.WordofGlory:IsReady() and v65 and (v16:HealthPercentage() <= v76)) then
-				if (v25(v102.WordofGloryMouseover) or ((1180 - (303 + 221)) >= (4599 - (231 + 1038)))) then
-					return "word_of_glory defensive mouseover";
+		local v133 = 1096 - (709 + 387);
+		while true do
+			if (((2788 - (673 + 1185)) < (12928 - 8470)) and (v133 == (0 - 0))) then
+				if (((1088 - 426) <= (696 + 276)) and v16:Exists()) then
+					if (((3266 + 1104) == (5900 - 1530)) and v100.WordofGlory:IsReady() and v65 and (v16:HealthPercentage() <= v76)) then
+						if (v25(v102.WordofGloryMouseover) or ((1170 + 3592) <= (1716 - 855))) then
+							return "word_of_glory defensive mouseover";
+						end
+					end
 				end
+				if (not v14 or not v14:Exists() or not v14:IsInRange(58 - 28) or ((3292 - (446 + 1434)) == (5547 - (1040 + 243)))) then
+					return;
+				end
+				v133 = 2 - 1;
 			end
-		end
-		if (not v14 or not v14:Exists() or not v14:IsInRange(25 + 5) or ((3654 - (171 + 991)) <= (1380 - 1045))) then
-			return;
-		end
-		if (((11605 - 7283) >= (6393 - 3831)) and v14) then
-			local v185 = 0 + 0;
-			while true do
-				if ((v185 == (0 - 0)) or ((10491 - 6854) >= (6077 - 2307))) then
-					if ((v100.WordofGlory:IsReady() and v64 and (v15:BuffUp(v100.ShiningLightFreeBuff) or (v113 >= (9 - 6))) and (v14:HealthPercentage() <= v75)) or ((3627 - (111 + 1137)) > (4736 - (91 + 67)))) then
-						if (v25(v102.WordofGloryFocus) or ((1437 - 954) > (186 + 557))) then
+			if ((v133 == (1848 - (559 + 1288))) or ((5099 - (609 + 1322)) < (2607 - (13 + 441)))) then
+				if (v14 or ((18594 - 13618) < (3488 - 2156))) then
+					if (((23049 - 18421) == (173 + 4455)) and v100.WordofGlory:IsReady() and v64 and (v15:BuffUp(v100.ShiningLightFreeBuff) or (v113 >= (10 - 7))) and (v14:HealthPercentage() <= v75)) then
+						if (v25(v102.WordofGloryFocus) or ((20 + 34) == (174 + 221))) then
 							return "word_of_glory defensive focus";
 						end
 					end
-					if (((2977 - (423 + 100)) > (5 + 573)) and v100.LayonHands:IsCastable() and v63 and v14:DebuffDown(v100.ForbearanceDebuff) and (v14:HealthPercentage() <= v74) and v15:AffectingCombat()) then
-						if (((2575 - 1645) < (2324 + 2134)) and v25(v102.LayonHandsFocus)) then
+					if (((243 - 161) == (45 + 37)) and v100.LayonHands:IsCastable() and v63 and v14:DebuffDown(v100.ForbearanceDebuff) and (v14:HealthPercentage() <= v74) and v15:AffectingCombat()) then
+						if (v25(v102.LayonHandsFocus) or ((1068 - 487) < (187 + 95))) then
 							return "lay_on_hands defensive focus";
 						end
 					end
-					v185 = 772 - (326 + 445);
-				end
-				if (((2888 - 2226) <= (2164 - 1192)) and (v185 == (2 - 1))) then
-					if (((5081 - (530 + 181)) == (5251 - (614 + 267))) and v100.BlessingofSacrifice:IsCastable() and v67 and not UnitIsUnit(v14:ID(), v15:ID()) and (v14:HealthPercentage() <= v78)) then
-						if (v25(v102.BlessingofSacrificeFocus) or ((4794 - (19 + 13)) <= (1401 - 540))) then
+					if ((v100.BlessingofSacrifice:IsCastable() and v67 and not UnitIsUnit(v14:ID(), v15:ID()) and (v14:HealthPercentage() <= v78)) or ((2564 + 2045) < (1793 + 702))) then
+						if (((968 + 184) == (1128 + 24)) and v25(v102.BlessingofSacrificeFocus)) then
 							return "blessing_of_sacrifice defensive focus";
 						end
 					end
-					if ((v100.BlessingofProtection:IsCastable() and v66 and v14:DebuffDown(v100.ForbearanceDebuff) and (v14:HealthPercentage() <= v77)) or ((3290 - 1878) == (12180 - 7916))) then
-						if (v25(v102.BlessingofProtectionFocus) or ((823 + 2345) < (3785 - 1632))) then
+					if (((2329 - (153 + 280)) <= (9881 - 6459)) and v100.BlessingofProtection:IsCastable() and v66 and v14:DebuffDown(v100.ForbearanceDebuff) and (v14:HealthPercentage() <= v77)) then
+						if (v25(v102.BlessingofProtectionFocus) or ((889 + 101) > (640 + 980))) then
 							return "blessing_of_protection defensive focus";
 						end
+					end
+				end
+				break;
+			end
+		end
+	end
+	local function v123()
+		if (((v88 < v112) and v100.LightsJudgment:IsCastable() and v91 and ((v92 and v32) or not v92)) or ((459 + 418) > (4261 + 434))) then
+			if (((1950 + 741) >= (2818 - 967)) and v25(v100.LightsJudgment, not v17:IsSpellInRange(v100.LightsJudgment))) then
+				return "lights_judgment precombat 4";
+			end
+		end
+		if (((v88 < v112) and v100.ArcaneTorrent:IsCastable() and v91 and ((v92 and v32) or not v92) and (v113 < (4 + 1))) or ((3652 - (89 + 578)) >= (3469 + 1387))) then
+			if (((8889 - 4613) >= (2244 - (572 + 477))) and v25(v100.ArcaneTorrent, not v17:IsInRange(2 + 6))) then
+				return "arcane_torrent precombat 6";
+			end
+		end
+		if (((1940 + 1292) <= (560 + 4130)) and v100.Consecration:IsCastable() and v38) then
+			if (v25(v100.Consecration, not v17:IsInRange(94 - (84 + 2))) or ((1476 - 580) >= (2267 + 879))) then
+				return "consecration precombat 8";
+			end
+		end
+		if (((3903 - (497 + 345)) >= (76 + 2882)) and v100.AvengersShield:IsCastable() and v36) then
+			local v162 = 0 + 0;
+			while true do
+				if (((4520 - (605 + 728)) >= (460 + 184)) and (v162 == (0 - 0))) then
+					if (((30 + 614) <= (2602 - 1898)) and v16:Exists() and v16 and v15:CanAttack(v16) and v16:IsSpellInRange(v100.AvengersShield)) then
+						if (((864 + 94) > (2623 - 1676)) and v25(v102.AvengersShieldMouseover)) then
+							return "avengers_shield mouseover precombat 10";
+						end
+					end
+					if (((3392 + 1100) >= (3143 - (457 + 32))) and v25(v100.AvengersShield, not v17:IsSpellInRange(v100.AvengersShield))) then
+						return "avengers_shield precombat 10";
 					end
 					break;
 				end
 			end
 		end
-	end
-	local function v123()
-		local v133 = 0 - 0;
-		while true do
-			if ((v133 == (1814 - (1293 + 519))) or ((10152 - 5176) < (3477 - 2145))) then
-				if (((8849 - 4221) == (19956 - 15328)) and v100.Judgment:IsReady() and v42) then
-					if (v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment)) or ((127 - 73) == (210 + 185))) then
-						return "judgment precombat 12";
-					end
-				end
-				break;
-			end
-			if (((17 + 65) == (190 - 108)) and (v133 == (1 + 0))) then
-				if ((v100.Consecration:IsCastable() and v38) or ((194 + 387) < (177 + 105))) then
-					if (v25(v100.Consecration, not v17:IsInRange(1104 - (709 + 387))) or ((6467 - (673 + 1185)) < (7235 - 4740))) then
-						return "consecration precombat 8";
-					end
-				end
-				if (((3698 - 2546) == (1894 - 742)) and v100.AvengersShield:IsCastable() and v36) then
-					if (((1357 + 539) <= (2557 + 865)) and v16:Exists() and v16 and v15:CanAttack(v16) and v16:IsSpellInRange(v100.AvengersShield)) then
-						if (v25(v102.AvengersShieldMouseover) or ((1336 - 346) > (398 + 1222))) then
-							return "avengers_shield mouseover precombat 10";
-						end
-					end
-					if (v25(v100.AvengersShield, not v17:IsSpellInRange(v100.AvengersShield)) or ((1748 - 871) > (9216 - 4521))) then
-						return "avengers_shield precombat 10";
-					end
-				end
-				v133 = 1882 - (446 + 1434);
-			end
-			if (((3974 - (1040 + 243)) >= (5524 - 3673)) and (v133 == (1847 - (559 + 1288)))) then
-				if (((v88 < v112) and v100.LightsJudgment:IsCastable() and v91 and ((v92 and v32) or not v92)) or ((4916 - (609 + 1322)) >= (5310 - (13 + 441)))) then
-					if (((15978 - 11702) >= (3130 - 1935)) and v25(v100.LightsJudgment, not v17:IsSpellInRange(v100.LightsJudgment))) then
-						return "lights_judgment precombat 4";
-					end
-				end
-				if (((16096 - 12864) <= (175 + 4515)) and (v88 < v112) and v100.ArcaneTorrent:IsCastable() and v91 and ((v92 and v32) or not v92) and (v113 < (18 - 13))) then
-					if (v25(v100.ArcaneTorrent, not v17:IsInRange(3 + 5)) or ((393 + 503) >= (9335 - 6189))) then
-						return "arcane_torrent precombat 6";
-					end
-				end
-				v133 = 1 + 0;
+		if (((1461 + 1981) >= (2905 - (832 + 570))) and v100.Judgment:IsReady() and v42) then
+			if (v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment)) or ((2987 + 183) <= (382 + 1082))) then
+				return "judgment precombat 12";
 			end
 		end
 	end
@@ -339,275 +333,338 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 		local v134 = 0 - 0;
 		local v135;
 		while true do
-			if (((2024 + 1037) >= (1646 + 1312)) and ((1 + 0) == v134)) then
-				if (((2676 + 511) >= (631 + 13)) and v100.AvengingWrath:IsCastable() and v43 and ((v49 and v32) or not v49)) then
-					if (((1077 - (153 + 280)) <= (2032 - 1328)) and v25(v100.AvengingWrath, not v17:IsInRange(8 + 0))) then
-						return "avenging_wrath cooldowns 6";
-					end
-				end
-				if (((379 + 579) > (496 + 451)) and v100.Sentinel:IsCastable() and v48 and ((v54 and v32) or not v54)) then
-					if (((4077 + 415) >= (1924 + 730)) and v25(v100.Sentinel, not v17:IsInRange(11 - 3))) then
-						return "sentinel cooldowns 8";
-					end
-				end
-				v134 = 2 + 0;
-			end
-			if (((4109 - (89 + 578)) >= (1074 + 429)) and (v134 == (3 - 1))) then
-				v135 = v110.HandleDPSPotion(v15:BuffUp(v100.AvengingWrathBuff));
-				if (v135 or ((4219 - (572 + 477)) <= (198 + 1266))) then
-					return v135;
-				end
-				v134 = 2 + 1;
-			end
-			if ((v134 == (1 + 2)) or ((4883 - (84 + 2)) == (7231 - 2843))) then
-				if (((397 + 154) <= (1523 - (497 + 345))) and v100.MomentOfGlory:IsCastable() and v47 and ((v53 and v32) or not v53) and ((v15:BuffRemains(v100.SentinelBuff) < (1 + 14)) or (((v10.CombatTime() > (2 + 8)) or (v100.Sentinel:CooldownRemains() > (1348 - (605 + 728))) or (v100.AvengingWrath:CooldownRemains() > (11 + 4))) and (v100.AvengersShield:CooldownRemains() > (0 - 0)) and (v100.Judgment:CooldownRemains() > (0 + 0)) and (v100.HammerofWrath:CooldownRemains() > (0 - 0))))) then
-					if (((2955 + 322) > (1127 - 720)) and v25(v100.MomentOfGlory, not v17:IsInRange(7 + 1))) then
+			if (((2 + 1) == v134) or ((5593 - (588 + 208)) == (11826 - 7438))) then
+				if (((2351 - (884 + 916)) <= (1425 - 744)) and v100.MomentOfGlory:IsCastable() and v47 and ((v53 and v32) or not v53) and ((v15:BuffRemains(v100.SentinelBuff) < (9 + 6)) or (((v10.CombatTime() > (663 - (232 + 421))) or (v100.Sentinel:CooldownRemains() > (1904 - (1569 + 320))) or (v100.AvengingWrath:CooldownRemains() > (4 + 11))) and (v100.AvengersShield:CooldownRemains() > (0 + 0)) and (v100.Judgment:CooldownRemains() > (0 - 0)) and (v100.HammerofWrath:CooldownRemains() > (605 - (316 + 289)))))) then
+					if (((8578 - 5301) > (19 + 388)) and v25(v100.MomentOfGlory, not v17:IsInRange(1461 - (666 + 787)))) then
 						return "moment_of_glory cooldowns 10";
 					end
 				end
-				if (((5184 - (457 + 32)) >= (601 + 814)) and v45 and ((v51 and v32) or not v51) and v100.DivineToll:IsReady() and (v108 >= (1405 - (832 + 570)))) then
-					if (v25(v100.DivineToll, not v17:IsInRange(29 + 1)) or ((838 + 2374) <= (3340 - 2396))) then
+				if (((5120 - (360 + 65)) >= (1323 + 92)) and v45 and ((v51 and v32) or not v51) and v100.DivineToll:IsReady() and (v108 >= (257 - (79 + 175)))) then
+					if (v25(v100.DivineToll, not v17:IsInRange(47 - 17)) or ((2507 + 705) <= (2893 - 1949))) then
 						return "divine_toll cooldowns 12";
 					end
 				end
-				v134 = 2 + 2;
+				v134 = 7 - 3;
 			end
-			if (((796 - (588 + 208)) == v134) or ((8344 - 5248) <= (3598 - (884 + 916)))) then
-				if (((7404 - 3867) == (2051 + 1486)) and v100.AvengersShield:IsCastable() and v36 and (v10.CombatTime() < (655 - (232 + 421))) and v15:HasTier(1918 - (1569 + 320), 1 + 1)) then
-					if (((729 + 3108) >= (5290 - 3720)) and v16:Exists() and v16 and v15:CanAttack(v16) and v16:IsSpellInRange(v100.AvengersShield)) then
-						if (v25(v102.AvengersShieldMouseover) or ((3555 - (316 + 289)) == (9978 - 6166))) then
-							return "avengers_shield mouseover cooldowns 2";
-						end
-					end
-					if (((219 + 4504) >= (3771 - (666 + 787))) and v25(v100.AvengersShield, not v17:IsSpellInRange(v100.AvengersShield))) then
-						return "avengers_shield cooldowns 2";
+			if ((v134 == (900 - (503 + 396))) or ((3277 - (92 + 89)) <= (3487 - 1689))) then
+				if (((1814 + 1723) == (2094 + 1443)) and v100.AvengingWrath:IsCastable() and v43 and ((v49 and v32) or not v49)) then
+					if (((15025 - 11188) >= (215 + 1355)) and v25(v100.AvengingWrath, not v17:IsInRange(17 - 9))) then
+						return "avenging_wrath cooldowns 6";
 					end
 				end
-				if ((v100.LightsJudgment:IsCastable() and v91 and ((v92 and v32) or not v92) and (v109 >= (427 - (360 + 65)))) or ((1895 + 132) > (3106 - (79 + 175)))) then
-					if (v25(v100.LightsJudgment, not v17:IsSpellInRange(v100.LightsJudgment)) or ((1791 - 655) > (3369 + 948))) then
-						return "lights_judgment cooldowns 4";
+				if ((v100.Sentinel:IsCastable() and v48 and ((v54 and v32) or not v54)) or ((2574 + 376) == (1821 + 1991))) then
+					if (((14384 - 9661) >= (290 + 2028)) and v25(v100.Sentinel, not v17:IsInRange(12 - 4))) then
+						return "sentinel cooldowns 8";
 					end
 				end
-				v134 = 2 - 1;
+				v134 = 1246 - (485 + 759);
 			end
-			if (((9143 - 4395) == (5647 - (503 + 396))) and (v134 == (185 - (92 + 89)))) then
-				if (((7247 - 3511) <= (2431 + 2309)) and v100.BastionofLight:IsCastable() and v44 and ((v50 and v32) or not v50) and (v15:BuffUp(v100.AvengingWrathBuff) or (v100.AvengingWrath:CooldownRemains() <= (18 + 12)))) then
-					if (v25(v100.BastionofLight, not v17:IsInRange(31 - 23)) or ((464 + 2926) <= (6977 - 3917))) then
+			if (((8 - 4) == v134) or ((3216 - (442 + 747)) > (3987 - (832 + 303)))) then
+				if ((v100.BastionofLight:IsCastable() and v44 and ((v50 and v32) or not v50) and (v15:BuffUp(v100.AvengingWrathBuff) or (v100.AvengingWrath:CooldownRemains() <= (976 - (88 + 858))))) or ((347 + 789) > (3573 + 744))) then
+					if (((196 + 4552) == (5537 - (766 + 23))) and v25(v100.BastionofLight, not v17:IsInRange(39 - 31))) then
 						return "bastion_of_light cooldowns 14";
 					end
 				end
 				break;
 			end
+			if (((5108 - 1372) <= (12488 - 7748)) and (v134 == (6 - 4))) then
+				v135 = v110.HandleDPSPotion(v15:BuffUp(v100.AvengingWrathBuff));
+				if (v135 or ((4463 - (1036 + 37)) <= (2170 + 890))) then
+					return v135;
+				end
+				v134 = 5 - 2;
+			end
+			if ((v134 == (0 + 0)) or ((2479 - (641 + 839)) > (3606 - (910 + 3)))) then
+				if (((1180 - 717) < (2285 - (1466 + 218))) and v100.AvengersShield:IsCastable() and v36 and (v10.CombatTime() < (1 + 1)) and v15:HasTier(1177 - (556 + 592), 1 + 1)) then
+					local v219 = 808 - (329 + 479);
+					while true do
+						if (((854 - (174 + 680)) == v219) or ((7500 - 5317) < (1423 - 736))) then
+							if (((3248 + 1301) == (5288 - (396 + 343))) and v16:Exists() and v16 and v15:CanAttack(v16) and v16:IsSpellInRange(v100.AvengersShield)) then
+								if (((414 + 4258) == (6149 - (29 + 1448))) and v25(v102.AvengersShieldMouseover)) then
+									return "avengers_shield mouseover cooldowns 2";
+								end
+							end
+							if (v25(v100.AvengersShield, not v17:IsSpellInRange(v100.AvengersShield)) or ((5057 - (135 + 1254)) < (1488 - 1093))) then
+								return "avengers_shield cooldowns 2";
+							end
+							break;
+						end
+					end
+				end
+				if ((v100.LightsJudgment:IsCastable() and v91 and ((v92 and v32) or not v92) and (v109 >= (9 - 7))) or ((2777 + 1389) == (1982 - (389 + 1138)))) then
+					if (v25(v100.LightsJudgment, not v17:IsSpellInRange(v100.LightsJudgment)) or ((5023 - (102 + 472)) == (2514 + 149))) then
+						return "lights_judgment cooldowns 4";
+					end
+				end
+				v134 = 1 + 0;
+			end
 		end
 	end
 	local function v125()
-		if ((v100.Consecration:IsCastable() and v38 and (v15:BuffStack(v100.SanctificationBuff) == (5 + 0))) or ((478 + 521) > (8201 - 5508))) then
-			if (((58 + 405) < (916 - 315)) and v25(v100.Consecration, not v17:IsInRange(1252 - (485 + 759)))) then
-				return "consecration standard 2";
-			end
-		end
-		if ((v100.ShieldoftheRighteous:IsCastable() and v62 and ((v15:HolyPower() > (4 - 2)) or v15:BuffUp(v100.BastionofLightBuff) or v15:BuffUp(v100.DivinePurposeBuff)) and (v15:BuffDown(v100.SanctificationBuff) or (v15:BuffStack(v100.SanctificationBuff) < (1194 - (442 + 747))))) or ((3318 - (832 + 303)) < (1633 - (88 + 858)))) then
-			if (((1387 + 3162) == (3765 + 784)) and v25(v100.ShieldoftheRighteous)) then
-				return "shield_of_the_righteous standard 4";
-			end
-		end
-		if (((193 + 4479) == (5461 - (766 + 23))) and v100.Judgment:IsReady() and v42 and (v108 > (14 - 11)) and (v15:BuffStack(v100.BulwarkofRighteousFuryBuff) >= (3 - 0)) and (v15:HolyPower() < (7 - 4))) then
-			if (v110.CastCycle(v100.Judgment, v106, v115, not v17:IsSpellInRange(v100.Judgment)) or ((12449 - 8781) < (1468 - (1036 + 37)))) then
-				return "judgment standard 6";
-			end
-			if (v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment)) or ((2954 + 1212) == (886 - 431))) then
-				return "judgment standard 6";
-			end
-		end
-		if ((v100.Judgment:IsReady() and v42 and v15:BuffDown(v100.SanctificationEmpowerBuff) and v15:HasTier(25 + 6, 1482 - (641 + 839))) or ((5362 - (910 + 3)) == (6788 - 4125))) then
-			local v186 = 1684 - (1466 + 218);
-			while true do
-				if ((v186 == (0 + 0)) or ((5425 - (556 + 592)) < (1063 + 1926))) then
-					if (v110.CastCycle(v100.Judgment, v106, v115, not v17:IsSpellInRange(v100.Judgment)) or ((1678 - (329 + 479)) >= (5003 - (174 + 680)))) then
-						return "judgment standard 8";
+		local v136 = 0 + 0;
+		while true do
+			if ((v136 == (1550 - (320 + 1225))) or ((7613 - 3336) < (1829 + 1160))) then
+				if ((v100.CrusaderStrike:IsCastable() and v39) or ((2334 - (157 + 1307)) >= (6008 - (821 + 1038)))) then
+					if (((5518 - 3306) < (349 + 2834)) and v25(v100.CrusaderStrike, not v17:IsSpellInRange(v100.CrusaderStrike))) then
+						return "crusader_strike standard 32";
 					end
-					if (((7600 - 5388) < (6596 - 3413)) and v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment))) then
-						return "judgment standard 8";
-					end
-					break;
 				end
+				if (((8251 - 3605) > (1114 + 1878)) and (v88 < v112) and v46 and ((v52 and v32) or not v52) and v100.EyeofTyr:IsCastable() and not v100.InmostLight:IsAvailable()) then
+					if (((3554 - 2120) < (4132 - (834 + 192))) and v25(v100.EyeofTyr, not v17:IsInRange(1 + 7))) then
+						return "eye_of_tyr standard 34";
+					end
+				end
+				if (((202 + 584) < (65 + 2958)) and v100.ArcaneTorrent:IsCastable() and v91 and ((v92 and v32) or not v92) and (v113 < (7 - 2))) then
+					if (v25(v100.ArcaneTorrent, not v17:IsInRange(312 - (300 + 4))) or ((653 + 1789) < (193 - 119))) then
+						return "arcane_torrent standard 36";
+					end
+				end
+				v136 = 368 - (112 + 250);
 			end
-		end
-		if (((3318 + 1328) > (3731 - (396 + 343))) and v100.HammerofWrath:IsReady() and v41) then
-			if (((127 + 1307) < (4583 - (29 + 1448))) and v25(v100.HammerofWrath, not v17:IsSpellInRange(v100.HammerofWrath))) then
-				return "hammer_of_wrath standard 10";
-			end
-		end
-		if (((2175 - (135 + 1254)) < (11388 - 8365)) and v100.Judgment:IsReady() and v42 and ((v100.Judgment:Charges() >= (9 - 7)) or (v100.Judgment:FullRechargeTime() <= v15:GCD()))) then
-			if (v110.CastCycle(v100.Judgment, v106, v115, not v17:IsSpellInRange(v100.Judgment)) or ((1628 + 814) < (1601 - (389 + 1138)))) then
-				return "judgment standard 12";
-			end
-			if (((5109 - (102 + 472)) == (4280 + 255)) and v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment))) then
-				return "judgment standard 12";
-			end
-		end
-		if ((v100.AvengersShield:IsCastable() and v36 and ((v109 > (2 + 0)) or v15:BuffUp(v100.MomentOfGloryBuff))) or ((2806 + 203) <= (3650 - (320 + 1225)))) then
-			local v187 = 0 - 0;
-			while true do
-				if (((1120 + 710) < (5133 - (157 + 1307))) and (v187 == (1859 - (821 + 1038)))) then
-					if ((v16:Exists() and v16 and v15:CanAttack(v16) and v16:IsSpellInRange(v100.AvengersShield)) or ((3567 - 2137) >= (396 + 3216))) then
-						if (((4765 - 2082) >= (916 + 1544)) and v25(v102.AvengersShieldMouseover)) then
-							return "avengers_shield mouseover standard 14";
+			if (((1808 + 2727) == (11361 - 6826)) and (v136 == (2 + 0))) then
+				if ((v100.AvengersShield:IsCastable() and v36 and ((v109 > (2 + 0)) or v15:BuffUp(v100.MomentOfGloryBuff))) or ((2251 + 758) <= (1044 + 1061))) then
+					local v220 = 0 + 0;
+					while true do
+						if (((3244 - (1001 + 413)) < (8181 - 4512)) and (v220 == (882 - (244 + 638)))) then
+							if ((v16:Exists() and v16 and v15:CanAttack(v16) and v16:IsSpellInRange(v100.AvengersShield)) or ((2123 - (627 + 66)) >= (10762 - 7150))) then
+								if (((3285 - (512 + 90)) >= (4366 - (1665 + 241))) and v25(v102.AvengersShieldMouseover)) then
+									return "avengers_shield mouseover standard 14";
+								end
+							end
+							if (v25(v100.AvengersShield, not v17:IsSpellInRange(v100.AvengersShield)) or ((2521 - (373 + 344)) >= (1478 + 1797))) then
+								return "avengers_shield standard 14";
+							end
+							break;
 						end
 					end
-					if (v25(v100.AvengersShield, not v17:IsSpellInRange(v100.AvengersShield)) or ((4471 - 2667) >= (4301 - (834 + 192)))) then
-						return "avengers_shield standard 14";
+				end
+				if ((v45 and ((v51 and v32) or not v51) and v100.DivineToll:IsReady()) or ((375 + 1042) > (9572 - 5943))) then
+					if (((8114 - 3319) > (1501 - (35 + 1064))) and v25(v100.DivineToll, not v17:IsInRange(22 + 8))) then
+						return "divine_toll standard 16";
 					end
-					break;
 				end
-			end
-		end
-		if ((v45 and ((v51 and v32) or not v51) and v100.DivineToll:IsReady()) or ((91 + 1326) > (932 + 2697))) then
-			if (((103 + 4692) > (622 - 220)) and v25(v100.DivineToll, not v17:IsInRange(334 - (300 + 4)))) then
-				return "divine_toll standard 16";
-			end
-		end
-		if (((1286 + 3527) > (9332 - 5767)) and v100.AvengersShield:IsCastable() and v36) then
-			if (((4274 - (112 + 250)) == (1560 + 2352)) and v16:Exists() and v16 and v15:CanAttack(v16) and v16:IsSpellInRange(v100.AvengersShield)) then
-				if (((7067 - 4246) <= (2764 + 2060)) and v25(v102.AvengersShieldMouseover)) then
-					return "avengers_shield mouseover standard 18";
+				if (((10297 - 5484) > (15 + 3550)) and v100.AvengersShield:IsCastable() and v36) then
+					local v221 = 1236 - (298 + 938);
+					while true do
+						if (((5171 - (233 + 1026)) == (5578 - (636 + 1030))) and (v221 == (0 + 0))) then
+							if (((2756 + 65) <= (1434 + 3390)) and v16:Exists() and v16 and v15:CanAttack(v16) and v16:IsSpellInRange(v100.AvengersShield)) then
+								if (((118 + 1620) <= (2416 - (55 + 166))) and v25(v102.AvengersShieldMouseover)) then
+									return "avengers_shield mouseover standard 18";
+								end
+							end
+							if (((8 + 33) <= (304 + 2714)) and v25(v100.AvengersShield, not v17:IsSpellInRange(v100.AvengersShield))) then
+								return "avengers_shield standard 18";
+							end
+							break;
+						end
+					end
 				end
+				v136 = 11 - 8;
 			end
-			if (((899 + 839) <= (1642 + 553)) and v25(v100.AvengersShield, not v17:IsSpellInRange(v100.AvengersShield))) then
-				return "avengers_shield standard 18";
+			if (((2442 - (36 + 261)) <= (7177 - 3073)) and (v136 == (1371 - (34 + 1334)))) then
+				if (((1034 + 1655) < (3765 + 1080)) and v100.HammerofWrath:IsReady() and v41) then
+					if (v25(v100.HammerofWrath, not v17:IsSpellInRange(v100.HammerofWrath)) or ((3605 - (1035 + 248)) > (2643 - (20 + 1)))) then
+						return "hammer_of_wrath standard 20";
+					end
+				end
+				if ((v100.Judgment:IsReady() and v42) or ((2363 + 2171) == (2401 - (134 + 185)))) then
+					local v222 = 1133 - (549 + 584);
+					while true do
+						if ((v222 == (685 - (314 + 371))) or ((5393 - 3822) > (2835 - (478 + 490)))) then
+							if (v110.CastCycle(v100.Judgment, v106, v115, not v17:IsSpellInRange(v100.Judgment)) or ((1406 + 1248) >= (4168 - (786 + 386)))) then
+								return "judgment standard 22";
+							end
+							if (((12884 - 8906) > (3483 - (1055 + 324))) and v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment))) then
+								return "judgment standard 22";
+							end
+							break;
+						end
+					end
+				end
+				if (((4335 - (1093 + 247)) > (1370 + 171)) and v100.Consecration:IsCastable() and v38 and v15:BuffDown(v100.ConsecrationBuff) and ((v15:BuffStack(v100.SanctificationBuff) < (1 + 4)) or not v15:HasTier(123 - 92, 6 - 4))) then
+					if (((9244 - 5995) > (2394 - 1441)) and v25(v100.Consecration, not v17:IsInRange(3 + 5))) then
+						return "consecration standard 24";
+					end
+				end
+				v136 = 15 - 11;
 			end
-		end
-		if (((21 + 20) <= (2243 + 775)) and v100.HammerofWrath:IsReady() and v41) then
-			if (((3559 - (1001 + 413)) <= (9151 - 5047)) and v25(v100.HammerofWrath, not v17:IsSpellInRange(v100.HammerofWrath))) then
-				return "hammer_of_wrath standard 20";
+			if ((v136 == (0 - 0)) or ((2468 + 805) > (11694 - 7121))) then
+				if ((v100.Consecration:IsCastable() and v38 and (v15:BuffStack(v100.SanctificationBuff) == (693 - (364 + 324)))) or ((8637 - 5486) < (3081 - 1797))) then
+					if (v25(v100.Consecration, not v17:IsInRange(3 + 5)) or ((7741 - 5891) == (2448 - 919))) then
+						return "consecration standard 2";
+					end
+				end
+				if (((2493 - 1672) < (3391 - (1249 + 19))) and v100.ShieldoftheRighteous:IsCastable() and v62 and ((v15:HolyPower() > (2 + 0)) or v15:BuffUp(v100.BastionofLightBuff) or v15:BuffUp(v100.DivinePurposeBuff)) and (v15:BuffDown(v100.SanctificationBuff) or (v15:BuffStack(v100.SanctificationBuff) < (19 - 14)))) then
+					if (((1988 - (686 + 400)) < (1825 + 500)) and v25(v100.ShieldoftheRighteous)) then
+						return "shield_of_the_righteous standard 4";
+					end
+				end
+				if (((1087 - (73 + 156)) <= (15 + 2947)) and v100.Judgment:IsReady() and v42 and (v108 > (814 - (721 + 90))) and (v15:BuffStack(v100.BulwarkofRighteousFuryBuff) >= (1 + 2)) and (v15:HolyPower() < (9 - 6))) then
+					if (v110.CastCycle(v100.Judgment, v106, v115, not v17:IsSpellInRange(v100.Judgment)) or ((4416 - (224 + 246)) < (2086 - 798))) then
+						return "judgment standard 6";
+					end
+					if (v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment)) or ((5968 - 2726) == (103 + 464))) then
+						return "judgment standard 6";
+					end
+				end
+				v136 = 1 + 0;
 			end
-		end
-		if (((3571 - (244 + 638)) < (5538 - (627 + 66))) and v100.Judgment:IsReady() and v42) then
-			if (v110.CastCycle(v100.Judgment, v106, v115, not v17:IsSpellInRange(v100.Judgment)) or ((6918 - 4596) > (3224 - (512 + 90)))) then
-				return "judgment standard 22";
+			if ((v136 == (1 + 0)) or ((1683 - 836) >= (4202 - 2939))) then
+				if ((v100.Judgment:IsReady() and v42 and v15:BuffDown(v100.SanctificationEmpowerBuff) and v15:HasTier(544 - (203 + 310), 1995 - (1238 + 755))) or ((158 + 2095) == (3385 - (709 + 825)))) then
+					if (v110.CastCycle(v100.Judgment, v106, v115, not v17:IsSpellInRange(v100.Judgment)) or ((3845 - 1758) > (3454 - 1082))) then
+						return "judgment standard 8";
+					end
+					if (v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment)) or ((5309 - (196 + 668)) < (16381 - 12232))) then
+						return "judgment standard 8";
+					end
+				end
+				if ((v100.HammerofWrath:IsReady() and v41) or ((3765 - 1947) == (918 - (171 + 662)))) then
+					if (((723 - (4 + 89)) < (7455 - 5328)) and v25(v100.HammerofWrath, not v17:IsSpellInRange(v100.HammerofWrath))) then
+						return "hammer_of_wrath standard 10";
+					end
+				end
+				if ((v100.Judgment:IsReady() and v42 and ((v100.Judgment:Charges() >= (1 + 1)) or (v100.Judgment:FullRechargeTime() <= v15:GCD()))) or ((8512 - 6574) == (986 + 1528))) then
+					if (((5741 - (35 + 1451)) >= (1508 - (28 + 1425))) and v110.CastCycle(v100.Judgment, v106, v115, not v17:IsSpellInRange(v100.Judgment))) then
+						return "judgment standard 12";
+					end
+					if (((4992 - (941 + 1052)) > (1109 + 47)) and v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment))) then
+						return "judgment standard 12";
+					end
+				end
+				v136 = 1516 - (822 + 692);
 			end
-			if (v25(v100.Judgment, not v17:IsSpellInRange(v100.Judgment)) or ((6440 - (1665 + 241)) == (2799 - (373 + 344)))) then
-				return "judgment standard 22";
+			if (((3355 - 1005) > (545 + 610)) and (v136 == (303 - (45 + 252)))) then
+				if (((3987 + 42) <= (1671 + 3182)) and v100.Consecration:IsCastable() and v38 and (v15:BuffDown(v100.SanctificationEmpowerBuff))) then
+					if (v25(v100.Consecration, not v17:IsInRange(19 - 11)) or ((949 - (114 + 319)) > (4930 - 1496))) then
+						return "consecration standard 38";
+					end
+				end
+				break;
 			end
-		end
-		if ((v100.Consecration:IsCastable() and v38 and v15:BuffDown(v100.ConsecrationBuff) and ((v15:BuffStack(v100.SanctificationBuff) < (3 + 2)) or not v15:HasTier(9 + 22, 5 - 3))) or ((2658 - 1087) > (2966 - (35 + 1064)))) then
-			if (v25(v100.Consecration, not v17:IsInRange(6 + 2)) or ((5677 - 3023) >= (12 + 2984))) then
-				return "consecration standard 24";
-			end
-		end
-		if (((5214 - (298 + 938)) > (3363 - (233 + 1026))) and (v88 < v112) and v46 and ((v52 and v32) or not v52) and v100.EyeofTyr:IsCastable() and v100.InmostLight:IsAvailable() and (v108 >= (1669 - (636 + 1030)))) then
-			if (((1532 + 1463) > (1506 + 35)) and v25(v100.EyeofTyr, not v17:IsInRange(3 + 5))) then
-				return "eye_of_tyr standard 26";
-			end
-		end
-		if (((220 + 3029) > (1174 - (55 + 166))) and v100.BlessedHammer:IsCastable() and v37) then
-			if (v25(v100.BlessedHammer, not v17:IsInRange(2 + 6)) or ((330 + 2943) > (17464 - 12891))) then
-				return "blessed_hammer standard 28";
-			end
-		end
-		if ((v100.HammeroftheRighteous:IsCastable() and v40) or ((3448 - (36 + 261)) < (2245 - 961))) then
-			if (v25(v100.HammeroftheRighteous, not v17:IsInRange(1376 - (34 + 1334))) or ((712 + 1138) == (1189 + 340))) then
-				return "hammer_of_the_righteous standard 30";
-			end
-		end
-		if (((2104 - (1035 + 248)) < (2144 - (20 + 1))) and v100.CrusaderStrike:IsCastable() and v39) then
-			if (((470 + 432) < (2644 - (134 + 185))) and v25(v100.CrusaderStrike, not v17:IsSpellInRange(v100.CrusaderStrike))) then
-				return "crusader_strike standard 32";
-			end
-		end
-		if (((1991 - (549 + 584)) <= (3647 - (314 + 371))) and (v88 < v112) and v46 and ((v52 and v32) or not v52) and v100.EyeofTyr:IsCastable() and not v100.InmostLight:IsAvailable()) then
-			if (v25(v100.EyeofTyr, not v17:IsInRange(27 - 19)) or ((4914 - (478 + 490)) < (683 + 605))) then
-				return "eye_of_tyr standard 34";
-			end
-		end
-		if ((v100.ArcaneTorrent:IsCastable() and v91 and ((v92 and v32) or not v92) and (v113 < (1177 - (786 + 386)))) or ((10500 - 7258) == (1946 - (1055 + 324)))) then
-			if (v25(v100.ArcaneTorrent, not v17:IsInRange(1348 - (1093 + 247))) or ((753 + 94) >= (133 + 1130))) then
-				return "arcane_torrent standard 36";
-			end
-		end
-		if ((v100.Consecration:IsCastable() and v38 and (v15:BuffDown(v100.SanctificationEmpowerBuff))) or ((8944 - 6691) == (6281 - 4430))) then
-			if (v25(v100.Consecration, not v17:IsInRange(22 - 14)) or ((5244 - 3157) > (844 + 1528))) then
-				return "consecration standard 38";
+			if (((5184 - 1138) >= (1934 + 1099)) and (v136 == (5 - 1))) then
+				if (((v88 < v112) and v46 and ((v52 and v32) or not v52) and v100.EyeofTyr:IsCastable() and v100.InmostLight:IsAvailable() and (v108 >= (5 - 2))) or ((4682 - (556 + 1407)) <= (2653 - (741 + 465)))) then
+					if (v25(v100.EyeofTyr, not v17:IsInRange(473 - (170 + 295))) or ((2179 + 1955) < (3607 + 319))) then
+						return "eye_of_tyr standard 26";
+					end
+				end
+				if ((v100.BlessedHammer:IsCastable() and v37) or ((403 - 239) >= (2309 + 476))) then
+					if (v25(v100.BlessedHammer, not v17:IsInRange(6 + 2)) or ((298 + 227) == (3339 - (957 + 273)))) then
+						return "blessed_hammer standard 28";
+					end
+				end
+				if (((9 + 24) == (14 + 19)) and v100.HammeroftheRighteous:IsCastable() and v40) then
+					if (((11637 - 8583) <= (10580 - 6565)) and v25(v100.HammeroftheRighteous, not v17:IsInRange(24 - 16))) then
+						return "hammer_of_the_righteous standard 30";
+					end
+				end
+				v136 = 24 - 19;
 			end
 		end
 	end
 	local function v126()
-		local v136 = 0 - 0;
+		local v137 = 1780 - (389 + 1391);
 		while true do
-			if ((v136 == (17 - 12)) or ((3352 + 1093) < (10610 - 6461))) then
-				v49 = EpicSettings.Settings['avengingWrathWithCD'];
-				v50 = EpicSettings.Settings['bastionofLightWithCD'];
-				v51 = EpicSettings.Settings['divineTollWithCD'];
-				v136 = 694 - (364 + 324);
-			end
-			if ((v136 == (0 - 0)) or ((4362 - 2544) == (29 + 56))) then
+			if (((1174 + 697) < (353 + 3029)) and (v137 == (0 - 0))) then
 				v34 = EpicSettings.Settings['swapAuras'];
 				v35 = EpicSettings.Settings['useWeapon'];
 				v36 = EpicSettings.Settings['useAvengersShield'];
-				v136 = 4 - 3;
+				v37 = EpicSettings.Settings['useBlessedHammer'];
+				v137 = 952 - (783 + 168);
 			end
-			if (((1008 - 378) < (6459 - 4332)) and (v136 == (1271 - (1249 + 19)))) then
+			if (((4339 - 3046) <= (2131 + 35)) and (v137 == (313 - (309 + 2)))) then
+				v42 = EpicSettings.Settings['useJudgment'];
 				v43 = EpicSettings.Settings['useAvengingWrath'];
 				v44 = EpicSettings.Settings['useBastionofLight'];
 				v45 = EpicSettings.Settings['useDivineToll'];
-				v136 = 4 + 0;
+				v137 = 9 - 6;
 			end
-			if ((v136 == (7 - 5)) or ((3024 - (686 + 400)) == (1973 + 541))) then
-				v40 = EpicSettings.Settings['useHammeroftheRighteous'];
-				v41 = EpicSettings.Settings['useHammerofWrath'];
-				v42 = EpicSettings.Settings['useJudgment'];
-				v136 = 232 - (73 + 156);
-			end
-			if (((21 + 4234) >= (866 - (721 + 90))) and (v136 == (1 + 5))) then
-				v52 = EpicSettings.Settings['eyeofTyrWithCD'];
-				v53 = EpicSettings.Settings['momentOfGloryWithCD'];
+			if ((v137 == (1217 - (1090 + 122))) or ((837 + 1742) < (412 - 289))) then
 				v54 = EpicSettings.Settings['sentinelWithCD'];
 				break;
 			end
-			if (((9737 - 6738) > (1626 - (224 + 246))) and (v136 == (1 - 0))) then
-				v37 = EpicSettings.Settings['useBlessedHammer'];
+			if ((v137 == (3 + 1)) or ((1964 - (628 + 490)) >= (425 + 1943))) then
+				v50 = EpicSettings.Settings['bastionofLightWithCD'];
+				v51 = EpicSettings.Settings['divineTollWithCD'];
+				v52 = EpicSettings.Settings['eyeofTyrWithCD'];
+				v53 = EpicSettings.Settings['momentOfGloryWithCD'];
+				v137 = 12 - 7;
+			end
+			if (((4 - 3) == v137) or ((4786 - (431 + 343)) <= (6781 - 3423))) then
 				v38 = EpicSettings.Settings['useConsecration'];
 				v39 = EpicSettings.Settings['useCrusaderStrike'];
-				v136 = 3 - 1;
+				v40 = EpicSettings.Settings['useHammeroftheRighteous'];
+				v41 = EpicSettings.Settings['useHammerofWrath'];
+				v137 = 5 - 3;
 			end
-			if (((427 + 1923) > (28 + 1127)) and (v136 == (3 + 1))) then
+			if (((1181 + 313) <= (385 + 2620)) and (v137 == (1698 - (556 + 1139)))) then
 				v46 = EpicSettings.Settings['useEyeofTyr'];
 				v47 = EpicSettings.Settings['useMomentOfGlory'];
 				v48 = EpicSettings.Settings['useSentinel'];
-				v136 = 9 - 4;
+				v49 = EpicSettings.Settings['avengingWrathWithCD'];
+				v137 = 19 - (6 + 9);
 			end
 		end
 	end
 	local function v127()
-		v55 = EpicSettings.Settings['useRebuke'];
-		v56 = EpicSettings.Settings['useHammerofJustice'];
-		v57 = EpicSettings.Settings['useArdentDefender'];
-		v58 = EpicSettings.Settings['useDivineShield'];
-		v59 = EpicSettings.Settings['useGuardianofAncientKings'];
-		v60 = EpicSettings.Settings['useLayOnHands'];
-		v61 = EpicSettings.Settings['useWordofGloryPlayer'];
-		v62 = EpicSettings.Settings['useShieldoftheRighteous'];
-		v63 = EpicSettings.Settings['useLayOnHandsFocus'];
-		v64 = EpicSettings.Settings['useWordofGloryFocus'];
-		v65 = EpicSettings.Settings['useWordofGloryMouseover'];
-		v66 = EpicSettings.Settings['useBlessingOfProtectionFocus'];
-		v67 = EpicSettings.Settings['useBlessingOfSacrificeFocus'];
-		v68 = EpicSettings.Settings['ardentDefenderHP'];
-		v69 = EpicSettings.Settings['divineShieldHP'];
-		v70 = EpicSettings.Settings['guardianofAncientKingsHP'];
-		v71 = EpicSettings.Settings['layonHandsHP'];
-		v72 = EpicSettings.Settings['wordofGloryHP'];
-		v73 = EpicSettings.Settings['shieldoftheRighteousHP'];
-		v74 = EpicSettings.Settings['layOnHandsFocusHP'];
-		v75 = EpicSettings.Settings['wordofGloryFocusHP'];
-		v76 = EpicSettings.Settings['wordofGloryMouseoverHP'];
-		v77 = EpicSettings.Settings['blessingofProtectionFocusHP'];
-		v78 = EpicSettings.Settings['blessingofSacrificeFocusHP'];
-		v79 = EpicSettings.Settings['useCleanseToxinsWithAfflicted'];
-		v80 = EpicSettings.Settings['useWordofGloryWithAfflicted'];
+		local v138 = 0 + 0;
+		while true do
+			if (((2 + 0) == v138) or ((3280 - (28 + 141)) == (827 + 1307))) then
+				v61 = EpicSettings.Settings['useWordofGloryPlayer'];
+				v62 = EpicSettings.Settings['useShieldoftheRighteous'];
+				v63 = EpicSettings.Settings['useLayOnHandsFocus'];
+				v138 = 3 - 0;
+			end
+			if (((1668 + 687) == (3672 - (486 + 831))) and (v138 == (20 - 12))) then
+				v79 = EpicSettings.Settings['useCleanseToxinsWithAfflicted'];
+				v80 = EpicSettings.Settings['useWordofGloryWithAfflicted'];
+				break;
+			end
+			if (((13 - 9) == v138) or ((112 + 476) <= (1365 - 933))) then
+				v67 = EpicSettings.Settings['useBlessingOfSacrificeFocus'];
+				v68 = EpicSettings.Settings['ardentDefenderHP'];
+				v69 = EpicSettings.Settings['divineShieldHP'];
+				v138 = 1268 - (668 + 595);
+			end
+			if (((4317 + 480) >= (786 + 3109)) and (v138 == (0 - 0))) then
+				v55 = EpicSettings.Settings['useRebuke'];
+				v56 = EpicSettings.Settings['useHammerofJustice'];
+				v57 = EpicSettings.Settings['useArdentDefender'];
+				v138 = 291 - (23 + 267);
+			end
+			if (((5521 - (1129 + 815)) == (3964 - (371 + 16))) and (v138 == (1751 - (1326 + 424)))) then
+				v58 = EpicSettings.Settings['useDivineShield'];
+				v59 = EpicSettings.Settings['useGuardianofAncientKings'];
+				v60 = EpicSettings.Settings['useLayOnHands'];
+				v138 = 3 - 1;
+			end
+			if (((13864 - 10070) > (3811 - (88 + 30))) and ((774 - (720 + 51)) == v138)) then
+				v64 = EpicSettings.Settings['useWordofGloryFocus'];
+				v65 = EpicSettings.Settings['useWordofGloryMouseover'];
+				v66 = EpicSettings.Settings['useBlessingOfProtectionFocus'];
+				v138 = 8 - 4;
+			end
+			if ((v138 == (1783 - (421 + 1355))) or ((2103 - 828) == (2014 + 2086))) then
+				v76 = EpicSettings.Settings['wordofGloryMouseoverHP'];
+				v77 = EpicSettings.Settings['blessingofProtectionFocusHP'];
+				v78 = EpicSettings.Settings['blessingofSacrificeFocusHP'];
+				v138 = 1091 - (286 + 797);
+			end
+			if ((v138 == (21 - 15)) or ((2635 - 1044) >= (4019 - (397 + 42)))) then
+				v73 = EpicSettings.Settings['shieldoftheRighteousHP'];
+				v74 = EpicSettings.Settings['layOnHandsFocusHP'];
+				v75 = EpicSettings.Settings['wordofGloryFocusHP'];
+				v138 = 3 + 4;
+			end
+			if (((1783 - (24 + 776)) <= (2785 - 977)) and ((790 - (222 + 563)) == v138)) then
+				v70 = EpicSettings.Settings['guardianofAncientKingsHP'];
+				v71 = EpicSettings.Settings['layonHandsHP'];
+				v72 = EpicSettings.Settings['wordofGloryHP'];
+				v138 = 12 - 6;
+			end
+		end
 	end
 	local function v128()
-		v88 = EpicSettings.Settings['fightRemainsCheck'] or (0 - 0);
+		v88 = EpicSettings.Settings['fightRemainsCheck'] or (0 + 0);
 		v85 = EpicSettings.Settings['InterruptWithStun'];
 		v86 = EpicSettings.Settings['InterruptOnlyWhitelist'];
 		v87 = EpicSettings.Settings['InterruptThreshold'];
@@ -619,8 +676,8 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 		v92 = EpicSettings.Settings['racialsWithCD'];
 		v94 = EpicSettings.Settings['useHealthstone'];
 		v93 = EpicSettings.Settings['useHealingPotion'];
-		v96 = EpicSettings.Settings['healthstoneHP'] or (513 - (203 + 310));
-		v95 = EpicSettings.Settings['healingPotionHP'] or (1993 - (1238 + 755));
+		v96 = EpicSettings.Settings['healthstoneHP'] or (190 - (23 + 167));
+		v95 = EpicSettings.Settings['healingPotionHP'] or (1798 - (690 + 1108));
 		v97 = EpicSettings.Settings['HealingPotionName'] or "";
 		v83 = EpicSettings.Settings['handleAfflicted'];
 		v84 = EpicSettings.Settings['HandleIncorporeal'];
@@ -635,95 +692,90 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 		v31 = EpicSettings.Toggles['aoe'];
 		v32 = EpicSettings.Toggles['cds'];
 		v33 = EpicSettings.Toggles['dispel'];
-		if (((5563 - (709 + 825)) <= (8942 - 4089)) and v15:IsDeadOrGhost()) then
+		if (v15:IsDeadOrGhost() or ((1774 + 376) <= (2045 - (40 + 808)))) then
 			return v29;
 		end
-		v106 = v15:GetEnemiesInMeleeRange(11 - 3);
-		v107 = v15:GetEnemiesInRange(894 - (196 + 668));
-		if (v31 or ((2037 - 1521) > (7112 - 3678))) then
-			local v188 = 833 - (171 + 662);
-			while true do
-				if (((4139 - (4 + 89)) >= (10630 - 7597)) and (v188 == (0 + 0))) then
-					v108 = #v106;
-					v109 = #v107;
-					break;
-				end
-			end
+		v106 = v15:GetEnemiesInMeleeRange(2 + 6);
+		v107 = v15:GetEnemiesInRange(114 - 84);
+		if (((3603 + 166) >= (621 + 552)) and v31) then
+			v108 = #v106;
+			v109 = #v107;
 		else
-			v108 = 4 - 3;
-			v109 = 1 + 0;
+			v108 = 1 + 0;
+			v109 = 572 - (47 + 524);
 		end
 		v104 = v15:ActiveMitigationNeeded();
-		v105 = v15:IsTankingAoE(1494 - (35 + 1451)) or v15:IsTanking(v17);
-		if ((not v15:AffectingCombat() and v15:IsMounted()) or ((4172 - (28 + 1425)) <= (3440 - (941 + 1052)))) then
-			if ((v100.CrusaderAura:IsCastable() and (v15:BuffDown(v100.CrusaderAura)) and v34) or ((3964 + 170) < (5440 - (822 + 692)))) then
-				if (v25(v100.CrusaderAura) or ((233 - 69) >= (1312 + 1473))) then
+		v105 = v15:IsTankingAoE(6 + 2) or v15:IsTanking(v17);
+		if (((4059 - 2574) == (2220 - 735)) and not v15:AffectingCombat() and v15:IsMounted()) then
+			if ((v100.CrusaderAura:IsCastable() and (v15:BuffDown(v100.CrusaderAura)) and v34) or ((7560 - 4245) <= (4508 - (1165 + 561)))) then
+				if (v25(v100.CrusaderAura) or ((27 + 849) >= (9179 - 6215))) then
 					return "crusader_aura";
 				end
 			end
 		end
-		if ((v17 and v17:Exists() and v17:IsAPlayer() and v17:IsDeadOrGhost() and not v15:CanAttack(v17)) or ((822 - (45 + 252)) == (2087 + 22))) then
-			if (((12 + 21) == (80 - 47)) and v15:AffectingCombat()) then
-				if (((3487 - (114 + 319)) <= (5764 - 1749)) and v100.Intercession:IsCastable()) then
-					if (((2397 - 526) < (2156 + 1226)) and v25(v100.Intercession, not v17:IsInRange(44 - 14), true)) then
+		if ((v17 and v17:Exists() and v17:IsAPlayer() and v17:IsDeadOrGhost() and not v15:CanAttack(v17)) or ((852 + 1380) > (2976 - (341 + 138)))) then
+			if (v15:AffectingCombat() or ((570 + 1540) <= (684 - 352))) then
+				if (((4012 - (89 + 237)) > (10204 - 7032)) and v100.Intercession:IsCastable()) then
+					if (v25(v100.Intercession, not v17:IsInRange(63 - 33), true) or ((5355 - (581 + 300)) < (2040 - (855 + 365)))) then
 						return "intercession target";
 					end
 				end
-			elseif (((2708 - 1415) <= (4129 - (556 + 1407))) and v100.Redemption:IsCastable()) then
-				if (v25(v100.Redemption, not v17:IsInRange(1236 - (741 + 465)), true) or ((3044 - (170 + 295)) < (65 + 58))) then
+			elseif (((10163 - 5884) >= (942 + 1940)) and v100.Redemption:IsCastable()) then
+				if (v25(v100.Redemption, not v17:IsInRange(1265 - (1030 + 205)), true) or ((1905 + 124) >= (3276 + 245))) then
 					return "redemption target";
 				end
 			end
 		end
-		if ((v100.Redemption:IsCastable() and v100.Redemption:IsReady() and not v15:AffectingCombat() and v16:Exists() and v16:IsDeadOrGhost() and v16:IsAPlayer() and not v15:CanAttack(v16)) or ((778 + 68) >= (5830 - 3462))) then
-			if (v25(v102.RedemptionMouseover) or ((3326 + 686) <= (2154 + 1204))) then
+		if ((v100.Redemption:IsCastable() and v100.Redemption:IsReady() and not v15:AffectingCombat() and v16:Exists() and v16:IsDeadOrGhost() and v16:IsAPlayer() and not v15:CanAttack(v16)) or ((2323 - (156 + 130)) >= (10547 - 5905))) then
+			if (((2898 - 1178) < (9130 - 4672)) and v25(v102.RedemptionMouseover)) then
 				return "redemption mouseover";
 			end
 		end
-		if (((847 + 647) <= (4235 - (957 + 273))) and v15:AffectingCombat()) then
-			if ((v100.Intercession:IsCastable() and (v15:HolyPower() >= (1 + 2)) and v100.Intercession:IsReady() and v15:AffectingCombat() and v16:Exists() and v16:IsDeadOrGhost() and v16:IsAPlayer() and not v15:CanAttack(v16)) or ((1246 + 1865) == (8131 - 5997))) then
-				if (((6205 - 3850) == (7193 - 4838)) and v25(v102.IntercessionMouseover)) then
+		if (v15:AffectingCombat() or ((115 + 321) > (1762 + 1259))) then
+			if (((782 - (10 + 59)) <= (240 + 607)) and v100.Intercession:IsCastable() and (v15:HolyPower() >= (14 - 11)) and v100.Intercession:IsReady() and v15:AffectingCombat() and v16:Exists() and v16:IsDeadOrGhost() and v16:IsAPlayer() and not v15:CanAttack(v16)) then
+				if (((3317 - (671 + 492)) <= (3209 + 822)) and v25(v102.IntercessionMouseover)) then
 					return "Intercession";
 				end
 			end
 		end
-		if (v15:AffectingCombat() or (v82 and v100.CleanseToxins:IsAvailable()) or ((2911 - 2323) <= (2212 - (389 + 1391)))) then
-			local v189 = v82 and v100.CleanseToxins:IsReady() and v33;
-			v29 = v110.FocusUnit(v189, nil, 13 + 7, nil, 3 + 22, v100.FlashofLight);
-			if (((10920 - 6123) >= (4846 - (783 + 168))) and v29) then
-				return v29;
-			end
-		end
-		if (((12005 - 8428) == (3519 + 58)) and v33 and v82) then
-			local v190 = 311 - (309 + 2);
+		if (((5830 - (369 + 846)) == (1222 + 3393)) and (v15:AffectingCombat() or (v82 and v100.CleanseToxins:IsAvailable()))) then
+			local v163 = 0 + 0;
+			local v164;
 			while true do
-				if (((11650 - 7856) > (4905 - (1090 + 122))) and (v190 == (1 + 0))) then
-					if ((v100.BlessingofFreedom:IsReady() and v110.UnitHasDebuffFromList(v14, v19.Paladin.FreedomDebuffList)) or ((4281 - 3006) == (2806 + 1294))) then
-						if (v25(v102.BlessingofFreedomFocus) or ((2709 - (628 + 490)) >= (642 + 2938))) then
-							return "blessing_of_freedom combat";
-						end
+				if (((1945 - (1036 + 909)) == v163) or ((3014 + 776) == (839 - 339))) then
+					v164 = v82 and v100.CleanseToxins:IsReady() and v33;
+					v29 = v110.FocusUnit(v164, nil, 223 - (11 + 192), nil, 13 + 12, v100.FlashofLight);
+					v163 = 176 - (135 + 40);
+				end
+				if (((215 - 126) < (134 + 87)) and (v163 == (2 - 1))) then
+					if (((3078 - 1024) >= (1597 - (50 + 126))) and v29) then
+						return v29;
 					end
 					break;
 				end
-				if (((2433 - 1450) <= (8262 - 6454)) and (v190 == (774 - (431 + 343)))) then
-					v29 = v110.FocusUnitWithDebuffFromList(v19.Paladin.FreedomDebuffList, 80 - 40, 72 - 47, v100.FlashofLight, 2 + 0);
-					if (v29 or ((275 + 1875) <= (2892 - (556 + 1139)))) then
-						return v29;
-					end
-					v190 = 16 - (6 + 9);
+			end
+		end
+		if (((1926 - 1234) < (677 + 2381)) and v33 and v82) then
+			v29 = v110.FocusUnitWithDebuffFromList(v19.Paladin.FreedomDebuffList, 1453 - (1233 + 180), 994 - (522 + 447), v100.FlashofLight, 1423 - (107 + 1314));
+			if (v29 or ((1510 + 1744) == (5042 - 3387))) then
+				return v29;
+			end
+			if ((v100.BlessingofFreedom:IsReady() and v110.UnitHasDebuffFromList(v14, v19.Paladin.FreedomDebuffList)) or ((551 + 745) == (9750 - 4840))) then
+				if (((13325 - 9957) == (5278 - (716 + 1194))) and v25(v102.BlessingofFreedomFocus)) then
+					return "blessing_of_freedom combat";
 				end
 			end
 		end
-		if (((691 + 3078) >= (601 + 572)) and (v110.TargetIsValid() or v15:AffectingCombat())) then
-			local v191 = 169 - (28 + 141);
+		if (((46 + 2597) < (409 + 3406)) and (v110.TargetIsValid() or v15:AffectingCombat())) then
+			local v165 = 503 - (74 + 429);
 			while true do
-				if (((576 + 909) == (1833 - 348)) and (v191 == (0 + 0))) then
+				if (((3689 - 1776) > (245 + 248)) and ((0 - 0) == v165)) then
 					v111 = v10.BossFightRemains(nil, true);
 					v112 = v111;
-					v191 = 1318 - (486 + 831);
+					v165 = 1 + 0;
 				end
-				if ((v191 == (2 - 1)) or ((11670 - 8355) <= (526 + 2256))) then
-					if ((v112 == (35132 - 24021)) or ((2139 - (668 + 595)) >= (2668 + 296))) then
+				if (((14659 - 9904) > (8475 - 5047)) and (v165 == (434 - (279 + 154)))) then
+					if (((2159 - (454 + 324)) <= (1864 + 505)) and (v112 == (11128 - (12 + 5)))) then
 						v112 = v10.FightRemains(v106, false);
 					end
 					v113 = v15:HolyPower();
@@ -731,54 +783,73 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 				end
 			end
 		end
-		if (not v15:AffectingCombat() or ((451 + 1781) > (6809 - 4312))) then
-			if ((v100.DevotionAura:IsCastable() and (v116()) and v34) or ((2400 - (23 + 267)) <= (2276 - (1129 + 815)))) then
-				if (((4073 - (371 + 16)) > (4922 - (1326 + 424))) and v25(v100.DevotionAura)) then
+		v29 = v122();
+		if (v29 or ((2612 + 2231) == (10406 - 6322))) then
+			return v29;
+		end
+		v29 = v119();
+		if (((1726 + 2943) > (1456 - (277 + 816))) and v29) then
+			return v29;
+		end
+		if (not v15:AffectingCombat() or ((8020 - 6143) >= (4321 - (1058 + 125)))) then
+			if (((890 + 3852) >= (4601 - (815 + 160))) and v100.DevotionAura:IsCastable() and (v116()) and v34) then
+				if (v25(v100.DevotionAura) or ((19479 - 14939) == (2174 - 1258))) then
 					return "devotion_aura";
 				end
 			end
 		end
-		if (v83 or ((8473 - 3999) < (2996 - 2176))) then
-			if (((4397 - (88 + 30)) >= (3653 - (720 + 51))) and v79) then
-				v29 = v110.HandleAfflicted(v100.CleanseToxins, v102.CleanseToxinsMouseover, 88 - 48);
-				if (v29 or ((3805 - (421 + 1355)) >= (5808 - 2287))) then
+		if (v83 or ((276 + 880) > (12701 - 8356))) then
+			if (((4135 - (41 + 1857)) < (6142 - (1222 + 671))) and v79) then
+				v29 = v110.HandleAfflicted(v100.CleanseToxins, v102.CleanseToxinsMouseover, 103 - 63);
+				if (v29 or ((3855 - 1172) < (1205 - (229 + 953)))) then
 					return v29;
 				end
 			end
-			if ((v15:BuffUp(v100.ShiningLightFreeBuff) and v80) or ((1001 + 1036) >= (5725 - (286 + 797)))) then
-				v29 = v110.HandleAfflicted(v100.WordofGlory, v102.WordofGloryMouseover, 146 - 106, true);
-				if (((2848 - 1128) < (4897 - (397 + 42))) and v29) then
+			if (((2471 - (1111 + 663)) <= (2405 - (874 + 705))) and v15:BuffUp(v100.ShiningLightFreeBuff) and v80) then
+				v29 = v110.HandleAfflicted(v100.WordofGlory, v102.WordofGloryMouseover, 6 + 34, true);
+				if (((754 + 351) <= (2444 - 1268)) and v29) then
 					return v29;
 				end
 			end
 		end
-		if (v84 or ((137 + 299) > (3821 - (24 + 776)))) then
-			v29 = v110.HandleIncorporeal(v100.Repentance, v102.RepentanceMouseOver, 46 - 16, true);
-			if (((1498 - (222 + 563)) <= (1865 - 1018)) and v29) then
-				return v29;
-			end
-			v29 = v110.HandleIncorporeal(v100.TurnEvil, v102.TurnEvilMouseOver, 22 + 8, true);
-			if (((2344 - (23 + 167)) <= (5829 - (690 + 1108))) and v29) then
-				return v29;
-			end
-		end
-		v29 = v119();
-		if (((1666 + 2949) == (3807 + 808)) and v29) then
-			return v29;
-		end
-		if ((v82 and v33) or ((4638 - (40 + 808)) == (83 + 417))) then
-			local v192 = 0 - 0;
+		if (((96 + 3283) <= (4491 - (642 + 37))) and v84) then
+			local v166 = 0 + 0;
 			while true do
-				if (((86 + 3) < (117 + 104)) and (v192 == (0 + 0))) then
-					if (((2625 - (47 + 524)) >= (923 + 498)) and v14) then
-						v29 = v118();
-						if (((1891 - 1199) < (4572 - 1514)) and v29) then
-							return v29;
+				if (((0 + 0) == v166) or ((1978 - 1190) >= (2070 - (233 + 221)))) then
+					v29 = v110.HandleIncorporeal(v100.Repentance, v102.RepentanceMouseOver, 69 - 39, true);
+					if (((1632 + 222) <= (4920 - (718 + 823))) and v29) then
+						return v29;
+					end
+					v166 = 1 + 0;
+				end
+				if (((5354 - (266 + 539)) == (12878 - 8329)) and (v166 == (1226 - (636 + 589)))) then
+					v29 = v110.HandleIncorporeal(v100.TurnEvil, v102.TurnEvilMouseOver, 71 - 41, true);
+					if (v29 or ((6232 - 3210) >= (2397 + 627))) then
+						return v29;
+					end
+					break;
+				end
+			end
+		end
+		if (((1752 + 3068) > (3213 - (657 + 358))) and v82 and v33) then
+			local v167 = 0 - 0;
+			while true do
+				if ((v167 == (0 - 0)) or ((2248 - (1151 + 36)) >= (4724 + 167))) then
+					if (((359 + 1005) <= (13358 - 8885)) and v14) then
+						local v223 = 1832 - (1552 + 280);
+						while true do
+							if ((v223 == (834 - (64 + 770))) or ((2441 + 1154) <= (6 - 3))) then
+								v29 = v118();
+								if (v29 or ((830 + 3842) == (5095 - (157 + 1086)))) then
+									return v29;
+								end
+								break;
+							end
 						end
 					end
-					if ((v16 and v16:Exists() and not v15:CanAttack(v16) and v16:IsAPlayer() and (v110.UnitHasCurseDebuff(v16) or v110.UnitHasPoisonDebuff(v16) or v110.UnitHasDispellableDebuffByPlayer(v16))) or ((7420 - 4166) == (3381 - (1165 + 561)))) then
-						if (v100.CleanseToxins:IsReady() or ((39 + 1257) == (15207 - 10297))) then
-							if (((1286 + 2082) == (3847 - (341 + 138))) and v25(v102.CleanseToxinsMouseover)) then
+					if (((3120 - 1561) == (6827 - 5268)) and v16 and v16:Exists() and not v15:CanAttack(v16) and v16:IsAPlayer() and (v110.UnitHasCurseDebuff(v16) or v110.UnitHasPoisonDebuff(v16) or v110.UnitHasDispellableDebuffByPlayer(v16))) then
+						if (v100.CleanseToxins:IsReady() or ((2686 - 934) <= (1075 - 287))) then
+							if (v25(v102.CleanseToxinsMouseover) or ((4726 - (599 + 220)) == (352 - 175))) then
 								return "cleanse_toxins dispel mouseover";
 							end
 						end
@@ -787,55 +858,57 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 				end
 			end
 		end
-		v29 = v122();
-		if (((714 + 1929) < (7873 - 4058)) and v29) then
-			return v29;
-		end
-		if (((2239 - (89 + 237)) > (1585 - 1092)) and v105) then
-			v29 = v121();
-			if (((10010 - 5255) > (4309 - (581 + 300))) and v29) then
-				return v29;
-			end
-		end
-		if (((2601 - (855 + 365)) <= (5626 - 3257)) and v110.TargetIsValid() and not v15:AffectingCombat() and v30) then
-			local v193 = 0 + 0;
+		if (((5401 - (1813 + 118)) > (406 + 149)) and v105) then
+			local v168 = 1217 - (841 + 376);
 			while true do
-				if (((1235 - (1030 + 205)) == v193) or ((4547 + 296) == (3800 + 284))) then
-					v29 = v123();
-					if (((4955 - (156 + 130)) > (824 - 461)) and v29) then
+				if ((v168 == (0 - 0)) or ((226 + 746) == (1760 - 1115))) then
+					v29 = v121();
+					if (((4041 - (464 + 395)) >= (5427 - 3312)) and v29) then
 						return v29;
 					end
 					break;
 				end
 			end
 		end
-		if ((v110.TargetIsValid() and not v15:IsChanneling() and not v15:IsCasting() and v15:AffectingCombat()) or ((3162 - 1285) >= (6426 - 3288))) then
-			if (((1250 + 3492) >= (2115 + 1511)) and (v88 < v112)) then
-				local v215 = 69 - (10 + 59);
+		if (((1870 + 2023) < (5266 - (467 + 370))) and v110.TargetIsValid() and not v15:AffectingCombat() and v30) then
+			local v169 = 0 - 0;
+			while true do
+				if ((v169 == (0 + 0)) or ((9827 - 6960) < (298 + 1607))) then
+					v29 = v123();
+					if (v29 or ((4178 - 2382) >= (4571 - (150 + 370)))) then
+						return v29;
+					end
+					break;
+				end
+			end
+		end
+		if (((2901 - (74 + 1208)) <= (9238 - 5482)) and v110.TargetIsValid() and not v15:IsChanneling() and not v15:IsCasting() and v15:AffectingCombat()) then
+			if (((2864 - 2260) == (430 + 174)) and (v88 < v112)) then
+				local v217 = 390 - (14 + 376);
 				while true do
-					if (((1 + 0) == v215) or ((22358 - 17818) == (2079 - (671 + 492)))) then
-						if ((v32 and v101.FyralathTheDreamrender:IsEquippedAndReady() and v35) or ((921 + 235) > (5560 - (369 + 846)))) then
-							if (((593 + 1644) < (3627 + 622)) and v25(v102.UseWeapon)) then
+					if ((v217 == (1 - 0)) or ((2902 + 1582) == (791 + 109))) then
+						if ((v32 and v101.FyralathTheDreamrender:IsEquippedAndReady() and v35) or ((4253 + 206) <= (3261 - 2148))) then
+							if (((2733 + 899) > (3476 - (23 + 55))) and v25(v102.UseWeapon)) then
 								return "Fyralath The Dreamrender used";
 							end
 						end
 						break;
 					end
-					if ((v215 == (1945 - (1036 + 909))) or ((2134 + 549) < (38 - 15))) then
+					if (((9673 - 5591) <= (3282 + 1635)) and (v217 == (0 + 0))) then
 						v29 = v124();
-						if (((900 - (11 + 192)) <= (418 + 408)) and v29) then
+						if (((7491 - 2659) >= (436 + 950)) and v29) then
 							return v29;
 						end
-						v215 = 176 - (135 + 40);
+						v217 = 902 - (652 + 249);
 					end
 				end
 			end
-			if (((2677 - 1572) <= (709 + 467)) and v89 and ((v32 and v90) or not v90) and v17:IsInRange(17 - 9)) then
-				local v216 = 0 - 0;
+			if (((366 - 229) == (2005 - (708 + 1160))) and v89 and ((v32 and v90) or not v90) and v17:IsInRange(21 - 13)) then
+				local v218 = 0 - 0;
 				while true do
-					if (((3555 - (50 + 126)) <= (10614 - 6802)) and ((0 + 0) == v216)) then
+					if (((27 - (10 + 17)) == v218) or ((353 + 1217) >= (6064 - (1400 + 332)))) then
 						v29 = v120();
-						if (v29 or ((2201 - (1233 + 180)) >= (2585 - (522 + 447)))) then
+						if (v29 or ((7794 - 3730) <= (3727 - (242 + 1666)))) then
 							return v29;
 						end
 						break;
@@ -843,19 +916,25 @@ v0["Epix_Paladin_Protection.lua"] = function(...)
 				end
 			end
 			v29 = v125();
-			if (((3275 - (107 + 1314)) <= (1568 + 1811)) and v29) then
+			if (v29 or ((2134 + 2852) < (577 + 997))) then
 				return v29;
 			end
-			if (((13860 - 9311) == (1933 + 2616)) and v25(v100.Pool)) then
+			if (((3773 + 653) > (1112 - (850 + 90))) and v25(v100.Pool)) then
 				return "Wait/Pool Resources";
 			end
 		end
 	end
 	local function v130()
-		v21.Print("Protection Paladin by Epic. Supported by xKaneto");
-		v114();
+		local v157 = 0 - 0;
+		while true do
+			if (((1976 - (360 + 1030)) > (403 + 52)) and (v157 == (0 - 0))) then
+				v21.Print("Protection Paladin by Epic. Supported by xKaneto");
+				v114();
+				break;
+			end
+		end
 	end
-	v21.SetAPL(130 - 64, v129, v130);
+	v21.SetAPL(90 - 24, v129, v130);
 end;
 return v0["Epix_Paladin_Protection.lua"]();
 
