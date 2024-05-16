@@ -1,36 +1,44 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = v0[v4];
-	if (not v5 or ((17138 - 12295) < (2325 + 2500))) then
-		return v1(v4, ...);
+	local v5 = 489 - (457 + 32);
+	local v6;
+	while true do
+		if ((v5 == (0 + 0)) or ((3320 - (832 + 570)) == (1013 + 62))) then
+			v6 = v0[v4];
+			if (((104 + 292) <= (13461 - 9657)) and not v6) then
+				return v1(v4, ...);
+			end
+			v5 = 1 + 0;
+		end
+		if ((v5 == (797 - (588 + 208))) or ((11236 - 7067) == (3987 - (884 + 916)))) then
+			return v6(...);
+		end
 	end
-	return v5(...);
 end
 v0["Epix_Druid_RestoDruid.lua"] = function(...)
-	local v6, v7 = ...;
-	local v8 = EpicDBC.DBC;
-	local v9 = EpicLib;
-	local v10 = EpicCache;
-	local v11 = v9.Utils;
-	local v12 = v9.Unit;
-	local v13 = v12.Player;
-	local v14 = v12.Pet;
-	local v15 = v12.Target;
-	local v16 = v12.Focus;
-	local v17 = v12.MouseOver;
-	local v18 = v9.Spell;
-	local v19 = v9.MultiSpell;
-	local v20 = v9.Item;
-	local v21 = v9.Commons;
-	local v22 = EpicLib;
-	local v23 = v22.Cast;
-	local v24 = v22.Press;
-	local v25 = v22.Macro;
-	local v26 = v22.Commons.Everyone.num;
-	local v27 = v22.Commons.Everyone.bool;
-	local v28 = string.format;
-	local v29 = false;
+	local v7, v8 = ...;
+	local v9 = EpicDBC.DBC;
+	local v10 = EpicLib;
+	local v11 = EpicCache;
+	local v12 = v10.Utils;
+	local v13 = v10.Unit;
+	local v14 = v13.Player;
+	local v15 = v13.Pet;
+	local v16 = v13.Target;
+	local v17 = v13.Focus;
+	local v18 = v13.MouseOver;
+	local v19 = v10.Spell;
+	local v20 = v10.MultiSpell;
+	local v21 = v10.Item;
+	local v22 = v10.Commons;
+	local v23 = EpicLib;
+	local v24 = v23.Cast;
+	local v25 = v23.Press;
+	local v26 = v23.Macro;
+	local v27 = v23.Commons.Everyone.num;
+	local v28 = v23.Commons.Everyone.bool;
+	local v29 = string.format;
 	local v30 = false;
 	local v31 = false;
 	local v32 = false;
@@ -38,7 +46,7 @@ v0["Epix_Druid_RestoDruid.lua"] = function(...)
 	local v34 = false;
 	local v35 = false;
 	local v36 = false;
-	local v37;
+	local v37 = false;
 	local v38;
 	local v39;
 	local v40;
@@ -100,396 +108,442 @@ v0["Epix_Druid_RestoDruid.lua"] = function(...)
 	local v96;
 	local v97;
 	local v98;
-	local v99 = v22.Commons.Everyone;
-	local v100 = v18.Druid.Restoration;
-	local v101 = v20.Druid.Restoration;
-	local v102 = {};
-	local v103 = v25.Druid.Restoration;
-	local v104 = 796 - (588 + 208);
-	local v105, v106;
-	local v107 = 29946 - 18835;
-	local v108 = 12911 - (884 + 916);
-	local v109 = false;
+	local v99;
+	local v100 = v23.Commons.Everyone;
+	local v101 = v19.Druid.Restoration;
+	local v102 = v21.Druid.Restoration;
+	local v103 = {};
+	local v104 = v26.Druid.Restoration;
+	local v105 = 0 - 0;
+	local v106, v107;
+	local v108 = 6443 + 4668;
+	local v109 = 11764 - (232 + 421);
 	local v110 = false;
 	local v111 = false;
 	local v112 = false;
 	local v113 = false;
 	local v114 = false;
 	local v115 = false;
-	local v116 = v13:GetEquipment();
-	local v117 = (v116[27 - 14] and v20(v116[8 + 5])) or v20(653 - (232 + 421));
-	local v118 = (v116[1903 - (1569 + 320)] and v20(v116[4 + 10])) or v20(0 + 0);
-	v9:RegisterForEvent(function()
-		v116 = v13:GetEquipment();
-		v117 = (v116[43 - 30] and v20(v116[618 - (316 + 289)])) or v20(0 - 0);
-		v118 = (v116[1 + 13] and v20(v116[1467 - (666 + 787)])) or v20(425 - (360 + 65));
-	end, "PLAYER_EQUIPMENT_CHANGED");
-	v9:RegisterForEvent(function()
-		local v146 = 0 + 0;
+	local v116 = false;
+	local v117 = v14:GetEquipment();
+	local v118 = (v117[1902 - (1569 + 320)] and v21(v117[4 + 9])) or v21(0 + 0);
+	local v119 = (v117[46 - 32] and v21(v117[619 - (316 + 289)])) or v21(0 - 0);
+	v10:RegisterForEvent(function()
+		local v147 = 0 + 0;
 		while true do
-			if ((v146 == (254 - (79 + 175))) or ((6113 - 2236) >= (3541 + 996))) then
-				v107 = 34058 - 22947;
-				v108 = 21397 - 10286;
+			if (((2859 - (666 + 787)) == (1831 - (360 + 65))) and (v147 == (0 + 0))) then
+				v117 = v14:GetEquipment();
+				v118 = (v117[267 - (79 + 175)] and v21(v117[19 - 6])) or v21(0 + 0);
+				v147 = 2 - 1;
+			end
+			if (((2948 - 1417) < (5170 - (503 + 396))) and (v147 == (182 - (92 + 89)))) then
+				v119 = (v117[26 - 12] and v21(v117[8 + 6])) or v21(0 + 0);
+				break;
+			end
+		end
+	end, "PLAYER_EQUIPMENT_CHANGED");
+	v10:RegisterForEvent(function()
+		local v148 = 0 - 0;
+		while true do
+			if (((87 + 548) == (1447 - 812)) and (v148 == (0 + 0))) then
+				v108 = 5307 + 5804;
+				v109 = 33840 - 22729;
 				break;
 			end
 		end
 	end, "PLAYER_REGEN_ENABLED");
-	local function v119()
-		if (v100.ImprovedNaturesCure:IsAvailable() or ((5214 - (503 + 396)) < (1907 - (92 + 89)))) then
-			local v167 = 0 - 0;
-			while true do
-				if ((v167 == (0 + 0)) or ((2178 + 1501) < (2447 - 1822))) then
-					v99.DispellableDebuffs = v11.MergeTable(v99.DispellableMagicDebuffs, v99.DispellableDiseaseDebuffs);
-					v99.DispellableDebuffs = v11.MergeTable(v99.DispellableDebuffs, v99.DispellableCurseDebuffs);
-					break;
-				end
-			end
+	local function v120()
+		if (((421 + 2952) <= (5422 - 1866)) and v101.ImprovedNaturesCure:IsAvailable()) then
+			v100.DispellableDebuffs = v12.MergeTable(v100.DispellableMagicDebuffs, v100.DispellableDiseaseDebuffs);
+			v100.DispellableDebuffs = v12.MergeTable(v100.DispellableDebuffs, v100.DispellableCurseDebuffs);
 		else
-			v99.DispellableDebuffs = v99.DispellableMagicDebuffs;
+			v100.DispellableDebuffs = v100.DispellableMagicDebuffs;
 		end
 	end
-	v9:RegisterForEvent(function()
-		v119();
+	v10:RegisterForEvent(function()
+		v120();
 	end, "ACTIVE_PLAYER_SPECIALIZATION_CHANGED");
-	local function v120()
-		return (v13:StealthUp(true, true) and (1.6 + 0)) or (2 - 1);
-	end
-	v100.Rake:RegisterPMultiplier(v100.RakeDebuff, v120);
 	local function v121()
-		v109 = v13:BuffUp(v100.EclipseSolar) or v13:BuffUp(v100.EclipseLunar);
-		v110 = v13:BuffUp(v100.EclipseSolar) and v13:BuffUp(v100.EclipseLunar);
-		v111 = v13:BuffUp(v100.EclipseLunar) and v13:BuffDown(v100.EclipseSolar);
-		v112 = v13:BuffUp(v100.EclipseSolar) and v13:BuffDown(v100.EclipseLunar);
-		v113 = (not v109 and (((v100.Starfire:Count() == (0 + 0)) and (v100.Wrath:Count() > (0 + 0))) or v13:IsCasting(v100.Wrath))) or v112;
-		v114 = (not v109 and (((v100.Wrath:Count() == (0 - 0)) and (v100.Starfire:Count() > (0 + 0))) or v13:IsCasting(v100.Starfire))) or v111;
-		v115 = not v109 and (v100.Wrath:Count() > (0 - 0)) and (v100.Starfire:Count() > (1244 - (485 + 759)));
+		return (v14:StealthUp(true, true) and (1245.6 - (485 + 759))) or (2 - 1);
 	end
-	local function v122(v147)
-		return v147:DebuffRefreshable(v100.SunfireDebuff) and (v108 > (11 - 6));
+	v101.Rake:RegisterPMultiplier(v101.RakeDebuff, v121);
+	local function v122()
+		v110 = v14:BuffUp(v101.EclipseSolar) or v14:BuffUp(v101.EclipseLunar);
+		v111 = v14:BuffUp(v101.EclipseSolar) and v14:BuffUp(v101.EclipseLunar);
+		v112 = v14:BuffUp(v101.EclipseLunar) and v14:BuffDown(v101.EclipseSolar);
+		v113 = v14:BuffUp(v101.EclipseSolar) and v14:BuffDown(v101.EclipseLunar);
+		v114 = (not v110 and (((v101.Starfire:Count() == (1189 - (442 + 747))) and (v101.Wrath:Count() > (1135 - (832 + 303)))) or v14:IsCasting(v101.Wrath))) or v113;
+		v115 = (not v110 and (((v101.Wrath:Count() == (946 - (88 + 858))) and (v101.Starfire:Count() > (0 + 0))) or v14:IsCasting(v101.Starfire))) or v112;
+		v116 = not v110 and (v101.Wrath:Count() > (0 + 0)) and (v101.Starfire:Count() > (0 + 0));
 	end
-	local function v123(v148)
-		return (v148:DebuffRefreshable(v100.MoonfireDebuff) and (v108 > (1201 - (442 + 747))) and ((((v106 <= (1139 - (832 + 303))) or (v13:Energy() < (996 - (88 + 858)))) and v13:BuffDown(v100.HeartOfTheWild)) or (((v106 <= (2 + 2)) or (v13:Energy() < (42 + 8))) and v13:BuffUp(v100.HeartOfTheWild))) and v148:DebuffDown(v100.MoonfireDebuff)) or (v13:PrevGCD(1 + 0, v100.Sunfire) and ((v148:DebuffUp(v100.MoonfireDebuff) and (v148:DebuffRemains(v100.MoonfireDebuff) < (v148:DebuffDuration(v100.MoonfireDebuff) * (789.8 - (766 + 23))))) or v148:DebuffDown(v100.MoonfireDebuff)) and (v106 == (4 - 3)));
+	local function v123(v149)
+		return v149:DebuffRefreshable(v101.SunfireDebuff) and (v109 > (794 - (766 + 23)));
 	end
-	local function v124(v149)
-		return v149:DebuffRefreshable(v100.MoonfireDebuff) and (v149:TimeToDie() > (6 - 1));
+	local function v124(v150)
+		return (v150:DebuffRefreshable(v101.MoonfireDebuff) and (v109 > (59 - 47)) and ((((v107 <= (5 - 1)) or (v14:Energy() < (131 - 81))) and v14:BuffDown(v101.HeartOfTheWild)) or (((v107 <= (13 - 9)) or (v14:Energy() < (1123 - (1036 + 37)))) and v14:BuffUp(v101.HeartOfTheWild))) and v150:DebuffDown(v101.MoonfireDebuff)) or (v14:PrevGCD(1 + 0, v101.Sunfire) and ((v150:DebuffUp(v101.MoonfireDebuff) and (v150:DebuffRemains(v101.MoonfireDebuff) < (v150:DebuffDuration(v101.MoonfireDebuff) * (0.8 - 0)))) or v150:DebuffDown(v101.MoonfireDebuff)) and (v107 == (1 + 0)));
 	end
-	local function v125(v150)
-		return ((v150:DebuffRefreshable(v100.Rip) or ((v13:Energy() > (237 - 147)) and (v150:DebuffRemains(v100.Rip) <= (33 - 23)))) and (((v13:ComboPoints() == (1078 - (1036 + 37))) and (v150:TimeToDie() > (v150:DebuffRemains(v100.Rip) + 18 + 6))) or (((v150:DebuffRemains(v100.Rip) + (v13:ComboPoints() * (7 - 3))) < v150:TimeToDie()) and ((v150:DebuffRemains(v100.Rip) + 4 + 0 + (v13:ComboPoints() * (1484 - (641 + 839)))) > v150:TimeToDie())))) or (v150:DebuffDown(v100.Rip) and (v13:ComboPoints() > ((915 - (910 + 3)) + (v106 * (4 - 2)))));
+	local function v125(v151)
+		return v151:DebuffRefreshable(v101.MoonfireDebuff) and (v151:TimeToDie() > (1485 - (641 + 839)));
 	end
-	local function v126(v151)
-		return (v151:DebuffDown(v100.RakeDebuff) or v151:DebuffRefreshable(v100.RakeDebuff)) and (v151:TimeToDie() > (1694 - (1466 + 218))) and (v13:ComboPoints() < (3 + 2));
+	local function v126(v152)
+		return ((v152:DebuffRefreshable(v101.Rip) or ((v14:Energy() > (1003 - (910 + 3))) and (v152:DebuffRemains(v101.Rip) <= (25 - 15)))) and (((v14:ComboPoints() == (1689 - (1466 + 218))) and (v152:TimeToDie() > (v152:DebuffRemains(v101.Rip) + 12 + 12))) or (((v152:DebuffRemains(v101.Rip) + (v14:ComboPoints() * (1152 - (556 + 592)))) < v152:TimeToDie()) and ((v152:DebuffRemains(v101.Rip) + 2 + 2 + (v14:ComboPoints() * (812 - (329 + 479)))) > v152:TimeToDie())))) or (v152:DebuffDown(v101.Rip) and (v14:ComboPoints() > ((856 - (174 + 680)) + (v107 * (6 - 4)))));
 	end
-	local function v127(v152)
-		return (v152:DebuffUp(v100.AdaptiveSwarmDebuff));
+	local function v127(v153)
+		return (v153:DebuffDown(v101.RakeDebuff) or v153:DebuffRefreshable(v101.RakeDebuff)) and (v153:TimeToDie() > (20 - 10)) and (v14:ComboPoints() < (4 + 1));
 	end
-	local function v128()
-		return v99.FriendlyUnitsWithBuffCount(v100.Rejuvenation) + v99.FriendlyUnitsWithBuffCount(v100.Regrowth) + v99.FriendlyUnitsWithBuffCount(v100.Wildgrowth);
+	local function v128(v154)
+		return (v154:DebuffUp(v101.AdaptiveSwarmDebuff));
 	end
 	local function v129()
-		return v99.FriendlyUnitsWithoutBuffCount(v100.Rejuvenation);
+		return v100.FriendlyUnitsWithBuffCount(v101.Rejuvenation) + v100.FriendlyUnitsWithBuffCount(v101.Regrowth) + v100.FriendlyUnitsWithBuffCount(v101.Wildgrowth);
 	end
-	local function v130(v153)
-		return v153:BuffUp(v100.Rejuvenation) or v153:BuffUp(v100.Regrowth) or v153:BuffUp(v100.Wildgrowth);
+	local function v130()
+		return v100.FriendlyUnitsWithoutBuffCount(v101.Rejuvenation);
 	end
-	local function v131()
-		local v154 = 1148 - (556 + 592);
-		local v155;
+	local function v131(v155)
+		return v155:BuffUp(v101.Rejuvenation) or v155:BuffUp(v101.Regrowth) or v155:BuffUp(v101.Wildgrowth);
+	end
+	local function v132()
+		local v156 = 739 - (396 + 343);
+		local v157;
 		while true do
-			if ((v154 == (1 + 0)) or ((5433 - (329 + 479)) < (1486 - (174 + 680)))) then
-				v155 = v99.HandleBottomTrinket(v102, v31 and (v13:BuffUp(v100.HeartOfTheWild) or v13:BuffUp(v100.IncarnationBuff)), 137 - 97, nil);
-				if (v155 or ((171 - 88) > (1271 + 509))) then
-					return v155;
+			if ((v156 == (1 + 0)) or ((4768 - (29 + 1448)) < (4669 - (135 + 1254)))) then
+				v157 = v100.HandleBottomTrinket(v103, v32 and (v14:BuffUp(v101.HeartOfTheWild) or v14:BuffUp(v101.IncarnationBuff)), 150 - 110, nil);
+				if (((20478 - 16092) >= (582 + 291)) and v157) then
+					return v157;
 				end
 				break;
 			end
-			if (((1285 - (396 + 343)) <= (96 + 981)) and (v154 == (1477 - (29 + 1448)))) then
-				v155 = v99.HandleTopTrinket(v102, v31 and (v13:BuffUp(v100.HeartOfTheWild) or v13:BuffUp(v100.IncarnationBuff)), 1429 - (135 + 1254), nil);
-				if (v155 or ((3752 - 2756) > (20081 - 15780))) then
-					return v155;
+			if (((2448 - (389 + 1138)) <= (1676 - (102 + 472))) and (v156 == (0 + 0))) then
+				v157 = v100.HandleTopTrinket(v103, v32 and (v14:BuffUp(v101.HeartOfTheWild) or v14:BuffUp(v101.IncarnationBuff)), 23 + 17, nil);
+				if (((4389 + 317) >= (2508 - (320 + 1225))) and v157) then
+					return v157;
 				end
-				v154 = 1 + 0;
+				v156 = 1 - 0;
 			end
 		end
 	end
-	local function v132()
-		if (((5597 - (389 + 1138)) > (1261 - (102 + 472))) and v100.Rake:IsReady() and (v13:StealthUp(false, true))) then
-			if (v24(v100.Rake, not v15:IsInMeleeRange(10 + 0)) or ((364 + 292) >= (3105 + 225))) then
+	local function v133()
+		if ((v101.Rake:IsReady() and (v14:StealthUp(false, true))) or ((588 + 372) <= (2340 - (157 + 1307)))) then
+			if (v25(v101.Rake, not v16:IsInMeleeRange(1869 - (821 + 1038))) or ((5154 - 3088) == (102 + 830))) then
 				return "rake cat 2";
 			end
 		end
-		if ((v38 and not v13:StealthUp(false, true)) or ((4037 - (320 + 1225)) <= (596 - 261))) then
-			local v170 = v131();
-			if (((2645 + 1677) >= (4026 - (157 + 1307))) and v170) then
-				return v170;
+		if (((8570 - 3745) < (1802 + 3041)) and v39 and not v14:StealthUp(false, true)) then
+			local v173 = v132();
+			if (v173 or ((9609 - 5732) >= (5563 - (834 + 192)))) then
+				return v173;
 			end
 		end
-		if (v100.AdaptiveSwarm:IsCastable() or ((5496 - (821 + 1038)) >= (9406 - 5636))) then
-			if (v24(v100.AdaptiveSwarm, not v15:IsSpellInRange(v100.AdaptiveSwarm)) or ((261 + 2118) > (8131 - 3553))) then
+		if (v101.AdaptiveSwarm:IsCastable() or ((275 + 4040) < (444 + 1282))) then
+			if (v25(v101.AdaptiveSwarm, not v16:IsSpellInRange(v101.AdaptiveSwarm)) or ((79 + 3600) < (968 - 343))) then
 				return "adaptive_swarm cat";
 			end
 		end
-		if ((v52 and v31 and v100.ConvokeTheSpirits:IsCastable()) or ((180 + 303) > (1841 - 1098))) then
-			if (((3480 - (834 + 192)) > (37 + 541)) and v13:BuffUp(v100.CatForm)) then
-				if (((239 + 691) < (96 + 4362)) and (v13:BuffUp(v100.HeartOfTheWild) or (v100.HeartOfTheWild:CooldownRemains() > (92 - 32)) or not v100.HeartOfTheWild:IsAvailable()) and (v13:Energy() < (354 - (300 + 4))) and (((v13:ComboPoints() < (2 + 3)) and (v15:DebuffRemains(v100.Rip) > (13 - 8))) or (v106 > (363 - (112 + 250))))) then
-					if (((264 + 398) <= (2434 - 1462)) and v24(v100.ConvokeTheSpirits, not v15:IsInRange(18 + 12))) then
+		if ((v53 and v32 and v101.ConvokeTheSpirits:IsCastable()) or ((4929 - (300 + 4)) < (169 + 463))) then
+			if (v14:BuffUp(v101.CatForm) or ((217 - 134) > (2142 - (112 + 250)))) then
+				if (((218 + 328) <= (2697 - 1620)) and (v14:BuffUp(v101.HeartOfTheWild) or (v101.HeartOfTheWild:CooldownRemains() > (35 + 25)) or not v101.HeartOfTheWild:IsAvailable()) and (v14:Energy() < (26 + 24)) and (((v14:ComboPoints() < (4 + 1)) and (v16:DebuffRemains(v101.Rip) > (3 + 2))) or (v107 > (1 + 0)))) then
+					if (v25(v101.ConvokeTheSpirits, not v16:IsInRange(1444 - (1001 + 413))) or ((2220 - 1224) > (5183 - (244 + 638)))) then
 						return "convoke_the_spirits cat 18";
 					end
 				end
 			end
 		end
-		if (((2260 + 2110) == (3269 + 1101)) and v100.Sunfire:IsReady() and v13:BuffDown(v100.CatForm) and (v15:TimeToDie() > (3 + 2)) and (not v100.Rip:IsAvailable() or v15:DebuffUp(v100.Rip) or (v13:Energy() < (23 + 7)))) then
-			if (v99.CastCycle(v100.Sunfire, v105, v122, not v15:IsSpellInRange(v100.Sunfire), nil, nil, v103.SunfireMouseover) or ((6176 - (1001 + 413)) <= (1919 - 1058))) then
+		if (((4763 - (627 + 66)) > (2046 - 1359)) and v101.Sunfire:IsReady() and v14:BuffDown(v101.CatForm) and (v16:TimeToDie() > (607 - (512 + 90))) and (not v101.Rip:IsAvailable() or v16:DebuffUp(v101.Rip) or (v14:Energy() < (1936 - (1665 + 241))))) then
+			if (v100.CastCycle(v101.Sunfire, v106, v123, not v16:IsSpellInRange(v101.Sunfire), nil, nil, v104.SunfireMouseover) or ((1373 - (373 + 344)) >= (1502 + 1828))) then
 				return "sunfire cat 20";
 			end
 		end
-		if ((v100.Moonfire:IsReady() and v13:BuffDown(v100.CatForm) and (v15:TimeToDie() > (887 - (244 + 638))) and (not v100.Rip:IsAvailable() or v15:DebuffUp(v100.Rip) or (v13:Energy() < (723 - (627 + 66))))) or ((4207 - 2795) == (4866 - (512 + 90)))) then
-			if (v99.CastCycle(v100.Moonfire, v105, v123, not v15:IsSpellInRange(v100.Moonfire), nil, nil, v103.MoonfireMouseover) or ((5074 - (1665 + 241)) < (2870 - (373 + 344)))) then
+		if ((v101.Moonfire:IsReady() and v14:BuffDown(v101.CatForm) and (v16:TimeToDie() > (2 + 3)) and (not v101.Rip:IsAvailable() or v16:DebuffUp(v101.Rip) or (v14:Energy() < (79 - 49)))) or ((4216 - 1724) <= (1434 - (35 + 1064)))) then
+			if (((3145 + 1177) >= (5481 - 2919)) and v100.CastCycle(v101.Moonfire, v106, v124, not v16:IsSpellInRange(v101.Moonfire), nil, nil, v104.MoonfireMouseover)) then
 				return "moonfire cat 22";
 			end
 		end
-		if ((v100.Sunfire:IsReady() and v15:DebuffDown(v100.SunfireDebuff) and (v15:TimeToDie() > (3 + 2))) or ((1317 + 3659) < (3513 - 2181))) then
-			if (((7831 - 3203) == (5727 - (35 + 1064))) and v24(v100.Sunfire, not v15:IsSpellInRange(v100.Sunfire))) then
+		if ((v101.Sunfire:IsReady() and v16:DebuffDown(v101.SunfireDebuff) and (v16:TimeToDie() > (1 + 4))) or ((4873 - (298 + 938)) >= (5029 - (233 + 1026)))) then
+			if (v25(v101.Sunfire, not v16:IsSpellInRange(v101.Sunfire)) or ((4045 - (636 + 1030)) > (2341 + 2237))) then
 				return "sunfire cat 24";
 			end
 		end
-		if ((v100.Moonfire:IsReady() and v13:BuffDown(v100.CatForm) and v15:DebuffDown(v100.MoonfireDebuff) and (v15:TimeToDie() > (4 + 1))) or ((115 - 61) == (2 + 393))) then
-			if (((1318 - (298 + 938)) == (1341 - (233 + 1026))) and v24(v100.Moonfire, not v15:IsSpellInRange(v100.Moonfire))) then
+		if ((v101.Moonfire:IsReady() and v14:BuffDown(v101.CatForm) and v16:DebuffDown(v101.MoonfireDebuff) and (v16:TimeToDie() > (5 + 0))) or ((144 + 339) > (51 + 692))) then
+			if (((2675 - (55 + 166)) > (113 + 465)) and v25(v101.Moonfire, not v16:IsSpellInRange(v101.Moonfire))) then
 				return "moonfire cat 24";
 			end
 		end
-		if ((v100.Starsurge:IsReady() and (v13:BuffDown(v100.CatForm))) or ((2247 - (636 + 1030)) < (145 + 137))) then
-			if (v24(v100.Starsurge, not v15:IsSpellInRange(v100.Starsurge)) or ((4502 + 107) < (742 + 1753))) then
+		if (((94 + 836) < (17025 - 12567)) and v101.Starsurge:IsReady() and (v14:BuffDown(v101.CatForm))) then
+			if (((959 - (36 + 261)) <= (1699 - 727)) and v25(v101.Starsurge, not v16:IsSpellInRange(v101.Starsurge))) then
 				return "starsurge cat 26";
 			end
 		end
-		if (((78 + 1074) == (1373 - (55 + 166))) and v100.HeartOfTheWild:IsCastable() and v31 and ((v100.ConvokeTheSpirits:CooldownRemains() < (6 + 24)) or not v100.ConvokeTheSpirits:IsAvailable()) and v13:BuffDown(v100.HeartOfTheWild) and v15:DebuffUp(v100.SunfireDebuff) and (v15:DebuffUp(v100.MoonfireDebuff) or (v106 > (1 + 3)))) then
-			if (((7240 - 5344) <= (3719 - (36 + 261))) and v24(v100.HeartOfTheWild)) then
+		if (((5738 - (34 + 1334)) == (1680 + 2690)) and v101.HeartOfTheWild:IsCastable() and v32 and ((v101.ConvokeTheSpirits:CooldownRemains() < (24 + 6)) or not v101.ConvokeTheSpirits:IsAvailable()) and v14:BuffDown(v101.HeartOfTheWild) and v16:DebuffUp(v101.SunfireDebuff) and (v16:DebuffUp(v101.MoonfireDebuff) or (v107 > (1287 - (1035 + 248))))) then
+			if (v25(v101.HeartOfTheWild) or ((4783 - (20 + 1)) <= (449 + 412))) then
 				return "heart_of_the_wild cat 26";
 			end
 		end
-		if ((v100.CatForm:IsReady() and v13:BuffDown(v100.CatForm) and (v13:Energy() >= (52 - 22)) and v35) or ((2358 - (34 + 1334)) > (623 + 997))) then
-			if (v24(v100.CatForm) or ((682 + 195) > (5978 - (1035 + 248)))) then
+		if ((v101.CatForm:IsReady() and v14:BuffDown(v101.CatForm) and (v14:Energy() >= (349 - (134 + 185))) and v36) or ((2545 - (549 + 584)) == (4949 - (314 + 371)))) then
+			if (v25(v101.CatForm) or ((10875 - 7707) < (3121 - (478 + 490)))) then
 				return "cat_form cat 28";
 			end
 		end
-		if (((2712 - (20 + 1)) >= (965 + 886)) and v100.FerociousBite:IsReady() and (((v13:ComboPoints() > (322 - (134 + 185))) and (v15:TimeToDie() < (1143 - (549 + 584)))) or ((v13:ComboPoints() == (690 - (314 + 371))) and (v13:Energy() >= (85 - 60)) and (not v100.Rip:IsAvailable() or (v15:DebuffRemains(v100.Rip) > (973 - (478 + 490))))))) then
-			if (v24(v100.FerociousBite, not v15:IsInMeleeRange(3 + 2)) or ((4157 - (786 + 386)) >= (15728 - 10872))) then
+		if ((v101.FerociousBite:IsReady() and (((v14:ComboPoints() > (2 + 1)) and (v16:TimeToDie() < (1182 - (786 + 386)))) or ((v14:ComboPoints() == (16 - 11)) and (v14:Energy() >= (1404 - (1055 + 324))) and (not v101.Rip:IsAvailable() or (v16:DebuffRemains(v101.Rip) > (1345 - (1093 + 247))))))) or ((4422 + 554) < (141 + 1191))) then
+			if (((18373 - 13745) == (15706 - 11078)) and v25(v101.FerociousBite, not v16:IsInMeleeRange(14 - 9))) then
 				return "ferocious_bite cat 32";
 			end
 		end
-		if (((5655 - (1055 + 324)) >= (2535 - (1093 + 247))) and v100.Rip:IsAvailable() and v100.Rip:IsReady() and (v106 < (10 + 1)) and v125(v15)) then
-			if (((340 + 2892) <= (18620 - 13930)) and v24(v100.Rip, not v15:IsInMeleeRange(16 - 11))) then
+		if ((v101.Rip:IsAvailable() and v101.Rip:IsReady() and (v107 < (27 - 16)) and v126(v16)) or ((20 + 34) == (1521 - 1126))) then
+			if (((282 - 200) == (62 + 20)) and v25(v101.Rip, not v16:IsInMeleeRange(12 - 7))) then
 				return "rip cat 34";
 			end
 		end
-		if ((v100.Thrash:IsReady() and (v106 >= (5 - 3)) and v15:DebuffRefreshable(v100.ThrashDebuff)) or ((2251 - 1355) >= (1120 + 2026))) then
-			if (((11792 - 8731) >= (10195 - 7237)) and v24(v100.Thrash, not v15:IsInMeleeRange(7 + 1))) then
+		if ((v101.Thrash:IsReady() and (v107 >= (690 - (364 + 324))) and v16:DebuffRefreshable(v101.ThrashDebuff)) or ((1592 - 1011) < (676 - 394))) then
+			if (v25(v101.Thrash, not v16:IsInMeleeRange(3 + 5)) or ((19285 - 14676) < (3995 - 1500))) then
 				return "thrash cat";
 			end
 		end
-		if (((8150 - 4963) >= (1332 - (364 + 324))) and v100.Rake:IsReady() and v126(v15)) then
-			if (((1765 - 1121) <= (1689 - 985)) and v24(v100.Rake, not v15:IsInMeleeRange(2 + 3))) then
+		if (((3498 - 2346) == (2420 - (1249 + 19))) and v101.Rake:IsReady() and v127(v16)) then
+			if (((1712 + 184) <= (13319 - 9897)) and v25(v101.Rake, not v16:IsInMeleeRange(1091 - (686 + 400)))) then
 				return "rake cat 36";
 			end
 		end
-		if (((4008 - 3050) > (1515 - 568)) and v100.Rake:IsReady() and ((v13:ComboPoints() < (15 - 10)) or (v13:Energy() > (1358 - (1249 + 19)))) and (v15:PMultiplier(v100.Rake) <= v13:PMultiplier(v100.Rake)) and v127(v15)) then
-			if (((4055 + 437) >= (10330 - 7676)) and v24(v100.Rake, not v15:IsInMeleeRange(1091 - (686 + 400)))) then
+		if ((v101.Rake:IsReady() and ((v14:ComboPoints() < (4 + 1)) or (v14:Energy() > (319 - (73 + 156)))) and (v16:PMultiplier(v101.Rake) <= v14:PMultiplier(v101.Rake)) and v128(v16)) or ((5 + 985) > (2431 - (721 + 90)))) then
+			if (v25(v101.Rake, not v16:IsInMeleeRange(1 + 4)) or ((2847 - 1970) > (5165 - (224 + 246)))) then
 				return "rake cat 40";
 			end
 		end
-		if (((2701 + 741) >= (1732 - (73 + 156))) and v100.Swipe:IsReady() and (v106 >= (1 + 1))) then
-			if (v24(v100.Swipe, not v15:IsInMeleeRange(819 - (721 + 90))) or ((36 + 3134) <= (4753 - 3289))) then
+		if (((4359 - 1668) >= (3407 - 1556)) and v101.Swipe:IsReady() and (v107 >= (1 + 1))) then
+			if (v25(v101.Swipe, not v16:IsInMeleeRange(1 + 7)) or ((2193 + 792) >= (9654 - 4798))) then
 				return "swipe cat 38";
 			end
 		end
-		if ((v100.Shred:IsReady() and ((v13:ComboPoints() < (475 - (224 + 246))) or (v13:Energy() > (145 - 55)))) or ((8832 - 4035) == (796 + 3592))) then
-			if (((14 + 537) <= (501 + 180)) and v24(v100.Shred, not v15:IsInMeleeRange(9 - 4))) then
+		if (((14229 - 9953) >= (1708 - (203 + 310))) and v101.Shred:IsReady() and ((v14:ComboPoints() < (1998 - (1238 + 755))) or (v14:Energy() > (7 + 83)))) then
+			if (((4766 - (709 + 825)) <= (8642 - 3952)) and v25(v101.Shred, not v16:IsInMeleeRange(6 - 1))) then
 				return "shred cat 42";
 			end
 		end
 	end
-	local function v133()
-		if (((10905 - 7628) > (920 - (203 + 310))) and v100.HeartOfTheWild:IsCastable() and v31 and ((v100.ConvokeTheSpirits:CooldownRemains() < (2023 - (1238 + 755))) or (v100.ConvokeTheSpirits:CooldownRemains() > (7 + 83)) or not v100.ConvokeTheSpirits:IsAvailable()) and v13:BuffDown(v100.HeartOfTheWild)) then
-			if (((6229 - (709 + 825)) >= (2607 - 1192)) and v24(v100.HeartOfTheWild)) then
+	local function v134()
+		if ((v101.HeartOfTheWild:IsCastable() and v32 and ((v101.ConvokeTheSpirits:CooldownRemains() < (894 - (196 + 668))) or (v101.ConvokeTheSpirits:CooldownRemains() > (355 - 265)) or not v101.ConvokeTheSpirits:IsAvailable()) and v14:BuffDown(v101.HeartOfTheWild)) or ((1855 - 959) >= (3979 - (171 + 662)))) then
+			if (((3154 - (4 + 89)) >= (10367 - 7409)) and v25(v101.HeartOfTheWild)) then
 				return "heart_of_the_wild owl 2";
 			end
 		end
-		if ((v100.MoonkinForm:IsReady() and (v13:BuffDown(v100.MoonkinForm)) and v35) or ((4678 - 1466) <= (1808 - (196 + 668)))) then
-			if (v24(v100.MoonkinForm) or ((12223 - 9127) <= (3724 - 1926))) then
+		if (((1161 + 2026) >= (2828 - 2184)) and v101.MoonkinForm:IsReady() and (v14:BuffDown(v101.MoonkinForm)) and v36) then
+			if (((253 + 391) <= (2190 - (35 + 1451))) and v25(v101.MoonkinForm)) then
 				return "moonkin_form owl 4";
 			end
 		end
-		if (((4370 - (171 + 662)) == (3630 - (4 + 89))) and v100.Starsurge:IsReady() and ((v106 < (20 - 14)) or (not v111 and (v106 < (3 + 5)))) and v35) then
-			if (((16852 - 13015) >= (616 + 954)) and v24(v100.Starsurge, not v15:IsSpellInRange(v100.Starsurge))) then
+		if (((2411 - (28 + 1425)) > (2940 - (941 + 1052))) and v101.Starsurge:IsReady() and ((v107 < (6 + 0)) or (not v112 and (v107 < (1522 - (822 + 692))))) and v36) then
+			if (((6412 - 1920) >= (1251 + 1403)) and v25(v101.Starsurge, not v16:IsSpellInRange(v101.Starsurge))) then
 				return "starsurge owl 8";
 			end
 		end
-		if ((v100.Moonfire:IsReady() and ((v106 < (1491 - (35 + 1451))) or (not v111 and (v106 < (1460 - (28 + 1425)))))) or ((4943 - (941 + 1052)) == (3656 + 156))) then
-			if (((6237 - (822 + 692)) >= (3308 - 990)) and v99.CastCycle(v100.Moonfire, v105, v124, not v15:IsSpellInRange(v100.Moonfire), nil, nil, v103.MoonfireMouseover)) then
+		if (((3739 - (45 + 252)) >= (1488 + 15)) and v101.Moonfire:IsReady() and ((v107 < (2 + 3)) or (not v112 and (v107 < (16 - 9))))) then
+			if (v100.CastCycle(v101.Moonfire, v106, v125, not v16:IsSpellInRange(v101.Moonfire), nil, nil, v104.MoonfireMouseover) or ((3603 - (114 + 319)) <= (2101 - 637))) then
 				return "moonfire owl 10";
 			end
 		end
-		if (v100.Sunfire:IsReady() or ((955 + 1072) > (3149 - (45 + 252)))) then
-			if (v99.CastCycle(v100.Sunfire, v105, v122, not v15:IsSpellInRange(v100.Sunfire), nil, nil, v103.SunfireMouseover) or ((1124 + 12) > (1486 + 2831))) then
+		if (v101.Sunfire:IsReady() or ((6146 - 1349) == (2798 + 1590))) then
+			if (((820 - 269) <= (1426 - 745)) and v100.CastCycle(v101.Sunfire, v106, v123, not v16:IsSpellInRange(v101.Sunfire), nil, nil, v104.SunfireMouseover)) then
 				return "sunfire owl 12";
 			end
 		end
-		if (((11555 - 6807) == (5181 - (114 + 319))) and v52 and v31 and v100.ConvokeTheSpirits:IsCastable()) then
-			if (((5363 - 1627) <= (6073 - 1333)) and v13:BuffUp(v100.MoonkinForm)) then
-				if (v24(v100.ConvokeTheSpirits, not v15:IsInRange(20 + 10)) or ((5050 - 1660) <= (6411 - 3351))) then
+		if (((5240 - (556 + 1407)) > (1613 - (741 + 465))) and v53 and v32 and v101.ConvokeTheSpirits:IsCastable()) then
+			if (((5160 - (170 + 295)) >= (746 + 669)) and v14:BuffUp(v101.MoonkinForm)) then
+				if (v25(v101.ConvokeTheSpirits, not v16:IsInRange(28 + 2)) or ((7907 - 4695) <= (783 + 161))) then
 					return "convoke_the_spirits moonkin 18";
 				end
 			end
 		end
-		if ((v100.Wrath:IsReady() and (v13:BuffDown(v100.CatForm) or not v15:IsInMeleeRange(1971 - (556 + 1407))) and ((v112 and (v106 == (1207 - (741 + 465)))) or v113 or (v115 and (v106 > (466 - (170 + 295)))))) or ((527 + 472) > (2474 + 219))) then
-			if (((1139 - 676) < (499 + 102)) and v24(v100.Wrath, not v15:IsSpellInRange(v100.Wrath), true)) then
+		if ((v101.Wrath:IsReady() and (v14:BuffDown(v101.CatForm) or not v16:IsInMeleeRange(6 + 2)) and ((v113 and (v107 == (1 + 0))) or v114 or (v116 and (v107 > (1231 - (957 + 273)))))) or ((829 + 2267) <= (720 + 1078))) then
+			if (((13477 - 9940) == (9320 - 5783)) and v25(v101.Wrath, not v16:IsSpellInRange(v101.Wrath), true)) then
 				return "wrath owl 14";
 			end
 		end
-		if (v100.Starfire:IsReady() or ((1400 + 783) < (390 + 297))) then
-			if (((5779 - (957 + 273)) == (1217 + 3332)) and v24(v100.Starfire, not v15:IsSpellInRange(v100.Starfire), true)) then
+		if (((11719 - 7882) >= (7774 - 6204)) and v101.Starfire:IsReady()) then
+			if (v25(v101.Starfire, not v16:IsSpellInRange(v101.Starfire), true) or ((4730 - (389 + 1391)) == (2392 + 1420))) then
 				return "starfire owl 16";
 			end
 		end
 	end
-	local function v134()
-		local v156 = v99.InterruptWithStun(v100.IncapacitatingRoar, 4 + 4);
-		if (((17802 - 13130) == (12311 - 7639)) and v156) then
-			return v156;
-		end
-		if ((v13:BuffUp(v100.CatForm) and (v13:ComboPoints() > (0 - 0))) or ((18162 - 14494) < (2175 - (389 + 1391)))) then
-			local v171 = 0 + 0;
-			while true do
-				if ((v171 == (0 + 0)) or ((9484 - 5318) == (1406 - (783 + 168)))) then
-					v156 = v99.InterruptWithStun(v100.Maim, 26 - 18);
-					if (v156 or ((4377 + 72) == (2974 - (309 + 2)))) then
-						return v156;
-					end
-					break;
-				end
-			end
-		end
-		v156 = v99.InterruptWithStun(v100.MightyBash, 24 - 16);
-		if (v156 or ((5489 - (1090 + 122)) < (970 + 2019))) then
-			return v156;
-		end
-		v121();
-		local v157 = 0 - 0;
-		if (v100.Rip:IsAvailable() or ((596 + 274) >= (5267 - (628 + 490)))) then
-			v157 = v157 + 1 + 0;
-		end
-		if (((5476 - 3264) < (14546 - 11363)) and v100.Rake:IsAvailable()) then
-			v157 = v157 + (775 - (431 + 343));
-		end
-		if (((9382 - 4736) > (8655 - 5663)) and v100.Thrash:IsAvailable()) then
-			v157 = v157 + 1 + 0;
-		end
-		if (((184 + 1250) < (4801 - (556 + 1139))) and (v157 >= (17 - (6 + 9))) and v15:IsInMeleeRange(2 + 6)) then
-			local v172 = 0 + 0;
-			local v173;
-			while true do
-				if (((955 - (28 + 141)) < (1171 + 1852)) and (v172 == (0 - 0))) then
-					v173 = v132();
-					if (v173 or ((1730 + 712) < (1391 - (486 + 831)))) then
-						return v173;
-					end
-					break;
-				end
-			end
-		end
-		if (((11801 - 7266) == (15966 - 11431)) and v100.AdaptiveSwarm:IsCastable()) then
-			if (v24(v100.AdaptiveSwarm, not v15:IsSpellInRange(v100.AdaptiveSwarm)) or ((569 + 2440) <= (6655 - 4550))) then
-				return "adaptive_swarm main";
-			end
-		end
-		if (((3093 - (668 + 595)) < (3302 + 367)) and v100.MoonkinForm:IsAvailable()) then
-			local v174 = v133();
-			if (v174 or ((289 + 1141) >= (9850 - 6238))) then
-				return v174;
-			end
-		end
-		if (((2973 - (23 + 267)) >= (4404 - (1129 + 815))) and v100.Sunfire:IsReady() and (v15:DebuffRefreshable(v100.SunfireDebuff))) then
-			if (v24(v100.Sunfire, not v15:IsSpellInRange(v100.Sunfire)) or ((2191 - (371 + 16)) >= (5025 - (1326 + 424)))) then
-				return "sunfire main 24";
-			end
-		end
-		if ((v100.Moonfire:IsReady() and (v15:DebuffRefreshable(v100.MoonfireDebuff))) or ((2683 - 1266) > (13261 - 9632))) then
-			if (((4913 - (88 + 30)) > (1173 - (720 + 51))) and v24(v100.Moonfire, not v15:IsSpellInRange(v100.Moonfire))) then
-				return "moonfire main 26";
-			end
-		end
-		if (((10706 - 5893) > (5341 - (421 + 1355))) and v100.Starsurge:IsReady() and (v13:BuffDown(v100.CatForm))) then
-			if (((6453 - 2541) == (1922 + 1990)) and v24(v100.Starsurge, not v15:IsSpellInRange(v100.Starsurge))) then
-				return "starsurge main 28";
-			end
-		end
-		if (((3904 - (286 + 797)) <= (17634 - 12810)) and v100.Starfire:IsReady() and (v106 > (2 - 0))) then
-			if (((2177 - (397 + 42)) <= (686 + 1509)) and v24(v100.Starfire, not v15:IsSpellInRange(v100.Starfire), true)) then
-				return "starfire owl 16";
-			end
-		end
-		if (((841 - (24 + 776)) <= (4649 - 1631)) and v100.Wrath:IsReady() and (v13:BuffDown(v100.CatForm) or not v15:IsInMeleeRange(793 - (222 + 563)))) then
-			if (((4726 - 2581) <= (2955 + 1149)) and v24(v100.Wrath, not v15:IsSpellInRange(v100.Wrath), true)) then
-				return "wrath main 30";
-			end
-		end
-		if (((2879 - (23 + 167)) < (6643 - (690 + 1108))) and v100.Moonfire:IsReady() and (v13:BuffDown(v100.CatForm) or not v15:IsInMeleeRange(3 + 5))) then
-			if (v24(v100.Moonfire, not v15:IsSpellInRange(v100.Moonfire)) or ((1916 + 406) > (3470 - (40 + 808)))) then
-				return "moonfire main 32";
-			end
-		end
-		if (true or ((747 + 3787) == (7961 - 5879))) then
-			if (v24(v100.Pool) or ((1502 + 69) > (988 + 879))) then
-				return "Wait/Pool Resources";
-			end
-		end
-	end
-	local v135 = 0 + 0;
-	local function v136()
-		if ((v16 and (v99.UnitHasDispellableDebuffByPlayer(v16) or v99.DispellableFriendlyUnit(611 - (47 + 524))) and v100.NaturesCure:IsReady()) or ((1723 + 931) >= (8189 - 5193))) then
-			local v175 = 0 - 0;
-			while true do
-				if (((9072 - 5094) > (3830 - (1165 + 561))) and (v175 == (0 + 0))) then
-					if (((9276 - 6281) > (588 + 953)) and (v135 == (479 - (341 + 138)))) then
-						v135 = GetTime();
-					end
-					if (((878 + 2371) > (1966 - 1013)) and v99.Wait(826 - (89 + 237), v135)) then
-						if (v24(v103.NaturesCureFocus) or ((10529 - 7256) > (9627 - 5054))) then
-							return "natures_cure dispel 2";
-						end
-						v135 = 881 - (581 + 300);
-					end
-					break;
-				end
-			end
-		end
-	end
-	local function v137()
-		local v158 = 1220 - (855 + 365);
+	local function v135()
+		local v158 = 0 + 0;
+		local v159;
+		local v160;
 		while true do
-			if ((v158 == (0 - 0)) or ((1029 + 2122) < (2519 - (1030 + 205)))) then
-				if (((v13:HealthPercentage() <= v95) and v96 and v100.Barkskin:IsReady()) or ((1737 + 113) == (1423 + 106))) then
-					if (((1107 - (156 + 130)) < (4823 - 2700)) and v24(v100.Barkskin, nil, nil, true)) then
+			if (((10752 - 6029) >= (3269 - (783 + 168))) and ((6 - 4) == v158)) then
+				if (v101.Rip:IsAvailable() or ((1994 + 33) > (3163 - (309 + 2)))) then
+					v160 = v160 + (2 - 1);
+				end
+				if (v101.Rake:IsAvailable() or ((2348 - (1090 + 122)) > (1400 + 2917))) then
+					v160 = v160 + (3 - 2);
+				end
+				if (((3250 + 1498) == (5866 - (628 + 490))) and v101.Thrash:IsAvailable()) then
+					v160 = v160 + 1 + 0;
+				end
+				if (((9249 - 5513) <= (21661 - 16921)) and (v160 >= (776 - (431 + 343))) and v16:IsInMeleeRange(16 - 8)) then
+					local v214 = 0 - 0;
+					local v215;
+					while true do
+						if (((0 + 0) == v214) or ((434 + 2956) <= (4755 - (556 + 1139)))) then
+							v215 = v133();
+							if (v215 or ((1014 - (6 + 9)) > (494 + 2199))) then
+								return v215;
+							end
+							break;
+						end
+					end
+				end
+				v158 = 2 + 1;
+			end
+			if (((632 - (28 + 141)) < (233 + 368)) and (v158 == (6 - 1))) then
+				if (true or ((1547 + 636) < (2004 - (486 + 831)))) then
+					if (((11837 - 7288) == (16015 - 11466)) and v25(v101.Pool)) then
+						return "Wait/Pool Resources";
+					end
+				end
+				break;
+			end
+			if (((883 + 3789) == (14772 - 10100)) and (v158 == (1264 - (668 + 595)))) then
+				v159 = v100.InterruptWithStun(v101.MightyBash, 8 + 0);
+				if (v159 or ((740 + 2928) < (1077 - 682))) then
+					return v159;
+				end
+				v122();
+				v160 = 290 - (23 + 267);
+				v158 = 1946 - (1129 + 815);
+			end
+			if ((v158 == (391 - (371 + 16))) or ((5916 - (1326 + 424)) == (861 - 406))) then
+				if ((v101.Starsurge:IsReady() and (v14:BuffDown(v101.CatForm))) or ((16257 - 11808) == (2781 - (88 + 30)))) then
+					if (v25(v101.Starsurge, not v16:IsSpellInRange(v101.Starsurge)) or ((5048 - (720 + 51)) < (6648 - 3659))) then
+						return "starsurge main 28";
+					end
+				end
+				if ((v101.Starfire:IsReady() and (v107 > (1778 - (421 + 1355)))) or ((1435 - 565) >= (2039 + 2110))) then
+					if (((3295 - (286 + 797)) < (11635 - 8452)) and v25(v101.Starfire, not v16:IsSpellInRange(v101.Starfire), true)) then
+						return "starfire owl 16";
+					end
+				end
+				if (((7694 - 3048) > (3431 - (397 + 42))) and v101.Wrath:IsReady() and (v14:BuffDown(v101.CatForm) or not v16:IsInMeleeRange(3 + 5))) then
+					if (((2234 - (24 + 776)) < (4784 - 1678)) and v25(v101.Wrath, not v16:IsSpellInRange(v101.Wrath), true)) then
+						return "wrath main 30";
+					end
+				end
+				if (((1571 - (222 + 563)) < (6660 - 3637)) and v101.Moonfire:IsReady() and (v14:BuffDown(v101.CatForm) or not v16:IsInMeleeRange(6 + 2))) then
+					if (v25(v101.Moonfire, not v16:IsSpellInRange(v101.Moonfire)) or ((2632 - (23 + 167)) < (1872 - (690 + 1108)))) then
+						return "moonfire main 32";
+					end
+				end
+				v158 = 2 + 3;
+			end
+			if (((3741 + 794) == (5383 - (40 + 808))) and ((0 + 0) == v158)) then
+				v159 = v100.InterruptWithStun(v101.IncapacitatingRoar, 30 - 22);
+				if (v159 or ((2876 + 133) <= (1114 + 991))) then
+					return v159;
+				end
+				if (((1004 + 826) < (4240 - (47 + 524))) and v14:BuffUp(v101.CatForm) and (v14:ComboPoints() > (0 + 0))) then
+					v159 = v100.InterruptWithStun(v101.Maim, 21 - 13);
+					if (v159 or ((2138 - 708) >= (8237 - 4625))) then
+						return v159;
+					end
+				end
+				if (((4409 - (1165 + 561)) >= (74 + 2386)) and (v14:BuffUp(v101.CatForm) or v14:BuffUp(v101.BearForm))) then
+					local v216 = 0 - 0;
+					while true do
+						if ((v216 == (0 + 0)) or ((2283 - (341 + 138)) >= (885 + 2390))) then
+							v159 = v100.InterruptWithStun(v101.SkullBash, 20 - 10);
+							if (v159 or ((1743 - (89 + 237)) > (11674 - 8045))) then
+								return v159;
+							end
+							break;
+						end
+					end
+				end
+				v158 = 1 - 0;
+			end
+			if (((5676 - (581 + 300)) > (1622 - (855 + 365))) and (v158 == (6 - 3))) then
+				if (((1572 + 3241) > (4800 - (1030 + 205))) and v101.AdaptiveSwarm:IsCastable()) then
+					if (((3673 + 239) == (3640 + 272)) and v25(v101.AdaptiveSwarm, not v16:IsSpellInRange(v101.AdaptiveSwarm))) then
+						return "adaptive_swarm main";
+					end
+				end
+				if (((3107 - (156 + 130)) <= (10960 - 6136)) and v101.MoonkinForm:IsAvailable()) then
+					local v217 = 0 - 0;
+					local v218;
+					while true do
+						if (((3559 - 1821) <= (579 + 1616)) and ((0 + 0) == v217)) then
+							v218 = v134();
+							if (((110 - (10 + 59)) <= (854 + 2164)) and v218) then
+								return v218;
+							end
+							break;
+						end
+					end
+				end
+				if (((10563 - 8418) <= (5267 - (671 + 492))) and v101.Sunfire:IsReady() and (v16:DebuffRefreshable(v101.SunfireDebuff))) then
+					if (((2141 + 548) < (6060 - (369 + 846))) and v25(v101.Sunfire, not v16:IsSpellInRange(v101.Sunfire))) then
+						return "sunfire main 24";
+					end
+				end
+				if ((v101.Moonfire:IsReady() and (v16:DebuffRefreshable(v101.MoonfireDebuff))) or ((615 + 1707) > (2238 + 384))) then
+					if (v25(v101.Moonfire, not v16:IsSpellInRange(v101.Moonfire)) or ((6479 - (1036 + 909)) == (1656 + 426))) then
+						return "moonfire main 26";
+					end
+				end
+				v158 = 6 - 2;
+			end
+		end
+	end
+	local v136 = 203 - (11 + 192);
+	local function v137()
+		if ((v101.NaturesCure:IsReady() and (v100.UnitHasDispellableDebuffByPlayer(v17) or v100.DispellableFriendlyUnit(11 + 9) or v100.UnitHasCurseDebuff(v17) or v100.UnitHasPoisonDebuff(v17))) or ((1746 - (135 + 40)) > (4523 - 2656))) then
+			local v174 = 0 + 0;
+			while true do
+				if ((v174 == (0 - 0)) or ((3978 - 1324) >= (3172 - (50 + 126)))) then
+					if (((11076 - 7098) > (466 + 1638)) and (v136 == (1413 - (1233 + 180)))) then
+						v136 = GetTime();
+					end
+					if (((3964 - (522 + 447)) > (2962 - (107 + 1314))) and v100.Wait(233 + 267, v136)) then
+						local v236 = 0 - 0;
+						while true do
+							if (((1380 + 1869) > (1892 - 939)) and (v236 == (0 - 0))) then
+								if (v25(v104.NaturesCureFocus) or ((5183 - (716 + 1194)) > (79 + 4494))) then
+									return "natures_cure dispel 2";
+								end
+								v136 = 0 + 0;
+								break;
+							end
+						end
+					end
+					break;
+				end
+			end
+		end
+	end
+	local function v138()
+		local v161 = 503 - (74 + 429);
+		while true do
+			if ((v161 == (0 - 0)) or ((1562 + 1589) < (2938 - 1654))) then
+				if (((v14:HealthPercentage() <= v96) and v97 and v101.Barkskin:IsReady()) or ((1309 + 541) == (4713 - 3184))) then
+					if (((2029 - 1208) < (2556 - (279 + 154))) and v25(v101.Barkskin, nil, nil, true)) then
 						return "barkskin defensive 2";
 					end
 				end
-				if (((1519 - 617) < (4761 - 2436)) and (v13:HealthPercentage() <= v97) and v98 and v100.Renewal:IsReady()) then
-					if (((227 + 631) <= (1728 + 1234)) and v24(v100.Renewal, nil, nil, true)) then
+				if (((1680 - (454 + 324)) < (1830 + 495)) and (v14:HealthPercentage() <= v98) and v99 and v101.Renewal:IsReady()) then
+					if (((875 - (12 + 5)) <= (1597 + 1365)) and v25(v101.Renewal, nil, nil, true)) then
 						return "renewal defensive 2";
 					end
 				end
-				v158 = 70 - (10 + 59);
+				v161 = 2 - 1;
 			end
-			if ((v158 == (1 + 0)) or ((19433 - 15487) < (2451 - (671 + 492)))) then
-				if ((v101.Healthstone:IsReady() and v45 and (v13:HealthPercentage() <= v46)) or ((2581 + 661) == (1782 - (369 + 846)))) then
-					if (v24(v103.Healthstone, nil, nil, true) or ((225 + 622) >= (1078 + 185))) then
+			if ((v161 == (1 + 0)) or ((5039 - (277 + 816)) < (5503 - 4215))) then
+				if ((v102.Healthstone:IsReady() and v46 and (v14:HealthPercentage() <= v47)) or ((4425 - (1058 + 125)) == (107 + 460))) then
+					if (v25(v104.Healthstone, nil, nil, true) or ((1822 - (815 + 160)) >= (5418 - 4155))) then
 						return "healthstone defensive 3";
 					end
 				end
-				if ((v39 and (v13:HealthPercentage() <= v41)) or ((4198 - (1036 + 909)) == (1472 + 379))) then
-					if ((v40 == "Refreshing Healing Potion") or ((3503 - 1416) > (2575 - (11 + 192)))) then
-						if (v101.RefreshingHealingPotion:IsReady() or ((2247 + 2198) < (4324 - (135 + 40)))) then
-							if (v24(v103.RefreshingHealingPotion, nil, nil, true) or ((4404 - 2586) == (52 + 33))) then
+				if ((v40 and (v14:HealthPercentage() <= v42)) or ((5348 - 3095) == (442 + 1409))) then
+					if ((v41 == "Refreshing Healing Potion") or ((6100 - 4013) > (4270 - (41 + 1857)))) then
+						if (v102.RefreshingHealingPotion:IsReady() or ((6338 - (1222 + 671)) < (10723 - 6574))) then
+							if (v25(v104.RefreshingHealingPotion, nil, nil, true) or ((2612 - 794) == (1267 - (229 + 953)))) then
 								return "refreshing healing potion defensive 4";
 							end
 						end
@@ -499,686 +553,666 @@ v0["Epix_Druid_RestoDruid.lua"] = function(...)
 			end
 		end
 	end
-	local function v138()
-		local v159 = 0 - 0;
+	local function v139()
+		local v162 = 1774 - (1111 + 663);
 		while true do
-			if (((944 - 314) < (2303 - (50 + 126))) and (v159 == (2 - 1))) then
-				if ((v13:BuffUp(v100.SoulOfTheForestBuff) and v100.Wildgrowth:IsReady()) or ((429 + 1509) == (3927 - (1233 + 180)))) then
-					if (((5224 - (522 + 447)) >= (1476 - (107 + 1314))) and v24(v103.WildgrowthFocus, nil, true)) then
-						return "wildgrowth ramp";
-					end
-				end
-				if (((1392 + 1607) > (3522 - 2366)) and v100.Innervate:IsReady() and v13:BuffDown(v100.Innervate)) then
-					if (((999 + 1351) > (2293 - 1138)) and v24(v103.InnervatePlayer, nil, nil, true)) then
-						return "innervate ramp";
-					end
-				end
-				v159 = 7 - 5;
-			end
-			if (((5939 - (716 + 1194)) <= (83 + 4770)) and (v159 == (1 + 1))) then
-				if ((v13:BuffUp(v100.Innervate) and (v129() > (503 - (74 + 429))) and v17 and v17:Exists() and v17:BuffRefreshable(v100.Rejuvenation)) or ((995 - 479) > (1702 + 1732))) then
-					if (((9261 - 5215) >= (2146 + 887)) and v24(v103.RejuvenationMouseover)) then
+			if (((2209 - (874 + 705)) < (298 + 1829)) and (v162 == (2 + 0))) then
+				if ((v14:BuffUp(v101.Innervate) and (v130() > (0 - 0)) and v18 and v18:Exists() and v18:BuffRefreshable(v101.Rejuvenation)) or ((55 + 1883) == (3193 - (642 + 37)))) then
+					if (((971 + 3284) >= (9 + 46)) and v25(v104.RejuvenationMouseover)) then
 						return "rejuvenation_cycle ramp";
 					end
 				end
 				break;
 			end
-			if ((v159 == (0 - 0)) or ((6722 - 4003) <= (1880 - (279 + 154)))) then
-				if ((v100.Swiftmend:IsReady() and not v130(v16) and v13:BuffDown(v100.SoulOfTheForestBuff)) or ((4912 - (454 + 324)) < (3089 + 837))) then
-					if (v24(v103.RejuvenationFocus) or ((181 - (12 + 5)) >= (1502 + 1283))) then
+			if (((7529 - 4530) > (1610 - (233 + 221))) and (v162 == (0 - 0))) then
+				if (((2069 + 281) > (2696 - (718 + 823))) and v101.Swiftmend:IsReady() and not v131(v17) and v14:BuffDown(v101.SoulOfTheForestBuff)) then
+					if (((2536 + 1493) <= (5658 - (266 + 539))) and v25(v104.RejuvenationFocus)) then
 						return "rejuvenation ramp";
 					end
 				end
-				if ((v100.Swiftmend:IsReady() and v130(v16)) or ((1337 - 812) == (780 + 1329))) then
-					if (((1126 - (277 + 816)) == (140 - 107)) and v24(v103.SwiftmendFocus)) then
+				if ((v101.Swiftmend:IsReady() and v131(v17)) or ((1460 - 944) > (4659 - (636 + 589)))) then
+					if (((9604 - 5558) >= (6255 - 3222)) and v25(v104.SwiftmendFocus)) then
 						return "swiftmend ramp";
 					end
 				end
-				v159 = 1184 - (1058 + 125);
+				v162 = 1 + 0;
 			end
-		end
-	end
-	local function v139()
-		if (((573 + 2481) <= (4990 - (815 + 160))) and v36) then
-			if (((8027 - 6156) < (8028 - 4646)) and v38) then
-				local v214 = v131();
-				if (((309 + 984) <= (6331 - 4165)) and v214) then
-					return v214;
-				end
-			end
-			if ((v53 and v31 and v13:AffectingCombat() and (v128() > (1901 - (41 + 1857))) and v100.NaturesVigil:IsReady()) or ((4472 - (1222 + 671)) < (317 - 194))) then
-				if (v24(v100.NaturesVigil, nil, nil, true) or ((1215 - 369) >= (3550 - (229 + 953)))) then
-					return "natures_vigil healing";
-				end
-			end
-			if ((v100.Swiftmend:IsReady() and v81 and v13:BuffDown(v100.SoulOfTheForestBuff) and v130(v16) and (v16:HealthPercentage() <= v82)) or ((5786 - (1111 + 663)) <= (4937 - (874 + 705)))) then
-				if (((210 + 1284) <= (2051 + 954)) and v24(v103.SwiftmendFocus)) then
-					return "swiftmend healing";
-				end
-			end
-			if ((v13:BuffUp(v100.SoulOfTheForestBuff) and v100.Wildgrowth:IsReady() and v99.AreUnitsBelowHealthPercentage(v90, v91, v100.Regrowth)) or ((6466 - 3355) == (61 + 2073))) then
-				if (((3034 - (642 + 37)) == (537 + 1818)) and v24(v103.WildgrowthFocus, nil, true)) then
-					return "wildgrowth_sotf healing";
-				end
-			end
-			if ((v56 and v100.GroveGuardians:IsReady() and (v100.GroveGuardians:TimeSinceLastCast() > (1 + 4)) and v99.AreUnitsBelowHealthPercentage(v57, v58, v100.Regrowth)) or ((1475 - 887) <= (886 - (233 + 221)))) then
-				if (((11092 - 6295) >= (3429 + 466)) and v24(v103.GroveGuardiansFocus, nil, nil)) then
-					return "grove_guardians healing";
-				end
-			end
-			if (((5118 - (718 + 823)) == (2251 + 1326)) and v13:AffectingCombat() and v31 and v100.Flourish:IsReady() and v13:BuffDown(v100.Flourish) and (v128() > (809 - (266 + 539))) and v99.AreUnitsBelowHealthPercentage(v65, v66, v100.Regrowth)) then
-				if (((10741 - 6947) > (4918 - (636 + 589))) and v24(v100.Flourish, nil, nil, true)) then
-					return "flourish healing";
-				end
-			end
-			if ((v13:AffectingCombat() and v31 and v100.Tranquility:IsReady() and v99.AreUnitsBelowHealthPercentage(v84, v85, v100.Regrowth)) or ((3026 - 1751) == (8456 - 4356))) then
-				if (v24(v100.Tranquility, nil, true) or ((1261 + 330) >= (1301 + 2279))) then
-					return "tranquility healing";
-				end
-			end
-			if (((1998 - (657 + 358)) <= (4787 - 2979)) and v13:AffectingCombat() and v31 and v100.Tranquility:IsReady() and v13:BuffUp(v100.IncarnationBuff) and v99.AreUnitsBelowHealthPercentage(v87, v88, v100.Regrowth)) then
-				if (v24(v100.Tranquility, nil, true) or ((4898 - 2748) <= (2384 - (1151 + 36)))) then
-					return "tranquility_tree healing";
-				end
-			end
-			if (((3640 + 129) >= (309 + 864)) and v13:AffectingCombat() and v31 and v100.ConvokeTheSpirits:IsReady() and v99.AreUnitsBelowHealthPercentage(v62, v63, v100.Regrowth)) then
-				if (((4434 - 2949) == (3317 - (1552 + 280))) and v24(v100.ConvokeTheSpirits)) then
-					return "convoke_the_spirits healing";
-				end
-			end
-			if ((v100.CenarionWard:IsReady() and v59 and (v16:HealthPercentage() <= v60)) or ((4149 - (64 + 770)) <= (1889 + 893))) then
-				if (v24(v103.CenarionWardFocus) or ((1988 - 1112) >= (527 + 2437))) then
-					return "cenarion_ward healing";
-				end
-			end
-			if ((v13:BuffUp(v100.NaturesSwiftness) and v100.Regrowth:IsCastable()) or ((3475 - (157 + 1086)) > (4997 - 2500))) then
-				if (v24(v103.RegrowthFocus) or ((9241 - 7131) <= (508 - 176))) then
-					return "regrowth_swiftness healing";
-				end
-			end
-			if (((5030 - 1344) > (3991 - (599 + 220))) and v100.NaturesSwiftness:IsReady() and v73 and (v16:HealthPercentage() <= v74)) then
-				if (v24(v100.NaturesSwiftness) or ((8909 - 4435) < (2751 - (1813 + 118)))) then
-					return "natures_swiftness healing";
-				end
-			end
-			if (((3128 + 1151) >= (4099 - (841 + 376))) and (v67 == "Anyone")) then
-				if ((v100.IronBark:IsReady() and (v16:HealthPercentage() <= v68)) or ((2842 - 813) >= (818 + 2703))) then
-					if (v24(v103.IronBarkFocus) or ((5559 - 3522) >= (5501 - (464 + 395)))) then
-						return "iron_bark healing";
+			if ((v162 == (1 + 0)) or ((3734 - (657 + 358)) <= (3830 - 2383))) then
+				if ((v14:BuffUp(v101.SoulOfTheForestBuff) and v101.Wildgrowth:IsReady()) or ((9418 - 5284) < (5113 - (1151 + 36)))) then
+					if (v25(v104.WildgrowthFocus, nil, true) or ((159 + 5) >= (733 + 2052))) then
+						return "wildgrowth ramp";
 					end
 				end
-			elseif (((4414 - 2694) < (2141 + 2317)) and (v67 == "Tank Only")) then
-				if ((v100.IronBark:IsReady() and (v16:HealthPercentage() <= v68) and (v99.UnitGroupRole(v16) == "TANK")) or ((1273 - (467 + 370)) > (6242 - 3221))) then
-					if (((524 + 189) <= (2903 - 2056)) and v24(v103.IronBarkFocus)) then
-						return "iron_bark healing";
-					end
-				end
-			elseif (((337 + 1817) <= (9378 - 5347)) and (v67 == "Tank and Self")) then
-				if (((5135 - (150 + 370)) == (5897 - (74 + 1208))) and v100.IronBark:IsReady() and (v16:HealthPercentage() <= v68) and ((v99.UnitGroupRole(v16) == "TANK") or (v99.UnitGroupRole(v16) == "HEALER"))) then
-					if (v24(v103.IronBarkFocus) or ((9321 - 5531) == (2371 - 1871))) then
-						return "iron_bark healing";
-					end
-				end
-			end
-			if (((64 + 25) < (611 - (14 + 376))) and v100.AdaptiveSwarm:IsCastable() and v13:AffectingCombat()) then
-				if (((3561 - 1507) >= (920 + 501)) and v24(v103.AdaptiveSwarmFocus)) then
-					return "adaptive_swarm healing";
-				end
-			end
-			if (((608 + 84) < (2917 + 141)) and v13:AffectingCombat() and v69 and (v99.UnitGroupRole(v16) == "TANK") and (v99.FriendlyUnitsWithBuffCount(v100.Lifebloom, true, false) < (2 - 1)) and (v16:HealthPercentage() <= (v70 - (v26(v13:BuffUp(v100.CatForm)) * (12 + 3)))) and v100.Lifebloom:IsCastable() and v16:BuffRefreshable(v100.Lifebloom)) then
-				if (v24(v103.LifebloomFocus) or ((3332 - (23 + 55)) == (3922 - 2267))) then
-					return "lifebloom healing";
-				end
-			end
-			if ((v13:AffectingCombat() and v71 and (v99.UnitGroupRole(v16) ~= "TANK") and (v99.FriendlyUnitsWithBuffCount(v100.Lifebloom, false, true) < (1 + 0)) and (v100.Undergrowth:IsAvailable() or v99.IsSoloMode()) and (v16:HealthPercentage() <= (v72 - (v26(v13:BuffUp(v100.CatForm)) * (14 + 1)))) and v100.Lifebloom:IsCastable() and v16:BuffRefreshable(v100.Lifebloom)) or ((2009 - 713) == (1545 + 3365))) then
-				if (((4269 - (652 + 249)) == (9013 - 5645)) and v24(v103.LifebloomFocus)) then
-					return "lifebloom healing";
-				end
-			end
-			if (((4511 - (708 + 1160)) < (10355 - 6540)) and (v54 == "Player")) then
-				if (((3487 - 1574) > (520 - (10 + 17))) and v13:AffectingCombat() and (v100.Efflorescence:TimeSinceLastCast() > (4 + 11))) then
-					if (((6487 - (1400 + 332)) > (6575 - 3147)) and v24(v103.EfflorescencePlayer)) then
-						return "efflorescence healing player";
-					end
-				end
-			elseif (((3289 - (242 + 1666)) <= (1014 + 1355)) and (v54 == "Cursor")) then
-				if ((v13:AffectingCombat() and (v100.Efflorescence:TimeSinceLastCast() > (6 + 9))) or ((4128 + 715) == (5024 - (850 + 90)))) then
-					if (((8177 - 3508) > (1753 - (360 + 1030))) and v24(v103.EfflorescenceCursor)) then
-						return "efflorescence healing cursor";
-					end
-				end
-			elseif ((v54 == "Confirmation") or ((1662 + 215) >= (8856 - 5718))) then
-				if (((6523 - 1781) >= (5287 - (909 + 752))) and v13:AffectingCombat() and (v100.Efflorescence:TimeSinceLastCast() > (1238 - (109 + 1114)))) then
-					if (v24(v100.Efflorescence) or ((8312 - 3772) == (357 + 559))) then
-						return "efflorescence healing confirmation";
-					end
-				end
-			end
-			if ((v100.Wildgrowth:IsReady() and v92 and v99.AreUnitsBelowHealthPercentage(v93, v94, v100.Regrowth) and (not v100.Swiftmend:IsAvailable() or not v100.Swiftmend:IsReady())) or ((1398 - (6 + 236)) > (2738 + 1607))) then
-				if (((1801 + 436) < (10020 - 5771)) and v24(v103.WildgrowthFocus, nil, true)) then
-					return "wildgrowth healing";
-				end
-			end
-			if ((v100.Regrowth:IsCastable() and v75 and (v16:HealthPercentage() <= v76)) or ((4685 - 2002) < (1156 - (1076 + 57)))) then
-				if (((115 + 582) <= (1515 - (579 + 110))) and v24(v103.RegrowthFocus, nil, true)) then
-					return "regrowth healing";
-				end
-			end
-			if (((88 + 1017) <= (1040 + 136)) and v13:BuffUp(v100.Innervate) and (v129() > (0 + 0)) and v17 and v17:Exists() and v17:BuffRefreshable(v100.Rejuvenation)) then
-				if (((3786 - (174 + 233)) <= (10647 - 6835)) and v24(v103.RejuvenationMouseover)) then
-					return "rejuvenation_cycle healing";
-				end
-			end
-			if ((v100.Rejuvenation:IsCastable() and v79 and v16:BuffRefreshable(v100.Rejuvenation) and (v16:HealthPercentage() <= v80)) or ((1382 - 594) >= (719 + 897))) then
-				if (((3028 - (663 + 511)) <= (3015 + 364)) and v24(v103.RejuvenationFocus)) then
-					return "rejuvenation healing";
-				end
-			end
-			if (((988 + 3561) == (14024 - 9475)) and v100.Regrowth:IsCastable() and v77 and v16:BuffUp(v100.Rejuvenation) and (v16:HealthPercentage() <= v78)) then
-				if (v24(v103.RegrowthFocus, nil, true) or ((1830 + 1192) >= (7119 - 4095))) then
-					return "regrowth healing";
-				end
-			end
-		end
-	end
-	local function v140()
-		local v160 = 0 - 0;
-		local v161;
-		while true do
-			if (((2301 + 2519) > (4277 - 2079)) and (v160 == (1 + 0))) then
-				if (v161 or ((97 + 964) >= (5613 - (478 + 244)))) then
-					return v161;
-				end
-				if (((1881 - (440 + 77)) <= (2034 + 2439)) and v33) then
-					local v216 = 0 - 0;
-					local v217;
-					while true do
-						if (((1556 - (655 + 901)) == v216) or ((667 + 2928) <= (3 + 0))) then
-							v217 = v138();
-							if (v217 or ((3155 + 1517) == (15518 - 11666))) then
-								return v217;
-							end
-							break;
-						end
-					end
-				end
-				v160 = 1447 - (695 + 750);
-			end
-			if (((5323 - 3764) == (2405 - 846)) and (v160 == (11 - 8))) then
-				if ((v99.TargetIsValid() and v34) or ((2103 - (285 + 66)) <= (1836 - 1048))) then
-					local v218 = 1310 - (682 + 628);
-					while true do
-						if ((v218 == (0 + 0)) or ((4206 - (176 + 123)) == (75 + 102))) then
-							v161 = v134();
-							if (((2518 + 952) > (824 - (239 + 30))) and v161) then
-								return v161;
-							end
-							break;
-						end
-					end
-				end
-				break;
-			end
-			if (((0 + 0) == v160) or ((935 + 37) == (1141 - 496))) then
-				if (((9927 - 6745) >= (2430 - (306 + 9))) and (v44 or v43) and v32) then
-					local v219 = v136();
-					if (((13584 - 9691) < (771 + 3658)) and v219) then
-						return v219;
-					end
-				end
-				v161 = v137();
-				v160 = 1 + 0;
-			end
-			if ((v160 == (1 + 1)) or ((8198 - 5331) < (3280 - (1140 + 235)))) then
-				v161 = v139();
-				if (v161 or ((1143 + 653) >= (3715 + 336))) then
-					return v161;
-				end
-				v160 = 1 + 2;
-			end
-		end
-	end
-	local function v141()
-		local v162 = 52 - (33 + 19);
-		while true do
-			if (((585 + 1034) <= (11257 - 7501)) and (v162 == (1 + 1))) then
-				if (((1184 - 580) == (567 + 37)) and v99.TargetIsValid() and v34) then
-					local v220 = 689 - (586 + 103);
-					local v221;
-					while true do
-						if (((0 + 0) == v220) or ((13804 - 9320) == (2388 - (1309 + 179)))) then
-							v221 = v134();
-							if (v221 or ((8049 - 3590) <= (485 + 628))) then
-								return v221;
-							end
-							break;
-						end
-					end
-				end
-				break;
-			end
-			if (((9753 - 6121) > (2567 + 831)) and (v162 == (0 - 0))) then
-				if (((8133 - 4051) <= (5526 - (295 + 314))) and (v44 or v43) and v32) then
-					local v222 = 0 - 0;
-					local v223;
-					while true do
-						if (((6794 - (1300 + 662)) >= (4352 - 2966)) and (v222 == (1755 - (1178 + 577)))) then
-							v223 = v136();
-							if (((72 + 65) == (404 - 267)) and v223) then
-								return v223;
-							end
-							break;
-						end
-					end
-				end
-				if ((v29 and v36) or ((2975 - (851 + 554)) >= (3831 + 501))) then
-					local v224 = v139();
-					if (v224 or ((11270 - 7206) <= (3950 - 2131))) then
-						return v224;
-					end
-				end
-				v162 = 303 - (115 + 187);
-			end
-			if (((1 + 0) == v162) or ((4721 + 265) < (6202 - 4628))) then
-				if (((5587 - (160 + 1001)) > (151 + 21)) and v42 and v100.MarkOfTheWild:IsCastable() and (v13:BuffDown(v100.MarkOfTheWild, true) or v99.GroupBuffMissing(v100.MarkOfTheWild))) then
-					if (((405 + 181) > (931 - 476)) and v24(v103.MarkOfTheWildPlayer)) then
-						return "mark_of_the_wild";
-					end
-				end
-				if (((1184 - (237 + 121)) == (1723 - (525 + 372))) and v99.TargetIsValid()) then
-					if ((v100.Rake:IsReady() and (v13:StealthUp(false, true))) or ((7619 - 3600) > (14591 - 10150))) then
-						if (((2159 - (96 + 46)) < (5038 - (643 + 134))) and v24(v100.Rake, not v15:IsInMeleeRange(4 + 6))) then
-							return "rake";
-						end
+				if ((v101.Innervate:IsReady() and v14:BuffDown(v101.Innervate)) or ((1567 - 1042) == (3941 - (1552 + 280)))) then
+					if (((867 - (64 + 770)) == (23 + 10)) and v25(v104.InnervatePlayer, nil, nil, true)) then
+						return "innervate ramp";
 					end
 				end
 				v162 = 4 - 2;
 			end
 		end
 	end
-	local function v142()
-		local v163 = 0 - 0;
-		while true do
-			if (((4523 + 193) > (157 - 77)) and (v163 == (5 - 2))) then
-				v55 = EpicSettings.Settings['EfflorescenceHP'] or (719 - (316 + 403));
-				v56 = EpicSettings.Settings['UseGroveGuardians'];
-				v57 = EpicSettings.Settings['GroveGuardiansHP'] or (0 + 0);
-				v58 = EpicSettings.Settings['GroveGuardiansGroup'] or (0 - 0);
-				v59 = EpicSettings.Settings['UseCenarionWard'];
-				v60 = EpicSettings.Settings['CenarionWardHP'] or (0 + 0);
-				v163 = 9 - 5;
-			end
-			if ((v163 == (2 + 0)) or ((1131 + 2376) == (11337 - 8065))) then
-				v49 = EpicSettings.Settings['InterruptWithStun'];
-				v50 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-				v51 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
-				v52 = EpicSettings.Settings['UseDamageConvokeTheSpirits'];
-				v53 = EpicSettings.Settings['UseDamageNaturesVigil'];
-				v54 = EpicSettings.Settings['EfflorescenceUsage'] or "";
-				v163 = 5 - 2;
-			end
-			if ((v163 == (1 + 4)) or ((1724 - 848) >= (151 + 2924))) then
-				v67 = EpicSettings.Settings['IronBarkUsage'] or "";
-				v68 = EpicSettings.Settings['IronBarkHP'] or (0 - 0);
-				break;
-			end
-			if (((4369 - (12 + 5)) > (9919 - 7365)) and (v163 == (8 - 4))) then
-				v61 = EpicSettings.Settings['UseConvokeTheSpirits'];
-				v62 = EpicSettings.Settings['ConvokeTheSpiritsHP'] or (0 - 0);
-				v63 = EpicSettings.Settings['ConvokeTheSpiritsGroup'] or (0 - 0);
-				v64 = EpicSettings.Settings['UseFlourish'];
-				v65 = EpicSettings.Settings['FlourishHP'] or (0 + 0);
-				v66 = EpicSettings.Settings['FlourishGroup'] or (1973 - (1656 + 317));
-				v163 = 5 + 0;
-			end
-			if ((v163 == (0 + 0)) or ((11715 - 7309) < (19897 - 15854))) then
-				v37 = EpicSettings.Settings['UseRacials'];
-				v38 = EpicSettings.Settings['UseTrinkets'];
-				v39 = EpicSettings.Settings['UseHealingPotion'];
-				v40 = EpicSettings.Settings['HealingPotionName'] or "";
-				v41 = EpicSettings.Settings['HealingPotionHP'] or (354 - (5 + 349));
-				v42 = EpicSettings.Settings['UseMarkOfTheWild'];
-				v163 = 4 - 3;
-			end
-			if ((v163 == (1272 - (266 + 1005))) or ((1245 + 644) >= (11542 - 8159))) then
-				v43 = EpicSettings.Settings['DispelDebuffs'];
-				v44 = EpicSettings.Settings['DispelBuffs'];
-				v45 = EpicSettings.Settings['UseHealthstone'];
-				v46 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
-				v47 = EpicSettings.Settings['HandleCharredTreant'];
-				v48 = EpicSettings.Settings['HandleCharredBrambles'];
-				v163 = 1698 - (561 + 1135);
-			end
-		end
-	end
-	local function v143()
-		local v164 = 0 - 0;
-		while true do
-			if (((6219 - 4327) <= (3800 - (507 + 559))) and (v164 == (7 - 4))) then
-				v81 = EpicSettings.Settings['UseSwiftmend'];
-				v82 = EpicSettings.Settings['SwiftmendHP'] or (0 - 0);
-				v83 = EpicSettings.Settings['UseTranquility'];
-				v84 = EpicSettings.Settings['TranquilityHP'] or (388 - (212 + 176));
-				v164 = 909 - (250 + 655);
-			end
-			if (((5243 - 3320) < (3875 - 1657)) and ((5 - 1) == v164)) then
-				v85 = EpicSettings.Settings['TranquilityGroup'] or (1956 - (1869 + 87));
-				v86 = EpicSettings.Settings['UseTranquilityTree'];
-				v87 = EpicSettings.Settings['TranquilityTreeHP'] or (0 - 0);
-				v88 = EpicSettings.Settings['TranquilityTreeGroup'] or (1901 - (484 + 1417));
-				v164 = 10 - 5;
-			end
-			if (((3640 - 1467) > (1152 - (48 + 725))) and ((2 - 0) == v164)) then
-				v77 = EpicSettings.Settings['UseRegrowthRefresh'];
-				v78 = EpicSettings.Settings['RegrowthRefreshHP'] or (0 - 0);
-				v79 = EpicSettings.Settings['UseRejuvenation'];
-				v80 = EpicSettings.Settings['RejuvenationHP'] or (0 + 0);
-				v164 = 7 - 4;
-			end
-			if ((v164 == (2 + 5)) or ((756 + 1835) == (4262 - (152 + 701)))) then
-				v97 = EpicSettings.Settings['RenewalHP'] or (1311 - (430 + 881));
-				v98 = EpicSettings.Settings['UseRenewal'];
-				break;
-			end
-			if (((1729 + 2785) > (4219 - (557 + 338))) and (v164 == (0 + 0))) then
-				v69 = EpicSettings.Settings['UseLifebloomTank'];
-				v70 = EpicSettings.Settings['LifebloomTankHP'] or (0 - 0);
-				v71 = EpicSettings.Settings['UseLifebloom'];
-				v72 = EpicSettings.Settings['LifebloomHP'] or (0 - 0);
-				v164 = 2 - 1;
-			end
-			if ((v164 == (10 - 5)) or ((1009 - (499 + 302)) >= (5694 - (39 + 827)))) then
-				v89 = EpicSettings.Settings['UseWildgrowthSotF'];
-				v90 = EpicSettings.Settings['WildgrowthSotFHP'] or (0 - 0);
-				v91 = EpicSettings.Settings['WildgrowthSotFGroup'] or (0 - 0);
-				v92 = EpicSettings.Settings['UseWildgrowth'];
-				v164 = 23 - 17;
-			end
-			if (((8 - 2) == v164) or ((136 + 1447) > (10440 - 6873))) then
-				v93 = EpicSettings.Settings['WildgrowthHP'] or (0 + 0);
-				v94 = EpicSettings.Settings['WildgrowthGroup'] or (0 - 0);
-				v95 = EpicSettings.Settings['BarkskinHP'] or (104 - (103 + 1));
-				v96 = EpicSettings.Settings['UseBarkskin'];
-				v164 = 561 - (475 + 79);
-			end
-			if (((2 - 1) == v164) or ((4201 - 2888) == (103 + 691))) then
-				v73 = EpicSettings.Settings['UseNaturesSwiftness'];
-				v74 = EpicSettings.Settings['NaturesSwiftnessHP'] or (0 + 0);
-				v75 = EpicSettings.Settings['UseRegrowth'];
-				v76 = EpicSettings.Settings['RegrowthHP'] or (1503 - (1395 + 108));
-				v164 = 5 - 3;
-			end
-		end
-	end
-	local function v144()
-		local v165 = 1204 - (7 + 1197);
-		while true do
-			if (((1384 + 1790) > (1013 + 1889)) and (v165 == (323 - (27 + 292)))) then
-				if (((12073 - 7953) <= (5432 - 1172)) and (v99.TargetIsValid() or v13:AffectingCombat())) then
-					local v225 = 0 - 0;
-					while true do
-						if ((v225 == (0 - 0)) or ((1681 - 798) > (4917 - (43 + 96)))) then
-							v107 = v9.BossFightRemains(nil, true);
-							v108 = v107;
-							v225 = 4 - 3;
-						end
-						if (((1 - 0) == v225) or ((3004 + 616) >= (1382 + 3509))) then
-							if (((8415 - 4157) > (360 + 577)) and (v108 == (20822 - 9711))) then
-								v108 = v9.FightRemains(v105, false);
+	local function v140()
+		if (((543 + 2511) <= (5258 - (157 + 1086))) and v37) then
+			local v175 = 0 - 0;
+			while true do
+				if (((8194 - 6323) < (5187 - 1805)) and ((5 - 1) == v175)) then
+					if (((2112 - (599 + 220)) <= (4312 - 2146)) and (v55 == "Player")) then
+						if ((v14:AffectingCombat() and (v101.Efflorescence:TimeSinceLastCast() > (1946 - (1813 + 118)))) or ((1886 + 693) < (1340 - (841 + 376)))) then
+							if (v25(v104.EfflorescencePlayer) or ((1184 - 338) >= (551 + 1817))) then
+								return "efflorescence healing player";
 							end
-							break;
+						end
+					elseif ((v55 == "Cursor") or ((10950 - 6938) <= (4217 - (464 + 395)))) then
+						if (((3834 - 2340) <= (1444 + 1561)) and v14:AffectingCombat() and (v101.Efflorescence:TimeSinceLastCast() > (852 - (467 + 370)))) then
+							if (v25(v104.EfflorescenceCursor) or ((6428 - 3317) == (1567 + 567))) then
+								return "efflorescence healing cursor";
+							end
+						end
+					elseif (((8072 - 5717) == (368 + 1987)) and (v55 == "Confirmation")) then
+						if ((v14:AffectingCombat() and (v101.Efflorescence:TimeSinceLastCast() > (34 - 19))) or ((1108 - (150 + 370)) <= (1714 - (74 + 1208)))) then
+							if (((11798 - 7001) >= (18472 - 14577)) and v25(v101.Efflorescence)) then
+								return "efflorescence healing confirmation";
+							end
 						end
 					end
-				end
-				if (v47 or ((1533 + 3336) < (67 + 839))) then
-					local v226 = 1751 - (1414 + 337);
-					local v227;
-					while true do
-						if (((1943 - (1642 + 298)) == v226) or ((3193 - 1968) > (12163 - 7935))) then
-							v227 = v99.HandleCharredTreant(v100.Wildgrowth, v103.WildgrowthMouseover, 118 - 78, true);
-							if (((1096 + 2232) > (1742 + 496)) and v227) then
-								return v227;
-							end
-							break;
-						end
-						if (((4811 - (357 + 615)) > (987 + 418)) and ((2 - 1) == v226)) then
-							v227 = v99.HandleCharredTreant(v100.Regrowth, v103.RegrowthMouseover, 35 + 5, true);
-							if (v227 or ((2770 - 1477) <= (406 + 101))) then
-								return v227;
-							end
-							v226 = 1 + 1;
-						end
-						if (((0 + 0) == v226) or ((4197 - (384 + 917)) < (1502 - (128 + 569)))) then
-							v227 = v99.HandleCharredTreant(v100.Rejuvenation, v103.RejuvenationMouseover, 1583 - (1407 + 136));
-							if (((4203 - (687 + 1200)) == (4026 - (556 + 1154))) and v227) then
-								return v227;
-							end
-							v226 = 3 - 2;
-						end
-						if (((97 - (9 + 86)) == v226) or ((2991 - (275 + 146)) == (250 + 1283))) then
-							v227 = v99.HandleCharredTreant(v100.Swiftmend, v103.SwiftmendMouseover, 104 - (29 + 35));
-							if (v227 or ((3913 - 3030) == (4360 - 2900))) then
-								return v227;
-							end
-							v226 = 13 - 10;
+					if (((2546 + 1031) == (3967 - (14 + 376))) and v101.Wildgrowth:IsReady() and v93 and v100.AreUnitsBelowHealthPercentage(v94, v95, v101.Regrowth) and (not v101.Swiftmend:IsAvailable() or not v101.Swiftmend:IsReady())) then
+						if (((6580 - 2786) > (2390 + 1303)) and v25(v104.WildgrowthFocus, nil, true)) then
+							return "wildgrowth healing";
 						end
 					end
-				end
-				if (v48 or ((3009 + 1610) <= (2011 - (53 + 959)))) then
-					local v228 = 408 - (312 + 96);
-					local v229;
-					while true do
-						if ((v228 == (1 - 0)) or ((3695 - (147 + 138)) > (5015 - (813 + 86)))) then
-							v229 = v99.HandleCharredBrambles(v100.Regrowth, v103.RegrowthMouseover, 37 + 3, true);
-							if (v229 or ((1672 - 769) >= (3551 - (18 + 474)))) then
-								return v229;
-							end
-							v228 = 1 + 1;
-						end
-						if ((v228 == (6 - 4)) or ((5062 - (860 + 226)) < (3160 - (121 + 182)))) then
-							v229 = v99.HandleCharredBrambles(v100.Swiftmend, v103.SwiftmendMouseover, 5 + 35);
-							if (((6170 - (988 + 252)) > (261 + 2046)) and v229) then
-								return v229;
-							end
-							v228 = 1 + 2;
-						end
-						if ((v228 == (1973 - (49 + 1921))) or ((4936 - (223 + 667)) < (1343 - (51 + 1)))) then
-							v229 = v99.HandleCharredBrambles(v100.Wildgrowth, v103.WildgrowthMouseover, 68 - 28, true);
-							if (v229 or ((9081 - 4840) == (4670 - (146 + 979)))) then
-								return v229;
-							end
-							break;
-						end
-						if ((v228 == (0 + 0)) or ((4653 - (311 + 294)) > (11801 - 7569))) then
-							v229 = v99.HandleCharredBrambles(v100.Rejuvenation, v103.RejuvenationMouseover, 17 + 23);
-							if (v229 or ((3193 - (496 + 947)) >= (4831 - (1233 + 125)))) then
-								return v229;
-							end
-							v228 = 1 + 0;
+					if ((v101.Regrowth:IsCastable() and v76 and (v17:HealthPercentage() <= v77)) or ((1121 + 154) == (3911 + 189))) then
+						if (v25(v104.RegrowthFocus, nil, true) or ((4661 - 3070) >= (2694 + 886))) then
+							return "regrowth healing";
 						end
 					end
-				end
-				if (((2841 + 325) == (602 + 2564)) and v15 and v15:Exists() and v15:IsAPlayer() and v15:IsDeadOrGhost() and not v13:CanAttack(v15) and not v13:AffectingCombat() and v29) then
-					local v230 = 1645 - (963 + 682);
-					local v231;
-					while true do
-						if (((1472 + 291) < (5228 - (504 + 1000))) and (v230 == (0 + 0))) then
-							v231 = v99.DeadFriendlyUnitsCount();
-							if (((52 + 5) <= (257 + 2466)) and v13:AffectingCombat()) then
-								if (v100.Rebirth:IsReady() or ((3052 - 982) == (379 + 64))) then
-									if (v24(v100.Rebirth, nil, true) or ((1574 + 1131) == (1575 - (156 + 26)))) then
-										return "rebirth";
-									end
-								end
-							elseif ((v231 > (1 + 0)) or ((7198 - 2597) < (225 - (149 + 15)))) then
-								if (v24(v100.Revitalize, nil, true) or ((2350 - (890 + 70)) >= (4861 - (39 + 78)))) then
-									return "revitalize";
-								end
-							elseif (v24(v100.Revive, not v15:IsInRange(522 - (14 + 468)), true) or ((4404 - 2401) > (10716 - 6882))) then
-								return "revive";
-							end
-							break;
+					if (((1061 - (23 + 55)) <= (4284 - 2476)) and v14:BuffUp(v101.Innervate) and (v130() > (0 + 0)) and v18 and v18:Exists() and v18:BuffRefreshable(v101.Rejuvenation)) then
+						if (v25(v104.RejuvenationMouseover) or ((1931 + 219) <= (1855 - 658))) then
+							return "rejuvenation_cycle healing";
 						end
 					end
+					v175 = 2 + 3;
 				end
-				v165 = 3 + 2;
-			end
-			if ((v165 == (0 + 0)) or ((34 + 122) > (1768 + 2145))) then
-				v142();
-				v143();
-				v29 = EpicSettings.Toggles['ooc'];
-				v30 = EpicSettings.Toggles['aoe'];
-				v165 = 1 + 0;
-			end
-			if (((373 - 178) == (193 + 2)) and (v165 == (10 - 7))) then
-				if (((79 + 3026) >= (1847 - (12 + 39))) and v13:IsMounted()) then
-					return;
-				end
-				if (((4074 + 305) >= (6596 - 4465)) and v13:IsMoving()) then
-					v104 = GetTime();
-				end
-				if (((13690 - 9846) >= (606 + 1437)) and (v13:BuffUp(v100.TravelForm) or v13:BuffUp(v100.BearForm) or v13:BuffUp(v100.CatForm))) then
-					if (((GetTime() - v104) < (1 + 0)) or ((8195 - 4963) <= (1819 + 912))) then
-						return;
-					end
-				end
-				if (((23704 - 18799) == (6615 - (1596 + 114))) and v30) then
-					v105 = v15:GetEnemiesInSplashRange(20 - 12);
-					v106 = #v105;
-				else
-					local v232 = 713 - (164 + 549);
-					while true do
-						if ((v232 == (1438 - (1059 + 379))) or ((5135 - 999) >= (2287 + 2124))) then
-							v105 = {};
-							v106 = 1 + 0;
-							break;
+				if (((4670 - (652 + 249)) >= (3139 - 1966)) and (v175 == (1873 - (708 + 1160)))) then
+					if (((4030 - 2545) == (2707 - 1222)) and v101.Rejuvenation:IsCastable() and v80 and v17:BuffRefreshable(v101.Rejuvenation) and (v17:HealthPercentage() <= v81)) then
+						if (v25(v104.RejuvenationFocus) or ((3342 - (10 + 17)) <= (625 + 2157))) then
+							return "rejuvenation healing";
 						end
 					end
-				end
-				v165 = 396 - (145 + 247);
-			end
-			if ((v165 == (5 + 0)) or ((1367 + 1591) == (11909 - 7892))) then
-				if (((236 + 992) >= (701 + 112)) and v36 and (v13:AffectingCombat() or v29)) then
-					local v233 = 0 - 0;
-					local v234;
-					while true do
-						if ((v233 == (721 - (254 + 466))) or ((4015 - (544 + 16)) > (12871 - 8821))) then
-							v234 = v139();
-							if (((871 - (294 + 334)) == (496 - (236 + 17))) and v234) then
-								return v234;
-							end
-							break;
-						end
-						if ((v233 == (0 + 0)) or ((211 + 60) > (5920 - 4348))) then
-							v234 = v138();
-							if (((12967 - 10228) < (1696 + 1597)) and v234) then
-								return v234;
-							end
-							v233 = 1 + 0;
+					if ((v101.Regrowth:IsCastable() and v78 and v17:BuffUp(v101.Rejuvenation) and (v17:HealthPercentage() <= v79)) or ((2608 - (1400 + 332)) >= (5684 - 2720))) then
+						if (v25(v104.RegrowthFocus, nil, true) or ((4140 - (242 + 1666)) > (1069 + 1428))) then
+							return "regrowth healing";
 						end
 					end
+					break;
 				end
-				if (not v13:IsChanneling() or ((4736 - (413 + 381)) < (48 + 1086))) then
-					if (v13:AffectingCombat() or ((5727 - 3034) == (12917 - 7944))) then
-						local v237 = 1970 - (582 + 1388);
+				if ((v175 == (0 + 0)) or ((1799 + 311) <= (1272 - (850 + 90)))) then
+					if (((6455 - 2769) > (4562 - (360 + 1030))) and v39) then
+						local v237 = 0 + 0;
 						local v238;
 						while true do
-							if (((3655 - 1509) == (1537 + 609)) and (v237 == (364 - (326 + 38)))) then
-								v238 = v140();
-								if (v238 or ((6638 - 4394) == (4601 - 1377))) then
+							if ((v237 == (0 - 0)) or ((6155 - 1681) < (2481 - (909 + 752)))) then
+								v238 = v132();
+								if (((5502 - (109 + 1114)) >= (5275 - 2393)) and v238) then
 									return v238;
 								end
 								break;
 							end
 						end
-					elseif (v29 or ((5524 - (47 + 573)) <= (676 + 1240))) then
-						local v239 = 0 - 0;
-						local v240;
-						while true do
-							if (((146 - 56) <= (2729 - (1269 + 395))) and (v239 == (492 - (76 + 416)))) then
-								v240 = v141();
-								if (((5245 - (319 + 124)) == (10976 - 6174)) and v240) then
-									return v240;
-								end
-								break;
+					end
+					if ((v54 and v32 and v14:AffectingCombat() and (v129() > (2 + 1)) and v101.NaturesVigil:IsReady()) or ((2271 - (6 + 236)) >= (2219 + 1302))) then
+						if (v25(v101.NaturesVigil, nil, nil, true) or ((1640 + 397) >= (10947 - 6305))) then
+							return "natures_vigil healing";
+						end
+					end
+					if (((3004 - 1284) < (5591 - (1076 + 57))) and v101.Swiftmend:IsReady() and v82 and v14:BuffDown(v101.SoulOfTheForestBuff) and v131(v17) and (v17:HealthPercentage() <= v83)) then
+						if (v25(v104.SwiftmendFocus) or ((72 + 364) > (3710 - (579 + 110)))) then
+							return "swiftmend healing";
+						end
+					end
+					if (((57 + 656) <= (749 + 98)) and v14:BuffUp(v101.SoulOfTheForestBuff) and v101.Wildgrowth:IsReady() and v100.AreUnitsBelowHealthPercentage(v91, v92, v101.Regrowth)) then
+						if (((1144 + 1010) <= (4438 - (174 + 233))) and v25(v104.WildgrowthFocus, nil, true)) then
+							return "wildgrowth_sotf healing";
+						end
+					end
+					v175 = 2 - 1;
+				end
+				if (((8100 - 3485) == (2053 + 2562)) and (v175 == (1177 - (663 + 511)))) then
+					if ((v68 == "Anyone") or ((3382 + 408) == (109 + 391))) then
+						if (((274 - 185) < (134 + 87)) and v101.IronBark:IsReady() and (v17:HealthPercentage() <= v69)) then
+							if (((4835 - 2781) >= (3439 - 2018)) and v25(v104.IronBarkFocus)) then
+								return "iron_bark healing";
 							end
+						end
+					elseif (((331 + 361) < (5951 - 2893)) and (v68 == "Tank Only")) then
+						if ((v101.IronBark:IsReady() and (v17:HealthPercentage() <= v69) and (v100.UnitGroupRole(v17) == "TANK")) or ((2320 + 934) == (152 + 1503))) then
+							if (v25(v104.IronBarkFocus) or ((2018 - (478 + 244)) == (5427 - (440 + 77)))) then
+								return "iron_bark healing";
+							end
+						end
+					elseif (((1532 + 1836) == (12326 - 8958)) and (v68 == "Tank and Self")) then
+						if (((4199 - (655 + 901)) < (708 + 3107)) and v101.IronBark:IsReady() and (v17:HealthPercentage() <= v69) and ((v100.UnitGroupRole(v17) == "TANK") or (v100.UnitGroupRole(v17) == "HEALER"))) then
+							if (((1465 + 448) > (333 + 160)) and v25(v104.IronBarkFocus)) then
+								return "iron_bark healing";
+							end
+						end
+					end
+					if (((19156 - 14401) > (4873 - (695 + 750))) and v101.AdaptiveSwarm:IsCastable() and v14:AffectingCombat()) then
+						if (((4715 - 3334) <= (3655 - 1286)) and v25(v104.AdaptiveSwarmFocus)) then
+							return "adaptive_swarm healing";
+						end
+					end
+					if ((v14:AffectingCombat() and v70 and (v100.UnitGroupRole(v17) == "TANK") and (v100.FriendlyUnitsWithBuffCount(v101.Lifebloom, true, false) < (3 - 2)) and (v17:HealthPercentage() <= (v71 - (v27(v14:BuffUp(v101.CatForm)) * (366 - (285 + 66))))) and v101.Lifebloom:IsCastable() and v17:BuffRefreshable(v101.Lifebloom)) or ((11289 - 6446) == (5394 - (682 + 628)))) then
+						if (((753 + 3916) > (662 - (176 + 123))) and v25(v104.LifebloomFocus)) then
+							return "lifebloom healing";
+						end
+					end
+					if ((v14:AffectingCombat() and v72 and (v100.UnitGroupRole(v17) ~= "TANK") and (v100.FriendlyUnitsWithBuffCount(v101.Lifebloom, false, true) < (1 + 0)) and (v101.Undergrowth:IsAvailable() or v100.IsSoloMode()) and (v17:HealthPercentage() <= (v73 - (v27(v14:BuffUp(v101.CatForm)) * (11 + 4)))) and v101.Lifebloom:IsCastable() and v17:BuffRefreshable(v101.Lifebloom)) or ((2146 - (239 + 30)) >= (854 + 2284))) then
+						if (((4558 + 184) >= (6417 - 2791)) and v25(v104.LifebloomFocus)) then
+							return "lifebloom healing";
+						end
+					end
+					v175 = 12 - 8;
+				end
+				if (((317 - (306 + 9)) == v175) or ((15842 - 11302) == (160 + 756))) then
+					if ((v14:AffectingCombat() and v32 and v101.ConvokeTheSpirits:IsReady() and v100.AreUnitsBelowHealthPercentage(v63, v64, v101.Regrowth)) or ((710 + 446) > (2092 + 2253))) then
+						if (((6396 - 4159) < (5624 - (1140 + 235))) and v25(v101.ConvokeTheSpirits)) then
+							return "convoke_the_spirits healing";
+						end
+					end
+					if ((v101.CenarionWard:IsReady() and v60 and (v17:HealthPercentage() <= v61)) or ((1708 + 975) < (22 + 1))) then
+						if (((179 + 518) <= (878 - (33 + 19))) and v25(v104.CenarionWardFocus)) then
+							return "cenarion_ward healing";
+						end
+					end
+					if (((399 + 706) <= (3524 - 2348)) and v14:BuffUp(v101.NaturesSwiftness) and v101.Regrowth:IsCastable()) then
+						if (((1489 + 1890) <= (7475 - 3663)) and v25(v104.RegrowthFocus)) then
+							return "regrowth_swiftness healing";
+						end
+					end
+					if ((v101.NaturesSwiftness:IsReady() and v74 and (v17:HealthPercentage() <= v75)) or ((739 + 49) >= (2305 - (586 + 103)))) then
+						if (((169 + 1685) <= (10402 - 7023)) and v25(v101.NaturesSwiftness)) then
+							return "natures_swiftness healing";
+						end
+					end
+					v175 = 1491 - (1309 + 179);
+				end
+				if (((8211 - 3662) == (1980 + 2569)) and (v175 == (2 - 1))) then
+					if ((v57 and v101.GroveGuardians:IsReady() and (v101.GroveGuardians:TimeSinceLastCast() > (4 + 1)) and v100.AreUnitsBelowHealthPercentage(v58, v59, v101.Regrowth)) or ((6420 - 3398) >= (6025 - 3001))) then
+						if (((5429 - (295 + 314)) > (5398 - 3200)) and v25(v104.GroveGuardiansFocus, nil, nil)) then
+							return "grove_guardians healing";
+						end
+					end
+					if ((v14:AffectingCombat() and v32 and v101.Flourish:IsReady() and v14:BuffDown(v101.Flourish) and (v129() > (1966 - (1300 + 662))) and v100.AreUnitsBelowHealthPercentage(v66, v67, v101.Regrowth)) or ((3331 - 2270) >= (6646 - (1178 + 577)))) then
+						if (((709 + 655) <= (13222 - 8749)) and v25(v101.Flourish, nil, nil, true)) then
+							return "flourish healing";
+						end
+					end
+					if ((v14:AffectingCombat() and v32 and v101.Tranquility:IsReady() and v100.AreUnitsBelowHealthPercentage(v85, v86, v101.Regrowth)) or ((5000 - (851 + 554)) <= (3 + 0))) then
+						if (v25(v101.Tranquility, nil, true) or ((12956 - 8284) == (8365 - 4513))) then
+							return "tranquility healing";
+						end
+					end
+					if (((1861 - (115 + 187)) == (1194 + 365)) and v14:AffectingCombat() and v32 and v101.Tranquility:IsReady() and v14:BuffUp(v101.IncarnationBuff) and v100.AreUnitsBelowHealthPercentage(v88, v89, v101.Regrowth)) then
+						if (v25(v101.Tranquility, nil, true) or ((1659 + 93) <= (3105 - 2317))) then
+							return "tranquility_tree healing";
+						end
+					end
+					v175 = 1163 - (160 + 1001);
+				end
+			end
+		end
+	end
+	local function v141()
+		local v163 = 0 + 0;
+		local v164;
+		while true do
+			if (((1 + 0) == v163) or ((7997 - 4090) == (535 - (237 + 121)))) then
+				if (((4367 - (525 + 372)) > (1051 - 496)) and v164) then
+					return v164;
+				end
+				if (v34 or ((3193 - 2221) == (787 - (96 + 46)))) then
+					local v219 = v139();
+					if (((3959 - (643 + 134)) >= (764 + 1351)) and v219) then
+						return v219;
+					end
+				end
+				v163 = 4 - 2;
+			end
+			if (((14453 - 10560) < (4248 + 181)) and (v163 == (3 - 1))) then
+				v164 = v140();
+				if (v164 or ((5860 - 2993) < (2624 - (316 + 403)))) then
+					return v164;
+				end
+				v163 = 2 + 1;
+			end
+			if ((v163 == (8 - 5)) or ((650 + 1146) >= (10201 - 6150))) then
+				if (((1148 + 471) <= (1211 + 2545)) and v100.TargetIsValid() and v35) then
+					v164 = v135();
+					if (((2092 - 1488) == (2884 - 2280)) and v164) then
+						return v164;
+					end
+				end
+				break;
+			end
+			if (((0 - 0) == v163) or ((257 + 4227) == (1771 - 871))) then
+				if (((v45 or v44) and v33) or ((218 + 4241) <= (3274 - 2161))) then
+					local v220 = 17 - (12 + 5);
+					local v221;
+					while true do
+						if (((14106 - 10474) > (7249 - 3851)) and ((0 - 0) == v220)) then
+							v221 = v137();
+							if (((10122 - 6040) <= (998 + 3919)) and v221) then
+								return v221;
+							end
+							break;
+						end
+					end
+				end
+				v164 = v138();
+				v163 = 1974 - (1656 + 317);
+			end
+		end
+	end
+	local function v142()
+		local v165 = 0 + 0;
+		while true do
+			if (((3873 + 959) >= (3685 - 2299)) and (v165 == (0 - 0))) then
+				if (((491 - (5 + 349)) == (650 - 513)) and (v45 or v44) and v33) then
+					local v222 = 1271 - (266 + 1005);
+					local v223;
+					while true do
+						if (((0 + 0) == v222) or ((5356 - 3786) >= (5702 - 1370))) then
+							v223 = v137();
+							if (v223 or ((5760 - (561 + 1135)) <= (2369 - 550))) then
+								return v223;
+							end
+							break;
+						end
+					end
+				end
+				if ((v30 and v37) or ((16389 - 11403) < (2640 - (507 + 559)))) then
+					local v224 = 0 - 0;
+					local v225;
+					while true do
+						if (((13688 - 9262) > (560 - (212 + 176))) and ((905 - (250 + 655)) == v224)) then
+							v225 = v140();
+							if (((1597 - 1011) > (795 - 340)) and v225) then
+								return v225;
+							end
+							break;
+						end
+					end
+				end
+				v165 = 1 - 0;
+			end
+			if (((2782 - (1869 + 87)) == (2864 - 2038)) and (v165 == (1902 - (484 + 1417)))) then
+				if ((v43 and v101.MarkOfTheWild:IsCastable() and (v14:BuffDown(v101.MarkOfTheWild, true) or v100.GroupBuffMissing(v101.MarkOfTheWild))) or ((8613 - 4594) > (7442 - 3001))) then
+					if (((2790 - (48 + 725)) < (6960 - 2699)) and v25(v104.MarkOfTheWildPlayer)) then
+						return "mark_of_the_wild";
+					end
+				end
+				if (((12652 - 7936) > (47 + 33)) and v100.TargetIsValid()) then
+					if ((v101.Rake:IsReady() and (v14:StealthUp(false, true))) or ((9371 - 5864) == (916 + 2356))) then
+						if (v25(v101.Rake, not v16:IsInMeleeRange(3 + 7)) or ((1729 - (152 + 701)) >= (4386 - (430 + 881)))) then
+							return "rake";
+						end
+					end
+				end
+				v165 = 1 + 1;
+			end
+			if (((5247 - (557 + 338)) > (755 + 1799)) and (v165 == (5 - 3))) then
+				if ((v100.TargetIsValid() and v35) or ((15428 - 11022) < (10741 - 6698))) then
+					local v226 = 0 - 0;
+					local v227;
+					while true do
+						if ((v226 == (801 - (499 + 302))) or ((2755 - (39 + 827)) >= (9338 - 5955))) then
+							v227 = v135();
+							if (((4225 - 2333) <= (10858 - 8124)) and v227) then
+								return v227;
+							end
+							break;
 						end
 					end
 				end
 				break;
 			end
-			if ((v165 == (1008 - (564 + 443))) or ((6312 - 4032) <= (969 - (337 + 121)))) then
-				v31 = EpicSettings.Toggles['cds'];
-				v32 = EpicSettings.Toggles['dispel'];
-				v33 = EpicSettings.Toggles['ramp'];
-				v34 = EpicSettings.Toggles['dps'];
-				v165 = 5 - 3;
+		end
+	end
+	local function v143()
+		local v166 = 0 - 0;
+		while true do
+			if (((165 + 1758) < (6491 - 4273)) and (v166 == (1 + 0))) then
+				v44 = EpicSettings.Settings['DispelDebuffs'];
+				v45 = EpicSettings.Settings['DispelBuffs'];
+				v46 = EpicSettings.Settings['UseHealthstone'];
+				v47 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
+				v48 = EpicSettings.Settings['HandleCharredTreant'];
+				v49 = EpicSettings.Settings['HandleCharredBrambles'];
+				v166 = 106 - (103 + 1);
 			end
-			if ((v165 == (6 - 4)) or ((3587 - (1261 + 650)) <= (196 + 267))) then
-				v35 = EpicSettings.Toggles['dpsform'];
-				v36 = EpicSettings.Toggles['healing'];
-				if (((6165 - 2296) == (5686 - (772 + 1045))) and v13:IsDeadOrGhost()) then
+			if (((2727 - (475 + 79)) > (818 - 439)) and (v166 == (16 - 11))) then
+				v68 = EpicSettings.Settings['IronBarkUsage'] or "";
+				v69 = EpicSettings.Settings['IronBarkHP'] or (0 + 0);
+				break;
+			end
+			if ((v166 == (0 + 0)) or ((4094 - (1395 + 108)) == (9919 - 6510))) then
+				v38 = EpicSettings.Settings['UseRacials'];
+				v39 = EpicSettings.Settings['UseTrinkets'];
+				v40 = EpicSettings.Settings['UseHealingPotion'];
+				v41 = EpicSettings.Settings['HealingPotionName'] or "";
+				v42 = EpicSettings.Settings['HealingPotionHP'] or (1204 - (7 + 1197));
+				v43 = EpicSettings.Settings['UseMarkOfTheWild'];
+				v166 = 1 + 0;
+			end
+			if (((1576 + 2938) > (3643 - (27 + 292))) and (v166 == (5 - 3))) then
+				v50 = EpicSettings.Settings['InterruptWithStun'];
+				v51 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v52 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
+				v53 = EpicSettings.Settings['UseDamageConvokeTheSpirits'];
+				v54 = EpicSettings.Settings['UseDamageNaturesVigil'];
+				v55 = EpicSettings.Settings['EfflorescenceUsage'] or "";
+				v166 = 12 - 9;
+			end
+			if ((v166 == (5 - 2)) or ((395 - 187) >= (4967 - (43 + 96)))) then
+				v56 = EpicSettings.Settings['EfflorescenceHP'] or (0 - 0);
+				v57 = EpicSettings.Settings['UseGroveGuardians'];
+				v58 = EpicSettings.Settings['GroveGuardiansHP'] or (0 - 0);
+				v59 = EpicSettings.Settings['GroveGuardiansGroup'] or (0 + 0);
+				v60 = EpicSettings.Settings['UseCenarionWard'];
+				v61 = EpicSettings.Settings['CenarionWardHP'] or (0 + 0);
+				v166 = 7 - 3;
+			end
+			if ((v166 == (2 + 2)) or ((2966 - 1383) > (1123 + 2444))) then
+				v62 = EpicSettings.Settings['UseConvokeTheSpirits'];
+				v63 = EpicSettings.Settings['ConvokeTheSpiritsHP'] or (0 + 0);
+				v64 = EpicSettings.Settings['ConvokeTheSpiritsGroup'] or (1751 - (1414 + 337));
+				v65 = EpicSettings.Settings['UseFlourish'];
+				v66 = EpicSettings.Settings['FlourishHP'] or (1940 - (1642 + 298));
+				v67 = EpicSettings.Settings['FlourishGroup'] or (0 - 0);
+				v166 = 14 - 9;
+			end
+		end
+	end
+	local function v144()
+		local v167 = 0 - 0;
+		while true do
+			if ((v167 == (1 + 2)) or ((1022 + 291) == (1766 - (357 + 615)))) then
+				v79 = EpicSettings.Settings['RegrowthRefreshHP'] or (0 + 0);
+				v80 = EpicSettings.Settings['UseRejuvenation'];
+				v81 = EpicSettings.Settings['RejuvenationHP'] or (0 - 0);
+				v167 = 4 + 0;
+			end
+			if (((6801 - 3627) > (2322 + 580)) and (v167 == (1 + 0))) then
+				v73 = EpicSettings.Settings['LifebloomHP'] or (0 + 0);
+				v74 = EpicSettings.Settings['UseNaturesSwiftness'];
+				v75 = EpicSettings.Settings['NaturesSwiftnessHP'] or (1301 - (384 + 917));
+				v167 = 699 - (128 + 569);
+			end
+			if (((5663 - (1407 + 136)) <= (6147 - (687 + 1200))) and (v167 == (1710 - (556 + 1154)))) then
+				v70 = EpicSettings.Settings['UseLifebloomTank'];
+				v71 = EpicSettings.Settings['LifebloomTankHP'] or (0 - 0);
+				v72 = EpicSettings.Settings['UseLifebloom'];
+				v167 = 96 - (9 + 86);
+			end
+			if ((v167 == (429 - (275 + 146))) or ((144 + 739) > (4842 - (29 + 35)))) then
+				v94 = EpicSettings.Settings['WildgrowthHP'] or (0 - 0);
+				v95 = EpicSettings.Settings['WildgrowthGroup'] or (0 - 0);
+				v96 = EpicSettings.Settings['BarkskinHP'] or (0 - 0);
+				v167 = 6 + 3;
+			end
+			if ((v167 == (1019 - (53 + 959))) or ((4028 - (312 + 96)) >= (8488 - 3597))) then
+				v91 = EpicSettings.Settings['WildgrowthSotFHP'] or (285 - (147 + 138));
+				v92 = EpicSettings.Settings['WildgrowthSotFGroup'] or (899 - (813 + 86));
+				v93 = EpicSettings.Settings['UseWildgrowth'];
+				v167 = 8 + 0;
+			end
+			if (((7888 - 3630) > (1429 - (18 + 474))) and (v167 == (2 + 3))) then
+				v85 = EpicSettings.Settings['TranquilityHP'] or (0 - 0);
+				v86 = EpicSettings.Settings['TranquilityGroup'] or (1086 - (860 + 226));
+				v87 = EpicSettings.Settings['UseTranquilityTree'];
+				v167 = 309 - (121 + 182);
+			end
+			if ((v167 == (1 + 1)) or ((6109 - (988 + 252)) < (103 + 803))) then
+				v76 = EpicSettings.Settings['UseRegrowth'];
+				v77 = EpicSettings.Settings['RegrowthHP'] or (0 + 0);
+				v78 = EpicSettings.Settings['UseRegrowthRefresh'];
+				v167 = 1973 - (49 + 1921);
+			end
+			if ((v167 == (899 - (223 + 667))) or ((1277 - (51 + 1)) > (7277 - 3049))) then
+				v97 = EpicSettings.Settings['UseBarkskin'];
+				v98 = EpicSettings.Settings['RenewalHP'] or (0 - 0);
+				v99 = EpicSettings.Settings['UseRenewal'];
+				break;
+			end
+			if (((4453 - (146 + 979)) > (632 + 1606)) and (v167 == (611 - (311 + 294)))) then
+				v88 = EpicSettings.Settings['TranquilityTreeHP'] or (0 - 0);
+				v89 = EpicSettings.Settings['TranquilityTreeGroup'] or (0 + 0);
+				v90 = EpicSettings.Settings['UseWildgrowthSotF'];
+				v167 = 1450 - (496 + 947);
+			end
+			if (((5197 - (1233 + 125)) > (571 + 834)) and (v167 == (4 + 0))) then
+				v82 = EpicSettings.Settings['UseSwiftmend'];
+				v83 = EpicSettings.Settings['SwiftmendHP'] or (0 + 0);
+				v84 = EpicSettings.Settings['UseTranquility'];
+				v167 = 1650 - (963 + 682);
+			end
+		end
+	end
+	local function v145()
+		local v168 = 0 + 0;
+		while true do
+			if ((v168 == (1506 - (504 + 1000))) or ((871 + 422) <= (462 + 45))) then
+				v36 = EpicSettings.Toggles['dpsform'];
+				v37 = EpicSettings.Toggles['healing'];
+				if (v14:IsDeadOrGhost() or ((274 + 2622) < (1187 - 382))) then
 					return;
 				end
-				if (((164 + 994) <= (2757 - (102 + 42))) and (v13:AffectingCombat() or v43)) then
-					local v235 = 1844 - (1524 + 320);
-					local v236;
+				if (((1979 + 337) == (1347 + 969)) and (v14:AffectingCombat() or v44)) then
+					local v228 = 182 - (156 + 26);
+					local v229;
 					while true do
-						if ((v235 == (1270 - (1049 + 221))) or ((2520 - (18 + 138)) <= (4892 - 2893))) then
-							v236 = v43 and v100.NaturesCure:IsReady() and v32;
-							if ((v99.IsTankBelowHealthPercentage(v68, 1122 - (67 + 1035), v100.Regrowth) and v100.IronBark:IsReady() and ((v67 == "Tank Only") or (v67 == "Tank and Self"))) or ((5270 - (136 + 212)) < (824 - 630))) then
-								local v241 = 0 + 0;
-								local v242;
+						if ((v228 == (0 + 0)) or ((4020 - 1450) == (1697 - (149 + 15)))) then
+							v229 = v44 and v101.NaturesCure:IsReady() and v33;
+							if ((v100.IsTankBelowHealthPercentage(v69, 980 - (890 + 70), v101.Regrowth) and v101.IronBark:IsReady() and ((v68 == "Tank Only") or (v68 == "Tank and Self"))) or ((1000 - (39 + 78)) == (1942 - (14 + 468)))) then
+								local v242 = 0 - 0;
+								local v243;
 								while true do
-									if ((v241 == (0 + 0)) or ((3695 - (240 + 1364)) < (1113 - (1050 + 32)))) then
-										v242 = v99.FocusUnit(v236, nil, nil, "TANK", 142 - 102, v100.Regrowth);
-										if (v242 or ((1438 + 992) >= (5927 - (331 + 724)))) then
-											return v242;
+									if ((v242 == (0 - 0)) or ((2384 + 2235) <= (600 + 399))) then
+										v243 = v100.FocusUnit(v229, nil, nil, "TANK", 9 + 31, v101.Regrowth);
+										if (v243 or ((1541 + 1869) > (1079 + 3037))) then
+											return v243;
 										end
 										break;
 									end
 								end
-							elseif (((v13:HealthPercentage() < v68) and v100.IronBark:IsReady() and (v67 == "Tank and Self")) or ((385 + 4385) < (2379 - (269 + 375)))) then
-								local v243 = 725 - (267 + 458);
-								local v244;
+							elseif (((v14:HealthPercentage() < v69) and v101.IronBark:IsReady() and (v68 == "Tank and Self")) or ((1728 - 825) >= (3024 + 35))) then
+								local v244 = 0 - 0;
+								local v245;
 								while true do
-									if ((v243 == (0 + 0)) or ((8536 - 4097) <= (3168 - (667 + 151)))) then
-										v244 = v99.FocusUnit(v236, nil, nil, "HEALER", 1537 - (1410 + 87), v100.Regrowth);
-										if (v244 or ((6376 - (1504 + 393)) < (12071 - 7605))) then
-											return v244;
+									if ((v244 == (0 + 0)) or ((4027 - (12 + 39)) < (2658 + 199))) then
+										v245 = v100.FocusUnit(v229, nil, nil, "HEALER", 123 - 83, v101.Regrowth);
+										if (((17558 - 12628) > (684 + 1623)) and v245) then
+											return v245;
 										end
 										break;
 									end
 								end
 							else
-								local v245 = v99.FocusUnit(v236, nil, nil, nil, 103 - 63, v100.Regrowth);
-								if (((3343 - (461 + 335)) > (157 + 1068)) and v245) then
-									return v245;
+								local v246 = v100.FocusUnit(v229, nil, nil, nil, 22 + 18, v101.Regrowth);
+								if (v246 or ((10259 - 6213) < (860 + 431))) then
+									return v246;
 								end
 							end
 							break;
 						end
 					end
 				end
-				v165 = 1764 - (1730 + 31);
+				v168 = 14 - 11;
 			end
-		end
-	end
-	local function v145()
-		local v166 = 1667 - (728 + 939);
-		while true do
-			if (((16543 - 11872) > (5423 - 2749)) and (v166 == (2 - 1))) then
-				v119();
+			if ((v168 == (1713 - (1596 + 114))) or ((11072 - 6831) == (4258 - (164 + 549)))) then
+				if (v14:IsMounted() or ((5486 - (1059 + 379)) > (5254 - 1022))) then
+					return;
+				end
+				if (v14:IsMoving() or ((907 + 843) >= (586 + 2887))) then
+					v105 = GetTime();
+				end
+				if (((3558 - (145 + 247)) == (2598 + 568)) and (v14:BuffUp(v101.TravelForm) or v14:BuffUp(v101.BearForm) or v14:BuffUp(v101.CatForm))) then
+					if (((815 + 948) < (11040 - 7316)) and ((GetTime() - v105) < (1 + 0))) then
+						return;
+					end
+				end
+				if (((50 + 7) <= (4420 - 1697)) and v31) then
+					v106 = v16:GetEnemiesInSplashRange(728 - (254 + 466));
+					v107 = #v106;
+				else
+					v106 = {};
+					v107 = 561 - (544 + 16);
+				end
+				v168 = 12 - 8;
+			end
+			if ((v168 == (632 - (294 + 334))) or ((2323 - (236 + 17)) == (191 + 252))) then
+				if (v100.TargetIsValid() or v14:AffectingCombat() or ((2106 + 599) == (5245 - 3852))) then
+					local v230 = 0 - 0;
+					while true do
+						if ((v230 == (1 + 0)) or ((3790 + 811) < (855 - (413 + 381)))) then
+							if ((v109 == (468 + 10643)) or ((2956 - 1566) >= (12322 - 7578))) then
+								v109 = v10.FightRemains(v106, false);
+							end
+							break;
+						end
+						if ((v230 == (1970 - (582 + 1388))) or ((3412 - 1409) > (2745 + 1089))) then
+							v108 = v10.BossFightRemains(nil, true);
+							v109 = v108;
+							v230 = 365 - (326 + 38);
+						end
+					end
+				end
+				if (v48 or ((461 - 305) > (5585 - 1672))) then
+					local v231 = v100.HandleCharredTreant(v101.Rejuvenation, v104.RejuvenationMouseover, 660 - (47 + 573));
+					if (((69 + 126) == (828 - 633)) and v231) then
+						return v231;
+					end
+					local v231 = v100.HandleCharredTreant(v101.Regrowth, v104.RegrowthMouseover, 64 - 24, true);
+					if (((4769 - (1269 + 395)) >= (2288 - (76 + 416))) and v231) then
+						return v231;
+					end
+					local v231 = v100.HandleCharredTreant(v101.Swiftmend, v104.SwiftmendMouseover, 483 - (319 + 124));
+					if (((10009 - 5630) >= (3138 - (564 + 443))) and v231) then
+						return v231;
+					end
+					local v231 = v100.HandleCharredTreant(v101.Wildgrowth, v104.WildgrowthMouseover, 110 - 70, true);
+					if (((4302 - (337 + 121)) >= (5985 - 3942)) and v231) then
+						return v231;
+					end
+				end
+				if (v49 or ((10766 - 7534) <= (4642 - (1261 + 650)))) then
+					local v232 = 0 + 0;
+					local v233;
+					while true do
+						if (((7816 - 2911) == (6722 - (772 + 1045))) and (v232 == (0 + 0))) then
+							v233 = v100.HandleCharredBrambles(v101.Rejuvenation, v104.RejuvenationMouseover, 184 - (102 + 42));
+							if (v233 or ((5980 - (1524 + 320)) >= (5681 - (1049 + 221)))) then
+								return v233;
+							end
+							v232 = 157 - (18 + 138);
+						end
+						if ((v232 == (2 - 1)) or ((4060 - (67 + 1035)) == (4365 - (136 + 212)))) then
+							v233 = v100.HandleCharredBrambles(v101.Regrowth, v104.RegrowthMouseover, 169 - 129, true);
+							if (((984 + 244) >= (750 + 63)) and v233) then
+								return v233;
+							end
+							v232 = 1606 - (240 + 1364);
+						end
+						if ((v232 == (1084 - (1050 + 32))) or ((12336 - 8881) > (2396 + 1654))) then
+							v233 = v100.HandleCharredBrambles(v101.Swiftmend, v104.SwiftmendMouseover, 1095 - (331 + 724));
+							if (((20 + 223) == (887 - (269 + 375))) and v233) then
+								return v233;
+							end
+							v232 = 728 - (267 + 458);
+						end
+						if ((v232 == (1 + 2)) or ((520 - 249) > (2390 - (667 + 151)))) then
+							v233 = v100.HandleCharredBrambles(v101.Wildgrowth, v104.WildgrowthMouseover, 1537 - (1410 + 87), true);
+							if (((4636 - (1504 + 393)) < (8901 - 5608)) and v233) then
+								return v233;
+							end
+							break;
+						end
+					end
+				end
+				if ((v16 and v16:Exists() and v16:IsAPlayer() and v16:IsDeadOrGhost() and not v14:CanAttack(v16) and not v14:AffectingCombat() and v30) or ((10226 - 6284) < (1930 - (461 + 335)))) then
+					local v234 = v100.DeadFriendlyUnitsCount();
+					if (v14:AffectingCombat() or ((345 + 2348) == (6734 - (1730 + 31)))) then
+						if (((3813 - (728 + 939)) == (7600 - 5454)) and v101.Rebirth:IsReady()) then
+							if (v25(v101.Rebirth, nil, true) or ((4551 - 2307) == (7386 - 4162))) then
+								return "rebirth";
+							end
+						end
+					elseif ((v234 > (1069 - (138 + 930))) or ((4482 + 422) <= (1498 + 418))) then
+						if (((78 + 12) <= (4348 - 3283)) and v25(v101.Revitalize, nil, true)) then
+							return "revitalize";
+						end
+					elseif (((6568 - (459 + 1307)) == (6672 - (474 + 1396))) and v25(v101.Revive, not v16:IsInRange(69 - 29), true)) then
+						return "revive";
+					end
+				end
+				v168 = 5 + 0;
+			end
+			if (((1 + 4) == v168) or ((6530 - 4250) <= (65 + 446))) then
+				if ((v37 and (v14:AffectingCombat() or v30)) or ((5594 - 3918) <= (2019 - 1556))) then
+					local v235 = v139();
+					if (((4460 - (562 + 29)) == (3299 + 570)) and v235) then
+						return v235;
+					end
+					local v235 = v140();
+					if (((2577 - (374 + 1045)) <= (2069 + 544)) and v235) then
+						return v235;
+					end
+				end
+				if (not v14:IsChanneling() or ((7340 - 4976) <= (2637 - (448 + 190)))) then
+					if (v14:AffectingCombat() or ((1590 + 3332) < (88 + 106))) then
+						local v239 = 0 + 0;
+						local v240;
+						while true do
+							if (((0 - 0) == v239) or ((6497 - 4406) < (1525 - (1307 + 187)))) then
+								v240 = v141();
+								if (v240 or ((9636 - 7206) >= (11407 - 6535))) then
+									return v240;
+								end
+								break;
+							end
+						end
+					elseif (v30 or ((14625 - 9855) < (2418 - (232 + 451)))) then
+						local v241 = v142();
+						if (v241 or ((4239 + 200) <= (2076 + 274))) then
+							return v241;
+						end
+					end
+				end
 				break;
 			end
-			if ((v166 == (1068 - (138 + 930))) or ((3378 + 318) < (2602 + 725))) then
-				v22.Print("Restoration Druid Rotation by Epic.");
-				EpicSettings.SetupVersion("Restoration Druid X v 10.2.01 By Gojira");
-				v166 = 1 + 0;
+			if ((v168 == (564 - (510 + 54))) or ((9023 - 4544) < (4502 - (13 + 23)))) then
+				v143();
+				v144();
+				v30 = EpicSettings.Toggles['ooc'];
+				v31 = EpicSettings.Toggles['aoe'];
+				v168 = 1 - 0;
+			end
+			if (((3659 - 1112) > (2225 - 1000)) and (v168 == (1089 - (830 + 258)))) then
+				v32 = EpicSettings.Toggles['cds'];
+				v33 = EpicSettings.Toggles['dispel'];
+				v34 = EpicSettings.Toggles['ramp'];
+				v35 = EpicSettings.Toggles['dps'];
+				v168 = 6 - 4;
 			end
 		end
 	end
-	v22.SetAPL(428 - 323, v144, v145);
+	local function v146()
+		v23.Print("Restoration Druid Rotation by Epic.");
+		EpicSettings.SetupVersion("Restoration Druid X v 10.2.01 By Gojira");
+		v120();
+	end
+	v23.SetAPL(66 + 39, v145, v146);
 end;
 return v0["Epix_Druid_RestoDruid.lua"]();
 
