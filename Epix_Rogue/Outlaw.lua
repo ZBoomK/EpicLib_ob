@@ -1,36 +1,44 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = v0[v4];
-	if (not v5 or ((5968 - (990 + 465)) < (1382 + 1970))) then
-		return v1(v4, ...);
+	local v5 = 0 + 0;
+	local v6;
+	while true do
+		if ((v5 == (88 - (36 + 51))) or ((16717 - 12840) >= (10687 - 6150))) then
+			return v6(...);
+		end
+		if ((v5 == (0 + 0)) or ((881 + 3434) < (4009 - 2283))) then
+			v6 = v0[v4];
+			if (not v6 or ((851 + 2828) < (208 + 417))) then
+				return v1(v4, ...);
+			end
+			v5 = 1 + 0;
+		end
 	end
-	return v5(...);
 end
 v0["Epix_Rogue_Outlaw.lua"] = function(...)
-	local v6, v7 = ...;
-	local v8 = EpicDBC.DBC;
-	local v9 = EpicLib;
-	local v10 = EpicCache;
-	local v11 = v9.Cast;
-	local v12 = v9.Mouseover;
-	local v13 = v9.Utils;
-	local v14 = v9.Unit;
-	local v15 = v14.Player;
-	local v16 = v14.Target;
-	local v17 = v9.Spell;
-	local v18 = v9.MultiSpell;
-	local v19 = v9.Item;
-	local v20 = v9.Macro;
-	local v21 = v9.Commons.Everyone.num;
-	local v22 = v9.Commons.Everyone.bool;
-	local v23 = math.min;
-	local v24 = math.abs;
-	local v25 = math.max;
-	local v26 = false;
+	local v7, v8 = ...;
+	local v9 = EpicDBC.DBC;
+	local v10 = EpicLib;
+	local v11 = EpicCache;
+	local v12 = v10.Cast;
+	local v13 = v10.Mouseover;
+	local v14 = v10.Utils;
+	local v15 = v10.Unit;
+	local v16 = v15.Player;
+	local v17 = v15.Target;
+	local v18 = v10.Spell;
+	local v19 = v10.MultiSpell;
+	local v20 = v10.Item;
+	local v21 = v10.Macro;
+	local v22 = v10.Commons.Everyone.num;
+	local v23 = v10.Commons.Everyone.bool;
+	local v24 = math.min;
+	local v25 = math.abs;
+	local v26 = math.max;
 	local v27 = false;
 	local v28 = false;
-	local v29;
+	local v29 = false;
 	local v30;
 	local v31;
 	local v32;
@@ -82,731 +90,827 @@ v0["Epix_Rogue_Outlaw.lua"] = function(...)
 	local v78;
 	local v79;
 	local v80;
-	local function v81()
-		v30 = EpicSettings.Settings['UseRacials'];
-		v32 = EpicSettings.Settings['UseHealingPotion'];
-		v33 = EpicSettings.Settings['HealingPotionName'];
-		v34 = EpicSettings.Settings['HealingPotionHP'] or (0 + 0);
-		v35 = EpicSettings.Settings['UseHealthstone'];
-		v36 = EpicSettings.Settings['HealthstoneHP'] or (0 + 0);
-		v37 = EpicSettings.Settings['InterruptWithStun'];
-		v38 = EpicSettings.Settings['InterruptOnlyWhitelist'];
-		v39 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
-		v29 = EpicSettings.Settings['HandleIncorporeal'];
-		v52 = EpicSettings.Settings['VanishOffGCD'];
-		v53 = EpicSettings.Settings['ShadowDanceOffGCD'];
-		v54 = EpicSettings.Settings['ThistleTeaOffGCD'];
-		v55 = EpicSettings.Settings['ColdBloodOffGCD'];
-		v56 = EpicSettings.Settings['MarkedforDeathOffGCD'];
-		v57 = EpicSettings.Settings['CrimsonVialHP'] or (1726 - (1668 + 58));
-		v58 = EpicSettings.Settings['FeintHP'] or (626 - (512 + 114));
-		v59 = EpicSettings.Settings['StealthOOC'];
-		v64 = EpicSettings.Settings['RolltheBonesLogic'];
-		v67 = EpicSettings.Settings['UseDPSVanish'];
-		v70 = EpicSettings.Settings['BladeFlurryGCD'];
-		v71 = EpicSettings.Settings['BladeRushGCD'];
-		v72 = EpicSettings.Settings['GhostlyStrikeGCD'];
-		v74 = EpicSettings.Settings['KeepItRollingGCD'];
-		v75 = EpicSettings.Settings['AdrenalineRushOffGCD'];
-		v76 = EpicSettings.Settings['EchoingReprimand'];
-		v77 = EpicSettings.Settings['UseSoloVanish'];
-		v78 = EpicSettings.Settings['sepsis'];
-		v79 = EpicSettings.Settings['BlindInterrupt'];
-		v80 = EpicSettings.Settings['EvasionHP'] or (0 - 0);
+	local v81;
+	local function v82()
+		v31 = EpicSettings.Settings['UseRacials'];
+		v33 = EpicSettings.Settings['UseHealingPotion'];
+		v34 = EpicSettings.Settings['HealingPotionName'];
+		v35 = EpicSettings.Settings['HealingPotionHP'] or (1096 - (709 + 387));
+		v36 = EpicSettings.Settings['UseHealthstone'];
+		v37 = EpicSettings.Settings['HealthstoneHP'] or (1858 - (673 + 1185));
+		v38 = EpicSettings.Settings['InterruptWithStun'];
+		v39 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+		v40 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
+		v30 = EpicSettings.Settings['HandleIncorporeal'];
+		v53 = EpicSettings.Settings['VanishOffGCD'];
+		v54 = EpicSettings.Settings['ShadowDanceOffGCD'];
+		v55 = EpicSettings.Settings['ThistleTeaOffGCD'];
+		v56 = EpicSettings.Settings['ColdBloodOffGCD'];
+		v57 = EpicSettings.Settings['MarkedforDeathOffGCD'];
+		v58 = EpicSettings.Settings['CrimsonVialHP'] or (0 - 0);
+		v59 = EpicSettings.Settings['FeintHP'] or (0 - 0);
+		v60 = EpicSettings.Settings['StealthOOC'];
+		v65 = EpicSettings.Settings['RolltheBonesLogic'];
+		v68 = EpicSettings.Settings['UseDPSVanish'];
+		v71 = EpicSettings.Settings['BladeFlurryGCD'];
+		v72 = EpicSettings.Settings['BladeRushGCD'];
+		v73 = EpicSettings.Settings['GhostlyStrikeGCD'];
+		v75 = EpicSettings.Settings['KeepItRollingGCD'];
+		v76 = EpicSettings.Settings['AdrenalineRushOffGCD'];
+		v77 = EpicSettings.Settings['EchoingReprimand'];
+		v78 = EpicSettings.Settings['UseSoloVanish'];
+		v79 = EpicSettings.Settings['sepsis'];
+		v80 = EpicSettings.Settings['BlindInterrupt'];
+		v81 = EpicSettings.Settings['EvasionHP'] or (0 + 0);
 	end
-	local v82 = v9.Commons.Everyone;
-	local v83 = v9.Commons.Rogue;
-	local v84 = v17.Rogue.Outlaw;
-	local v85 = v19.Rogue.Outlaw;
+	local v83 = v10.Commons.Everyone;
+	local v84 = v10.Commons.Rogue;
+	local v85 = v18.Rogue.Outlaw;
 	local v86 = v20.Rogue.Outlaw;
-	local v87 = {};
-	local v88 = v15:GetEquipment();
-	local v89 = (v88[26 - 13] and v19(v88[45 - 32])) or v19(0 + 0);
-	local v90 = (v88[3 + 11] and v19(v88[13 + 1])) or v19(0 - 0);
-	v9:RegisterForEvent(function()
-		local v151 = 1994 - (109 + 1885);
+	local v87 = v21.Rogue.Outlaw;
+	local v88 = {};
+	local v89 = v16:GetEquipment();
+	local v90 = (v89[10 + 3] and v20(v89[16 - 3])) or v20(0 + 0);
+	local v91 = (v89[27 - 13] and v20(v89[27 - 13])) or v20(1880 - (446 + 1434));
+	v10:RegisterForEvent(function()
+		local v152 = 1283 - (1040 + 243);
 		while true do
-			if ((v151 == (1469 - (1269 + 200))) or ((3957 - 1892) >= (4011 - (98 + 717)))) then
-				v88 = v15:GetEquipment();
-				v89 = (v88[839 - (802 + 24)] and v19(v88[22 - 9])) or v19(0 - 0);
-				v151 = 1 + 0;
-			end
-			if ((v151 == (1 + 0)) or ((719 + 3657) <= (320 + 1161))) then
-				v90 = (v88[38 - 24] and v19(v88[46 - 32])) or v19(0 + 0);
+			if ((v152 == (2 - 1)) or ((6472 - (559 + 1288)) < (2563 - (609 + 1322)))) then
+				v91 = (v89[468 - (13 + 441)] and v20(v89[52 - 38])) or v20(0 - 0);
 				break;
+			end
+			if ((v152 == (0 - 0)) or ((4 + 79) > (6464 - 4684))) then
+				v89 = v16:GetEquipment();
+				v90 = (v89[5 + 8] and v20(v89[6 + 7])) or v20(0 - 0);
+				v152 = 1 + 0;
 			end
 		end
 	end, "PLAYER_EQUIPMENT_CHANGED");
-	local v91, v92, v93;
-	local v94;
-	local v95 = 3 + 3;
-	local v96, v97, v98;
-	local v99, v100, v101, v102, v103;
-	local v104 = {{v84.Blind,"Cast Blind (Interrupt)",function()
+	local v92, v93, v94;
+	local v95;
+	local v96 = 10 - 4;
+	local v97, v98, v99;
+	local v100, v101, v102, v103, v104;
+	local v105 = {{v85.Blind,"Cast Blind (Interrupt)",function()
 		return true;
-	end},{v84.KidneyShot,"Cast Kidney Shot (Interrupt)",function()
-		return v97 > (0 + 0);
+	end},{v85.KidneyShot,"Cast Kidney Shot (Interrupt)",function()
+		return v98 > (0 + 0);
 	end}};
-	local v105, v106 = 0 + 0, 326 - (192 + 134);
-	local function v107(v152)
-		local v153 = v15:EnergyTimeToMaxPredicted(nil, v152);
-		if ((v153 < v105) or ((v153 - v105) > (1276.5 - (316 + 960))) or ((1888 + 1504) >= (3659 + 1082))) then
-			v105 = v153;
-		end
-		return v105;
-	end
-	local function v108()
-		local v154 = v15:EnergyPredicted();
-		if (((3074 + 251) >= (8234 - 6080)) and ((v154 > v106) or ((v154 - v106) > (560 - (83 + 468))))) then
-			v106 = v154;
-		end
-		return v106;
-	end
-	local v109 = {v84.Broadside,v84.BuriedTreasure,v84.GrandMelee,v84.RuthlessPrecision,v84.SkullandCrossbones,v84.TrueBearing};
-	local v110 = false;
-	local function v111()
-		local v155 = 0 + 0;
+	local v106, v107 = 0 + 0, 0 + 0;
+	local function v108(v153)
+		local v154 = 0 + 0;
+		local v155;
 		while true do
-			if ((v155 == (0 + 0)) or ((717 + 578) >= (569 + 2664))) then
-				if (((8104 - 3727) > (3553 - (340 + 1571))) and not v10.APLVar.RtB_Buffs) then
-					local v169 = 0 + 0;
-					local v170;
-					while true do
-						if (((6495 - (1733 + 39)) > (3726 - 2370)) and (v169 == (1035 - (125 + 909)))) then
-							v10.APLVar.RtB_Buffs.Normal = 1948 - (1096 + 852);
-							v10.APLVar.RtB_Buffs.Shorter = 0 + 0;
-							v10.APLVar.RtB_Buffs.Longer = 0 - 0;
-							v10.APLVar.RtB_Buffs.MaxRemains = 0 + 0;
-							v169 = 514 - (409 + 103);
-						end
-						if ((v169 == (238 - (46 + 190))) or ((4231 - (51 + 44)) <= (969 + 2464))) then
-							v170 = v83.RtBRemains();
-							for v186 = 1318 - (1114 + 203), #v109 do
-								local v187 = v15:BuffRemains(v109[v186]);
-								if (((4971 - (228 + 498)) <= (1004 + 3627)) and (v187 > (0 + 0))) then
-									local v190 = 663 - (174 + 489);
-									local v191;
-									while true do
-										if (((11140 - 6864) >= (5819 - (830 + 1075))) and (v190 == (524 - (303 + 221)))) then
-											v10.APLVar.RtB_Buffs.Total = v10.APLVar.RtB_Buffs.Total + (1270 - (231 + 1038));
-											if (((165 + 33) <= (5527 - (171 + 991))) and (v187 > v10.APLVar.RtB_Buffs.MaxRemains)) then
-												v10.APLVar.RtB_Buffs.MaxRemains = v187;
-											end
-											v190 = 4 - 3;
-										end
-										if (((12840 - 8058) > (11668 - 6992)) and (v190 == (1 + 0))) then
-											v191 = math.abs(v187 - v170);
-											if (((17049 - 12185) > (6337 - 4140)) and (v191 <= (0.5 - 0))) then
-												local v199 = 0 - 0;
-												while true do
-													if ((v199 == (1248 - (111 + 1137))) or ((3858 - (91 + 67)) == (7461 - 4954))) then
-														v10.APLVar.RtB_Buffs.Normal = v10.APLVar.RtB_Buffs.Normal + 1 + 0;
-														v10.APLVar.RtB_Buffs.Will_Lose[v109[v186]:Name()] = true;
-														v199 = 524 - (423 + 100);
-													end
-													if (((32 + 4442) >= (758 - 484)) and (v199 == (1 + 0))) then
-														v10.APLVar.RtB_Buffs.Will_Lose.Total = v10.APLVar.RtB_Buffs.Will_Lose.Total + (772 - (326 + 445));
-														break;
-													end
-												end
-											elseif ((v187 > v170) or ((8265 - 6371) <= (3131 - 1725))) then
-												v10.APLVar.RtB_Buffs.Longer = v10.APLVar.RtB_Buffs.Longer + (2 - 1);
-											else
-												local v203 = 711 - (530 + 181);
-												while true do
-													if (((2453 - (614 + 267)) >= (1563 - (19 + 13))) and ((1 - 0) == v203)) then
-														v10.APLVar.RtB_Buffs.Will_Lose.Total = v10.APLVar.RtB_Buffs.Will_Lose.Total + (2 - 1);
-														break;
-													end
-													if ((v203 == (0 - 0)) or ((1218 + 3469) < (7987 - 3445))) then
-														v10.APLVar.RtB_Buffs.Shorter = v10.APLVar.RtB_Buffs.Shorter + (1 - 0);
-														v10.APLVar.RtB_Buffs.Will_Lose[v109[v186]:Name()] = true;
-														v203 = 1813 - (1293 + 519);
-													end
-												end
-											end
-											break;
-										end
-									end
-								end
-								if (((6714 - 3423) > (4352 - 2685)) and v110) then
-									local v192 = 0 - 0;
-									while true do
-										if ((v192 == (0 - 0)) or ((2056 - 1183) == (1078 + 956))) then
-											print("RtbRemains", v170);
-											print(v109[v186]:Name(), v187);
-											break;
-										end
-									end
-								end
-							end
-							if (v110 or ((575 + 2241) < (25 - 14))) then
-								local v189 = 0 + 0;
-								while true do
-									if (((1229 + 2470) < (2941 + 1765)) and (v189 == (1098 - (709 + 387)))) then
-										print("longer: ", v10.APLVar.RtB_Buffs.Longer);
-										print("max remains: ", v10.APLVar.RtB_Buffs.MaxRemains);
-										break;
-									end
-									if (((4504 - (673 + 1185)) >= (2540 - 1664)) and (v189 == (0 - 0))) then
-										print("have: ", v10.APLVar.RtB_Buffs.Total);
-										print("will lose: ", v10.APLVar.RtB_Buffs.Will_Lose.Total);
-										v189 = 1 - 0;
-									end
-									if (((440 + 174) <= (2380 + 804)) and ((1 - 0) == v189)) then
-										print("shorter: ", v10.APLVar.RtB_Buffs.Shorter);
-										print("normal: ", v10.APLVar.RtB_Buffs.Normal);
-										v189 = 1 + 1;
-									end
-								end
-							end
-							break;
-						end
-						if (((6232 - 3106) == (6135 - 3009)) and (v169 == (1880 - (446 + 1434)))) then
-							v10.APLVar.RtB_Buffs = {};
-							v10.APLVar.RtB_Buffs.Will_Lose = {};
-							v10.APLVar.RtB_Buffs.Will_Lose.Total = 1283 - (1040 + 243);
-							v10.APLVar.RtB_Buffs.Total = 0 - 0;
-							v169 = 1848 - (559 + 1288);
-						end
-					end
+			if (((831 - 285) <= (666 + 411)) and (v154 == (668 - (89 + 578)))) then
+				return v106;
+			end
+			if ((v154 == (0 + 0)) or ((2070 - 1074) > (5350 - (572 + 477)))) then
+				v155 = v16:EnergyTimeToMaxPredicted(nil, v153);
+				if (((549 + 3521) > (413 + 274)) and ((v155 < v106) or ((v155 - v106) > (0.5 + 0)))) then
+					v106 = v155;
 				end
-				return v10.APLVar.RtB_Buffs.Total;
+				v154 = 87 - (84 + 2);
 			end
 		end
 	end
-	local function v112(v156)
-		return (v10.APLVar.RtB_Buffs.Will_Lose and v10.APLVar.RtB_Buffs.Will_Lose[v156] and true) or false;
+	local function v109()
+		local v156 = v16:EnergyPredicted();
+		if ((v156 > v107) or ((v156 - v107) > (14 - 5)) or ((473 + 183) >= (4172 - (497 + 345)))) then
+			v107 = v156;
+		end
+		return v107;
 	end
-	local function v113()
-		local v157 = 1931 - (609 + 1322);
-		while true do
-			if ((v157 == (454 - (13 + 441))) or ((8172 - 5985) >= (12976 - 8022))) then
-				if (not v10.APLVar.RtB_Reroll or ((19309 - 15432) == (134 + 3441))) then
-					if (((2567 - 1860) > (225 + 407)) and (v64 == "1+ Buff")) then
-						v10.APLVar.RtB_Reroll = ((v111() <= (0 + 0)) and true) or false;
-					elseif ((v64 == "Broadside") or ((1620 - 1074) >= (1469 + 1215))) then
-						v10.APLVar.RtB_Reroll = (not v15:BuffUp(v84.Broadside) and true) or false;
-					elseif (((2694 - 1229) <= (2844 + 1457)) and (v64 == "Buried Treasure")) then
-						v10.APLVar.RtB_Reroll = (not v15:BuffUp(v84.BuriedTreasure) and true) or false;
-					elseif (((948 + 756) > (1024 + 401)) and (v64 == "Grand Melee")) then
-						v10.APLVar.RtB_Reroll = (not v15:BuffUp(v84.GrandMelee) and true) or false;
-					elseif ((v64 == "Skull and Crossbones") or ((577 + 110) == (4143 + 91))) then
-						v10.APLVar.RtB_Reroll = (not v15:BuffUp(v84.SkullandCrossbones) and true) or false;
-					elseif ((v64 == "Ruthless Precision") or ((3763 - (153 + 280)) < (4126 - 2697))) then
-						v10.APLVar.RtB_Reroll = (not v15:BuffUp(v84.RuthlessPrecision) and true) or false;
-					elseif (((1030 + 117) >= (133 + 202)) and (v64 == "True Bearing")) then
-						v10.APLVar.RtB_Reroll = (not v15:BuffUp(v84.TrueBearing) and true) or false;
-					else
-						v10.APLVar.RtB_Reroll = false;
-						v111();
-						if (((1798 + 1637) > (1903 + 194)) and (v111() <= (v21(v112(v84.BuriedTreasure)) + v21(v112(v84.GrandMelee)))) and (v93 < (2 + 0))) then
-							v10.APLVar.RtB_Reroll = true;
+	local v110 = {v85.Broadside,v85.BuriedTreasure,v85.GrandMelee,v85.RuthlessPrecision,v85.SkullandCrossbones,v85.TrueBearing};
+	local v111 = false;
+	local function v112()
+		if (not v11.APLVar.RtB_Buffs or ((9213 - 6721) <= (303 + 32))) then
+			local v170 = 0 - 0;
+			local v171;
+			while true do
+				if (((3264 + 1058) >= (3051 - (457 + 32))) and (v170 == (2 + 1))) then
+					for v191 = 1403 - (832 + 570), #v110 do
+						local v192 = v16:BuffRemains(v110[v191]);
+						if ((v192 > (0 + 0)) or ((949 + 2688) >= (13341 - 9571))) then
+							local v195 = 0 + 0;
+							local v196;
+							while true do
+								if (((797 - (588 + 208)) == v195) or ((6411 - 4032) > (6378 - (884 + 916)))) then
+									v196 = math.abs(v192 - v171);
+									if ((v196 <= (0.5 - 0)) or ((281 + 202) > (1396 - (232 + 421)))) then
+										v11.APLVar.RtB_Buffs.Normal = v11.APLVar.RtB_Buffs.Normal + (1890 - (1569 + 320));
+										v11.APLVar.RtB_Buffs.Will_Lose[v110[v191]:Name()] = true;
+										v11.APLVar.RtB_Buffs.Will_Lose.Total = v11.APLVar.RtB_Buffs.Will_Lose.Total + 1 + 0;
+									elseif (((467 + 1987) > (1947 - 1369)) and (v192 > v171)) then
+										v11.APLVar.RtB_Buffs.Longer = v11.APLVar.RtB_Buffs.Longer + (606 - (316 + 289));
+									else
+										v11.APLVar.RtB_Buffs.Shorter = v11.APLVar.RtB_Buffs.Shorter + (2 - 1);
+										v11.APLVar.RtB_Buffs.Will_Lose[v110[v191]:Name()] = true;
+										v11.APLVar.RtB_Buffs.Will_Lose.Total = v11.APLVar.RtB_Buffs.Will_Lose.Total + 1 + 0;
+									end
+									break;
+								end
+								if (((2383 - (666 + 787)) < (4883 - (360 + 65))) and (v195 == (0 + 0))) then
+									v11.APLVar.RtB_Buffs.Total = v11.APLVar.RtB_Buffs.Total + (255 - (79 + 175));
+									if (((1043 - 381) <= (759 + 213)) and (v192 > v11.APLVar.RtB_Buffs.MaxRemains)) then
+										v11.APLVar.RtB_Buffs.MaxRemains = v192;
+									end
+									v195 = 2 - 1;
+								end
+							end
 						end
-						if ((v84.Crackshot:IsAvailable() and not v15:HasTier(46 - 15, 3 + 1) and ((not v112(v84.TrueBearing) and v84.HiddenOpportunity:IsAvailable()) or (not v112(v84.Broadside) and not v84.HiddenOpportunity:IsAvailable())) and (v10.APLVar.RtB_Buffs.Will_Lose.Total <= (668 - (89 + 578)))) or ((2694 + 1076) >= (8400 - 4359))) then
-							v10.APLVar.RtB_Reroll = true;
-						end
-						if ((v84.Crackshot:IsAvailable() and v15:HasTier(1080 - (572 + 477), 1 + 3) and (v10.APLVar.RtB_Buffs.Will_Lose.Total <= (1 + 0 + v21(v15:BuffUp(v84.LoadedDiceBuff))))) or ((453 + 3338) <= (1697 - (84 + 2)))) then
-							v10.APLVar.RtB_Reroll = true;
-						end
-						if ((not v84.Crackshot:IsAvailable() and v84.HiddenOpportunity:IsAvailable() and not v112(v84.SkullandCrossbones) and (v10.APLVar.RtB_Buffs.Will_Lose.Total < ((2 - 0) + v112(v84.GrandMelee))) and (v93 < (2 + 0))) or ((5420 - (497 + 345)) <= (52 + 1956))) then
-							v10.APLVar.RtB_Reroll = true;
-						end
-						v10.APLVar.RtB_Reroll = v10.APLVar.RtB_Reroll and ((v10.APLVar.RtB_Buffs.Longer == (0 + 0)) or ((v10.APLVar.RtB_Buffs.Normal == (1333 - (605 + 728))) and (v10.APLVar.RtB_Buffs.Longer >= (1 + 0)) and (v111() < (13 - 7)) and (v10.APLVar.RtB_Buffs.MaxRemains <= (2 + 37)) and not v15:StealthUp(true, true) and v15:BuffUp(v84.LoadedDiceBuff)));
-						if (((4159 - 3034) <= (1872 + 204)) and (v16:FilteredTimeToDie("<", 32 - 20) or v9.BossFilteredFightRemains("<", 10 + 2))) then
-							v10.APLVar.RtB_Reroll = false;
+						if (((8416 - 4046) == (5269 - (503 + 396))) and v111) then
+							local v197 = 181 - (92 + 89);
+							while true do
+								if ((v197 == (0 - 0)) or ((2443 + 2319) <= (510 + 351))) then
+									print("RtbRemains", v171);
+									print(v110[v191]:Name(), v192);
+									break;
+								end
+							end
 						end
 					end
+					if (v111 or ((5529 - 4117) == (584 + 3680))) then
+						print("have: ", v11.APLVar.RtB_Buffs.Total);
+						print("will lose: ", v11.APLVar.RtB_Buffs.Will_Lose.Total);
+						print("shorter: ", v11.APLVar.RtB_Buffs.Shorter);
+						print("normal: ", v11.APLVar.RtB_Buffs.Normal);
+						print("longer: ", v11.APLVar.RtB_Buffs.Longer);
+						print("max remains: ", v11.APLVar.RtB_Buffs.MaxRemains);
+					end
+					break;
 				end
-				return v10.APLVar.RtB_Reroll;
+				if ((v170 == (2 - 1)) or ((2765 + 403) < (1029 + 1124))) then
+					v11.APLVar.RtB_Buffs.Total = 0 - 0;
+					v11.APLVar.RtB_Buffs.Normal = 0 + 0;
+					v11.APLVar.RtB_Buffs.Shorter = 0 - 0;
+					v170 = 1246 - (485 + 759);
+				end
+				if ((v170 == (4 - 2)) or ((6165 - (442 + 747)) < (2467 - (832 + 303)))) then
+					v11.APLVar.RtB_Buffs.Longer = 946 - (88 + 858);
+					v11.APLVar.RtB_Buffs.MaxRemains = 0 + 0;
+					v171 = v84.RtBRemains();
+					v170 = 3 + 0;
+				end
+				if (((191 + 4437) == (5417 - (766 + 23))) and (v170 == (0 - 0))) then
+					v11.APLVar.RtB_Buffs = {};
+					v11.APLVar.RtB_Buffs.Will_Lose = {};
+					v11.APLVar.RtB_Buffs.Will_Lose.Total = 0 - 0;
+					v170 = 2 - 1;
+				end
 			end
 		end
+		return v11.APLVar.RtB_Buffs.Total;
+	end
+	local function v113(v157)
+		return (v11.APLVar.RtB_Buffs.Will_Lose and v11.APLVar.RtB_Buffs.Will_Lose[v157] and true) or false;
 	end
 	local function v114()
-		return v96 >= ((v83.CPMaxSpend() - (490 - (457 + 32))) - v21((v15:StealthUp(true, true)) and v84.Crackshot:IsAvailable()));
+		local v158 = 0 - 0;
+		while true do
+			if ((v158 == (1073 - (1036 + 37))) or ((39 + 15) == (769 - 374))) then
+				if (((65 + 17) == (1562 - (641 + 839))) and not v11.APLVar.RtB_Reroll) then
+					if ((v65 == "1+ Buff") or ((1494 - (910 + 3)) < (718 - 436))) then
+						v11.APLVar.RtB_Reroll = ((v112() <= (1684 - (1466 + 218))) and true) or false;
+					elseif ((v65 == "Broadside") or ((2119 + 2490) < (3643 - (556 + 592)))) then
+						v11.APLVar.RtB_Reroll = (not v16:BuffUp(v85.Broadside) and true) or false;
+					elseif (((410 + 742) == (1960 - (329 + 479))) and (v65 == "Buried Treasure")) then
+						v11.APLVar.RtB_Reroll = (not v16:BuffUp(v85.BuriedTreasure) and true) or false;
+					elseif (((2750 - (174 + 680)) <= (11758 - 8336)) and (v65 == "Grand Melee")) then
+						v11.APLVar.RtB_Reroll = (not v16:BuffUp(v85.GrandMelee) and true) or false;
+					elseif ((v65 == "Skull and Crossbones") or ((2052 - 1062) > (1157 + 463))) then
+						v11.APLVar.RtB_Reroll = (not v16:BuffUp(v85.SkullandCrossbones) and true) or false;
+					elseif ((v65 == "Ruthless Precision") or ((1616 - (396 + 343)) > (416 + 4279))) then
+						v11.APLVar.RtB_Reroll = (not v16:BuffUp(v85.RuthlessPrecision) and true) or false;
+					elseif (((4168 - (29 + 1448)) >= (3240 - (135 + 1254))) and (v65 == "True Bearing")) then
+						v11.APLVar.RtB_Reroll = (not v16:BuffUp(v85.TrueBearing) and true) or false;
+					else
+						local v217 = 0 - 0;
+						while true do
+							if (((4 - 3) == v217) or ((1990 + 995) >= (6383 - (389 + 1138)))) then
+								v11.APLVar.RtB_Reroll = v112() <= (v22(v113(v85.BuriedTreasure)) + v22(v113(v85.GrandMelee) and (v94 < (576 - (102 + 472)))));
+								if (((4036 + 240) >= (663 + 532)) and v85.Crackshot:IsAvailable() and not v16:HasTier(29 + 2, 1549 - (320 + 1225))) then
+									v11.APLVar.RtB_Reroll = (not v113(v85.TrueBearing) and v85.HiddenOpportunity:IsAvailable()) or (not v113(v85.Broadside) and not v85.HiddenOpportunity:IsAvailable() and (v11.APLVar.RtB_Buffs.Will_Lose.Total <= (1 - 0)));
+								end
+								v217 = 2 + 0;
+							end
+							if (((4696 - (157 + 1307)) <= (6549 - (821 + 1038))) and (v217 == (0 - 0))) then
+								v11.APLVar.RtB_Reroll = false;
+								v112();
+								v217 = 1 + 0;
+							end
+							if (((4 - 1) == v217) or ((334 + 562) >= (7797 - 4651))) then
+								v11.APLVar.RtB_Reroll = v11.APLVar.RtB_Reroll and ((v11.APLVar.RtB_Buffs.Longer == (1026 - (834 + 192))) or ((v11.APLVar.RtB_Buffs.Normal == (0 + 0)) and (v11.APLVar.RtB_Buffs.Longer >= (1 + 0)) and (v112() < (1 + 5)) and (v11.APLVar.RtB_Buffs.MaxRemains <= (59 - 20)) and not v16:StealthUp(true, true) and v16:BuffUp(v85.LoadedDiceBuff)));
+								if (((3365 - (300 + 4)) >= (790 + 2168)) and (v17:FilteredTimeToDie("<", 31 - 19) or v10.BossFilteredFightRemains("<", 374 - (112 + 250)))) then
+									v11.APLVar.RtB_Reroll = false;
+								end
+								break;
+							end
+							if (((1271 + 1916) >= (1612 - 968)) and (v217 == (2 + 0))) then
+								if (((334 + 310) <= (527 + 177)) and v85.Crackshot:IsAvailable() and v16:HasTier(16 + 15, 3 + 1)) then
+									v11.APLVar.RtB_Reroll = v11.APLVar.RtB_Buffs.Will_Lose.Total <= ((1415 - (1001 + 413)) + v22(v16:BuffUp(v85.LoadedDiceBuff)));
+								end
+								if (((2136 - 1178) > (1829 - (244 + 638))) and not v85.Crackshot:IsAvailable() and v85.HiddenOpportunity:IsAvailable() and not v113(v85.SkullandCrossbones) and (v11.APLVar.RtB_Buffs.Will_Lose.Total < ((695 - (627 + 66)) + v22(v113(v85.GrandMelee)))) and (v94 < (5 - 3))) then
+									v11.APLVar.RtB_Reroll = true;
+								end
+								v217 = 605 - (512 + 90);
+							end
+						end
+					end
+				end
+				return v11.APLVar.RtB_Reroll;
+			end
+		end
 	end
 	local function v115()
-		return (v84.HiddenOpportunity:IsAvailable() or (v98 >= (1 + 1 + v21(v84.ImprovedAmbush:IsAvailable()) + v21(v15:BuffUp(v84.Broadside))))) and (v99 >= (1452 - (832 + 570)));
+		return v97 >= ((v84.CPMaxSpend() - (1907 - (1665 + 241))) - v22((v16:StealthUp(true, true)) and v85.Crackshot:IsAvailable()));
 	end
 	local function v116()
-		return v67 and (not v15:IsTanking(v16) or v77);
+		return (v85.HiddenOpportunity:IsAvailable() or (v99 >= ((719 - (373 + 344)) + v22(v85.ImprovedAmbush:IsAvailable()) + v22(v16:BuffUp(v85.Broadside))))) and (v100 >= (23 + 27));
 	end
 	local function v117()
-		return not v84.ShadowDanceTalent:IsAvailable() and ((v84.FanTheHammer:TalentRank() + v21(v84.QuickDraw:IsAvailable()) + v21(v84.Audacity:IsAvailable())) < (v21(v84.CountTheOdds:IsAvailable()) + v21(v84.KeepItRolling:IsAvailable())));
+		return v68 and (not v16:IsTanking(v17) or v78);
 	end
 	local function v118()
-		return v15:BuffUp(v84.BetweentheEyes) and (not v84.HiddenOpportunity:IsAvailable() or (v15:BuffDown(v84.AudacityBuff) and ((v84.FanTheHammer:TalentRank() < (2 + 0)) or v15:BuffDown(v84.Opportunity)))) and not v84.Crackshot:IsAvailable();
+		return not v85.ShadowDanceTalent:IsAvailable() and ((v85.FanTheHammer:TalentRank() + v22(v85.QuickDraw:IsAvailable()) + v22(v85.Audacity:IsAvailable())) < (v22(v85.CountTheOdds:IsAvailable()) + v22(v85.KeepItRolling:IsAvailable())));
 	end
 	local function v119()
-		local v158 = 0 + 0;
+		return v16:BuffUp(v85.BetweentheEyes) and (not v85.HiddenOpportunity:IsAvailable() or (v16:BuffDown(v85.AudacityBuff) and ((v85.FanTheHammer:TalentRank() < (1 + 1)) or v16:BuffDown(v85.Opportunity)))) and not v85.Crackshot:IsAvailable();
+	end
+	local function v120()
+		local v159 = 0 - 0;
 		while true do
-			if ((v158 == (6 - 4)) or ((358 + 385) >= (5195 - (588 + 208)))) then
-				if (((3112 - 1957) < (3473 - (884 + 916))) and v84.ShadowDance:IsReady() and v84.KeepItRolling:IsAvailable() and v118() and ((v84.KeepItRolling:CooldownRemains() <= (62 - 32)) or ((v84.KeepItRolling:CooldownRemains() >= (70 + 50)) and (v114() or v84.HiddenOpportunity:IsAvailable())))) then
-					if (v9.Cast(v84.ShadowDance, v53) or ((2977 - (232 + 421)) <= (2467 - (1569 + 320)))) then
+			if (((7601 - 3109) >= (3753 - (35 + 1064))) and (v159 == (1 + 0))) then
+				if (((7364 - 3922) >= (6 + 1497)) and v85.ShadowDance:IsReady() and v85.Crackshot:IsAvailable() and v115() and ((v85.Vanish:CooldownRemains() >= (1242 - (298 + 938))) or not v68) and not v16:StealthUp(true, false)) then
+					if (v10.Cast(v85.ShadowDance, v54) or ((4429 - (233 + 1026)) <= (3130 - (636 + 1030)))) then
+						return "Cast Shadow Dance Crackshot";
+					end
+				end
+				if ((v85.ShadowDance:IsReady() and not v85.KeepItRolling:IsAvailable() and v119() and v16:BuffUp(v85.SliceandDice) and (v115() or v85.HiddenOpportunity:IsAvailable()) and (not v85.HiddenOpportunity:IsAvailable() or not v85.Vanish:IsReady() or not v68)) or ((2453 + 2344) == (4287 + 101))) then
+					if (((164 + 387) <= (47 + 634)) and v12(v85.ShadowDance, v54)) then
 						return "Cast Shadow Dance";
 					end
 				end
-				if (((925 + 2842) == (716 + 3051)) and v84.Shadowmeld:IsAvailable() and v84.Shadowmeld:IsReady() and v30) then
-					if (((13778 - 9689) == (4694 - (316 + 289))) and ((v84.Crackshot:IsAvailable() and v114()) or (not v84.Crackshot:IsAvailable() and ((v84.CountTheOdds:IsAvailable() and v114()) or v84.HiddenOpportunity:IsAvailable())))) then
-						if (((11669 - 7211) >= (78 + 1596)) and v9.Cast(v84.Shadowmeld, v30)) then
+				v159 = 223 - (55 + 166);
+			end
+			if (((636 + 2641) > (41 + 366)) and (v159 == (0 - 0))) then
+				if (((4992 - (36 + 261)) >= (2474 - 1059)) and v85.Vanish:IsReady() and v117() and v85.HiddenOpportunity:IsAvailable() and not v85.Crackshot:IsAvailable() and not v16:BuffUp(v85.Audacity) and (v118() or (v16:BuffStack(v85.Opportunity) < (1374 - (34 + 1334)))) and v116()) then
+					if (v10.Cast(v85.Vanish, v68) or ((1235 + 1977) <= (734 + 210))) then
+						return "Cast Vanish (HO)";
+					end
+				end
+				if ((v85.Vanish:IsReady() and v117() and (not v85.HiddenOpportunity:IsAvailable() or v85.Crackshot:IsAvailable()) and v115()) or ((4379 - (1035 + 248)) <= (1819 - (20 + 1)))) then
+					if (((1843 + 1694) == (3856 - (134 + 185))) and v10.Cast(v85.Vanish, v68)) then
+						return "Cast Vanish (Finish)";
+					end
+				end
+				v159 = 1134 - (549 + 584);
+			end
+			if (((4522 - (314 + 371)) >= (5389 - 3819)) and (v159 == (970 - (478 + 490)))) then
+				if ((v85.ShadowDance:IsReady() and v85.KeepItRolling:IsAvailable() and v119() and ((v85.KeepItRolling:CooldownRemains() <= (16 + 14)) or ((v85.KeepItRolling:CooldownRemains() >= (1292 - (786 + 386))) and (v115() or v85.HiddenOpportunity:IsAvailable())))) or ((9555 - 6605) == (5191 - (1055 + 324)))) then
+					if (((6063 - (1093 + 247)) >= (2060 + 258)) and v10.Cast(v85.ShadowDance, v54)) then
+						return "Cast Shadow Dance";
+					end
+				end
+				if ((v85.Shadowmeld:IsAvailable() and v85.Shadowmeld:IsReady() and v31) or ((214 + 1813) > (11322 - 8470))) then
+					if ((v85.Crackshot:IsAvailable() and v115()) or (not v85.Crackshot:IsAvailable() and ((v85.CountTheOdds:IsAvailable() and v115()) or v85.HiddenOpportunity:IsAvailable())) or ((3855 - 2719) > (12283 - 7966))) then
+						if (((11931 - 7183) == (1689 + 3059)) and v10.Cast(v85.Shadowmeld, v31)) then
 							return "Cast Shadowmeld";
 						end
 					end
 				end
 				break;
 			end
-			if (((2425 - (666 + 787)) <= (1843 - (360 + 65))) and (v158 == (1 + 0))) then
-				if ((v84.ShadowDance:IsReady() and v84.Crackshot:IsAvailable() and v114() and ((v84.Vanish:CooldownRemains() >= (260 - (79 + 175))) or not v67) and not v15:StealthUp(true, false)) or ((7785 - 2847) < (3716 + 1046))) then
-					if (v9.Cast(v84.ShadowDance, v53) or ((7675 - 5171) > (8211 - 3947))) then
-						return "Cast Shadow Dance Crackshot";
-					end
-				end
-				if (((3052 - (503 + 396)) == (2334 - (92 + 89))) and v84.ShadowDance:IsReady() and not v84.KeepItRolling:IsAvailable() and v118() and v15:BuffUp(v84.SliceandDice) and (v114() or v84.HiddenOpportunity:IsAvailable()) and (not v84.HiddenOpportunity:IsAvailable() or not v84.Vanish:IsReady() or not v67)) then
-					if (v11(v84.ShadowDance, v53) or ((983 - 476) >= (1329 + 1262))) then
-						return "Cast Shadow Dance";
-					end
-				end
-				v158 = 2 + 0;
-			end
-			if (((17548 - 13067) == (613 + 3868)) and (v158 == (0 - 0))) then
-				if ((v84.Vanish:IsReady() and v116() and v84.HiddenOpportunity:IsAvailable() and not v84.Crackshot:IsAvailable() and not v15:BuffUp(v84.Audacity) and (v117() or (v15:BuffStack(v84.Opportunity) < (6 + 0))) and v115()) or ((1112 + 1216) < (2110 - 1417))) then
-					if (((541 + 3787) == (6600 - 2272)) and v9.Cast(v84.Vanish, v67)) then
-						return "Cast Vanish (HO)";
-					end
-				end
-				if (((2832 - (485 + 759)) >= (3081 - 1749)) and v84.Vanish:IsReady() and v116() and (not v84.HiddenOpportunity:IsAvailable() or v84.Crackshot:IsAvailable()) and v114()) then
-					if (v9.Cast(v84.Vanish, v67) or ((5363 - (442 + 747)) > (5383 - (832 + 303)))) then
-						return "Cast Vanish (Finish)";
-					end
-				end
-				v158 = 947 - (88 + 858);
-			end
-		end
-	end
-	local function v120()
-		local v159 = 0 + 0;
-		local v160;
-		while true do
-			if ((v159 == (1 + 0)) or ((189 + 4397) <= (871 - (766 + 23)))) then
-				v160 = v82.HandleBottomTrinket(v87, v28, 197 - 157, nil);
-				if (((5282 - 1419) == (10177 - 6314)) and v160) then
-					return v160;
-				end
-				break;
-			end
-			if ((v159 == (0 - 0)) or ((1355 - (1036 + 37)) <= (30 + 12))) then
-				v160 = v82.HandleTopTrinket(v87, v28, 77 - 37, nil);
-				if (((3626 + 983) >= (2246 - (641 + 839))) and v160) then
-					return v160;
-				end
-				v159 = 914 - (910 + 3);
-			end
 		end
 	end
 	local function v121()
-		local v161 = v82.HandleDPSPotion(v15:BuffUp(v84.AdrenalineRush));
-		if (v161 or ((2936 - 1784) == (4172 - (1466 + 218)))) then
-			return "DPS Pot";
-		end
-		if (((1573 + 1849) > (4498 - (556 + 592))) and v28 and v84.AdrenalineRush:IsCastable() and ((not v15:BuffUp(v84.AdrenalineRush) and (not v114() or not v84.ImprovedAdrenalineRush:IsAvailable())) or (v15:StealthUp(true, true) and v84.Crackshot:IsAvailable() and v84.ImprovedAdrenalineRush:IsAvailable() and (v97 <= (1 + 1))))) then
-			if (((1685 - (329 + 479)) > (1230 - (174 + 680))) and v11(v84.AdrenalineRush, v75)) then
-				return "Cast Adrenaline Rush";
-			end
-		end
-		if (v84.BladeFlurry:IsReady() or ((10713 - 7595) <= (3836 - 1985))) then
-			if (((v93 >= ((2 + 0) - v21(v84.UnderhandedUpperhand:IsAvailable() and not v15:StealthUp(true, true) and v15:BuffUp(v84.AdrenalineRush)))) and (v15:BuffRemains(v84.BladeFlurry) < v15:GCD())) or ((904 - (396 + 343)) >= (309 + 3183))) then
-				if (((5426 - (29 + 1448)) < (6245 - (135 + 1254))) and v11(v84.BladeFlurry)) then
-					return "Cast Blade Flurry";
+		local v160 = 0 - 0;
+		local v161;
+		while true do
+			if (((12877 - 9141) <= (3575 + 1165)) and ((2 - 1) == v160)) then
+				v161 = v83.HandleBottomTrinket(v88, v29, 696 - (364 + 324), nil);
+				if (v161 or ((9293 - 5903) <= (7342 - 4282))) then
+					return v161;
 				end
+				break;
 			end
-		end
-		if (v84.BladeFlurry:IsReady() or ((16108 - 11832) < (14082 - 11066))) then
-			if (((3126 + 1564) > (5652 - (389 + 1138))) and v84.DeftManeuvers:IsAvailable() and not v114() and (((v93 >= (577 - (102 + 472))) and (v98 == (v93 + v21(v15:BuffUp(v84.Broadside))))) or (v93 >= (5 + 0)))) then
-				if (v11(v84.BladeFlurry) or ((28 + 22) >= (836 + 60))) then
-					return "Cast Blade Flurry";
+			if ((v160 == (0 + 0)) or ((4179 - 3180) > (4312 - 1619))) then
+				v161 = v83.HandleTopTrinket(v88, v29, 24 - 16, nil);
+				if (((1731 - (1249 + 19)) < (543 + 58)) and v161) then
+					return v161;
 				end
-			end
-		end
-		if (v84.RolltheBones:IsReady() or ((3259 - (320 + 1225)) >= (5265 - 2307))) then
-			if ((v113() and not v15:StealthUp(true, true)) or (v111() == (0 + 0)) or ((v10.APLVar.RtB_Buffs.MaxRemains <= (1467 - (157 + 1307))) and v15:HasTier(1890 - (821 + 1038), 9 - 5)) or ((v10.APLVar.RtB_Buffs.MaxRemains <= (1 + 6)) and ((v84.ShadowDance:CooldownRemains() <= (4 - 1)) or (v84.Vanish:CooldownRemains() <= (2 + 1))) and not v15:StealthUp(true, true)) or ((3695 - 2204) < (1670 - (834 + 192)))) then
-				if (((45 + 659) < (254 + 733)) and v11(v84.RolltheBones)) then
-					return "Cast Roll the Bones";
-				end
-			end
-		end
-		local v162 = v120();
-		if (((80 + 3638) > (2952 - 1046)) and v162) then
-			return v162;
-		end
-		if ((v84.KeepItRolling:IsReady() and not v113() and (v111() >= ((307 - (300 + 4)) + v21(v15:HasTier(9 + 22, 10 - 6)))) and (v15:BuffDown(v84.ShadowDance) or (v111() >= (368 - (112 + 250))))) or ((382 + 576) > (9106 - 5471))) then
-			if (((2006 + 1495) <= (2324 + 2168)) and v9.Cast(v84.KeepItRolling)) then
-				return "Cast Keep it Rolling";
-			end
-		end
-		if ((v84.GhostlyStrike:IsAvailable() and v84.GhostlyStrike:IsReady() and (v96 < (6 + 1))) or ((1707 + 1735) < (1893 + 655))) then
-			if (((4289 - (1001 + 413)) >= (3264 - 1800)) and v11(v84.GhostlyStrike, v72, nil, not v16:IsSpellInRange(v84.GhostlyStrike))) then
-				return "Cast Ghostly Strike";
-			end
-		end
-		if ((v28 and v84.Sepsis:IsAvailable() and v84.Sepsis:IsReady()) or ((5679 - (244 + 638)) >= (5586 - (627 + 66)))) then
-			if ((v84.Crackshot:IsAvailable() and v84.BetweentheEyes:IsReady() and v114() and not v15:StealthUp(true, true)) or (not v84.Crackshot:IsAvailable() and v16:FilteredTimeToDie(">", 32 - 21) and v15:BuffUp(v84.BetweentheEyes)) or v9.BossFilteredFightRemains("<", 613 - (512 + 90)) or ((2457 - (1665 + 241)) > (2785 - (373 + 344)))) then
-				if (((954 + 1160) > (250 + 694)) and v9.Cast(v84.Sepsis)) then
-					return "Cast Sepsis";
-				end
-			end
-		end
-		if ((v84.BladeRush:IsReady() and (v102 > (10 - 6)) and not v15:StealthUp(true, true)) or ((3827 - 1565) >= (4195 - (35 + 1064)))) then
-			if (v9.Cast(v84.BladeRush) or ((1641 + 614) >= (7567 - 4030))) then
-				return "Cast Blade Rush";
-			end
-		end
-		if ((not v15:StealthUp(true, true) and (not v84.Crackshot:IsAvailable() or v84.BetweentheEyes:IsReady())) or ((16 + 3821) < (2542 - (298 + 938)))) then
-			v162 = v119();
-			if (((4209 - (233 + 1026)) == (4616 - (636 + 1030))) and v162) then
-				return v162;
-			end
-		end
-		if ((v28 and v84.ThistleTea:IsAvailable() and v84.ThistleTea:IsCastable() and not v15:BuffUp(v84.ThistleTea) and ((v101 >= (52 + 48)) or v9.BossFilteredFightRemains("<", v84.ThistleTea:Charges() * (6 + 0)))) or ((1404 + 3319) < (223 + 3075))) then
-			if (((1357 - (55 + 166)) >= (30 + 124)) and v9.Cast(v84.ThistleTea)) then
-				return "Cast Thistle Tea";
-			end
-		end
-		if ((v84.BladeRush:IsCastable() and (v102 > (1 + 3)) and not v15:StealthUp(true, true)) or ((1034 - 763) > (5045 - (36 + 261)))) then
-			if (((8289 - 3549) >= (4520 - (34 + 1334))) and v11(v84.BladeRush, v70, nil, not v16:IsSpellInRange(v84.BladeRush))) then
-				return "Cast Blade Rush";
-			end
-		end
-		if (v84.BloodFury:IsCastable() or ((992 + 1586) >= (2634 + 756))) then
-			if (((1324 - (1035 + 248)) <= (1682 - (20 + 1))) and v9.Cast(v84.BloodFury, v30)) then
-				return "Cast Blood Fury";
-			end
-		end
-		if (((314 + 287) < (3879 - (134 + 185))) and v84.Berserking:IsCastable()) then
-			if (((1368 - (549 + 584)) < (1372 - (314 + 371))) and v9.Cast(v84.Berserking, v30)) then
-				return "Cast Berserking";
-			end
-		end
-		if (((15616 - 11067) > (2121 - (478 + 490))) and v84.Fireblood:IsCastable()) then
-			if (v9.Cast(v84.Fireblood, v30) or ((2476 + 2198) < (5844 - (786 + 386)))) then
-				return "Cast Fireblood";
-			end
-		end
-		if (((11880 - 8212) < (5940 - (1055 + 324))) and v84.AncestralCall:IsCastable()) then
-			if (v9.Cast(v84.AncestralCall, v30) or ((1795 - (1093 + 247)) == (3204 + 401))) then
-				return "Cast Ancestral Call";
+				v160 = 3 - 2;
 			end
 		end
 	end
 	local function v122()
-		if (v84.BladeFlurry:IsReady() or ((281 + 2382) == (13149 - 9837))) then
-			if (((14515 - 10238) <= (12733 - 8258)) and v84.DeftManeuvers:IsAvailable() and not v114() and (((v93 >= (7 - 4)) and (v98 == (v93 + v21(v15:BuffUp(v84.Broadside))))) or (v93 >= (2 + 3)))) then
-				if (v11(v84.BladeFlurry, v70) or ((3351 - 2481) == (4098 - 2909))) then
-					return "Cast Blade Flurry";
-				end
-			end
-		end
-		if (((1172 + 381) <= (8011 - 4878)) and v84.ColdBlood:IsCastable() and v15:BuffDown(v84.ColdBlood) and v16:IsSpellInRange(v84.Dispatch) and v114()) then
-			if (v9.Cast(v84.ColdBlood, v55) or ((2925 - (364 + 324)) >= (9624 - 6113))) then
-				return "Cast Cold Blood";
-			end
-		end
-		if ((v84.BetweentheEyes:IsCastable() and v16:IsSpellInRange(v84.BetweentheEyes) and v114() and v84.Crackshot:IsAvailable() and (not v15:BuffUp(v84.Shadowmeld) or v15:StealthUp(true, false))) or ((3177 - 1853) > (1001 + 2019))) then
-			if (v9.Cast(v84.BetweentheEyes) or ((12519 - 9527) == (3012 - 1131))) then
-				return "Cast Between the Eyes";
-			end
-		end
-		if (((9433 - 6327) > (2794 - (1249 + 19))) and v84.Dispatch:IsCastable() and v16:IsSpellInRange(v84.Dispatch) and v114()) then
-			if (((2729 + 294) < (15064 - 11194)) and v9.Press(v84.Dispatch)) then
-				return "Cast Dispatch";
-			end
-		end
-		if (((1229 - (686 + 400)) > (59 + 15)) and v84.PistolShot:IsCastable() and v16:IsSpellInRange(v84.PistolShot) and v84.Crackshot:IsAvailable() and (v84.FanTheHammer:TalentRank() >= (231 - (73 + 156))) and (v15:BuffStack(v84.Opportunity) >= (1 + 5)) and ((v15:BuffUp(v84.Broadside) and (v97 <= (812 - (721 + 90)))) or v15:BuffUp(v84.GreenskinsWickersBuff))) then
-			if (((1 + 17) < (6857 - 4745)) and v9.Press(v84.PistolShot)) then
-				return "Cast Pistol Shot";
-			end
-		end
-		if (((1567 - (224 + 246)) <= (2636 - 1008)) and v84.Ambush:IsCastable() and v84.HiddenOpportunity:IsAvailable() and v15:BuffUp(v84.AudacityBuff)) then
-			if (((8524 - 3894) == (840 + 3790)) and v11(v84.Ambush, nil, not v16:IsSpellInRange(v84.Ambush))) then
-				return "Cast Ambush (SS High-Prio Buffed)";
-			end
-		end
-		if (((85 + 3455) > (1971 + 712)) and v84.Ambush:IsCastable() and v16:IsSpellInRange(v84.Ambush) and v84.HiddenOpportunity:IsAvailable()) then
-			if (((9530 - 4736) >= (10898 - 7623)) and v9.Press(v84.Ambush)) then
-				return "Cast Ambush";
-			end
-		end
-	end
-	local function v123()
-		local v163 = 513 - (203 + 310);
+		local v162 = 1086 - (686 + 400);
+		local v163;
+		local v164;
 		while true do
-			if (((3477 - (1238 + 755)) == (104 + 1380)) and (v163 == (1536 - (709 + 825)))) then
-				if (((2638 - 1206) < (5178 - 1623)) and v84.ColdBlood:IsCastable() and v15:BuffDown(v84.ColdBlood) and v16:IsSpellInRange(v84.Dispatch)) then
-					if (v9.Cast(v84.ColdBlood, v55) or ((1929 - (196 + 668)) > (14126 - 10548))) then
-						return "Cast Cold Blood";
+			if ((v162 == (4 + 1)) or ((2412 - (73 + 156)) < (4 + 683))) then
+				if (((5360 - (721 + 90)) == (52 + 4497)) and v85.BloodFury:IsCastable()) then
+					if (((15169 - 10497) == (5142 - (224 + 246))) and v10.Cast(v85.BloodFury, v31)) then
+						return "Cast Blood Fury";
 					end
 				end
-				if ((v84.Dispatch:IsCastable() and v16:IsSpellInRange(v84.Dispatch)) or ((9932 - 5137) < (2240 - (171 + 662)))) then
-					if (((1946 - (4 + 89)) < (16869 - 12056)) and v9.Press(v84.Dispatch)) then
-						return "Cast Dispatch";
+				if (v85.Berserking:IsCastable() or ((5941 - 2273) < (727 - 332))) then
+					if (v10.Cast(v85.Berserking, v31) or ((756 + 3410) == (11 + 444))) then
+						return "Cast Berserking";
+					end
+				end
+				if (v85.Fireblood:IsCastable() or ((3268 + 1181) == (5294 - 2631))) then
+					if (v10.Cast(v85.Fireblood, v31) or ((14232 - 9955) < (3502 - (203 + 310)))) then
+						return "Cast Fireblood";
+					end
+				end
+				v162 = 1999 - (1238 + 755);
+			end
+			if ((v162 == (0 + 0)) or ((2404 - (709 + 825)) >= (7645 - 3496))) then
+				v163 = v83.HandleDPSPotion(v16:BuffUp(v85.AdrenalineRush));
+				if (((3221 - 1009) < (4047 - (196 + 668))) and v163) then
+					return "DPS Pot";
+				end
+				if (((18343 - 13697) > (6197 - 3205)) and v29 and v85.AdrenalineRush:IsCastable() and ((not v16:BuffUp(v85.AdrenalineRush) and (not v115() or not v85.ImprovedAdrenalineRush:IsAvailable())) or (v16:StealthUp(true, true) and v85.Crackshot:IsAvailable() and v85.ImprovedAdrenalineRush:IsAvailable() and (v98 <= (835 - (171 + 662)))))) then
+					if (((1527 - (4 + 89)) < (10886 - 7780)) and v12(v85.AdrenalineRush, v76)) then
+						return "Cast Adrenaline Rush";
+					end
+				end
+				v162 = 1 + 0;
+			end
+			if (((3452 - 2666) < (1186 + 1837)) and (v162 == (1488 - (35 + 1451)))) then
+				v164 = v121();
+				if (v164 or ((3895 - (28 + 1425)) < (2067 - (941 + 1052)))) then
+					return v164;
+				end
+				if (((4349 + 186) == (6049 - (822 + 692))) and v85.KeepItRolling:IsReady() and not v114() and (v112() >= ((3 - 0) + v22(v16:HasTier(15 + 16, 301 - (45 + 252))))) and (v16:BuffDown(v85.ShadowDance) or (v112() >= (6 + 0)))) then
+					if (v10.Cast(v85.KeepItRolling) or ((1036 + 1973) <= (5123 - 3018))) then
+						return "Cast Keep it Rolling";
+					end
+				end
+				v162 = 436 - (114 + 319);
+			end
+			if (((2627 - 797) < (4700 - 1031)) and (v162 == (2 + 1))) then
+				if ((v85.GhostlyStrike:IsAvailable() and v85.GhostlyStrike:IsReady() and (v97 < (9 - 2))) or ((2996 - 1566) >= (5575 - (556 + 1407)))) then
+					if (((3889 - (741 + 465)) >= (2925 - (170 + 295))) and v12(v85.GhostlyStrike, v73, nil, not v17:IsSpellInRange(v85.GhostlyStrike))) then
+						return "Cast Ghostly Strike";
+					end
+				end
+				if ((v29 and v85.Sepsis:IsAvailable() and v85.Sepsis:IsReady()) or ((951 + 853) >= (3009 + 266))) then
+					if ((v85.Crackshot:IsAvailable() and v85.BetweentheEyes:IsReady() and v115() and not v16:StealthUp(true, true)) or (not v85.Crackshot:IsAvailable() and v17:FilteredTimeToDie(">", 26 - 15) and v16:BuffUp(v85.BetweentheEyes)) or v10.BossFilteredFightRemains("<", 10 + 1) or ((909 + 508) > (2055 + 1574))) then
+						if (((6025 - (957 + 273)) > (108 + 294)) and v10.Cast(v85.Sepsis)) then
+							return "Cast Sepsis";
+						end
+					end
+				end
+				if (((1927 + 2886) > (13584 - 10019)) and v85.BladeRush:IsReady() and (v103 > (10 - 6)) and not v16:StealthUp(true, true)) then
+					if (((11948 - 8036) == (19370 - 15458)) and v10.Cast(v85.BladeRush)) then
+						return "Cast Blade Rush";
+					end
+				end
+				v162 = 1784 - (389 + 1391);
+			end
+			if (((1770 + 1051) <= (503 + 4321)) and (v162 == (13 - 7))) then
+				if (((2689 - (783 + 168)) <= (7366 - 5171)) and v85.AncestralCall:IsCastable()) then
+					if (((41 + 0) <= (3329 - (309 + 2))) and v10.Cast(v85.AncestralCall, v31)) then
+						return "Cast Ancestral Call";
 					end
 				end
 				break;
 			end
-			if ((v163 == (0 + 0)) or ((12390 - 9569) < (954 + 1477))) then
-				if ((v84.BetweentheEyes:IsCastable() and v16:IsSpellInRange(v84.BetweentheEyes) and not v84.Crackshot:IsAvailable() and ((v15:BuffRemains(v84.BetweentheEyes) < (1490 - (35 + 1451))) or v84.ImprovedBetweenTheEyes:IsAvailable() or v84.GreenskinsWickers:IsAvailable() or v15:HasTier(1483 - (28 + 1425), 1997 - (941 + 1052))) and v15:BuffDown(v84.GreenskinsWickers)) or ((2756 + 118) < (3695 - (822 + 692)))) then
-					if (v9.Press(v84.BetweentheEyes) or ((3838 - 1149) <= (162 + 181))) then
-						return "Cast Between the Eyes";
-					end
-				end
-				if ((v84.BetweentheEyes:IsCastable() and v16:IsSpellInRange(v84.BetweentheEyes) and v84.Crackshot:IsAvailable() and (v84.Vanish:CooldownRemains() > (342 - (45 + 252))) and (v84.ShadowDance:CooldownRemains() > (12 + 0))) or ((644 + 1225) == (4889 - 2880))) then
-					if (v9.Press(v84.BetweentheEyes) or ((3979 - (114 + 319)) < (3333 - 1011))) then
-						return "Cast Between the Eyes";
-					end
-				end
-				v163 = 1 - 0;
-			end
-			if ((v163 == (1 + 0)) or ((3101 - 1019) == (10000 - 5227))) then
-				if (((5207 - (556 + 1407)) > (2261 - (741 + 465))) and v84.SliceandDice:IsCastable() and (v9.FilteredFightRemains(v92, ">", v15:BuffRemains(v84.SliceandDice), true) or (v15:BuffRemains(v84.SliceandDice) == (465 - (170 + 295)))) and (v15:BuffRemains(v84.SliceandDice) < ((1 + 0 + v97) * (1.8 + 0)))) then
-					if (v9.Press(v84.SliceandDice) or ((8156 - 4843) <= (1474 + 304))) then
-						return "Cast Slice and Dice";
-					end
-				end
-				if ((v84.KillingSpree:IsCastable() and v16:IsSpellInRange(v84.KillingSpree) and (v16:DebuffUp(v84.GhostlyStrike) or not v84.GhostlyStrike:IsAvailable())) or ((912 + 509) >= (1192 + 912))) then
-					if (((3042 - (957 + 273)) <= (869 + 2380)) and v9.Cast(v84.KillingSpree)) then
-						return "Cast Killing Spree";
-					end
-				end
-				v163 = 1 + 1;
-			end
-		end
-	end
-	local function v124()
-		local v164 = 0 - 0;
-		while true do
-			if (((4276 - 2653) <= (5977 - 4020)) and (v164 == (4 - 3))) then
-				if (((6192 - (389 + 1391)) == (2769 + 1643)) and v84.FanTheHammer:IsAvailable() and v84.Audacity:IsAvailable() and v84.HiddenOpportunity:IsAvailable() and v15:BuffUp(v84.Opportunity) and v15:BuffDown(v84.AudacityBuff)) then
-					if (((183 + 1567) >= (1916 - 1074)) and v9.Press(v84.PistolShot)) then
-						return "Cast Pistol Shot (Audacity)";
-					end
-				end
-				if (((5323 - (783 + 168)) > (6208 - 4358)) and v84.FanTheHammer:IsAvailable() and v15:BuffUp(v84.Opportunity) and ((v15:BuffStack(v84.Opportunity) >= (6 + 0)) or (v15:BuffRemains(v84.Opportunity) < (313 - (309 + 2))))) then
-					if (((712 - 480) < (2033 - (1090 + 122))) and v9.Press(v84.PistolShot)) then
-						return "Cast Pistol Shot (FtH Dump)";
-					end
-				end
-				v164 = 1 + 1;
-			end
-			if (((1739 - 1221) < (618 + 284)) and (v164 == (1118 - (628 + 490)))) then
-				if (((537 + 2457) > (2124 - 1266)) and v28 and v84.EchoingReprimand:IsReady()) then
-					if (v9.Cast(v84.EchoingReprimand, v76, nil, not v16:IsSpellInRange(v84.EchoingReprimand)) or ((17160 - 13405) <= (1689 - (431 + 343)))) then
-						return "Cast Echoing Reprimand";
-					end
-				end
-				if (((7969 - 4023) > (10828 - 7085)) and v84.Ambush:IsCastable() and v84.HiddenOpportunity:IsAvailable() and v15:BuffUp(v84.AudacityBuff)) then
-					if (v9.Press(v84.Ambush) or ((1055 + 280) >= (423 + 2883))) then
-						return "Cast Ambush (High-Prio Buffed)";
-					end
-				end
-				v164 = 1696 - (556 + 1139);
-			end
-			if (((4859 - (6 + 9)) > (413 + 1840)) and (v164 == (2 + 1))) then
-				if (((621 - (28 + 141)) == (176 + 276)) and v84.SinisterStrike:IsCastable()) then
-					if (v9.Press(v84.SinisterStrike) or ((5624 - 1067) < (1479 + 608))) then
-						return "Cast Sinister Strike";
-					end
-				end
-				break;
-			end
-			if (((5191 - (486 + 831)) == (10081 - 6207)) and (v164 == (6 - 4))) then
-				if ((v84.FanTheHammer:IsAvailable() and v15:BuffUp(v84.Opportunity) and ((v98 >= (1 + 0 + ((v21(v84.QuickDraw:IsAvailable()) + v21(v15:BuffUp(v84.Broadside))) * (v84.FanTheHammer:TalentRank() + (3 - 2))))) or (v97 <= v21(v84.Ruthlessness:IsAvailable())))) or ((3201 - (668 + 595)) > (4441 + 494))) then
-					if (v9.Cast(v84.PistolShot, nil, not v16:IsSpellInRange(v84.PistolShot)) or ((858 + 3397) < (9334 - 5911))) then
-						return "Cast Pistol Shot (Low CP Opportunity)";
-					end
-				end
-				if (((1744 - (23 + 267)) <= (4435 - (1129 + 815))) and not v84.FanTheHammer:IsAvailable() and v15:BuffUp(v84.Opportunity) and ((v102 > (388.5 - (371 + 16))) or (v98 <= ((1751 - (1326 + 424)) + v21(v15:BuffUp(v84.Broadside)))) or v84.QuickDraw:IsAvailable() or (v84.Audacity:IsAvailable() and v15:BuffDown(v84.AudacityBuff)))) then
-					if (v9.Cast(v84.PistolShot, nil, not v16:IsSpellInRange(v84.PistolShot)) or ((7873 - 3716) <= (10242 - 7439))) then
-						return "Cast Pistol Shot";
-					end
-				end
-				v164 = 121 - (88 + 30);
-			end
-		end
-	end
-	local function v125()
-		local v165 = 771 - (720 + 51);
-		while true do
-			if (((10795 - 5942) >= (4758 - (421 + 1355))) and ((9 - 3) == v165)) then
-				if (((2031 + 2103) > (4440 - (286 + 797))) and v82.TargetIsValid()) then
-					v94 = v121();
-					if (v94 or ((12491 - 9074) < (4197 - 1663))) then
-						return "CDs: " .. v94;
-					end
-					if (v15:StealthUp(true, true) or v15:BuffUp(v84.Shadowmeld) or ((3161 - (397 + 42)) <= (52 + 112))) then
-						v94 = v122();
-						if (v94 or ((3208 - (24 + 776)) < (3248 - 1139))) then
-							return "Stealth: " .. v94;
-						end
-					end
-					if (v114() or ((818 - (222 + 563)) == (3205 - 1750))) then
-						local v176 = 0 + 0;
-						while true do
-							if ((v176 == (191 - (23 + 167))) or ((2241 - (690 + 1108)) >= (1449 + 2566))) then
-								return "Finish Pooling";
-							end
-							if (((2790 + 592) > (1014 - (40 + 808))) and (v176 == (0 + 0))) then
-								v94 = v123();
-								if (v94 or ((1070 - 790) == (2924 + 135))) then
-									return "Finish: " .. v94;
-								end
-								v176 = 1 + 0;
-							end
-						end
-					end
-					v94 = v124();
-					if (((1032 + 849) > (1864 - (47 + 524))) and v94) then
-						return "Build: " .. v94;
-					end
-					if (((1530 + 827) == (6442 - 4085)) and v84.ArcaneTorrent:IsCastable() and v16:IsSpellInRange(v84.SinisterStrike) and (v101 > ((22 - 7) + v100))) then
-						if (((280 - 157) == (1849 - (1165 + 561))) and v9.Cast(v84.ArcaneTorrent, v30)) then
-							return "Cast Arcane Torrent";
-						end
-					end
-					if ((v84.ArcanePulse:IsCastable() and v16:IsSpellInRange(v84.SinisterStrike)) or ((32 + 1024) >= (10505 - 7113))) then
-						if (v9.Cast(v84.ArcanePulse) or ((413 + 668) < (1554 - (341 + 138)))) then
-							return "Cast Arcane Pulse";
-						end
-					end
-					if ((v84.LightsJudgment:IsCastable() and v16:IsInMeleeRange(2 + 3)) or ((2164 - 1115) >= (4758 - (89 + 237)))) then
-						if (v9.Cast(v84.LightsJudgment, v30) or ((15338 - 10570) <= (1780 - 934))) then
-							return "Cast Lights Judgment";
-						end
-					end
-					if ((v84.BagofTricks:IsCastable() and v16:IsInMeleeRange(886 - (581 + 300))) or ((4578 - (855 + 365)) <= (3372 - 1952))) then
-						if (v9.Cast(v84.BagofTricks, v30) or ((1221 + 2518) <= (4240 - (1030 + 205)))) then
-							return "Cast Bag of Tricks";
-						end
-					end
-					if ((v84.PistolShot:IsCastable() and v16:IsSpellInRange(v84.PistolShot) and not v16:IsInRange(v95) and not v15:StealthUp(true, true) and (v101 < (24 + 1)) and ((v98 >= (1 + 0)) or (v102 <= (287.2 - (156 + 130))))) or ((3769 - 2110) >= (3596 - 1462))) then
-						if (v9.Cast(v84.PistolShot) or ((6676 - 3416) < (621 + 1734))) then
-							return "Cast Pistol Shot (OOR)";
-						end
-					end
-					if (not v16:IsSpellInRange(v84.Dispatch) or ((391 + 278) == (4292 - (10 + 59)))) then
-						if (v11(v84.PoolEnergy, false, "OOR") or ((479 + 1213) < (2895 - 2307))) then
-							return "Pool Energy (OOR)";
-						end
-					elseif (v11(v84.PoolEnergy) or ((5960 - (671 + 492)) < (2907 + 744))) then
-						return "Pool Energy";
-					end
-				end
-				break;
-			end
-			if ((v165 == (1216 - (369 + 846))) or ((1106 + 3071) > (4139 + 711))) then
-				v97 = v15:ComboPoints();
-				v96 = v83.EffectiveComboPoints(v97);
-				v98 = v15:ComboPointsDeficit();
-				v103 = (v15:BuffUp(v84.AdrenalineRush, nil, true) and -(1995 - (1036 + 909))) or (0 + 0);
-				v165 = 2 - 0;
-			end
-			if ((v165 == (208 - (11 + 192))) or ((203 + 197) > (1286 - (135 + 40)))) then
-				if (((7392 - 4341) > (606 + 399)) and v29) then
-					local v171 = 0 - 0;
+			if (((6587 - 4442) <= (5316 - (1090 + 122))) and (v162 == (2 + 2))) then
+				if (((9030 - 6341) < (3316 + 1529)) and not v16:StealthUp(true, true) and (not v85.Crackshot:IsAvailable() or v85.BetweentheEyes:IsReady())) then
+					local v183 = 1118 - (628 + 490);
 					while true do
-						if (((5536 - 1843) <= (4558 - (50 + 126))) and (v171 == (0 - 0))) then
-							v94 = v82.HandleIncorporeal(v84.Blind, v86.BlindMouseover, 7 + 23, true);
-							if (v94 or ((4695 - (1233 + 180)) > (5069 - (522 + 447)))) then
-								return v94;
+						if ((v183 == (0 + 0)) or ((5748 - 3426) > (11982 - 9360))) then
+							v164 = v120();
+							if (v164 or ((5308 - (431 + 343)) == (4204 - 2122))) then
+								return v164;
 							end
 							break;
 						end
 					end
 				end
-				if ((not v15:AffectingCombat() and not v15:IsMounted() and v59) or ((5001 - (107 + 1314)) < (1320 + 1524))) then
-					v94 = v83.Stealth(v84.Stealth2, nil);
-					if (((270 - 181) < (1908 + 2582)) and v94) then
-						return "Stealth (OOC): " .. v94;
+				if ((v29 and v85.ThistleTea:IsAvailable() and v85.ThistleTea:IsCastable() and not v16:BuffUp(v85.ThistleTea) and ((v102 >= (289 - 189)) or v10.BossFilteredFightRemains("<", v85.ThistleTea:Charges() * (5 + 1)))) or ((201 + 1370) > (3562 - (556 + 1139)))) then
+					if (v10.Cast(v85.ThistleTea) or ((2669 - (6 + 9)) >= (549 + 2447))) then
+						return "Cast Thistle Tea";
 					end
 				end
-				if ((not v15:AffectingCombat() and (v84.Vanish:TimeSinceLastCast() > (1 - 0)) and v16:IsInRange(31 - 23) and v26) or ((6893 - (716 + 1194)) < (31 + 1777))) then
-					if (((411 + 3418) > (4272 - (74 + 429))) and v82.TargetIsValid() and v16:IsInRange(19 - 9) and not (v15:IsChanneling() or v15:IsCasting())) then
-						local v177 = 0 + 0;
+				if (((2038 + 1940) > (2273 - (28 + 141))) and v85.BladeRush:IsCastable() and (v103 > (2 + 2)) and not v16:StealthUp(true, true)) then
+					if (((3696 - 701) > (1092 + 449)) and v12(v85.BladeRush, v71, nil, not v17:IsSpellInRange(v85.BladeRush))) then
+						return "Cast Blade Rush";
+					end
+				end
+				v162 = 1322 - (486 + 831);
+			end
+			if (((8454 - 5205) > (3354 - 2401)) and (v162 == (1 + 0))) then
+				if (v85.BladeFlurry:IsReady() or ((10348 - 7075) > (5836 - (668 + 595)))) then
+					if (((v94 >= ((2 + 0) - v22(v85.UnderhandedUpperhand:IsAvailable() and not v16:StealthUp(true, true) and v16:BuffUp(v85.AdrenalineRush)))) and (v16:BuffRemains(v85.BladeFlurry) < v16:GCD())) or ((636 + 2515) < (3501 - 2217))) then
+						if (v12(v85.BladeFlurry) or ((2140 - (23 + 267)) == (3473 - (1129 + 815)))) then
+							return "Cast Blade Flurry";
+						end
+					end
+				end
+				if (((1208 - (371 + 16)) < (3873 - (1326 + 424))) and v85.BladeFlurry:IsReady()) then
+					if (((1707 - 805) < (8496 - 6171)) and v85.DeftManeuvers:IsAvailable() and not v115() and (((v94 >= (121 - (88 + 30))) and (v99 == (v94 + v22(v16:BuffUp(v85.Broadside))))) or (v94 >= (776 - (720 + 51))))) then
+						if (((1908 - 1050) <= (4738 - (421 + 1355))) and v12(v85.BladeFlurry)) then
+							return "Cast Blade Flurry";
+						end
+					end
+				end
+				if (v85.RolltheBones:IsReady() or ((6509 - 2563) < (633 + 655))) then
+					if (v114() or (v112() == (1083 - (286 + 797))) or ((v11.APLVar.RtB_Buffs.MaxRemains <= (10 - 7)) and v16:HasTier(51 - 20, 443 - (397 + 42))) or ((v11.APLVar.RtB_Buffs.MaxRemains <= (3 + 4)) and ((v85.ShadowDance:CooldownRemains() <= (803 - (24 + 776))) or (v85.Vanish:CooldownRemains() <= (4 - 1)))) or ((4027 - (222 + 563)) == (1248 - 681))) then
+						if (v12(v85.RolltheBones) or ((610 + 237) >= (1453 - (23 + 167)))) then
+							return "Cast Roll the Bones";
+						end
+					end
+				end
+				v162 = 1800 - (690 + 1108);
+			end
+		end
+	end
+	local function v123()
+		local v165 = 0 + 0;
+		while true do
+			if ((v165 == (1 + 0)) or ((3101 - (40 + 808)) == (305 + 1546))) then
+				if ((v85.BetweentheEyes:IsCastable() and v17:IsSpellInRange(v85.BetweentheEyes) and v115() and v85.Crackshot:IsAvailable() and (not v16:BuffUp(v85.Shadowmeld) or v16:StealthUp(true, false))) or ((7980 - 5893) > (2268 + 104))) then
+					if (v10.Cast(v85.BetweentheEyes) or ((2352 + 2093) < (2276 + 1873))) then
+						return "Cast Between the Eyes";
+					end
+				end
+				if ((v85.Dispatch:IsCastable() and v17:IsSpellInRange(v85.Dispatch) and v115()) or ((2389 - (47 + 524)) == (56 + 29))) then
+					if (((1722 - 1092) < (3179 - 1052)) and v10.Press(v85.Dispatch)) then
+						return "Cast Dispatch";
+					end
+				end
+				v165 = 4 - 2;
+			end
+			if ((v165 == (1726 - (1165 + 561))) or ((58 + 1880) == (7786 - 5272))) then
+				if (((1624 + 2631) >= (534 - (341 + 138))) and v85.BladeFlurry:IsReady()) then
+					if (((810 + 2189) > (2385 - 1229)) and v85.DeftManeuvers:IsAvailable() and not v115() and (((v94 >= (329 - (89 + 237))) and (v99 == (v94 + v22(v16:BuffUp(v85.Broadside))))) or (v94 >= (16 - 11)))) then
+						if (((4947 - 2597) > (2036 - (581 + 300))) and v12(v85.BladeFlurry, v71)) then
+							return "Cast Blade Flurry";
+						end
+					end
+				end
+				if (((5249 - (855 + 365)) <= (11526 - 6673)) and v85.ColdBlood:IsCastable() and v16:BuffDown(v85.ColdBlood) and v17:IsSpellInRange(v85.Dispatch) and v115()) then
+					if (v10.Cast(v85.ColdBlood, v56) or ((169 + 347) > (4669 - (1030 + 205)))) then
+						return "Cast Cold Blood";
+					end
+				end
+				v165 = 1 + 0;
+			end
+			if (((3764 + 282) >= (3319 - (156 + 130))) and (v165 == (4 - 2))) then
+				if ((v85.PistolShot:IsCastable() and v17:IsSpellInRange(v85.PistolShot) and v85.Crackshot:IsAvailable() and (v85.FanTheHammer:TalentRank() >= (2 - 0)) and (v16:BuffStack(v85.Opportunity) >= (11 - 5)) and ((v16:BuffUp(v85.Broadside) and (v98 <= (1 + 0))) or v16:BuffUp(v85.GreenskinsWickersBuff))) or ((1586 + 1133) <= (1516 - (10 + 59)))) then
+					if (v10.Press(v85.PistolShot) or ((1170 + 2964) < (19334 - 15408))) then
+						return "Cast Pistol Shot";
+					end
+				end
+				if ((v85.Ambush:IsCastable() and v85.HiddenOpportunity:IsAvailable() and v16:BuffUp(v85.AudacityBuff)) or ((1327 - (671 + 492)) >= (2218 + 567))) then
+					if (v12(v85.Ambush, nil, not v17:IsSpellInRange(v85.Ambush)) or ((1740 - (369 + 846)) == (559 + 1550))) then
+						return "Cast Ambush (SS High-Prio Buffed)";
+					end
+				end
+				v165 = 3 + 0;
+			end
+			if (((1978 - (1036 + 909)) == (27 + 6)) and ((4 - 1) == v165)) then
+				if (((3257 - (11 + 192)) <= (2029 + 1986)) and v85.Ambush:IsCastable() and v17:IsSpellInRange(v85.Ambush) and v85.HiddenOpportunity:IsAvailable()) then
+					if (((2046 - (135 + 40)) < (8193 - 4811)) and v10.Press(v85.Ambush)) then
+						return "Cast Ambush";
+					end
+				end
+				break;
+			end
+		end
+	end
+	local function v124()
+		local v166 = 0 + 0;
+		while true do
+			if (((2848 - 1555) <= (3246 - 1080)) and (v166 == (177 - (50 + 126)))) then
+				if ((v85.SliceandDice:IsCastable() and (v10.FilteredFightRemains(v93, ">", v16:BuffRemains(v85.SliceandDice), true) or (v16:BuffRemains(v85.SliceandDice) == (0 - 0))) and (v16:BuffRemains(v85.SliceandDice) < ((1 + 0 + v98) * (1414.8 - (1233 + 180))))) or ((3548 - (522 + 447)) < (1544 - (107 + 1314)))) then
+					if (v10.Press(v85.SliceandDice) or ((393 + 453) >= (7215 - 4847))) then
+						return "Cast Slice and Dice";
+					end
+				end
+				if ((v85.KillingSpree:IsCastable() and v17:IsSpellInRange(v85.KillingSpree) and (v17:DebuffUp(v85.GhostlyStrike) or not v85.GhostlyStrike:IsAvailable())) or ((1705 + 2307) <= (6668 - 3310))) then
+					if (((5911 - 4417) <= (4915 - (716 + 1194))) and v10.Cast(v85.KillingSpree)) then
+						return "Cast Killing Spree";
+					end
+				end
+				v166 = 1 + 1;
+			end
+			if ((v166 == (1 + 1)) or ((3614 - (74 + 429)) == (4116 - 1982))) then
+				if (((1168 + 1187) == (5390 - 3035)) and v85.ColdBlood:IsCastable() and v16:BuffDown(v85.ColdBlood) and v17:IsSpellInRange(v85.Dispatch)) then
+					if (v10.Cast(v85.ColdBlood, v56) or ((416 + 172) <= (1331 - 899))) then
+						return "Cast Cold Blood";
+					end
+				end
+				if (((11860 - 7063) >= (4328 - (279 + 154))) and v85.Dispatch:IsCastable() and v17:IsSpellInRange(v85.Dispatch)) then
+					if (((4355 - (454 + 324)) == (2815 + 762)) and v10.Press(v85.Dispatch)) then
+						return "Cast Dispatch";
+					end
+				end
+				break;
+			end
+			if (((3811 - (12 + 5)) > (1992 + 1701)) and (v166 == (0 - 0))) then
+				if ((v85.BetweentheEyes:IsCastable() and v17:IsSpellInRange(v85.BetweentheEyes) and not v85.Crackshot:IsAvailable() and ((v16:BuffRemains(v85.BetweentheEyes) < (2 + 2)) or v85.ImprovedBetweenTheEyes:IsAvailable() or v85.GreenskinsWickers:IsAvailable() or v16:HasTier(1123 - (277 + 816), 17 - 13)) and v16:BuffDown(v85.GreenskinsWickers)) or ((2458 - (1058 + 125)) == (769 + 3331))) then
+					if (v10.Press(v85.BetweentheEyes) or ((2566 - (815 + 160)) >= (15360 - 11780))) then
+						return "Cast Between the Eyes";
+					end
+				end
+				if (((2333 - 1350) <= (432 + 1376)) and v85.BetweentheEyes:IsCastable() and v17:IsSpellInRange(v85.BetweentheEyes) and v85.Crackshot:IsAvailable() and (v85.Vanish:CooldownRemains() > (131 - 86)) and (v85.ShadowDance:CooldownRemains() > (1910 - (41 + 1857)))) then
+					if (v10.Press(v85.BetweentheEyes) or ((4043 - (1222 + 671)) <= (3093 - 1896))) then
+						return "Cast Between the Eyes";
+					end
+				end
+				v166 = 1 - 0;
+			end
+		end
+	end
+	local function v125()
+		local v167 = 1182 - (229 + 953);
+		while true do
+			if (((5543 - (1111 + 663)) >= (2752 - (874 + 705))) and (v167 == (1 + 1))) then
+				if (((1014 + 471) == (3086 - 1601)) and v85.FanTheHammer:IsAvailable() and v16:BuffUp(v85.Opportunity) and ((v99 >= (1 + 0 + ((v22(v85.QuickDraw:IsAvailable()) + v22(v16:BuffUp(v85.Broadside))) * (v85.FanTheHammer:TalentRank() + (680 - (642 + 37)))))) or (v98 <= v22(v85.Ruthlessness:IsAvailable())))) then
+					if (v10.Cast(v85.PistolShot, nil, not v17:IsSpellInRange(v85.PistolShot)) or ((756 + 2559) <= (446 + 2336))) then
+						return "Cast Pistol Shot (Low CP Opportunity)";
+					end
+				end
+				if ((not v85.FanTheHammer:IsAvailable() and v16:BuffUp(v85.Opportunity) and ((v103 > (2.5 - 1)) or (v99 <= ((455 - (233 + 221)) + v22(v16:BuffUp(v85.Broadside)))) or v85.QuickDraw:IsAvailable() or (v85.Audacity:IsAvailable() and v16:BuffDown(v85.AudacityBuff)))) or ((2025 - 1149) >= (2609 + 355))) then
+					if (v10.Cast(v85.PistolShot, nil, not v17:IsSpellInRange(v85.PistolShot)) or ((3773 - (718 + 823)) > (1572 + 925))) then
+						return "Cast Pistol Shot";
+					end
+				end
+				v167 = 808 - (266 + 539);
+			end
+			if ((v167 == (2 - 1)) or ((3335 - (636 + 589)) <= (787 - 455))) then
+				if (((7602 - 3916) > (2514 + 658)) and v85.FanTheHammer:IsAvailable() and v85.Audacity:IsAvailable() and v85.HiddenOpportunity:IsAvailable() and v16:BuffUp(v85.Opportunity) and v16:BuffDown(v85.AudacityBuff)) then
+					if (v10.Press(v85.PistolShot) or ((1626 + 2848) < (1835 - (657 + 358)))) then
+						return "Cast Pistol Shot (Audacity)";
+					end
+				end
+				if (((11329 - 7050) >= (6565 - 3683)) and v85.FanTheHammer:IsAvailable() and v16:BuffUp(v85.Opportunity) and ((v16:BuffStack(v85.Opportunity) >= (1193 - (1151 + 36))) or (v16:BuffRemains(v85.Opportunity) < (2 + 0)))) then
+					if (v10.Press(v85.PistolShot) or ((534 + 1495) >= (10515 - 6994))) then
+						return "Cast Pistol Shot (FtH Dump)";
+					end
+				end
+				v167 = 1834 - (1552 + 280);
+			end
+			if (((837 - (64 + 770)) == v167) or ((1384 + 653) >= (10537 - 5895))) then
+				if (((306 + 1414) < (5701 - (157 + 1086))) and v85.SinisterStrike:IsCastable()) then
+					if (v10.Press(v85.SinisterStrike) or ((872 - 436) > (13231 - 10210))) then
+						return "Cast Sinister Strike";
+					end
+				end
+				break;
+			end
+			if (((1092 - 379) <= (1155 - 308)) and (v167 == (819 - (599 + 220)))) then
+				if (((4289 - 2135) <= (5962 - (1813 + 118))) and v29 and v85.EchoingReprimand:IsReady()) then
+					if (((3374 + 1241) == (5832 - (841 + 376))) and v10.Cast(v85.EchoingReprimand, v77, nil, not v17:IsSpellInRange(v85.EchoingReprimand))) then
+						return "Cast Echoing Reprimand";
+					end
+				end
+				if ((v85.Ambush:IsCastable() and v85.HiddenOpportunity:IsAvailable() and v16:BuffUp(v85.AudacityBuff)) or ((5310 - 1520) == (117 + 383))) then
+					if (((242 - 153) < (1080 - (464 + 395))) and v10.Press(v85.Ambush)) then
+						return "Cast Ambush (High-Prio Buffed)";
+					end
+				end
+				v167 = 2 - 1;
+			end
+		end
+	end
+	local function v126()
+		local v168 = 0 + 0;
+		while true do
+			if (((2891 - (467 + 370)) >= (2936 - 1515)) and (v168 == (3 + 0))) then
+				v101 = v16:EnergyRegen();
+				v103 = v108(v104);
+				v102 = v16:EnergyDeficitPredicted(nil, v104);
+				v168 = 13 - 9;
+			end
+			if (((108 + 584) < (7114 - 4056)) and (v168 == (521 - (150 + 370)))) then
+				v29 = EpicSettings.Toggles['cds'];
+				v98 = v16:ComboPoints();
+				v97 = v84.EffectiveComboPoints(v98);
+				v168 = 1284 - (74 + 1208);
+			end
+			if (((9 - 5) == v168) or ((15432 - 12178) == (1178 + 477))) then
+				if (v28 or ((1686 - (14 + 376)) == (8516 - 3606))) then
+					local v184 = 0 + 0;
+					while true do
+						if (((2959 + 409) == (3213 + 155)) and (v184 == (2 - 1))) then
+							v94 = #v93;
+							break;
+						end
+						if (((1989 + 654) < (3893 - (23 + 55))) and (v184 == (0 - 0))) then
+							v92 = v16:GetEnemiesInRange(21 + 9);
+							v93 = v16:GetEnemiesInRange(v96);
+							v184 = 1 + 0;
+						end
+					end
+				else
+					v94 = 1 - 0;
+				end
+				v95 = v84.CrimsonVial();
+				if (((602 + 1311) > (1394 - (652 + 249))) and v95) then
+					return v95;
+				end
+				v168 = 13 - 8;
+			end
+			if (((6623 - (708 + 1160)) > (9304 - 5876)) and (v168 == (0 - 0))) then
+				v82();
+				v27 = EpicSettings.Toggles['ooc'];
+				v28 = EpicSettings.Toggles['aoe'];
+				v168 = 28 - (10 + 17);
+			end
+			if (((311 + 1070) <= (4101 - (1400 + 332))) and (v168 == (3 - 1))) then
+				v99 = v16:ComboPointsDeficit();
+				v104 = (v16:BuffUp(v85.AdrenalineRush, nil, true) and -(1958 - (242 + 1666))) or (0 + 0);
+				v100 = v109();
+				v168 = 2 + 1;
+			end
+			if (((7 + 1) == v168) or ((5783 - (850 + 90)) == (7152 - 3068))) then
+				if (((6059 - (360 + 1030)) > (322 + 41)) and v83.TargetIsValid()) then
+					local v185 = 0 - 0;
+					while true do
+						if ((v185 == (0 - 0)) or ((3538 - (909 + 752)) >= (4361 - (109 + 1114)))) then
+							v95 = v122();
+							if (((8681 - 3939) >= (1412 + 2214)) and v95) then
+								return "CDs: " .. v95;
+							end
+							if (v16:StealthUp(true, true) or v16:BuffUp(v85.Shadowmeld) or ((4782 - (6 + 236)) == (578 + 338))) then
+								local v199 = 0 + 0;
+								while true do
+									if ((v199 == (0 - 0)) or ((2019 - 863) > (5478 - (1076 + 57)))) then
+										v95 = v123();
+										if (((368 + 1869) < (4938 - (579 + 110))) and v95) then
+											return "Stealth: " .. v95;
+										end
+										break;
+									end
+								end
+							end
+							v185 = 1 + 0;
+						end
+						if ((v185 == (2 + 0)) or ((1424 + 1259) < (430 - (174 + 233)))) then
+							if (((1946 - 1249) <= (1449 - 623)) and v85.ArcaneTorrent:IsCastable() and v17:IsSpellInRange(v85.SinisterStrike) and (v102 > (7 + 8 + v101))) then
+								if (((2279 - (663 + 511)) <= (1050 + 126)) and v10.Cast(v85.ArcaneTorrent, v31)) then
+									return "Cast Arcane Torrent";
+								end
+							end
+							if (((734 + 2645) <= (11752 - 7940)) and v85.ArcanePulse:IsCastable() and v17:IsSpellInRange(v85.SinisterStrike)) then
+								if (v10.Cast(v85.ArcanePulse) or ((478 + 310) >= (3804 - 2188))) then
+									return "Cast Arcane Pulse";
+								end
+							end
+							if (((4487 - 2633) <= (1613 + 1766)) and v85.LightsJudgment:IsCastable() and v17:IsInMeleeRange(9 - 4)) then
+								if (((3242 + 1307) == (416 + 4133)) and v10.Cast(v85.LightsJudgment, v31)) then
+									return "Cast Lights Judgment";
+								end
+							end
+							v185 = 725 - (478 + 244);
+						end
+						if ((v185 == (518 - (440 + 77))) or ((1375 + 1647) >= (11067 - 8043))) then
+							if (((6376 - (655 + 901)) > (408 + 1790)) and v115()) then
+								local v200 = 0 + 0;
+								while true do
+									if ((v200 == (1 + 0)) or ((4274 - 3213) >= (6336 - (695 + 750)))) then
+										return "Finish Pooling";
+									end
+									if (((4657 - 3293) <= (6902 - 2429)) and (v200 == (0 - 0))) then
+										v95 = v124();
+										if (v95 or ((3946 - (285 + 66)) <= (6 - 3))) then
+											return "Finish: " .. v95;
+										end
+										v200 = 1311 - (682 + 628);
+									end
+								end
+							end
+							v95 = v125();
+							if (v95 or ((754 + 3918) == (4151 - (176 + 123)))) then
+								return "Build: " .. v95;
+							end
+							v185 = 1 + 1;
+						end
+						if (((1131 + 428) == (1828 - (239 + 30))) and (v185 == (1 + 2))) then
+							if ((v85.BagofTricks:IsCastable() and v17:IsInMeleeRange(5 + 0)) or ((3100 - 1348) <= (2458 - 1670))) then
+								if (v10.Cast(v85.BagofTricks, v31) or ((4222 - (306 + 9)) == (617 - 440))) then
+									return "Cast Bag of Tricks";
+								end
+							end
+							if (((604 + 2866) > (341 + 214)) and v85.PistolShot:IsCastable() and v17:IsSpellInRange(v85.PistolShot) and not v17:IsInRange(v96) and not v16:StealthUp(true, true) and (v102 < (13 + 12)) and ((v99 >= (2 - 1)) or (v103 <= (1376.2 - (1140 + 235))))) then
+								if (v10.Cast(v85.PistolShot) or ((619 + 353) == (592 + 53))) then
+									return "Cast Pistol Shot (OOR)";
+								end
+							end
+							if (((817 + 2365) >= (2167 - (33 + 19))) and not v17:IsSpellInRange(v85.Dispatch)) then
+								if (((1406 + 2487) < (13274 - 8845)) and v12(v85.PoolEnergy, false, "OOR")) then
+									return "Pool Energy (OOR)";
+								end
+							elseif (v12(v85.PoolEnergy) or ((1263 + 1604) < (3735 - 1830))) then
+								return "Pool Energy";
+							end
+							break;
+						end
+					end
+				end
+				break;
+			end
+			if ((v168 == (7 + 0)) or ((2485 - (586 + 103)) >= (369 + 3682))) then
+				if (((4984 - 3365) <= (5244 - (1309 + 179))) and not v16:AffectingCombat() and not v16:IsMounted() and v60) then
+					local v186 = 0 - 0;
+					while true do
+						if (((263 + 341) == (1622 - 1018)) and (v186 == (0 + 0))) then
+							v95 = v84.Stealth(v85.Stealth2, nil);
+							if (v95 or ((9526 - 5042) == (1793 - 893))) then
+								return "Stealth (OOC): " .. v95;
+							end
+							break;
+						end
+					end
+				end
+				if ((not v16:AffectingCombat() and (v85.Vanish:TimeSinceLastCast() > (610 - (295 + 314))) and v17:IsInRange(19 - 11) and v27) or ((6421 - (1300 + 662)) <= (3494 - 2381))) then
+					if (((5387 - (1178 + 577)) > (1765 + 1633)) and v83.TargetIsValid() and v17:IsInRange(29 - 19) and not (v16:IsChanneling() or v16:IsCasting())) then
+						local v194 = 1405 - (851 + 554);
 						while true do
-							if (((3399 - 1914) <= (2055 + 849)) and ((0 - 0) == v177)) then
-								if (((10555 - 6286) == (4702 - (279 + 154))) and v84.BladeFlurry:IsReady() and v15:BuffDown(v84.BladeFlurry) and v84.UnderhandedUpperhand:IsAvailable() and not v15:StealthUp(true, true) and (v84.AdrenalineRush:IsReady() or v15:BuffUp(v84.AdrenalineRush))) then
-									if (((1165 - (454 + 324)) <= (2189 + 593)) and v11(v84.BladeFlurry)) then
+							if (((3610 + 472) <= (13636 - 8719)) and ((0 - 0) == v194)) then
+								if (((5134 - (115 + 187)) >= (1062 + 324)) and v85.BladeFlurry:IsReady() and v16:BuffDown(v85.BladeFlurry) and v85.UnderhandedUpperhand:IsAvailable() and not v16:StealthUp(true, true) and (v85.AdrenalineRush:IsReady() or v16:BuffUp(v85.AdrenalineRush))) then
+									if (((130 + 7) == (539 - 402)) and v12(v85.BladeFlurry)) then
 										return "Blade Flurry (Opener)";
 									end
 								end
-								if (not v15:StealthUp(true, false) or ((1916 - (12 + 5)) <= (495 + 422))) then
-									v94 = v83.Stealth(v83.StealthSpell());
-									if (v94 or ((10986 - 6674) <= (324 + 552))) then
-										return v94;
+								if (not v16:StealthUp(true, false) or ((2731 - (160 + 1001)) >= (3790 + 542))) then
+									local v203 = 0 + 0;
+									while true do
+										if (((0 - 0) == v203) or ((4422 - (237 + 121)) <= (2716 - (525 + 372)))) then
+											v95 = v84.Stealth(v84.StealthSpell());
+											if (v95 or ((9452 - 4466) < (5171 - 3597))) then
+												return v95;
+											end
+											break;
+										end
 									end
 								end
-								v177 = 1094 - (277 + 816);
+								v194 = 143 - (96 + 46);
 							end
-							if (((9537 - 7305) <= (3779 - (1058 + 125))) and ((1 + 0) == v177)) then
-								if (((3070 - (815 + 160)) < (15815 - 12129)) and v82.TargetIsValid()) then
-									local v194 = 0 - 0;
+							if (((5203 - (643 + 134)) > (63 + 109)) and (v194 == (2 - 1))) then
+								if (((2175 - 1589) > (437 + 18)) and v83.TargetIsValid()) then
+									local v204 = 0 - 0;
 									while true do
-										if (((1 + 0) == v194) or ((4662 - 3067) >= (6372 - (41 + 1857)))) then
-											if ((v84.SliceandDice:IsReady() and (v15:BuffRemains(v84.SliceandDice) < (((1894 - (1222 + 671)) + v97) * (2.8 - 1)))) or ((6638 - 2019) < (4064 - (229 + 953)))) then
-												if (v9.Press(v84.SliceandDice) or ((2068 - (1111 + 663)) >= (6410 - (874 + 705)))) then
+										if (((1688 - 862) == (1545 - (316 + 403))) and ((1 + 0) == v204)) then
+											if ((v85.SliceandDice:IsReady() and (v16:BuffRemains(v85.SliceandDice) < (((2 - 1) + v98) * (1.8 + 0)))) or ((10121 - 6102) > (3148 + 1293))) then
+												if (((651 + 1366) < (14764 - 10503)) and v10.Press(v85.SliceandDice)) then
 													return "Cast Slice and Dice (Opener)";
 												end
 											end
-											if (((285 + 1744) <= (2105 + 979)) and v15:StealthUp(true, false)) then
-												local v201 = 0 - 0;
+											if (((22522 - 17806) > (166 - 86)) and v16:StealthUp(true, false)) then
+												v95 = v123();
+												if (v95 or ((201 + 3306) == (6441 - 3169))) then
+													return "Stealth (Opener): " .. v95;
+												end
+												if ((v85.KeepItRolling:IsAvailable() and v85.GhostlyStrike:IsReady() and v85.EchoingReprimand:IsAvailable()) or ((43 + 833) >= (9046 - 5971))) then
+													if (((4369 - (12 + 5)) > (9919 - 7365)) and v10.Cast(v85.GhostlyStrike, nil, nil, not v17:IsSpellInRange(v85.GhostlyStrike))) then
+														return "Cast Ghostly Strike KiR (Opener)";
+													end
+												end
+												if ((v85.Ambush:IsCastable() and v85.HiddenOpportunity:IsAvailable()) or ((9400 - 4994) < (8594 - 4551))) then
+													if (v10.Cast(v85.Ambush, nil, nil, not v17:IsSpellInRange(v85.Ambush)) or ((4684 - 2795) >= (687 + 2696))) then
+														return "Cast Ambush (Opener)";
+													end
+												elseif (((3865 - (1656 + 317)) <= (2437 + 297)) and v85.SinisterStrike:IsCastable()) then
+													if (((1541 + 382) < (5897 - 3679)) and v10.Cast(v85.SinisterStrike, nil, nil, not v17:IsSpellInRange(v85.SinisterStrike))) then
+														return "Cast Sinister Strike (Opener)";
+													end
+												end
+											elseif (((10694 - 8521) > (733 - (5 + 349))) and v115()) then
+												local v218 = 0 - 0;
 												while true do
-													if ((v201 == (1 + 0)) or ((2716 - (642 + 37)) == (552 + 1868))) then
-														if (((714 + 3744) > (9801 - 5897)) and v84.KeepItRolling:IsAvailable() and v84.GhostlyStrike:IsReady() and v84.EchoingReprimand:IsAvailable()) then
-															if (((890 - (233 + 221)) >= (284 - 161)) and v9.Cast(v84.GhostlyStrike, nil, nil, not v16:IsSpellInRange(v84.GhostlyStrike))) then
-																return "Cast Ghostly Strike KiR (Opener)";
-															end
-														end
-														if (((441 + 59) < (3357 - (718 + 823))) and v84.Ambush:IsCastable() and v84.HiddenOpportunity:IsAvailable()) then
-															if (((2249 + 1325) == (4379 - (266 + 539))) and v9.Cast(v84.Ambush, nil, nil, not v16:IsSpellInRange(v84.Ambush))) then
-																return "Cast Ambush (Opener)";
-															end
-														elseif (((625 - 404) < (1615 - (636 + 589))) and v84.SinisterStrike:IsCastable()) then
-															if (v9.Cast(v84.SinisterStrike, nil, nil, not v16:IsSpellInRange(v84.SinisterStrike)) or ((5252 - 3039) <= (2930 - 1509))) then
-																return "Cast Sinister Strike (Opener)";
-															end
+													if ((v218 == (1271 - (266 + 1005))) or ((1708 + 883) == (11631 - 8222))) then
+														v95 = v124();
+														if (((5942 - 1428) > (5020 - (561 + 1135))) and v95) then
+															return "Finish (Opener): " .. v95;
 														end
 														break;
 													end
-													if (((2424 + 634) < (1766 + 3094)) and (v201 == (1015 - (657 + 358)))) then
-														v94 = v122();
-														if (v94 or ((3431 - 2135) >= (10129 - 5683))) then
-															return "Stealth (Opener): " .. v94;
-														end
-														v201 = 1188 - (1151 + 36);
-													end
-												end
-											elseif (v114() or ((1346 + 47) > (1181 + 3308))) then
-												v94 = v123();
-												if (v94 or ((13211 - 8787) < (1859 - (1552 + 280)))) then
-													return "Finish (Opener): " .. v94;
 												end
 											end
-											v194 = 836 - (64 + 770);
+											v204 = 2 - 0;
 										end
-										if ((v194 == (0 + 0)) or ((4532 - 2535) > (678 + 3137))) then
-											if (((4708 - (157 + 1086)) > (3828 - 1915)) and v84.RolltheBones:IsReady() and not v15:DebuffUp(v84.Dreadblades) and ((v111() == (0 - 0)) or v113())) then
-												if (((1123 - 390) < (2482 - 663)) and v9.Cast(v84.RolltheBones)) then
+										if ((v204 == (0 - 0)) or ((1274 - (507 + 559)) >= (12114 - 7286))) then
+											if ((v85.RolltheBones:IsReady() and not v16:DebuffUp(v85.Dreadblades) and ((v112() == (0 - 0)) or v114())) or ((1971 - (212 + 176)) > (4472 - (250 + 655)))) then
+												if (v10.Cast(v85.RolltheBones) or ((3580 - 2267) == (1386 - 592))) then
 													return "Cast Roll the Bones (Opener)";
 												end
 											end
-											if ((v84.AdrenalineRush:IsReady() and v84.ImprovedAdrenalineRush:IsAvailable() and (v97 <= (821 - (599 + 220)))) or ((8751 - 4356) == (6686 - (1813 + 118)))) then
-												if (v9.Cast(v84.AdrenalineRush) or ((2773 + 1020) < (3586 - (841 + 376)))) then
+											if (((4965 - 1791) > (4858 - (1869 + 87))) and v85.AdrenalineRush:IsReady() and v85.ImprovedAdrenalineRush:IsAvailable() and (v98 <= (6 - 4))) then
+												if (((6021 - (484 + 1417)) <= (9130 - 4870)) and v10.Cast(v85.AdrenalineRush)) then
 													return "Cast Adrenaline Rush (Opener)";
 												end
 											end
-											v194 = 1 - 0;
+											v204 = 1 - 0;
 										end
-										if ((v194 == (1 + 1)) or ((11147 - 7063) == (1124 - (464 + 395)))) then
-											if (((11184 - 6826) == (2093 + 2265)) and v84.SinisterStrike:IsCastable()) then
-												if (v9.Cast(v84.SinisterStrike, nil, nil, not v16:IsSpellInRange(v84.SinisterStrike)) or ((3975 - (467 + 370)) < (2051 - 1058))) then
+										if ((v204 == (775 - (48 + 725))) or ((1442 - 559) > (12818 - 8040))) then
+											if (v85.SinisterStrike:IsCastable() or ((2104 + 1516) >= (13070 - 8179))) then
+												if (((1192 + 3066) > (274 + 663)) and v10.Cast(v85.SinisterStrike, nil, nil, not v17:IsSpellInRange(v85.SinisterStrike))) then
 													return "Cast Sinister Strike (Opener)";
 												end
 											end
@@ -819,128 +923,105 @@ v0["Epix_Rogue_Outlaw.lua"] = function(...)
 						end
 					end
 				end
-				if (((2445 + 885) > (7963 - 5640)) and v84.FanTheHammer:IsAvailable() and (v84.PistolShot:TimeSinceLastCast() < v15:GCDRemains())) then
-					local v172 = 0 + 0;
+				if ((v85.FanTheHammer:IsAvailable() and (v85.PistolShot:TimeSinceLastCast() < v16:GCDRemains())) or ((5722 - (152 + 701)) < (2217 - (430 + 881)))) then
+					local v187 = 0 + 0;
 					while true do
-						if ((v172 == (0 - 0)) or ((4146 - (150 + 370)) == (5271 - (74 + 1208)))) then
-							v97 = v25(v97, v83.FanTheHammerCP());
-							v96 = v83.EffectiveComboPoints(v97);
-							v172 = 2 - 1;
+						if ((v187 == (895 - (557 + 338))) or ((363 + 862) > (11914 - 7686))) then
+							v98 = v26(v98, v84.FanTheHammerCP());
+							v97 = v84.EffectiveComboPoints(v98);
+							v187 = 3 - 2;
 						end
-						if ((v172 == (4 - 3)) or ((652 + 264) == (3061 - (14 + 376)))) then
-							v98 = v15:ComboPointsDeficit();
+						if (((8841 - 5513) > (4823 - 2585)) and (v187 == (802 - (499 + 302)))) then
+							v99 = v16:ComboPointsDeficit();
 							break;
 						end
 					end
 				end
-				v165 = 10 - 4;
+				v168 = 874 - (39 + 827);
 			end
-			if (((177 + 95) == (239 + 33)) and ((2 + 0) == v165)) then
-				v99 = v108();
-				v100 = v15:EnergyRegen();
-				v102 = v107(v103);
-				v101 = v15:EnergyDeficitPredicted(nil, v103);
-				v165 = 8 - 5;
-			end
-			if (((3197 + 1052) <= (4917 - (23 + 55))) and (v165 == (9 - 5))) then
-				if (((1854 + 923) < (2874 + 326)) and v32 and (v15:HealthPercentage() <= v34)) then
-					if (((147 - 52) < (616 + 1341)) and (v33 == "Refreshing Healing Potion")) then
-						if (((1727 - (652 + 249)) < (4594 - 2877)) and v85.RefreshingHealingPotion:IsReady()) then
-							if (((3294 - (708 + 1160)) >= (2999 - 1894)) and v9.Press(v86.RefreshingHealingPotion)) then
-								return "refreshing healing potion defensive 4";
+			if (((10597 - 6758) > (3137 - 1732)) and (v168 == (19 - 14))) then
+				v84.Poisons();
+				if ((v33 and (v16:HealthPercentage() <= v35)) or ((1984 - 691) <= (44 + 463))) then
+					local v188 = 0 - 0;
+					while true do
+						if ((v188 == (0 + 0)) or ((4582 - 1686) < (909 - (103 + 1)))) then
+							if (((2870 - (475 + 79)) == (5006 - 2690)) and (v34 == "Refreshing Healing Potion")) then
+								if (v86.RefreshingHealingPotion:IsReady() or ((8224 - 5654) == (199 + 1334))) then
+									if (v10.Press(v87.RefreshingHealingPotion) or ((778 + 105) == (2963 - (1395 + 108)))) then
+										return "refreshing healing potion defensive 4";
+									end
+								end
 							end
-						end
-					end
-					if (((5020 - 2266) <= (3406 - (10 + 17))) and (v33 == "Dreamwalker's Healing Potion")) then
-						if (v85.DreamwalkersHealingPotion:IsReady() or ((883 + 3044) == (3145 - (1400 + 332)))) then
-							if (v9.Press(v86.RefreshingHealingPotion) or ((2213 - 1059) <= (2696 - (242 + 1666)))) then
-								return "dreamwalkers healing potion defensive";
+							if ((v34 == "Dreamwalker's Healing Potion") or ((13440 - 8821) <= (2203 - (7 + 1197)))) then
+								if (v86.DreamwalkersHealingPotion:IsReady() or ((1487 + 1923) > (1437 + 2679))) then
+									if (v10.Press(v87.RefreshingHealingPotion) or ((1222 - (27 + 292)) >= (8963 - 5904))) then
+										return "dreamwalkers healing potion defensive";
+									end
+								end
 							end
+							break;
 						end
 					end
 				end
-				if ((v84.Feint:IsCastable() and v84.Feint:IsReady() and (v15:HealthPercentage() <= v58)) or ((704 + 939) > (1239 + 2140))) then
-					if (v9.Cast(v84.Feint) or ((2389 + 414) > (5489 - (850 + 90)))) then
+				if ((v85.Feint:IsCastable() and v85.Feint:IsReady() and (v16:HealthPercentage() <= v59)) or ((5070 - 1094) < (11981 - 9124))) then
+					if (((9722 - 4792) > (4393 - 2086)) and v10.Cast(v85.Feint)) then
 						return "Cast Feint (Defensives)";
 					end
 				end
-				if ((v84.Evasion:IsCastable() and v84.Evasion:IsReady() and (v15:HealthPercentage() <= v80)) or ((385 - 165) >= (4412 - (360 + 1030)))) then
-					if (((2498 + 324) == (7964 - 5142)) and v9.Cast(v84.Evasion)) then
+				v168 = 145 - (43 + 96);
+			end
+			if ((v168 == (24 - 18)) or ((9147 - 5101) < (1072 + 219))) then
+				if ((v85.Evasion:IsCastable() and v85.Evasion:IsReady() and (v16:HealthPercentage() <= v81)) or ((1198 + 3043) == (7006 - 3461))) then
+					if (v10.Cast(v85.Evasion) or ((1552 + 2496) > (7930 - 3698))) then
 						return "Cast Evasion (Defensives)";
 					end
 				end
-				if ((not v15:IsCasting() and not v15:IsChanneling()) or ((1459 - 398) == (3518 - (909 + 752)))) then
-					local v173 = 1223 - (109 + 1114);
-					local v174;
+				if ((not v16:IsCasting() and not v16:IsChanneling()) or ((551 + 1199) >= (255 + 3218))) then
+					local v189 = v83.Interrupt(v85.Kick, 1759 - (1414 + 337), true);
+					if (((5106 - (1642 + 298)) == (8252 - 5086)) and v189) then
+						return v189;
+					end
+					v189 = v83.Interrupt(v85.Kick, 22 - 14, true, v13, v87.KickMouseover);
+					if (((5231 - 3468) < (1226 + 2498)) and v189) then
+						return v189;
+					end
+					v189 = v83.Interrupt(v85.Blind, 12 + 3, v80);
+					if (((1029 - (357 + 615)) <= (1912 + 811)) and v189) then
+						return v189;
+					end
+					v189 = v83.Interrupt(v85.Blind, 36 - 21, v80, v13, v87.BlindMouseover);
+					if (v189 or ((1774 + 296) == (949 - 506))) then
+						return v189;
+					end
+					v189 = v83.InterruptWithStun(v85.CheapShot, 7 + 1, v16:StealthUp(false, false));
+					if (v189 or ((184 + 2521) == (876 + 517))) then
+						return v189;
+					end
+					v189 = v83.InterruptWithStun(v85.KidneyShot, 1309 - (384 + 917), v16:ComboPoints() > (697 - (128 + 569)));
+					if (v189 or ((6144 - (1407 + 136)) < (1948 - (687 + 1200)))) then
+						return v189;
+					end
+				end
+				if (v30 or ((3100 - (556 + 1154)) >= (16689 - 11945))) then
+					local v190 = 95 - (9 + 86);
 					while true do
-						if (((5053 - 2293) > (531 + 833)) and (v173 == (243 - (6 + 236)))) then
-							if (v174 or ((3089 + 1813) <= (2894 + 701))) then
-								return v174;
-							end
-							v174 = v82.Interrupt(v84.Blind, 35 - 20, v79);
-							if (v174 or ((6728 - 2876) == (1426 - (1076 + 57)))) then
-								return v174;
-							end
-							v173 = 1 + 1;
-						end
-						if ((v173 == (692 - (579 + 110))) or ((124 + 1435) == (4057 + 531))) then
-							if (v174 or ((2380 + 2104) == (1195 - (174 + 233)))) then
-								return v174;
-							end
-							v174 = v82.InterruptWithStun(v84.KidneyShot, 22 - 14, v15:ComboPoints() > (0 - 0));
-							if (((2032 + 2536) >= (5081 - (663 + 511))) and v174) then
-								return v174;
+						if (((421 - (275 + 146)) == v190) or ((326 + 1677) > (3898 - (29 + 35)))) then
+							v95 = v83.HandleIncorporeal(v85.Blind, v87.BlindMouseover, 132 - 102, true);
+							if (v95 or ((465 - 309) > (17273 - 13360))) then
+								return v95;
 							end
 							break;
 						end
-						if (((1112 + 134) < (754 + 2716)) and (v173 == (0 - 0))) then
-							v174 = v82.Interrupt(v84.Kick, 5 + 3, true);
-							if (((9577 - 5509) >= (2352 - 1380)) and v174) then
-								return v174;
-							end
-							v174 = v82.Interrupt(v84.Kick, 4 + 4, true, v12, v86.KickMouseover);
-							v173 = 1 - 0;
-						end
-						if (((352 + 141) < (356 + 3537)) and (v173 == (724 - (478 + 244)))) then
-							v174 = v82.Interrupt(v84.Blind, 532 - (440 + 77), v79, v12, v86.BlindMouseover);
-							if (v174 or ((670 + 803) >= (12195 - 8863))) then
-								return v174;
-							end
-							v174 = v82.InterruptWithStun(v84.CheapShot, 1564 - (655 + 901), v15:StealthUp(false, false));
-							v173 = 1 + 2;
-						end
 					end
 				end
-				v165 = 4 + 1;
-			end
-			if (((3 + 0) == v165) or ((16319 - 12268) <= (2602 - (695 + 750)))) then
-				if (((2062 - 1458) < (4445 - 1564)) and v27) then
-					v91 = v15:GetEnemiesInRange(120 - 90);
-					v92 = v15:GetEnemiesInRange(v95);
-					v93 = #v92;
-				else
-					v93 = 352 - (285 + 66);
-				end
-				v94 = v83.CrimsonVial();
-				if (v94 or ((2097 - 1197) == (4687 - (682 + 628)))) then
-					return v94;
-				end
-				v83.Poisons();
-				v165 = 1 + 3;
-			end
-			if (((4758 - (176 + 123)) > (248 + 343)) and (v165 == (0 + 0))) then
-				v81();
-				v26 = EpicSettings.Toggles['ooc'];
-				v27 = EpicSettings.Toggles['aoe'];
-				v28 = EpicSettings.Toggles['cds'];
-				v165 = 270 - (239 + 30);
+				v168 = 5 + 2;
 			end
 		end
 	end
-	local function v126()
-		v9.Print("Outlaw Rogue by Epic. Supported by Gojira");
+	local function v127()
+		v10.Print("Outlaw Rogue by Epic. Supported by Gojira");
 	end
-	v9.SetAPL(71 + 189, v125, v126);
+	v10.SetAPL(1272 - (53 + 959), v126, v127);
 end;
 return v0["Epix_Rogue_Outlaw.lua"]();
 
