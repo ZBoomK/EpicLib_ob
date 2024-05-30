@@ -1,18 +1,18 @@
 local v0 = {};
 local v1 = require;
 local function v2(v4, ...)
-	local v5 = 1231 - (353 + 878);
+	local v5 = 0 - 0;
 	local v6;
 	while true do
-		if (((3606 + 1219) < (6537 - 1694)) and (v5 == (1 + 0))) then
-			return v6(...);
-		end
-		if ((v5 == (0 - 0)) or ((7610 - 3733) >= (6417 - (446 + 1434)))) then
+		if ((v5 == (683 - (27 + 656))) or ((917 + 132) <= (331 + 575))) then
 			v6 = v0[v4];
-			if (not v6 or ((5598 - (1040 + 243)) < (5151 - 3425))) then
+			if (((2498 + 2015) > (480 + 2246)) and not v6) then
 				return v1(v4, ...);
 			end
-			v5 = 1848 - (559 + 1288);
+			v5 = 1 - 0;
+		end
+		if ((v5 == (1912 - (340 + 1571))) or ((585 + 896) >= (4430 - (1733 + 39)))) then
+			return v6(...);
 		end
 	end
 end
@@ -58,34 +58,53 @@ v0["Epix_Druid_Balance.lua"] = function(...)
 	local v46;
 	local v47;
 	local v48;
-	local function v49()
-		v32 = EpicSettings.Settings['UseRacials'];
-		v34 = EpicSettings.Settings['UseHealingPotion'] or (1931 - (609 + 1322));
-		v35 = EpicSettings.Settings['HealingPotionName'];
-		v36 = EpicSettings.Settings['HealingPotionHP'] or (454 - (13 + 441));
-		v37 = EpicSettings.Settings['UseHealthstone'];
-		v38 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
-		v39 = EpicSettings.Settings['InterruptWithStun'] or (0 - 0);
-		v40 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (0 - 0);
-		v41 = EpicSettings.Settings['InterruptThreshold'] or (0 + 0);
-		v42 = EpicSettings.Settings['OutOfCombatHealing'];
-		v43 = EpicSettings.Settings['MarkOfTheWild'];
-		v44 = EpicSettings.Settings['MoonkinFormOOC'];
-		v45 = EpicSettings.Settings['BarkskinHP'] or (0 - 0);
-		v46 = EpicSettings.Settings['NaturesVigilHP'] or (0 + 0);
-		v47 = EpicSettings.Settings['WildMushroom'] or (0 + 0);
-		v48 = EpicSettings.Settings['Starfall'] or (0 - 0);
+	local v49;
+	local function v50()
+		local v110 = 0 - 0;
+		while true do
+			if ((v110 == (1037 - (125 + 909))) or ((5168 - (1096 + 852)) == (612 + 752))) then
+				v45 = EpicSettings.Settings['BarkskinHP'] or (0 - 0);
+				v46 = EpicSettings.Settings['NaturesVigilHP'] or (0 + 0);
+				v47 = EpicSettings.Settings['WildMushroom'];
+				v48 = EpicSettings.Settings['Starfall'];
+				v110 = 516 - (409 + 103);
+			end
+			if ((v110 == (240 - (46 + 190))) or ((1149 - (51 + 44)) > (957 + 2435))) then
+				v49 = EpicSettings.Settings['UseIncarnation'];
+				break;
+			end
+			if ((v110 == (1318 - (1114 + 203))) or ((1402 - (228 + 498)) >= (356 + 1286))) then
+				v37 = EpicSettings.Settings['UseHealthstone'];
+				v38 = EpicSettings.Settings['HealthstoneHP'] or (0 + 0);
+				v39 = EpicSettings.Settings['InterruptWithStun'];
+				v40 = EpicSettings.Settings['InterruptOnlyWhitelist'];
+				v110 = 665 - (174 + 489);
+			end
+			if (((10775 - 6639) > (4302 - (830 + 1075))) and (v110 == (524 - (303 + 221)))) then
+				v32 = EpicSettings.Settings['UseRacials'];
+				v34 = EpicSettings.Settings['UseHealingPotion'];
+				v35 = EpicSettings.Settings['HealingPotionName'];
+				v36 = EpicSettings.Settings['HealingPotionHP'] or (1269 - (231 + 1038));
+				v110 = 1 + 0;
+			end
+			if ((v110 == (1164 - (171 + 991))) or ((17861 - 13527) == (11398 - 7153))) then
+				v41 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
+				v42 = EpicSettings.Settings['OutOfCombatHealing'];
+				v43 = EpicSettings.Settings['MarkOfTheWild'];
+				v44 = EpicSettings.Settings['MoonkinFormOOC'];
+				v110 = 3 + 0;
+			end
+		end
 	end
-	local v50 = v10.Commons.Everyone;
-	local v51 = v17.Druid.Balance;
-	local v52 = v19.Druid.Balance;
-	local v53 = {v52.MirrorofFracturedTomorrows:ID()};
-	local v54 = v20.Druid.Balance;
-	local v55 = v13:GetEquipment();
-	local v56 = (v55[23 - 10] and v19(v55[9 + 4])) or v19(0 + 0);
-	local v57 = (v55[11 + 3] and v19(v55[12 + 2])) or v19(0 + 0);
-	local v58 = false;
-	local v59;
+	local v51 = v10.Commons.Everyone;
+	local v52 = v17.Druid.Balance;
+	local v53 = v19.Druid.Balance;
+	local v54 = {v53.MirrorofFracturedTomorrows:ID()};
+	local v55 = v20.Druid.Balance;
+	local v56 = v13:GetEquipment();
+	local v57 = (v56[37 - 24] and v19(v56[20 - 7])) or v19(0 - 0);
+	local v58 = (v56[1262 - (111 + 1137)] and v19(v56[172 - (91 + 67)])) or v19(0 - 0);
+	local v59 = false;
 	local v60;
 	local v61;
 	local v62;
@@ -102,759 +121,697 @@ v0["Epix_Druid_Balance.lua"] = function(...)
 	local v73;
 	local v74;
 	local v75;
-	local v76 = v10.Druid;
-	local v77 = 11544 - (153 + 280);
-	local v78 = 32083 - 20972;
-	local v79 = (v51.IncarnationTalent:IsAvailable() and v51.Incarnation) or v51.CelestialAlignment;
-	local v80 = false;
+	local v76;
+	local v77 = v10.Druid;
+	local v78 = 2773 + 8338;
+	local v79 = 11634 - (423 + 100);
+	local v80 = (v52.IncarnationTalent:IsAvailable() and v52.Incarnation) or v52.CelestialAlignment;
 	local v81 = false;
 	local v82 = false;
 	local v83 = false;
 	local v84 = false;
 	local v85 = false;
 	local v86 = false;
+	local v87 = false;
 	v10:RegisterForEvent(function()
-		local v115 = 0 + 0;
-		while true do
-			if ((v115 == (0 + 0)) or ((1926 + 1753) < (568 + 57))) then
-				v55 = v13:GetEquipment();
-				v56 = (v55[10 + 3] and v19(v55[19 - 6])) or v19(0 + 0);
-				v115 = 668 - (89 + 578);
-			end
-			if ((v115 == (1 + 0)) or ((9614 - 4989) < (1681 - (572 + 477)))) then
-				v57 = (v55[2 + 12] and v19(v55[9 + 5])) or v19(0 + 0);
-				v58 = false;
-				break;
-			end
-		end
+		v56 = v13:GetEquipment();
+		v57 = (v56[1 + 12] and v19(v56[35 - 22])) or v19(0 + 0);
+		v58 = (v56[785 - (326 + 445)] and v19(v56[60 - 46])) or v19(0 - 0);
+		v59 = false;
 	end, "PLAYER_EQUIPMENT_CHANGED");
 	v10:RegisterForEvent(function()
-		local v116 = 86 - (84 + 2);
+		local v111 = 0 - 0;
 		while true do
-			if ((v116 == (1 - 0)) or ((60 + 23) > (2622 - (497 + 345)))) then
-				v78 = 285 + 10826;
-				break;
+			if ((v111 == (711 - (530 + 181))) or ((5157 - (614 + 267)) <= (3063 - (19 + 13)))) then
+				v59 = false;
+				v78 = 18084 - 6973;
+				v111 = 2 - 1;
 			end
-			if (((93 + 453) <= (2410 - (605 + 728))) and (v116 == (0 + 0))) then
-				v58 = false;
-				v77 = 24702 - 13591;
-				v116 = 1 + 0;
+			if (((2 - 1) == v111) or ((1242 + 3540) <= (2108 - 909))) then
+				v79 = 23042 - 11931;
+				break;
 			end
 		end
 	end, "PLAYER_REGEN_ENABLED");
 	v10:RegisterForEvent(function()
-		local v117 = 0 - 0;
-		while true do
-			if ((v117 == (0 + 0)) or ((2759 - 1763) > (3248 + 1053))) then
-				v79 = (v51.IncarnationTalent:IsAvailable() and v51.Incarnation) or v51.CelestialAlignment;
-				v58 = false;
-				break;
+		v80 = (v52.IncarnationTalent:IsAvailable() and v52.Incarnation) or v52.CelestialAlignment;
+		v59 = false;
+	end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
+	local v88, v89;
+	local function v90(v112)
+		local v113 = 1812 - (1293 + 519);
+		if ((v112 == v52.Wrath) or ((9923 - 5059) < (4965 - 3063))) then
+			v113 = 14 - 6;
+			if (((20866 - 16027) >= (8716 - 5016)) and v52.WildSurges:IsAvailable()) then
+				v113 = v113 + 2 + 0;
+			end
+			if ((v52.SouloftheForest:IsAvailable() and v13:BuffUp(v52.EclipseSolar)) or ((220 + 855) > (4456 - 2538))) then
+				v113 = v113 * (1.6 + 0);
+			end
+		elseif (((132 + 264) <= (2378 + 1426)) and (v112 == v52.Starfire)) then
+			v113 = 1106 - (709 + 387);
+			if (v52.WildSurges:IsAvailable() or ((6027 - (673 + 1185)) == (6342 - 4155))) then
+				v113 = v113 + (6 - 4);
+			end
+			if (((2312 - 906) == (1006 + 400)) and v13:BuffUp(v52.WarriorofEluneBuff)) then
+				v113 = v113 * (1.4 + 0);
+			end
+			if (((2066 - 535) < (1049 + 3222)) and v52.SouloftheForest:IsAvailable() and v13:BuffUp(v52.EclipseLunar)) then
+				local v171 = (1 - 0) + ((0.2 - 0) * v89);
+				if (((2515 - (446 + 1434)) == (1918 - (1040 + 243))) and (v171 > (2.6 - 1))) then
+					v171 = 1848.6 - (559 + 1288);
+				end
+				v113 = v113 * v171;
 			end
 		end
-	end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
-	local v87, v88;
-	local function v89(v118)
-		local v119 = 489 - (457 + 32);
+		return v113;
+	end
+	local function v91(v114)
+		local v115 = 1931 - (609 + 1322);
+		local v116;
+		while true do
+			if (((3827 - (13 + 441)) <= (13287 - 9731)) and (v115 == (0 - 0))) then
+				v116 = v114:DebuffRemains(v52.SunfireDebuff);
+				return v114:DebuffRefreshable(v52.SunfireDebuff) and (v116 < (9 - 7)) and ((v114:TimeToDie() - v116) > (1 + 5));
+			end
+		end
+	end
+	local function v92(v117)
+		return v117:DebuffRefreshable(v52.SunfireDebuff) and (v13:AstralPowerDeficit() > (v67 + v52.Sunfire:EnergizeAmount()));
+	end
+	local function v93(v118)
+		local v119 = 0 - 0;
 		local v120;
 		while true do
-			if (((1727 + 2343) > (2089 - (832 + 570))) and (v119 == (1 + 0))) then
-				return v120;
-			end
-			if ((v119 == (0 + 0)) or ((2321 - 1665) >= (1605 + 1725))) then
-				v120 = 796 - (588 + 208);
-				if ((v118 == v51.Wrath) or ((6716 - 4224) <= (2135 - (884 + 916)))) then
-					local v160 = 0 - 0;
-					while true do
-						if (((2506 + 1816) >= (3215 - (232 + 421))) and (v160 == (1889 - (1569 + 320)))) then
-							v120 = 2 + 6;
-							if (v51.WildSurges:IsAvailable() or ((691 + 2946) >= (12704 - 8934))) then
-								v120 = v120 + (607 - (316 + 289));
-							end
-							v160 = 2 - 1;
-						end
-						if ((v160 == (1 + 0)) or ((3832 - (666 + 787)) > (5003 - (360 + 65)))) then
-							if ((v51.SouloftheForest:IsAvailable() and v13:BuffUp(v51.EclipseSolar)) or ((452 + 31) > (997 - (79 + 175)))) then
-								v120 = v120 * (1.6 - 0);
-							end
-							break;
-						end
-					end
-				elseif (((1915 + 539) > (1771 - 1193)) and (v118 == v51.Starfire)) then
-					local v168 = 0 - 0;
-					while true do
-						if (((1829 - (503 + 396)) < (4639 - (92 + 89))) and (v168 == (0 - 0))) then
-							v120 = 6 + 4;
-							if (((392 + 270) <= (3806 - 2834)) and v51.WildSurges:IsAvailable()) then
-								v120 = v120 + 1 + 1;
-							end
-							v168 = 2 - 1;
-						end
-						if (((3813 + 557) == (2088 + 2282)) and (v168 == (2 - 1))) then
-							if (v13:BuffUp(v51.WarriorofEluneBuff) or ((595 + 4167) <= (1312 - 451))) then
-								v120 = v120 * (1245.4 - (485 + 759));
-							end
-							if ((v51.SouloftheForest:IsAvailable() and v13:BuffUp(v51.EclipseLunar)) or ((3267 - 1855) == (5453 - (442 + 747)))) then
-								local v176 = 1135 - (832 + 303);
-								local v177;
-								while true do
-									if ((v176 == (946 - (88 + 858))) or ((966 + 2202) < (1782 + 371))) then
-										v177 = 1 + 0 + ((789.2 - (766 + 23)) * v88);
-										if ((v177 > (4.6 - 3)) or ((6804 - 1828) < (3509 - 2177))) then
-											v177 = 3.6 - 2;
-										end
-										v176 = 1074 - (1036 + 37);
-									end
-									if (((3282 + 1346) == (9012 - 4384)) and (v176 == (1 + 0))) then
-										v120 = v120 * v177;
-										break;
-									end
-								end
-							end
-							break;
-						end
-					end
-				end
-				v119 = 1481 - (641 + 839);
+			if (((0 + 0) == v119) or ((1443 + 1848) < (9733 - 6453))) then
+				v120 = v118:DebuffRemains(v52.MoonfireDebuff);
+				return v118:DebuffRefreshable(v52.MoonfireDebuff) and (v120 < (2 + 0)) and ((v118:TimeToDie() - v120) > (10 - 4));
 			end
 		end
 	end
-	local function v90(v121)
-		local v122 = v121:DebuffRemains(v51.SunfireDebuff);
-		return v121:DebuffRefreshable(v51.SunfireDebuff) and (v122 < (915 - (910 + 3))) and ((v121:TimeToDie() - v122) > (15 - 9));
+	local function v94(v121)
+		return v121:DebuffRefreshable(v52.MoonfireDebuff) and (v13:AstralPowerDeficit() > (v67 + v52.Moonfire:EnergizeAmount()));
 	end
-	local function v91(v123)
-		return v123:DebuffRefreshable(v51.SunfireDebuff) and (v13:AstralPowerDeficit() > (v66 + v51.Sunfire:EnergizeAmount()));
-	end
-	local function v92(v124)
-		local v125 = 1684 - (1466 + 218);
-		local v126;
+	local function v95(v122)
+		local v123 = 0 + 0;
+		local v124;
 		while true do
-			if ((v125 == (0 + 0)) or ((1202 - (556 + 592)) == (141 + 254))) then
-				v126 = v124:DebuffRemains(v51.MoonfireDebuff);
-				return v124:DebuffRefreshable(v51.MoonfireDebuff) and (v126 < (810 - (329 + 479))) and ((v124:TimeToDie() - v126) > (860 - (174 + 680)));
+			if (((2440 + 1946) >= (628 + 245)) and (v123 == (0 + 0))) then
+				v124 = v122:DebuffRemains(v52.StellarFlareDebuff);
+				return v122:DebuffRefreshable(v52.StellarFlareDebuff) and (v13:AstralPowerDeficit() > (v67 + v52.StellarFlare:EnergizeAmount())) and (v124 < (2 + 0)) and ((v122:TimeToDie() - v124) > (441 - (153 + 280)));
 			end
 		end
 	end
-	local function v93(v127)
-		return v127:DebuffRefreshable(v51.MoonfireDebuff) and (v13:AstralPowerDeficit() > (v66 + v51.Moonfire:EnergizeAmount()));
+	local function v96(v125)
+		return v125:DebuffRefreshable(v52.StellarFlareDebuff) and (v13:AstralPowerDeficit() > (v67 + v52.StellarFlare:EnergizeAmount()));
 	end
-	local function v94(v128)
-		local v129 = 0 - 0;
-		local v130;
-		while true do
-			if (((169 - 87) == (59 + 23)) and (v129 == (739 - (396 + 343)))) then
-				v130 = v128:DebuffRemains(v51.StellarFlareDebuff);
-				return v128:DebuffRefreshable(v51.StellarFlareDebuff) and (v13:AstralPowerDeficit() > (v66 + v51.StellarFlare:EnergizeAmount())) and (v130 < (1 + 1)) and ((v128:TimeToDie() - v130) > (1485 - (29 + 1448)));
-			end
-		end
+	local function v97(v126)
+		return v126:DebuffRefreshable(v52.SunfireDebuff) and ((v126:TimeToDie() - v16:DebuffRemains(v52.SunfireDebuff)) > ((17 - 11) - (v89 / (2 + 0)))) and (v13:AstralPowerDeficit() > (v67 + v52.Sunfire:EnergizeAmount()));
 	end
-	local function v95(v131)
-		return v131:DebuffRefreshable(v51.StellarFlareDebuff) and (v13:AstralPowerDeficit() > (v66 + v51.StellarFlare:EnergizeAmount()));
+	local function v98(v127)
+		return v127:DebuffRefreshable(v52.MoonfireDebuff) and ((v127:TimeToDie() - v16:DebuffRemains(v52.MoonfireDebuff)) > (3 + 3)) and (v13:AstralPowerDeficit() > (v67 + v52.Moonfire:EnergizeAmount()));
 	end
-	local function v96(v132)
-		return v132:DebuffRefreshable(v51.SunfireDebuff) and ((v132:TimeToDie() - v16:DebuffRemains(v51.SunfireDebuff)) > ((1395 - (135 + 1254)) - (v88 / (7 - 5)))) and (v13:AstralPowerDeficit() > (v66 + v51.Sunfire:EnergizeAmount()));
+	local function v99(v128)
+		return v128:DebuffRefreshable(v52.StellarFlareDebuff) and (((v128:TimeToDie() - v128:DebuffRemains(v52.StellarFlareDebuff)) - v128:GetEnemiesInSplashRangeCount(5 + 3)) > (8 + 0 + v89));
 	end
-	local function v97(v133)
-		return v133:DebuffRefreshable(v51.MoonfireDebuff) and ((v133:TimeToDie() - v16:DebuffRemains(v51.MoonfireDebuff)) > (27 - 21)) and (v13:AstralPowerDeficit() > (v66 + v51.Moonfire:EnergizeAmount()));
-	end
-	local function v98(v134)
-		return v134:DebuffRefreshable(v51.StellarFlareDebuff) and (((v134:TimeToDie() - v134:DebuffRemains(v51.StellarFlareDebuff)) - v134:GetEnemiesInSplashRangeCount(6 + 2)) > ((1535 - (389 + 1138)) + v88));
-	end
-	local function v99(v135)
-		return v135:DebuffRemains(v51.MoonfireDebuff) > ((v135:DebuffRemains(v51.SunfireDebuff) * (596 - (102 + 472))) / (17 + 1));
-	end
-	local function v100()
-		v80 = v13:BuffUp(v51.EclipseSolar) or v13:BuffUp(v51.EclipseLunar);
-		v81 = v13:BuffUp(v51.EclipseSolar) and v13:BuffUp(v51.EclipseLunar);
-		v82 = v13:BuffUp(v51.EclipseLunar) and v13:BuffDown(v51.EclipseSolar);
-		v83 = v13:BuffUp(v51.EclipseSolar) and v13:BuffDown(v51.EclipseLunar);
-		v84 = (not v80 and (((v51.Starfire:Count() == (0 + 0)) and (v51.Wrath:Count() > (0 + 0))) or v13:IsCasting(v51.Wrath))) or v83;
-		v85 = (not v80 and (((v51.Wrath:Count() == (1545 - (320 + 1225))) and (v51.Starfire:Count() > (0 - 0))) or v13:IsCasting(v51.Starfire))) or v82;
-		v86 = not v80 and (v51.Wrath:Count() > (0 + 0)) and (v51.Starfire:Count() > (1464 - (157 + 1307)));
+	local function v100(v129)
+		return v129:DebuffRemains(v52.MoonfireDebuff) > ((v129:DebuffRemains(v52.SunfireDebuff) * (16 + 6)) / (27 - 9));
 	end
 	local function v101()
-		local v136 = 1859 - (821 + 1038);
-		local v137;
-		local v138;
-		while true do
-			if ((v136 == (4 - 2)) or ((64 + 517) < (500 - 218))) then
-				v138 = ((v57:IsUsable() or (v57:ID() == v52.SpoilsofNeltharus:ID()) or (v57:ID() == v52.MirrorofFracturedTomorrows:ID())) and (1 + 1)) or (0 - 0);
-				v138 = ((v57:ID() == v52.SpoilsofNeltharus:ID()) and (1027 - (834 + 192))) or (0 + 0);
-				v136 = 1 + 2;
-			end
-			if ((v136 == (1 + 2)) or ((7139 - 2530) < (2799 - (300 + 4)))) then
-				v63 = v63 + v138;
-				v58 = true;
-				break;
-			end
-			if (((308 + 844) == (3015 - 1863)) and (v136 == (362 - (112 + 250)))) then
-				v59 = (not v51.CelestialAlignment:IsAvailable() and not v51.IncarnationTalent:IsAvailable()) or not v23();
-				v63 = 0 + 0;
-				v136 = 2 - 1;
-			end
-			if (((1087 + 809) <= (1770 + 1652)) and (v136 == (1 + 0))) then
-				v137 = ((v56:IsUsable() or (v56:ID() == v52.SpoilsofNeltharus:ID()) or (v56:ID() == v52.MirrorofFracturedTomorrows:ID())) and (1 + 0)) or (0 + 0);
-				v63 = v63 + v137;
-				v136 = 1416 - (1001 + 413);
-			end
-		end
+		v81 = v13:BuffUp(v52.EclipseSolar) or v13:BuffUp(v52.EclipseLunar);
+		v82 = v13:BuffUp(v52.EclipseSolar) and v13:BuffUp(v52.EclipseLunar);
+		v83 = v13:BuffUp(v52.EclipseLunar) and v13:BuffDown(v52.EclipseSolar);
+		v84 = v13:BuffUp(v52.EclipseSolar) and v13:BuffDown(v52.EclipseLunar);
+		v85 = (not v81 and (((v52.Starfire:Count() == (0 + 0)) and (v52.Wrath:Count() > (667 - (89 + 578)))) or v13:IsCasting(v52.Wrath))) or v84;
+		v86 = (not v81 and (((v52.Wrath:Count() == (0 + 0)) and (v52.Starfire:Count() > (0 - 0))) or v13:IsCasting(v52.Starfire))) or v83;
+		v87 = not v81 and (v52.Wrath:Count() > (1049 - (572 + 477))) and (v52.Starfire:Count() > (0 + 0));
 	end
 	local function v102()
-		local v139 = 0 - 0;
-		while true do
-			if ((v139 == (883 - (244 + 638))) or ((1683 - (627 + 66)) > (4827 - 3207))) then
-				if ((v51.Wrath:IsCastable() and not v13:IsCasting(v51.Wrath)) or ((1479 - (512 + 90)) > (6601 - (1665 + 241)))) then
-					if (((3408 - (373 + 344)) >= (835 + 1016)) and v24(v51.Wrath, nil, nil, not v16:IsSpellInRange(v51.Wrath))) then
-						return "wrath precombat 2";
-					end
-				end
-				if ((v51.Wrath:IsCastable() and ((v13:IsCasting(v51.Wrath) and (v51.Wrath:Count() == (1 + 1))) or (v13:PrevGCD(2 - 1, v51.Wrath) and (v51.Wrath:Count() == (1 - 0))))) or ((4084 - (35 + 1064)) >= (3534 + 1322))) then
-					if (((9148 - 4872) >= (5 + 1190)) and v24(v51.Wrath, nil, nil, not v16:IsSpellInRange(v51.Wrath))) then
-						return "wrath precombat 4";
-					end
-				end
-				v139 = 1238 - (298 + 938);
-			end
-			if (((4491 - (233 + 1026)) <= (6356 - (636 + 1030))) and (v139 == (2 + 0))) then
-				if (v51.StellarFlare:IsCastable() or ((876 + 20) >= (935 + 2211))) then
-					if (((207 + 2854) >= (3179 - (55 + 166))) and v24(v51.StellarFlare, nil, nil, not v16:IsSpellInRange(v51.StellarFlare))) then
-						return "stellar_flare precombat 6";
-					end
-				end
-				if (((618 + 2569) >= (65 + 579)) and v51.Starfire:IsCastable() and not v51.StellarFlare:IsAvailable()) then
-					if (((2459 - 1815) <= (1001 - (36 + 261))) and v24(v51.Starfire, nil, nil, not v16:IsSpellInRange(v51.Starfire))) then
-						return "starfire precombat 8";
-					end
-				end
-				break;
-			end
-			if (((1675 - 717) > (2315 - (34 + 1334))) and (v139 == (0 + 0))) then
-				if (((3491 + 1001) >= (3937 - (1035 + 248))) and v51.MarkOfTheWild:IsCastable() and v50.GroupBuffMissing(v51.MarkOfTheWild)) then
-					if (((3463 - (20 + 1)) >= (784 + 719)) and v24(v51.MarkOfTheWild, v43)) then
-						return "mark_of_the_wild precombat";
-					end
-				end
-				if (v51.MoonkinForm:IsCastable() or ((3489 - (134 + 185)) <= (2597 - (549 + 584)))) then
-					if (v25(v51.MoonkinForm) or ((5482 - (314 + 371)) == (15063 - 10675))) then
-						return "moonkin_form";
-					end
-				end
-				v139 = 969 - (478 + 490);
-			end
-		end
+		v60 = (not v52.CelestialAlignment:IsAvailable() and not v52.IncarnationTalent:IsAvailable()) or not v23();
+		v64 = 0 + 0;
+		local v130 = ((v57:IsUsable() or (v57:ID() == v53.SpoilsofNeltharus:ID()) or (v57:ID() == v53.MirrorofFracturedTomorrows:ID())) and (1 + 0)) or (86 - (84 + 2));
+		v64 = v64 + v130;
+		local v131 = ((v58:IsUsable() or (v58:ID() == v53.SpoilsofNeltharus:ID()) or (v58:ID() == v53.MirrorofFracturedTomorrows:ID())) and (2 - 0)) or (0 + 0);
+		v131 = ((v58:ID() == v53.SpoilsofNeltharus:ID()) and (843 - (497 + 345))) or (0 + 0);
+		v64 = v64 + v131;
+		v59 = true;
 	end
 	local function v103()
-		if (((292 + 259) <= (1853 - (786 + 386))) and v51.Starfall:IsReady() and v64) then
-			if (((10614 - 7337) > (1786 - (1055 + 324))) and v24(v51.Starfall, nil, nil, not v16:IsSpellInRange(v51.Wrath))) then
-				return "starfall fallthru 2";
+		if (((156 + 765) <= (2435 - (605 + 728))) and v52.MarkOfTheWild:IsCastable() and v51.GroupBuffMissing(v52.MarkOfTheWild)) then
+			if (((3358 + 1348) >= (2140 - 1177)) and v24(v52.MarkOfTheWild, v43)) then
+				return "mark_of_the_wild precombat";
 			end
 		end
-		if (((6035 - (1093 + 247)) >= (1258 + 157)) and v51.Starsurge:IsReady()) then
-			if (v24(v51.Starsurge, nil, nil, not v16:IsSpellInRange(v51.Starsurge)) or ((338 + 2874) <= (3747 - 2803))) then
-				return "starsurge fallthru 4";
+		if (v52.MoonkinForm:IsCastable() or ((44 + 916) <= (3238 - 2362))) then
+			if (v25(v52.MoonkinForm) or ((1863 + 203) == (2581 - 1649))) then
+				return "moonkin_form";
 			end
 		end
-		if ((v51.WildMushroom:IsReady() and not v64) or ((10506 - 7410) <= (5115 - 3317))) then
-			if (((8888 - 5351) == (1259 + 2278)) and v24(v51.WildMushroom, v47, nil, not v16:IsSpellInRange(v51.WildMushroom))) then
-				return "wild_mushroom fallthru 6";
+		if (((3644 + 1181) < (5332 - (457 + 32))) and v52.Wrath:IsCastable() and not v13:IsCasting(v52.Wrath)) then
+			if (v24(v52.Wrath, nil, nil, not v16:IsSpellInRange(v52.Wrath)) or ((1645 + 2232) >= (5939 - (832 + 570)))) then
+				return "wrath precombat 2";
 			end
 		end
-		if (((14781 - 10944) >= (5411 - 3841)) and v51.Sunfire:IsCastable()) then
-			if (v50.CastCycle(v51.Sunfire, v87, v99, not v16:IsSpellInRange(v51.Sunfire)) or ((2225 + 725) == (9748 - 5936))) then
-				return "sunfire fallthru 8";
+		if ((v52.Wrath:IsCastable() and ((v13:IsCasting(v52.Wrath) and (v52.Wrath:Count() == (2 + 0))) or (v13:PrevGCD(1 + 0, v52.Wrath) and (v52.Wrath:Count() == (3 - 2))))) or ((2079 + 2236) < (2522 - (588 + 208)))) then
+			if (v24(v52.Wrath, nil, nil, not v16:IsSpellInRange(v52.Wrath)) or ((9915 - 6236) < (2425 - (884 + 916)))) then
+				return "wrath precombat 4";
 			end
 		end
-		if (((5411 - (364 + 324)) >= (6354 - 4036)) and v51.Moonfire:IsCastable()) then
-			if (v24(v51.Moonfire, nil, nil, not v16:IsSpellInRange(v51.Moonfire)) or ((4864 - 2837) > (946 + 1906))) then
-				return "moonfire fallthru 10";
+		if (v52.StellarFlare:IsCastable() or ((9682 - 5057) < (367 + 265))) then
+			if (v24(v52.StellarFlare, nil, nil, not v16:IsSpellInRange(v52.StellarFlare)) or ((736 - (232 + 421)) > (3669 - (1569 + 320)))) then
+				return "stellar_flare precombat 6";
+			end
+		end
+		if (((134 + 412) <= (205 + 872)) and v52.Starfire:IsCastable() and not v52.StellarFlare:IsAvailable()) then
+			if (v24(v52.Starfire, nil, nil, not v16:IsSpellInRange(v52.Starfire)) or ((3356 - 2360) > (4906 - (316 + 289)))) then
+				return "starfire precombat 8";
 			end
 		end
 	end
 	local function v104()
-		local v140 = 0 - 0;
-		local v141;
-		local v142;
-		local v143;
+		local v132 = 0 - 0;
 		while true do
-			if ((v140 == (8 - 3)) or ((3450 - 2314) > (5585 - (1249 + 19)))) then
-				if (((4286 + 462) == (18481 - 13733)) and v51.FuryOfElune:IsCastable() and (((v16:TimeToDie() > (1088 - (686 + 400))) and ((v74 > (3 + 0)) or ((v79:CooldownRemains() > (259 - (73 + 156))) and (v72 <= (2 + 278))) or ((v72 >= (1371 - (721 + 90))) and (v13:AstralPowerP() > (1 + 49))))) or (v78 < (32 - 22)))) then
-					if (((4206 - (224 + 246)) <= (7678 - 2938)) and v24(v51.FuryOfElune, nil, not v16:IsSpellInRange(v51.FuryOfElune))) then
-						return "fury_of_elune st 36";
+			if (((188 + 3882) > (2140 - (666 + 787))) and (v132 == (427 - (360 + 65)))) then
+				if (v52.Moonfire:IsCastable() or ((614 + 42) >= (3584 - (79 + 175)))) then
+					if (v24(v52.Moonfire, nil, nil, not v16:IsSpellInRange(v52.Moonfire)) or ((3929 - 1437) <= (262 + 73))) then
+						return "moonfire fallthru 10";
 					end
-				end
-				if ((v51.Starfall:IsReady() and (v13:BuffUp(v51.StarweaversWarp))) or ((6241 - 2851) <= (556 + 2504))) then
-					if (v24(v51.Starfall, nil, not v16:IsSpellInRange(v51.Wrath)) or ((24 + 975) > (1978 + 715))) then
-						return "starfall st 38";
-					end
-				end
-				v141 = (v51.Starlord:IsAvailable() and (v13:BuffStack(v51.StarlordBuff) < (5 - 2))) or (((v13:BuffStack(v51.BOATArcaneBuff) + v13:BuffStack(v51.BOATNatureBuff)) > (6 - 4)) and (v13:BuffRemains(v51.StarlordBuff) > (517 - (203 + 310))));
-				if (((2456 - (1238 + 755)) < (42 + 559)) and v13:BuffUp(v51.StarlordBuff) and (v13:BuffRemains(v51.StarlordBuff) < (1536 - (709 + 825))) and v141) then
-					if (v10.CastAnnotated(v54.CancelStarlord, false, "CANCEL") or ((4022 - 1839) < (1000 - 313))) then
-						return "cancel_buff starlord st 39";
-					end
-				end
-				v140 = 870 - (196 + 668);
-			end
-			if (((17960 - 13411) == (9422 - 4873)) and (v140 == (841 - (171 + 662)))) then
-				if (((4765 - (4 + 89)) == (16375 - 11703)) and v13:BuffUp(v51.StarlordBuff) and (v13:BuffRemains(v51.StarlordBuff) < (1 + 1)) and v142) then
-					if (v25(v54.CancelStarlord, false, "CANCEL") or ((16110 - 12442) < (155 + 240))) then
-						return "cancel_buff starlord st 53";
-					end
-				end
-				if ((v51.Starsurge:IsReady() and v142) or ((5652 - (35 + 1451)) == (1908 - (28 + 1425)))) then
-					if (v24(v51.Starsurge, nil, nil, not v16:IsSpellInRange(v51.Starsurge)) or ((6442 - (941 + 1052)) == (2554 + 109))) then
-						return "starsurge st 54";
-					end
-				end
-				if ((v51.Wrath:IsCastable() and not v13:IsMoving()) or ((5791 - (822 + 692)) < (4266 - 1277))) then
-					if (v24(v51.Wrath, nil, nil, not v16:IsSpellInRange(v51.Wrath)) or ((410 + 460) >= (4446 - (45 + 252)))) then
-						return "wrath st 60";
-					end
-				end
-				v143 = v103();
-				v140 = 9 + 0;
-			end
-			if (((762 + 1450) < (7746 - 4563)) and (v140 == (436 - (114 + 319)))) then
-				if (((6669 - 2023) > (3833 - 841)) and v51.WarriorofElune:IsCastable() and v62 and (v69 or (v13:BuffRemains(v51.EclipseSolar) < (5 + 2)))) then
-					if (((2135 - 701) < (6507 - 3401)) and v24(v51.WarriorofElune)) then
-						return "warrior_of_elune st 20";
-					end
-				end
-				if (((2749 - (556 + 1407)) < (4229 - (741 + 465))) and v51.Starfire:IsCastable() and v69 and (v62 or v13:BuffUp(v51.EclipseSolar))) then
-					if (v24(v51.Starfire, nil, nil, not v16:IsSpellInRange(v51.Starfire)) or ((2907 - (170 + 295)) < (39 + 35))) then
-						return "starfire st 24";
-					end
-				end
-				if (((4166 + 369) == (11165 - 6630)) and v51.Wrath:IsCastable() and v69) then
-					if (v24(v51.Wrath, nil, nil, not v16:IsSpellInRange(v51.Wrath)) or ((2495 + 514) <= (1350 + 755))) then
-						return "wrath st 26";
-					end
-				end
-				v71 = (v74 > (3 + 1)) or (((v79:CooldownRemains() > (1260 - (957 + 273))) or v59) and ((v13:BuffRemains(v51.EclipseLunar) > (2 + 2)) or (v13:BuffRemains(v51.EclipseSolar) > (2 + 2))));
-				v140 = 15 - 11;
-			end
-			if (((4822 - 2992) < (11206 - 7537)) and (v140 == (34 - 27))) then
-				if ((v51.NewMoon:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.NewMoon:EnergizeAmount())) and (v73 or ((v51.NewMoon:ChargesFractional() > (1782.5 - (389 + 1391))) and (v72 <= (327 + 193)) and (v79:CooldownRemains() > (2 + 8))) or (v78 < (22 - 12)))) or ((2381 - (783 + 168)) >= (12122 - 8510))) then
-					if (((2640 + 43) >= (2771 - (309 + 2))) and v24(v51.NewMoon, nil, nil, not v16:IsSpellInRange(v51.NewMoon))) then
-						return "new_moon st 48";
-					end
-				end
-				if ((v51.HalfMoon:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.HalfMoon:EnergizeAmount())) and ((v13:BuffRemains(v51.EclipseLunar) > v51.HalfMoon:ExecuteTime()) or (v13:BuffRemains(v51.EclipseSolar) > v51.HalfMoon:ExecuteTime())) and (v73 or ((v51.HalfMoon:ChargesFractional() > (5.5 - 3)) and (v72 <= (1732 - (1090 + 122))) and (v79:CooldownRemains() > (4 + 6))) or (v78 < (33 - 23)))) or ((1235 + 569) >= (4393 - (628 + 490)))) then
-					if (v24(v51.HalfMoon, nil, nil, not v16:IsSpellInRange(v51.HalfMoon)) or ((255 + 1162) > (8984 - 5355))) then
-						return "half_moon st 50";
-					end
-				end
-				if (((21913 - 17118) > (1176 - (431 + 343))) and v51.FullMoon:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.FullMoon:EnergizeAmount())) and ((v13:BuffRemains(v51.EclipseLunar) > v51.FullMoon:ExecuteTime()) or (v13:BuffRemains(v51.EclipseSolar) > v51.FullMoon:ExecuteTime())) and (v73 or ((v51.HalfMoon:ChargesFractional() > (3.5 - 1)) and (v72 <= (1504 - 984)) and (v79:CooldownRemains() > (8 + 2))) or (v78 < (2 + 8)))) then
-					if (((6508 - (556 + 1139)) > (3580 - (6 + 9))) and v24(v51.FullMoon, nil, nil, not v16:IsSpellInRange(v51.FullMoon))) then
-						return "full_moon st 52";
-					end
-				end
-				v142 = v13:BuffUp(v51.StarweaversWeft) or (v13:AstralPowerDeficit() < (v66 + v89(v51.Wrath) + ((v89(v51.Starfire) + v66) * (v26(v13:BuffRemains(v51.EclipseSolar) < (v13:GCD() * (1 + 2))))))) or (v51.AstralCommunion:IsAvailable() and (v51.AstralCommunion:CooldownRemains() < (2 + 1))) or (v78 < (174 - (28 + 141)));
-				v140 = 4 + 4;
-			end
-			if (((4828 - 916) == (2771 + 1141)) and (v140 == (1323 - (486 + 831)))) then
-				if (((7340 - 4519) <= (16983 - 12159)) and v51.Starsurge:IsReady() and v141) then
-					if (((329 + 1409) <= (6940 - 4745)) and v24(v51.Starsurge, nil, nil, not v16:IsSpellInRange(v51.Starsurge))) then
-						return "starsurge st 40";
-					end
-				end
-				if (((1304 - (668 + 595)) <= (2716 + 302)) and v51.Sunfire:IsCastable()) then
-					if (((433 + 1712) <= (11191 - 7087)) and v50.CastCycle(v51.Sunfire, v87, v91, not v16:IsSpellInRange(v51.Sunfire))) then
-						return "sunfire st 42";
-					end
-				end
-				if (((2979 - (23 + 267)) < (6789 - (1129 + 815))) and v51.Moonfire:IsCastable()) then
-					if (v50.CastCycle(v51.Moonfire, v87, v93, not v16:IsSpellInRange(v51.Moonfire)) or ((2709 - (371 + 16)) > (4372 - (1326 + 424)))) then
-						return "moonfire st 44";
-					end
-				end
-				if (v51.StellarFlare:IsCastable() or ((8587 - 4053) == (7608 - 5526))) then
-					if (v50.CastCycle(v51.StellarFlare, v87, v95, not v16:IsSpellInRange(v51.StellarFlare)) or ((1689 - (88 + 30)) > (2638 - (720 + 51)))) then
-						return "stellar_flare st 46";
-					end
-				end
-				v140 = 15 - 8;
-			end
-			if ((v140 == (1785 - (421 + 1355))) or ((4377 - 1723) >= (1472 + 1524))) then
-				if (((5061 - (286 + 797)) > (7691 - 5587)) and v143) then
-					return v143;
-				end
-				if (((4960 - 1965) > (1980 - (397 + 42))) and v10.CastAnnotated(v51.Pool, false, "MOVING")) then
-					return "Pool ST due to movement and no fallthru";
 				end
 				break;
 			end
-			if (((1015 + 2234) > (1753 - (24 + 776))) and (v140 == (5 - 1))) then
-				if ((v51.Starsurge:IsReady() and v51.ConvokeTheSpirits:IsAvailable() and v51.ConvokeTheSpirits:IsCastable() and v71) or ((4058 - (222 + 563)) > (10075 - 5502))) then
-					if (v24(v51.Starsurge, nil, nil, not v16:IsSpellInRange(v51.Starsurge)) or ((2269 + 882) < (1474 - (23 + 167)))) then
-						return "starsurge st 28";
+			if (((13247 - 8925) >= (4933 - 2371)) and (v132 == (899 - (503 + 396)))) then
+				if ((v52.Starfall:IsReady() and v65) or ((3818 - (92 + 89)) >= (7313 - 3543))) then
+					if (v24(v52.Starfall, nil, nil, not v16:IsSpellInRange(v52.Wrath)) or ((1221 + 1158) > (2710 + 1868))) then
+						return "starfall fallthru 2";
 					end
 				end
-				if ((v51.ConvokeTheSpirits:IsCastable() and v23() and v71) or ((3648 - (690 + 1108)) == (552 + 977))) then
-					if (((678 + 143) < (2971 - (40 + 808))) and v24(v51.ConvokeTheSpirits, nil, not v16:IsSpellInRange(v51.Wrath))) then
-						return "convoke_the_spirits st 30";
+				if (v52.Starsurge:IsReady() or ((1891 - 1408) > (102 + 641))) then
+					if (((5594 - 3140) > (505 + 73)) and v24(v52.Starsurge, nil, nil, not v16:IsSpellInRange(v52.Starsurge))) then
+						return "starsurge fallthru 4";
 					end
 				end
-				if (((149 + 753) < (8890 - 6565)) and v51.AstralCommunion:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.AstralCommunion:EnergizeAmount()))) then
-					if (((821 + 37) <= (1567 + 1395)) and v24(v51.AstralCommunion)) then
-						return "astral_communion st 32";
-					end
-				end
-				if ((v51.ForceOfNature:IsCastable() and v23() and (v13:AstralPowerDeficit() > (v66 + v51.ForceOfNature:EnergizeAmount()))) or ((2164 + 1782) < (1859 - (47 + 524)))) then
-					if (v24(v51.ForceOfNature, nil, not v16:IsSpellInRange(v51.Wrath)) or ((2104 + 1138) == (1549 - 982))) then
-						return "force_of_nature st 34";
-					end
-				end
-				v140 = 7 - 2;
+				v132 = 1 + 0;
 			end
-			if ((v140 == (4 - 2)) or ((2573 - (1165 + 561)) >= (38 + 1225))) then
-				if ((v51.Wrath:IsReady() and v13:BuffUp(v51.DreamstateBuff) and v67 and v13:BuffUp(v51.EclipseSolar)) or ((6977 - 4724) == (707 + 1144))) then
-					if (v24(v51.Wrath, nil, nil, not v16:IsSpellInRange(v51.Wrath)) or ((2566 - (341 + 138)) > (641 + 1731))) then
-						return "wrath st 15";
+			if (((2832 - 1902) < (557 + 3901)) and ((1 - 0) == v132)) then
+				if (((1906 - (485 + 759)) <= (2248 - 1276)) and v52.WildMushroom:IsReady() and not v65) then
+					if (((5559 - (442 + 747)) == (5505 - (832 + 303))) and v24(v52.WildMushroom, v47, nil, not v16:IsSpellInRange(v52.WildMushroom))) then
+						return "wild_mushroom fallthru 6";
 					end
 				end
-				if (v30 or ((9173 - 4728) < (4475 - (89 + 237)))) then
-					if ((v51.CelestialAlignment:IsCastable() and v67) or ((5848 - 4030) == (178 - 93))) then
-						if (((1511 - (581 + 300)) < (3347 - (855 + 365))) and v25(v51.CelestialAlignment)) then
-							return "celestial_alignment st 16";
-						end
-					end
-					if ((v51.Incarnation:IsCastable() and v67) or ((4603 - 2665) == (821 + 1693))) then
-						if (((5490 - (1030 + 205)) >= (52 + 3)) and v25(v51.Incarnation)) then
-							return "incarnation st 18";
-						end
+				if (v52.Sunfire:IsCastable() or ((5708 - (88 + 858)) <= (263 + 598))) then
+					if (v51.CastCycle(v52.Sunfire, v88, v100, not v16:IsSpellInRange(v52.Sunfire)) or ((1169 + 243) == (176 + 4088))) then
+						return "sunfire fallthru 8";
 					end
 				end
-				v62 = ((v72 < (484 + 36)) and (v79:CooldownRemains() > (291 - (156 + 130))) and (v88 < (6 - 3))) or v13:HasTier(51 - 20, 3 - 1);
-				v69 = v86 or (v62 and v13:BuffUp(v51.EclipseSolar) and (v13:BuffRemains(v51.EclipseSolar) < v51.Starfire:CastTime())) or (not v62 and v13:BuffUp(v51.EclipseLunar) and (v13:BuffRemains(v51.EclipseLunar) < v51.Wrath:CastTime()));
-				v140 = 1 + 2;
-			end
-			if (((1749 + 1250) > (1225 - (10 + 59))) and (v140 == (0 + 0))) then
-				if (((11573 - 9223) > (2318 - (671 + 492))) and v51.Sunfire:IsCastable()) then
-					if (((3208 + 821) <= (6068 - (369 + 846))) and v50.CastCycle(v51.Sunfire, v87, v90, not v16:IsSpellInRange(v51.Sunfire))) then
-						return "sunfire st 2";
-					end
-				end
-				v67 = v30 and (v79:CooldownRemains() < (2 + 3)) and not v73 and (((v16:TimeToDie() > (13 + 2)) and (v72 < (2425 - (1036 + 909)))) or (v78 < (20 + 5 + ((16 - 6) * v26(v51.Incarnation:IsAvailable())))));
-				if (v51.Moonfire:IsCastable() or ((719 - (11 + 192)) > (1736 + 1698))) then
-					if (((4221 - (135 + 40)) >= (7348 - 4315)) and v50.CastCycle(v51.Moonfire, v87, v92, not v16:IsSpellInRange(v51.Moonfire))) then
-						return "moonfire st 6";
-					end
-				end
-				if (v51.StellarFlare:IsCastable() or ((1639 + 1080) <= (3187 - 1740))) then
-					if (v50.CastCycle(v51.StellarFlare, v87, v94, not v16:IsSpellInRange(v51.StellarFlare)) or ((6196 - 2062) < (4102 - (50 + 126)))) then
-						return "stellar_flare st 10";
-					end
-				end
-				v140 = 2 - 1;
-			end
-			if ((v140 == (1 + 0)) or ((1577 - (1233 + 180)) >= (3754 - (522 + 447)))) then
-				if ((v13:BuffUp(v51.StarlordBuff) and (v13:BuffRemains(v51.StarlordBuff) < (1423 - (107 + 1314))) and (((v72 >= (256 + 294)) and not v73 and v13:BuffUp(v51.StarweaversWarp)) or ((v72 >= (1706 - 1146)) and v13:BuffUp(v51.StarweaversWeft)))) or ((223 + 302) == (4187 - 2078))) then
-					if (((130 - 97) == (1943 - (716 + 1194))) and v10.CastAnnotated(v54.CancelStarlord, false, "CANCEL")) then
-						return "cancel_buff starlord st 11";
-					end
-				end
-				if (((53 + 3001) <= (431 + 3584)) and v51.Starfall:IsReady() and (v72 >= (1053 - (74 + 429))) and not v73 and v13:BuffUp(v51.StarweaversWarp)) then
-					if (((3609 - 1738) < (1677 + 1705)) and v24(v51.Starfall, v48, nil, not v16:IsSpellInRange(v51.Wrath))) then
-						return "starfall st 12";
-					end
-				end
-				if (((2959 - 1666) <= (1533 + 633)) and v51.Starsurge:IsReady() and (v72 >= (1726 - 1166)) and v13:BuffUp(v51.StarweaversWeft)) then
-					if (v24(v51.Starsurge, nil, nil, not v16:IsSpellInRange(v51.Starsurge)) or ((6376 - 3797) < (556 - (279 + 154)))) then
-						return "starsurge st 13";
-					end
-				end
-				if ((v51.Starfire:IsReady() and v13:BuffUp(v51.DreamstateBuff) and v67 and v82) or ((1624 - (454 + 324)) >= (1864 + 504))) then
-					if (v24(v51.Starfire, nil, nil, not v16:IsSpellInRange(v51.Starfire)) or ((4029 - (12 + 5)) <= (1811 + 1547))) then
-						return "starfire st 14";
-					end
-				end
-				v140 = 4 - 2;
+				v132 = 791 - (766 + 23);
 			end
 		end
 	end
 	local function v105()
-		local v144 = 0 + 0;
-		local v145;
-		local v146;
-		local v147;
-		local v148;
-		local v149;
-		local v150;
-		local v151;
+		local v133 = 0 - 0;
+		local v134;
+		local v135;
+		local v136;
 		while true do
-			if (((2587 - (277 + 816)) <= (12840 - 9835)) and ((1183 - (1058 + 125)) == v144)) then
-				v145 = v13:IsInParty() and not v13:IsInRaid();
-				if ((v51.Moonfire:IsCastable() and v145) or ((584 + 2527) == (3109 - (815 + 160)))) then
-					if (((10104 - 7749) == (5590 - 3235)) and v50.CastCycle(v51.Moonfire, v87, v97, not v16:IsSpellInRange(v51.Moonfire))) then
-						return "moonfire aoe 2";
-					end
+			if ((v133 == (11 - 2)) or ((8346 - 5178) < (7307 - 5154))) then
+				if (v136 or ((6049 - (1036 + 37)) < (945 + 387))) then
+					return v136;
 				end
-				v68 = v23() and (v79:CooldownRemains() < (2 + 3)) and not v73 and (((v16:TimeToDie() > (29 - 19)) and (v72 < (2398 - (41 + 1857)))) or (v78 < ((1918 - (1222 + 671)) + ((25 - 15) * v26(v51.Incarnation:IsAvailable())))));
-				if (v51.Sunfire:IsCastable() or ((844 - 256) <= (1614 - (229 + 953)))) then
-					if (((6571 - (1111 + 663)) >= (5474 - (874 + 705))) and v50.CastCycle(v51.Sunfire, v87, v96, not v16:IsSpellInRange(v51.Sunfire))) then
-						return "sunfire aoe 4";
-					end
-				end
-				if (((501 + 3076) == (2441 + 1136)) and v51.Moonfire:IsCastable() and not v145) then
-					if (((7885 - 4091) > (104 + 3589)) and v50.CastCycle(v51.Moonfire, v87, v97, not v16:IsSpellInRange(v51.Moonfire))) then
-						return "moonfire aoe 6";
-					end
-				end
-				if ((v51.StellarFlare:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.StellarFlare:EnergizeAmount())) and (v88 < (((690 - (642 + 37)) - v51.UmbralIntensity:TalentRank()) - v51.AstralSmolder:TalentRank())) and v68) or ((291 + 984) == (656 + 3444))) then
-					if (v50.CastCycle(v51.StellarFlare, v87, v98, not v16:IsSpellInRange(v51.StellarFlare)) or ((3994 - 2403) >= (4034 - (233 + 221)))) then
-						return "stellar_flare aoe 9";
-					end
-				end
-				v144 = 2 - 1;
-			end
-			if (((866 + 117) <= (3349 - (718 + 823))) and (v144 == (2 + 1))) then
-				if ((v13:BuffUp(v51.StarlordBuff) and (v13:BuffRemains(v51.StarlordBuff) < (807 - (266 + 539))) and v148) or ((6087 - 3937) <= (2422 - (636 + 589)))) then
-					if (((8946 - 5177) >= (2418 - 1245)) and v10.CastAnnotated(v54.CancelStarlord, false, "CANCEL")) then
-						return "cancel_buff starlord aoe 23";
-					end
-				end
-				if (((1177 + 308) == (540 + 945)) and v51.Starfall:IsReady() and v148) then
-					if (v24(v51.Starfall, v48, nil, not v16:IsSpellInRange(v51.Wrath)) or ((4330 - (657 + 358)) <= (7365 - 4583))) then
-						return "starfall aoe 24";
-					end
-				end
-				if ((v51.FullMoon:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.FullMoon:EnergizeAmount())) and ((v13:BuffRemains(v51.EclipseLunar) > v51.FullMoon:ExecuteTime()) or (v13:BuffRemains(v51.EclipseSolar) > v51.FullMoon:ExecuteTime())) and (v73 or ((v51.HalfMoon:ChargesFractional() > (4.5 - 2)) and (v72 <= (1707 - (1151 + 36))) and (v79:CooldownRemains() > (10 + 0))) or (v78 < (3 + 7)))) or ((2616 - 1740) >= (4796 - (1552 + 280)))) then
-					if (v24(v51.FullMoon, nil, nil, not v16:IsSpellInRange(v51.FullMoon)) or ((3066 - (64 + 770)) > (1696 + 801))) then
-						return "full_moon aoe 26";
-					end
-				end
-				if ((v51.Starsurge:IsReady() and v13:BuffUp(v51.StarweaversWeft) and (v88 < (6 - 3))) or ((375 + 1735) <= (1575 - (157 + 1086)))) then
-					if (((7377 - 3691) > (13892 - 10720)) and v24(v51.Starsurge, nil, nil, not v16:IsSpellInRange(v51.Starsurge))) then
-						return "starsurge aoe 30";
-					end
-				end
-				if ((v51.StellarFlare:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.StellarFlare:EnergizeAmount())) and (v88 < (((16 - 5) - v51.UmbralIntensity:TalentRank()) - v51.AstralSmolder:TalentRank()))) or ((6106 - 1632) < (1639 - (599 + 220)))) then
-					if (((8520 - 4241) >= (4813 - (1813 + 118))) and v50.CastCycle(v51.StellarFlare, v87, v98, not v16:IsSpellInRange(v51.StellarFlare))) then
-						return "stellar_flare aoe 32";
-					end
-				end
-				if ((v51.AstralCommunion:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.AstralCommunion:EnergizeAmount()))) or ((1484 + 545) >= (4738 - (841 + 376)))) then
-					if (v24(v51.ForceOfNature) or ((2854 - 817) >= (1079 + 3563))) then
-						return "astral_communion aoe 34";
-					end
-				end
-				v144 = 10 - 6;
-			end
-			if (((2579 - (464 + 395)) < (11440 - 6982)) and ((1 + 1) == v144)) then
-				v147 = v88 < (840 - (467 + 370));
-				if ((v51.Starfire:IsCastable() and v147 and (v86 or (v13:BuffRemains(v51.EclipseSolar) < v51.Starfire:CastTime()))) or ((900 - 464) > (2218 + 803))) then
-					if (((2444 - 1731) <= (133 + 714)) and v24(v51.Starfire, nil, nil, not v16:IsSpellInRange(v51.Starfire))) then
-						return "starfire aoe 17";
-					end
-				end
-				if (((5010 - 2856) <= (4551 - (150 + 370))) and v51.Wrath:IsCastable() and not v147 and (v86 or (v13:BuffRemains(v51.EclipseLunar) < v51.Wrath:CastTime()))) then
-					if (((5897 - (74 + 1208)) == (11351 - 6736)) and v24(v51.Wrath, nil, nil, not v16:IsSpellInRange(v51.Wrath))) then
-						return "wrath aoe 18";
-					end
-				end
-				if ((v51.WildMushroom:IsCastable() and (v13:AstralPowerDeficit() > (v66 + (94 - 74))) and (not v51.WaningTwilight:IsAvailable() or ((v16:DebuffRemains(v51.FungalGrowthDebuff) < (2 + 0)) and (v16:TimeToDie() > (397 - (14 + 376))) and not v13:PrevGCDP(1 - 0, v51.WildMushroom)))) or ((2453 + 1337) == (440 + 60))) then
-					if (((85 + 4) < (647 - 426)) and v24(v51.WildMushroom, v47, nil, not v16:IsSpellInRange(v51.WildMushroom))) then
-						return "wild_mushroom aoe 20";
-					end
-				end
-				if (((1546 + 508) >= (1499 - (23 + 55))) and v51.FuryOfElune:IsCastable() and (((v16:TimeToDie() > (4 - 2)) and ((v74 > (3 + 0)) or ((v79:CooldownRemains() > (27 + 3)) and (v72 <= (434 - 154))) or ((v72 >= (177 + 383)) and (v13:AstralPowerP() > (951 - (652 + 249)))))) or (v78 < (26 - 16)))) then
-					if (((2560 - (708 + 1160)) < (8300 - 5242)) and v24(v51.FuryOfElune, nil, not v16:IsSpellInRange(v51.FuryOfElune))) then
-						return "fury_of_elune aoe 22";
-					end
-				end
-				v148 = (v16:TimeToDie() > (6 - 2)) and (v13:BuffUp(v51.StarweaversWarp) or (v51.Starlord:IsAvailable() and (v13:BuffStack(v51.StarlordBuff) < (30 - (10 + 17)))));
-				v144 = 1 + 2;
-			end
-			if ((v144 == (1738 - (1400 + 332))) or ((6241 - 2987) == (3563 - (242 + 1666)))) then
-				if (v151 or ((555 + 741) == (1800 + 3110))) then
-					return v151;
-				end
-				if (((2871 + 497) == (4308 - (850 + 90))) and v10.CastAnnotated(v51.Pool, false, "MOVING")) then
-					return "Pool AoE due to movement and no fallthru";
+				if (((9012 - 4384) == (3641 + 987)) and v10.CastAnnotated(v52.Pool, false, "MOVING")) then
+					return "Pool ST due to movement and no fallthru";
 				end
 				break;
 			end
-			if (((4628 - 1985) < (5205 - (360 + 1030))) and (v144 == (5 + 0))) then
-				v150 = 0 - 0;
-				if (((2631 - 718) > (2154 - (909 + 752))) and v13:BuffUp(v51.EclipseLunar)) then
-					local v161 = v13:BuffInfo(v51.EclipseLunar, nil, true);
-					local v162 = v161.points[1224 - (109 + 1114)];
-					local v163 = (v162 - (27 - 12)) / (1 + 1);
-				end
-				if (((4997 - (6 + 236)) > (2160 + 1268)) and v13:BuffUp(v51.EclipseSolar)) then
-					local v164 = 0 + 0;
-					local v165;
-					local v166;
-					local v167;
-					while true do
-						if (((3256 - 1875) <= (4137 - 1768)) and (v164 == (1134 - (1076 + 57)))) then
-							v167 = (v166 - (3 + 12)) / (691 - (579 + 110));
-							break;
-						end
-						if ((v164 == (0 + 0)) or ((4282 + 561) == (2168 + 1916))) then
-							v165 = v13:BuffInfo(v51.EclipseSolar, nil, true);
-							v166 = v165.points[408 - (174 + 233)];
-							v164 = 2 - 1;
-						end
+			if ((v133 == (1483 - (641 + 839))) or ((967 - (910 + 3)) == (1006 - 611))) then
+				if (((1766 - (1466 + 218)) == (38 + 44)) and v52.WarriorofElune:IsCastable() and v63 and (v70 or (v13:BuffRemains(v52.EclipseSolar) < (1155 - (556 + 592))))) then
+					if (v24(v52.WarriorofElune) or ((207 + 374) < (1090 - (329 + 479)))) then
+						return "warrior_of_elune st 20";
 					end
 				end
-				if (((8194 - 3525) > (162 + 201)) and v51.Starfire:IsCastable() and not v13:IsMoving() and (((v88 > ((1177 - (663 + 511)) - (v26(v13:BuffUp(v51.DreamstateBuff) or (v149 > v150))))) and v13:BuffUp(v51.EclipseLunar)) or v82)) then
-					if (v24(v51.Starfire, nil, nil, not v16:IsSpellInRange(v51.Starfire)) or ((1675 + 202) >= (682 + 2456))) then
-						return "starfire aoe 46";
+				if ((v52.Starfire:IsCastable() and v70 and (v63 or v13:BuffUp(v52.EclipseSolar))) or ((5463 - (174 + 680)) < (8573 - 6078))) then
+					if (((2387 - 1235) == (823 + 329)) and v24(v52.Starfire, nil, nil, not v16:IsSpellInRange(v52.Starfire))) then
+						return "starfire st 24";
 					end
 				end
-				if (((14619 - 9877) >= (2196 + 1430)) and v51.Wrath:IsCastable() and not v13:IsMoving()) then
-					if (v24(v51.Wrath, nil, nil, not v16:IsSpellInRange(v51.Wrath)) or ((10688 - 6148) == (2217 - 1301))) then
-						return "wrath aoe 48";
+				if (((2635 - (396 + 343)) <= (303 + 3119)) and v52.Wrath:IsCastable() and v70) then
+					if (v24(v52.Wrath, nil, nil, not v16:IsSpellInRange(v52.Wrath)) or ((2467 - (29 + 1448)) > (3009 - (135 + 1254)))) then
+						return "wrath st 26";
 					end
 				end
-				v151 = v103();
-				v144 = 3 + 3;
+				v72 = (v75 > (14 - 10)) or (((v80:CooldownRemains() > (140 - 110)) or v60) and ((v13:BuffRemains(v52.EclipseLunar) > (3 + 1)) or (v13:BuffRemains(v52.EclipseSolar) > (1531 - (389 + 1138)))));
+				v133 = 578 - (102 + 472);
 			end
-			if ((v144 == (1 - 0)) or ((824 + 332) > (398 + 3947))) then
-				v146 = (v68 and ((v51.OrbitalStrike:IsAvailable() and (v13:AstralPowerDeficit() < (v66 + ((730 - (478 + 244)) * v88)))) or v13:BuffUp(v51.TouchTheCosmos))) or (v13:AstralPowerDeficit() < (v66 + (525 - (440 + 77)) + ((6 + 6) * v26((v13:BuffRemains(v51.EclipseLunar) < (14 - 10)) or (v13:BuffRemains(v51.EclipseSolar) < (1560 - (655 + 901)))))));
-				if (((415 + 1822) < (3253 + 996)) and v13:BuffUp(v51.StarlordBuff) and (v13:BuffRemains(v51.StarlordBuff) < (2 + 0)) and v146) then
-					if (v10.CastAnnotated(v54.CancelStarlord, false, "CANCEL") or ((10808 - 8125) < (1468 - (695 + 750)))) then
-						return "cancel_buff starlord aoe 9.5";
+			if ((v133 == (0 + 0)) or ((487 + 390) > (4378 + 317))) then
+				if (((4236 - (320 + 1225)) >= (3294 - 1443)) and v52.Sunfire:IsCastable()) then
+					if (v51.CastCycle(v52.Sunfire, v88, v91, not v16:IsSpellInRange(v52.Sunfire)) or ((1827 + 1158) >= (6320 - (157 + 1307)))) then
+						return "sunfire st 2";
 					end
 				end
-				if (((2380 - 1683) <= (1274 - 448)) and v51.Starfall:IsReady() and v146) then
-					if (((4444 - 3339) <= (1527 - (285 + 66))) and v24(v51.Starfall, v48, nil, not v16:IsSpellInRange(v51.Wrath))) then
-						return "starfall aoe 10";
+				v68 = v30 and (v80:CooldownRemains() < (1864 - (821 + 1038))) and not v74 and (((v16:TimeToDie() > (37 - 22)) and (v73 < (53 + 427))) or (v79 < ((44 - 19) + ((4 + 6) * v26(v52.Incarnation:IsAvailable())))));
+				if (((10598 - 6322) >= (2221 - (834 + 192))) and v52.Moonfire:IsCastable()) then
+					if (((206 + 3026) <= (1204 + 3486)) and v51.CastCycle(v52.Moonfire, v88, v93, not v16:IsSpellInRange(v52.Moonfire))) then
+						return "moonfire st 6";
 					end
 				end
-				if (((7876 - 4497) <= (5122 - (682 + 628))) and v51.Starfire:IsReady() and v13:BuffUp(v51.DreamstateBuff) and v68 and v13:BuffUp(v51.EclipseLunar)) then
-					if (v24(v51.Starfire, nil, nil, not v16:IsSpellInRange(v51.Starfire)) or ((128 + 660) >= (1915 - (176 + 123)))) then
-						return "starfire aoe 11";
+				if (v52.StellarFlare:IsCastable() or ((20 + 876) >= (4873 - 1727))) then
+					if (((3365 - (300 + 4)) >= (790 + 2168)) and v51.CastCycle(v52.StellarFlare, v88, v95, not v16:IsSpellInRange(v52.StellarFlare))) then
+						return "stellar_flare st 10";
 					end
 				end
-				if (((776 + 1078) <= (2452 + 927)) and v30) then
-					if (((4818 - (239 + 30)) == (1237 + 3312)) and v51.CelestialAlignment:IsCastable() and v68) then
-						if (v25(v51.CelestialAlignment) or ((2905 + 117) >= (5352 - 2328))) then
-							return "celestial_alignment aoe 10";
-						end
-					end
-					if (((15037 - 10217) > (2513 - (306 + 9))) and v51.Incarnation:IsCastable() and v68) then
-						if (v25(v51.Incarnation) or ((3702 - 2641) >= (851 + 4040))) then
-							return "celestial_alignment aoe 12";
-						end
-					end
-				end
-				if (((837 + 527) <= (2154 + 2319)) and v51.WarriorofElune:IsCastable()) then
-					if (v25(v51.WarriorofElune) or ((10280 - 6685) <= (1378 - (1140 + 235)))) then
-						return "warrior_of_elune aoe 14";
-					end
-				end
-				v144 = 2 + 0;
+				v133 = 2 - 1;
 			end
-			if ((v144 == (4 + 0)) or ((1200 + 3472) == (3904 - (33 + 19)))) then
-				if (((563 + 996) == (4672 - 3113)) and v51.ConvokeTheSpirits:IsCastable() and v23() and (v13:AstralPowerP() < (23 + 27)) and (v88 < ((5 - 2) + v26(v51.ElunesGuidance:IsAvailable()))) and ((v13:BuffRemains(v51.EclipseLunar) > (4 + 0)) or (v13:BuffRemains(v51.EclipseSolar) > (693 - (586 + 103))))) then
-					if (v24(v51.ConvokeTheSpirits, nil, not v16:IsInRange(4 + 36)) or ((5393 - 3641) <= (2276 - (1309 + 179)))) then
-						return "convoke_the_spirits aoe 36";
+			if (((3549 - (112 + 250)) >= (257 + 387)) and (v133 == (2 - 1))) then
+				if (((369 + 275) <= (365 + 339)) and v13:BuffUp(v52.StarlordBuff) and (v13:BuffRemains(v52.StarlordBuff) < (2 + 0)) and (((v73 >= (273 + 277)) and not v74 and v13:BuffUp(v52.StarweaversWarp)) or ((v73 >= (417 + 143)) and v13:BuffUp(v52.StarweaversWeft)))) then
+					if (((2372 - (1001 + 413)) > (2111 - 1164)) and v10.CastAnnotated(v55.CancelStarlord, false, "CANCEL")) then
+						return "cancel_buff starlord st 11";
 					end
 				end
-				if ((v51.NewMoon:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.NewMoon:EnergizeAmount()))) or ((7052 - 3145) == (78 + 99))) then
-					if (((9318 - 5848) > (420 + 135)) and v24(v51.NewMoon, nil, nil, not v16:IsSpellInRange(v51.NewMoon))) then
-						return "new_moon aoe 38";
+				if (((5374 - (244 + 638)) >= (3347 - (627 + 66))) and v52.Starfall:IsReady() and (v73 >= (1638 - 1088)) and not v74 and v13:BuffUp(v52.StarweaversWarp)) then
+					if (((4044 - (512 + 90)) >= (3409 - (1665 + 241))) and v24(v52.Starfall, v48, nil, not v16:IsSpellInRange(v52.Wrath))) then
+						return "starfall st 12";
 					end
 				end
-				if ((v51.HalfMoon:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.HalfMoon:EnergizeAmount())) and ((v13:BuffRemains(v51.EclipseLunar) > v51.FullMoon:ExecuteTime()) or (v13:BuffRemains(v51.EclipseSolar) > v51.FullMoon:ExecuteTime()))) or ((2064 - 1092) == (1285 - 640))) then
-					if (((3791 - (295 + 314)) >= (5194 - 3079)) and v24(v51.HalfMoon, nil, nil, not v16:IsSpellInRange(v51.HalfMoon))) then
-						return "half_moon aoe 40";
+				if ((v52.Starsurge:IsReady() and (v73 >= (1277 - (373 + 344))) and v13:BuffUp(v52.StarweaversWeft)) or ((1430 + 1740) <= (388 + 1076))) then
+					if (v24(v52.Starsurge, nil, nil, not v16:IsSpellInRange(v52.Starsurge)) or ((12653 - 7856) == (7425 - 3037))) then
+						return "starsurge st 13";
 					end
 				end
-				if (((5855 - (1300 + 662)) < (13907 - 9478)) and v51.ForceOfNature:IsCastable() and (v13:AstralPowerDeficit() > (v66 + v51.ForceOfNature:EnergizeAmount()))) then
-					if (v24(v51.ForceOfNature, nil, not v16:IsSpellInRange(v51.Wrath)) or ((4622 - (1178 + 577)) < (990 + 915))) then
-						return "force_of_nature aoe 42";
+				if (((1650 - (35 + 1064)) <= (496 + 185)) and v52.Starfire:IsReady() and v13:BuffUp(v52.DreamstateBuff) and v68 and v83) then
+					if (((7011 - 3734) > (2 + 405)) and v24(v52.Starfire, nil, nil, not v16:IsSpellInRange(v52.Starfire))) then
+						return "starfire st 14";
 					end
 				end
-				if ((v51.Starsurge:IsReady() and v13:BuffUp(v51.StarweaversWeft) and (v88 < (50 - 33))) or ((3201 - (851 + 554)) >= (3583 + 468))) then
-					if (((4489 - 2870) <= (8157 - 4401)) and v24(v51.Starsurge, nil, nil, not v16:IsSpellInRange(v51.Starsurge))) then
-						return "starsurge aoe 44";
+				v133 = 1238 - (298 + 938);
+			end
+			if (((5954 - (233 + 1026)) >= (3081 - (636 + 1030))) and (v133 == (5 + 3))) then
+				if ((v13:BuffUp(v52.StarlordBuff) and (v13:BuffRemains(v52.StarlordBuff) < (2 + 0)) and v135) or ((955 + 2257) <= (64 + 880))) then
+					if (v25(v55.CancelStarlord, false, "CANCEL") or ((3317 - (55 + 166)) <= (349 + 1449))) then
+						return "cancel_buff starlord st 53";
 					end
 				end
-				v149 = 302 - (115 + 187);
-				v144 = 4 + 1;
+				if (((356 + 3181) == (13508 - 9971)) and v52.Starsurge:IsReady() and v135) then
+					if (((4134 - (36 + 261)) >= (2745 - 1175)) and v24(v52.Starsurge, nil, nil, not v16:IsSpellInRange(v52.Starsurge))) then
+						return "starsurge st 54";
+					end
+				end
+				if ((v52.Wrath:IsCastable() and not v13:IsMoving()) or ((4318 - (34 + 1334)) == (1466 + 2346))) then
+					if (((3670 + 1053) >= (3601 - (1035 + 248))) and v24(v52.Wrath, nil, nil, not v16:IsSpellInRange(v52.Wrath))) then
+						return "wrath st 60";
+					end
+				end
+				v136 = v104();
+				v133 = 30 - (20 + 1);
+			end
+			if ((v133 == (4 + 2)) or ((2346 - (134 + 185)) > (3985 - (549 + 584)))) then
+				if ((v52.Starsurge:IsReady() and v134) or ((1821 - (314 + 371)) > (14820 - 10503))) then
+					if (((5716 - (478 + 490)) == (2516 + 2232)) and v24(v52.Starsurge, nil, nil, not v16:IsSpellInRange(v52.Starsurge))) then
+						return "starsurge st 40";
+					end
+				end
+				if (((4908 - (786 + 386)) <= (15352 - 10612)) and v52.Sunfire:IsCastable()) then
+					if (v51.CastCycle(v52.Sunfire, v88, v92, not v16:IsSpellInRange(v52.Sunfire)) or ((4769 - (1055 + 324)) <= (4400 - (1093 + 247)))) then
+						return "sunfire st 42";
+					end
+				end
+				if (v52.Moonfire:IsCastable() or ((888 + 111) > (284 + 2409))) then
+					if (((1838 - 1375) < (2039 - 1438)) and v51.CastCycle(v52.Moonfire, v88, v94, not v16:IsSpellInRange(v52.Moonfire))) then
+						return "moonfire st 44";
+					end
+				end
+				if (v52.StellarFlare:IsCastable() or ((6211 - 4028) < (1726 - 1039))) then
+					if (((1619 + 2930) == (17524 - 12975)) and v51.CastCycle(v52.StellarFlare, v88, v96, not v16:IsSpellInRange(v52.StellarFlare))) then
+						return "stellar_flare st 46";
+					end
+				end
+				v133 = 24 - 17;
+			end
+			if (((3523 + 1149) == (11947 - 7275)) and (v133 == (692 - (364 + 324)))) then
+				if ((v52.Starsurge:IsReady() and v52.ConvokeTheSpirits:IsAvailable() and v52.ConvokeTheSpirits:IsCastable() and v72) or ((10055 - 6387) < (947 - 552))) then
+					if (v24(v52.Starsurge, nil, nil, not v16:IsSpellInRange(v52.Starsurge)) or ((1381 + 2785) == (1903 - 1448))) then
+						return "starsurge st 28";
+					end
+				end
+				if ((v52.ConvokeTheSpirits:IsCastable() and v23() and v72) or ((7124 - 2675) == (8087 - 5424))) then
+					if (v24(v52.ConvokeTheSpirits, nil, not v16:IsSpellInRange(v52.Wrath)) or ((5545 - (1249 + 19)) < (2698 + 291))) then
+						return "convoke_the_spirits st 30";
+					end
+				end
+				if ((v52.AstralCommunion:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.AstralCommunion:EnergizeAmount()))) or ((3386 - 2516) >= (5235 - (686 + 400)))) then
+					if (((1736 + 476) < (3412 - (73 + 156))) and v24(v52.AstralCommunion)) then
+						return "astral_communion st 32";
+					end
+				end
+				if (((22 + 4624) > (3803 - (721 + 90))) and v52.ForceOfNature:IsCastable() and v23() and (v13:AstralPowerDeficit() > (v67 + v52.ForceOfNature:EnergizeAmount()))) then
+					if (((17 + 1417) < (10084 - 6978)) and v24(v52.ForceOfNature, nil, not v16:IsSpellInRange(v52.Wrath))) then
+						return "force_of_nature st 34";
+					end
+				end
+				v133 = 475 - (224 + 246);
+			end
+			if (((1273 - 487) < (5565 - 2542)) and (v133 == (2 + 5))) then
+				if ((v52.NewMoon:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.NewMoon:EnergizeAmount())) and (v74 or ((v52.NewMoon:ChargesFractional() > (1.5 + 1)) and (v73 <= (382 + 138)) and (v80:CooldownRemains() > (19 - 9))) or (v79 < (33 - 23)))) or ((2955 - (203 + 310)) < (2067 - (1238 + 755)))) then
+					if (((317 + 4218) == (6069 - (709 + 825))) and v24(v52.NewMoon, nil, nil, not v16:IsSpellInRange(v52.NewMoon))) then
+						return "new_moon st 48";
+					end
+				end
+				if ((v52.HalfMoon:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.HalfMoon:EnergizeAmount())) and ((v13:BuffRemains(v52.EclipseLunar) > v52.HalfMoon:ExecuteTime()) or (v13:BuffRemains(v52.EclipseSolar) > v52.HalfMoon:ExecuteTime())) and (v74 or ((v52.HalfMoon:ChargesFractional() > (3.5 - 1)) and (v73 <= (757 - 237)) and (v80:CooldownRemains() > (874 - (196 + 668)))) or (v79 < (39 - 29)))) or ((6232 - 3223) <= (2938 - (171 + 662)))) then
+					if (((1923 - (4 + 89)) < (12859 - 9190)) and v24(v52.HalfMoon, nil, nil, not v16:IsSpellInRange(v52.HalfMoon))) then
+						return "half_moon st 50";
+					end
+				end
+				if ((v52.FullMoon:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.FullMoon:EnergizeAmount())) and ((v13:BuffRemains(v52.EclipseLunar) > v52.FullMoon:ExecuteTime()) or (v13:BuffRemains(v52.EclipseSolar) > v52.FullMoon:ExecuteTime())) and (v74 or ((v52.HalfMoon:ChargesFractional() > (1.5 + 1)) and (v73 <= (2283 - 1763)) and (v80:CooldownRemains() > (4 + 6))) or (v79 < (1496 - (35 + 1451))))) or ((2883 - (28 + 1425)) >= (5605 - (941 + 1052)))) then
+					if (((2573 + 110) >= (3974 - (822 + 692))) and v24(v52.FullMoon, nil, nil, not v16:IsSpellInRange(v52.FullMoon))) then
+						return "full_moon st 52";
+					end
+				end
+				v135 = v13:BuffUp(v52.StarweaversWeft) or (v13:AstralPowerDeficit() < (v67 + v90(v52.Wrath) + ((v90(v52.Starfire) + v67) * (v26(v13:BuffRemains(v52.EclipseSolar) < (v13:GCD() * (3 - 0))))))) or (v52.AstralCommunion:IsAvailable() and (v52.AstralCommunion:CooldownRemains() < (2 + 1))) or (v79 < (302 - (45 + 252)));
+				v133 = 8 + 0;
+			end
+			if ((v133 == (1 + 1)) or ((4390 - 2586) >= (3708 - (114 + 319)))) then
+				if ((v52.Wrath:IsReady() and v13:BuffUp(v52.DreamstateBuff) and v68 and v13:BuffUp(v52.EclipseSolar)) or ((2034 - 617) > (4649 - 1020))) then
+					if (((3057 + 1738) > (598 - 196)) and v24(v52.Wrath, nil, nil, not v16:IsSpellInRange(v52.Wrath))) then
+						return "wrath st 15";
+					end
+				end
+				if (((10084 - 5271) > (5528 - (556 + 1407))) and v30) then
+					if (((5118 - (741 + 465)) == (4377 - (170 + 295))) and v52.CelestialAlignment:IsCastable() and v68 and v49) then
+						if (((1487 + 1334) <= (4431 + 393)) and v25(v52.CelestialAlignment)) then
+							return "celestial_alignment st 16";
+						end
+					end
+					if (((4278 - 2540) <= (1820 + 375)) and v52.Incarnation:IsCastable() and v68 and v49) then
+						if (((27 + 14) <= (1710 + 1308)) and v25(v52.Incarnation)) then
+							return "incarnation st 18";
+						end
+					end
+				end
+				v63 = ((v73 < (1750 - (957 + 273))) and (v80:CooldownRemains() > (2 + 3)) and (v89 < (2 + 1))) or v13:HasTier(118 - 87, 5 - 3);
+				v70 = v87 or (v63 and v13:BuffUp(v52.EclipseSolar) and (v13:BuffRemains(v52.EclipseSolar) < v52.Starfire:CastTime())) or (not v63 and v13:BuffUp(v52.EclipseLunar) and (v13:BuffRemains(v52.EclipseLunar) < v52.Wrath:CastTime()));
+				v133 = 9 - 6;
+			end
+			if (((10621 - 8476) <= (5884 - (389 + 1391))) and (v133 == (4 + 1))) then
+				if (((280 + 2409) < (11030 - 6185)) and v52.FuryOfElune:IsCastable() and (((v16:TimeToDie() > (953 - (783 + 168))) and ((v75 > (9 - 6)) or ((v80:CooldownRemains() > (30 + 0)) and (v73 <= (591 - (309 + 2)))) or ((v73 >= (1719 - 1159)) and (v13:AstralPowerP() > (1262 - (1090 + 122)))))) or (v79 < (4 + 6)))) then
+					if (v24(v52.FuryOfElune, nil, not v16:IsSpellInRange(v52.FuryOfElune)) or ((7798 - 5476) > (1795 + 827))) then
+						return "fury_of_elune st 36";
+					end
+				end
+				if ((v52.Starfall:IsReady() and (v13:BuffUp(v52.StarweaversWarp))) or ((5652 - (628 + 490)) == (374 + 1708))) then
+					if (v24(v52.Starfall, nil, not v16:IsSpellInRange(v52.Wrath)) or ((3889 - 2318) > (8532 - 6665))) then
+						return "starfall st 38";
+					end
+				end
+				v134 = (v52.Starlord:IsAvailable() and (v13:BuffStack(v52.StarlordBuff) < (777 - (431 + 343)))) or (((v13:BuffStack(v52.BOATArcaneBuff) + v13:BuffStack(v52.BOATNatureBuff)) > (3 - 1)) and (v13:BuffRemains(v52.StarlordBuff) > (11 - 7)));
+				if ((v13:BuffUp(v52.StarlordBuff) and (v13:BuffRemains(v52.StarlordBuff) < (2 + 0)) and v134) or ((340 + 2314) >= (4691 - (556 + 1139)))) then
+					if (((3993 - (6 + 9)) > (386 + 1718)) and v10.CastAnnotated(v55.CancelStarlord, false, "CANCEL")) then
+						return "cancel_buff starlord st 39";
+					end
+				end
+				v133 = 4 + 2;
 			end
 		end
 	end
 	local function v106()
-		local v152 = 0 + 0;
-		local v153;
+		local v137 = 169 - (28 + 141);
+		local v138;
+		local v139;
+		local v140;
+		local v141;
+		local v142;
+		local v143;
+		local v144;
 		while true do
-			if (((2379 - 1775) == (1765 - (160 + 1001))) and ((0 + 0) == v152)) then
-				v153 = v50.HandleTopTrinket(v53, v30, 28 + 12, nil);
-				if (v153 or ((9178 - 4694) == (1258 - (237 + 121)))) then
-					return v153;
+			if (((1161 + 1834) > (1901 - 360)) and (v137 == (2 + 0))) then
+				v140 = v89 < (1320 - (486 + 831));
+				if (((8454 - 5205) > (3354 - 2401)) and v52.Starfire:IsCastable() and v140 and (v87 or (v13:BuffRemains(v52.EclipseSolar) < v52.Starfire:CastTime()))) then
+					if (v24(v52.Starfire, nil, nil, not v16:IsSpellInRange(v52.Starfire)) or ((619 + 2654) > (14459 - 9886))) then
+						return "starfire aoe 17";
+					end
 				end
-				v152 = 898 - (525 + 372);
+				if ((v52.Wrath:IsCastable() and not v140 and (v87 or (v13:BuffRemains(v52.EclipseLunar) < v52.Wrath:CastTime()))) or ((4414 - (668 + 595)) < (1156 + 128))) then
+					if (v24(v52.Wrath, nil, nil, not v16:IsSpellInRange(v52.Wrath)) or ((374 + 1476) == (4169 - 2640))) then
+						return "wrath aoe 18";
+					end
+				end
+				if (((1111 - (23 + 267)) < (4067 - (1129 + 815))) and v52.WildMushroom:IsCastable() and (v13:AstralPowerDeficit() > (v67 + (407 - (371 + 16)))) and (not v52.WaningTwilight:IsAvailable() or ((v16:DebuffRemains(v52.FungalGrowthDebuff) < (1752 - (1326 + 424))) and (v16:TimeToDie() > (13 - 6)) and not v13:PrevGCDP(3 - 2, v52.WildMushroom)))) then
+					if (((1020 - (88 + 30)) < (3096 - (720 + 51))) and v24(v52.WildMushroom, v47, nil, not v16:IsSpellInRange(v52.WildMushroom))) then
+						return "wild_mushroom aoe 20";
+					end
+				end
+				if (((1908 - 1050) <= (4738 - (421 + 1355))) and v52.FuryOfElune:IsCastable() and (((v16:TimeToDie() > (2 - 0)) and ((v75 > (2 + 1)) or ((v80:CooldownRemains() > (1113 - (286 + 797))) and (v73 <= (1023 - 743))) or ((v73 >= (927 - 367)) and (v13:AstralPowerP() > (489 - (397 + 42)))))) or (v79 < (4 + 6)))) then
+					if (v24(v52.FuryOfElune, nil, not v16:IsSpellInRange(v52.FuryOfElune)) or ((4746 - (24 + 776)) < (1984 - 696))) then
+						return "fury_of_elune aoe 22";
+					end
+				end
+				v141 = (v16:TimeToDie() > (789 - (222 + 563))) and (v13:BuffUp(v52.StarweaversWarp) or (v52.Starlord:IsAvailable() and (v13:BuffStack(v52.StarlordBuff) < (6 - 3))));
+				v137 = 3 + 0;
 			end
-			if (((1 - 0) == v152) or ((14650 - 10191) <= (1255 - (96 + 46)))) then
-				v153 = v50.HandleBottomTrinket(v53, v30, 817 - (643 + 134), nil);
-				if (((1312 + 2320) > (8147 - 4749)) and v153) then
-					return v153;
+			if ((v137 == (191 - (23 + 167))) or ((5040 - (690 + 1108)) == (205 + 362))) then
+				v139 = (v69 and ((v52.OrbitalStrike:IsAvailable() and (v13:AstralPowerDeficit() < (v67 + ((7 + 1) * v89)))) or v13:BuffUp(v52.TouchTheCosmos))) or (v13:AstralPowerDeficit() < (v67 + (856 - (40 + 808)) + ((2 + 10) * v26((v13:BuffRemains(v52.EclipseLunar) < (15 - 11)) or (v13:BuffRemains(v52.EclipseSolar) < (4 + 0))))));
+				if ((v13:BuffUp(v52.StarlordBuff) and (v13:BuffRemains(v52.StarlordBuff) < (2 + 0)) and v139) or ((465 + 382) >= (1834 - (47 + 524)))) then
+					if (v10.CastAnnotated(v55.CancelStarlord, false, "CANCEL") or ((1463 + 790) == (5059 - 3208))) then
+						return "cancel_buff starlord aoe 9.5";
+					end
+				end
+				if ((v52.Starfall:IsReady() and v139) or ((3119 - 1032) > (5409 - 3037))) then
+					if (v24(v52.Starfall, v48, nil, not v16:IsSpellInRange(v52.Wrath)) or ((6171 - (1165 + 561)) < (124 + 4025))) then
+						return "starfall aoe 10";
+					end
+				end
+				if ((v52.Starfire:IsReady() and v13:BuffUp(v52.DreamstateBuff) and v69 and v13:BuffUp(v52.EclipseLunar)) or ((5630 - 3812) == (33 + 52))) then
+					if (((1109 - (341 + 138)) < (575 + 1552)) and v24(v52.Starfire, nil, nil, not v16:IsSpellInRange(v52.Starfire))) then
+						return "starfire aoe 11";
+					end
+				end
+				if (v30 or ((3999 - 2061) == (2840 - (89 + 237)))) then
+					if (((13688 - 9433) >= (115 - 60)) and v52.CelestialAlignment:IsCastable() and v69) then
+						if (((3880 - (581 + 300)) > (2376 - (855 + 365))) and v25(v52.CelestialAlignment)) then
+							return "celestial_alignment aoe 10";
+						end
+					end
+					if (((5581 - 3231) > (378 + 777)) and v52.Incarnation:IsCastable() and v69) then
+						if (((5264 - (1030 + 205)) <= (4557 + 296)) and v25(v52.Incarnation)) then
+							return "celestial_alignment aoe 12";
+						end
+					end
+				end
+				if (v52.WarriorofElune:IsCastable() or ((481 + 35) > (3720 - (156 + 130)))) then
+					if (((9193 - 5147) >= (5111 - 2078)) and v25(v52.WarriorofElune)) then
+						return "warrior_of_elune aoe 14";
+					end
+				end
+				v137 = 3 - 1;
+			end
+			if ((v137 == (2 + 2)) or ((1586 + 1133) <= (1516 - (10 + 59)))) then
+				if ((v52.ConvokeTheSpirits:IsCastable() and v23() and (v13:AstralPowerP() < (15 + 35)) and (v89 < ((14 - 11) + v26(v52.ElunesGuidance:IsAvailable()))) and ((v13:BuffRemains(v52.EclipseLunar) > (1167 - (671 + 492))) or (v13:BuffRemains(v52.EclipseSolar) > (4 + 0)))) or ((5349 - (369 + 846)) < (1040 + 2886))) then
+					if (v24(v52.ConvokeTheSpirits, nil, not v16:IsInRange(35 + 5)) or ((2109 - (1036 + 909)) >= (2215 + 570))) then
+						return "convoke_the_spirits aoe 36";
+					end
+				end
+				if ((v52.NewMoon:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.NewMoon:EnergizeAmount()))) or ((881 - 356) == (2312 - (11 + 192)))) then
+					if (((17 + 16) == (208 - (135 + 40))) and v24(v52.NewMoon, nil, nil, not v16:IsSpellInRange(v52.NewMoon))) then
+						return "new_moon aoe 38";
+					end
+				end
+				if (((7399 - 4345) <= (2421 + 1594)) and v52.HalfMoon:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.HalfMoon:EnergizeAmount())) and ((v13:BuffRemains(v52.EclipseLunar) > v52.FullMoon:ExecuteTime()) or (v13:BuffRemains(v52.EclipseSolar) > v52.FullMoon:ExecuteTime()))) then
+					if (((4121 - 2250) < (5069 - 1687)) and v24(v52.HalfMoon, nil, nil, not v16:IsSpellInRange(v52.HalfMoon))) then
+						return "half_moon aoe 40";
+					end
+				end
+				if (((1469 - (50 + 126)) <= (6031 - 3865)) and v52.ForceOfNature:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.ForceOfNature:EnergizeAmount()))) then
+					if (v24(v52.ForceOfNature, nil, not v16:IsSpellInRange(v52.Wrath)) or ((571 + 2008) < (1536 - (1233 + 180)))) then
+						return "force_of_nature aoe 42";
+					end
+				end
+				if ((v52.Starsurge:IsReady() and v13:BuffUp(v52.StarweaversWeft) and (v89 < (986 - (522 + 447)))) or ((2267 - (107 + 1314)) >= (1099 + 1269))) then
+					if (v24(v52.Starsurge, nil, nil, not v16:IsSpellInRange(v52.Starsurge)) or ((12224 - 8212) <= (1427 + 1931))) then
+						return "starsurge aoe 44";
+					end
+				end
+				v142 = 0 - 0;
+				v137 = 19 - 14;
+			end
+			if (((3404 - (716 + 1194)) <= (52 + 2953)) and (v137 == (0 + 0))) then
+				v138 = v13:IsInParty() and not v13:IsInRaid();
+				if ((v52.Moonfire:IsCastable() and v138) or ((3614 - (74 + 429)) == (4116 - 1982))) then
+					if (((1168 + 1187) == (5390 - 3035)) and v51.CastCycle(v52.Moonfire, v88, v98, not v16:IsSpellInRange(v52.Moonfire))) then
+						return "moonfire aoe 2";
+					end
+				end
+				v69 = v23() and (v80:CooldownRemains() < (4 + 1)) and not v74 and (((v16:TimeToDie() > (30 - 20)) and (v73 < (1236 - 736))) or (v79 < ((458 - (279 + 154)) + ((788 - (454 + 324)) * v26(v52.Incarnation:IsAvailable())))));
+				if (v52.Sunfire:IsCastable() or ((463 + 125) <= (449 - (12 + 5)))) then
+					if (((2587 + 2210) >= (9924 - 6029)) and v51.CastCycle(v52.Sunfire, v88, v97, not v16:IsSpellInRange(v52.Sunfire))) then
+						return "sunfire aoe 4";
+					end
+				end
+				if (((1322 + 2255) == (4670 - (277 + 816))) and v52.Moonfire:IsCastable() and not v138) then
+					if (((16212 - 12418) > (4876 - (1058 + 125))) and v51.CastCycle(v52.Moonfire, v88, v98, not v16:IsSpellInRange(v52.Moonfire))) then
+						return "moonfire aoe 6";
+					end
+				end
+				if ((v52.StellarFlare:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.StellarFlare:EnergizeAmount())) and (v89 < (((3 + 8) - v52.UmbralIntensity:TalentRank()) - v52.AstralSmolder:TalentRank())) and v69) or ((2250 - (815 + 160)) == (17591 - 13491))) then
+					if (v51.CastCycle(v52.StellarFlare, v88, v99, not v16:IsSpellInRange(v52.StellarFlare)) or ((3776 - 2185) >= (855 + 2725))) then
+						return "stellar_flare aoe 9";
+					end
+				end
+				v137 = 2 - 1;
+			end
+			if (((2881 - (41 + 1857)) <= (3701 - (1222 + 671))) and (v137 == (15 - 9))) then
+				if (v144 or ((3090 - 940) <= (2379 - (229 + 953)))) then
+					return v144;
+				end
+				if (((5543 - (1111 + 663)) >= (2752 - (874 + 705))) and v10.CastAnnotated(v52.Pool, false, "MOVING")) then
+					return "Pool AoE due to movement and no fallthru";
 				end
 				break;
+			end
+			if (((208 + 1277) == (1014 + 471)) and (v137 == (10 - 5))) then
+				v143 = 0 + 0;
+				if (v13:BuffUp(v52.EclipseLunar) or ((3994 - (642 + 37)) <= (635 + 2147))) then
+					local v164 = v13:BuffInfo(v52.EclipseLunar, nil, true);
+					local v165 = v164.points[1 + 0];
+					local v166 = (v165 - (37 - 22)) / (456 - (233 + 221));
+				end
+				if (v13:BuffUp(v52.EclipseSolar) or ((2025 - 1149) >= (2609 + 355))) then
+					local v167 = 1541 - (718 + 823);
+					local v168;
+					local v169;
+					local v170;
+					while true do
+						if (((1 + 0) == v167) or ((3037 - (266 + 539)) > (7069 - 4572))) then
+							v170 = (v169 - (1240 - (636 + 589))) / (4 - 2);
+							break;
+						end
+						if ((v167 == (0 - 0)) or ((1673 + 437) <= (121 + 211))) then
+							v168 = v13:BuffInfo(v52.EclipseSolar, nil, true);
+							v169 = v168.points[1016 - (657 + 358)];
+							v167 = 2 - 1;
+						end
+					end
+				end
+				if (((8397 - 4711) > (4359 - (1151 + 36))) and v52.Starfire:IsCastable() and not v13:IsMoving() and (((v89 > ((3 + 0) - (v26(v13:BuffUp(v52.DreamstateBuff) or (v142 > v143))))) and v13:BuffUp(v52.EclipseLunar)) or v83)) then
+					if (v24(v52.Starfire, nil, nil, not v16:IsSpellInRange(v52.Starfire)) or ((1177 + 3297) < (2448 - 1628))) then
+						return "starfire aoe 46";
+					end
+				end
+				if (((6111 - (1552 + 280)) >= (3716 - (64 + 770))) and v52.Wrath:IsCastable() and not v13:IsMoving()) then
+					if (v24(v52.Wrath, nil, nil, not v16:IsSpellInRange(v52.Wrath)) or ((1378 + 651) >= (7992 - 4471))) then
+						return "wrath aoe 48";
+					end
+				end
+				v144 = v104();
+				v137 = 2 + 4;
+			end
+			if ((v137 == (1246 - (157 + 1086))) or ((4076 - 2039) >= (20330 - 15688))) then
+				if (((2638 - 918) < (6084 - 1626)) and v13:BuffUp(v52.StarlordBuff) and (v13:BuffRemains(v52.StarlordBuff) < (821 - (599 + 220))) and v141) then
+					if (v10.CastAnnotated(v55.CancelStarlord, false, "CANCEL") or ((867 - 431) > (4952 - (1813 + 118)))) then
+						return "cancel_buff starlord aoe 23";
+					end
+				end
+				if (((522 + 191) <= (2064 - (841 + 376))) and v52.Starfall:IsReady() and v141) then
+					if (((3018 - 864) <= (937 + 3094)) and v24(v52.Starfall, v48, nil, not v16:IsSpellInRange(v52.Wrath))) then
+						return "starfall aoe 24";
+					end
+				end
+				if (((12596 - 7981) == (5474 - (464 + 395))) and v52.FullMoon:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.FullMoon:EnergizeAmount())) and ((v13:BuffRemains(v52.EclipseLunar) > v52.FullMoon:ExecuteTime()) or (v13:BuffRemains(v52.EclipseSolar) > v52.FullMoon:ExecuteTime())) and (v74 or ((v52.HalfMoon:ChargesFractional() > (5.5 - 3)) and (v73 <= (250 + 270)) and (v80:CooldownRemains() > (847 - (467 + 370)))) or (v79 < (20 - 10)))) then
+					if (v24(v52.FullMoon, nil, nil, not v16:IsSpellInRange(v52.FullMoon)) or ((2783 + 1007) == (1714 - 1214))) then
+						return "full_moon aoe 26";
+					end
+				end
+				if (((14 + 75) < (514 - 293)) and v52.Starsurge:IsReady() and v13:BuffUp(v52.StarweaversWeft) and (v89 < (523 - (150 + 370)))) then
+					if (((3336 - (74 + 1208)) >= (3494 - 2073)) and v24(v52.Starsurge, nil, nil, not v16:IsSpellInRange(v52.Starsurge))) then
+						return "starsurge aoe 30";
+					end
+				end
+				if (((3281 - 2589) < (2176 + 882)) and v52.StellarFlare:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.StellarFlare:EnergizeAmount())) and (v89 < (((401 - (14 + 376)) - v52.UmbralIntensity:TalentRank()) - v52.AstralSmolder:TalentRank()))) then
+					if (v51.CastCycle(v52.StellarFlare, v88, v99, not v16:IsSpellInRange(v52.StellarFlare)) or ((5643 - 2389) == (1071 + 584))) then
+						return "stellar_flare aoe 32";
+					end
+				end
+				if ((v52.AstralCommunion:IsCastable() and (v13:AstralPowerDeficit() > (v67 + v52.AstralCommunion:EnergizeAmount()))) or ((1139 + 157) == (4683 + 227))) then
+					if (((9868 - 6500) == (2534 + 834)) and v24(v52.ForceOfNature)) then
+						return "astral_communion aoe 34";
+					end
+				end
+				v137 = 82 - (23 + 55);
 			end
 		end
 	end
 	local function v107()
+		local v145 = v51.HandleTopTrinket(v54, v30, 94 - 54, nil);
+		if (((1764 + 879) < (3426 + 389)) and v145) then
+			return v145;
+		end
+		local v145 = v51.HandleBottomTrinket(v54, v30, 62 - 22, nil);
+		if (((602 + 1311) > (1394 - (652 + 249))) and v145) then
+			return v145;
+		end
+	end
+	local function v108()
 		C_Timer.After(0.15 - 0, function()
-			local v154 = 0 + 0;
+			local v146 = 1868 - (708 + 1160);
 			while true do
-				if (((8010 - 3928) <= (10050 - 5133)) and (v154 == (719 - (316 + 403)))) then
-					v87 = v16:GetEnemiesInSplashRange(7 + 3);
-					v49();
-					v154 = 2 - 1;
+				if (((12907 - 8152) > (6249 - 2821)) and (v146 == (28 - (10 + 17)))) then
+					v28 = EpicSettings.Toggles['ooc'];
+					v29 = EpicSettings.Toggles['aoe'];
+					v146 = 1 + 1;
 				end
-				if (((1747 + 3085) >= (3490 - 2104)) and ((3 + 1) == v154)) then
-					if (((45 + 92) == (474 - 337)) and v29) then
-						v88 = v16:GetEnemiesInSplashRangeCount(47 - 37);
-					else
-						v88 = 1 - 0;
+				if (((3113 - (1400 + 332)) <= (4543 - 2174)) and (v146 == (1911 - (242 + 1666)))) then
+					if (v13:IsDeadOrGhost() or ((2073 + 2770) == (1497 + 2587))) then
+						if (((3980 + 689) > (1303 - (850 + 90))) and v25(v52.Nothing, nil, nil)) then
+							return "Dead";
+						end
 					end
-					if ((not v13:IsChanneling() and v31) or ((90 + 1480) >= (8527 - 4195))) then
-						if (v13:AffectingCombat() or ((199 + 3865) <= (5351 - 3532))) then
-							local v170 = 17 - (12 + 5);
-							while true do
-								if ((v170 == (3 - 2)) or ((10637 - 5651) < (3345 - 1771))) then
-									if (((10975 - 6549) > (35 + 137)) and (v13:HealthPercentage() <= v38) and v37 and v52.Healthstone:IsReady()) then
-										if (((2559 - (1656 + 317)) > (406 + 49)) and v25(v54.Healthstone, nil, nil, true)) then
-											return "healthstone defensive 4";
-										end
-									end
-									break;
+					v88 = v16:GetEnemiesInSplashRange(17 - 7);
+					v146 = 1394 - (360 + 1030);
+				end
+				if (((0 + 0) == v146) or ((5297 - 3420) >= (4317 - 1179))) then
+					v88 = v16:GetEnemiesInSplashRange(1671 - (909 + 752));
+					v50();
+					v146 = 1224 - (109 + 1114);
+				end
+				if (((8681 - 3939) >= (1412 + 2214)) and (v146 == (244 - (6 + 236)))) then
+					v30 = EpicSettings.Toggles['cds'];
+					v31 = EpicSettings.Toggles['toggle'];
+					v146 = 2 + 1;
+				end
+				if ((v146 == (4 + 0)) or ((10707 - 6167) == (1599 - 683))) then
+					if (v29 or ((2289 - (1076 + 57)) > (715 + 3630))) then
+						v89 = v16:GetEnemiesInSplashRangeCount(699 - (579 + 110));
+					else
+						v89 = 1 + 0;
+					end
+					if (((1978 + 259) < (2256 + 1993)) and not v13:IsChanneling() and v31) then
+						if (v13:AffectingCombat() or ((3090 - (174 + 233)) < (64 - 41))) then
+							if (((1223 - 526) <= (368 + 458)) and (v13:HealthPercentage() <= v46) and v52.NaturesVigil:IsReady()) then
+								if (((2279 - (663 + 511)) <= (1050 + 126)) and v25(v52.NaturesVigil, nil, nil, true)) then
+									return "barkskin defensive 2";
 								end
-								if (((662 + 164) == (2196 - 1370)) and (v170 == (0 - 0))) then
-									if (((v13:HealthPercentage() <= v46) and v51.NaturesVigil:IsReady()) or ((4373 - (5 + 349)) > (21094 - 16653))) then
-										if (((3288 - (266 + 1005)) < (2808 + 1453)) and v25(v51.NaturesVigil, nil, nil, true)) then
-											return "barkskin defensive 2";
-										end
-									end
-									if (((16091 - 11375) > (105 - 25)) and (v13:HealthPercentage() <= v45) and v51.Barkskin:IsReady()) then
-										if (v25(v51.Barkskin, nil, nil, true) or ((5203 - (561 + 1135)) == (4263 - 991))) then
-											return "barkskin defensive 2";
-										end
-									end
-									v170 = 3 - 2;
+							end
+							if (((734 + 2645) <= (11752 - 7940)) and (v13:HealthPercentage() <= v45) and v52.Barkskin:IsReady()) then
+								if (v25(v52.Barkskin, nil, nil, true) or ((478 + 310) >= (3804 - 2188))) then
+									return "barkskin defensive 2";
+								end
+							end
+							if (((4487 - 2633) <= (1613 + 1766)) and (v13:HealthPercentage() <= v38) and v37 and v53.Healthstone:IsReady()) then
+								if (((8853 - 4304) == (3242 + 1307)) and v25(v55.Healthstone, nil, nil, true)) then
+									return "healthstone defensive 4";
 								end
 							end
 						end
-						if ((v16 and v16:Exists() and v16:IsAPlayer() and v16:IsDeadOrGhost() and not v13:CanAttack(v16)) or ((1942 - (507 + 559)) >= (7716 - 4641))) then
-							local v171 = 0 - 0;
-							local v172;
+						if ((v16 and v16:Exists() and v16:IsAPlayer() and v16:IsDeadOrGhost() and not v13:CanAttack(v16)) or ((277 + 2745) >= (3746 - (478 + 244)))) then
+							local v173 = 517 - (440 + 77);
+							local v174;
 							while true do
-								if (((4740 - (212 + 176)) > (3459 - (250 + 655))) and (v171 == (0 - 0))) then
-									v172 = v50.DeadFriendlyUnitsCount();
-									if (v13:AffectingCombat() or ((7698 - 3292) < (6325 - 2282))) then
-										if (v51.Rebirth:IsCastable() or ((3845 - (1869 + 87)) >= (11733 - 8350))) then
-											if (((3793 - (484 + 1417)) <= (5859 - 3125)) and v25(v51.Rebirth, nil, true)) then
+								if (((2192 + 2628) > (8044 - 5846)) and (v173 == (1556 - (655 + 901)))) then
+									v174 = v51.DeadFriendlyUnitsCount();
+									if (v13:AffectingCombat() or ((197 + 864) >= (3745 + 1146))) then
+										if (((922 + 442) <= (18019 - 13546)) and v52.Rebirth:IsCastable()) then
+											if (v25(v52.Rebirth, nil, true) or ((5040 - (695 + 750)) <= (9 - 6))) then
 												return "rebirth";
 											end
 										end
-									elseif (((3222 - 1299) < (2991 - (48 + 725))) and v51.Revive:IsCastable()) then
-										if (((3549 - 1376) > (1016 - 637)) and v25(v51.Revive, not v16:IsInRange(24 + 16), true)) then
+									elseif (v52.Revive:IsCastable() or ((7209 - 2537) == (15491 - 11639))) then
+										if (((1910 - (285 + 66)) == (3633 - 2074)) and v25(v52.Revive, not v16:IsInRange(1350 - (682 + 628)), true)) then
 											return "revive";
 										end
 									end
@@ -862,125 +819,102 @@ v0["Epix_Druid_Balance.lua"] = function(...)
 								end
 							end
 						end
-						if ((v50.TargetIsValid() and not v58) or ((6924 - 4333) == (955 + 2454))) then
-							v101();
+						if ((v51.TargetIsValid() and not v59) or ((283 + 1469) <= (1087 - (176 + 123)))) then
+							v102();
 						end
-						if (((1316 + 3198) > (4177 - (152 + 701))) and (v50.TargetIsValid() or v13:AffectingCombat())) then
-							local v173 = 1311 - (430 + 881);
-							while true do
-								if ((v173 == (1 + 0)) or ((1103 - (557 + 338)) >= (1428 + 3400))) then
-									v78 = v77;
-									if ((v78 == (31311 - 20200)) or ((5542 - 3959) > (9476 - 5909))) then
-										v78 = v10.FightRemains(v87, false);
-									end
-									v173 = 4 - 2;
-								end
-								if ((v173 == (804 - (499 + 302))) or ((2179 - (39 + 827)) == (2191 - 1397))) then
-									v73 = v13:BuffUp(v51.CABuff) or v13:BuffUp(v51.IncarnationBuff);
-									v74 = 0 - 0;
-									v173 = 15 - 11;
-								end
-								if (((4872 - 1698) > (249 + 2653)) and ((11 - 7) == v173)) then
-									if (((660 + 3460) <= (6741 - 2481)) and v73) then
-										v74 = (v51.IncarnationTalent:IsAvailable() and v13:BuffRemains(v51.IncarnationBuff)) or v13:BuffRemains(v51.CABuff);
-									end
-									break;
-								end
-								if ((v173 == (104 - (103 + 1))) or ((1437 - (475 + 79)) > (10328 - 5550))) then
-									v75 = true;
-									v77 = v10.BossFightRemains();
-									v173 = 3 - 2;
-								end
-								if ((v173 == (1 + 1)) or ((3186 + 434) >= (6394 - (1395 + 108)))) then
-									v72 = 0 - 0;
-									if (((5462 - (7 + 1197)) > (409 + 528)) and v51.PrimordialArcanicPulsar:IsAvailable()) then
-										local v178 = 0 + 0;
-										local v179;
-										while true do
-											if ((v178 == (319 - (27 + 292))) or ((14267 - 9398) < (1155 - 249))) then
-												v179 = v13:BuffInfo(v51.PAPBuff, false, true);
-												if ((v179 ~= nil) or ((5137 - 3912) > (8337 - 4109))) then
-													v72 = v179.points[1 - 0];
-												end
-												break;
-											end
-										end
-									end
-									v173 = 142 - (43 + 96);
+						if (v51.TargetIsValid() or v13:AffectingCombat() or ((1635 + 2272) == (129 + 48))) then
+							v76 = true;
+							v78 = v10.BossFightRemains();
+							v79 = v78;
+							if (((3739 - (239 + 30)) > (151 + 404)) and (v79 == (10680 + 431))) then
+								v79 = v10.FightRemains(v88, false);
+							end
+							v73 = 0 - 0;
+							if (v52.PrimordialArcanicPulsar:IsAvailable() or ((3032 - 2060) == (960 - (306 + 9)))) then
+								local v177 = v13:BuffInfo(v52.PAPBuff, false, true);
+								if (((11103 - 7921) >= (368 + 1747)) and (v177 ~= nil)) then
+									v73 = v177.points[1 + 0];
 								end
 							end
+							v74 = v13:BuffUp(v52.CABuff) or v13:BuffUp(v52.IncarnationBuff);
+							v75 = 0 + 0;
+							if (((11132 - 7239) < (5804 - (1140 + 235))) and v74) then
+								v75 = (v52.IncarnationTalent:IsAvailable() and v13:BuffRemains(v52.IncarnationBuff)) or v13:BuffRemains(v52.CABuff);
+							end
 						end
-						if (((13575 - 10247) > (5059 - 2821)) and not v13:AffectingCombat()) then
-							if (((3186 + 653) > (397 + 1008)) and v51.MoonkinForm:IsCastable() and v44) then
-								if (v25(v51.MoonkinForm) or ((2555 - 1262) <= (195 + 312))) then
+						if (not v13:AffectingCombat() or ((1825 + 1042) < (1747 + 158))) then
+							if ((v52.MoonkinForm:IsCastable() and v44) or ((461 + 1335) >= (4103 - (33 + 19)))) then
+								if (((585 + 1034) <= (11257 - 7501)) and v25(v52.MoonkinForm)) then
 									return "moonkin_form ooc";
 								end
 							end
 						end
-						if ((v50.TargetIsValid() and v28) or v13:AffectingCombat() or ((5427 - 2531) < (254 + 551))) then
-							local v174 = 0 + 0;
-							local v175;
+						if (((267 + 337) == (1184 - 580)) and ((v51.TargetIsValid() and v28) or v13:AffectingCombat())) then
+							local v175 = 0 + 0;
+							local v176;
 							while true do
-								if (((4067 - (1414 + 337)) == (4256 - (1642 + 298))) and (v174 == (2 - 1))) then
-									v65 = v88 > (2 - 1);
-									v66 = ((17 - 11) / v13:SpellHaste()) + v26(v51.NaturesBalance:IsAvailable()) + (v26(v51.OrbitBreaker:IsAvailable()) * v26(v16:DebuffUp(v51.MoonfireDebuff)) * v26(v76.OrbitBreakerStacks > ((9 + 18) - ((2 + 0) * v26(v13:BuffUp(v51.SolsticeBuff))))) * (1012 - (357 + 615)));
-									if ((v51.Berserking:IsCastable() and v23() and ((v74 >= (15 + 5)) or v59 or (v78 < (36 - 21)))) or ((2203 + 367) == (3285 - 1752))) then
-										if (v24(v51.Berserking, v32) or ((707 + 176) == (100 + 1360))) then
-											return "berserking main 2";
-										end
-									end
-									v175 = v106();
-									v174 = 2 + 0;
+								if (((690 - (586 + 103)) == v175) or ((409 + 4075) == (2770 - 1870))) then
+									v65 = (v89 > ((1489 - (1309 + 179)) + v26(not v52.AetherialKindling:IsAvailable() and not v52.Starweaver:IsAvailable()))) and v52.Starfall:IsAvailable();
+									v66 = v89 > (1 - 0);
+									v67 = ((3 + 3) / v13:SpellHaste()) + v26(v52.NaturesBalance:IsAvailable()) + (v26(v52.OrbitBreaker:IsAvailable()) * v26(v16:DebuffUp(v52.MoonfireDebuff)) * v26(v77.OrbitBreakerStacks > ((72 - 45) - ((2 + 0) * v26(v13:BuffUp(v52.SolsticeBuff))))) * (84 - 44));
+									v175 = 3 - 1;
 								end
-								if ((v174 == (1303 - (384 + 917))) or ((5316 - (128 + 569)) <= (2542 - (1407 + 136)))) then
-									if (v175 or ((5297 - (687 + 1200)) > (5826 - (556 + 1154)))) then
-										return v175;
-									end
-									if ((v64 and v29) or ((3176 - 2273) >= (3154 - (9 + 86)))) then
-										local v180 = v105();
-										if (v180 or ((4397 - (275 + 146)) < (465 + 2392))) then
-											return v180;
+								if ((v175 == (612 - (295 + 314))) or ((10951 - 6492) <= (3075 - (1300 + 662)))) then
+									if (((11404 - 7772) > (5153 - (1178 + 577))) and v65 and v29) then
+										local v179 = 0 + 0;
+										local v180;
+										while true do
+											if (((12067 - 7985) <= (6322 - (851 + 554))) and (v179 == (1 + 0))) then
+												if (((13400 - 8568) >= (3009 - 1623)) and v10.CastAnnotated(v52.Pool, false, "WAIT/AoE")) then
+													return "Wait for AoE";
+												end
+												break;
+											end
+											if (((439 - (115 + 187)) == (105 + 32)) and (v179 == (0 + 0))) then
+												v180 = v106();
+												if (v180 or ((6186 - 4616) >= (5493 - (160 + 1001)))) then
+													return v180;
+												end
+												v179 = 1 + 0;
+											end
 										end
-										if (((4994 - (29 + 35)) > (10224 - 7917)) and v10.CastAnnotated(v51.Pool, false, "WAIT/AoE")) then
-											return "Wait for AoE";
-										end
 									end
-									if (true or ((12085 - 8039) < (5699 - 4408))) then
-										local v181 = 0 + 0;
+									if (true or ((2805 + 1259) <= (3723 - 1904))) then
+										local v181 = 358 - (237 + 121);
 										local v182;
 										while true do
-											if ((v181 == (1013 - (53 + 959))) or ((4649 - (312 + 96)) == (6152 - 2607))) then
-												if (v10.CastAnnotated(v51.Pool, false, "WAIT/ST") or ((4333 - (147 + 138)) > (5131 - (813 + 86)))) then
+											if ((v181 == (898 - (525 + 372))) or ((9452 - 4466) < (5171 - 3597))) then
+												if (((4568 - (96 + 46)) > (949 - (643 + 134))) and v10.CastAnnotated(v52.Pool, false, "WAIT/ST")) then
 													return "Wait for ST";
 												end
 												break;
 											end
-											if ((v181 == (0 + 0)) or ((3242 - 1492) >= (3965 - (18 + 474)))) then
-												v182 = v104();
-												if (((1069 + 2097) == (10333 - 7167)) and v182) then
+											if (((212 + 374) > (1090 - 635)) and (v181 == (0 - 0))) then
+												v182 = v105();
+												if (((793 + 33) == (1620 - 794)) and v182) then
 													return v182;
 												end
-												v181 = 1087 - (860 + 226);
+												v181 = 1 - 0;
 											end
 										end
 									end
 									break;
 								end
-								if (((2066 - (121 + 182)) < (459 + 3265)) and (v174 == (1240 - (988 + 252)))) then
-									if (((7 + 50) <= (853 + 1870)) and v34 and (v13:HealthPercentage() <= v36)) then
-										local v183 = 1970 - (49 + 1921);
+								if ((v175 == (719 - (316 + 403))) or ((2672 + 1347) > (12209 - 7768))) then
+									if (((729 + 1288) < (10730 - 6469)) and v34 and (v13:HealthPercentage() <= v36)) then
+										local v183 = 0 + 0;
 										while true do
-											if ((v183 == (890 - (223 + 667))) or ((2122 - (51 + 1)) == (762 - 319))) then
-												if ((v35 == "Refreshing Healing Potion") or ((5792 - 3087) == (2518 - (146 + 979)))) then
-													if (v52.RefreshingHealingPotion:IsReady() or ((1299 + 3302) < (666 - (311 + 294)))) then
-														if (v10.Press(v54.RefreshingHealingPotion) or ((3876 - 2486) >= (2010 + 2734))) then
+											if (((1520 + 3196) > (277 - 197)) and (v183 == (0 - 0))) then
+												if ((v35 == "Refreshing Healing Potion") or ((7285 - 3778) == (188 + 3084))) then
+													if (v53.RefreshingHealingPotion:IsReady() or ((1724 - 848) >= (151 + 2924))) then
+														if (((12803 - 8451) > (2571 - (12 + 5))) and v10.Press(v55.RefreshingHealingPotion)) then
 															return "refreshing healing potion defensive 4";
 														end
 													end
 												end
-												if ((v35 == "Dreamwalker's Healing Potion") or ((3446 - (496 + 947)) > (5192 - (1233 + 125)))) then
-													if (v52.DreamwalkersHealingPotion:IsReady() or ((64 + 92) > (3511 + 402))) then
-														if (((38 + 157) == (1840 - (963 + 682))) and v10.Press(v54.RefreshingHealingPotion)) then
+												if ((v35 == "Dreamwalker's Healing Potion") or ((17113 - 12707) < (8625 - 4582))) then
+													if (v53.DreamwalkersHealingPotion:IsReady() or ((4015 - 2126) >= (8389 - 5006))) then
+														if (((384 + 1508) <= (4707 - (1656 + 317))) and v10.Press(v55.RefreshingHealingPotion)) then
 															return "dreamwalkers healing potion defensive";
 														end
 													end
@@ -989,47 +923,39 @@ v0["Epix_Druid_Balance.lua"] = function(...)
 											end
 										end
 									end
-									v100();
-									if (((2592 + 513) >= (3300 - (504 + 1000))) and not v13:AffectingCombat()) then
-										local v184 = v102();
-										if (((2949 + 1430) >= (1941 + 190)) and v184) then
+									v101();
+									if (((1714 + 209) < (1778 + 440)) and not v13:AffectingCombat()) then
+										local v184 = v103();
+										if (((5777 - 3604) > (1865 - 1486)) and v184) then
 											return v184;
 										end
 									end
-									v64 = (v88 > (1 + 0 + v26(not v51.AetherialKindling:IsAvailable() and not v51.Starweaver:IsAvailable()))) and v51.Starfall:IsAvailable();
-									v174 = 1 - 0;
+									v175 = 355 - (5 + 349);
+								end
+								if (((9 - 7) == v175) or ((3862 - (266 + 1005)) == (2247 + 1162))) then
+									if (((15402 - 10888) > (4375 - 1051)) and v52.Berserking:IsCastable() and v23() and ((v75 >= (1716 - (561 + 1135))) or v60 or (v79 < (19 - 4)))) then
+										if (v24(v52.Berserking, v32) or ((683 - 475) >= (5894 - (507 + 559)))) then
+											return "berserking main 2";
+										end
+									end
+									v176 = v107();
+									if (v176 or ((3972 - 2389) > (11031 - 7464))) then
+										return v176;
+									end
+									v175 = 391 - (212 + 176);
 								end
 							end
 						end
 					end
 					break;
 				end
-				if (((3285 + 559) >= (1189 + 854)) and (v154 == (185 - (156 + 26)))) then
-					if (v13:IsDeadOrGhost() or ((1862 + 1370) <= (4272 - 1541))) then
-						if (((5069 - (149 + 15)) == (5865 - (890 + 70))) and v25(v51.Nothing, nil, nil)) then
-							return "Dead";
-						end
-					end
-					v87 = v16:GetEnemiesInSplashRange(127 - (39 + 78));
-					v154 = 486 - (14 + 468);
-				end
-				if ((v154 == (4 - 2)) or ((11560 - 7424) >= (2276 + 2135))) then
-					v30 = EpicSettings.Toggles['cds'];
-					v31 = EpicSettings.Toggles['toggle'];
-					v154 = 2 + 1;
-				end
-				if ((v154 == (1 + 0)) or ((1336 + 1622) == (1053 + 2964))) then
-					v28 = EpicSettings.Toggles['ooc'];
-					v29 = EpicSettings.Toggles['aoe'];
-					v154 = 3 - 1;
-				end
 			end
 		end);
 	end
-	local function v108()
+	local function v109()
 		v10.Print("Balance Druid Rotation by Epic. Supported by Gojira");
 	end
-	v10.SetAPL(101 + 1, v107, v108);
+	v10.SetAPL(1007 - (250 + 655), v108, v109);
 end;
 return v0["Epix_Druid_Balance.lua"]();
 
