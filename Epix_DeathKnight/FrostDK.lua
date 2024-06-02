@@ -1,54 +1,62 @@
-local v0 = {};
-local v1 = require;
-local function v2(v4, ...)
-	local v5 = v0[v4];
-	if (((2009 + 2160) >= (2983 - (588 + 208))) and not v5) then
-		return v1(v4, ...);
+local v0 = ...;
+local v1 = {};
+local v2 = require;
+local function v3(v5, ...)
+	local v6 = 0 - 0;
+	local v7;
+	while true do
+		if (((2460 - 1966) <= (125 + 3227)) and (v6 == (3 - 2))) then
+			return v7(v0, ...);
+		end
+		if ((v6 == (0 + 0)) or ((1604 + 2056) <= (6127 - 4062))) then
+			v7 = v1[v5];
+			if (not v7 or ((2250 + 1860) > (8047 - 3671))) then
+				return v2(v5, v0, ...);
+			end
+			v6 = 1 + 0;
+		end
 	end
-	return v5(...);
 end
-v0["Epix_DeathKnight_FrostDK.lua"] = function(...)
-	local v6, v7 = ...;
-	local v8 = EpicDBC.DBC;
-	local v9 = EpicLib;
-	local v10 = EpicCache;
-	local v11 = v9.Utils;
-	local v12 = v9.Unit;
-	local v13 = v12.Player;
-	local v14 = v12.Target;
-	local v15 = v9.Spell;
-	local v16 = v9.MultiSpell;
-	local v17 = v9.Item;
-	local v18 = v9.Pet;
-	local v19 = v9.Macro;
-	local v20 = v9.Commons.Everyone.num;
-	local v21 = v9.Commons.Everyone.bool;
-	local v22 = math.min;
-	local v23 = math.abs;
-	local v24 = math.max;
-	local v25 = false;
-	local v26 = false;
+v1["Epix_DeathKnight_FrostDK.lua"] = function(...)
+	local v8, v9 = ...;
+	local v10 = EpicDBC.DBC;
+	local v11 = EpicLib;
+	local v12 = EpicCache;
+	local v13 = v11.Utils;
+	local v14 = v11.Unit;
+	local v15 = v14.Player;
+	local v16 = v14.Target;
+	local v17 = v11.Spell;
+	local v18 = v11.MultiSpell;
+	local v19 = v11.Item;
+	local v20 = v11.Pet;
+	local v21 = v11.Macro;
+	local v22 = v11.Commons.Everyone.num;
+	local v23 = v11.Commons.Everyone.bool;
+	local v24 = math.min;
+	local v25 = math.abs;
+	local v26 = math.max;
 	local v27 = false;
-	local v28 = v9.Cast;
-	local v29 = table.insert;
-	local v30 = GetTime;
-	local v31 = strsplit;
-	local v32 = GetInventoryItemLink;
-	local v33;
-	local v34;
+	local v28 = false;
+	local v29 = false;
+	local v30 = v11.Cast;
+	local v31 = table.insert;
+	local v32 = GetTime;
+	local v33 = strsplit;
+	local v34 = GetInventoryItemLink;
 	local v35;
 	local v36;
-	local v37 = 0 - 0;
+	local v37;
 	local v38;
-	local v39 = 1800 - (884 + 916);
+	local v39 = 0 + 0;
 	local v40;
-	local v41;
+	local v41 = 0 + 0;
 	local v42;
 	local v43;
-	local v44 = 0 - 0;
-	local v45 = 0 + 0;
-	local v46;
-	local v47;
+	local v44;
+	local v45;
+	local v46 = 0 + 0;
+	local v47 = 0 + 0;
 	local v48;
 	local v49;
 	local v50;
@@ -56,86 +64,56 @@ v0["Epix_DeathKnight_FrostDK.lua"] = function(...)
 	local v52;
 	local v53;
 	local v54;
-	local v55 = 653 - (232 + 421);
+	local v55;
 	local v56;
-	local v57;
+	local v57 = 433 - (153 + 280);
 	local v58;
 	local v59;
 	local v60;
 	local v61;
-	local function v62()
-		local v127 = 1889 - (1569 + 320);
-		while true do
-			if (((345 + 1061) == (268 + 1138)) and (v127 == (9 - 6))) then
-				v44 = EpicSettings.Settings['UseDeathStrikeHP'] or (605 - (316 + 289));
-				v45 = EpicSettings.Settings['UseDarkSuccorHP'] or (0 - 0);
-				v46 = EpicSettings.Settings['UseAMSAMZOffensively'];
-				v127 = 1 + 3;
-			end
-			if (((2984 - (666 + 787)) < (4696 - (360 + 65))) and (v127 == (6 + 0))) then
-				v53 = EpicSettings.Settings['RacialsOffGCD'];
-				v54 = EpicSettings.Settings['DisableBoSPooling'];
-				v55 = EpicSettings.Settings['AMSAbsorbPercent'] or (254 - (79 + 175));
-				v127 = 10 - 3;
-			end
-			if (((496 + 139) == (1946 - 1311)) and (v127 == (3 - 1))) then
-				v40 = EpicSettings.Settings['InterruptWithStun'] or (899 - (503 + 396));
-				v41 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (181 - (92 + 89));
-				v42 = EpicSettings.Settings['InterruptThreshold'] or (0 - 0);
-				v127 = 2 + 1;
-			end
-			if (((1997 + 1376) <= (13925 - 10369)) and (v127 == (1 + 6))) then
-				v56 = EpicSettings.Settings['BreathOfSindragosaGCD'];
-				v57 = EpicSettings.Settings['FrostStrikeGCD'];
-				v58 = EpicSettings.Settings['FrostwyrmsFuryGCD'];
-				v127 = 17 - 9;
-			end
-			if (((5 + 0) == v127) or ((1572 + 1719) < (9989 - 6709))) then
-				v50 = EpicSettings.Settings['EmpowerRuneWeaponGCD'];
-				v51 = EpicSettings.Settings['SacrificialPactGCD'];
-				v52 = EpicSettings.Settings['MindFreezeOffGCD'];
-				v127 = 1 + 5;
-			end
-			if (((6688 - 2302) >= (2117 - (485 + 759))) and (v127 == (18 - 10))) then
-				v59 = EpicSettings.Settings['HornOfWinterGCD'];
-				v60 = EpicSettings.Settings['HypothermicPresenceGCD'];
-				v61 = EpicSettings.Settings['PillarOfFrostGCD'];
-				break;
-			end
-			if (((2110 - (442 + 747)) <= (2237 - (832 + 303))) and ((946 - (88 + 858)) == v127)) then
-				v33 = EpicSettings.Settings['UseRacials'];
-				v35 = EpicSettings.Settings['UseHealingPotion'];
-				v36 = EpicSettings.Settings['HealingPotionName'] or (0 + 0);
-				v127 = 1 + 0;
-			end
-			if (((194 + 4512) >= (1752 - (766 + 23))) and (v127 == (19 - 15))) then
-				v47 = EpicSettings.Settings['AntiMagicShellGCD'];
-				v48 = EpicSettings.Settings['AntiMagicZoneGCD'];
-				v49 = EpicSettings.Settings['DeathAndDecayGCD'];
-				v127 = 6 - 1;
-			end
-			if ((v127 == (2 - 1)) or ((3258 - 2298) <= (1949 - (1036 + 37)))) then
-				v37 = EpicSettings.Settings['HealingPotionHP'] or (0 + 0);
-				v38 = EpicSettings.Settings['UseHealthstone'];
-				v39 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
-				v127 = 2 + 0;
-			end
-		end
+	local v62;
+	local v63;
+	local function v64()
+		v35 = EpicSettings.Settings['UseRacials'];
+		v37 = EpicSettings.Settings['UseHealingPotion'];
+		v38 = EpicSettings.Settings['HealingPotionName'] or (0 - 0);
+		v39 = EpicSettings.Settings['HealingPotionHP'] or (0 + 0);
+		v40 = EpicSettings.Settings['UseHealthstone'];
+		v41 = EpicSettings.Settings['HealthstoneHP'] or (0 + 0);
+		v42 = EpicSettings.Settings['InterruptWithStun'] or (0 + 0);
+		v43 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (0 + 0);
+		v44 = EpicSettings.Settings['InterruptThreshold'] or (0 + 0);
+		v46 = EpicSettings.Settings['UseDeathStrikeHP'] or (0 - 0);
+		v47 = EpicSettings.Settings['UseDarkSuccorHP'] or (0 + 0);
+		v48 = EpicSettings.Settings['UseAMSAMZOffensively'];
+		v49 = EpicSettings.Settings['AntiMagicShellGCD'];
+		v50 = EpicSettings.Settings['AntiMagicZoneGCD'];
+		v51 = EpicSettings.Settings['DeathAndDecayGCD'];
+		v52 = EpicSettings.Settings['EmpowerRuneWeaponGCD'];
+		v53 = EpicSettings.Settings['SacrificialPactGCD'];
+		v54 = EpicSettings.Settings['MindFreezeOffGCD'];
+		v55 = EpicSettings.Settings['RacialsOffGCD'];
+		v56 = EpicSettings.Settings['DisableBoSPooling'];
+		v57 = EpicSettings.Settings['AMSAbsorbPercent'] or (667 - (89 + 578));
+		v58 = EpicSettings.Settings['BreathOfSindragosaGCD'];
+		v59 = EpicSettings.Settings['FrostStrikeGCD'];
+		v60 = EpicSettings.Settings['FrostwyrmsFuryGCD'];
+		v61 = EpicSettings.Settings['HornOfWinterGCD'];
+		v62 = EpicSettings.Settings['HypothermicPresenceGCD'];
+		v63 = EpicSettings.Settings['PillarOfFrostGCD'];
 	end
-	local v63 = v15.DeathKnight.Frost;
-	local v64 = v17.DeathKnight.Frost;
-	local v65 = v19.DeathKnight.Frost;
-	local v66 = {v64.AlgetharPuzzleBox:ID()};
-	local v67 = v9.Commons.Everyone;
-	local v68;
-	local v69;
+	local v65 = v17.DeathKnight.Frost;
+	local v66 = v19.DeathKnight.Frost;
+	local v67 = v21.DeathKnight.Frost;
+	local v68 = {v66.AlgetharPuzzleBox:ID()};
+	local v69 = v11.Commons.Everyone;
 	local v70;
-	local v71 = v63.GatheringStorm:IsAvailable() or v63.Everfrost:IsAvailable();
-	local v72 = ((v55 > (972 - (910 + 3))) and (63 - 38)) or (1729 - (1466 + 218));
-	local v73, v74;
+	local v71;
+	local v72;
+	local v73 = v65.GatheringStorm:IsAvailable() or v65.Everfrost:IsAvailable();
+	local v74 = ((v57 > (122 - 63)) and (1074 - (572 + 477))) or (7 + 38);
 	local v75, v76;
-	local v77;
-	local v78;
+	local v77, v78;
 	local v79;
 	local v80;
 	local v81;
@@ -145,945 +123,940 @@ v0["Epix_DeathKnight_FrostDK.lua"] = function(...)
 	local v85;
 	local v86;
 	local v87;
-	local v88 = 5107 + 6004;
-	local v89 = 12259 - (556 + 592);
-	local v90 = v9.GhoulTable;
-	local v91, v92, v93;
-	local v94, v95, v96;
-	local v97;
-	v9:RegisterForEvent(function()
-		v88 = 3952 + 7159;
-		v89 = 11919 - (329 + 479);
+	local v88;
+	local v89;
+	local v90 = 6668 + 4443;
+	local v91 = 1327 + 9784;
+	local v92 = v11.GhoulTable;
+	local v93, v94, v95;
+	local v96, v97, v98;
+	local v99;
+	v11:RegisterForEvent(function()
+		local v147 = 86 - (84 + 2);
+		while true do
+			if ((v147 == (0 - 0)) or ((1175 + 455) > (5040 - (497 + 345)))) then
+				v90 = 285 + 10826;
+				v91 = 1879 + 9232;
+				break;
+			end
+		end
 	end, "PLAYER_REGEN_ENABLED");
-	v9:RegisterForEvent(function()
-		v71 = v63.GatheringStorm:IsAvailable() or v63.Everfrost:IsAvailable();
+	v11:RegisterForEvent(function()
+		v73 = v65.GatheringStorm:IsAvailable() or v65.Everfrost:IsAvailable();
 	end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
-	local v98 = {{v63.Asphyxiate,"Cast Asphyxiate (Interrupt)",function()
+	local v100 = {{v65.Asphyxiate,"Cast Asphyxiate (Interrupt)",function()
 		return true;
 	end}};
-	local v99 = v32("player", 755 - (396 + 343)) or "";
-	local v100 = v32("player", 2 + 15) or "";
-	local v101, v101, v102 = v31(":", v99);
-	local v101, v101, v103 = v31(":", v100);
-	local v69 = (v102 == "3370") or (v103 == "3370");
-	local v70 = (v102 == "3368") or (v103 == "3368");
-	local v104 = (v102 == "6243") or (v103 == "6243");
-	local v105 = IsEquippedItemType("Two-Hand");
-	local v106 = v13:GetEquipment();
-	local v107 = (v106[1490 - (29 + 1448)] and v17(v106[1402 - (135 + 1254)])) or v17(0 - 0);
-	local v108 = (v106[65 - 51] and v17(v106[10 + 4])) or v17(1527 - (389 + 1138));
-	v9:RegisterForEvent(function()
-		v99 = v32("player", 590 - (102 + 472)) or "";
-		v100 = v32("player", 17 + 0) or "";
-		v101, v101, v102 = v31(":", v99);
-		v101, v101, v103 = v31(":", v100);
-		v69 = (v102 == "3370") or (v103 == "3370");
-		v70 = (v102 == "3368") or (v103 == "3368");
-		v105 = IsEquippedItemType("Two-Hand");
-		v106 = v13:GetEquipment();
-		v107 = (v106[8 + 5] and v17(v106[13 + 0])) or v17(1545 - (320 + 1225));
-		v108 = (v106[24 - 10] and v17(v106[9 + 5])) or v17(1464 - (157 + 1307));
+	local v101 = v34("player", 59 - 43) or "";
+	local v102 = v34("player", 16 + 1) or "";
+	local v103, v103, v104 = v33(":", v101);
+	local v103, v103, v105 = v33(":", v102);
+	local v71 = (v104 == "3370") or (v105 == "3370");
+	local v72 = (v104 == "3368") or (v105 == "3368");
+	local v106 = (v104 == "6243") or (v105 == "6243");
+	local v107 = IsEquippedItemType("Two-Hand");
+	local v108 = v15:GetEquipment();
+	local v109 = (v108[35 - 22] and v19(v108[10 + 3])) or v19(489 - (457 + 32));
+	local v110 = (v108[6 + 8] and v19(v108[1416 - (832 + 570)])) or v19(0 + 0);
+	v11:RegisterForEvent(function()
+		v101 = v34("player", 5 + 11) or "";
+		v102 = v34("player", 59 - 42) or "";
+		v103, v103, v104 = v33(":", v101);
+		v103, v103, v105 = v33(":", v102);
+		v71 = (v104 == "3370") or (v105 == "3370");
+		v72 = (v104 == "3368") or (v105 == "3368");
+		v107 = IsEquippedItemType("Two-Hand");
+		v108 = v15:GetEquipment();
+		v109 = (v108[7 + 6] and v19(v108[809 - (588 + 208)])) or v19(0 - 0);
+		v110 = (v108[1814 - (884 + 916)] and v19(v108[28 - 14])) or v19(0 + 0);
 	end, "PLAYER_EQUIPMENT_CHANGED");
-	local function v109()
-		return (v13:HealthPercentage() < v44) or ((v13:HealthPercentage() < v45) and v13:BuffUp(v63.DeathStrikeBuff));
+	local function v111()
+		return (v15:HealthPercentage() < v46) or ((v15:HealthPercentage() < v47) and v15:BuffUp(v65.DeathStrikeBuff));
 	end
-	local function v110(v128)
-		return v128:DebuffRemains(v63.MarkofFyralathDebuff);
+	local function v112(v148)
+		return v148:DebuffRemains(v65.MarkofFyralathDebuff);
 	end
-	local function v111(v129)
-		return ((v129:DebuffStack(v63.RazoriceDebuff) + (1860 - (821 + 1038))) / (v129:DebuffRemains(v63.RazoriceDebuff) + (2 - 1))) * v20(v69);
+	local function v113(v149)
+		return ((v149:DebuffStack(v65.RazoriceDebuff) + (654 - (232 + 421))) / (v149:DebuffRemains(v65.RazoriceDebuff) + (1890 - (1569 + 320)))) * v22(v71);
 	end
-	local function v112(v130)
-		return (v130:DebuffDown(v63.FrostFeverDebuff));
+	local function v114(v150)
+		return (v150:DebuffDown(v65.FrostFeverDebuff));
 	end
-	local function v113()
-		v72 = ((v55 > (7 + 52)) and (53 - 23)) or (17 + 28);
-		if ((v63.HowlingBlast:IsReady() and not v14:IsInRange(19 - 11)) or ((3092 - (834 + 192)) == (60 + 872))) then
-			if (((1239 + 3586) < (104 + 4739)) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
+	local function v115()
+		v74 = ((v57 > (15 + 44)) and (6 + 24)) or (151 - 106);
+		if (((1659 - (316 + 289)) == (2758 - 1704)) and v65.HowlingBlast:IsReady() and not v16:IsInRange(1 + 7)) then
+			if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((2129 - (666 + 787)) >= (2067 - (360 + 65)))) then
 				return "howling_blast precombat 2";
 			end
 		end
-		if ((v63.RemorselessWinter:IsReady() and v14:IsInRange(12 - 4)) or ((4181 - (300 + 4)) >= (1212 + 3325))) then
-			if (v28(v63.RemorselessWinter) or ((11295 - 6980) < (2088 - (112 + 250)))) then
+		if (((3866 + 270) > (2651 - (79 + 175))) and v65.RemorselessWinter:IsReady() and v16:IsInRange(12 - 4)) then
+			if (v30(v65.RemorselessWinter) or ((3383 + 951) == (13011 - 8766))) then
 				return "remorseless_winter precombat 4";
 			end
 		end
 	end
-	local function v114()
-		local v131 = 0 + 0;
-		local v132;
+	local function v116()
+		local v151 = 0 - 0;
+		local v152;
 		while true do
-			if (((0 - 0) == v131) or ((2108 + 1571) < (324 + 301))) then
-				v132 = v67.HandleTopTrinket(v66, v27, 30 + 10, nil);
-				if (v132 or ((2294 + 2331) < (470 + 162))) then
-					return v132;
-				end
-				v131 = 1415 - (1001 + 413);
-			end
-			if (((2 - 1) == v131) or ((965 - (244 + 638)) > (2473 - (627 + 66)))) then
-				v132 = v67.HandleBottomTrinket(v66, v27, 119 - 79, nil);
-				if (((1148 - (512 + 90)) <= (2983 - (1665 + 241))) and v132) then
-					return v132;
+			if ((v151 == (900 - (503 + 396))) or ((4457 - (92 + 89)) <= (5879 - 2848))) then
+				v152 = v69.HandleBottomTrinket(v68, v29, 21 + 19, nil);
+				if (v152 or ((2831 + 1951) <= (4695 - 3496))) then
+					return v152;
 				end
 				break;
 			end
-		end
-	end
-	local function v115()
-		if ((v63.HowlingBlast:IsReady() and (v13:BuffUp(v63.RimeBuff) or v14:DebuffDown(v63.FrostFeverDebuff))) or ((1713 - (373 + 344)) > (1940 + 2361))) then
-			if (((1077 + 2993) > (1812 - 1125)) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
-				return "howling_blast aoe 2";
-			end
-		end
-		if ((v63.GlacialAdvance:IsReady() and not v87 and v81) or ((1109 - 453) >= (4429 - (35 + 1064)))) then
-			if (v28(v63.GlacialAdvance, nil, nil, not v14:IsInRange(73 + 27)) or ((5331 - 2839) <= (2 + 333))) then
-				return "glacial_advance aoe 4";
-			end
-		end
-		if (((5558 - (298 + 938)) >= (3821 - (233 + 1026))) and v63.Obliterate:IsReady() and v13:BuffUp(v63.KillingMachineBuff) and v63.CleavingStrikes:IsAvailable() and v13:BuffUp(v63.DeathAndDecayBuff) and not v83) then
-			if (v67.CastTargetIf(v63.Obliterate, v91, "min", v110, nil, not v14:IsInMeleeRange(1671 - (636 + 1030))) or ((1860 + 1777) >= (3683 + 87))) then
-				return "obliterate aoe 8";
-			end
-		end
-		if ((v63.GlacialAdvance:IsReady() and not v87) or ((707 + 1672) > (310 + 4268))) then
-			if (v28(v63.GlacialAdvance, nil, nil, not v14:IsInRange(321 - (55 + 166))) or ((94 + 389) > (75 + 668))) then
-				return "glacial_advance aoe 10";
-			end
-		end
-		if (((9371 - 6917) > (875 - (36 + 261))) and v63.Frostscythe:IsReady() and v83) then
-			if (((1626 - 696) < (5826 - (34 + 1334))) and v28(v63.Frostscythe, nil, nil, not v14:IsInMeleeRange(4 + 4))) then
-				return "frostscythe aoe 12";
-			end
-		end
-		if (((515 + 147) <= (2255 - (1035 + 248))) and v63.Obliterate:IsReady() and not v83) then
-			if (((4391 - (20 + 1)) == (2277 + 2093)) and v67.CastTargetIf(v63.Obliterate, v91, "min", v110, nil, not v14:IsInMeleeRange(324 - (134 + 185)))) then
-				return "obliterate aoe 14";
-			end
-		end
-		if ((v63.FrostStrike:IsReady() and not v87 and not v63.GlacialAdvance:IsAvailable()) or ((5895 - (549 + 584)) <= (1546 - (314 + 371)))) then
-			if (v28(v63.FrostStrike, v57, nil, not v14:IsSpellInRange(v63.FrostStrike)) or ((4847 - 3435) == (5232 - (478 + 490)))) then
-				return "frost_strike aoe 16";
-			end
-		end
-		if ((v63.HornofWinter:IsCastable() and (v13:Rune() < (2 + 0)) and (v13:RunicPowerDeficit() > (1197 - (786 + 386)))) or ((10261 - 7093) < (3532 - (1055 + 324)))) then
-			if (v28(v63.HornofWinter, v59) or ((6316 - (1093 + 247)) < (1184 + 148))) then
-				return "horn_of_winter aoe 18";
-			end
-		end
-		if (((487 + 4141) == (18373 - 13745)) and v27 and v63.ArcaneTorrent:IsReady() and (v13:RunicPowerDeficit() > (84 - 59))) then
-			if (v28(v63.ArcaneTorrent, v53) or ((153 - 99) == (992 - 597))) then
-				return "arcane_torrent aoe 20";
+			if ((v151 == (0 + 0)) or ((11090 - 6226) < (1660 + 242))) then
+				v152 = v69.HandleTopTrinket(v68, v29, 20 + 20, nil);
+				if (((14737 - 9898) >= (462 + 3238)) and v152) then
+					return v152;
+				end
+				v151 = 1 - 0;
 			end
 		end
 	end
-	local function v116()
-		local v133 = 0 + 0;
+	local function v117()
+		local v153 = 1244 - (485 + 759);
 		while true do
-			if (((315 - 233) == (282 - 200)) and (v133 == (0 + 0))) then
-				if ((v63.HowlingBlast:IsReady() and v80 and (v13:RunicPower() > (((115 - 70) - (v20(v63.RageoftheFrozenChampion:IsAvailable()) * (696 - (364 + 324)))) + ((13 - 8) * v20(v13:BuffUp(v63.RuneofHysteriaBuff)))))) or ((1394 - 813) < (94 + 188))) then
-					if (v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast)) or ((19285 - 14676) < (3995 - 1500))) then
-						return "howling_blast breath 2";
+			if ((v153 == (8 - 4)) or ((2264 - (442 + 747)) > (3053 - (832 + 303)))) then
+				if (((1342 - (88 + 858)) <= (1160 + 2644)) and v29 and v65.ArcaneTorrent:IsReady() and (v15:RunicPowerDeficit() > (21 + 4))) then
+					if (v30(v65.ArcaneTorrent, v55) or ((172 + 3997) == (2976 - (766 + 23)))) then
+						return "arcane_torrent aoe 20";
 					end
 				end
-				if (((3498 - 2346) == (2420 - (1249 + 19))) and v63.HornofWinter:IsReady() and (v13:Rune() < (2 + 0)) and (v13:RunicPowerDeficit() > ((97 - 72) + ((1091 - (686 + 400)) * v20(v13:BuffUp(v63.RuneofHysteriaBuff)))))) then
-					if (((1488 + 408) <= (3651 - (73 + 156))) and v28(v63.HornofWinter, v59)) then
-						return "horn_of_winter breath 4";
-					end
-				end
-				if ((v63.Obliterate:IsReady() and v13:BuffUp(v63.KillingMachineBuff) and not v83) or ((5 + 985) > (2431 - (721 + 90)))) then
-					if (v67.CastTargetIf(v63.Obliterate, v96, "max", v111, nil, not v14:IsInMeleeRange(1 + 4)) or ((2847 - 1970) > (5165 - (224 + 246)))) then
-						return "obliterate breath 8";
-					end
-				end
-				v133 = 1 - 0;
+				break;
 			end
-			if (((4954 - 2263) >= (336 + 1515)) and (v133 == (1 + 1))) then
-				if ((v63.RemorselessWinter:IsReady() and (v13:RunicPower() < (27 + 9)) and (v13:RuneTimeToX(3 - 1) > (v13:RunicPower() / (59 - 41)))) or ((3498 - (203 + 310)) >= (6849 - (1238 + 755)))) then
-					if (((299 + 3977) >= (2729 - (709 + 825))) and v28(v63.RemorselessWinter, nil, nil, not v14:IsInMeleeRange(14 - 6))) then
-						return "remorseless_winter breath 18";
+			if (((6941 - 5535) == (1922 - 516)) and (v153 == (7 - 4))) then
+				if (((5196 - 3665) < (5344 - (1036 + 37))) and v65.FrostStrike:IsReady() and not v89 and not v65.GlacialAdvance:IsAvailable()) then
+					if (((451 + 184) == (1236 - 601)) and v30(v65.FrostStrike, v59, nil, not v16:IsSpellInRange(v65.FrostStrike))) then
+						return "frost_strike aoe 16";
 					end
 				end
-				if (((4707 - 1475) <= (5554 - (196 + 668))) and v63.HowlingBlast:IsReady() and (v13:RunicPower() < (142 - 106)) and (v13:RuneTimeToX(3 - 1) > (v13:RunicPower() / (851 - (171 + 662))))) then
-					if (v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast)) or ((989 - (4 + 89)) >= (11026 - 7880))) then
-						return "howling_blast breath 20";
+				if (((2654 + 719) <= (5036 - (641 + 839))) and v65.HornofWinter:IsCastable() and (v15:Rune() < (915 - (910 + 3))) and (v15:RunicPowerDeficit() > (63 - 38))) then
+					if (v30(v65.HornofWinter, v61) or ((4975 - (1466 + 218)) < (1508 + 1772))) then
+						return "horn_of_winter aoe 18";
 					end
 				end
-				if (((1115 + 1946) >= (12992 - 10034)) and v63.Obliterate:IsReady() and (v13:RunicPowerDeficit() > (10 + 15))) then
-					if (((4673 - (35 + 1451)) >= (2097 - (28 + 1425))) and v67.CastTargetIf(v63.Obliterate, v91, "max", v111, nil, not v14:IsInMeleeRange(1998 - (941 + 1052)))) then
-						return "obliterate breath 18";
-					end
-				end
-				v133 = 3 + 0;
+				v153 = 1152 - (556 + 592);
 			end
-			if (((2158 - (822 + 692)) <= (1004 - 300)) and (v133 == (1 + 0))) then
-				if (((1255 - (45 + 252)) > (937 + 10)) and v63.Frostscythe:IsReady() and v83 and (v13:BuffUp(v63.KillingMachineBuff) or (v13:RunicPower() > (16 + 29)))) then
-					if (((10931 - 6439) >= (3087 - (114 + 319))) and v28(v63.Frostscythe, nil, nil, not v14:IsInMeleeRange(11 - 3))) then
-						return "frostscythe breath 8";
+			if (((1560 + 2826) >= (1681 - (329 + 479))) and (v153 == (854 - (174 + 680)))) then
+				if (((3164 - 2243) <= (2283 - 1181)) and v65.HowlingBlast:IsReady() and (v15:BuffUp(v65.RimeBuff) or v16:DebuffDown(v65.FrostFeverDebuff))) then
+					if (((3360 + 1346) >= (1702 - (396 + 343))) and v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast))) then
+						return "howling_blast aoe 2";
 					end
 				end
-				if (((4410 - 968) >= (959 + 544)) and v63.Obliterate:IsReady() and ((v13:RunicPowerDeficit() > (59 - 19)) or v13:BuffUp(v63.PillarofFrostBuff))) then
-					if (v67.CastTargetIf(v63.Obliterate, v91, "max", v111, nil, not v14:IsInMeleeRange(10 - 5)) or ((5133 - (556 + 1407)) <= (2670 - (741 + 465)))) then
-						return "obliterate breath 10";
+				if ((v65.GlacialAdvance:IsReady() and not v89 and v83) or ((85 + 875) <= (2353 - (29 + 1448)))) then
+					if (v30(v65.GlacialAdvance, nil, nil, not v16:IsInRange(1489 - (135 + 1254))) or ((7782 - 5716) == (4351 - 3419))) then
+						return "glacial_advance aoe 4";
 					end
 				end
-				if ((v63.DeathAndDecay:IsReady() and (v13:RunicPower() < (501 - (170 + 295))) and (v13:RuneTimeToX(2 + 0) > (v13:RunicPower() / (17 + 1)))) or ((11810 - 7013) == (3638 + 750))) then
-					if (((354 + 197) <= (386 + 295)) and v28(v65.DaDPlayer, v49, nil, not v14:IsSpellInRange(v63.DeathAndDecay))) then
-						return "death_and_decay breath 16";
-					end
-				end
-				v133 = 1232 - (957 + 273);
+				v153 = 1 + 0;
 			end
-			if (((877 + 2400) > (163 + 244)) and (v133 == (11 - 8))) then
-				if (((12372 - 7677) >= (4322 - 2907)) and v63.HowlingBlast:IsReady() and (v13:BuffUp(v63.RimeBuff))) then
-					if (v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast)) or ((15904 - 12692) <= (2724 - (389 + 1391)))) then
+			if (((6352 - (389 + 1138)) < (5417 - (102 + 472))) and (v153 == (1 + 0))) then
+				if ((v65.Obliterate:IsReady() and v15:BuffUp(v65.KillingMachineBuff) and v65.CleavingStrikes:IsAvailable() and v15:BuffUp(v65.DeathAndDecayBuff) and not v85) or ((2150 + 1727) >= (4231 + 306))) then
+					if (v69.CastTargetIf(v65.Obliterate, v93, "min", v112, nil, not v16:IsInMeleeRange(1550 - (320 + 1225))) or ((7681 - 3366) < (1057 + 669))) then
+						return "obliterate aoe 8";
+					end
+				end
+				if ((v65.GlacialAdvance:IsReady() and not v89) or ((5143 - (157 + 1307)) < (2484 - (821 + 1038)))) then
+					if (v30(v65.GlacialAdvance, nil, nil, not v16:IsInRange(249 - 149)) or ((506 + 4119) < (1122 - 490))) then
+						return "glacial_advance aoe 10";
+					end
+				end
+				v153 = 1 + 1;
+			end
+			if ((v153 == (4 - 2)) or ((1109 - (834 + 192)) > (114 + 1666))) then
+				if (((141 + 405) <= (24 + 1053)) and v65.Frostscythe:IsReady() and v85) then
+					if (v30(v65.Frostscythe, nil, nil, not v16:IsInMeleeRange(12 - 4)) or ((1300 - (300 + 4)) > (1149 + 3152))) then
+						return "frostscythe aoe 12";
+					end
+				end
+				if (((10654 - 6584) > (1049 - (112 + 250))) and v65.Obliterate:IsReady() and not v85) then
+					if (v69.CastTargetIf(v65.Obliterate, v93, "min", v112, nil, not v16:IsInMeleeRange(2 + 3)) or ((1643 - 987) >= (1908 + 1422))) then
+						return "obliterate aoe 14";
+					end
+				end
+				v153 = 2 + 1;
+			end
+		end
+	end
+	local function v118()
+		local v154 = 0 + 0;
+		while true do
+			if ((v154 == (2 + 1)) or ((1852 + 640) <= (1749 - (1001 + 413)))) then
+				if (((9637 - 5315) >= (3444 - (244 + 638))) and v65.HowlingBlast:IsReady() and (v15:BuffUp(v65.RimeBuff))) then
+					if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((4330 - (627 + 66)) >= (11233 - 7463))) then
 						return "howling_blast breath 24";
 					end
 				end
-				if ((v63.ArcaneTorrent:IsReady() and (v13:RunicPower() < (38 + 22))) or ((323 + 2773) <= (4093 - 2295))) then
-					if (((4488 - (783 + 168)) == (11870 - 8333)) and v28(v63.ArcaneTorrent, v53)) then
+				if ((v65.ArcaneTorrent:IsReady() and (v15:RunicPower() < (662 - (512 + 90)))) or ((4285 - (1665 + 241)) > (5295 - (373 + 344)))) then
+					if (v30(v65.ArcaneTorrent, v55) or ((218 + 265) > (197 + 546))) then
 						return "arcane_torrent breath 26";
 					end
 				end
 				break;
 			end
-		end
-	end
-	local function v117()
-		local v134 = 0 + 0;
-		while true do
-			if (((4148 - (309 + 2)) >= (4821 - 3251)) and (v134 == (1212 - (1090 + 122)))) then
-				if ((v63.Frostscythe:IsReady() and v13:BuffUp(v63.KillingMachineBuff) and v83) or ((957 + 1993) == (12802 - 8990))) then
-					if (((3233 + 1490) >= (3436 - (628 + 490))) and v28(v63.Frostscythe, nil, nil, not v14:IsInMeleeRange(2 + 6))) then
-						return "frostscythe breath_oblit 2";
+			if (((6472 - 4018) > (977 - 399)) and ((1100 - (35 + 1064)) == v154)) then
+				if (((677 + 253) < (9537 - 5079)) and v65.Frostscythe:IsReady() and v85 and (v15:BuffUp(v65.KillingMachineBuff) or (v15:RunicPower() > (1 + 44)))) then
+					if (((1898 - (298 + 938)) <= (2231 - (233 + 1026))) and v30(v65.Frostscythe, nil, nil, not v16:IsInMeleeRange(1674 - (636 + 1030)))) then
+						return "frostscythe breath 8";
 					end
 				end
-				if ((v63.Obliterate:IsReady() and (v13:BuffUp(v63.KillingMachineBuff))) or ((5018 - 2991) > (13033 - 10181))) then
-					if (v67.CastTargetIf(v63.Obliterate, v91, "max", v111, nil, not v14:IsInMeleeRange(779 - (431 + 343))) or ((2294 - 1158) > (12488 - 8171))) then
-						return "obliterate breath_oblit 4";
+				if (((2235 + 2135) == (4269 + 101)) and v65.Obliterate:IsReady() and ((v15:RunicPowerDeficit() > (12 + 28)) or v15:BuffUp(v65.PillarofFrostBuff))) then
+					if (v69.CastTargetIf(v65.Obliterate, v93, "max", v113, nil, not v16:IsInMeleeRange(1 + 4)) or ((4983 - (55 + 166)) <= (167 + 694))) then
+						return "obliterate breath 10";
 					end
 				end
-				v134 = 1 + 0;
+				if ((v65.DeathAndDecay:IsReady() and v51 and (v15:RunicPower() < (4 + 32)) and (v15:RuneTimeToX(7 - 5) > (v15:RunicPower() / (315 - (36 + 261))))) or ((2468 - 1056) == (5632 - (34 + 1334)))) then
+					if (v30(v67.DaDPlayer, nil, nil, not v16:IsSpellInRange(v65.DeathAndDecay)) or ((1218 + 1950) < (1673 + 480))) then
+						return "death_and_decay breath 16";
+					end
+				end
+				v154 = 1285 - (1035 + 248);
 			end
-			if (((608 + 4140) == (6443 - (556 + 1139))) and (v134 == (16 - (6 + 9)))) then
-				if (((685 + 3051) <= (2429 + 2311)) and v63.HowlingBlast:IsReady() and (v13:BuffUp(v63.RimeBuff))) then
-					if (v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast)) or ((3559 - (28 + 141)) <= (1186 + 1874))) then
-						return "howling_blast breath_oblit 6";
+			if ((v154 == (21 - (20 + 1))) or ((2593 + 2383) < (1651 - (134 + 185)))) then
+				if (((5761 - (549 + 584)) == (5313 - (314 + 371))) and v65.HowlingBlast:IsReady() and v82 and (v15:RunicPower() > (((154 - 109) - (v22(v65.RageoftheFrozenChampion:IsAvailable()) * (976 - (478 + 490)))) + ((3 + 2) * v22(v15:BuffUp(v65.RuneofHysteriaBuff)))))) then
+					if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((1226 - (786 + 386)) == (1279 - 884))) then
+						return "howling_blast breath 2";
 					end
 				end
-				if ((v63.HowlingBlast:IsReady() and (v13:BuffDown(v63.KillingMachineBuff))) or ((1232 - 233) > (1908 + 785))) then
-					if (((1780 - (486 + 831)) < (1563 - 962)) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
-						return "howling_blast breath_oblit 8";
+				if (((1461 - (1055 + 324)) == (1422 - (1093 + 247))) and v65.HornofWinter:IsReady() and (v15:Rune() < (2 + 0)) and (v15:RunicPowerDeficit() > (3 + 22 + ((19 - 14) * v22(v15:BuffUp(v65.RuneofHysteriaBuff)))))) then
+					if (v30(v65.HornofWinter, v61) or ((1971 - 1390) < (802 - 520))) then
+						return "horn_of_winter breath 4";
 					end
 				end
-				v134 = 6 - 4;
+				if ((v65.Obliterate:IsReady() and v15:BuffUp(v65.KillingMachineBuff) and not v85) or ((11581 - 6972) < (888 + 1607))) then
+					if (((4437 - 3285) == (3970 - 2818)) and v69.CastTargetIf(v65.Obliterate, v98, "max", v113, nil, not v16:IsInMeleeRange(4 + 1))) then
+						return "obliterate breath 8";
+					end
+				end
+				v154 = 2 - 1;
 			end
-			if ((v134 == (1 + 1)) or ((6902 - 4719) < (1950 - (668 + 595)))) then
-				if (((4094 + 455) == (918 + 3631)) and v63.HornofWinter:IsReady() and (v13:RunicPowerDeficit() > (68 - 43))) then
-					if (((4962 - (23 + 267)) == (6616 - (1129 + 815))) and v28(v63.HornofWinter, v59)) then
-						return "horn_of_winter breath_oblit 10";
+			if (((2584 - (364 + 324)) <= (9380 - 5958)) and (v154 == (4 - 2))) then
+				if ((v65.RemorselessWinter:IsReady() and (v15:RunicPower() < (12 + 24)) and (v15:RuneTimeToX(8 - 6) > (v15:RunicPower() / (28 - 10)))) or ((3006 - 2016) > (2888 - (1249 + 19)))) then
+					if (v30(v65.RemorselessWinter, nil, nil, not v16:IsInMeleeRange(8 + 0)) or ((3413 - 2536) > (5781 - (686 + 400)))) then
+						return "remorseless_winter breath 18";
 					end
 				end
-				if ((v63.ArcaneTorrent:IsReady() and (v13:RunicPowerDeficit() > (407 - (371 + 16)))) or ((5418 - (1326 + 424)) < (747 - 352))) then
-					if (v28(v63.ArcaneTorrent, v53) or ((15223 - 11057) == (573 - (88 + 30)))) then
-						return "arcane_torrent breath_oblit 12";
+				if (((2112 + 579) >= (2080 - (73 + 156))) and v65.HowlingBlast:IsReady() and (v15:RunicPower() < (1 + 35)) and (v15:RuneTimeToX(813 - (721 + 90)) > (v15:RunicPower() / (1 + 17)))) then
+					if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((9691 - 6706) >= (5326 - (224 + 246)))) then
+						return "howling_blast breath 20";
 					end
 				end
-				break;
-			end
-		end
-	end
-	local function v118()
-		local v135 = 771 - (720 + 51);
-		while true do
-			if ((v135 == (4 - 2)) or ((6225 - (421 + 1355)) == (4393 - 1730))) then
-				if ((v63.ChainsofIce:IsReady() and v63.Obliteration:IsAvailable() and v13:BuffDown(v63.PillarofFrostBuff) and (((v13:BuffStack(v63.ColdHeartBuff) >= (7 + 7)) and (v13:BuffUp(v63.UnholyStrengthBuff))) or (v13:BuffStack(v63.ColdHeartBuff) >= (1102 - (286 + 797))) or ((v63.PillarofFrost:CooldownRemains() < (10 - 7)) and (v13:BuffStack(v63.ColdHeartBuff) >= (23 - 9))))) or ((4716 - (397 + 42)) < (934 + 2055))) then
-					if (v28(v63.ChainsofIce, nil, not v14:IsSpellInRange(v63.ChainsofIce)) or ((1670 - (24 + 776)) >= (6391 - 2242))) then
-						return "chains_of_ice cold_heart 10";
+				if (((6927 - 2651) >= (2200 - 1005)) and v65.Obliterate:IsReady() and (v15:RunicPowerDeficit() > (5 + 20))) then
+					if (((77 + 3155) <= (3445 + 1245)) and v69.CastTargetIf(v65.Obliterate, v93, "max", v113, nil, not v16:IsInMeleeRange(9 - 4))) then
+						return "obliterate breath 18";
 					end
 				end
-				break;
-			end
-			if (((2997 - (222 + 563)) < (7013 - 3830)) and (v135 == (1 + 0))) then
-				if (((4836 - (23 + 167)) > (4790 - (690 + 1108))) and v63.ChainsofIce:IsReady() and not v63.Obliteration:IsAvailable() and v70 and v13:BuffDown(v63.PillarofFrostBuff) and (v63.PillarofFrost:CooldownRemains() > (6 + 9)) and (((v13:BuffStack(v63.ColdHeartBuff) >= (9 + 1)) and v13:BuffUp(v63.UnholyStrengthBuff)) or (v13:BuffStack(v63.ColdHeartBuff) >= (861 - (40 + 808))))) then
-					if (((237 + 1197) < (11877 - 8771)) and v28(v63.ChainsofIce, nil, not v14:IsSpellInRange(v63.ChainsofIce))) then
-						return "chains_of_ice cold_heart 6";
-					end
-				end
-				if (((752 + 34) < (1600 + 1423)) and v63.ChainsofIce:IsReady() and not v63.Obliteration:IsAvailable() and not v70 and (v13:BuffStack(v63.ColdHeartBuff) >= (6 + 4)) and v13:BuffDown(v63.PillarofFrostBuff) and (v63.PillarofFrost:CooldownRemains() > (591 - (47 + 524)))) then
-					if (v28(v63.ChainsofIce, nil, not v14:IsSpellInRange(v63.ChainsofIce)) or ((1585 + 857) < (202 - 128))) then
-						return "chains_of_ice cold_heart 8";
-					end
-				end
-				v135 = 2 - 0;
-			end
-			if (((10342 - 5807) == (6261 - (1165 + 561))) and (v135 == (0 + 0))) then
-				if ((v63.ChainsofIce:IsReady() and (v89 < v13:GCD()) and ((v13:Rune() < (6 - 4)) or (v13:BuffDown(v63.KillingMachineBuff) and ((not v105 and (v13:BuffStack(v63.ColdHeartBuff) >= (2 + 2))) or (v105 and (v13:BuffStack(v63.ColdHeartBuff) > (487 - (341 + 138)))))) or (v13:BuffUp(v63.KillingMachineBuff) and ((not v105 and (v13:BuffStack(v63.ColdHeartBuff) > (3 + 5))) or (v105 and (v13:BuffStack(v63.ColdHeartBuff) > (20 - 10))))))) or ((3335 - (89 + 237)) <= (6771 - 4666))) then
-					if (((3852 - 2022) < (4550 - (581 + 300))) and v28(v63.ChainsofIce, nil, nil, not v14:IsSpellInRange(v63.ChainsofIce))) then
-						return "chains_of_ice cold_heart 2";
-					end
-				end
-				if ((v63.ChainsofIce:IsReady() and not v63.Obliteration:IsAvailable() and v13:BuffUp(v63.PillarofFrostBuff) and (v13:BuffStack(v63.ColdHeartBuff) >= (1230 - (855 + 365))) and ((v13:BuffRemains(v63.PillarofFrostBuff) < (v13:GCD() * ((2 - 1) + v20(v63.FrostwyrmsFury:IsAvailable() and v63.FrostwyrmsFury:IsReady())))) or (v13:BuffUp(v63.UnholyStrengthBuff) and (v13:BuffRemains(v63.UnholyStrengthBuff) < v13:GCD())))) or ((467 + 963) >= (4847 - (1030 + 205)))) then
-					if (((2519 + 164) >= (2289 + 171)) and v28(v63.ChainsofIce, nil, not v14:IsSpellInRange(v63.ChainsofIce))) then
-						return "chains_of_ice cold_heart 4";
-					end
-				end
-				v135 = 287 - (156 + 130);
+				v154 = 9 - 6;
 			end
 		end
 	end
 	local function v119()
-		if ((v63.EmpowerRuneWeapon:IsCastable() and ((v63.Obliteration:IsAvailable() and v13:BuffDown(v63.EmpowerRuneWeaponBuff) and (v13:Rune() < (13 - 7)) and (((v63.PillarofFrost:CooldownRemains() < (11 - 4)) and v13:BloodlustUp()) or (((v92 >= (3 - 1)) or v78) and v63.PillarofFrost:CooldownUp()))) or (v89 < (6 + 14)))) or ((1052 + 752) >= (3344 - (10 + 59)))) then
-			if (v28(v63.EmpowerRuneWeapon, v50) or ((401 + 1016) > (17871 - 14242))) then
-				return "empower_rune_weapon cooldowns 4";
+		if ((v65.Frostscythe:IsReady() and v15:BuffUp(v65.KillingMachineBuff) and v85) or ((1409 - (203 + 310)) >= (5139 - (1238 + 755)))) then
+			if (((214 + 2847) >= (4492 - (709 + 825))) and v30(v65.Frostscythe, nil, nil, not v16:IsInMeleeRange(14 - 6))) then
+				return "frostscythe breath_oblit 2";
 			end
 		end
-		if (((5958 - (671 + 492)) > (321 + 81)) and v63.EmpowerRuneWeapon:IsCastable() and ((v13:BuffUp(v63.BreathofSindragosa) and v13:BuffDown(v63.EmpowerRuneWeaponBuff) and (v9.CombatTime() < (1225 - (369 + 846))) and v13:BloodlustUp()) or ((v13:RunicPower() < (19 + 51)) and (v13:Rune() < (3 + 0)) and ((v63.BreathofSindragosa:CooldownRemains() > v72) or (v63.EmpowerRuneWeapon:FullRechargeTime() < (1955 - (1036 + 909))))))) then
-			if (((3827 + 986) > (5985 - 2420)) and v28(v63.EmpowerRuneWeapon, v50)) then
-				return "empower_rune_weapon cooldowns 6";
+		if (((4642 - 1455) >= (1508 - (196 + 668))) and v65.Obliterate:IsReady() and (v15:BuffUp(v65.KillingMachineBuff))) then
+			if (((2542 - 1898) <= (1457 - 753)) and v69.CastTargetIf(v65.Obliterate, v93, "max", v113, nil, not v16:IsInMeleeRange(838 - (171 + 662)))) then
+				return "obliterate breath_oblit 4";
 			end
 		end
-		if (((4115 - (11 + 192)) == (1977 + 1935)) and v63.EmpowerRuneWeapon:IsCastable() and not v63.BreathofSindragosa:IsAvailable() and not v63.Obliteration:IsAvailable() and v13:BuffDown(v63.EmpowerRuneWeaponBuff) and (v13:Rune() < (180 - (135 + 40))) and ((v63.PillarofFrostBuff:CooldownRemains() < (16 - 9)) or v13:BuffUp(v63.PillarofFrostBuff) or not v63.PillarofFrost:IsAvailable())) then
-			if (((1701 + 1120) <= (10627 - 5803)) and v28(v63.EmpowerRuneWeapon, v50)) then
-				return "empower_rune_weapon cooldowns 8";
+		if (((1051 - (4 + 89)) > (3319 - 2372)) and v65.HowlingBlast:IsReady() and (v15:BuffUp(v65.RimeBuff))) then
+			if (((1636 + 2856) >= (11656 - 9002)) and v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast))) then
+				return "howling_blast breath_oblit 6";
 			end
 		end
-		if (((2605 - 867) <= (2371 - (50 + 126))) and v63.AbominationLimb:IsCastable() and ((v63.Obliteration:IsAvailable() and v13:BuffDown(v63.PillarofFrostBuff) and (v63.PillarofFrost:CooldownRemains() < (8 - 5)) and (v79 or v78)) or (v89 < (4 + 11)))) then
-			if (((1454 - (1233 + 180)) <= (3987 - (522 + 447))) and v28(v63.AbominationLimb, nil, not v14:IsInRange(1441 - (107 + 1314)))) then
-				return "abomination_limb_talent cooldowns 10";
+		if (((1350 + 2092) >= (2989 - (35 + 1451))) and v65.HowlingBlast:IsReady() and (v15:BuffDown(v65.KillingMachineBuff))) then
+			if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((4623 - (28 + 1425)) <= (3457 - (941 + 1052)))) then
+				return "howling_blast breath_oblit 8";
 			end
 		end
-		if (((996 + 1149) <= (12505 - 8401)) and v63.AbominationLimb:IsCastable() and v63.BreathofSindragosa:IsAvailable() and (v79 or v78)) then
-			if (((1143 + 1546) < (9621 - 4776)) and v28(v63.AbominationLimb, nil, not v14:IsInRange(79 - 59))) then
-				return "abomination_limb_talent cooldowns 12";
+		if ((v65.HornofWinter:IsReady() and (v15:RunicPowerDeficit() > (24 + 1))) or ((6311 - (822 + 692)) == (6264 - 1876))) then
+			if (((260 + 291) <= (978 - (45 + 252))) and v30(v65.HornofWinter, v61)) then
+				return "horn_of_winter breath_oblit 10";
 			end
 		end
-		if ((v63.AbominationLimb:IsCastable() and not v63.BreathofSindragosa:IsAvailable() and not v63.Obliteration:IsAvailable() and (v79 or v78)) or ((4232 - (716 + 1194)) > (45 + 2577))) then
-			if (v28(v63.AbominationLimb, nil, not v14:IsInRange(3 + 17)) or ((5037 - (74 + 429)) == (4016 - 1934))) then
-				return "abomination_limb_talent cooldowns 14";
-			end
-		end
-		if ((v63.ChillStreak:IsReady() and v13:HasTier(16 + 15, 4 - 2) and (v13:BuffRemains(v63.ChillingRageBuff) < (3 + 0))) or ((4843 - 3272) > (4615 - 2748))) then
-			if (v28(v63.ChillStreak, nil, nil, not v14:IsSpellInRange(v63.ChillStreak)) or ((3087 - (279 + 154)) >= (3774 - (454 + 324)))) then
-				return "chill_streak cooldowns 16";
-			end
-		end
-		if (((3130 + 848) > (2121 - (12 + 5))) and v63.ChillStreak:IsReady() and not v13:HasTier(17 + 14, 4 - 2) and (v92 >= (1 + 1)) and ((v13:BuffDown(v63.DeathAndDecayBuff) and v63.CleavingStrikes:IsAvailable()) or not v63.CleavingStrikes:IsAvailable() or (v92 <= (1098 - (277 + 816))))) then
-			if (((12797 - 9802) > (2724 - (1058 + 125))) and v28(v63.ChillStreak, nil, nil, not v14:IsSpellInRange(v63.ChillStreak))) then
-				return "chill_streak cooldowns 16";
-			end
-		end
-		if (((610 + 2639) > (1928 - (815 + 160))) and v63.PillarofFrost:IsCastable() and ((v63.Obliteration:IsAvailable() and (v79 or v78) and (v13:BuffUp(v63.EmpowerRuneWeaponBuff) or (v63.EmpowerRuneWeapon:CooldownRemains() > (0 - 0)))) or (v89 < (28 - 16)))) then
-			if (v28(v63.PillarofFrost, v61) or ((781 + 2492) > (13367 - 8794))) then
-				return "pillar_of_frost cooldowns 18";
-			end
-		end
-		if ((v63.PillarofFrost:IsCastable() and ((v63.BreathofSindragosa:IsAvailable() and (v79 or v78) and ((not v63.Icecap:IsAvailable() and ((v13:RunicPower() > (1968 - (41 + 1857))) or (v63.BreathofSindragosa:CooldownRemains() > (1933 - (1222 + 671))))) or (v63.Icecap:IsAvailable() and (v63.BreathofSindragosa:CooldownRemains() > (12 - 7))))) or v13:BuffUp(v63.BreathofSindragosa))) or ((4529 - 1378) < (2466 - (229 + 953)))) then
-			if (v28(v63.PillarofFrost, v61) or ((3624 - (1111 + 663)) == (3108 - (874 + 705)))) then
-				return "pillar_of_frost cooldowns 22";
-			end
-		end
-		if (((115 + 706) < (1449 + 674)) and v63.PillarofFrost:IsCastable() and v63.Icecap:IsAvailable() and not v63.Obliteration:IsAvailable() and not v63.BreathofSindragosa:IsAvailable() and (v79 or v78)) then
-			if (((1874 - 972) < (66 + 2259)) and v28(v63.PillarofFrost, v61)) then
-				return "pillar_of_frost cooldowns 22";
-			end
-		end
-		if (((1537 - (642 + 37)) <= (676 + 2286)) and v63.BreathofSindragosa:IsReady() and v13:BuffDown(v63.BreathofSindragosa) and (((v13:RunicPower() > (8 + 42)) and v63.EmpowerRuneWeapon:CooldownUp()) or ((v13:RunicPower() > (150 - 90)) and (v63.EmpowerRuneWeapon:CooldownRemains() < (484 - (233 + 221)))) or ((v13:RunicPower() > (184 - 104)) and (v63.EmpowerRuneWeapon:CooldownRemains() > (27 + 3)))) and (v79 or v78 or (v89 < (1571 - (718 + 823))))) then
-			if (v28(v63.BreathofSindragosa, v56, nil, not v14:IsInRange(8 + 4)) or ((4751 - (266 + 539)) < (3646 - 2358))) then
-				return "breath_of_sindragosa cooldowns 26";
-			end
-		end
-		if ((v63.FrostwyrmsFury:IsCastable() and (((v92 == (1226 - (636 + 589))) and ((v63.PillarofFrost:IsAvailable() and (v13:BuffRemains(v63.PillarofFrostBuff) < (v13:GCD() * (4 - 2))) and v13:BuffUp(v63.PillarofFrostBuff) and not v63.Obliteration:IsAvailable()) or not v63.PillarofFrost:IsAvailable())) or (v89 < (5 - 2)))) or ((2570 + 672) == (206 + 361))) then
-			if (v28(v63.FrostwyrmsFury, v58, nil, not v14:IsInRange(1055 - (657 + 358))) or ((2242 - 1395) >= (2877 - 1614))) then
-				return "frostwyrms_fury cooldowns 28";
-			end
-		end
-		if ((v63.FrostwyrmsFury:IsCastable() and (v92 >= (1189 - (1151 + 36))) and v63.PillarofFrost:IsAvailable() and v13:BuffUp(v63.PillarofFrostBuff) and (v13:BuffRemains(v63.PillarofFrostBuff) < (v13:GCD() * (2 + 0)))) or ((593 + 1660) == (5527 - 3676))) then
-			if (v28(v63.FrostwyrmsFury, v58, nil, not v14:IsInRange(1872 - (1552 + 280))) or ((2921 - (64 + 770)) > (1611 + 761))) then
-				return "frostwyrms_fury cooldowns 30";
-			end
-		end
-		if ((v63.FrostwyrmsFury:IsCastable() and v63.Obliteration:IsAvailable() and ((v63.PillarofFrost:IsAvailable() and v13:BuffUp(v63.PillarofFrostBuff) and not v105) or (v13:BuffDown(v63.PillarofFrostBuff) and v105 and v63.PillarofFrost:CooldownDown()) or not v63.PillarofFrost:IsAvailable()) and ((v13:BuffRemains(v63.PillarofFrostBuff) < v13:GCD()) or (v13:BuffUp(v63.UnholyStrengthBuff) and (v13:BuffRemains(v63.UnholyStrengthBuff) < v13:GCD()))) and ((v14:DebuffStack(v63.RazoriceDebuff) == (11 - 6)) or (not v69 and not v63.GlacialAdvance:IsAvailable()))) or ((790 + 3655) < (5392 - (157 + 1086)))) then
-			if (v28(v63.FrostwyrmsFury, v58, nil, not v14:IsInRange(80 - 40)) or ((7962 - 6144) == (129 - 44))) then
-				return "frostwyrms_fury cooldowns 30";
-			end
-		end
-		if (((859 - 229) < (2946 - (599 + 220))) and v63.RaiseDead:IsCastable()) then
-			if (v28(v63.RaiseDead, nil) or ((3859 - 1921) == (4445 - (1813 + 118)))) then
-				return "raise_dead cooldowns 32";
-			end
-		end
-		if (((3111 + 1144) >= (1272 - (841 + 376))) and v63.SoulReaper:IsReady() and (v89 > (6 - 1)) and ((v14:TimeToX(9 + 26) < (13 - 8)) or (v14:HealthPercentage() <= (894 - (464 + 395)))) and (v92 <= (5 - 3)) and ((v63.Obliteration:IsAvailable() and ((v13:BuffUp(v63.PillarofFrostBuff) and v13:BuffDown(v63.KillingMachineBuff) and (v13:Rune() > (1 + 1))) or v13:BuffDown(v63.PillarofFrostBuff))) or (v63.BreathofSindragosa:IsAvailable() and ((v13:BuffUp(v63.BreathofSindragosa) and (v13:RunicPower() > (887 - (467 + 370)))) or v13:BuffDown(v63.BreathofSindragosa))) or (not v63.BreathofSindragosa:IsAvailable() and not v63.Obliteration:IsAvailable()))) then
-			if (((6196 - 3197) > (849 + 307)) and v28(v63.SoulReaper, nil, nil, not v14:IsInMeleeRange(17 - 12))) then
-				return "soul_reaper cooldowns 36";
-			end
-		end
-		if (((367 + 1983) > (2687 - 1532)) and v63.DeathAndDecay:IsReady() and v13:BuffDown(v63.DeathAndDecayBuff) and v79 and ((v13:BuffUp(v63.PillarofFrostBuff) and (v13:BuffRemains(v63.PillarofFrostBuff) > (525 - (150 + 370))) and (v13:BuffRemains(v63.PillarofFrostBuff) < (1293 - (74 + 1208)))) or (v13:BuffDown(v63.PillarofFrostBuff) and (v63.PillarofFrost:CooldownRemains() > (24 - 14))) or (v89 < (52 - 41))) and ((v92 > (4 + 1)) or (v63.CleavingStrikes:IsAvailable() and (v92 >= (392 - (14 + 376)))))) then
-			if (((6987 - 2958) <= (3141 + 1712)) and v28(v63.DeathAndDecay, v49)) then
-				return "death_and_decay cooldowns 38";
+		if (((3243 + 34) > (141 + 266)) and v65.ArcaneTorrent:IsReady() and (v15:RunicPowerDeficit() > (48 - 28))) then
+			if (((5128 - (114 + 319)) >= (2031 - 616)) and v30(v65.ArcaneTorrent, v55)) then
+				return "arcane_torrent breath_oblit 12";
 			end
 		end
 	end
 	local function v120()
-		local v136 = 0 + 0;
-		while true do
-			if ((v136 == (2 + 0)) or ((1511 - 995) > (2584 + 850))) then
-				if (((4124 - (23 + 55)) >= (7187 - 4154)) and v63.GlacialAdvance:IsReady() and (v92 >= (2 + 0)) and v81 and not v63.BreathofSindragosa:IsAvailable() and v63.Obliteration:IsAvailable() and v13:BuffDown(v63.PillarofFrostBuff)) then
-					if (v28(v63.GlacialAdvance, nil, nil, not v14:IsInRange(90 + 10)) or ((4215 - 1496) <= (456 + 991))) then
-						return "glacial_advance high_prio_actions 12";
-					end
-				end
-				if ((v63.FrostStrike:IsReady() and (v92 == (902 - (652 + 249))) and v81 and v63.Obliteration:IsAvailable() and v63.BreathofSindragosa:IsAvailable() and v13:BuffDown(v63.PillarofFrostBuff) and v13:BuffDown(v63.BreathofSindragosa) and (v63.BreathofSindragosa:CooldownRemains() > v85)) or ((11063 - 6929) < (5794 - (708 + 1160)))) then
-					if (v28(v63.FrostStrike, v57, nil, not v14:IsSpellInRange(v63.FrostStrike)) or ((445 - 281) >= (5077 - 2292))) then
-						return "frost_strike high_prio_actions 14";
-					end
-				end
-				v136 = 30 - (10 + 17);
+		if ((v65.ChainsofIce:IsReady() and (v91 < v15:GCD()) and ((v15:Rune() < (2 - 0)) or (v15:BuffDown(v65.KillingMachineBuff) and ((not v107 and (v15:BuffStack(v65.ColdHeartBuff) >= (3 + 1))) or (v107 and (v15:BuffStack(v65.ColdHeartBuff) > (11 - 3))))) or (v15:BuffUp(v65.KillingMachineBuff) and ((not v107 and (v15:BuffStack(v65.ColdHeartBuff) > (16 - 8))) or (v107 and (v15:BuffStack(v65.ColdHeartBuff) > (1973 - (556 + 1407)))))))) or ((4418 - (741 + 465)) <= (1409 - (170 + 295)))) then
+			if (v30(v65.ChainsofIce, nil, nil, not v16:IsSpellInRange(v65.ChainsofIce)) or ((1632 + 1464) <= (1652 + 146))) then
+				return "chains_of_ice cold_heart 2";
 			end
-			if ((v136 == (1 + 2)) or ((2257 - (1400 + 332)) == (4044 - 1935))) then
-				if (((1941 - (242 + 1666)) == (15 + 18)) and v63.FrostStrike:IsReady() and (v92 == (1 + 0)) and v81 and v63.BreathofSindragosa:IsAvailable() and v13:BuffDown(v63.BreathofSindragosa) and (v63.BreathofSindragosa:CooldownRemains() > v85)) then
-					if (((2603 + 451) <= (4955 - (850 + 90))) and v28(v63.FrostStrike, v57, nil, not v14:IsSpellInRange(v63.FrostStrike))) then
-						return "frost_strike high_prio_actions 16";
-					end
-				end
-				if (((3276 - 1405) < (4772 - (360 + 1030))) and v63.FrostStrike:IsReady() and (v92 == (1 + 0)) and v81 and not v63.BreathofSindragosa:IsAvailable() and v63.Obliteration:IsAvailable() and v13:BuffDown(v63.PillarofFrostBuff)) then
-					if (((3649 - 2356) <= (2979 - 813)) and v28(v63.FrostStrike, v57, nil, not v14:IsSpellInRange(v63.FrostStrike))) then
-						return "frost_strike high_prio_actions 18";
-					end
-				end
-				v136 = 1665 - (909 + 752);
+		end
+		if (((8708 - 5171) == (2933 + 604)) and v65.ChainsofIce:IsReady() and not v65.Obliteration:IsAvailable() and v15:BuffUp(v65.PillarofFrostBuff) and (v15:BuffStack(v65.ColdHeartBuff) >= (7 + 3)) and ((v15:BuffRemains(v65.PillarofFrostBuff) < (v15:GCD() * (1 + 0 + v22(v65.FrostwyrmsFury:IsAvailable() and v65.FrostwyrmsFury:IsReady())))) or (v15:BuffUp(v65.UnholyStrengthBuff) and (v15:BuffRemains(v65.UnholyStrengthBuff) < v15:GCD())))) then
+			if (((5067 - (957 + 273)) >= (420 + 1150)) and v30(v65.ChainsofIce, nil, not v16:IsSpellInRange(v65.ChainsofIce))) then
+				return "chains_of_ice cold_heart 4";
 			end
-			if ((v136 == (1224 - (109 + 1114))) or ((4721 - 2142) < (48 + 75))) then
-				if ((v63.GlacialAdvance:IsReady() and (v92 >= (244 - (6 + 236))) and v81 and v63.Obliteration:IsAvailable() and v63.BreathofSindragosa:IsAvailable() and v13:BuffDown(v63.PillarofFrostBuff) and v13:BuffDown(v63.BreathofSindragosa) and (v63.BreathofSindragosa:CooldownRemains() > v85)) or ((534 + 312) >= (1907 + 461))) then
-					if (v28(v63.GlacialAdvance, nil, nil, not v14:IsInRange(235 - 135)) or ((7007 - 2995) <= (4491 - (1076 + 57)))) then
-						return "glacial_advance high_prio_actions 8";
-					end
-				end
-				if (((246 + 1248) <= (3694 - (579 + 110))) and v63.GlacialAdvance:IsReady() and (v92 >= (1 + 1)) and v81 and v63.BreathofSindragosa:IsAvailable() and v13:BuffDown(v63.BreathofSindragosa) and (v63.BreathofSindragosa:CooldownRemains() > v85)) then
-					if (v28(v63.GlacialAdvance, nil, nil, not v14:IsInRange(89 + 11)) or ((1652 + 1459) == (2541 - (174 + 233)))) then
-						return "glacial_advance high_prio_actions 10";
-					end
-				end
-				v136 = 5 - 3;
+		end
+		if ((v65.ChainsofIce:IsReady() and not v65.Obliteration:IsAvailable() and v72 and v15:BuffDown(v65.PillarofFrostBuff) and (v65.PillarofFrost:CooldownRemains() > (7 + 8)) and (((v15:BuffStack(v65.ColdHeartBuff) >= (38 - 28)) and v15:BuffUp(v65.UnholyStrengthBuff)) or (v15:BuffStack(v65.ColdHeartBuff) >= (34 - 21)))) or ((9010 - 6060) == (18875 - 15063))) then
+			if (((6503 - (389 + 1391)) >= (1455 + 863)) and v30(v65.ChainsofIce, nil, not v16:IsSpellInRange(v65.ChainsofIce))) then
+				return "chains_of_ice cold_heart 6";
 			end
-			if (((4133 - 1778) == (1048 + 1307)) and (v136 == (1174 - (663 + 511)))) then
-				if ((v46 and v27) or ((525 + 63) <= (94 + 338))) then
-					if (((14788 - 9991) >= (2359 + 1536)) and v63.AntiMagicShell:IsCastable() and (v13:RunicPowerDeficit() > (94 - 54)) and ((48 - 28) < v9.CombatTime())) then
-						if (((1707 + 1870) == (6961 - 3384)) and v28(v63.AntiMagicShell, v47)) then
-							return "antimagic_shell high_prio_actions 2";
-						end
-					end
-					if (((2704 + 1090) > (338 + 3355)) and v63.AntiMagicZone:IsCastable() and (v13:RunicPowerDeficit() > (792 - (478 + 244))) and v63.Assimilation:IsAvailable() and (v13:BuffUp(v63.BreathofSindragosa) or v63.BreathofSindragosa:CooldownUp() or (not v63.BreathofSindragosa:IsAvailable() and v13:BuffDown(v63.PillarofFrostBuff)))) then
-						if (v28(v63.AntiMagicZone, v47) or ((1792 - (440 + 77)) == (1865 + 2235))) then
-							return "antimagic_zone high_prio_actions 4";
-						end
-					end
-				end
-				if ((v63.HowlingBlast:IsReady() and v14:DebuffDown(v63.FrostFeverDebuff) and (v92 >= (7 - 5)) and (not v63.Obliteration:IsAvailable() or (v63.Obliteration:IsAvailable() and (v63.PillarofFrost:CooldownDown() or (v13:BuffUp(v63.PillarofFrostBuff) and v13:BuffDown(v63.KillingMachineBuff)))))) or ((3147 - (655 + 901)) >= (664 + 2916))) then
-					if (((753 + 230) <= (1221 + 587)) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
-						return "howling_blast high_prio_actions 6";
-					end
-				end
-				v136 = 3 - 2;
+		end
+		if ((v65.ChainsofIce:IsReady() and not v65.Obliteration:IsAvailable() and not v72 and (v15:BuffStack(v65.ColdHeartBuff) >= (2 + 8)) and v15:BuffDown(v65.PillarofFrostBuff) and (v65.PillarofFrost:CooldownRemains() > (45 - 25))) or ((2978 - (783 + 168)) > (9571 - 6719))) then
+			if (v30(v65.ChainsofIce, nil, not v16:IsSpellInRange(v65.ChainsofIce)) or ((1118 + 18) > (4628 - (309 + 2)))) then
+				return "chains_of_ice cold_heart 8";
 			end
-			if ((v136 == (1449 - (695 + 750))) or ((7341 - 5191) <= (1847 - 650))) then
-				if (((15157 - 11388) >= (1524 - (285 + 66))) and v63.RemorselessWinter:IsReady() and (v71 or v79)) then
-					if (((3461 - 1976) == (2795 - (682 + 628))) and v28(v63.RemorselessWinter, nil, nil, not v14:IsInMeleeRange(2 + 6))) then
-						return "remorseless_winter high_prio_actions 20";
-					end
-				end
-				break;
+		end
+		if (((14580 - 9832) == (5960 - (1090 + 122))) and v65.ChainsofIce:IsReady() and v65.Obliteration:IsAvailable() and v15:BuffDown(v65.PillarofFrostBuff) and (((v15:BuffStack(v65.ColdHeartBuff) >= (5 + 9)) and (v15:BuffUp(v65.UnholyStrengthBuff))) or (v15:BuffStack(v65.ColdHeartBuff) >= (63 - 44)) or ((v65.PillarofFrost:CooldownRemains() < (3 + 0)) and (v15:BuffStack(v65.ColdHeartBuff) >= (1132 - (628 + 490)))))) then
+			if (((670 + 3066) <= (11735 - 6995)) and v30(v65.ChainsofIce, nil, not v16:IsSpellInRange(v65.ChainsofIce))) then
+				return "chains_of_ice cold_heart 10";
 			end
 		end
 	end
 	local function v121()
-		local v137 = 299 - (176 + 123);
+		local v155 = 0 - 0;
 		while true do
-			if ((v137 == (1 + 0)) or ((2405 + 910) <= (3051 - (239 + 30)))) then
-				if ((v63.GlacialAdvance:IsReady() and (v13:BuffStack(v63.KillingMachineBuff) < (1 + 1)) and (v13:BuffRemains(v63.PillarofFrostBuff) < v13:GCD()) and v13:BuffDown(v63.DeathAndDecayBuff)) or ((842 + 34) >= (5245 - 2281))) then
-					if (v28(v63.GlacialAdvance, nil, nil, not v14:IsInRange(311 - 211)) or ((2547 - (306 + 9)) > (8713 - 6216))) then
+			if ((v155 == (775 - (431 + 343))) or ((6846 - 3456) <= (8852 - 5792))) then
+				if ((v65.AbominationLimb:IsCastable() and v65.BreathofSindragosa:IsAvailable() and (v81 or v80)) or ((790 + 209) > (345 + 2348))) then
+					if (((2158 - (556 + 1139)) < (616 - (6 + 9))) and v30(v65.AbominationLimb, nil, not v16:IsInRange(4 + 16))) then
+						return "abomination_limb_talent cooldowns 12";
+					end
+				end
+				if ((v65.AbominationLimb:IsCastable() and not v65.BreathofSindragosa:IsAvailable() and not v65.Obliteration:IsAvailable() and (v81 or v80)) or ((1119 + 1064) < (856 - (28 + 141)))) then
+					if (((1762 + 2787) == (5614 - 1065)) and v30(v65.AbominationLimb, nil, not v16:IsInRange(15 + 5))) then
+						return "abomination_limb_talent cooldowns 14";
+					end
+				end
+				if (((5989 - (486 + 831)) == (12157 - 7485)) and v65.ChillStreak:IsReady() and v15:HasTier(109 - 78, 1 + 1) and (v15:BuffRemains(v65.ChillingRageBuff) < (9 - 6))) then
+					if (v30(v65.ChillStreak, nil, nil, not v16:IsSpellInRange(v65.ChillStreak)) or ((4931 - (668 + 595)) < (356 + 39))) then
+						return "chill_streak cooldowns 16";
+					end
+				end
+				if ((v65.ChillStreak:IsReady() and not v15:HasTier(7 + 24, 5 - 3) and (v94 >= (292 - (23 + 267))) and ((v15:BuffDown(v65.DeathAndDecayBuff) and v65.CleavingStrikes:IsAvailable()) or not v65.CleavingStrikes:IsAvailable() or (v94 <= (1949 - (1129 + 815))))) or ((4553 - (371 + 16)) == (2205 - (1326 + 424)))) then
+					if (v30(v65.ChillStreak, nil, nil, not v16:IsSpellInRange(v65.ChillStreak)) or ((8425 - 3976) == (9731 - 7068))) then
+						return "chill_streak cooldowns 16";
+					end
+				end
+				v155 = 120 - (88 + 30);
+			end
+			if (((771 - (720 + 51)) == v155) or ((9514 - 5237) < (4765 - (421 + 1355)))) then
+				if ((v65.EmpowerRuneWeapon:IsCastable() and ((v65.Obliteration:IsAvailable() and v15:BuffDown(v65.EmpowerRuneWeaponBuff) and (v15:Rune() < (9 - 3)) and (((v65.PillarofFrost:CooldownRemains() < (4 + 3)) and v15:BloodlustUp()) or (((v94 >= (1085 - (286 + 797))) or v80) and v65.PillarofFrost:CooldownUp()))) or (v91 < (73 - 53)))) or ((1441 - 571) >= (4588 - (397 + 42)))) then
+					if (((691 + 1521) < (3983 - (24 + 776))) and v30(v65.EmpowerRuneWeapon, v52)) then
+						return "empower_rune_weapon cooldowns 4";
+					end
+				end
+				if (((7157 - 2511) > (3777 - (222 + 563))) and v65.EmpowerRuneWeapon:IsCastable() and ((v15:BuffUp(v65.BreathofSindragosa) and v15:BuffDown(v65.EmpowerRuneWeaponBuff) and (v11.CombatTime() < (22 - 12)) and v15:BloodlustUp()) or ((v15:RunicPower() < (51 + 19)) and (v15:Rune() < (193 - (23 + 167))) and ((v65.BreathofSindragosa:CooldownRemains() > v74) or (v65.EmpowerRuneWeapon:FullRechargeTime() < (1808 - (690 + 1108))))))) then
+					if (((518 + 916) < (2562 + 544)) and v30(v65.EmpowerRuneWeapon, v52)) then
+						return "empower_rune_weapon cooldowns 6";
+					end
+				end
+				if (((1634 - (40 + 808)) < (498 + 2525)) and v65.EmpowerRuneWeapon:IsCastable() and not v65.BreathofSindragosa:IsAvailable() and not v65.Obliteration:IsAvailable() and v15:BuffDown(v65.EmpowerRuneWeaponBuff) and (v15:Rune() < (19 - 14)) and ((v65.PillarofFrostBuff:CooldownRemains() < (7 + 0)) or v15:BuffUp(v65.PillarofFrostBuff) or not v65.PillarofFrost:IsAvailable())) then
+					if (v30(v65.EmpowerRuneWeapon, v52) or ((1292 + 1150) < (41 + 33))) then
+						return "empower_rune_weapon cooldowns 8";
+					end
+				end
+				if (((5106 - (47 + 524)) == (2944 + 1591)) and v65.AbominationLimb:IsCastable() and ((v65.Obliteration:IsAvailable() and v15:BuffDown(v65.PillarofFrostBuff) and (v65.PillarofFrost:CooldownRemains() < (8 - 5)) and (v81 or v80)) or (v91 < (22 - 7)))) then
+					if (v30(v65.AbominationLimb, nil, not v16:IsInRange(45 - 25)) or ((4735 - (1165 + 561)) <= (63 + 2042))) then
+						return "abomination_limb_talent cooldowns 10";
+					end
+				end
+				v155 = 3 - 2;
+			end
+			if (((699 + 1131) < (4148 - (341 + 138))) and (v155 == (1 + 1))) then
+				if ((v65.PillarofFrost:IsCastable() and ((v65.Obliteration:IsAvailable() and (v81 or v80) and (v15:BuffUp(v65.EmpowerRuneWeaponBuff) or (v65.EmpowerRuneWeapon:CooldownRemains() > (0 - 0)))) or (v91 < (338 - (89 + 237))))) or ((4600 - 3170) >= (7603 - 3991))) then
+					if (((3564 - (581 + 300)) >= (3680 - (855 + 365))) and v30(v65.PillarofFrost, v63)) then
+						return "pillar_of_frost cooldowns 18";
+					end
+				end
+				if ((v65.PillarofFrost:IsCastable() and ((v65.BreathofSindragosa:IsAvailable() and (v81 or v80) and ((not v65.Icecap:IsAvailable() and ((v15:RunicPower() > (166 - 96)) or (v65.BreathofSindragosa:CooldownRemains() > (14 + 26)))) or (v65.Icecap:IsAvailable() and (v65.BreathofSindragosa:CooldownRemains() > (1240 - (1030 + 205)))))) or v15:BuffUp(v65.BreathofSindragosa))) or ((1694 + 110) >= (3047 + 228))) then
+					if (v30(v65.PillarofFrost, v63) or ((1703 - (156 + 130)) > (8245 - 4616))) then
+						return "pillar_of_frost cooldowns 22";
+					end
+				end
+				if (((8081 - 3286) > (822 - 420)) and v65.PillarofFrost:IsCastable() and v65.Icecap:IsAvailable() and not v65.Obliteration:IsAvailable() and not v65.BreathofSindragosa:IsAvailable() and (v81 or v80)) then
+					if (((1269 + 3544) > (2079 + 1486)) and v30(v65.PillarofFrost, v63)) then
+						return "pillar_of_frost cooldowns 22";
+					end
+				end
+				if (((3981 - (10 + 59)) == (1107 + 2805)) and v65.BreathofSindragosa:IsReady() and v15:BuffDown(v65.BreathofSindragosa) and (((v15:RunicPower() > (246 - 196)) and v65.EmpowerRuneWeapon:CooldownUp()) or ((v15:RunicPower() > (1223 - (671 + 492))) and (v65.EmpowerRuneWeapon:CooldownRemains() < (24 + 6))) or ((v15:RunicPower() > (1295 - (369 + 846))) and (v65.EmpowerRuneWeapon:CooldownRemains() > (8 + 22)))) and (v81 or v80 or (v91 < (26 + 4)))) then
+					if (((4766 - (1036 + 909)) <= (3836 + 988)) and v30(v65.BreathofSindragosa, v58, nil, not v16:IsInRange(19 - 7))) then
+						return "breath_of_sindragosa cooldowns 26";
+					end
+				end
+				v155 = 206 - (11 + 192);
+			end
+			if (((879 + 859) <= (2370 - (135 + 40))) and (v155 == (9 - 5))) then
+				if (((25 + 16) <= (6648 - 3630)) and v65.SoulReaper:IsReady() and (v91 > (7 - 2)) and ((v16:TimeToX(211 - (50 + 126)) < (13 - 8)) or (v16:HealthPercentage() <= (8 + 27))) and (v94 <= (1415 - (1233 + 180))) and ((v65.Obliteration:IsAvailable() and ((v15:BuffUp(v65.PillarofFrostBuff) and v15:BuffDown(v65.KillingMachineBuff) and (v15:Rune() > (971 - (522 + 447)))) or v15:BuffDown(v65.PillarofFrostBuff))) or (v65.BreathofSindragosa:IsAvailable() and ((v15:BuffUp(v65.BreathofSindragosa) and (v15:RunicPower() > (1471 - (107 + 1314)))) or v15:BuffDown(v65.BreathofSindragosa))) or (not v65.BreathofSindragosa:IsAvailable() and not v65.Obliteration:IsAvailable()))) then
+					if (((996 + 1149) <= (12505 - 8401)) and v30(v65.SoulReaper, nil, nil, not v16:IsInMeleeRange(3 + 2))) then
+						return "soul_reaper cooldowns 36";
+					end
+				end
+				if (((5339 - 2650) < (19169 - 14324)) and v65.DeathAndDecay:IsReady() and v51 and v15:BuffDown(v65.DeathAndDecayBuff) and v81 and ((v15:BuffUp(v65.PillarofFrostBuff) and (v15:BuffRemains(v65.PillarofFrostBuff) > (1915 - (716 + 1194))) and (v15:BuffRemains(v65.PillarofFrostBuff) < (1 + 10))) or (v15:BuffDown(v65.PillarofFrostBuff) and (v65.PillarofFrost:CooldownRemains() > (2 + 8))) or (v91 < (514 - (74 + 429)))) and ((v94 > (9 - 4)) or (v65.CleavingStrikes:IsAvailable() and (v94 >= (1 + 1))))) then
+					if (v30(v67.DaDPlayer) or ((5314 - 2992) > (1856 + 766))) then
+						return "death_and_decay cooldowns 38";
+					end
+				end
+				break;
+			end
+			if ((v155 == (8 - 5)) or ((11210 - 6676) == (2515 - (279 + 154)))) then
+				if ((v65.FrostwyrmsFury:IsCastable() and (((v94 == (779 - (454 + 324))) and ((v65.PillarofFrost:IsAvailable() and (v15:BuffRemains(v65.PillarofFrostBuff) < (v15:GCD() * (2 + 0))) and v15:BuffUp(v65.PillarofFrostBuff) and not v65.Obliteration:IsAvailable()) or not v65.PillarofFrost:IsAvailable())) or (v91 < (20 - (12 + 5))))) or ((848 + 723) > (4757 - 2890))) then
+					if (v30(v65.FrostwyrmsFury, v60, nil, not v16:IsInRange(15 + 25)) or ((3747 - (277 + 816)) >= (12802 - 9806))) then
+						return "frostwyrms_fury cooldowns 28";
+					end
+				end
+				if (((5161 - (1058 + 125)) > (395 + 1709)) and v65.FrostwyrmsFury:IsCastable() and (v94 >= (977 - (815 + 160))) and v65.PillarofFrost:IsAvailable() and v15:BuffUp(v65.PillarofFrostBuff) and (v15:BuffRemains(v65.PillarofFrostBuff) < (v15:GCD() * (8 - 6)))) then
+					if (((7109 - 4114) > (368 + 1173)) and v30(v65.FrostwyrmsFury, v60, nil, not v16:IsInRange(116 - 76))) then
+						return "frostwyrms_fury cooldowns 30";
+					end
+				end
+				if (((5147 - (41 + 1857)) > (2846 - (1222 + 671))) and v65.FrostwyrmsFury:IsCastable() and v65.Obliteration:IsAvailable() and ((v65.PillarofFrost:IsAvailable() and v15:BuffUp(v65.PillarofFrostBuff) and not v107) or (v15:BuffDown(v65.PillarofFrostBuff) and v107 and v65.PillarofFrost:CooldownDown()) or not v65.PillarofFrost:IsAvailable()) and ((v15:BuffRemains(v65.PillarofFrostBuff) < v15:GCD()) or (v15:BuffUp(v65.UnholyStrengthBuff) and (v15:BuffRemains(v65.UnholyStrengthBuff) < v15:GCD()))) and ((v16:DebuffStack(v65.RazoriceDebuff) == (12 - 7)) or (not v71 and not v65.GlacialAdvance:IsAvailable()))) then
+					if (v30(v65.FrostwyrmsFury, v60, nil, not v16:IsInRange(57 - 17)) or ((4455 - (229 + 953)) > (6347 - (1111 + 663)))) then
+						return "frostwyrms_fury cooldowns 30";
+					end
+				end
+				if (v65.RaiseDead:IsCastable() or ((4730 - (874 + 705)) < (180 + 1104))) then
+					if (v30(v65.RaiseDead, nil) or ((1263 + 587) == (3177 - 1648))) then
+						return "raise_dead cooldowns 32";
+					end
+				end
+				v155 = 1 + 3;
+			end
+		end
+	end
+	local function v122()
+		if (((1500 - (642 + 37)) < (485 + 1638)) and v48 and v29) then
+			if (((145 + 757) < (5837 - 3512)) and v65.AntiMagicShell:IsCastable() and (v15:RunicPowerDeficit() > (494 - (233 + 221))) and ((46 - 26) < v11.CombatTime())) then
+				if (((756 + 102) <= (4503 - (718 + 823))) and v30(v65.AntiMagicShell, v49)) then
+					return "antimagic_shell high_prio_actions 2";
+				end
+			end
+			if ((v65.AntiMagicZone:IsCastable() and (v15:RunicPowerDeficit() > (45 + 25)) and v65.Assimilation:IsAvailable() and (v15:BuffUp(v65.BreathofSindragosa) or v65.BreathofSindragosa:CooldownUp() or (not v65.BreathofSindragosa:IsAvailable() and v15:BuffDown(v65.PillarofFrostBuff)))) or ((4751 - (266 + 539)) < (3646 - 2358))) then
+				if (v30(v65.AntiMagicZone, v49) or ((4467 - (636 + 589)) == (1345 - 778))) then
+					return "antimagic_zone high_prio_actions 4";
+				end
+			end
+		end
+		if ((v65.HowlingBlast:IsReady() and v16:DebuffDown(v65.FrostFeverDebuff) and (v94 >= (3 - 1)) and (not v65.Obliteration:IsAvailable() or (v65.Obliteration:IsAvailable() and (v65.PillarofFrost:CooldownDown() or (v15:BuffUp(v65.PillarofFrostBuff) and v15:BuffDown(v65.KillingMachineBuff)))))) or ((672 + 175) >= (459 + 804))) then
+			if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((3268 - (657 + 358)) == (4900 - 3049))) then
+				return "howling_blast high_prio_actions 6";
+			end
+		end
+		if ((v65.GlacialAdvance:IsReady() and (v94 >= (4 - 2)) and v83 and v65.Obliteration:IsAvailable() and v65.BreathofSindragosa:IsAvailable() and v15:BuffDown(v65.PillarofFrostBuff) and v15:BuffDown(v65.BreathofSindragosa) and (v65.BreathofSindragosa:CooldownRemains() > v87)) or ((3274 - (1151 + 36)) > (2291 + 81))) then
+			if (v30(v65.GlacialAdvance, nil, nil, not v16:IsInRange(27 + 73)) or ((13274 - 8829) < (5981 - (1552 + 280)))) then
+				return "glacial_advance high_prio_actions 8";
+			end
+		end
+		if ((v65.GlacialAdvance:IsReady() and (v94 >= (836 - (64 + 770))) and v83 and v65.BreathofSindragosa:IsAvailable() and v15:BuffDown(v65.BreathofSindragosa) and (v65.BreathofSindragosa:CooldownRemains() > v87)) or ((1235 + 583) == (192 - 107))) then
+			if (((112 + 518) < (3370 - (157 + 1086))) and v30(v65.GlacialAdvance, nil, nil, not v16:IsInRange(200 - 100))) then
+				return "glacial_advance high_prio_actions 10";
+			end
+		end
+		if ((v65.GlacialAdvance:IsReady() and (v94 >= (8 - 6)) and v83 and not v65.BreathofSindragosa:IsAvailable() and v65.Obliteration:IsAvailable() and v15:BuffDown(v65.PillarofFrostBuff)) or ((2972 - 1034) == (3431 - 917))) then
+			if (((5074 - (599 + 220)) >= (109 - 54)) and v30(v65.GlacialAdvance, nil, nil, not v16:IsInRange(2031 - (1813 + 118)))) then
+				return "glacial_advance high_prio_actions 12";
+			end
+		end
+		if (((2193 + 806) > (2373 - (841 + 376))) and v65.FrostStrike:IsReady() and (v94 == (1 - 0)) and v83 and v65.Obliteration:IsAvailable() and v65.BreathofSindragosa:IsAvailable() and v15:BuffDown(v65.PillarofFrostBuff) and v15:BuffDown(v65.BreathofSindragosa) and (v65.BreathofSindragosa:CooldownRemains() > v87)) then
+			if (((546 + 1804) > (3152 - 1997)) and v30(v65.FrostStrike, v59, nil, not v16:IsSpellInRange(v65.FrostStrike))) then
+				return "frost_strike high_prio_actions 14";
+			end
+		end
+		if (((4888 - (464 + 395)) <= (12454 - 7601)) and v65.FrostStrike:IsReady() and (v94 == (1 + 0)) and v83 and v65.BreathofSindragosa:IsAvailable() and v15:BuffDown(v65.BreathofSindragosa) and (v65.BreathofSindragosa:CooldownRemains() > v87)) then
+			if (v30(v65.FrostStrike, v59, nil, not v16:IsSpellInRange(v65.FrostStrike)) or ((1353 - (467 + 370)) > (7096 - 3662))) then
+				return "frost_strike high_prio_actions 16";
+			end
+		end
+		if (((2970 + 1076) >= (10397 - 7364)) and v65.FrostStrike:IsReady() and (v94 == (1 + 0)) and v83 and not v65.BreathofSindragosa:IsAvailable() and v65.Obliteration:IsAvailable() and v15:BuffDown(v65.PillarofFrostBuff)) then
+			if (v30(v65.FrostStrike, v59, nil, not v16:IsSpellInRange(v65.FrostStrike)) or ((6325 - 3606) <= (1967 - (150 + 370)))) then
+				return "frost_strike high_prio_actions 18";
+			end
+		end
+		if ((v65.RemorselessWinter:IsReady() and (v73 or v81)) or ((5416 - (74 + 1208)) < (9656 - 5730))) then
+			if (v30(v65.RemorselessWinter, nil, nil, not v16:IsInMeleeRange(37 - 29)) or ((117 + 47) >= (3175 - (14 + 376)))) then
+				return "remorseless_winter high_prio_actions 20";
+			end
+		end
+	end
+	local function v123()
+		local v156 = 0 - 0;
+		while true do
+			if ((v156 == (1 + 0)) or ((462 + 63) == (2012 + 97))) then
+				if (((96 - 63) == (25 + 8)) and v65.GlacialAdvance:IsReady() and (v15:BuffStack(v65.KillingMachineBuff) < (80 - (23 + 55))) and (v15:BuffRemains(v65.PillarofFrostBuff) < v15:GCD()) and v15:BuffDown(v65.DeathAndDecayBuff)) then
+					if (((7237 - 4183) <= (2680 + 1335)) and v30(v65.GlacialAdvance, nil, nil, not v16:IsInRange(90 + 10))) then
 						return "glacial_advance obliteration 6";
 					end
 				end
-				if ((v63.Frostscythe:IsReady() and v13:BuffUp(v63.KillingMachineBuff) and (v83 or ((v92 > (1 + 2)) and v13:BuffDown(v63.DeathAndDecayBuff) and v64.Fyralath:IsEquipped() and ((v64.Fyralath:CooldownRemains() < (2 + 1)) or v14:DebuffDown(v63.MarkofFyralathDebuff))))) or ((1016 + 1094) <= (949 - 617))) then
-					if (((5061 - (1140 + 235)) > (2019 + 1153)) and v28(v63.Frostscythe, nil, nil, not v14:IsInMeleeRange(8 + 0))) then
+				if (((2900 - 1029) < (1064 + 2318)) and v65.Frostscythe:IsReady() and v15:BuffUp(v65.KillingMachineBuff) and (v85 or ((v94 > (904 - (652 + 249))) and v15:BuffDown(v65.DeathAndDecayBuff) and v66.Fyralath:IsEquipped() and ((v66.Fyralath:CooldownRemains() < (7 - 4)) or v16:DebuffDown(v65.MarkofFyralathDebuff))))) then
+					if (((3161 - (708 + 1160)) <= (5879 - 3713)) and v30(v65.Frostscythe, nil, nil, not v16:IsInMeleeRange(14 - 6))) then
 						return "frostscythe obliteration 8";
 					end
 				end
-				v137 = 1 + 1;
+				v156 = 29 - (10 + 17);
 			end
-			if (((55 - (33 + 19)) == v137) or ((1616 + 2858) < (2457 - 1637))) then
-				if (((1885 + 2394) >= (5651 - 2769)) and v63.GlacialAdvance:IsReady() and v13:BuffDown(v63.KillingMachineBuff) and ((not v69 and (not v63.Avalanche:IsAvailable() or (v14:DebuffStack(v63.RazoriceDebuff) < (5 + 0)) or (v14:DebuffRemains(v63.RazoriceDebuff) < (v13:GCD() * (692 - (586 + 103)))))) or ((v81 or (v13:Rune() < (1 + 1))) and (v92 > (2 - 1))))) then
-					if (v28(v63.GlacialAdvance, nil, nil, not v14:IsInRange(1588 - (1309 + 179))) or ((3662 - 1633) >= (1533 + 1988))) then
+			if ((v156 == (1 + 1)) or ((4311 - (1400 + 332)) < (235 - 112))) then
+				if ((v65.Obliterate:IsReady() and v15:BuffUp(v65.KillingMachineBuff) and not v85) or ((2754 - (242 + 1666)) >= (1014 + 1354))) then
+					if (v66.Fyralath:IsEquipped() or ((1471 + 2541) <= (2862 + 496))) then
+						if (((2434 - (850 + 90)) <= (5262 - 2257)) and v69.CastTargetIf(v65.Obliterate, v93, "min", v112, nil, not v16:IsInMeleeRange(1395 - (360 + 1030)))) then
+							return "obliterate (fyralath) obliteration 10";
+						end
+					elseif (v69.CastTargetIf(v65.Obliterate, v93, "max", v113, nil, not v16:IsInMeleeRange(5 + 0)) or ((8780 - 5669) == (2935 - 801))) then
+						return "obliterate obliteration 10";
+					end
+				end
+				if (((4016 - (909 + 752)) == (3578 - (109 + 1114))) and v65.HowlingBlast:IsReady() and v15:BuffDown(v65.KillingMachineBuff) and (v16:DebuffDown(v65.FrostFeverDebuff) or (v15:BuffUp(v65.RimeBuff) and v15:HasTier(54 - 24, 1 + 1) and not v83))) then
+					if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((830 - (6 + 236)) <= (273 + 159))) then
+						return "howling_blast obliteration 12";
+					end
+				end
+				v156 = 3 + 0;
+			end
+			if (((11312 - 6515) >= (6803 - 2908)) and (v156 == (1136 - (1076 + 57)))) then
+				if (((589 + 2988) == (4266 - (579 + 110))) and v65.GlacialAdvance:IsReady() and v15:BuffDown(v65.KillingMachineBuff) and ((not v71 and (not v65.Avalanche:IsAvailable() or (v16:DebuffStack(v65.RazoriceDebuff) < (1 + 4)) or (v16:DebuffRemains(v65.RazoriceDebuff) < (v15:GCD() * (3 + 0))))) or ((v83 or (v15:Rune() < (2 + 0))) and (v94 > (408 - (174 + 233)))))) then
+					if (((10597 - 6803) > (6481 - 2788)) and v30(v65.GlacialAdvance, nil, nil, not v16:IsInRange(45 + 55))) then
 						return "glacial_advance obliteration 14";
 					end
 				end
-				if ((v63.FrostStrike:IsReady() and v13:BuffDown(v63.KillingMachineBuff) and ((v13:Rune() < (5 - 3)) or v81 or ((v14:DebuffStack(v63.RazoriceDebuff) == (4 + 1)) and v63.ShatteringBlade:IsAvailable())) and not v87 and (not v63.GlacialAdvance:IsAvailable() or (v93 == (1 - 0)))) or ((4058 - 2021) >= (5251 - (295 + 314)))) then
-					local v164 = 0 - 0;
+				if ((v65.FrostStrike:IsReady() and v15:BuffDown(v65.KillingMachineBuff) and ((v15:Rune() < (1176 - (663 + 511))) or v83 or ((v16:DebuffStack(v65.RazoriceDebuff) == (5 + 0)) and v65.ShatteringBlade:IsAvailable())) and not v89 and (not v65.GlacialAdvance:IsAvailable() or (v95 == (1 + 0)))) or ((3930 - 2655) == (2483 + 1617))) then
+					local v167 = 0 - 0;
 					while true do
-						if (((3682 - (1300 + 662)) < (13998 - 9540)) and (v164 == (1758 - (1178 + 577)))) then
-							if ((v63.FrostStrike:IsReady() and not v87 and (not v63.GlacialAdvance:IsAvailable() or (v92 == (1 + 0)))) or ((1288 - 852) > (4426 - (851 + 554)))) then
-								if (((631 + 82) <= (2348 - 1501)) and v64.Fyralath:IsEquipped()) then
-									if (((4677 - 2523) <= (4333 - (115 + 187))) and v67.CastTargetIf(v63.FrostStrike, v91, "min", v110, nil, not v14:IsInMeleeRange(4 + 1), v57)) then
-										return "frost_strike (fyralath) obliteration 28";
-									end
-								elseif (((4369 + 246) == (18186 - 13571)) and v67.CastTargetIf(v63.FrostStrike, v91, "max", v111, nil, not v14:IsInMeleeRange(1166 - (160 + 1001)), v57)) then
-									return "frost_strike obliteration 28";
-								end
-							end
-							if ((v63.HowlingBlast:IsReady() and (v13:BuffUp(v63.RimeBuff))) or ((3316 + 474) == (345 + 155))) then
-								if (((181 - 92) < (579 - (237 + 121))) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
-									return "howling_blast obliteration 30";
-								end
-							end
-							v164 = 901 - (525 + 372);
-						end
-						if (((3893 - 1839) >= (4668 - 3247)) and ((142 - (96 + 46)) == v164)) then
-							if (((1469 - (643 + 134)) < (1104 + 1954)) and v64.Fyralath:IsEquipped()) then
-								if (v67.CastTargetIf(v63.FrostStrike, v91, "min", v110, nil, not v14:IsInMeleeRange(11 - 6), v57) or ((12080 - 8826) == (1588 + 67))) then
+						if ((v167 == (0 - 0)) or ((760 + 831) >= (6967 - 3387))) then
+							if (((701 + 282) <= (166 + 1642)) and v66.Fyralath:IsEquipped()) then
+								if (v69.CastTargetIf(v65.FrostStrike, v93, "min", v112, nil, not v16:IsInMeleeRange(727 - (478 + 244)), v59) or ((2667 - (440 + 77)) <= (545 + 652))) then
 									return "frost_strike (fyralath) obliteration 16";
 								end
-							elseif (v67.CastTargetIf(v63.FrostStrike, v91, "max", v111, nil, not v14:IsInMeleeRange(9 - 4)) or ((2649 - 1353) == (5629 - (316 + 403)))) then
+							elseif (((13794 - 10025) >= (2729 - (655 + 901))) and v69.CastTargetIf(v65.FrostStrike, v93, "max", v113, nil, not v16:IsInMeleeRange(1 + 4))) then
 								return "frost_strike obliteration 18";
 							end
-							if (((2239 + 1129) == (9259 - 5891)) and v63.HowlingBlast:IsReady() and v13:BuffUp(v63.RimeBuff) and v13:BuffDown(v63.KillingMachineBuff)) then
-								if (((956 + 1687) < (9607 - 5792)) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
+							if (((1137 + 348) == (1003 + 482)) and v65.HowlingBlast:IsReady() and v15:BuffUp(v65.RimeBuff) and v15:BuffDown(v65.KillingMachineBuff)) then
+								if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((13354 - 10039) <= (4227 - (695 + 750)))) then
 									return "howling_blast obliteration 18";
 								end
 							end
-							v164 = 1 + 0;
+							v167 = 3 - 2;
 						end
-						if (((617 + 1296) > (1708 - 1215)) and (v164 == (19 - 15))) then
-							if (((9878 - 5123) > (197 + 3231)) and v63.Obliterate:IsReady()) then
-								if (((2718 - 1337) <= (116 + 2253)) and v64.Fyralath:IsEquipped()) then
-									if (v67.CastTargetIf(v63.Obliterate, v91, "min", v110, nil, not v14:IsInMeleeRange(14 - 9)) or ((4860 - (12 + 5)) == (15862 - 11778))) then
+						if ((v167 == (2 - 0)) or ((3523 - 2647) >= (3315 - (285 + 66)))) then
+							if ((v29 and v65.ArcaneTorrent:IsReady() and (v15:Rune() < (2 - 1)) and (v15:RunicPower() < (1340 - (682 + 628)))) or ((360 + 1872) > (2796 - (176 + 123)))) then
+								if (v30(v65.ArcaneTorrent, v55) or ((883 + 1227) <= (241 + 91))) then
+									return "arcane_torrent obliteration 28";
+								end
+							end
+							if (((3955 - (239 + 30)) > (863 + 2309)) and v65.GlacialAdvance:IsReady() and not v89 and (v94 >= (2 + 0))) then
+								if (v30(v65.GlacialAdvance, nil, nil, not v16:IsInRange(176 - 76)) or ((13958 - 9484) < (1135 - (306 + 9)))) then
+									return "glacial_advance obliteration 26";
+								end
+							end
+							v167 = 10 - 7;
+						end
+						if (((745 + 3534) >= (1769 + 1113)) and (v167 == (2 + 1))) then
+							if ((v65.FrostStrike:IsReady() and not v89 and (not v65.GlacialAdvance:IsAvailable() or (v94 == (2 - 1)))) or ((3404 - (1140 + 235)) >= (2241 + 1280))) then
+								if (v66.Fyralath:IsEquipped() or ((1868 + 169) >= (1192 + 3450))) then
+									if (((1772 - (33 + 19)) < (1610 + 2848)) and v69.CastTargetIf(v65.FrostStrike, v93, "min", v112, nil, not v16:IsInMeleeRange(14 - 9), v59)) then
+										return "frost_strike (fyralath) obliteration 28";
+									end
+								elseif (v69.CastTargetIf(v65.FrostStrike, v93, "max", v113, nil, not v16:IsInMeleeRange(3 + 2), v59) or ((854 - 418) > (2833 + 188))) then
+									return "frost_strike obliteration 28";
+								end
+							end
+							if (((1402 - (586 + 103)) <= (78 + 769)) and v65.HowlingBlast:IsReady() and (v15:BuffUp(v65.RimeBuff))) then
+								if (((6631 - 4477) <= (5519 - (1309 + 179))) and v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast))) then
+									return "howling_blast obliteration 30";
+								end
+							end
+							v167 = 6 - 2;
+						end
+						if (((2009 + 2606) == (12393 - 7778)) and (v167 == (1 + 0))) then
+							if ((v65.FrostStrike:IsReady() and v15:BuffDown(v65.KillingMachineBuff) and not v89 and (not v65.GlacialAdvance:IsAvailable() or (v94 == (1 - 0)))) or ((7552 - 3762) == (1109 - (295 + 314)))) then
+								if (((218 - 129) < (2183 - (1300 + 662))) and v66.Fyralath:IsEquipped()) then
+									if (((6449 - 4395) >= (3176 - (1178 + 577))) and v69.CastTargetIf(v65.FrostStrike, v93, "min", v112, nil, not v16:IsInMeleeRange(3 + 2), v59)) then
+										return "frost_strike (fyralath) obliteration 20";
+									end
+								elseif (((2045 - 1353) < (4463 - (851 + 554))) and v69.CastTargetIf(v65.FrostStrike, v93, "max", v113, nil, not v16:IsInMeleeRange(5 + 0), v59)) then
+									return "frost_strike obliteration 20";
+								end
+							end
+							if ((v65.HowlingBlast:IsReady() and v15:BuffDown(v65.KillingMachineBuff) and (v15:RunicPower() < (83 - 53))) or ((7066 - 3812) == (1957 - (115 + 187)))) then
+								if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((993 + 303) == (4649 + 261))) then
+									return "howling_blast obliteration 22";
+								end
+							end
+							v167 = 7 - 5;
+						end
+						if (((4529 - (160 + 1001)) == (2947 + 421)) and ((3 + 1) == v167)) then
+							if (((5410 - 2767) < (4173 - (237 + 121))) and v65.Obliterate:IsReady()) then
+								if (((2810 - (525 + 372)) > (933 - 440)) and v66.Fyralath:IsEquipped()) then
+									if (((15623 - 10868) > (3570 - (96 + 46))) and v69.CastTargetIf(v65.Obliterate, v93, "min", v112, nil, not v16:IsInMeleeRange(782 - (643 + 134)))) then
 										return "obliterate (fyralath) obliteration 32";
 									end
-								elseif (((9961 - 5292) > (771 - 408)) and v67.CastTargetIf(v63.Obliterate, v91, "max", v111, nil, not v14:IsInMeleeRange(12 - 7))) then
+								elseif (((499 + 882) <= (5680 - 3311)) and v69.CastTargetIf(v65.Obliterate, v93, "max", v113, nil, not v16:IsInMeleeRange(18 - 13))) then
 									return "obliterate obliteration 32";
 								end
 							end
 							break;
 						end
-						if (((1 + 1) == v164) or ((3850 - (1656 + 317)) >= (2797 + 341))) then
-							if (((3800 + 942) >= (9641 - 6015)) and v27 and v63.ArcaneTorrent:IsReady() and (v13:Rune() < (4 - 3)) and (v13:RunicPower() < (384 - (5 + 349)))) then
-								if (v28(v63.ArcaneTorrent, v53) or ((21564 - 17024) == (2187 - (266 + 1005)))) then
-									return "arcane_torrent obliteration 28";
-								end
-							end
-							if ((v63.GlacialAdvance:IsReady() and not v87 and (v92 >= (2 + 0))) or ((3944 - 2788) > (5720 - 1375))) then
-								if (((3933 - (561 + 1135)) < (5536 - 1287)) and v28(v63.GlacialAdvance, nil, nil, not v14:IsInRange(328 - 228))) then
-									return "glacial_advance obliteration 26";
-								end
-							end
-							v164 = 1069 - (507 + 559);
-						end
-						if ((v164 == (2 - 1)) or ((8297 - 5614) < (411 - (212 + 176)))) then
-							if (((1602 - (250 + 655)) <= (2252 - 1426)) and v63.FrostStrike:IsReady() and v13:BuffDown(v63.KillingMachineBuff) and not v87 and (not v63.GlacialAdvance:IsAvailable() or (v92 == (1 - 0)))) then
-								if (((1728 - 623) <= (3132 - (1869 + 87))) and v64.Fyralath:IsEquipped()) then
-									if (((11719 - 8340) <= (5713 - (484 + 1417))) and v67.CastTargetIf(v63.FrostStrike, v91, "min", v110, nil, not v14:IsInMeleeRange(10 - 5), v57)) then
-										return "frost_strike (fyralath) obliteration 20";
-									end
-								elseif (v67.CastTargetIf(v63.FrostStrike, v91, "max", v111, nil, not v14:IsInMeleeRange(7 - 2), v57) or ((1561 - (48 + 725)) >= (2639 - 1023))) then
-									return "frost_strike obliteration 20";
-								end
-							end
-							if (((4974 - 3120) <= (1964 + 1415)) and v63.HowlingBlast:IsReady() and v13:BuffDown(v63.KillingMachineBuff) and (v13:RunicPower() < (80 - 50))) then
-								if (((1274 + 3275) == (1326 + 3223)) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
-									return "howling_blast obliteration 22";
-								end
-							end
-							v164 = 855 - (152 + 701);
-						end
 					end
 				end
 				break;
 			end
-			if ((v137 == (1311 - (430 + 881))) or ((1158 + 1864) >= (3919 - (557 + 338)))) then
-				if (((1425 + 3395) > (6193 - 3995)) and v63.HowlingBlast:IsReady() and (v13:BuffStack(v63.KillingMachineBuff) < (6 - 4)) and (v13:BuffRemains(v63.PillarofFrostBuff) < v13:GCD()) and v13:BuffUp(v63.RimeBuff)) then
-					if (v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast)) or ((2818 - 1757) >= (10540 - 5649))) then
+			if ((v156 == (0 + 0)) or ((9504 - 4661) == (8347 - 4263))) then
+				if (((5388 - (316 + 403)) > (242 + 121)) and v65.HowlingBlast:IsReady() and (v15:BuffStack(v65.KillingMachineBuff) < (5 - 3)) and (v15:BuffRemains(v65.PillarofFrostBuff) < v15:GCD()) and v15:BuffUp(v65.RimeBuff)) then
+					if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((679 + 1198) >= (7902 - 4764))) then
 						return "howling_blast obliteration 4";
 					end
 				end
-				if (((2165 - (499 + 302)) <= (5339 - (39 + 827))) and v63.FrostStrike:IsReady() and ((v92 <= (2 - 1)) or not v63.GlacialAdvance:IsAvailable()) and (v13:BuffStack(v63.KillingMachineBuff) < (4 - 2)) and (v13:BuffRemains(v63.PillarofFrostBuff) < v13:GCD()) and v13:BuffDown(v63.DeathAndDecayBuff)) then
-					if (v67.CastTargetIf(v63.FrostStrike, v91, "min", v110, nil, not v14:IsSpellInRange(v63.FrostStrike), v57) or ((14278 - 10683) <= (3 - 0))) then
+				if (((3361 + 1381) >= (1169 + 2457)) and v65.FrostStrike:IsReady() and ((v94 <= (3 - 2)) or not v65.GlacialAdvance:IsAvailable()) and (v15:BuffStack(v65.KillingMachineBuff) < (9 - 7)) and (v15:BuffRemains(v65.PillarofFrostBuff) < v15:GCD()) and v15:BuffDown(v65.DeathAndDecayBuff)) then
+					if (v69.CastTargetIf(v65.FrostStrike, v93, "min", v112, nil, not v16:IsSpellInRange(v65.FrostStrike), v59) or ((9431 - 4891) == (53 + 863))) then
 						return "frost_strike obliteration 4";
 					end
 				end
-				v137 = 1 + 0;
-			end
-			if ((v137 == (5 - 3)) or ((748 + 3924) == (6094 - 2242))) then
-				if (((1663 - (103 + 1)) == (2113 - (475 + 79))) and v63.Obliterate:IsReady() and v13:BuffUp(v63.KillingMachineBuff) and not v83) then
-					if (v64.Fyralath:IsEquipped() or ((3787 - 2035) <= (2521 - 1733))) then
-						if (v67.CastTargetIf(v63.Obliterate, v91, "min", v110, nil, not v14:IsInMeleeRange(1 + 4)) or ((3439 + 468) == (1680 - (1395 + 108)))) then
-							return "obliterate (fyralath) obliteration 10";
-						end
-					elseif (((10097 - 6627) > (1759 - (7 + 1197))) and v67.CastTargetIf(v63.Obliterate, v91, "max", v111, nil, not v14:IsInMeleeRange(3 + 2))) then
-						return "obliterate obliteration 10";
-					end
-				end
-				if ((v63.HowlingBlast:IsReady() and v13:BuffDown(v63.KillingMachineBuff) and (v14:DebuffDown(v63.FrostFeverDebuff) or (v13:BuffUp(v63.RimeBuff) and v13:HasTier(11 + 19, 321 - (27 + 292)) and not v81))) or ((2847 - 1875) == (822 - 177))) then
-					if (((13344 - 10162) >= (4170 - 2055)) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
-						return "howling_blast obliteration 12";
-					end
-				end
-				v137 = 5 - 2;
+				v156 = 1 - 0;
 			end
 		end
 	end
-	local function v122()
-		if (((4032 - (43 + 96)) < (18066 - 13637)) and v82) then
-			if (v63.BloodFury:IsCastable() or ((6481 - 3614) < (1581 + 324))) then
-				if (v28(v63.BloodFury, v53) or ((508 + 1288) >= (8006 - 3955))) then
-					return "blood_fury racials 2";
-				end
-			end
-			if (((621 + 998) <= (7038 - 3282)) and v63.Berserking:IsCastable()) then
-				if (((191 + 413) == (45 + 559)) and v28(v63.Berserking, v53)) then
-					return "berserking racials 4";
-				end
-			end
-			if (v63.ArcanePulse:IsCastable() or ((6235 - (1414 + 337)) == (2840 - (1642 + 298)))) then
-				if (v28(v63.ArcanePulse, v53, nil, not v14:IsInRange(20 - 12)) or ((12827 - 8368) <= (3302 - 2189))) then
-					return "arcane_pulse racials 6";
-				end
-			end
-			if (((1196 + 2436) > (2644 + 754)) and v63.LightsJudgment:IsCastable()) then
-				if (((5054 - (357 + 615)) <= (3452 + 1465)) and v28(v63.LightsJudgment, v53, nil, not v14:IsSpellInRange(v63.LightsJudgment))) then
-					return "lights_judgment racials 8";
-				end
-			end
-			if (((11856 - 7024) >= (1188 + 198)) and v63.AncestralCall:IsCastable()) then
-				if (((293 - 156) == (110 + 27)) and v28(v63.AncestralCall, v53)) then
-					return "ancestral_call racials 10";
-				end
-			end
-			if (v63.Fireblood:IsCastable() or ((107 + 1463) >= (2723 + 1609))) then
-				if (v28(v63.Fireblood, v53) or ((5365 - (384 + 917)) <= (2516 - (128 + 569)))) then
-					return "fireblood racials 12";
-				end
-			end
-		end
-		if ((v63.BagofTricks:IsCastable() and v63.Obliteration:IsAvailable() and v13:BuffDown(v63.PillarofFrostBuff) and v13:BuffUp(v63.UnholyStrengthBuff)) or ((6529 - (1407 + 136)) < (3461 - (687 + 1200)))) then
-			if (((6136 - (556 + 1154)) > (605 - 433)) and v28(v63.BagofTricks, v53, nil, not v14:IsInRange(135 - (9 + 86)))) then
-				return "bag_of_tricks racials 14";
-			end
-		end
-		if (((1007 - (275 + 146)) > (74 + 381)) and v63.BagofTricks:IsCastable() and not v63.Obliteration:IsAvailable() and v13:BuffUp(v63.PillarofFrostBuff) and ((v13:BuffUp(v63.UnholyStrengthBuff) and (v13:BuffRemains(v63.UnholyStrengthBuff) < (v13:GCD() * (67 - (29 + 35))))) or (v13:BuffRemains(v63.PillarofFrostBuff) < (v13:GCD() * (13 - 10))))) then
-			if (((2467 - 1641) == (3646 - 2820)) and v28(v63.BagofTricks, v53, nil, not v14:IsInRange(27 + 13))) then
-				return "bag_of_tricks racials 16";
-			end
-		end
-	end
-	local function v123()
-		local v138 = 1012 - (53 + 959);
+	local function v124()
+		local v157 = 0 + 0;
 		while true do
-			if (((409 - (312 + 96)) == v138) or ((6974 - 2955) > (4726 - (147 + 138)))) then
-				if (((2916 - (813 + 86)) < (3851 + 410)) and v63.HowlingBlast:IsReady() and v13:BuffUp(v63.RimeBuff) and (v63.Icebreaker:TalentRank() == (3 - 1))) then
-					if (((5208 - (18 + 474)) > (27 + 53)) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
-						return "howling_blast single_target 12";
+			if ((v157 == (0 - 0)) or ((1173 - (12 + 5)) > (16876 - 12531))) then
+				if (((4772 - 2535) < (9031 - 4782)) and v84) then
+					if (v65.BloodFury:IsCastable() or ((6653 - 3970) < (5 + 18))) then
+						if (((2670 - (1656 + 317)) <= (737 + 89)) and v30(v65.BloodFury, v55)) then
+							return "blood_fury racials 2";
+						end
+					end
+					if (((886 + 219) <= (3126 - 1950)) and v65.Berserking:IsCastable()) then
+						if (((16629 - 13250) <= (4166 - (5 + 349))) and v30(v65.Berserking, v55)) then
+							return "berserking racials 4";
+						end
+					end
+					if (v65.ArcanePulse:IsCastable() or ((3742 - 2954) >= (2887 - (266 + 1005)))) then
+						if (((1222 + 632) <= (11529 - 8150)) and v30(v65.ArcanePulse, v55, nil, not v16:IsInRange(9 - 1))) then
+							return "arcane_pulse racials 6";
+						end
+					end
+					if (((6245 - (561 + 1135)) == (5927 - 1378)) and v65.LightsJudgment:IsCastable()) then
+						if (v30(v65.LightsJudgment, v55, nil, not v16:IsSpellInRange(v65.LightsJudgment)) or ((9933 - 6911) >= (4090 - (507 + 559)))) then
+							return "lights_judgment racials 8";
+						end
+					end
+					if (((12094 - 7274) > (6797 - 4599)) and v65.AncestralCall:IsCastable()) then
+						if (v30(v65.AncestralCall, v55) or ((1449 - (212 + 176)) >= (5796 - (250 + 655)))) then
+							return "ancestral_call racials 10";
+						end
+					end
+					if (((3719 - 2355) <= (7815 - 3342)) and v65.Fireblood:IsCastable()) then
+						if (v30(v65.Fireblood, v55) or ((5624 - 2029) <= (1959 - (1869 + 87)))) then
+							return "fireblood racials 12";
+						end
 					end
 				end
-				if ((v63.HornofWinter:IsReady() and (v13:Rune() < (12 - 8)) and (v13:RunicPowerDeficit() > ((1111 - (860 + 226)) + ((308 - (121 + 182)) * v20(v13:BuffUp(v63.RuneofHysteriaBuff))))) and v63.Obliteration:IsAvailable() and v63.BreathofSindragosa:IsAvailable()) or ((432 + 3075) == (4512 - (988 + 252)))) then
-					if (v28(v63.HornofWinter, v59) or ((99 + 777) >= (964 + 2111))) then
-						return "horn_of_winter single_target 12";
+				if ((v65.BagofTricks:IsCastable() and v65.Obliteration:IsAvailable() and v15:BuffDown(v65.PillarofFrostBuff) and v15:BuffUp(v65.UnholyStrengthBuff)) or ((16204 - 11532) == (5753 - (484 + 1417)))) then
+					if (((3341 - 1782) == (2612 - 1053)) and v30(v65.BagofTricks, v55, nil, not v16:IsInRange(813 - (48 + 725)))) then
+						return "bag_of_tricks racials 14";
 					end
 				end
-				if (((6322 - (49 + 1921)) > (3444 - (223 + 667))) and v63.FrostStrike:IsReady() and not v87 and (v81 or (v13:RunicPowerDeficit() < ((77 - (51 + 1)) + ((8 - 3) * v20(v13:BuffUp(v63.RuneofHysteriaBuff))))) or ((v14:DebuffStack(v63.RazoriceDebuff) == (10 - 5)) and v63.ShatteringBlade:IsAvailable()))) then
-					if (v28(v63.FrostStrike, v57, nil, not v14:IsInMeleeRange(1130 - (146 + 979))) or ((1244 + 3162) < (4648 - (311 + 294)))) then
-						return "frost_strike single_target 14";
-					end
-				end
-				if ((v63.HowlingBlast:IsReady() and v80) or ((5267 - 3378) >= (1433 + 1950))) then
-					if (((3335 - (496 + 947)) <= (4092 - (1233 + 125))) and v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast))) then
-						return "howling_blast single_target 18";
-					end
-				end
-				v138 = 1 + 1;
+				v157 = 1 - 0;
 			end
-			if (((1726 + 197) < (422 + 1796)) and (v138 == (1645 - (963 + 682)))) then
-				if (((1814 + 359) > (1883 - (504 + 1000))) and v63.FrostStrike:IsReady() and (v13:BuffStack(v63.KillingMachineBuff) < (2 + 0)) and (v13:RunicPowerDeficit() < (19 + 1 + ((1 + 3) * v20(v13:BuffUp(v63.RuneofHysteriaBuff))))) and not v105) then
-					if (v28(v63.FrostStrike, v57, nil, not v14:IsInMeleeRange(7 - 2)) or ((2214 + 377) == (1983 + 1426))) then
-						return "frost_strike single_target 2";
+			if ((v157 == (2 - 1)) or ((1019 + 733) <= (2105 - 1317))) then
+				if ((v65.BagofTricks:IsCastable() and not v65.Obliteration:IsAvailable() and v15:BuffUp(v65.PillarofFrostBuff) and ((v15:BuffUp(v65.UnholyStrengthBuff) and (v15:BuffRemains(v65.UnholyStrengthBuff) < (v15:GCD() * (1 + 2)))) or (v15:BuffRemains(v65.PillarofFrostBuff) < (v15:GCD() * (1 + 2))))) or ((4760 - (152 + 701)) == (1488 - (430 + 881)))) then
+					if (((1329 + 2141) > (1450 - (557 + 338))) and v30(v65.BagofTricks, v55, nil, not v16:IsInRange(12 + 28))) then
+						return "bag_of_tricks racials 16";
 					end
 				end
-				if (((4696 - (156 + 26)) > (1915 + 1409)) and v63.HowlingBlast:IsReady() and v13:BuffUp(v63.RimeBuff) and v13:HasTier(46 - 16, 166 - (149 + 15)) and (v13:BuffStack(v63.KillingMachineBuff) < (962 - (890 + 70)))) then
-					if (v28(v63.HowlingBlast, nil, nil, not v14:IsSpellInRange(v63.HowlingBlast)) or ((325 - (39 + 78)) >= (5310 - (14 + 468)))) then
-						return "howling_blast single_target 6";
-					end
-				end
-				if ((v63.Frostscythe:IsReady() and v13:BuffUp(v63.KillingMachineBuff) and v83) or ((3480 - 1897) > (9969 - 6402))) then
-					if (v28(v63.Frostscythe, nil, nil, not v14:IsInMeleeRange(5 + 3)) or ((789 + 524) == (169 + 625))) then
-						return "frostscythe single_target 8";
-					end
-				end
-				if (((1434 + 1740) > (761 + 2141)) and v63.Obliterate:IsReady() and (v13:BuffUp(v63.KillingMachineBuff))) then
-					if (((7886 - 3766) <= (4211 + 49)) and v28(v63.Obliterate, nil, nil, not v14:IsInMeleeRange(17 - 12))) then
-						return "obliterate single_target 10";
-					end
-				end
-				v138 = 1 + 0;
+				break;
 			end
-			if ((v138 == (54 - (12 + 39))) or ((822 + 61) > (14789 - 10011))) then
-				if ((v63.FrostStrike:IsReady() and not v87) or ((12892 - 9272) >= (1450 + 3441))) then
-					if (((2242 + 2016) > (2375 - 1438)) and v28(v63.FrostStrike, v57, nil, not v14:IsInMeleeRange(4 + 1))) then
+		end
+	end
+	local function v125()
+		local v158 = 0 - 0;
+		while true do
+			if ((v158 == (13 - 9)) or ((2581 - 1609) == (1389 - 744))) then
+				if (((3983 - (499 + 302)) >= (2981 - (39 + 827))) and v65.FrostStrike:IsReady() and not v89) then
+					if (((10746 - 6853) < (9891 - 5462)) and v30(v65.FrostStrike, v59, nil, not v16:IsInMeleeRange(19 - 14))) then
 						return "frost_strike single_target 28";
 					end
 				end
 				break;
 			end
-			if ((v138 == (9 - 7)) or ((6579 - (1596 + 114)) < (2365 - 1459))) then
-				if ((v63.GlacialAdvance:IsReady() and not v87 and not v69 and ((v14:DebuffStack(v63.RazoriceDebuff) < (718 - (164 + 549))) or (v14:DebuffRemains(v63.RazoriceDebuff) < (v13:GCD() * (1441 - (1059 + 379)))))) or ((1521 - 296) > (2192 + 2036))) then
-					if (((561 + 2767) > (2630 - (145 + 247))) and v28(v63.GlacialAdvance, nil, nil, not v14:IsInRange(83 + 17))) then
+			if ((v158 == (2 - 0)) or ((246 + 2621) < (5575 - 3670))) then
+				if ((v65.FrostStrike:IsReady() and not v89 and (v83 or (v15:RunicPowerDeficit() < (4 + 21 + ((7 - 2) * v22(v15:BuffUp(v65.RuneofHysteriaBuff))))) or ((v16:DebuffStack(v65.RazoriceDebuff) == (109 - (103 + 1))) and v65.ShatteringBlade:IsAvailable()))) or ((2350 - (475 + 79)) >= (8757 - 4706))) then
+					if (((5180 - 3561) <= (486 + 3270)) and v30(v65.FrostStrike, v59, nil, not v16:IsInMeleeRange(5 + 0))) then
+						return "frost_strike single_target 14";
+					end
+				end
+				if (((2107 - (1395 + 108)) == (1757 - 1153)) and v65.HowlingBlast:IsReady() and v82) then
+					if (v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast)) or ((5688 - (7 + 1197)) == (393 + 507))) then
+						return "howling_blast single_target 18";
+					end
+				end
+				if ((v65.GlacialAdvance:IsReady() and not v89 and not v71 and ((v16:DebuffStack(v65.RazoriceDebuff) < (2 + 3)) or (v16:DebuffRemains(v65.RazoriceDebuff) < (v15:GCD() * (322 - (27 + 292)))))) or ((13066 - 8607) <= (1418 - 305))) then
+					if (((15231 - 11599) > (6700 - 3302)) and v30(v65.GlacialAdvance, nil, nil, not v16:IsInRange(190 - 90))) then
 						return "glacial_advance single_target 20";
 					end
 				end
-				if (((1774 + 2065) > (4165 - 2760)) and v63.Obliterate:IsReady() and not v86) then
-					if (v28(v63.Obliterate, nil, nil, not v14:IsInMeleeRange(1 + 4)) or ((1114 + 179) <= (823 - 316))) then
+				v158 = 142 - (43 + 96);
+			end
+			if (((16650 - 12568) <= (11116 - 6199)) and (v158 == (3 + 0))) then
+				if (((1365 + 3467) >= (2739 - 1353)) and v65.Obliterate:IsReady() and not v88) then
+					if (((53 + 84) == (256 - 119)) and v30(v65.Obliterate, nil, nil, not v16:IsInMeleeRange(2 + 3))) then
 						return "obliterate single_target 22";
 					end
 				end
-				if ((v63.HornofWinter:IsReady() and (v13:Rune() < (724 - (254 + 466))) and (v13:RunicPowerDeficit() > (585 - (544 + 16))) and (not v63.BreathofSindragosa:IsAvailable() or (v63.BreathofSindragosa:CooldownRemains() > (143 - 98)))) or ((3524 - (294 + 334)) < (1058 - (236 + 17)))) then
-					if (((999 + 1317) == (1803 + 513)) and v28(v63.HornofWinter, v59)) then
+				if ((v65.HornofWinter:IsReady() and (v15:Rune() < (1 + 3)) and (v15:RunicPowerDeficit() > (1776 - (1414 + 337))) and (not v65.BreathofSindragosa:IsAvailable() or (v65.BreathofSindragosa:CooldownRemains() > (1985 - (1642 + 298))))) or ((4092 - 2522) >= (12462 - 8130))) then
+					if (v30(v65.HornofWinter, v61) or ((12060 - 7996) <= (599 + 1220))) then
 						return "horn_of_winter single_target 24";
 					end
 				end
-				if ((v27 and v63.ArcaneTorrent:IsReady() and (v13:RunicPowerDeficit() > (75 - 55))) or ((12167 - 9597) == (790 + 743))) then
-					if (v28(v63.ArcaneTorrent, v53) or ((728 + 155) == (2254 - (413 + 381)))) then
+				if ((v29 and v65.ArcaneTorrent:IsReady() and (v15:RunicPowerDeficit() > (16 + 4))) or ((5958 - (357 + 615)) < (1105 + 469))) then
+					if (((10859 - 6433) > (148 + 24)) and v30(v65.ArcaneTorrent, v55)) then
 						return "arcane_torrent single_target 26";
 					end
 				end
-				v138 = 1 + 2;
+				v158 = 8 - 4;
 			end
-		end
-	end
-	local function v124()
-		local v139 = 0 - 0;
-		local v140;
-		while true do
-			if ((v139 == (4 - 2)) or ((6589 - (582 + 1388)) <= (1701 - 702))) then
-				if (((v13:RunicPowerDeficit() > (8 + 2)) and (v63.BreathofSindragosa:CooldownRemains() < (374 - (326 + 38)))) or ((10087 - 6677) > (5875 - 1759))) then
-					v85 = (((v63.BreathofSindragosa:CooldownRemains() + (621 - (47 + 573))) / v140) / ((v13:Rune() + 1 + 0) * (v13:RunicPower() + (84 - 64)))) * (162 - 62);
-				else
-					v85 = 1666 - (1269 + 395);
-				end
-				v86 = (v13:Rune() < (496 - (76 + 416))) and v63.Obliteration:IsAvailable() and (v63.PillarofFrost:CooldownRemains() < v84);
-				v87 = (v63.BreathofSindragosa:IsAvailable() and (v63.BreathofSindragosa:CooldownRemains() < v85)) or (v63.Obliteration:IsAvailable() and (v13:RunicPower() < (478 - (319 + 124))) and (v63.PillarofFrost:CooldownRemains() < v84));
-				break;
-			end
-			if ((v139 == (0 - 0)) or ((1910 - (564 + 443)) >= (8468 - 5409))) then
-				v140 = v13:GCD() + (458.25 - (337 + 121));
-				v78 = (v92 == (2 - 1)) or not v26;
-				v79 = (v92 >= (6 - 4)) and v26;
-				v80 = v13:BuffUp(v63.RimeBuff) and (v63.RageoftheFrozenChampion:IsAvailable() or v63.Avalanche:IsAvailable() or v63.Icebreaker:IsAvailable());
-				v139 = 1912 - (1261 + 650);
-			end
-			if (((1 + 0) == v139) or ((6335 - 2359) < (4674 - (772 + 1045)))) then
-				v81 = (v63.UnleashedFrenzy:IsAvailable() and ((v13:BuffRemains(v63.UnleashedFrenzyBuff) < (v140 * (1 + 2))) or (v13:BuffStack(v63.UnleashedFrenzyBuff) < (147 - (102 + 42))))) or (v63.IcyTalons:IsAvailable() and ((v13:BuffRemains(v63.IcyTalonsBuff) < (v140 * (1847 - (1524 + 320)))) or (v13:BuffStack(v63.IcyTalonsBuff) < (1273 - (1049 + 221)))));
-				v82 = (v63.PillarofFrost:IsAvailable() and v13:BuffUp(v63.PillarofFrostBuff) and ((v63.Obliteration:IsAvailable() and (v13:BuffRemains(v63.PillarofFrostBuff) > (166 - (18 + 138)))) or not v63.Obliteration:IsAvailable())) or (not v63.PillarofFrost:IsAvailable() and v13:BuffUp(v63.EmpowerRuneWeaponBuff)) or (not v63.PillarofFrost:IsAvailable() and not v63.EmpowerRuneWeapon:IsAvailable()) or ((v92 >= (4 - 2)) and v13:BuffUp(v63.PillarofFrostBuff));
-				v83 = v63.Frostscythe:IsAvailable() and (v13:BuffUp(v63.KillingMachineBuff) or (v92 >= (1105 - (67 + 1035)))) and ((not v63.ImprovedObliterate:IsAvailable() and not v63.FrigidExecutioner:IsAvailable()) or not v63.CleavingStrikes:IsAvailable() or (v63.CleavingStrikes:IsAvailable() and ((v92 > (356 - (136 + 212))) or (v13:BuffDown(v63.DeathAndDecayBuff) and (v92 > (16 - 12))))));
-				if (((3950 + 980) > (2127 + 180)) and (v13:RunicPower() < (1639 - (240 + 1364))) and (v13:Rune() < (1084 - (1050 + 32))) and (v63.PillarofFrost:CooldownRemains() < (35 - 25))) then
-					v84 = (((v63.PillarofFrost:CooldownRemains() + 1 + 0) / v140) / ((v13:Rune() + (1058 - (331 + 724))) * (v13:RunicPower() + 1 + 4))) * (744 - (269 + 375));
-				else
-					v84 = 728 - (267 + 458);
-				end
-				v139 = 1 + 1;
-			end
-		end
-	end
-	local function v125()
-		local v141 = 0 - 0;
-		while true do
-			if ((v141 == (819 - (667 + 151))) or ((5543 - (1410 + 87)) < (3188 - (1504 + 393)))) then
-				v26 = EpicSettings.Toggles['aoe'];
-				v27 = EpicSettings.Toggles['cds'];
-				v141 = 5 - 3;
-			end
-			if ((v141 == (10 - 6)) or ((5037 - (461 + 335)) == (454 + 3091))) then
-				if (v67.TargetIsValid() or ((5809 - (1730 + 31)) > (5899 - (728 + 939)))) then
-					local v165 = 0 - 0;
-					local v166;
-					while true do
-						if ((v165 == (1 - 0)) or ((4009 - 2259) >= (4541 - (138 + 930)))) then
-							if (((2894 + 272) == (2476 + 690)) and v166) then
-								return v166;
-							end
-							if (((1511 + 252) < (15206 - 11482)) and v27) then
-								local v168 = 1766 - (459 + 1307);
-								local v169;
-								while true do
-									if (((1927 - (474 + 1396)) <= (4754 - 2031)) and (v168 == (0 + 0))) then
-										v169 = v119();
-										if (v169 or ((7 + 2063) == (1268 - 825))) then
-											return v169;
-										end
-										break;
-									end
-								end
-							end
-							if (v27 or ((343 + 2362) == (4650 - 3257))) then
-								local v170 = v122();
-								if (v170 or ((20065 - 15464) < (652 - (562 + 29)))) then
-									return v170;
-								end
-								local v170 = v114();
-								if (v170 or ((1186 + 204) >= (6163 - (374 + 1045)))) then
-									return v170;
-								end
-							end
-							if ((v63.ColdHeart:IsAvailable() and (v13:BuffDown(v63.KillingMachineBuff) or v63.BreathofSindragosa:IsAvailable()) and ((v14:DebuffStack(v63.RazoriceDebuff) == (4 + 1)) or (not v69 and not v63.GlacialAdvance:IsAvailable() and not v63.Avalanche:IsAvailable()) or (v89 <= (v13:GCD() + (0.5 - 0))))) or ((2641 - (448 + 190)) > (1238 + 2596))) then
-								local v171 = 0 + 0;
-								local v172;
-								while true do
-									if (((0 + 0) == v171) or ((599 - 443) > (12158 - 8245))) then
-										v172 = v118();
-										if (((1689 - (1307 + 187)) == (773 - 578)) and v172) then
-											return v172;
-										end
-										break;
-									end
-								end
-							end
-							v165 = 4 - 2;
-						end
-						if (((9520 - 6415) >= (2479 - (232 + 451))) and (v165 == (2 + 0))) then
-							if (((3869 + 510) >= (2695 - (510 + 54))) and v13:BuffUp(v63.BreathofSindragosa) and v63.Obliteration:IsAvailable() and v13:BuffUp(v63.PillarofFrostBuff)) then
-								local v173 = v117();
-								if (((7744 - 3900) >= (2079 - (13 + 23))) and v173) then
-									return v173;
-								end
-								if (v28(v63.Pool) or ((6299 - 3067) <= (3923 - 1192))) then
-									return "pool for BreathOblit()";
-								end
-							end
-							if (((8911 - 4006) == (5993 - (830 + 258))) and v13:BuffUp(v63.BreathofSindragosa) and (not v63.Obliteration:IsAvailable() or (v63.Obliteration:IsAvailable() and v13:BuffDown(v63.PillarofFrostBuff)))) then
-								local v174 = 0 - 0;
-								local v175;
-								while true do
-									if ((v174 == (1 + 0)) or ((3519 + 617) >= (5852 - (860 + 581)))) then
-										if (v28(v63.Pool) or ((10910 - 7952) == (3189 + 828))) then
-											return "pool for Breath()";
-										end
-										break;
-									end
-									if (((1469 - (237 + 4)) >= (1910 - 1097)) and (v174 == (0 - 0))) then
-										v175 = v116();
-										if (v175 or ((6550 - 3095) > (3315 + 735))) then
-											return v175;
-										end
-										v174 = 1 + 0;
-									end
-								end
-							end
-							if (((917 - 674) == (105 + 138)) and v63.Obliteration:IsAvailable() and v13:BuffUp(v63.PillarofFrostBuff) and v13:BuffDown(v63.BreathofSindragosa)) then
-								local v176 = v121();
-								if (v176 or ((148 + 123) > (2998 - (85 + 1341)))) then
-									return v176;
-								end
-								if (((4673 - 1934) < (9299 - 6006)) and v28(v63.Pool)) then
-									return "pool for Obliteration()";
-								end
-							end
-							if (((v92 >= (374 - (45 + 327))) and v26) or ((7438 - 3496) < (1636 - (444 + 58)))) then
-								local v177 = 0 + 0;
-								local v178;
-								while true do
-									if ((v177 == (0 + 0)) or ((1317 + 1376) == (14411 - 9438))) then
-										v178 = v115();
-										if (((3878 - (64 + 1668)) == (4119 - (1227 + 746))) and v178) then
-											return v178;
-										end
-										break;
-									end
-								end
-							end
-							v165 = 9 - 6;
-						end
-						if ((v165 == (0 - 0)) or ((2738 - (415 + 79)) == (83 + 3141))) then
-							if (not v13:AffectingCombat() or ((5395 - (142 + 349)) <= (821 + 1095))) then
-								local v179 = 0 - 0;
-								local v180;
-								while true do
-									if (((45 + 45) <= (751 + 314)) and (v179 == (0 - 0))) then
-										v180 = v113();
-										if (((6666 - (1710 + 154)) == (5120 - (200 + 118))) and v180) then
-											return v180;
-										end
-										break;
-									end
-								end
-							end
-							if ((v63.DeathStrike:IsReady() and not v68) or ((904 + 1376) <= (893 - 382))) then
-								if (v28(v63.DeathStrike, nil, nil, not v14:IsInMeleeRange(7 - 2)) or ((1490 + 186) <= (458 + 5))) then
-									return "death_strike low hp or proc";
-								end
-							end
-							v124();
-							v166 = v120();
-							v165 = 1 + 0;
-						end
-						if (((618 + 3251) == (8381 - 4512)) and ((1253 - (363 + 887)) == v165)) then
-							if (((2021 - 863) <= (12437 - 9824)) and ((v92 == (1 + 0)) or not v26)) then
-								local v181 = v123();
-								if (v181 or ((5531 - 3167) <= (1366 + 633))) then
-									return v181;
-								end
-							end
-							if (v9.CastAnnotated(v63.Pool, false, "WAIT") or ((6586 - (674 + 990)) < (56 + 138))) then
-								return "Wait/Pool Resources";
-							end
-							break;
-						end
+			if (((469 + 117) > (31 + 424)) and (v158 == (0 + 0))) then
+				if (((2127 - (384 + 917)) == (1523 - (128 + 569))) and v65.FrostStrike:IsReady() and (v15:BuffStack(v65.KillingMachineBuff) < (1545 - (1407 + 136))) and (v15:RunicPowerDeficit() < ((1907 - (687 + 1200)) + ((1714 - (556 + 1154)) * v22(v15:BuffUp(v65.RuneofHysteriaBuff))))) and not v107) then
+					if (v30(v65.FrostStrike, v59, nil, not v16:IsInMeleeRange(17 - 12)) or ((4114 - (9 + 86)) > (4862 - (275 + 146)))) then
+						return "frost_strike single_target 2";
 					end
 				end
-				break;
-			end
-			if ((v141 == (2 + 1)) or ((3314 - 1223) < (1086 - (507 + 548)))) then
-				if (v26 or ((3267 - (289 + 548)) >= (6690 - (821 + 997)))) then
-					v92 = #v91;
-				else
-					v92 = 256 - (195 + 60);
-				end
-				if (v67.TargetIsValid() or v13:AffectingCombat() or ((1283 + 3487) < (3236 - (251 + 1250)))) then
-					local v167 = 0 - 0;
-					while true do
-						if ((v167 == (1 + 0)) or ((5471 - (809 + 223)) <= (3429 - 1079))) then
-							if ((v89 == (33367 - 22256)) or ((14809 - 10330) < (3289 + 1177))) then
-								v89 = v9.FightRemains(v91, false);
-							end
-							break;
-						end
-						if (((1334 + 1213) > (1842 - (14 + 603))) and (v167 == (129 - (118 + 11)))) then
-							v88 = v9.BossFightRemains();
-							v89 = v88;
-							v167 = 1 + 0;
-						end
+				if (((329 + 1688) < (4325 - (29 + 35))) and v65.HowlingBlast:IsReady() and v15:BuffUp(v65.RimeBuff) and v15:HasTier(132 - 102, 5 - 3) and (v15:BuffStack(v65.KillingMachineBuff) < (8 - 6))) then
+					if (((3072 + 1644) > (1092 - (53 + 959))) and v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast))) then
+						return "howling_blast single_target 6";
 					end
 				end
-				v141 = 4 + 0;
+				if ((v65.Frostscythe:IsReady() and v15:BuffUp(v65.KillingMachineBuff) and v85) or ((3915 - (312 + 96)) == (5678 - 2406))) then
+					if (v30(v65.Frostscythe, nil, nil, not v16:IsInMeleeRange(293 - (147 + 138))) or ((1775 - (813 + 86)) >= (2779 + 296))) then
+						return "frostscythe single_target 8";
+					end
+				end
+				v158 = 1 - 0;
 			end
-			if (((13612 - 8941) > (3623 - (551 + 398))) and (v141 == (2 + 0))) then
-				v68 = not v109();
-				v91 = v13:GetEnemiesInMeleeRange(2 + 3);
-				v141 = 3 + 0;
-			end
-			if ((v141 == (0 - 0)) or ((8515 - 4819) < (1079 + 2248))) then
-				v62();
-				v25 = EpicSettings.Toggles['ooc'];
-				v141 = 3 - 2;
+			if (((4844 - (18 + 474)) > (862 + 1692)) and (v158 == (3 - 2))) then
+				if ((v65.Obliterate:IsReady() and (v15:BuffUp(v65.KillingMachineBuff))) or ((5492 - (860 + 226)) < (4346 - (121 + 182)))) then
+					if (v30(v65.Obliterate, nil, nil, not v16:IsInMeleeRange(1 + 4)) or ((3129 - (988 + 252)) >= (383 + 3000))) then
+						return "obliterate single_target 10";
+					end
+				end
+				if (((593 + 1299) <= (4704 - (49 + 1921))) and v65.HowlingBlast:IsReady() and v15:BuffUp(v65.RimeBuff) and (v65.Icebreaker:TalentRank() == (892 - (223 + 667)))) then
+					if (((1975 - (51 + 1)) < (3817 - 1599)) and v30(v65.HowlingBlast, nil, nil, not v16:IsSpellInRange(v65.HowlingBlast))) then
+						return "howling_blast single_target 12";
+					end
+				end
+				if (((4653 - 2480) > (1504 - (146 + 979))) and v65.HornofWinter:IsReady() and (v15:Rune() < (2 + 2)) and (v15:RunicPowerDeficit() > ((630 - (311 + 294)) + ((13 - 8) * v22(v15:BuffUp(v65.RuneofHysteriaBuff))))) and v65.Obliteration:IsAvailable() and v65.BreathofSindragosa:IsAvailable()) then
+					if (v30(v65.HornofWinter, v61) or ((1098 + 1493) == (4852 - (496 + 947)))) then
+						return "horn_of_winter single_target 12";
+					end
+				end
+				v158 = 1360 - (1233 + 125);
 			end
 		end
 	end
 	local function v126()
-		local v142 = 0 + 0;
+		local v159 = 0 + 0;
+		local v160;
 		while true do
-			if ((v142 == (89 - (40 + 49))) or ((17296 - 12754) == (3460 - (99 + 391)))) then
-				v62();
-				v9.Print("Frost DK rotation by Epic. Work in progress Gojira");
+			if (((4050 + 464) > (632 + 2692)) and ((1647 - (963 + 682)) == v159)) then
+				if (((v15:RunicPowerDeficit() > (9 + 1)) and (v65.BreathofSindragosa:CooldownRemains() < (1514 - (504 + 1000)))) or ((141 + 67) >= (4397 + 431))) then
+					v87 = (((v65.BreathofSindragosa:CooldownRemains() + 1 + 0) / v160) / ((v15:Rune() + (1 - 0)) * (v15:RunicPower() + 18 + 2))) * (59 + 41);
+				else
+					v87 = 184 - (156 + 26);
+				end
+				v88 = (v15:Rune() < (3 + 1)) and v65.Obliteration:IsAvailable() and (v65.PillarofFrost:CooldownRemains() < v86);
+				v89 = (v65.BreathofSindragosa:IsAvailable() and (v65.BreathofSindragosa:CooldownRemains() < v87)) or (v65.Obliteration:IsAvailable() and (v15:RunicPower() < (54 - 19)) and (v65.PillarofFrost:CooldownRemains() < v86));
+				break;
+			end
+			if ((v159 == (165 - (149 + 15))) or ((2543 - (890 + 70)) > (3684 - (39 + 78)))) then
+				v83 = (v65.UnleashedFrenzy:IsAvailable() and ((v15:BuffRemains(v65.UnleashedFrenzyBuff) < (v160 * (485 - (14 + 468)))) or (v15:BuffStack(v65.UnleashedFrenzyBuff) < (6 - 3)))) or (v65.IcyTalons:IsAvailable() and ((v15:BuffRemains(v65.IcyTalonsBuff) < (v160 * (8 - 5))) or (v15:BuffStack(v65.IcyTalonsBuff) < (2 + 1))));
+				v84 = (v65.PillarofFrost:IsAvailable() and v15:BuffUp(v65.PillarofFrostBuff) and ((v65.Obliteration:IsAvailable() and (v15:BuffRemains(v65.PillarofFrostBuff) > (7 + 3))) or not v65.Obliteration:IsAvailable())) or (not v65.PillarofFrost:IsAvailable() and v15:BuffUp(v65.EmpowerRuneWeaponBuff)) or (not v65.PillarofFrost:IsAvailable() and not v65.EmpowerRuneWeapon:IsAvailable()) or ((v94 >= (1 + 1)) and v15:BuffUp(v65.PillarofFrostBuff));
+				v85 = v65.Frostscythe:IsAvailable() and (v15:BuffUp(v65.KillingMachineBuff) or (v94 >= (2 + 1))) and ((not v65.ImprovedObliterate:IsAvailable() and not v65.FrigidExecutioner:IsAvailable()) or not v65.CleavingStrikes:IsAvailable() or (v65.CleavingStrikes:IsAvailable() and ((v94 > (3 + 5)) or (v15:BuffDown(v65.DeathAndDecayBuff) and (v94 > (7 - 3))))));
+				if (((v15:RunicPower() < (35 + 0)) and (v15:Rune() < (6 - 4)) and (v65.PillarofFrost:CooldownRemains() < (1 + 9))) or ((1364 - (12 + 39)) == (739 + 55))) then
+					v86 = (((v65.PillarofFrost:CooldownRemains() + (2 - 1)) / v160) / ((v15:Rune() + (10 - 7)) * (v15:RunicPower() + 2 + 3))) * (53 + 47);
+				else
+					v86 = 7 - 4;
+				end
+				v159 = 2 + 0;
+			end
+			if (((15339 - 12165) > (4612 - (1596 + 114))) and (v159 == (0 - 0))) then
+				v160 = v15:GCD() + (713.25 - (164 + 549));
+				v80 = (v94 == (1439 - (1059 + 379))) or not v28;
+				v81 = (v94 >= (2 - 0)) and v28;
+				v82 = v15:BuffUp(v65.RimeBuff) and (v65.RageoftheFrozenChampion:IsAvailable() or v65.Avalanche:IsAvailable() or v65.Icebreaker:IsAvailable());
+				v159 = 1 + 0;
+			end
+		end
+	end
+	local function v127()
+		local v161 = 0 + 0;
+		while true do
+			if (((4512 - (145 + 247)) <= (3496 + 764)) and (v161 == (1 + 0))) then
+				v28 = EpicSettings.Toggles['aoe'];
+				v29 = EpicSettings.Toggles['cds'];
+				v161 = 5 - 3;
+			end
+			if ((v161 == (1 + 2)) or ((761 + 122) > (7757 - 2979))) then
+				if (v28 or ((4340 - (254 + 466)) >= (5451 - (544 + 16)))) then
+					v94 = #v93;
+				else
+					v94 = 2 - 1;
+				end
+				if (((4886 - (294 + 334)) > (1190 - (236 + 17))) and (v69.TargetIsValid() or v15:AffectingCombat())) then
+					v90 = v11.BossFightRemains();
+					v91 = v90;
+					if ((v91 == (4790 + 6321)) or ((3791 + 1078) < (3411 - 2505))) then
+						v91 = v11.FightRemains(v93, false);
+					end
+				end
+				v161 = 18 - 14;
+			end
+			if ((v161 == (0 + 0)) or ((1009 + 216) > (5022 - (413 + 381)))) then
+				v64();
+				v27 = EpicSettings.Toggles['ooc'];
+				v161 = 1 + 0;
+			end
+			if (((7077 - 3749) > (5813 - 3575)) and (v161 == (1974 - (582 + 1388)))) then
+				if (((6540 - 2701) > (1006 + 399)) and v69.TargetIsValid()) then
+					if (not v15:AffectingCombat() or ((1657 - (326 + 38)) <= (1499 - 992))) then
+						local v169 = v115();
+						if (v169 or ((4134 - 1238) < (1425 - (47 + 573)))) then
+							return v169;
+						end
+					end
+					if (((817 + 1499) == (9836 - 7520)) and v65.DeathStrike:IsReady() and not v70) then
+						if (v30(v65.DeathStrike, nil, nil, not v16:IsInMeleeRange(8 - 3)) or ((4234 - (1269 + 395)) == (2025 - (76 + 416)))) then
+							return "death_strike low hp or proc";
+						end
+					end
+					v126();
+					local v168 = v122();
+					if (v168 or ((1326 - (319 + 124)) == (3337 - 1877))) then
+						return v168;
+					end
+					if (v29 or ((5626 - (564 + 443)) <= (2765 - 1766))) then
+						local v170 = v121();
+						if (v170 or ((3868 - (337 + 121)) > (12060 - 7944))) then
+							return v170;
+						end
+					end
+					if (v29 or ((3007 - 2104) >= (4970 - (1261 + 650)))) then
+						local v171 = v124();
+						if (v171 or ((1683 + 2293) < (4553 - 1696))) then
+							return v171;
+						end
+						local v171 = v116();
+						if (((6747 - (772 + 1045)) > (326 + 1981)) and v171) then
+							return v171;
+						end
+					end
+					if ((v65.ColdHeart:IsAvailable() and (v15:BuffDown(v65.KillingMachineBuff) or v65.BreathofSindragosa:IsAvailable()) and ((v16:DebuffStack(v65.RazoriceDebuff) == (149 - (102 + 42))) or (not v71 and not v65.GlacialAdvance:IsAvailable() and not v65.Avalanche:IsAvailable()) or (v91 <= (v15:GCD() + (1844.5 - (1524 + 320)))))) or ((5316 - (1049 + 221)) < (1447 - (18 + 138)))) then
+						local v172 = v120();
+						if (v172 or ((10380 - 6139) == (4647 - (67 + 1035)))) then
+							return v172;
+						end
+					end
+					if ((v15:BuffUp(v65.BreathofSindragosa) and v65.Obliteration:IsAvailable() and v15:BuffUp(v65.PillarofFrostBuff)) or ((4396 - (136 + 212)) > (17983 - 13751))) then
+						local v173 = 0 + 0;
+						local v174;
+						while true do
+							if ((v173 == (1 + 0)) or ((3354 - (240 + 1364)) >= (4555 - (1050 + 32)))) then
+								if (((11304 - 8138) == (1873 + 1293)) and v30(v65.Pool)) then
+									return "pool for BreathOblit()";
+								end
+								break;
+							end
+							if (((2818 - (331 + 724)) < (301 + 3423)) and (v173 == (644 - (269 + 375)))) then
+								v174 = v119();
+								if (((782 - (267 + 458)) <= (847 + 1876)) and v174) then
+									return v174;
+								end
+								v173 = 1 - 0;
+							end
+						end
+					end
+					if ((v15:BuffUp(v65.BreathofSindragosa) and (not v65.Obliteration:IsAvailable() or (v65.Obliteration:IsAvailable() and v15:BuffDown(v65.PillarofFrostBuff)))) or ((2888 - (667 + 151)) == (1940 - (1410 + 87)))) then
+						local v175 = 1897 - (1504 + 393);
+						local v176;
+						while true do
+							if ((v175 == (0 - 0)) or ((7017 - 4312) == (2189 - (461 + 335)))) then
+								v176 = v118();
+								if (v176 or ((589 + 4012) < (1822 - (1730 + 31)))) then
+									return v176;
+								end
+								v175 = 1668 - (728 + 939);
+							end
+							if ((v175 == (3 - 2)) or ((2819 - 1429) >= (10869 - 6125))) then
+								if (v30(v65.Pool) or ((3071 - (138 + 930)) > (3504 + 330))) then
+									return "pool for Breath()";
+								end
+								break;
+							end
+						end
+					end
+					if ((v65.Obliteration:IsAvailable() and v15:BuffUp(v65.PillarofFrostBuff) and v15:BuffDown(v65.BreathofSindragosa)) or ((122 + 34) > (3354 + 559))) then
+						local v177 = 0 - 0;
+						local v178;
+						while true do
+							if (((1961 - (459 + 1307)) == (2065 - (474 + 1396))) and (v177 == (1 - 0))) then
+								if (((2910 + 195) >= (6 + 1790)) and v30(v65.Pool)) then
+									return "pool for Obliteration()";
+								end
+								break;
+							end
+							if (((12543 - 8164) >= (271 + 1860)) and (v177 == (0 - 0))) then
+								v178 = v123();
+								if (((16764 - 12920) >= (2634 - (562 + 29))) and v178) then
+									return v178;
+								end
+								v177 = 1 + 0;
+							end
+						end
+					end
+					if (((v94 >= (1421 - (374 + 1045))) and v28) or ((2558 + 674) <= (8480 - 5749))) then
+						local v179 = 638 - (448 + 190);
+						local v180;
+						while true do
+							if (((1584 + 3321) == (2215 + 2690)) and (v179 == (0 + 0))) then
+								v180 = v117();
+								if (v180 or ((15902 - 11766) >= (13706 - 9295))) then
+									return v180;
+								end
+								break;
+							end
+						end
+					end
+					if ((v94 == (1495 - (1307 + 187))) or not v28 or ((11730 - 8772) == (9405 - 5388))) then
+						local v181 = 0 - 0;
+						local v182;
+						while true do
+							if (((1911 - (232 + 451)) >= (777 + 36)) and (v181 == (0 + 0))) then
+								v182 = v125();
+								if (v182 or ((4019 - (510 + 54)) > (8159 - 4109))) then
+									return v182;
+								end
+								break;
+							end
+						end
+					end
+					if (((279 - (13 + 23)) == (472 - 229)) and v11.CastAnnotated(v65.Pool, false, "WAIT")) then
+						return "Wait/Pool Resources";
+					end
+				end
+				break;
+			end
+			if ((v161 == (2 - 0)) or ((492 - 221) > (2660 - (830 + 258)))) then
+				v70 = not v111();
+				v93 = v15:GetEnemiesInMeleeRange(17 - 12);
+				v161 = 2 + 1;
+			end
+		end
+	end
+	local function v128()
+		local v162 = 0 + 0;
+		while true do
+			if (((4180 - (860 + 581)) < (12146 - 8853)) and (v162 == (0 + 0))) then
+				v64();
+				v11.Print("Frost DK rotation by Epic. Work in progress Gojira");
 				break;
 			end
 		end
 	end
-	v9.SetAPL(208 + 43, v125, v126);
+	v11.SetAPL(492 - (237 + 4), v127, v128);
 end;
-return v0["Epix_DeathKnight_FrostDK.lua"]();
+return v1["Epix_DeathKnight_FrostDK.lua"](...);
 
