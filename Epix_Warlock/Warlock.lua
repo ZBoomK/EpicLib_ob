@@ -1,320 +1,373 @@
-local v0 = {};
-local v1 = require;
-local function v2(v4, ...)
-	local v5 = v0[v4];
-	if (((1849 + 2735) == (3977 + 607)) and not v5) then
-		return v1(v4, ...);
+local v0 = ...;
+local v1 = {};
+local v2 = require;
+local function v3(v5, ...)
+	local v6 = 0 - 0;
+	local v7;
+	while true do
+		if (((625 - (268 + 335)) <= (2545 - (60 + 230))) and (v6 == (572 - (426 + 146)))) then
+			v7 = v1[v5];
+			if (not v7 or ((131 + 955) >= (2861 - (282 + 1174)))) then
+				return v2(v5, v0, ...);
+			end
+			v6 = 812 - (569 + 242);
+		end
+		if ((v6 == (2 - 1)) or ((136 + 2233) == (1450 - (706 + 318)))) then
+			return v7(v0, ...);
+		end
 	end
-	return v5(...);
 end
-v0["Epix_Warlock_Warlock.lua"] = function(...)
-	local v6, v7 = ...;
-	local v8 = EpicDBC.DBC;
-	local v9 = EpicLib;
-	local v10 = EpicCache;
-	local v11 = v9.Unit;
-	local v12 = v11.Player;
-	local v13 = v11.Target;
-	local v14 = v11.Pet;
-	local v15 = v9.Spell;
-	local v16 = v9.MultiSpell;
-	local v17 = v9.Item;
-	local v18 = v9.Utils.MergeTableByKey;
-	local v19 = string.find;
-	local v20 = EpicLib;
-	local v21 = v20.Macro;
-	local v22 = {};
-	v9.Commons.Warlock = v22;
-	if (((4553 - (507 + 67)) >= (3417 - (1013 + 736))) and not v15.Warlock) then
-		v15.Warlock = {};
-	end
-	v15.Warlock.Commons = {Berserking=v15(21773 + 4524, nil, 2 - 1),AncestralCall=v15(1007409 - 732671),BloodFury=v15(34569 - (550 + 317), nil, 2 - 0),Fireblood=v15(372787 - 107566, nil, 8 - 5),Corruption=v15(457 - (134 + 151), nil, 1669 - (970 + 695)),DarkPact=v15(206883 - 98467, nil, 1995 - (582 + 1408)),ShadowBolt=v15(2378 - 1692, nil, 7 - 1),SummonDarkglare=v15(773191 - 568011, nil, 1831 - (1195 + 629)),UnendingResolve=v15(138561 - 33788, nil, 249 - (187 + 54)),GrimoireofSacrifice=v15(109283 - (162 + 618), nil, 7 + 2),GrimoireofSacrificeBuff=v15(130610 + 65489, nil, 21 - 11),SoulConduit=v15(363037 - 147096, nil, 1 + 10),SummonSoulkeeper=v15(387892 - (1373 + 263), nil, 1012 - (451 + 549)),InquisitorsGaze=v15(121954 + 264390, nil, 19 - 6),InquisitorsGazeBuff=v15(652210 - 264142, nil, 1398 - (746 + 638)),Soulburn=v15(145229 + 240670, nil, 22 - 7),PowerInfusionBuff=v15(10401 - (218 + 123), nil, 1597 - (1535 + 46)),AxeToss=v15(119147 + 767, nil, 3 + 14),Seduction=v15(120469 - (306 + 254), nil, 2 + 16),ShadowBulwark=v15(235322 - 115415, nil, 1486 - (899 + 568)),SingeMagic=v15(78814 + 41091, nil, 48 - 28),SpellLock=v15(120513 - (268 + 335), nil, 311 - (60 + 230)),BurningRush=v15(111972 - (426 + 146), nil, 67 + 488)};
-	v15.Warlock.Demonology = v18(v15.Warlock.Commons, {Felstorm=v15(91207 - (282 + 1174), nil, 833 - (569 + 242)),HandofGuldan=v15(302963 - 197789, nil, 2 + 21),ShadowBoltLineCD=v15(1710 - (706 + 318), nil, 1257 - (721 + 530)),SummonPet=v15(31417 - (945 + 326), nil, 59 - 35),BilescourgeBombers=v15(237770 + 29441, nil, 725 - (271 + 429)),CallDreadstalkers=v15(95825 + 8491, nil, 1526 - (1408 + 92)),Demonbolt=v15(265264 - (461 + 625), nil, 1315 - (993 + 295)),DemonicCalling=v15(10653 + 194492, nil, 1199 - (418 + 753)),DemonicStrength=v15(101753 + 165418, nil, 3 + 26),Doom=v15(177 + 426, nil, 8 + 22),FelDomination=v15(334418 - (406 + 123), nil, 1800 - (1749 + 20)),FelCovenant=v15(92026 + 295406, nil, 1354 - (1249 + 73)),FromtheShadows=v15(95318 + 171852, nil, 1178 - (466 + 679)),GrimoireFelguard=v15(269167 - 157269, nil, 97 - 63),Guillotine=v15(388733 - (106 + 1794), nil, 12 + 23),ImpGangBoss=v15(97938 + 289507, nil, 105 - 69),Implosion=v15(531506 - 335229, nil, 151 - (4 + 110)),InnerDemons=v15(267800 - (57 + 527), nil, 1465 - (41 + 1386)),NetherPortal=v15(267320 - (17 + 86), nil, 27 + 12),PowerSiphon=v15(589040 - 324910, nil, 115 - 75),SacrificedSouls=v15(267380 - (122 + 44), nil, 70 - 29),SoulboundTyrant=v15(1109976 - 775391, nil, 35 + 7),SoulStrike=v15(38189 + 225868, nil, 86 - 43),SummonDemonicTyrant=v15(265252 - (30 + 35), nil, 31 + 13),SummonVilefiend=v15(265376 - (1043 + 214), nil, 169 - 124),TheExpendables=v15(388812 - (323 + 889), nil, 123 - 77),ReignofTyranny=v15(428264 - (361 + 219), nil, 452 - (53 + 267)),GrandWarlocksDesign=v15(87451 + 299633, nil, 546 - (15 + 398)),DemonicCallingBuff=v15(206128 - (18 + 964), nil, 176 - 129),DemonicCoreBuff=v15(152947 + 111226, nil, 31 + 17),DemonicPowerBuff=v15(266123 - (20 + 830), nil, 39 + 10),FelCovenantBuff=v15(387563 - (116 + 10), nil, 4 + 46),NetherPortalBuff=v15(267956 - (542 + 196), nil, 109 - 58),DoomDebuff=v15(177 + 426, nil, 27 + 25),FromtheShadowsDebuff=v15(97396 + 173173, nil, 139 - 86),DoomBrandDebuff=v15(1085977 - 662394),DrainLife=v15(235704 - (1126 + 425), nil, 460 - (118 + 287))});
-	v15.Warlock.Affliction = v18(v15.Warlock.Commons, {Agony=v15(3840 - 2860, nil, 1175 - (118 + 1003)),DrainLife=v15(685232 - 451079, nil, 432 - (142 + 235)),SummonPet=v15(3121 - 2433, nil, 13 + 43),AbsoluteCorruption=v15(197080 - (553 + 424), nil, 107 - 50),DoomBlossom=v15(343350 + 46414),DrainSoul=v15(196998 + 1592, nil, 34 + 24),DreadTouch=v15(165690 + 224085, nil, 34 + 25),Haunt=v15(104451 - 56270, nil, 167 - 107),InevitableDemise=v15(748554 - 414235, nil, 18 + 43),MaleficAffliction=v15(1883582 - 1493821, nil, 815 - (239 + 514)),MaleficRapture=v15(113981 + 210555, nil, 1392 - (797 + 532)),Nightfall=v15(78880 + 29678, nil, 22 + 42),PhantomSingularity=v15(482427 - 277248, nil, 1267 - (373 + 829)),SowTheSeeds=v15(196957 - (476 + 255), nil, 1196 - (369 + 761)),SeedofCorruption=v15(15760 + 11483, nil, 121 - 54),ShadowEmbrace=v15(51625 - 24382, nil, 306 - (64 + 174)),SiphonLife=v15(8988 + 54118, nil, 101 - 32),SoulRot=v15(387333 - (144 + 192), nil, 286 - (42 + 174)),SoulSwap=v15(290691 + 96260, nil, 59 + 12),SoulTap=v15(164445 + 222628, nil, 1576 - (363 + 1141)),SouleatersGluttony=v15(391210 - (1183 + 397), nil, 222 - 149),SowtheSeeds=v15(143843 + 52383, nil, 56 + 18),TormentedCrescendo=v15(389050 - (1913 + 62), nil, 48 + 27),UnstableAffliction=v15(836809 - 520710, nil, 2009 - (565 + 1368)),VileTaint=v15(1046800 - 768450, nil, 1738 - (1477 + 184)),InevitableDemiseBuff=v15(455538 - 121218, nil, 73 + 5),NightfallBuff=v15(265427 - (564 + 292), nil, 135 - 56),MaleficAfflictionBuff=v15(1175058 - 785213, nil, 384 - (244 + 60)),TormentedCrescendoBuff=v15(297630 + 89449, nil, 557 - (41 + 435)),UmbrafireKindlingBuff=v15(424766 - (938 + 63)),AgonyDebuff=v15(754 + 226, nil, 1207 - (936 + 189)),CorruptionDebuff=v15(48292 + 98447, nil, 1696 - (1565 + 48)),HauntDebuff=v15(29763 + 18418, nil, 1222 - (782 + 356)),PhantomSingularityDebuff=v15(205446 - (176 + 91), nil, 221 - 136),SeedofCorruptionDebuff=v15(40150 - 12907, nil, 1178 - (975 + 117)),SiphonLifeDebuff=v15(64981 - (157 + 1718), nil, 71 + 16),UnstableAfflictionDebuff=v15(1122127 - 806028, nil, 300 - 212),VileTaintDebuff=v15(279368 - (697 + 321), nil, 242 - 153),SoulRotDebuff=v15(819896 - 432899, nil, 207 - 117),DreadTouchDebuff=v15(151754 + 238114, nil, 170 - 79),ShadowEmbraceDebuff=v15(86828 - 54438, nil, 1319 - (322 + 905))});
-	v15.Warlock.Destruction = v18(v15.Warlock.Commons, {Immolate=v15(959 - (602 + 9), nil, 1282 - (449 + 740)),Incinerate=v15(30594 - (826 + 46), nil, 1041 - (245 + 702)),SummonPet=v15(2173 - 1485, nil, 31 + 64),AshenRemains=v15(389150 - (260 + 1638), nil, 536 - (382 + 58)),AvatarofDestruction=v15(1242033 - 854874, nil, 81 + 16),Backdraft=v15(405911 - 209505, nil, 291 - 193),BurntoAshes=v15(388358 - (902 + 303), nil, 216 - 117),Cataclysm=v15(366352 - 214244, nil, 9 + 91),ChannelDemonfire=v15(198137 - (1121 + 569), nil, 315 - (22 + 192)),ChaosBolt=v15(117541 - (483 + 200), nil, 1565 - (1404 + 59)),ChaosIncarnate=v15(1059870 - 672595),Chaosbringer=v15(567256 - 145199),Conflagrate=v15(18727 - (468 + 297), nil, 665 - (334 + 228)),CrashingChaos=v15(1407324 - 990090),CryHavoc=v15(898240 - 510718, nil, 188 - 84),DiabolicEmbers=v15(109944 + 277229, nil, 341 - (141 + 95)),DimensionalRift=v15(381112 + 6864, nil, 272 - 166),Eradication=v15(472157 - 275745, nil, 26 + 81),FireandBrimstone=v15(538134 - 341726, nil, 76 + 32),Havoc=v15(41783 + 38457, nil, 152 - 43),Inferno=v15(159584 + 110961, nil, 273 - (92 + 71)),InternalCombustion=v15(131456 + 134678, nil, 186 - 75),MadnessoftheAzjAqir=v15(388165 - (574 + 191), nil, 93 + 19),Mayhem=v15(970820 - 583314, nil, 58 + 55),RagingDemonfire=v15(388015 - (254 + 595), nil, 240 - (55 + 71)),RainofChaos=v15(350539 - 84453, nil, 1905 - (573 + 1217)),RainofFire=v15(15896 - 10156, nil, 9 + 107),RoaringBlaze=v15(330632 - 125448, nil, 1056 - (714 + 225)),Ruin=v15(1131270 - 744167, nil, 164 - 46),SoulFire=v15(688 + 5665, nil, 171 - 52),SummonInfernal=v15(1928 - (118 + 688), nil, 168 - (25 + 23)),BackdraftBuff=v15(22822 + 95006, nil, 2007 - (927 + 959)),MadnessCBBuff=v15(1305915 - 918506, nil, 854 - (16 + 716)),MadnessRoFBuff=v15(747864 - 360451),MadnessSBBuff=v15(387511 - (11 + 86)),RainofChaosBuff=v15(649031 - 382944, nil, 408 - (175 + 110)),RitualofRuinBuff=v15(977492 - 590335, nil, 611 - 487),BurntoAshesBuff=v15(388950 - (503 + 1293), nil, 349 - 224),EradicationDebuff=v15(142040 + 54374, nil, 1187 - (810 + 251)),ConflagrateDebuff=v15(184551 + 81380),HavocDebuff=v15(24626 + 55614, nil, 115 + 12),ImmolateDebuff=v15(158269 - (43 + 490), nil, 861 - (711 + 22)),PyrogenicsDebuff=v15(1497367 - 1110271),RoaringBlazeDebuff=v15(266790 - (240 + 619), nil, 32 + 97)});
-	if (((903 - 335) > (29 + 399)) and not v17.Warlock) then
+v1["Epix_Warlock_Warlock.lua"] = function(...)
+	local v8, v9 = ...;
+	local v10 = EpicDBC.DBC;
+	local v11 = EpicLib;
+	local v12 = EpicCache;
+	local v13 = v11.Unit;
+	local v14 = v13.Player;
+	local v15 = v13.Target;
+	local v16 = v13.Pet;
+	local v17 = v11.Spell;
+	local v18 = v11.MultiSpell;
+	local v19 = v11.Item;
+	local v20 = v11.Utils.MergeTableByKey;
+	local v21 = string.find;
+	local v22 = EpicLib;
+	local v23 = v22.Macro;
+	local v24 = {};
+	v11.Commons.Warlock = v24;
+	if (not v17.Warlock or ((4327 - (721 + 530)) > (4454 - (945 + 326)))) then
 		v17.Warlock = {};
 	end
-	v17.Warlock.Commons = {Healthstone=v17(1765 - (1344 + 400)),PotionOfWitheringDreams=v17(207446 - (255 + 150)),ConjuredChillglobe=v17(153046 + 41254, {(55 - 42),(1753 - (404 + 1335))}),DesperateInvokersCodex=v17(194716 - (183 + 223), {(9 + 4),(351 - (10 + 327))}),TimebreachingTalon=v17(134954 + 58837, {(5 + 8),(7 + 7)}),TimeThiefsGambit=v17(877603 - 670024, {(24 - 11),(5 + 9)}),BelorrelostheSuncaller=v17(208991 - (580 + 1239), {(13 + 0),(7 + 7)}),Iridal=v17(543919 - 335598, {(1183 - (645 + 522))}),NymuesUnravelingSpindle=v17(210405 - (1010 + 780), {(61 - 48),(1850 - (1045 + 791))})};
-	v17.Warlock.Affliction = v18(v17.Warlock.Commons, {});
-	v17.Warlock.Demonology = v18(v17.Warlock.Commons, {});
-	v17.Warlock.Destruction = v18(v17.Warlock.Commons, {});
-	if (((3376 - 2042) <= (7043 - 2430)) and not v21.Warlock) then
-		v21.Warlock = {};
+	v17.Warlock.Commons = {Berserking=v17(65697 - 39400, nil, 1 + 0),AncestralCall=v17(275438 - (271 + 429)),BloodFury=v17(30959 + 2743, nil, 1502 - (1408 + 92)),Fireblood=v17(266307 - (461 + 625), nil, 1291 - (993 + 295)),Corruption=v17(9 + 163, nil, 1175 - (418 + 753)),DarkPact=v17(41291 + 67125, nil, 1 + 4),ShadowBolt=v17(201 + 485, nil, 2 + 4),SummonDarkglare=v17(205709 - (406 + 123), nil, 1776 - (1749 + 20)),UnendingResolve=v17(24887 + 79886, nil, 1330 - (1249 + 73)),GrimoireofSacrifice=v17(38711 + 69792, nil, 1154 - (466 + 679)),GrimoireofSacrificeBuff=v17(471709 - 275610, nil, 28 - 18),SoulConduit=v17(217841 - (106 + 1794), nil, 4 + 7),SummonSoulkeeper=v17(97638 + 288618, nil, 35 - 23),InquisitorsGaze=v17(1046196 - 659852, nil, 127 - (4 + 110)),InquisitorsGazeBuff=v17(388652 - (57 + 527), nil, 1441 - (41 + 1386)),Soulburn=v17(386002 - (17 + 86), nil, 11 + 4),PowerInfusionBuff=v17(22434 - 12374, nil, 46 - 30),AxeToss=v17(120080 - (122 + 44), nil, 28 - 11),Seduction=v17(397794 - 277885, nil, 15 + 3),ShadowBulwark=v17(17342 + 102565, nil, 37 - 18),SingeMagic=v17(119970 - (30 + 35), nil, 14 + 6),SpellLock=v17(121167 - (1043 + 214), nil, 79 - 58),BurningRush=v17(112612 - (323 + 889), nil, 1493 - 938)};
+	v17.Warlock.Demonology = v20(v17.Warlock.Commons, {Felstorm=v17(90331 - (361 + 219), nil, 342 - (53 + 267)),HandofGuldan=v17(23761 + 81413, nil, 436 - (15 + 398)),ShadowBoltLineCD=v17(1668 - (18 + 964), nil, 22 - 16),SummonPet=v17(17454 + 12692, nil, 16 + 8),BilescourgeBombers=v17(268061 - (20 + 830), nil, 20 + 5),CallDreadstalkers=v17(104442 - (116 + 10), nil, 2 + 24),Demonbolt=v17(264916 - (542 + 196), nil, 57 - 30),DemonicCalling=v17(59906 + 145239, nil, 15 + 13),DemonicStrength=v17(96173 + 170998, nil, 75 - 46),Doom=v17(1545 - 942, nil, 1581 - (1126 + 425)),FelDomination=v17(334294 - (118 + 287), nil, 121 - 90),FelCovenant=v17(388553 - (118 + 1003), nil, 93 - 61),FromtheShadows=v17(267547 - (142 + 235), nil, 149 - 116),GrimoireFelguard=v17(24348 + 87550, nil, 1011 - (553 + 424)),Guillotine=v17(731484 - 344651, nil, 31 + 4),ImpGangBoss=v17(384338 + 3107, nil, 21 + 15),Implosion=v17(83436 + 112841, nil, 22 + 15),InnerDemons=v17(579296 - 312080, nil, 105 - 67),NetherPortal=v17(598309 - 331092, nil, 12 + 27),PowerSiphon=v17(1276450 - 1012320, nil, 793 - (239 + 514)),SacrificedSouls=v17(93849 + 173365, nil, 1370 - (797 + 532)),SoulboundTyrant=v17(243115 + 91470, nil, 15 + 27),SoulStrike=v17(620865 - 356808, nil, 1245 - (373 + 829)),SummonDemonicTyrant=v17(265918 - (476 + 255), nil, 1174 - (369 + 761)),SummonVilefiend=v17(152786 + 111333, nil, 81 - 36),TheExpendables=v17(734503 - 346903, nil, 284 - (64 + 174)),ReignofTyranny=v17(60913 + 366771, nil, 195 - 63),GrandWarlocksDesign=v17(387420 - (144 + 192), nil, 349 - (42 + 174)),DemonicCallingBuff=v17(154113 + 51033, nil, 39 + 8),DemonicCoreBuff=v17(112232 + 151941, nil, 1552 - (363 + 1141)),DemonicPowerBuff=v17(266853 - (1183 + 397), nil, 148 - 99),FelCovenantBuff=v17(284010 + 103427, nil, 38 + 12),NetherPortalBuff=v17(269193 - (1913 + 62), nil, 33 + 18),DoomDebuff=v17(1596 - 993, nil, 1985 - (565 + 1368)),FromtheShadowsDebuff=v17(1017538 - 746969, nil, 1714 - (1477 + 184)),DoomBrandDebuff=v17(577166 - 153583),DrainLife=v17(218173 + 15980, nil, 911 - (564 + 292))});
+	v17.Warlock.Affliction = v20(v17.Warlock.Commons, {Agony=v17(1690 - 710, nil, 162 - 108),DrainLife=v17(234457 - (244 + 60), nil, 43 + 12),SummonPet=v17(1164 - (41 + 435), nil, 1057 - (938 + 63)),AbsoluteCorruption=v17(150819 + 45284, nil, 1182 - (936 + 189)),DoomBlossom=v17(128272 + 261492),DrainSoul=v17(200203 - (1565 + 48), nil, 36 + 22),DreadTouch=v17(390913 - (782 + 356), nil, 326 - (176 + 91)),Haunt=v17(125527 - 77346, nil, 88 - 28),InevitableDemise=v17(335411 - (975 + 117), nil, 1936 - (157 + 1718)),MaleficAffliction=v17(316313 + 73448, nil, 219 - 157),MaleficRapture=v17(1109527 - 784991, nil, 1081 - (697 + 321)),Nightfall=v17(295725 - 187167, nil, 135 - 71),PhantomSingularity=v17(473015 - 267836, nil, 26 + 39),SowTheSeeds=v17(367660 - 171434, nil, 176 - 110),SeedofCorruption=v17(28470 - (322 + 905), nil, 678 - (602 + 9)),ShadowEmbrace=v17(28432 - (449 + 740), nil, 940 - (826 + 46)),SiphonLife=v17(64053 - (245 + 702), nil, 217 - 148),SoulRot=v17(124408 + 262589, nil, 1968 - (260 + 1638)),SoulSwap=v17(387391 - (382 + 58), nil, 227 - 156),SoulTap=v17(321641 + 65432, nil, 148 - 76),SouleatersGluttony=v17(1158216 - 768586, nil, 1278 - (902 + 303)),SowtheSeeds=v17(430841 - 234615, nil, 178 - 104),TormentedCrescendo=v17(33262 + 353813, nil, 1765 - (1121 + 569)),UnstableAffliction=v17(316313 - (22 + 192), nil, 759 - (483 + 200)),VileTaint=v17(279813 - (1404 + 59), nil, 210 - 133),InevitableDemiseBuff=v17(449335 - 115015, nil, 843 - (468 + 297)),NightfallBuff=v17(265133 - (334 + 228), nil, 266 - 187),MaleficAfflictionBuff=v17(903625 - 513780, nil, 145 - 65),TormentedCrescendoBuff=v17(109917 + 277162, nil, 317 - (141 + 95)),UmbrafireKindlingBuff=v17(416268 + 7497),AgonyDebuff=v17(2522 - 1542, nil, 196 - 114),CorruptionDebuff=v17(34372 + 112367, nil, 227 - 144),HauntDebuff=v17(33871 + 14310, nil, 44 + 40),PhantomSingularityDebuff=v17(288941 - 83762, nil, 51 + 34),SeedofCorruptionDebuff=v17(27406 - (92 + 71), nil, 43 + 43),SiphonLifeDebuff=v17(106099 - 42993, nil, 852 - (574 + 191)),UnstableAfflictionDebuff=v17(260739 + 55360, nil, 220 - 132),VileTaintDebuff=v17(142178 + 136172, nil, 938 - (254 + 595)),SoulRotDebuff=v17(387123 - (55 + 71), nil, 118 - 28),DreadTouchDebuff=v17(391658 - (573 + 1217), nil, 251 - 160),ShadowEmbraceDebuff=v17(2465 + 29925, nil, 147 - 55)});
+	v17.Warlock.Destruction = v20(v17.Warlock.Commons, {Immolate=v17(1287 - (714 + 225), nil, 271 - 178),Incinerate=v17(41436 - 11714, nil, 11 + 83),SummonPet=v17(995 - 307, nil, 901 - (118 + 688)),AshenRemains=v17(387300 - (25 + 23), nil, 19 + 77),AvatarofDestruction=v17(389045 - (927 + 959), nil, 326 - 229),Backdraft=v17(197138 - (16 + 716), nil, 189 - 91),BurntoAshes=v17(387250 - (11 + 86), nil, 241 - 142),Cataclysm=v17(152393 - (175 + 110), nil, 252 - 152),ChannelDemonfire=v17(968925 - 772478, nil, 1897 - (503 + 1293)),ChaosBolt=v17(326361 - 209503, nil, 74 + 28),ChaosIncarnate=v17(388336 - (810 + 251)),Chaosbringer=v17(292899 + 129158),Conflagrate=v17(5513 + 12449, nil, 93 + 10),CrashingChaos=v17(417767 - (43 + 490)),CryHavoc=v17(388255 - (711 + 22), nil, 402 - 298),DiabolicEmbers=v17(388032 - (240 + 619), nil, 26 + 79),DimensionalRift=v17(617154 - 229178, nil, 8 + 98),Eradication=v17(198156 - (1344 + 400), nil, 512 - (255 + 150)),FireandBrimstone=v17(154706 + 41702, nil, 58 + 50),Havoc=v17(342831 - 262591, nil, 351 - 242),Inferno=v17(272284 - (404 + 1335), nil, 516 - (183 + 223)),InternalCombustion=v17(323848 - 57714, nil, 74 + 37),MadnessoftheAzjAqir=v17(139416 + 247984, nil, 449 - (10 + 327)),Mayhem=v17(269855 + 117651, nil, 451 - (118 + 220)),RagingDemonfire=v17(129025 + 258141, nil, 563 - (108 + 341)),RainofChaos=v17(119509 + 146577, nil, 486 - 371),RainofFire=v17(7233 - (711 + 782), nil, 222 - 106),RoaringBlaze=v17(205653 - (270 + 199), nil, 38 + 79),Ruin=v17(388922 - (580 + 1239), nil, 350 - 232),SoulFire=v17(6075 + 278, nil, 5 + 114),SummonInfernal=v17(489 + 633, nil, 313 - 193),BackdraftBuff=v17(73202 + 44626, nil, 1288 - (645 + 522)),MadnessCBBuff=v17(389199 - (1010 + 780), nil, 122 + 0),MadnessRoFBuff=v17(1845600 - 1458187),MadnessSBBuff=v17(1135300 - 747886),RainofChaosBuff=v17(267923 - (1045 + 791), nil, 310 - 187),RitualofRuinBuff=v17(591168 - 204011, nil, 629 - (351 + 154)),BurntoAshesBuff=v17(388728 - (1281 + 293), nil, 391 - (28 + 238)),EradicationDebuff=v17(438881 - 242467, nil, 1685 - (1381 + 178)),ConflagrateDebuff=v17(249427 + 16504),HavocDebuff=v17(64701 + 15539, nil, 55 + 72),ImmolateDebuff=v17(543782 - 386046, nil, 67 + 61),PyrogenicsDebuff=v17(387566 - (381 + 89)),RoaringBlazeDebuff=v17(235825 + 30106, nil, 88 + 41)});
+	if (((2058 - 856) > (2214 - (1074 + 82))) and not v19.Warlock) then
+		v19.Warlock = {};
 	end
-	v21.Warlock.Commons = {Healthstone=v21(526 - (351 + 154)),HealingPotion=v21(1584 - (1281 + 293)),ConjuredChillglobe=v21(288 - (28 + 238)),DesperateInvokersCodex=v21(50 - 27),TimebreachingTalon=v21(1583 - (1381 + 178)),AxeTossMouseover=v21(23 + 1),CorruptionMouseover=v21(21 + 4),SpellLockMouseover=v21(12 + 14),ShadowBoltPetAttack=v21(93 - 66),IridialStaff=v21(21 + 19),CancelBurningRush=v21(511 - (381 + 89))};
-	v21.Warlock.Affliction = v18(v21.Warlock.Commons, {AgonyMouseover=v21(25 + 3),VileTaintCursor=v21(20 + 9)});
-	v21.Warlock.Demonology = v18(v21.Warlock.Commons, {DemonboltPetAttack=v21(51 - 21),DoomMouseover=v21(1187 - (1074 + 82)),GuillotineCursor=v21(69 - 37)});
-	v21.Warlock.Destruction = v18(v21.Warlock.Commons, {HavocMouseover=v21(1817 - (214 + 1570)),ImmolateMouseover=v21(1489 - (990 + 465)),ImmolatePetAttack=v21(15 + 20),RainofFireCursor=v21(16 + 20),SummonInfernalCursor=v21(36 + 1)});
-	v9.ImmolationTable = {Destruction={ImmolationDebuff={}}};
-	v9.GuardiansTable = {Pets={},ImpCount=(0 - 0),FelguardDuration=(1726 - (1668 + 58)),DreadstalkerDuration=(626 - (512 + 114)),DemonicTyrantDuration=(0 - 0),VilefiendDuration=(0 - 0),PitLordDuration=(0 - 0),Infernal=(0 + 0),Blasphemy=(0 + 0),DarkglareDuration=(0 + 0),InnerDemonsNextCast=(0 - 0),ImpsSpawnedFromHoG=(1994 - (109 + 1885))};
-	local v38 = {[99504 - (1269 + 200)]={name="Dreadstalker",duration=(22.25 - 10)},[56474 - (98 + 717)]={name="Wild Imp",duration=(846 - (802 + 24))},[247680 - 104058]={name="Wild Imp",duration=(25 - 5)},[2548 + 14704]={name="Felguard",duration=(14 + 3)},[22175 + 112827]={name="Demonic Tyrant",duration=(4 + 11)},[377831 - 242015]={name="Vilefiend",duration=(49 - 34)},[70143 + 125968]={name="Pit Lord",duration=(5 + 5)},[74 + 15]={name="Infernal",duration=(22 + 8)},[86647 + 98937]={name="Blasphemy",duration=(1441 - (797 + 636))},[503369 - 399696]={name="Darkglare",duration=(1644 - (1427 + 192))}};
-	v9:RegisterForSelfCombatEvent(function(...)
-		DestGUID, _, _, _, SpellID = select(3 + 5, ...);
-		if ((SpellID == (366227 - 208491)) or ((1677 + 188) >= (920 + 1109))) then
-			v9.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] = 326 - (192 + 134);
+	v19.Warlock.Commons = {Healthstone=v19(45 - 24),PotionOfWitheringDreams=v19(208825 - (214 + 1570)),ConjuredChillglobe=v19(195755 - (990 + 465), {(6 + 7),(55 - 41)}),DesperateInvokersCodex=v19(196036 - (1668 + 58), {(33 - 20),(48 - 34)}),TimebreachingTalon=v19(90154 + 103637, {(12 + 1),(2008 - (109 + 1885))}),TimeThiefsGambit=v19(209048 - (1269 + 200), {(828 - (98 + 717)),(23 - 9)}),BelorrelostheSuncaller=v19(261648 - 54476, {(10 + 3),(4 + 10)}),Iridal=v19(579536 - 371215, {(6 + 10)}),NymuesUnravelingSpindle=v19(84920 + 123695, {(10 + 3),(1447 - (797 + 636))}),MirrorofFracturedTomorrows=v19(1007880 - 800299, {(5 + 8),(13 + 1)})};
+	v19.Warlock.Affliction = v20(v19.Warlock.Commons, {});
+	v19.Warlock.Demonology = v20(v19.Warlock.Commons, {});
+	v19.Warlock.Destruction = v20(v19.Warlock.Commons, {});
+	if (((1682 + 2029) > (3681 - (192 + 134))) and not v23.Warlock) then
+		v23.Warlock = {};
+	end
+	v23.Warlock.Commons = {Healthstone=v23(1297 - (316 + 960)),HealingPotion=v23(6 + 4),ConjuredChillglobe=v23(17 + 5),DesperateInvokersCodex=v23(22 + 1),TimebreachingTalon=v23(91 - 67),AxeTossMouseover=v23(575 - (83 + 468)),CorruptionMouseover=v23(1831 - (1202 + 604)),SpellLockMouseover=v23(121 - 95),ShadowBoltPetAttack=v23(44 - 17),IridialStaff=v23(110 - 70),CancelBurningRush=v23(366 - (45 + 280))};
+	v23.Warlock.Affliction = v20(v23.Warlock.Commons, {AgonyMouseover=v23(28 + 0),VileTaintCursor=v23(26 + 3)});
+	v23.Warlock.Demonology = v20(v23.Warlock.Commons, {DemonboltPetAttack=v23(11 + 19),DoomMouseover=v23(18 + 13),GuillotineCursor=v23(6 + 26)});
+	v23.Warlock.Destruction = v20(v23.Warlock.Commons, {HavocMouseover=v23(60 - 27),ImmolateMouseover=v23(1945 - (340 + 1571)),ImmolatePetAttack=v23(14 + 21),RainofFireCursor=v23(1808 - (1733 + 39)),SummonInfernalCursor=v23(101 - 64)});
+	v11.ImmolationTable = {Destruction={ImmolationDebuff={}}};
+	v11.GuardiansTable = {Pets={},ImpCount=(1034 - (125 + 909)),FelguardDuration=(1948 - (1096 + 852)),DreadstalkerDuration=(0 + 0),DemonicTyrantDuration=(0 - 0),VilefiendDuration=(0 + 0),PitLordDuration=(512 - (409 + 103)),Infernal=(236 - (46 + 190)),Blasphemy=(95 - (51 + 44)),DarkglareDuration=(0 + 0),InnerDemonsNextCast=(1317 - (1114 + 203)),ImpsSpawnedFromHoG=(726 - (228 + 498))};
+	local v40 = {[21240 + 76795]={name="Dreadstalker",duration=(7.25 + 5)},[56322 - (174 + 489)]={name="Wild Imp",duration=(52 - 32)},[145527 - (830 + 1075)]={name="Wild Imp",duration=(544 - (303 + 221))},[18521 - (231 + 1038)]={name="Felguard",duration=(15 + 2)},[136164 - (171 + 991)]={name="Demonic Tyrant",duration=(61 - 46)},[364693 - 228877]={name="Vilefiend",duration=(37 - 22)},[156957 + 39154]={name="Pit Lord",duration=(35 - 25)},[256 - 167]={name="Infernal",duration=(48 - 18)},[573692 - 388108]={name="Blasphemy",duration=(1256 - (111 + 1137))},[103831 - (91 + 67)]={name="Darkglare",duration=(74 - 49)}};
+	v11:RegisterForSelfCombatEvent(function(...)
+		DestGUID, _, _, _, SpellID = select(2 + 6, ...);
+		if ((SpellID == (158259 - (423 + 100))) or ((7 + 899) >= (6171 - 3942))) then
+			v11.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] = 0 + 0;
 		end
 	end, "SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH");
-	v9:RegisterForSelfCombatEvent(function(...)
-		local v43 = 1276 - (316 + 960);
+	v11:RegisterForSelfCombatEvent(function(...)
+		local v45 = 771 - (326 + 445);
 		while true do
-			if (((2755 + 2195) >= (1248 + 368)) and (v43 == (0 + 0))) then
-				DestGUID, _, _, _, SpellID = select(30 - 22, ...);
-				if (((2276 - (83 + 468)) == (3531 - (1202 + 604))) and (SpellID == (736342 - 578606))) then
-					if (((2427 - 968) <= (6871 - 4389)) and v9.ImmolationTable.Destruction.ImmolationDebuff[DestGUID]) then
-						v9.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] = nil;
+			if (((5620 - 4332) > (2786 - 1535)) and (v45 == (0 - 0))) then
+				DestGUID, _, _, _, SpellID = select(719 - (530 + 181), ...);
+				if ((SpellID == (158617 - (614 + 267))) or ((4545 - (19 + 13)) < (5455 - 2103))) then
+					if (v11.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] or ((4811 - 2746) >= (9129 - 5933))) then
+						v11.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] = nil;
 					end
 				end
 				break;
 			end
 		end
 	end, "SPELL_AURA_REMOVED");
-	v9:RegisterForCombatEvent(function(...)
-		DestGUID = select(333 - (45 + 280), ...);
-		if (v9.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] or ((2603 + 93) >= (3960 + 572))) then
-			v9.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] = nil;
+	v11:RegisterForCombatEvent(function(...)
+		local v46 = 0 + 0;
+		while true do
+			if ((v46 == (0 - 0)) or ((9074 - 4698) <= (3293 - (1293 + 519)))) then
+				DestGUID = select(16 - 8, ...);
+				if (v11.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] or ((8856 - 5464) >= (9066 - 4325))) then
+					v11.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] = nil;
+				end
+				break;
+			end
 		end
 	end, "UNIT_DIED", "UNIT_DESTROYED");
-	v9:RegisterForSelfCombatEvent(function(...)
-		DestGUID, _, _, _, SpellID = select(3 + 5, ...);
-		if (((580 + 468) >= (10 + 42)) and (SpellID == (33261 - 15299))) then
-			if (((4869 - (340 + 1571)) < (1777 + 2726)) and v9.ImmolationTable.Destruction.ImmolationDebuff[DestGUID]) then
-				v9.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] = v9.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] + (1773 - (1733 + 39));
+	v11:RegisterForSelfCombatEvent(function(...)
+		DestGUID, _, _, _, SpellID = select(34 - 26, ...);
+		if (((7832 - 4507) >= (1141 + 1013)) and (SpellID == (3665 + 14297))) then
+			if (v11.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] or ((3008 - 1713) >= (748 + 2485))) then
+				v11.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] = v11.ImmolationTable.Destruction.ImmolationDebuff[DestGUID] + 1 + 0;
 			end
 		end
 	end, "SPELL_CAST_SUCCESS");
-	v22.UpdatePetTable = function()
-		for v63, v64 in pairs(v9.GuardiansTable.Pets) do
-			local v65 = 0 - 0;
+	v24.UpdatePetTable = function()
+		for v68, v69 in pairs(v11.GuardiansTable.Pets) do
+			local v70 = 0 + 0;
 			while true do
-				if ((v65 == (1035 - (125 + 909))) or ((4683 - (1096 + 852)) == (588 + 721))) then
-					if ((GetTime() <= v64.despawnTime) or ((5898 - 1768) <= (2867 + 88))) then
-						local v82 = 512 - (409 + 103);
-						while true do
-							if ((v82 == (236 - (46 + 190))) or ((2059 - (51 + 44)) <= (378 + 962))) then
-								v64.Duration = v64.despawnTime - GetTime();
-								if (((3816 - (1114 + 203)) == (3225 - (228 + 498))) and (v64.name == "Felguard")) then
-									v9.GuardiansTable.FelguardDuration = v64.Duration;
-								elseif ((v64.name == "Dreadstalker") or ((489 + 1766) < (13 + 9))) then
-									v9.GuardiansTable.DreadstalkerDuration = v64.Duration;
-								elseif ((v64.name == "Demonic Tyrant") or ((1749 - (174 + 489)) >= (3660 - 2255))) then
-									v9.GuardiansTable.DemonicTyrantDuration = v64.Duration;
-								elseif ((v64.name == "Vilefiend") or ((4274 - (830 + 1075)) == (950 - (303 + 221)))) then
-									v9.GuardiansTable.VilefiendDuration = v64.Duration;
-								elseif ((v64.name == "Pit Lord") or ((4345 - (231 + 1038)) > (2653 + 530))) then
-									v9.GuardiansTable.PitLordDuration = v64.Duration;
-								elseif (((2364 - (171 + 991)) > (4360 - 3302)) and (v64.name == "Infernal")) then
-									v9.GuardiansTable.InfernalDuration = v64.Duration;
-								elseif (((9964 - 6253) > (8372 - 5017)) and (v64.name == "Blasphy")) then
-									v9.GuardiansTable.BlasphemyDuration = v64.Duration;
-								elseif ((v64.name == "Darkglare") or ((726 + 180) >= (7813 - 5584))) then
-									v9.GuardiansTable.DarkglareDuration = v64.Duration;
-								end
-								break;
-							end
+				if (((5473 - (709 + 387)) > (3500 - (673 + 1185))) and (v70 == (2 - 1))) then
+					if (((15166 - 10443) > (2230 - 874)) and (GetTime() <= v69.despawnTime)) then
+						v69.Duration = v69.despawnTime - GetTime();
+						if ((v69.name == "Felguard") or ((2959 + 1177) <= (2566 + 867))) then
+							v11.GuardiansTable.FelguardDuration = v69.Duration;
+						elseif (((5730 - 1485) <= (1138 + 3493)) and (v69.name == "Dreadstalker")) then
+							v11.GuardiansTable.DreadstalkerDuration = v69.Duration;
+						elseif (((8525 - 4249) >= (7683 - 3769)) and (v69.name == "Demonic Tyrant")) then
+							v11.GuardiansTable.DemonicTyrantDuration = v69.Duration;
+						elseif (((2078 - (446 + 1434)) <= (5648 - (1040 + 243))) and (v69.name == "Vilefiend")) then
+							v11.GuardiansTable.VilefiendDuration = v69.Duration;
+						elseif (((14272 - 9490) > (6523 - (559 + 1288))) and (v69.name == "Pit Lord")) then
+							v11.GuardiansTable.PitLordDuration = v69.Duration;
+						elseif (((6795 - (609 + 1322)) > (2651 - (13 + 441))) and (v69.name == "Infernal")) then
+							v11.GuardiansTable.InfernalDuration = v69.Duration;
+						elseif ((v69.name == "Blasphy") or ((13826 - 10126) == (6566 - 4059))) then
+							v11.GuardiansTable.BlasphemyDuration = v69.Duration;
+						elseif (((22282 - 17808) >= (11 + 263)) and (v69.name == "Darkglare")) then
+							v11.GuardiansTable.DarkglareDuration = v69.Duration;
 						end
 					end
 					break;
 				end
-				if (((3715 - 2427) > (2016 - 765)) and (v65 == (0 - 0))) then
-					if (v64 or ((5761 - (111 + 1137)) < (3510 - (91 + 67)))) then
-						if ((GetTime() >= v64.despawnTime) or ((6145 - 4080) >= (798 + 2398))) then
-							local v90 = 523 - (423 + 100);
-							while true do
-								if ((v90 == (1 + 0)) or ((12116 - 7740) <= (772 + 709))) then
-									v9.GuardiansTable.Pets[v63] = nil;
-									break;
-								end
-								if ((v90 == (771 - (326 + 445))) or ((14802 - 11410) >= (10561 - 5820))) then
-									if (((7760 - 4435) >= (2865 - (530 + 181))) and (v64.name == "Wild Imp")) then
-										v9.GuardiansTable.ImpCount = v9.GuardiansTable.ImpCount - (882 - (614 + 267));
-									end
-									if ((v64.name == "Felguard") or ((1327 - (19 + 13)) >= (5261 - 2028))) then
-										v9.GuardiansTable.FelguardDuration = 0 - 0;
-									elseif (((12503 - 8126) > (427 + 1215)) and (v64.name == "Dreadstalker")) then
-										v9.GuardiansTable.DreadstalkerDuration = 0 - 0;
-									elseif (((9794 - 5071) > (3168 - (1293 + 519))) and (v64.name == "Demonic Tyrant")) then
-										v9.GuardiansTable.DemonicTyrantDuration = 0 - 0;
-									elseif ((v64.name == "Vilefiend") or ((10798 - 6662) <= (6564 - 3131))) then
-										v9.GuardiansTable.VilefiendDuration = 0 - 0;
-									elseif (((9999 - 5754) <= (2453 + 2178)) and (v64.name == "Pit Lord")) then
-										v9.GuardiansTable.PitLordDuration = 0 + 0;
-									elseif (((9934 - 5658) >= (905 + 3009)) and (v64.name == "Infernal")) then
-										v9.GuardiansTable.InfernalDuration = 0 + 0;
-									elseif (((124 + 74) <= (5461 - (709 + 387))) and (v64.name == "Blasphemy")) then
-										v9.GuardiansTable.BlasphemyDuration = 1858 - (673 + 1185);
-									elseif (((13868 - 9086) > (15015 - 10339)) and (v64.name == "Darkglare")) then
-										v9.GuardiansTable.DarkglareDuration = 0 - 0;
-									end
-									v90 = 1 + 0;
-								end
+				if ((v70 == (0 - 0)) or ((673 + 1221) <= (617 + 789))) then
+					if (((4664 - 3092) >= (838 + 693)) and v69) then
+						if ((GetTime() >= v69.despawnTime) or ((8620 - 3933) < (3003 + 1539))) then
+							if (((1831 + 1460) > (1198 + 469)) and (v69.name == "Wild Imp")) then
+								v11.GuardiansTable.ImpCount = v11.GuardiansTable.ImpCount - (1 + 0);
 							end
+							if ((v69.name == "Felguard") or ((855 + 18) == (2467 - (153 + 280)))) then
+								v11.GuardiansTable.FelguardDuration = 0 - 0;
+							elseif ((v69.name == "Dreadstalker") or ((2529 + 287) < (5 + 6))) then
+								v11.GuardiansTable.DreadstalkerDuration = 0 + 0;
+							elseif (((3357 + 342) < (3410 + 1296)) and (v69.name == "Demonic Tyrant")) then
+								v11.GuardiansTable.DemonicTyrantDuration = 0 - 0;
+							elseif (((1636 + 1010) >= (1543 - (89 + 578))) and (v69.name == "Vilefiend")) then
+								v11.GuardiansTable.VilefiendDuration = 0 + 0;
+							elseif (((1276 - 662) <= (4233 - (572 + 477))) and (v69.name == "Pit Lord")) then
+								v11.GuardiansTable.PitLordDuration = 0 + 0;
+							elseif (((1876 + 1250) == (374 + 2752)) and (v69.name == "Infernal")) then
+								v11.GuardiansTable.InfernalDuration = 86 - (84 + 2);
+							elseif ((v69.name == "Blasphemy") or ((3603 - 1416) >= (3569 + 1385))) then
+								v11.GuardiansTable.BlasphemyDuration = 842 - (497 + 345);
+							elseif ((v69.name == "Darkglare") or ((100 + 3777) == (605 + 2970))) then
+								v11.GuardiansTable.DarkglareDuration = 1333 - (605 + 728);
+							end
+							v11.GuardiansTable.Pets[v68] = nil;
 						end
 					end
-					if (((3635 + 1229) > (2966 - 769)) and (v64.ImpCasts <= (0 + 0))) then
-						local v83 = 0 - 0;
+					if (((505 + 202) > (1404 - 772)) and (v69.ImpCasts <= (0 + 0))) then
+						local v85 = 0 - 0;
 						while true do
-							if ((v83 == (0 - 0)) or ((5580 - (446 + 1434)) == (3790 - (1040 + 243)))) then
-								v9.GuardiansTable.ImpCount = v9.GuardiansTable.ImpCount - (2 - 1);
-								v9.GuardiansTable.Pets[v63] = nil;
+							if ((v85 == (0 + 0)) or ((1512 - 966) >= (2027 + 657))) then
+								v11.GuardiansTable.ImpCount = v11.GuardiansTable.ImpCount - (490 - (457 + 32));
+								v11.GuardiansTable.Pets[v68] = nil;
 								break;
 							end
 						end
 					end
-					v65 = 1848 - (559 + 1288);
+					v70 = 1 + 0;
 				end
 			end
 		end
 	end;
-	v9:RegisterForSelfCombatEvent(function(...)
-		local v44, v45, v46, v47, v46, v46, v46, v48, v46, v46, v46, v49 = select(1932 - (609 + 1322), ...);
-		local v46, v46, v46, v46, v46, v46, v46, v50 = v19(v48, "(%S+)-(%d+)-(%d+)-(%d+)-(%d+)-(%d+)-(%S+)");
-		v50 = tonumber(v50);
-		if (((4928 - (13 + 441)) >= (1023 - 749)) and (v48 ~= UnitGUID("pet")) and (v45 == "SPELL_SUMMON") and v38[v50]) then
-			local v68 = 0 - 0;
-			local v69;
-			local v70;
-			local v71;
-			while true do
-				if ((v68 == (0 - 0)) or ((71 + 1823) <= (5106 - 3700))) then
-					v69 = v38[v50];
-					v70 = nil;
-					v68 = 1 + 0;
+	v11:RegisterForSelfCombatEvent(function(...)
+		local v47 = 1402 - (832 + 570);
+		local v48;
+		local v49;
+		local v50;
+		local v51;
+		local v52;
+		local v53;
+		local v54;
+		while true do
+			if (((1381 + 84) <= (1122 + 3179)) and (v47 == (10 - 7))) then
+				if (((821 + 883) > (2221 - (588 + 208))) and (v54 == (150013 - 94354)) and (v11.GuardiansTable.ImpsSpawnedFromHoG > (1800 - (884 + 916)))) then
+					v11.GuardiansTable.ImpsSpawnedFromHoG = v11.GuardiansTable.ImpsSpawnedFromHoG - (1 - 0);
 				end
-				if (((689 + 883) >= (4543 - 3012)) and (v68 == (1 + 0))) then
-					if ((v69.name == "Wild Imp") or ((8620 - 3933) < (3003 + 1539))) then
-						local v89 = 0 + 0;
-						while true do
-							if (((2365 + 926) > (1400 + 267)) and (v89 == (0 + 0))) then
-								v9.GuardiansTable.ImpCount = v9.GuardiansTable.ImpCount + (434 - (153 + 280));
-								v70 = v69.duration;
-								break;
-							end
-						end
-					elseif ((v69.name == "Felguard") or ((2520 - 1647) == (1827 + 207))) then
-						local v98 = 0 + 0;
-						while true do
-							if (((0 + 0) == v98) or ((2556 + 260) < (8 + 3))) then
-								v9.GuardiansTable.FelguardDuration = v69.duration;
-								v70 = v69.duration;
-								break;
-							end
-						end
-					elseif (((5631 - 1932) < (2909 + 1797)) and (v69.name == "Dreadstalker")) then
-						v9.GuardiansTable.DreadstalkerDuration = v69.duration;
-						v70 = v69.duration;
-					elseif (((3313 - (89 + 578)) >= (626 + 250)) and (v69.name == "Demonic Tyrant")) then
-						if (((1276 - 662) <= (4233 - (572 + 477))) and (v49 == (35766 + 229421))) then
-							local v115 = 0 + 0;
+				v24.UpdatePetTable();
+				break;
+			end
+			if ((v47 == (2 + 0)) or ((1340 - (232 + 421)) == (6123 - (1569 + 320)))) then
+				if ((v40[v54] and (v40[v54].name == "Demonic Tyrant")) or ((817 + 2513) < (272 + 1157))) then
+					for v86, v87 in pairs(v11.GuardiansTable.Pets) do
+						if (((3865 - 2718) >= (940 - (316 + 289))) and v87 and (v87.name ~= "Demonic Tyrant") and (v87.name ~= "Pit Lord")) then
+							local v96 = 0 - 0;
 							while true do
-								if (((374 + 2752) == (3212 - (84 + 2))) and (v115 == (0 - 0))) then
-									v9.GuardiansTable.DemonicTyrantDuration = v69.duration;
-									v70 = v69.duration;
+								if (((159 + 3276) > (3550 - (666 + 787))) and (v96 == (425 - (360 + 65)))) then
+									v87.despawnTime = v87.despawnTime + 15 + 0;
+									v87.ImpCasts = v87.ImpCasts + (261 - (79 + 175));
 									break;
 								end
 							end
 						end
-					elseif ((v69.name == "Vilefiend") or ((1576 + 611) >= (5796 - (497 + 345)))) then
-						v9.GuardiansTable.VilefiendDuration = v69.duration;
-						v70 = v69.duration;
-					elseif ((v69.name == "Pit Lord") or ((100 + 3777) == (605 + 2970))) then
-						v9.GuardiansTable.PitLordDuration = v69.duration;
-						v70 = v69.duration;
-					elseif (((2040 - (605 + 728)) > (451 + 181)) and (v69.name == "Infernal")) then
-						local v128 = 0 - 0;
-						while true do
-							if (((0 + 0) == v128) or ((2018 - 1472) >= (2420 + 264))) then
-								v9.GuardiansTable.InfernalDuration = v69.duration;
-								v70 = v69.duration;
-								break;
-							end
-						end
-					elseif (((4058 - 2593) <= (3248 + 1053)) and (v69.name == "Blasphemy")) then
-						v9.GuardiansTable.BlasphemyDuration = v69.duration;
-						v70 = v69.duration;
-					elseif (((2193 - (457 + 32)) > (605 + 820)) and (v69.name == "Darkglare")) then
-						v9.GuardiansTable.DarkglareDuration = v69.duration;
-						v70 = v69.duration;
 					end
-					v71 = {ID=v48,name=v69.name,spawnTime=GetTime(),ImpCasts=(1407 - (832 + 570)),Duration=v70,despawnTime=(GetTime() + tonumber(v70))};
-					v68 = 2 + 0;
 				end
-				if ((v68 == (1 + 1)) or ((2430 - 1743) == (2040 + 2194))) then
-					table.insert(v9.GuardiansTable.Pets, v71);
-					break;
+				if ((v54 == (226467 - 82845)) or ((2942 + 828) >= (12386 - 8345))) then
+					v11.GuardiansTable.InnerDemonsNextCast = GetTime() + (22 - 10);
 				end
+				v47 = 902 - (503 + 396);
 			end
-		end
-		if ((v38[v50] and (v38[v50].name == "Demonic Tyrant")) or ((4126 - (588 + 208)) < (3851 - 2422))) then
-			for v76, v77 in pairs(v9.GuardiansTable.Pets) do
-				if (((2947 - (884 + 916)) >= (701 - 366)) and v77 and (v77.name ~= "Demonic Tyrant") and (v77.name ~= "Pit Lord")) then
-					local v80 = 0 + 0;
+			if ((v47 == (181 - (92 + 89))) or ((7354 - 3563) <= (827 + 784))) then
+				v48, v49, v50, v51, v50, v50, v50, v52, v50, v50, v50, v53 = select(1 + 0, ...);
+				v50, v50, v50, v50, v50, v50, v50, v54 = v21(v52, "(%S+)-(%d+)-(%d+)-(%d+)-(%d+)-(%d+)-(%S+)");
+				v47 = 3 - 2;
+			end
+			if ((v47 == (1 + 0)) or ((10438 - 5860) <= (1752 + 256))) then
+				v54 = tonumber(v54);
+				if (((538 + 587) <= (6322 - 4246)) and (v52 ~= UnitGUID("pet")) and (v49 == "SPELL_SUMMON") and v40[v54]) then
+					local v78 = 0 + 0;
+					local v79;
+					local v80;
+					local v81;
 					while true do
-						if (((4088 - (232 + 421)) > (3986 - (1569 + 320))) and ((0 + 0) == v80)) then
-							v77.despawnTime = v77.despawnTime + 3 + 12;
-							v77.ImpCasts = v77.ImpCasts + (23 - 16);
+						if ((v78 == (0 - 0)) or ((1987 - (485 + 759)) >= (10178 - 5779))) then
+							v79 = v40[v54];
+							v80 = nil;
+							v78 = 1190 - (442 + 747);
+						end
+						if (((2290 - (832 + 303)) < (2619 - (88 + 858))) and (v78 == (1 + 0))) then
+							if ((v79.name == "Wild Imp") or ((1924 + 400) <= (24 + 554))) then
+								local v106 = 789 - (766 + 23);
+								while true do
+									if (((18596 - 14829) == (5151 - 1384)) and (v106 == (0 - 0))) then
+										v11.GuardiansTable.ImpCount = v11.GuardiansTable.ImpCount + (3 - 2);
+										v80 = v79.duration;
+										break;
+									end
+								end
+							elseif (((5162 - (1036 + 37)) == (2900 + 1189)) and (v79.name == "Felguard")) then
+								local v112 = 0 - 0;
+								while true do
+									if (((3507 + 951) >= (3154 - (641 + 839))) and (v112 == (913 - (910 + 3)))) then
+										v11.GuardiansTable.FelguardDuration = v79.duration;
+										v80 = v79.duration;
+										break;
+									end
+								end
+							elseif (((2477 - 1505) <= (3102 - (1466 + 218))) and (v79.name == "Dreadstalker")) then
+								local v118 = 0 + 0;
+								while true do
+									if ((v118 == (1148 - (556 + 592))) or ((1756 + 3182) < (5570 - (329 + 479)))) then
+										v11.GuardiansTable.DreadstalkerDuration = v79.duration;
+										v80 = v79.duration;
+										break;
+									end
+								end
+							elseif ((v79.name == "Demonic Tyrant") or ((3358 - (174 + 680)) > (14651 - 10387))) then
+								if (((4461 - 2308) == (1538 + 615)) and (v53 == (265926 - (396 + 343)))) then
+									local v129 = 0 + 0;
+									while true do
+										if (((1477 - (29 + 1448)) == v129) or ((1896 - (135 + 1254)) >= (9760 - 7169))) then
+											v11.GuardiansTable.DemonicTyrantDuration = v79.duration;
+											v80 = v79.duration;
+											break;
+										end
+									end
+								end
+							elseif (((20922 - 16441) == (2987 + 1494)) and (v79.name == "Vilefiend")) then
+								local v130 = 1527 - (389 + 1138);
+								while true do
+									if ((v130 == (574 - (102 + 472))) or ((2197 + 131) < (385 + 308))) then
+										v11.GuardiansTable.VilefiendDuration = v79.duration;
+										v80 = v79.duration;
+										break;
+									end
+								end
+							elseif (((4036 + 292) == (5873 - (320 + 1225))) and (v79.name == "Pit Lord")) then
+								v11.GuardiansTable.PitLordDuration = v79.duration;
+								v80 = v79.duration;
+							elseif (((2826 - 1238) >= (816 + 516)) and (v79.name == "Infernal")) then
+								local v143 = 1464 - (157 + 1307);
+								while true do
+									if (((1859 - (821 + 1038)) == v143) or ((10413 - 6239) > (465 + 3783))) then
+										v11.GuardiansTable.InfernalDuration = v79.duration;
+										v80 = v79.duration;
+										break;
+									end
+								end
+							elseif ((v79.name == "Blasphemy") or ((8145 - 3559) <= (31 + 51))) then
+								local v145 = 0 - 0;
+								while true do
+									if (((4889 - (834 + 192)) == (246 + 3617)) and (v145 == (0 + 0))) then
+										v11.GuardiansTable.BlasphemyDuration = v79.duration;
+										v80 = v79.duration;
+										break;
+									end
+								end
+							elseif ((v79.name == "Darkglare") or ((7 + 275) <= (64 - 22))) then
+								local v148 = 304 - (300 + 4);
+								while true do
+									if (((1231 + 3378) >= (2005 - 1239)) and (v148 == (362 - (112 + 250)))) then
+										v11.GuardiansTable.DarkglareDuration = v79.duration;
+										v80 = v79.duration;
+										break;
+									end
+								end
+							end
+							v81 = {ID=v52,name=v79.name,spawnTime=GetTime(),ImpCasts=(2 + 3),Duration=v80,despawnTime=(GetTime() + tonumber(v80))};
+							v78 = 4 - 2;
+						end
+						if ((v78 == (2 + 0)) or ((596 + 556) == (1861 + 627))) then
+							table.insert(v11.GuardiansTable.Pets, v81);
 							break;
 						end
 					end
 				end
+				v47 = 1 + 1;
 			end
 		end
-		if ((v50 == (144227 - (316 + 289))) or ((9868 - 6098) >= (187 + 3854))) then
-			v9.GuardiansTable.InnerDemonsNextCast = GetTime() + (1465 - (666 + 787));
-		end
-		if (((v50 == (56084 - (360 + 65))) and (v9.GuardiansTable.ImpsSpawnedFromHoG > (0 + 0))) or ((4045 - (79 + 175)) <= (2540 - 929))) then
-			v9.GuardiansTable.ImpsSpawnedFromHoG = v9.GuardiansTable.ImpsSpawnedFromHoG - (1 + 0);
-		end
-		v22.UpdatePetTable();
 	end, "SPELL_SUMMON", "SPELL_CAST_SUCCESS");
-	v9:RegisterForCombatEvent(function(...)
-		local v51 = 0 - 0;
-		local v52;
-		local v53;
-		local v54;
-		local v55;
+	v11:RegisterForCombatEvent(function(...)
+		local v55 = 0 + 0;
+		local v56;
+		local v57;
+		local v58;
+		local v59;
 		while true do
-			if ((v51 == (0 - 0)) or ((5477 - (503 + 396)) <= (2189 - (92 + 89)))) then
-				v52, v53, v53, v53, v54, v53, v53, v53, v55 = select(7 - 3, ...);
-				if (((577 + 548) <= (1229 + 847)) and (v55 == (408524 - 304206))) then
-					for v84, v85 in pairs(v9.GuardiansTable.Pets) do
-						if ((v52 == v85.ID) or ((102 + 641) >= (10029 - 5630))) then
-							v85.ImpCasts = v85.ImpCasts - (1 + 0);
+			if (((4836 - (1001 + 413)) > (7470 - 4120)) and (v55 == (882 - (244 + 638)))) then
+				v56, v57, v57, v57, v58, v57, v57, v57, v59 = select(697 - (627 + 66), ...);
+				if (((2612 - 1735) > (978 - (512 + 90))) and (v59 == (106224 - (1665 + 241)))) then
+					for v88, v89 in pairs(v11.GuardiansTable.Pets) do
+						if ((v56 == v89.ID) or ((3835 - (373 + 344)) <= (835 + 1016))) then
+							v89.ImpCasts = v89.ImpCasts - (1 + 0);
 						end
 					end
 				end
-				v51 = 1 + 0;
+				v55 = 2 - 1;
 			end
-			if (((3517 - 2362) < (209 + 1464)) and (v51 == (1 - 0))) then
-				if (((v52 == v12:GUID()) and (v55 == (197521 - (485 + 759)))) or ((5377 - 3053) <= (1767 - (442 + 747)))) then
-					for v86, v87 in pairs(v9.GuardiansTable.Pets) do
-						if (((4902 - (832 + 303)) == (4713 - (88 + 858))) and (v87.name == "Wild Imp")) then
-							v9.GuardiansTable.Pets[v86] = nil;
+			if ((v55 == (1 - 0)) or ((1264 - (35 + 1064)) >= (2541 + 951))) then
+				if (((8448 - 4499) < (20 + 4836)) and (v56 == v14:GUID()) and (v59 == (197513 - (298 + 938)))) then
+					for v90, v91 in pairs(v11.GuardiansTable.Pets) do
+						if ((v91.name == "Wild Imp") or ((5535 - (233 + 1026)) < (4682 - (636 + 1030)))) then
+							v11.GuardiansTable.Pets[v90] = nil;
 						end
 					end
-					v9.GuardiansTable.ImpCount = 0 + 0;
+					v11.GuardiansTable.ImpCount = 0 + 0;
 				end
-				v22.UpdatePetTable();
+				v24.UpdatePetTable();
 				break;
 			end
 		end
 	end, "SPELL_CAST_SUCCESS");
-	v22.LastPI = 0 + 0;
-	v9:RegisterForCombatEvent(function(...)
-		DestGUID, _, _, _, SpellID = select(1 + 7, ...);
-		if (((4878 - (766 + 23)) == (20186 - 16097)) and (SpellID == (13758 - 3698)) and (DestGUID == v12:GUID())) then
-			v22.LastPI = GetTime();
+	v24.LastPI = 0 + 0;
+	v11:RegisterForCombatEvent(function(...)
+		local v60 = 0 + 0;
+		while true do
+			if (((317 + 4373) > (4346 - (55 + 166))) and (v60 == (0 + 0))) then
+				DestGUID, _, _, _, SpellID = select(1 + 7, ...);
+				if (((SpellID == (38419 - 28359)) and (DestGUID == v14:GUID())) or ((347 - (36 + 261)) >= (1566 - 670))) then
+					v24.LastPI = GetTime();
+				end
+				break;
+			end
 		end
 	end, "SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH");
-	v22.SoulShards = 0 - 0;
-	v22.UpdateSoulShards = function()
-		v22.SoulShards = v12:SoulShards();
+	v24.SoulShards = 1368 - (34 + 1334);
+	v24.UpdateSoulShards = function()
+		v24.SoulShards = v14:SoulShards();
 	end;
-	v9:RegisterForSelfCombatEvent(function(v57, v58, v57, v57, v57, v57, v57, v57, v57, v57, v57, v59)
-		if (((15130 - 10672) >= (2747 - (1036 + 37))) and (v59 == (74566 + 30608))) then
-			v9.GuardiansTable.ImpsSpawnedFromHoG = v9.GuardiansTable.ImpsSpawnedFromHoG + (((v22.SoulShards >= (5 - 2)) and (3 + 0)) or v22.SoulShards);
+	v11:RegisterForSelfCombatEvent(function(v62, v63, v62, v62, v62, v62, v62, v62, v62, v62, v62, v64)
+		if ((v64 == (40432 + 64742)) or ((1332 + 382) >= (4241 - (1035 + 248)))) then
+			v11.GuardiansTable.ImpsSpawnedFromHoG = v11.GuardiansTable.ImpsSpawnedFromHoG + (((v24.SoulShards >= (24 - (20 + 1))) and (2 + 1)) or v24.SoulShards);
 		end
 	end, "SPELL_CAST_SUCCESS");
 end;
-return v0["Epix_Warlock_Warlock.lua"]();
+return v1["Epix_Warlock_Warlock.lua"](...);
 
