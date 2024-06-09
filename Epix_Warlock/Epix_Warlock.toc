@@ -3,7 +3,7 @@
 ## Author: Epic
 
 ## DefaultState: Enabled
-## LoadOnDemand: 0
+## LoadOnDemand: 1
 ## Dependencies: EpicLib
 
 
