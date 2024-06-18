@@ -2,37 +2,45 @@ local v0 = ...;
 local v1 = {};
 local v2 = require;
 local function v3(v5, ...)
-	local v6 = v1[v5];
-	if (not v6 or ((3994 - (404 + 1335)) < (428 - (183 + 223)))) then
-		return v2(v5, v0, ...);
+	local v6 = 191 - (53 + 138);
+	local v7;
+	while true do
+		if ((v6 == (301 - (112 + 189))) or ((23897 - 18943) == (5135 - 2232))) then
+			v7 = v1[v5];
+			if (((745 + 2339) > (63 - 23)) and not v7) then
+				return v2(v5, v0, ...);
+			end
+			v6 = 1 + 0;
+		end
+		if (((5156 - (1344 + 400)) > (1224 - (255 + 150))) and (v6 == (1 + 0))) then
+			return v7(v0, ...);
+		end
 	end
-	return v6(v0, ...);
 end
 v1["Epix_Hunter_BeastMastery.lua"] = function(...)
-	local v7, v8 = ...;
-	local v9 = EpicDBC.DBC;
-	local v10 = EpicLib;
-	local v11 = EpicCache;
-	local v12 = v10.Unit;
-	local v13 = v12.Player;
-	local v14 = v12.Target;
-	local v15 = v12.Focus;
-	local v16 = v12.MouseOver;
-	local v17 = v12.Pet;
-	local v18 = v10.Spell;
-	local v19 = v10.Item;
-	local v20 = v10.Action;
-	local v21 = v10.Bind;
-	local v22 = v10.Macro;
-	local v23 = v10.AoEON;
-	local v24 = v10.CDsON;
-	local v25 = v10.Cast;
-	local v26 = v10.Press;
-	local v27 = false;
+	local v8, v9 = ...;
+	local v10 = EpicDBC.DBC;
+	local v11 = EpicLib;
+	local v12 = EpicCache;
+	local v13 = v11.Unit;
+	local v14 = v13.Player;
+	local v15 = v13.Target;
+	local v16 = v13.Focus;
+	local v17 = v13.MouseOver;
+	local v18 = v13.Pet;
+	local v19 = v11.Spell;
+	local v20 = v11.Item;
+	local v21 = v11.Action;
+	local v22 = v11.Bind;
+	local v23 = v11.Macro;
+	local v24 = v11.AoEON;
+	local v25 = v11.CDsON;
+	local v26 = v11.Cast;
+	local v27 = v11.Press;
 	local v28 = false;
 	local v29 = false;
-	local v30 = math.max;
-	local v31;
+	local v30 = false;
+	local v31 = math.max;
 	local v32;
 	local v33;
 	local v34;
@@ -51,760 +59,711 @@ v1["Epix_Hunter_BeastMastery.lua"] = function(...)
 	local v47;
 	local v48;
 	local v49;
-	local function v50()
-		v31 = EpicSettings.Settings['UseRacials'];
-		v33 = EpicSettings.Settings['UseHealingPotion'];
-		v34 = EpicSettings.Settings['HealingPotionName'] or (0 - 0);
-		v35 = EpicSettings.Settings['HealingPotionHP'] or (0 + 0);
-		v36 = EpicSettings.Settings['UseHealthstone'];
-		v37 = EpicSettings.Settings['HealthstoneHP'] or (0 + 0);
-		v38 = EpicSettings.Settings['InterruptWithStun'] or (337 - (10 + 327));
-		v39 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (0 + 0);
-		v40 = EpicSettings.Settings['InterruptThreshold'] or (338 - (118 + 220));
-		v41 = EpicSettings.Settings['UsePet'];
-		v42 = EpicSettings.Settings['SummonPetSlot'] or (0 + 0);
-		v43 = EpicSettings.Settings['UseSteelTrap'];
-		v44 = EpicSettings.Settings['UseRevive'];
-		v45 = EpicSettings.Settings['UseMendPet'];
-		v46 = EpicSettings.Settings['MendPetHP'] or (449 - (108 + 341));
-		v47 = EpicSettings.Settings['UseExhilaration'];
-		v48 = EpicSettings.Settings['ExhilarationHP'] or (0 + 0);
-		v49 = EpicSettings.Settings['UseTranq'];
-	end
-	local v51 = v10.Commons.Everyone;
-	local v52 = v10.Commons.Hunter;
-	local v53 = v18.Hunter.BeastMastery;
-	local v54 = {v53.SummonPet,v53.SummonPet2,v53.SummonPet3,v53.SummonPet4,v53.SummonPet5};
-	local v55 = v19.Hunter.BeastMastery;
-	local v56 = {};
-	local v57 = v22.Hunter.BeastMastery;
-	local v58 = v13:GetEquipment();
-	v10:RegisterForEvent(function()
-		v58 = v13:GetEquipment();
-	end, "PLAYER_EQUIPMENT_CHANGED");
-	local v59;
-	local v60 = 12930 - (580 + 1239);
-	local v61 = 33030 - 21919;
-	local v62 = true;
-	local v63 = false;
-	local v64 = false;
-	local v65 = 0 + 0;
-	local v66 = not Trinket2:HasCooldown() or (Trinket1:HasUseBuff() and (not Trinket2:HasUseBuff() or ((not Trinket1:ID() == v55.MirrorofFracturedTomorrows:ID()) and ((Trinket2:ID() == v55.MirrorofFracturedTomorrows:ID()) or (Trinket2:Cooldown() < Trinket1:Cooldown()) or (Trinket2:CastTime() < Trinket1:CastTime()) or ((Trinket2:CastTime() == Trinket1:CastTime()) and (Trinket2:Cooldown() == Trinket1:Cooldown())))))) or (not Trinket1:HasUseBuff() and not Trinket2:HasUseBuff() and ((Trinket2:Cooldown() < Trinket1:Cooldown()) or (Trinket2:CastTime() < Trinket1:CastTime()) or ((Trinket2:CastTime() == Trinket1:CastTime()) and (Trinket2:Cooldown() == Trinket1:Cooldown()))));
-	local v67 = not v66;
-	v10:RegisterForEvent(function()
-		local v103 = 0 + 0;
+	local v50;
+	local function v51()
+		local v93 = 0 + 0;
 		while true do
-			if ((v103 == (0 + 0)) or ((2835 - 1749) >= (873 + 532))) then
-				v60 = 12278 - (645 + 522);
-				v61 = 12901 - (1010 + 780);
+			if (((13509 - 10347) <= (11114 - 7673)) and (v93 == (1739 - (404 + 1335)))) then
+				v32 = EpicSettings.Settings['UseRacials'];
+				v34 = EpicSettings.Settings['UseHealingPotion'];
+				v35 = EpicSettings.Settings['HealingPotionName'] or (406 - (183 + 223));
+				v93 = 1 - 0;
+			end
+			if (((3119 + 1587) > (1594 + 2835)) and (v93 == (340 - (10 + 327)))) then
+				v42 = EpicSettings.Settings['UsePet'];
+				v43 = EpicSettings.Settings['SummonPetSlot'] or (0 + 0);
+				v44 = EpicSettings.Settings['UseSteelTrap'];
+				v93 = 342 - (118 + 220);
+			end
+			if (((952 + 1902) < (4544 - (108 + 341))) and (v93 == (3 + 2))) then
+				v48 = EpicSettings.Settings['UseExhilaration'];
+				v49 = EpicSettings.Settings['ExhilarationHP'] or (0 - 0);
+				v50 = EpicSettings.Settings['UseTranq'];
 				break;
 			end
+			if ((v93 == (1497 - (711 + 782))) or ((2028 - 970) >= (1671 - (270 + 199)))) then
+				v45 = EpicSettings.Settings['UseRevive'];
+				v46 = EpicSettings.Settings['UseMendPet'];
+				v47 = EpicSettings.Settings['MendPetHP'] or (0 + 0);
+				v93 = 1824 - (580 + 1239);
+			end
+			if (((11031 - 7320) > (3208 + 147)) and (v93 == (1 + 0))) then
+				v36 = EpicSettings.Settings['HealingPotionHP'] or (0 + 0);
+				v37 = EpicSettings.Settings['UseHealthstone'];
+				v38 = EpicSettings.Settings['HealthstoneHP'] or (0 - 0);
+				v93 = 2 + 0;
+			end
+			if ((v93 == (1169 - (645 + 522))) or ((2696 - (1010 + 780)) >= (2228 + 1))) then
+				v39 = EpicSettings.Settings['InterruptWithStun'] or (0 - 0);
+				v40 = EpicSettings.Settings['InterruptOnlyWhitelist'] or (0 - 0);
+				v41 = EpicSettings.Settings['InterruptThreshold'] or (1836 - (1045 + 791));
+				v93 = 7 - 4;
+			end
 		end
-	end, "PLAYER_REGEN_ENABLED");
-	v10:RegisterForEvent(function()
-		Equip = v13:GetEquipment();
-		Trinket1 = (Equip[13 + 0] and v19(Equip[61 - 48])) or v19(0 - 0);
-		Trinket2 = (Equip[1850 - (1045 + 791)] and v19(Equip[34 - 20])) or v19(0 - 0);
-		v66 = not Trinket2:HasCooldown() or (Trinket1:HasUseBuff() and (not Trinket2:HasUseBuff() or ((not Trinket1:ID() == v55.MirrorofFracturedTomorrows:ID()) and ((Trinket2:ID() == v55.MirrorofFracturedTomorrows:ID()) or (Trinket2:Cooldown() < Trinket1:Cooldown()) or (Trinket2:CastTime() < Trinket1:CastTime()) or ((Trinket2:CastTime() == Trinket1:CastTime()) and (Trinket2:Cooldown() == Trinket1:Cooldown())))))) or (not Trinket1:HasUseBuff() and not Trinket2:HasUseBuff() and ((Trinket2:Cooldown() < Trinket1:Cooldown()) or (Trinket2:CastTime() < Trinket1:CastTime()) or ((Trinket2:CastTime() == Trinket1:CastTime()) and (Trinket2:Cooldown() == Trinket1:Cooldown()))));
-		v67 = not v66;
+	end
+	local v52 = v11.Commons.Everyone;
+	local v53 = v11.Commons.Hunter;
+	local v54 = v19.Hunter.BeastMastery;
+	local v55 = {v54.SummonPet,v54.SummonPet2,v54.SummonPet3,v54.SummonPet4,v54.SummonPet5};
+	local v56 = v20.Hunter.BeastMastery;
+	local v57 = {};
+	local v58 = v23.Hunter.BeastMastery;
+	local v59 = v14:GetEquipment();
+	v11:RegisterForEvent(function()
+		v59 = v14:GetEquipment();
 	end, "PLAYER_EQUIPMENT_CHANGED");
-	local v68, v69, v70;
-	local v71, v72;
-	local v73;
-	local v74 = {{v53.Intimidation,"Cast Intimidation (Interrupt)",function()
+	local v60;
+	local v61 = 12670 - (1381 + 178);
+	local v62 = 10422 + 689;
+	local v63 = true;
+	local v64 = false;
+	local v65 = false;
+	local v66 = 0 + 0;
+	v11:RegisterForEvent(function()
+		v61 = 4740 + 6371;
+		v62 = 38304 - 27193;
+	end, "PLAYER_REGEN_ENABLED");
+	local v67, v68, v69;
+	local v70, v71;
+	local v72;
+	local v73 = {{v54.Intimidation,"Cast Intimidation (Interrupt)",function()
 		return true;
 	end}};
-	local function v75(v104)
-		return (v104:DebuffRemains(v53.BarbedShotDebuff));
+	local function v74(v94)
+		return (v94:DebuffRemains(v54.BarbedShotDebuff));
 	end
-	local function v76(v105)
-		return (v105:DebuffStack(v53.LatentPoisonDebuff));
+	local function v75(v95)
+		return (v95:DebuffStack(v54.LatentPoisonDebuff));
 	end
-	local function v77(v106)
-		return (v106:DebuffRemains(v53.SerpentStingDebuff));
+	local function v76(v96)
+		return (v96:DebuffRemains(v54.SerpentStingDebuff));
 	end
-	local function v78(v107)
-		return (v107:DebuffStack(v53.LatentPoisonDebuff) > (1568 - (1381 + 178))) and ((v17:BuffUp(v53.FrenzyPetBuff) and (v17:BuffRemains(v53.FrenzyPetBuff) <= (v59 + 0.25 + 0))) or (v53.ScentofBlood:IsAvailable() and (v53.BestialWrath:CooldownRemains() < (10 + 2 + v59))) or ((v17:BuffStack(v53.FrenzyPetBuff) < (2 + 1)) and (v53.BestialWrath:CooldownUp() or v53.CalloftheWild:CooldownUp())) or ((v53.BarbedShot:FullRechargeTime() < v59) and v53.BestialWrath:CooldownDown()));
+	local function v77(v97)
+		return (v97:DebuffStack(v54.LatentPoisonDebuff) > (14 - 5)) and ((v18:BuffUp(v54.FrenzyPetBuff) and (v18:BuffRemains(v54.FrenzyPetBuff) <= (v60 + (1156.25 - (1074 + 82))))) or (v54.ScentofBlood:IsAvailable() and (v54.BestialWrath:CooldownRemains() < ((25 - 13) + v60))) or ((v18:BuffStack(v54.FrenzyPetBuff) < (1787 - (214 + 1570))) and (v54.BestialWrath:CooldownUp() or v54.CalloftheWild:CooldownUp())) or ((v54.BarbedShot:FullRechargeTime() < v60) and v54.BestialWrath:CooldownDown()));
 	end
-	local function v79(v108)
-		return (v17:BuffUp(v53.FrenzyPetBuff) and (v17:BuffRemains(v53.FrenzyPetBuff) <= (v59 + (0.25 - 0)))) or (v53.ScentofBlood:IsAvailable() and (v53.BestialWrath:CooldownRemains() < (7 + 5 + v59))) or ((v17:BuffStack(v53.FrenzyPetBuff) < (473 - (381 + 89))) and (v53.BestialWrath:CooldownUp() or v53.CalloftheWild:CooldownUp())) or ((v53.BarbedShot:FullRechargeTime() < v59) and v53.BestialWrath:CooldownDown());
+	local function v78(v98)
+		return (v18:BuffUp(v54.FrenzyPetBuff) and (v18:BuffRemains(v54.FrenzyPetBuff) <= (v60 + (1455.25 - (990 + 465))))) or (v54.ScentofBlood:IsAvailable() and (v54.BestialWrath:CooldownRemains() < (5 + 7 + v60))) or ((v18:BuffStack(v54.FrenzyPetBuff) < (2 + 1)) and (v54.BestialWrath:CooldownUp() or v54.CalloftheWild:CooldownUp())) or ((v54.BarbedShot:FullRechargeTime() < v60) and v54.BestialWrath:CooldownDown());
 	end
-	local function v80(v109)
-		return (v109:DebuffStack(v53.LatentPoisonDebuff) > (8 + 1)) and (v13:BuffUp(v53.CalloftheWildBuff) or (v61 < (7 + 2)) or (v53.WildCall:IsAvailable() and (v53.BarbedShot:ChargesFractional() > (1.2 - 0))) or v53.Savagery:IsAvailable());
+	local function v79(v99)
+		return (v99:DebuffStack(v54.LatentPoisonDebuff) > (9 + 0)) and (v14:BuffUp(v54.CalloftheWildBuff) or (v62 < (35 - 26)) or (v54.WildCall:IsAvailable() and (v54.BarbedShot:ChargesFractional() > (1727.2 - (1668 + 58)))) or v54.Savagery:IsAvailable());
 	end
-	local function v81(v110)
-		return v13:BuffUp(v53.CalloftheWildBuff) or (v61 < (1165 - (1074 + 82))) or (v53.WildCall:IsAvailable() and (v53.BarbedShot:ChargesFractional() > (1.2 - 0))) or v53.Savagery:IsAvailable();
+	local function v80(v100)
+		return v14:BuffUp(v54.CalloftheWildBuff) or (v62 < (635 - (512 + 114))) or (v54.WildCall:IsAvailable() and (v54.BarbedShot:ChargesFractional() > (2.2 - 1))) or v54.Savagery:IsAvailable();
 	end
-	local function v82(v111)
-		return v111:DebuffRefreshable(v53.SerpentStingDebuff) and (v111:TimeToDie() > v53.SerpentStingDebuff:BaseDuration());
+	local function v81(v101)
+		return v101:DebuffRefreshable(v54.SerpentStingDebuff) and (v101:TimeToDie() > v54.SerpentStingDebuff:BaseDuration());
 	end
-	local function v83(v112)
-		return (v17:BuffUp(v53.FrenzyPetBuff) and (v17:BuffRemains(v53.FrenzyPetBuff) <= (v59 + (1784.25 - (214 + 1570))))) or (v53.ScentofBlood:IsAvailable() and (v17:BuffStack(v53.FrenzyPetBuff) < (1458 - (990 + 465))) and (v53.BestialWrath:CooldownUp() or v53.CalloftheWild:CooldownUp()));
+	local function v82(v102)
+		return (v18:BuffUp(v54.FrenzyPetBuff) and (v18:BuffRemains(v54.FrenzyPetBuff) <= (v60 + (0.25 - 0)))) or (v54.ScentofBlood:IsAvailable() and (v18:BuffStack(v54.FrenzyPetBuff) < (10 - 7)) and (v54.BestialWrath:CooldownUp() or v54.CalloftheWild:CooldownUp()));
 	end
-	local function v84(v113)
-		return (v53.WildCall:IsAvailable() and (v53.BarbedShot:ChargesFractional() > (1.4 + 0))) or v13:BuffUp(v53.CalloftheWildBuff) or ((v53.BarbedShot:FullRechargeTime() < v59) and v53.BestialWrath:CooldownDown()) or (v53.ScentofBlood:IsAvailable() and (v53.BestialWrath:CooldownRemains() < (6 + 6 + v59))) or v53.Savagery:IsAvailable() or (v61 < (9 + 0));
+	local function v83(v103)
+		return (v54.WildCall:IsAvailable() and (v54.BarbedShot:ChargesFractional() > (1.4 + 0))) or v14:BuffUp(v54.CalloftheWildBuff) or ((v54.BarbedShot:FullRechargeTime() < v60) and v54.BestialWrath:CooldownDown()) or (v54.ScentofBlood:IsAvailable() and (v54.BestialWrath:CooldownRemains() < (3 + 9 + v60))) or v54.Savagery:IsAvailable() or (v62 < (8 + 1));
 	end
-	local function v85(v114)
-		return v114:DebuffRefreshable(v53.SerpentStingDebuff) and (v14:TimeToDie() > v53.SerpentStingDebuff:BaseDuration());
+	local function v84(v104)
+		return v104:DebuffRefreshable(v54.SerpentStingDebuff) and (v15:TimeToDie() > v54.SerpentStingDebuff:BaseDuration());
 	end
-	local function v86()
-		local v115 = 0 - 0;
+	local function v85()
+		local v105 = 0 - 0;
 		while true do
-			if ((v115 == (1728 - (1668 + 58))) or ((2995 - (512 + 114)) == (1110 - 684))) then
-				if ((v16:Exists() and v53.KillShot:IsCastable() and (v16:HealthPercentage() <= (41 - 21))) or ((10703 - 7627) > (1481 + 1702))) then
-					if (((226 + 976) > (920 + 138)) and v25(v57.KillShotMouseover, not v16:IsSpellInRange(v53.KillShot))) then
+			if (((3282 - (109 + 1885)) > (2720 - (1269 + 200))) and (v105 == (3 - 1))) then
+				if ((v17:Exists() and v54.KillShot:IsCastable() and (v17:HealthPercentage() <= (835 - (98 + 717)))) or ((5339 - (802 + 24)) < (5779 - 2427))) then
+					if (v26(v58.KillShotMouseover, not v17:IsSpellInRange(v54.KillShot)) or ((2608 - 543) >= (472 + 2724))) then
 						return "kill_shot_mouseover precombat 11";
 					end
 				end
-				if (((12516 - 8805) > (5349 - (109 + 1885))) and v53.KillCommand:IsReady()) then
-					if (v26(v57.KillCommandPetAttack) or ((2375 - (1269 + 200)) >= (4271 - 2042))) then
+				if (v54.KillCommand:IsReady() or ((3363 + 1013) <= (244 + 1237))) then
+					if (v27(v58.KillCommandPetAttack) or ((732 + 2660) >= (13189 - 8448))) then
 						return "kill_command precombat 12";
 					end
 				end
-				v115 = 818 - (98 + 717);
+				v105 = 9 - 6;
 			end
-			if (((2114 - (802 + 24)) > (2157 - 906)) and (v115 == (1 - 0))) then
-				if ((v53.BarbedShot:IsCastable() and (v53.BarbedShot:Charges() >= (1 + 1))) or ((3468 + 1045) < (551 + 2801))) then
-					if (v26(v57.BarbedShotPetAttack, not v14:IsSpellInRange(v53.BarbedShot)) or ((446 + 1619) >= (8891 - 5695))) then
-						return "barbed_shot precombat 8";
+			if (((1190 + 2135) >= (877 + 1277)) and (v105 == (0 + 0))) then
+				if ((v16:Exists() and v54.Misdirection:IsReady()) or ((942 + 353) >= (1510 + 1723))) then
+					if (((5810 - (797 + 636)) > (7972 - 6330)) and v27(v58.MisdirectionFocus)) then
+						return "misdirection precombat 0";
 					end
 				end
-				if (v53.KillShot:IsReady() or ((14592 - 10216) <= (530 + 951))) then
-					if (v26(v53.KillShot, not v14:IsSpellInRange(v53.KillShot)) or ((1381 + 2011) >= (3911 + 830))) then
-						return "kill_shot precombat 10";
+				if (((6342 - (1427 + 192)) > (470 + 886)) and v54.SteelTrap:IsCastable() and not v54.WailingArrow:IsAvailable() and v54.SteelTrap:IsAvailable() and v44) then
+					if (v27(v54.SteelTrap) or ((9602 - 5466) <= (3086 + 347))) then
+						return "steel_trap precombat 2";
 					end
 				end
-				v115 = 2 + 0;
+				v105 = 1 + 0;
 			end
-			if (((1553 + 1772) >= (3587 - (797 + 636))) and (v115 == (14 - 11))) then
-				if ((v70 > (1620 - (1427 + 192))) or ((449 + 846) >= (7505 - 4272))) then
-					if (((3935 + 442) > (745 + 897)) and v53.MultiShot:IsReady()) then
-						if (((5049 - (192 + 134)) > (2632 - (316 + 960))) and v25(v53.MultiShot, not v14:IsSpellInRange(v53.MultiShot))) then
+			if (((4571 - (192 + 134)) <= (5907 - (316 + 960))) and (v105 == (2 + 1))) then
+				if (((3300 + 976) >= (3618 + 296)) and (v69 > (3 - 2))) then
+					if (((749 - (83 + 468)) <= (6171 - (1202 + 604))) and v54.MultiShot:IsReady()) then
+						if (((22323 - 17541) > (7781 - 3105)) and v26(v54.MultiShot, not v15:IsSpellInRange(v54.MultiShot))) then
 							return "multishot precombat 14";
 						end
 					end
-				elseif (v53.CobraShot:IsReady() or ((2302 + 1834) <= (2650 + 783))) then
-					if (((3924 + 321) <= (17704 - 13073)) and v25(v57.CobraShotPetAttack, not v14:IsSpellInRange(v53.CobraShot))) then
+				elseif (((13467 - 8603) > (2522 - (45 + 280))) and v54.CobraShot:IsReady()) then
+					if (v26(v58.CobraShotPetAttack, not v15:IsSpellInRange(v54.CobraShot)) or ((3572 + 128) == (2191 + 316))) then
 						return "cobra_shot precombat 16";
 					end
 				end
 				break;
 			end
-			if (((4827 - (83 + 468)) >= (5720 - (1202 + 604))) and (v115 == (0 - 0))) then
-				if (((329 - 131) <= (12085 - 7720)) and v15:Exists() and v53.Misdirection:IsReady()) then
-					if (((5107 - (45 + 280)) > (4514 + 162)) and v26(v57.MisdirectionFocus)) then
-						return "misdirection precombat 0";
+			if (((1634 + 2840) >= (152 + 122)) and (v105 == (1 + 0))) then
+				if ((v54.BarbedShot:IsCastable() and (v54.BarbedShot:Charges() >= (3 - 1))) or ((3805 - (340 + 1571)) <= (555 + 851))) then
+					if (((3344 - (1733 + 39)) >= (4206 - 2675)) and v27(v58.BarbedShotPetAttack, not v15:IsSpellInRange(v54.BarbedShot))) then
+						return "barbed_shot precombat 8";
 					end
 				end
-				if (((4250 + 614) > (803 + 1394)) and v53.SteelTrap:IsCastable() and not v53.WailingArrow:IsAvailable() and v53.SteelTrap:IsAvailable() and v43) then
-					if (v26(v53.SteelTrap) or ((2048 + 1652) == (441 + 2066))) then
-						return "steel_trap precombat 2";
+				if (v54.KillShot:IsReady() or ((5721 - (125 + 909)) < (6490 - (1096 + 852)))) then
+					if (((1477 + 1814) > (2380 - 713)) and v27(v54.KillShot, not v15:IsSpellInRange(v54.KillShot))) then
+						return "kill_shot precombat 10";
 					end
 				end
-				v115 = 1 - 0;
+				v105 = 2 + 0;
+			end
+		end
+	end
+	local function v86()
+		local v106 = 512 - (409 + 103);
+		while true do
+			if ((v106 == (236 - (46 + 190))) or ((968 - (51 + 44)) == (574 + 1460))) then
+				if ((v54.Berserking:IsCastable() and (v14:BuffUp(v54.CalloftheWildBuff) or (not v54.CalloftheWild:IsAvailable() and v14:BuffUp(v54.BestialWrathBuff)) or (v62 < (1330 - (1114 + 203))))) or ((3542 - (228 + 498)) < (3 + 8))) then
+					if (((2044 + 1655) < (5369 - (174 + 489))) and v27(v54.Berserking)) then
+						return "berserking cds 2";
+					end
+				end
+				if (((6893 - 4247) >= (2781 - (830 + 1075))) and v54.BloodFury:IsCastable() and (v14:BuffUp(v54.CalloftheWildBuff) or (not v54.CalloftheWild:IsAvailable() and v14:BuffUp(v54.BestialWrathBuff)) or (v62 < (540 - (303 + 221))))) then
+					if (((1883 - (231 + 1038)) <= (2654 + 530)) and v27(v54.BloodFury)) then
+						return "blood_fury cds 8";
+					end
+				end
+				v106 = 1163 - (171 + 991);
+			end
+			if (((12882 - 9756) == (8393 - 5267)) and (v106 == (2 - 1))) then
+				if ((v54.AncestralCall:IsCastable() and (v14:BuffUp(v54.CalloftheWildBuff) or (not v54.CalloftheWild:IsAvailable() and v14:BuffUp(v54.BestialWrathBuff)) or (v62 < (13 + 3)))) or ((7666 - 5479) >= (14291 - 9337))) then
+					if (v27(v54.AncestralCall) or ((6248 - 2371) == (11051 - 7476))) then
+						return "ancestral_call cds 10";
+					end
+				end
+				if (((1955 - (111 + 1137)) > (790 - (91 + 67))) and v54.Fireblood:IsCastable() and (v14:BuffUp(v54.CalloftheWildBuff) or (not v54.CalloftheWild:IsAvailable() and v14:BuffUp(v54.BestialWrathBuff)) or (v62 < (26 - 17)))) then
+					if (v27(v54.Fireblood) or ((137 + 409) >= (3207 - (423 + 100)))) then
+						return "fireblood cds 12";
+					end
+				end
+				break;
 			end
 		end
 	end
 	local function v87()
-		if (((6385 - (340 + 1571)) >= (109 + 165)) and v53.Berserking:IsCastable() and (v13:BuffUp(v53.CalloftheWildBuff) or (not v53.CalloftheWild:IsAvailable() and v13:BuffUp(v53.BestialWrathBuff)) or (v61 < (1785 - (1733 + 39))))) then
-			if (v26(v53.Berserking) or ((5204 - 3310) <= (2440 - (125 + 909)))) then
-				return "berserking cds 2";
+		local v107 = 0 + 0;
+		local v108;
+		while true do
+			if (((4056 - 2591) <= (2242 + 2059)) and (v107 == (772 - (326 + 445)))) then
+				v108 = v52.HandleBottomTrinket(v57, v30, 174 - 134, nil);
+				if (((3796 - 2092) > (3325 - 1900)) and v108) then
+					return v108;
+				end
+				break;
 			end
-		end
-		if (((3520 - (1096 + 852)) >= (687 + 844)) and v53.BloodFury:IsCastable() and (v13:BuffUp(v53.CalloftheWildBuff) or (not v53.CalloftheWild:IsAvailable() and v13:BuffUp(v53.BestialWrathBuff)) or (v61 < (22 - 6)))) then
-			if (v26(v53.BloodFury) or ((4547 + 140) < (5054 - (409 + 103)))) then
-				return "blood_fury cds 8";
-			end
-		end
-		if (((3527 - (46 + 190)) > (1762 - (51 + 44))) and v53.AncestralCall:IsCastable() and (v13:BuffUp(v53.CalloftheWildBuff) or (not v53.CalloftheWild:IsAvailable() and v13:BuffUp(v53.BestialWrathBuff)) or (v61 < (5 + 11)))) then
-			if (v26(v53.AncestralCall) or ((2190 - (1114 + 203)) == (2760 - (228 + 498)))) then
-				return "ancestral_call cds 10";
-			end
-		end
-		if ((v53.Fireblood:IsCastable() and (v13:BuffUp(v53.CalloftheWildBuff) or (not v53.CalloftheWild:IsAvailable() and v13:BuffUp(v53.BestialWrathBuff)) or (v61 < (2 + 7)))) or ((1556 + 1260) < (674 - (174 + 489)))) then
-			if (((9636 - 5937) < (6611 - (830 + 1075))) and v26(v53.Fireblood)) then
-				return "fireblood cds 12";
+			if (((711 - (530 + 181)) == v107) or ((1568 - (614 + 267)) == (4266 - (19 + 13)))) then
+				v108 = v52.HandleTopTrinket(v57, v30, 65 - 25, nil);
+				if (v108 or ((7760 - 4430) < (4082 - 2653))) then
+					return v108;
+				end
+				v107 = 1 + 0;
 			end
 		end
 	end
 	local function v88()
-		local v116 = 524 - (303 + 221);
-		local v117;
-		while true do
-			if (((3915 - (231 + 1038)) >= (730 + 146)) and (v116 == (1162 - (171 + 991)))) then
-				v117 = v51.HandleTopTrinket(v56, v29, 164 - 124, nil);
-				if (((1648 - 1034) <= (7945 - 4761)) and v117) then
-					return v117;
-				end
-				v116 = 1 + 0;
+		if (((2017 - 870) >= (694 - 359)) and v54.BarbedShot:IsCastable()) then
+			if (((5247 - (1293 + 519)) > (4277 - 2180)) and v52.CastTargetIf(v54.BarbedShot, v67, "max", v75, v77, not v15:IsSpellInRange(v54.BarbedShot))) then
+				return "barbed_shot cleave 2";
 			end
-			if (((10957 - 7831) == (9017 - 5891)) and (v116 == (1 - 0))) then
-				v117 = v51.HandleBottomTrinket(v56, v29, 123 - 83, nil);
-				if (v117 or ((3435 - (111 + 1137)) >= (5112 - (91 + 67)))) then
-					return v117;
-				end
-				break;
+		end
+		if (v54.BarbedShot:IsCastable() or ((9843 - 6073) >= (7727 - 3686))) then
+			if (v52.CastTargetIf(v54.BarbedShot, v67, "min", v74, v78, not v15:IsSpellInRange(v54.BarbedShot)) or ((16347 - 12556) <= (3794 - 2183))) then
+				return "barbed_shot cleave 4";
+			end
+		end
+		if ((v54.MultiShot:IsReady() and (v18:BuffRemains(v54.BeastCleavePetBuff) < (0.5 + 0 + v60)) and (not v54.BloodyFrenzy:IsAvailable() or v54.CalloftheWild:CooldownDown())) or ((934 + 3644) <= (4665 - 2657))) then
+			if (((260 + 865) <= (690 + 1386)) and v26(v54.MultiShot, nil, nil, not v15:IsSpellInRange(v54.MultiShot))) then
+				return "multishot cleave 6";
+			end
+		end
+		if (v54.BestialWrath:IsCastable() or ((465 + 278) >= (5495 - (709 + 387)))) then
+			if (((3013 - (673 + 1185)) < (4851 - 3178)) and v27(v54.BestialWrath)) then
+				return "bestial_wrath cleave 8";
+			end
+		end
+		if ((v54.CalloftheWild:IsCastable() and v30) or ((7462 - 5138) <= (950 - 372))) then
+			if (((2695 + 1072) == (2815 + 952)) and v26(v54.CalloftheWild)) then
+				return "call_of_the_wild cleave 10";
+			end
+		end
+		if (((5520 - 1431) == (1005 + 3084)) and v54.KillCommand:IsReady() and (v54.KillCleave:IsAvailable())) then
+			if (((8888 - 4430) >= (3285 - 1611)) and v26(v54.KillCommand, nil, nil, not v15:IsInRange(1930 - (446 + 1434)))) then
+				return "kill_command cleave 12";
+			end
+		end
+		if (((2255 - (1040 + 243)) <= (4232 - 2814)) and v54.ExplosiveShot:IsReady()) then
+			if (v26(v54.ExplosiveShot, not v15:IsSpellInRange(v54.ExplosiveShot)) or ((6785 - (559 + 1288)) < (6693 - (609 + 1322)))) then
+				return "explosive_shot cleave 12";
+			end
+		end
+		if ((v54.Stampede:IsCastable() and v30) or ((2958 - (13 + 441)) > (15933 - 11669))) then
+			if (((5639 - 3486) == (10722 - 8569)) and v26(v54.Stampede, not v15:IsSpellInRange(v54.Stampede))) then
+				return "stampede cleave 14";
+			end
+		end
+		if (v54.Bloodshed:IsCastable() or ((19 + 488) >= (9409 - 6818))) then
+			if (((1592 + 2889) == (1964 + 2517)) and v26(v54.Bloodshed, not v15:IsSpellInRange(v54.Bloodshed))) then
+				return "bloodshed cleave 16";
+			end
+		end
+		if ((v54.DeathChakram:IsCastable() and v30) or ((6908 - 4580) < (380 + 313))) then
+			if (((7959 - 3631) == (2862 + 1466)) and v26(v54.DeathChakram, not v15:IsSpellInRange(v54.DeathChakram))) then
+				return "death_chakram cleave 18";
+			end
+		end
+		if (((884 + 704) >= (958 + 374)) and v54.SteelTrap:IsCastable() and v44) then
+			if (v27(v58.SteelTrap) or ((3505 + 669) > (4157 + 91))) then
+				return "steel_trap cleave 22";
+			end
+		end
+		if ((v54.AMurderofCrows:IsReady() and v30) or ((5019 - (153 + 280)) <= (236 - 154))) then
+			if (((3469 + 394) == (1526 + 2337)) and v26(v54.AMurderofCrows, not v15:IsSpellInRange(v54.AMurderofCrows))) then
+				return "a_murder_of_crows cleave 24";
+			end
+		end
+		if (v54.BarbedShot:IsCastable() or ((148 + 134) <= (39 + 3))) then
+			if (((3340 + 1269) >= (1166 - 400)) and v52.CastTargetIf(v58.BarbedShotPetAttack, v67, "max", v75, v79, not v15:IsSpellInRange(v54.BarbedShot), nil, nil, v58.BarbedShotMouseover)) then
+				return "barbed_shot cleave 26";
+			end
+		end
+		if (v54.BarbedShot:IsCastable() or ((713 + 439) == (3155 - (89 + 578)))) then
+			if (((2445 + 977) > (6964 - 3614)) and v52.CastTargetIf(v58.BarbedShotPetAttack, v67, "min", v74, v80, not v15:IsSpellInRange(v54.BarbedShot), nil, nil, v58.BarbedShotMouseover)) then
+				return "barbed_shot cleave 28";
+			end
+		end
+		if (((1926 - (572 + 477)) > (51 + 325)) and v54.KillCommand:IsReady()) then
+			if (v26(v58.KillCommandPetAttack, not v15:IsSpellInRange(v54.KillCommand)) or ((1872 + 1246) <= (221 + 1630))) then
+				return "kill_command cleave 30";
+			end
+		end
+		if (v54.DireBeast:IsCastable() or ((251 - (84 + 2)) >= (5754 - 2262))) then
+			if (((2845 + 1104) < (5698 - (497 + 345))) and v26(v54.DireBeast, not v15:IsSpellInRange(v54.DireBeast))) then
+				return "dire_beast cleave 32";
+			end
+		end
+		if (v54.SerpentSting:IsReady() or ((110 + 4166) < (510 + 2506))) then
+			if (((6023 - (605 + 728)) > (2944 + 1181)) and v52.CastTargetIf(v54.SerpentSting, v67, "min", v76, v81, not v15:IsSpellInRange(v54.SerpentSting), nil, nil, v58.SerpentStingMouseover)) then
+				return "serpent_sting cleave 34";
+			end
+		end
+		if ((v54.Barrage:IsReady() and (v18:BuffRemains(v54.FrenzyPetBuff) > v54.Barrage:ExecuteTime())) or ((111 - 61) >= (42 + 854))) then
+			if (v26(v54.Barrage, not v15:IsSpellInRange(v54.Barrage)) or ((6337 - 4623) >= (2667 + 291))) then
+				return "barrage cleave 36";
+			end
+		end
+		if ((v54.MultiShot:IsReady() and (v18:BuffRemains(v54.BeastCleavePetBuff) < (v14:GCD() * (7 - 4)))) or ((1126 + 365) < (1133 - (457 + 32)))) then
+			if (((299 + 405) < (2389 - (832 + 570))) and v26(v54.MultiShot, not v15:IsSpellInRange(v54.MultiShot))) then
+				return "multishot cleave 38";
+			end
+		end
+		if (((3503 + 215) > (498 + 1408)) and v54.AspectoftheWild:IsCastable() and v30) then
+			if (v27(v54.AspectoftheWild) or ((3390 - 2432) > (1751 + 1884))) then
+				return "aspect_of_the_wild cleave 40";
+			end
+		end
+		if (((4297 - (588 + 208)) <= (12106 - 7614)) and v30 and v54.LightsJudgment:IsCastable() and (v14:BuffDown(v54.BestialWrathBuff) or (v15:TimeToDie() < (1805 - (884 + 916))))) then
+			if (v26(v54.LightsJudgment, nil, not v15:IsInRange(10 - 5)) or ((1996 + 1446) < (3201 - (232 + 421)))) then
+				return "lights_judgment cleave 40";
+			end
+		end
+		if (((4764 - (1569 + 320)) >= (360 + 1104)) and v54.KillShot:IsReady()) then
+			if (v26(v54.KillShot, not v15:IsSpellInRange(v54.KillShot)) or ((912 + 3885) >= (16488 - 11595))) then
+				return "kill_shot cleave 38";
+			end
+		end
+		if ((v17:Exists() and v54.KillShot:IsCastable() and (v17:HealthPercentage() <= (625 - (316 + 289)))) or ((1442 - 891) > (96 + 1972))) then
+			if (((3567 - (666 + 787)) > (1369 - (360 + 65))) and v26(v58.KillShotMouseover, not v17:IsSpellInRange(v54.KillShot))) then
+				return "kill_shot_mouseover cleave 39";
+			end
+		end
+		if ((v54.CobraShot:IsReady() and (v14:FocusTimeToMax() < (v60 * (2 + 0)))) or ((2516 - (79 + 175)) >= (4881 - 1785))) then
+			if (v26(v58.CobraShotPetAttack, not v15:IsSpellInRange(v54.CobraShot)) or ((1760 + 495) >= (10841 - 7304))) then
+				return "cobra_shot cleave 42";
+			end
+		end
+		if ((v54.WailingArrow:IsReady() and ((v18:BuffRemains(v54.FrenzyPetBuff) > v54.WailingArrow:ExecuteTime()) or (v62 < (9 - 4)))) or ((4736 - (503 + 396)) < (1487 - (92 + 89)))) then
+			if (((5722 - 2772) == (1513 + 1437)) and v26(v54.WailingArrow, not v15:IsSpellInRange(v54.WailingArrow))) then
+				return "wailing_arrow cleave 44";
+			end
+		end
+		if ((v54.BagofTricks:IsCastable() and v30 and (v14:BuffDown(v54.BestialWrathBuff) or (v62 < (3 + 2)))) or ((18495 - 13772) < (452 + 2846))) then
+			if (((2590 - 1454) >= (135 + 19)) and v27(v54.BagofTricks)) then
+				return "bag_of_tricks cleave 46";
+			end
+		end
+		if ((v54.ArcaneTorrent:IsCastable() and v30 and ((v14:Focus() + v14:FocusRegen() + 15 + 15) < v14:FocusMax())) or ((825 - 554) > (593 + 4155))) then
+			if (((7228 - 2488) >= (4396 - (485 + 759))) and v27(v54.ArcaneTorrent)) then
+				return "arcane_torrent cleave 48";
 			end
 		end
 	end
 	local function v89()
-		local v118 = 0 - 0;
+		local v109 = 0 - 0;
 		while true do
-			if ((v118 == (1 + 2)) or ((4400 - (423 + 100)) == (26 + 3549))) then
-				if (((1957 - 1250) > (330 + 302)) and v53.DeathChakram:IsCastable() and v29) then
-					if (v25(v53.DeathChakram, not v14:IsSpellInRange(v53.DeathChakram)) or ((1317 - (326 + 445)) >= (11712 - 9028))) then
-						return "death_chakram cleave 18";
+			if ((v109 == (1194 - (442 + 747))) or ((3713 - (832 + 303)) >= (4336 - (88 + 858)))) then
+				if (((13 + 28) <= (1375 + 286)) and v54.WailingArrow:IsReady() and ((v18:BuffRemains(v54.FrenzyPetBuff) > v54.WailingArrow:ExecuteTime()) or (v62 < (1 + 4)))) then
+					if (((1390 - (766 + 23)) < (17574 - 14014)) and v26(v54.WailingArrow, not v15:IsSpellInRange(v54.WailingArrow), true)) then
+						return "wailing_arrow st 36";
 					end
 				end
-				if (((3263 - 1798) <= (10039 - 5738)) and v53.SteelTrap:IsCastable() and v43) then
-					if (((2415 - (530 + 181)) > (2306 - (614 + 267))) and v26(v57.SteelTrap)) then
-						return "steel_trap cleave 22";
+				if (((320 - 85) < (1809 - 1122)) and v30) then
+					if (((15439 - 10890) > (2226 - (1036 + 37))) and v54.BagofTricks:IsCastable() and (v14:BuffDown(v54.BestialWrathBuff) or (v62 < (4 + 1)))) then
+						if (v27(v54.BagofTricks) or ((9101 - 4427) < (3676 + 996))) then
+							return "bag_of_tricks st 38";
+						end
 					end
-				end
-				if ((v53.AMurderofCrows:IsReady() and v29) or ((719 - (19 + 13)) == (6891 - 2657))) then
-					if (v25(v53.AMurderofCrows, not v14:IsSpellInRange(v53.AMurderofCrows)) or ((7760 - 4430) < (4082 - 2653))) then
-						return "a_murder_of_crows cleave 24";
+					if (((5148 - (641 + 839)) < (5474 - (910 + 3))) and v54.ArcanePulse:IsCastable() and (v14:BuffDown(v54.BestialWrathBuff) or (v62 < (12 - 7)))) then
+						if (v27(v54.ArcanePulse) or ((2139 - (1466 + 218)) == (1657 + 1948))) then
+							return "arcane_pulse st 40";
+						end
 					end
-				end
-				v118 = 2 + 2;
-			end
-			if (((2017 - 870) >= (694 - 359)) and ((1816 - (1293 + 519)) == v118)) then
-				if (((7008 - 3573) > (5474 - 3377)) and v53.BarbedShot:IsCastable()) then
-					if (v51.CastTargetIf(v57.BarbedShotPetAttack, v68, "max", v76, v80, not v14:IsSpellInRange(v53.BarbedShot), nil, nil, v57.BarbedShotMouseover) or ((7209 - 3439) >= (17425 - 13384))) then
-						return "barbed_shot cleave 26";
-					end
-				end
-				if (v53.BarbedShot:IsCastable() or ((8930 - 5139) <= (854 + 757))) then
-					if (v51.CastTargetIf(v57.BarbedShotPetAttack, v68, "min", v75, v81, not v14:IsSpellInRange(v53.BarbedShot), nil, nil, v57.BarbedShotMouseover) or ((934 + 3644) <= (4665 - 2657))) then
-						return "barbed_shot cleave 28";
-					end
-				end
-				if (((260 + 865) <= (690 + 1386)) and v53.KillCommand:IsReady()) then
-					if (v25(v57.KillCommandPetAttack, not v14:IsSpellInRange(v53.KillCommand)) or ((465 + 278) >= (5495 - (709 + 387)))) then
-						return "kill_command cleave 30";
-					end
-				end
-				v118 = 1863 - (673 + 1185);
-			end
-			if (((3349 - 2194) < (5372 - 3699)) and ((8 - 3) == v118)) then
-				if (v53.DireBeast:IsCastable() or ((1663 + 661) <= (432 + 146))) then
-					if (((5085 - 1318) == (926 + 2841)) and v25(v53.DireBeast, not v14:IsSpellInRange(v53.DireBeast))) then
-						return "dire_beast cleave 32";
-					end
-				end
-				if (((8152 - 4063) == (8026 - 3937)) and v53.SerpentSting:IsReady()) then
-					if (((6338 - (446 + 1434)) >= (2957 - (1040 + 243))) and v51.CastTargetIf(v53.SerpentSting, v68, "min", v77, v82, not v14:IsSpellInRange(v53.SerpentSting), nil, nil, v57.SerpentStingMouseover)) then
-						return "serpent_sting cleave 34";
-					end
-				end
-				if (((2901 - 1929) <= (3265 - (559 + 1288))) and v53.Barrage:IsReady() and (v17:BuffRemains(v53.FrenzyPetBuff) > v53.Barrage:ExecuteTime())) then
-					if (v25(v53.Barrage, not v14:IsSpellInRange(v53.Barrage)) or ((6869 - (609 + 1322)) < (5216 - (13 + 441)))) then
-						return "barrage cleave 36";
-					end
-				end
-				v118 = 22 - 16;
-			end
-			if ((v118 == (15 - 9)) or ((12471 - 9967) > (159 + 4105))) then
-				if (((7819 - 5666) == (765 + 1388)) and v53.MultiShot:IsReady() and (v17:BuffRemains(v53.BeastCleavePetBuff) < (v13:GCD() * (2 + 1)))) then
-					if (v25(v53.MultiShot, not v14:IsSpellInRange(v53.MultiShot)) or ((1504 - 997) >= (1418 + 1173))) then
-						return "multishot cleave 38";
-					end
-				end
-				if (((8241 - 3760) == (2963 + 1518)) and v53.AspectoftheWild:IsCastable() and v29) then
-					if (v26(v53.AspectoftheWild) or ((1295 + 1033) < (498 + 195))) then
-						return "aspect_of_the_wild cleave 40";
-					end
-				end
-				if (((3635 + 693) == (4235 + 93)) and v29 and v53.LightsJudgment:IsCastable() and (v13:BuffDown(v53.BestialWrathBuff) or (v14:TimeToDie() < (438 - (153 + 280))))) then
-					if (((4585 - 2997) >= (1196 + 136)) and v25(v53.LightsJudgment, nil, not v14:IsInRange(2 + 3))) then
-						return "lights_judgment cleave 40";
-					end
-				end
-				v118 = 4 + 3;
-			end
-			if ((v118 == (2 + 0)) or ((3025 + 1149) > (6468 - 2220))) then
-				if (v53.ExplosiveShot:IsReady() or ((2835 + 1751) <= (749 - (89 + 578)))) then
-					if (((2760 + 1103) == (8030 - 4167)) and v25(v53.ExplosiveShot, not v14:IsSpellInRange(v53.ExplosiveShot))) then
-						return "explosive_shot cleave 12";
-					end
-				end
-				if ((v53.Stampede:IsCastable() and v29) or ((1331 - (572 + 477)) <= (6 + 36))) then
-					if (((2766 + 1843) >= (92 + 674)) and v25(v53.Stampede, not v14:IsSpellInRange(v53.Stampede))) then
-						return "stampede cleave 14";
-					end
-				end
-				if (v53.Bloodshed:IsCastable() or ((1238 - (84 + 2)) == (4100 - 1612))) then
-					if (((2466 + 956) > (4192 - (497 + 345))) and v25(v53.Bloodshed, not v14:IsSpellInRange(v53.Bloodshed))) then
-						return "bloodshed cleave 16";
-					end
-				end
-				v118 = 1 + 2;
-			end
-			if (((149 + 728) > (1709 - (605 + 728))) and (v118 == (1 + 0))) then
-				if (v53.BestialWrath:IsCastable() or ((6932 - 3814) <= (85 + 1766))) then
-					if (v26(v53.BestialWrath) or ((609 - 444) >= (3149 + 343))) then
-						return "bestial_wrath cleave 8";
-					end
-				end
-				if (((10940 - 6991) < (3667 + 1189)) and v53.CalloftheWild:IsCastable() and v29) then
-					if (v25(v53.CalloftheWild) or ((4765 - (457 + 32)) < (1280 + 1736))) then
-						return "call_of_the_wild cleave 10";
-					end
-				end
-				if (((6092 - (832 + 570)) > (3887 + 238)) and v53.KillCommand:IsReady() and (v53.KillCleave:IsAvailable())) then
-					if (v25(v53.KillCommand, nil, nil, not v14:IsInRange(14 + 36)) or ((176 - 126) >= (432 + 464))) then
-						return "kill_command cleave 12";
-					end
-				end
-				v118 = 798 - (588 + 208);
-			end
-			if ((v118 == (21 - 13)) or ((3514 - (884 + 916)) >= (6192 - 3234))) then
-				if ((v53.WailingArrow:IsReady() and ((v17:BuffRemains(v53.FrenzyPetBuff) > v53.WailingArrow:ExecuteTime()) or (v61 < (3 + 2)))) or ((2144 - (232 + 421)) < (2533 - (1569 + 320)))) then
-					if (((173 + 531) < (188 + 799)) and v25(v53.WailingArrow, not v14:IsSpellInRange(v53.WailingArrow))) then
-						return "wailing_arrow cleave 44";
-					end
-				end
-				if (((12528 - 8810) > (2511 - (316 + 289))) and v53.BagofTricks:IsCastable() and v29 and (v13:BuffDown(v53.BestialWrathBuff) or (v61 < (13 - 8)))) then
-					if (v26(v53.BagofTricks) or ((45 + 913) > (5088 - (666 + 787)))) then
-						return "bag_of_tricks cleave 46";
-					end
-				end
-				if (((3926 - (360 + 65)) <= (4199 + 293)) and v53.ArcaneTorrent:IsCastable() and v29 and ((v13:Focus() + v13:FocusRegen() + (284 - (79 + 175))) < v13:FocusMax())) then
-					if (v26(v53.ArcaneTorrent) or ((5427 - 1985) < (1989 + 559))) then
-						return "arcane_torrent cleave 48";
+					if ((v54.ArcaneTorrent:IsCastable() and ((v14:Focus() + v14:FocusRegen() + (1163 - (556 + 592))) < v14:FocusMax())) or ((947 + 1716) == (4120 - (329 + 479)))) then
+						if (((5131 - (174 + 680)) <= (15376 - 10901)) and v27(v54.ArcaneTorrent)) then
+							return "arcane_torrent st 42";
+						end
 					end
 				end
 				break;
 			end
-			if (((8812 - 5937) >= (2819 - 1355)) and (v118 == (899 - (503 + 396)))) then
-				if (v53.BarbedShot:IsCastable() or ((4978 - (92 + 89)) >= (9491 - 4598))) then
-					if (v51.CastTargetIf(v53.BarbedShot, v68, "max", v76, v78, not v14:IsSpellInRange(v53.BarbedShot)) or ((283 + 268) > (1224 + 844))) then
-						return "barbed_shot cleave 2";
+			if ((v109 == (3 - 1)) or ((622 + 248) == (1928 - (396 + 343)))) then
+				if (((138 + 1415) <= (4610 - (29 + 1448))) and v54.KillCommand:IsReady()) then
+					if (v26(v58.KillCommandPetAttack, not v15:IsSpellInRange(v54.KillCommand)) or ((3626 - (135 + 1254)) >= (13226 - 9715))) then
+						return "kill_command st 22";
 					end
 				end
-				if (((8278 - 6164) > (130 + 814)) and v53.BarbedShot:IsCastable()) then
-					if (v51.CastTargetIf(v53.BarbedShot, v68, "min", v75, v79, not v14:IsSpellInRange(v53.BarbedShot)) or ((5157 - 2895) >= (2702 + 394))) then
-						return "barbed_shot cleave 4";
+				if ((v54.AMurderofCrows:IsCastable() and v30) or ((6181 - 4857) > (2013 + 1007))) then
+					if (v26(v54.AMurderofCrows, not v15:IsSpellInRange(v54.AMurderofCrows)) or ((4519 - (389 + 1138)) == (2455 - (102 + 472)))) then
+						return "a_murder_of_crows st 14";
 					end
 				end
-				if ((v53.MultiShot:IsReady() and (v17:BuffRemains(v53.BeastCleavePetBuff) < (0.5 + 0 + v59)) and (not v53.BloodyFrenzy:IsAvailable() or v53.CalloftheWild:CooldownDown())) or ((6867 - 4612) >= (442 + 3095))) then
-					if (v25(v53.MultiShot, nil, nil, not v14:IsSpellInRange(v53.MultiShot)) or ((5850 - 2013) < (2550 - (485 + 759)))) then
-						return "multishot cleave 6";
+				if (((2932 + 174) > (847 + 679)) and v54.SteelTrap:IsCastable() and v44) then
+					if (((2819 + 204) < (5415 - (320 + 1225))) and v27(v54.SteelTrap)) then
+						return "steel_trap st 16";
 					end
 				end
-				v118 = 2 - 1;
+				if (((254 - 111) > (46 + 28)) and v54.ExplosiveShot:IsReady()) then
+					if (((1482 - (157 + 1307)) < (3971 - (821 + 1038))) and v26(v54.ExplosiveShot, not v15:IsSpellInRange(v54.ExplosiveShot))) then
+						return "explosive_shot st 18";
+					end
+				end
+				v109 = 7 - 4;
 			end
-			if (((4139 - (442 + 747)) == (4085 - (832 + 303))) and (v118 == (953 - (88 + 858)))) then
-				if (v53.KillShot:IsReady() or ((1440 + 3283) < (2730 + 568))) then
-					if (((47 + 1089) >= (943 - (766 + 23))) and v25(v53.KillShot, not v14:IsSpellInRange(v53.KillShot))) then
-						return "kill_shot cleave 38";
+			if (((120 + 977) <= (2891 - 1263)) and (v109 == (2 + 1))) then
+				if (((11475 - 6845) == (5656 - (834 + 192))) and v54.BarbedShot:IsCastable()) then
+					if (((226 + 3314) > (689 + 1994)) and v52.CastTargetIf(v58.BarbedShotPetAttack, v67, "min", v74, v83, not v15:IsSpellInRange(v54.BarbedShot), nil, nil, v58.BarbedShotMouseover)) then
+						return "barbed_shot st 24";
 					end
 				end
-				if ((v16:Exists() and v53.KillShot:IsCastable() and (v16:HealthPercentage() <= (98 - 78))) or ((370 - 99) > (12509 - 7761))) then
-					if (((16087 - 11347) >= (4225 - (1036 + 37))) and v25(v57.KillShotMouseover, not v16:IsSpellInRange(v53.KillShot))) then
-						return "kill_shot_mouseover cleave 39";
+				if (((103 + 4691) >= (5073 - 1798)) and v54.BarbedShot:IsCastable() and v83(v15)) then
+					if (((1788 - (300 + 4)) == (397 + 1087)) and v26(v58.BarbedShotPetAttack, not v15:IsSpellInRange(v54.BarbedShot))) then
+						return "barbed_shot st mt_backup 25";
 					end
 				end
-				if ((v53.CobraShot:IsReady() and (v13:FocusTimeToMax() < (v59 * (2 + 0)))) or ((5020 - 2442) >= (2667 + 723))) then
-					if (((1521 - (641 + 839)) <= (2574 - (910 + 3))) and v25(v57.CobraShotPetAttack, not v14:IsSpellInRange(v53.CobraShot))) then
-						return "cobra_shot cleave 42";
+				if (((3748 - 2316) < (3917 - (112 + 250))) and v54.DireBeast:IsCastable()) then
+					if (v26(v54.DireBeast, not v15:IsSpellInRange(v54.DireBeast)) or ((425 + 640) > (8963 - 5385))) then
+						return "dire_beast st 26";
 					end
 				end
-				v118 = 20 - 12;
+				if (v54.SerpentSting:IsReady() or ((2747 + 2048) < (728 + 679))) then
+					if (((1386 + 467) < (2387 + 2426)) and v52.CastTargetIf(v54.SerpentSting, v67, "min", v76, v84, not v15:IsSpellInRange(v54.SerpentSting), nil, nil, v58.SerpentStingMouseover)) then
+						return "serpent_sting st 28";
+					end
+				end
+				v109 = 3 + 1;
+			end
+			if ((v109 == (1414 - (1001 + 413))) or ((6290 - 3469) < (3313 - (244 + 638)))) then
+				if (v54.BarbedShot:IsCastable() or ((3567 - (627 + 66)) < (6498 - 4317))) then
+					if (v52.CastTargetIf(v58.BarbedShotPetAttack, v67, "min", v74, v82, not v15:IsSpellInRange(v54.BarbedShot), nil, nil, v58.BarbedShotMouseover) or ((3291 - (512 + 90)) <= (2249 - (1665 + 241)))) then
+						return "barbed_shot st 2";
+					end
+				end
+				if ((v54.BarbedShot:IsCastable() and v82(v15)) or ((2586 - (373 + 344)) == (907 + 1102))) then
+					if (v26(v58.BarbedShotPetAttack, not v15:IsSpellInRange(v54.BarbedShot)) or ((939 + 2607) < (6124 - 3802))) then
+						return "barbed_shot st mt_backup 3";
+					end
+				end
+				if ((v54.CalloftheWild:IsCastable() and v30) or ((3522 - 1440) == (5872 - (35 + 1064)))) then
+					if (((2361 + 883) > (2257 - 1202)) and v27(v54.CalloftheWild)) then
+						return "call_of_the_wild st 6";
+					end
+				end
+				if ((v54.KillCommand:IsReady() and (v54.KillCommand:FullRechargeTime() < v60) and v54.AlphaPredator:IsAvailable()) or ((14 + 3299) <= (3014 - (298 + 938)))) then
+					if (v26(v58.KillCommandPetAttack, not v15:IsSpellInRange(v54.KillCommand)) or ((2680 - (233 + 1026)) >= (3770 - (636 + 1030)))) then
+						return "kill_command st 4";
+					end
+				end
+				v109 = 1 + 0;
+			end
+			if (((1770 + 42) <= (966 + 2283)) and (v109 == (1 + 0))) then
+				if (((1844 - (55 + 166)) <= (380 + 1577)) and v54.Stampede:IsCastable() and v30) then
+					if (((444 + 3968) == (16849 - 12437)) and v26(v54.Stampede, nil, nil, not v15:IsSpellInRange(v54.Stampede))) then
+						return "stampede st 8";
+					end
+				end
+				if (((2047 - (36 + 261)) >= (1472 - 630)) and v54.Bloodshed:IsCastable()) then
+					if (((5740 - (34 + 1334)) > (712 + 1138)) and v26(v54.Bloodshed, not v15:IsSpellInRange(v54.Bloodshed))) then
+						return "bloodshed st 10";
+					end
+				end
+				if (((181 + 51) < (2104 - (1035 + 248))) and v54.BestialWrath:IsCastable()) then
+					if (((539 - (20 + 1)) < (470 + 432)) and v27(v54.BestialWrath)) then
+						return "bestial_wrath st 12";
+					end
+				end
+				if (((3313 - (134 + 185)) > (1991 - (549 + 584))) and v54.DeathChakram:IsCastable() and v30) then
+					if (v26(v54.DeathChakram, nil, nil, not v15:IsSpellInRange(v54.DeathChakram)) or ((4440 - (314 + 371)) <= (3141 - 2226))) then
+						return "death_chakram st 14";
+					end
+				end
+				v109 = 970 - (478 + 490);
+			end
+			if (((2091 + 1855) > (4915 - (786 + 386))) and (v109 == (12 - 8))) then
+				if (v54.KillShot:IsReady() or ((2714 - (1055 + 324)) >= (4646 - (1093 + 247)))) then
+					if (((4305 + 539) > (237 + 2016)) and v26(v54.KillShot, not v15:IsSpellInRange(v54.KillShot))) then
+						return "kill_shot st 30";
+					end
+				end
+				if (((1794 - 1342) == (1533 - 1081)) and v17:Exists() and v54.KillShot:IsCastable() and (v17:HealthPercentage() <= (56 - 36))) then
+					if (v26(v58.KillShotMouseover, not v17:IsSpellInRange(v54.KillShot)) or ((11451 - 6894) < (743 + 1344))) then
+						return "kill_shot_mouseover st 31";
+					end
+				end
+				if (((14924 - 11050) == (13352 - 9478)) and v54.AspectoftheWild:IsCastable() and v30) then
+					if (v27(v54.AspectoftheWild) or ((1462 + 476) > (12620 - 7685))) then
+						return "aspect_of_the_wild st 32";
+					end
+				end
+				if (v54.CobraShot:IsReady() or ((4943 - (364 + 324)) < (9383 - 5960))) then
+					if (((3488 - 2034) <= (826 + 1665)) and v26(v58.CobraShotPetAttack, not v15:IsSpellInRange(v54.CobraShot))) then
+						return "cobra_shot st 34";
+					end
+				end
+				v109 = 20 - 15;
 			end
 		end
 	end
 	local function v90()
-		if (((2285 - (1466 + 218)) < (1637 + 1923)) and v53.BarbedShot:IsCastable()) then
-			if (((1383 - (556 + 592)) < (245 + 442)) and v51.CastTargetIf(v57.BarbedShotPetAttack, v68, "min", v75, v83, not v14:IsSpellInRange(v53.BarbedShot), nil, nil, v57.BarbedShotMouseover)) then
-				return "barbed_shot st 2";
+		if ((not v14:IsCasting() and not v14:IsChanneling()) or ((6656 - 2499) <= (8512 - 5709))) then
+			local v118 = v52.Interrupt(v54.CounterShot, 1308 - (1249 + 19), true);
+			if (((4381 + 472) >= (11607 - 8625)) and v118) then
+				return v118;
 			end
-		end
-		if (((5357 - (329 + 479)) > (2007 - (174 + 680))) and v53.BarbedShot:IsCastable() and v83(v14)) then
-			if (v25(v57.BarbedShotPetAttack, not v14:IsSpellInRange(v53.BarbedShot)) or ((16060 - 11386) < (9683 - 5011))) then
-				return "barbed_shot st mt_backup 3";
-			end
-		end
-		if (((2619 + 1049) < (5300 - (396 + 343))) and v53.CalloftheWild:IsCastable() and v29) then
-			if (v26(v53.CalloftheWild) or ((41 + 414) == (5082 - (29 + 1448)))) then
-				return "call_of_the_wild st 6";
-			end
-		end
-		if ((v53.KillCommand:IsReady() and (v53.KillCommand:FullRechargeTime() < v59) and v53.AlphaPredator:IsAvailable()) or ((4052 - (135 + 1254)) == (12476 - 9164))) then
-			if (((19969 - 15692) <= (2983 + 1492)) and v25(v57.KillCommandPetAttack, not v14:IsSpellInRange(v53.KillCommand))) then
-				return "kill_command st 4";
-			end
-		end
-		if ((v53.Stampede:IsCastable() and v29) or ((2397 - (389 + 1138)) == (1763 - (102 + 472)))) then
-			if (((1466 + 87) <= (1738 + 1395)) and v25(v53.Stampede, nil, nil, not v14:IsSpellInRange(v53.Stampede))) then
-				return "stampede st 8";
-			end
-		end
-		if (v53.Bloodshed:IsCastable() or ((2086 + 151) >= (5056 - (320 + 1225)))) then
-			if (v25(v53.Bloodshed, not v14:IsSpellInRange(v53.Bloodshed)) or ((2356 - 1032) > (1848 + 1172))) then
-				return "bloodshed st 10";
-			end
-		end
-		if (v53.BestialWrath:IsCastable() or ((4456 - (157 + 1307)) == (3740 - (821 + 1038)))) then
-			if (((7749 - 4643) > (167 + 1359)) and v26(v53.BestialWrath)) then
-				return "bestial_wrath st 12";
-			end
-		end
-		if (((5369 - 2346) < (1440 + 2430)) and v53.DeathChakram:IsCastable() and v29) then
-			if (((354 - 211) > (1100 - (834 + 192))) and v25(v53.DeathChakram, nil, nil, not v14:IsSpellInRange(v53.DeathChakram))) then
-				return "death_chakram st 14";
-			end
-		end
-		if (((2 + 16) < (543 + 1569)) and v53.KillCommand:IsReady()) then
-			if (((24 + 1073) <= (2521 - 893)) and v25(v57.KillCommandPetAttack, not v14:IsSpellInRange(v53.KillCommand))) then
-				return "kill_command st 22";
-			end
-		end
-		if (((4934 - (300 + 4)) == (1237 + 3393)) and v53.AMurderofCrows:IsCastable() and v29) then
-			if (((9266 - 5726) > (3045 - (112 + 250))) and v25(v53.AMurderofCrows, not v14:IsSpellInRange(v53.AMurderofCrows))) then
-				return "a_murder_of_crows st 14";
-			end
-		end
-		if (((1912 + 2882) >= (8204 - 4929)) and v53.SteelTrap:IsCastable() and v43) then
-			if (((851 + 633) == (768 + 716)) and v26(v53.SteelTrap)) then
-				return "steel_trap st 16";
-			end
-		end
-		if (((1071 + 361) < (1763 + 1792)) and v53.ExplosiveShot:IsReady()) then
-			if (v25(v53.ExplosiveShot, not v14:IsSpellInRange(v53.ExplosiveShot)) or ((792 + 273) > (4992 - (1001 + 413)))) then
-				return "explosive_shot st 18";
-			end
-		end
-		if (v53.BarbedShot:IsCastable() or ((10692 - 5897) < (2289 - (244 + 638)))) then
-			if (((2546 - (627 + 66)) < (14340 - 9527)) and v51.CastTargetIf(v57.BarbedShotPetAttack, v68, "min", v75, v84, not v14:IsSpellInRange(v53.BarbedShot), nil, nil, v57.BarbedShotMouseover)) then
-				return "barbed_shot st 24";
-			end
-		end
-		if ((v53.BarbedShot:IsCastable() and v84(v14)) or ((3423 - (512 + 90)) < (4337 - (1665 + 241)))) then
-			if (v25(v57.BarbedShotPetAttack, not v14:IsSpellInRange(v53.BarbedShot)) or ((3591 - (373 + 344)) < (984 + 1197))) then
-				return "barbed_shot st mt_backup 25";
-			end
-		end
-		if (v53.DireBeast:IsCastable() or ((712 + 1977) <= (904 - 561))) then
-			if (v25(v53.DireBeast, not v14:IsSpellInRange(v53.DireBeast)) or ((3162 - 1293) == (3108 - (35 + 1064)))) then
-				return "dire_beast st 26";
-			end
-		end
-		if (v53.SerpentSting:IsReady() or ((2581 + 965) < (4967 - 2645))) then
-			if (v51.CastTargetIf(v53.SerpentSting, v68, "min", v77, v85, not v14:IsSpellInRange(v53.SerpentSting), nil, nil, v57.SerpentStingMouseover) or ((9 + 2073) == (6009 - (298 + 938)))) then
-				return "serpent_sting st 28";
-			end
-		end
-		if (((4503 - (233 + 1026)) > (2721 - (636 + 1030))) and v53.KillShot:IsReady()) then
-			if (v25(v53.KillShot, not v14:IsSpellInRange(v53.KillShot)) or ((1694 + 1619) <= (1737 + 41))) then
-				return "kill_shot st 30";
-			end
-		end
-		if ((v16:Exists() and v53.KillShot:IsCastable() and (v16:HealthPercentage() <= (6 + 14))) or ((97 + 1324) >= (2325 - (55 + 166)))) then
-			if (((352 + 1460) <= (327 + 2922)) and v25(v57.KillShotMouseover, not v16:IsSpellInRange(v53.KillShot))) then
-				return "kill_shot_mouseover st 31";
-			end
-		end
-		if (((6198 - 4575) <= (2254 - (36 + 261))) and v53.AspectoftheWild:IsCastable() and v29) then
-			if (((7715 - 3303) == (5780 - (34 + 1334))) and v26(v53.AspectoftheWild)) then
-				return "aspect_of_the_wild st 32";
-			end
-		end
-		if (((673 + 1077) >= (655 + 187)) and v53.CobraShot:IsReady()) then
-			if (((5655 - (1035 + 248)) > (1871 - (20 + 1))) and v25(v57.CobraShotPetAttack, not v14:IsSpellInRange(v53.CobraShot))) then
-				return "cobra_shot st 34";
-			end
-		end
-		if (((121 + 111) < (1140 - (134 + 185))) and v53.WailingArrow:IsReady() and ((v17:BuffRemains(v53.FrenzyPetBuff) > v53.WailingArrow:ExecuteTime()) or (v61 < (1138 - (549 + 584))))) then
-			if (((1203 - (314 + 371)) < (3096 - 2194)) and v25(v53.WailingArrow, not v14:IsSpellInRange(v53.WailingArrow), true)) then
-				return "wailing_arrow st 36";
-			end
-		end
-		if (((3962 - (478 + 490)) > (455 + 403)) and v29) then
-			local v123 = 1172 - (786 + 386);
-			while true do
-				if ((v123 == (3 - 2)) or ((5134 - (1055 + 324)) <= (2255 - (1093 + 247)))) then
-					if (((3507 + 439) > (394 + 3349)) and v53.ArcaneTorrent:IsCastable() and ((v13:Focus() + v13:FocusRegen() + (59 - 44)) < v13:FocusMax())) then
-						if (v26(v53.ArcaneTorrent) or ((4530 - 3195) >= (9407 - 6101))) then
-							return "arcane_torrent st 42";
-						end
-					end
-					break;
-				end
-				if (((12172 - 7328) > (802 + 1451)) and (v123 == (0 - 0))) then
-					if (((1557 - 1105) == (341 + 111)) and v53.BagofTricks:IsCastable() and (v13:BuffDown(v53.BestialWrathBuff) or (v61 < (12 - 7)))) then
-						if (v26(v53.BagofTricks) or ((5245 - (364 + 324)) < (5721 - 3634))) then
-							return "bag_of_tricks st 38";
-						end
-					end
-					if (((9296 - 5422) == (1284 + 2590)) and v53.ArcanePulse:IsCastable() and (v13:BuffDown(v53.BestialWrathBuff) or (v61 < (20 - 15)))) then
-						if (v26(v53.ArcanePulse) or ((3103 - 1165) > (14988 - 10053))) then
-							return "arcane_pulse st 40";
-						end
-					end
-					v123 = 1269 - (1249 + 19);
-				end
+			v118 = v52.InterruptWithStun(v54.Intimidation, 1126 - (686 + 400));
+			if (((3244 + 890) > (3586 - (73 + 156))) and v118) then
+				return v118;
 			end
 		end
 	end
 	local function v91()
-		if ((not v13:IsCasting() and not v13:IsChanneling()) or ((3841 + 414) < (13324 - 9901))) then
-			local v124 = 1086 - (686 + 400);
-			local v125;
+		v51();
+		v28 = EpicSettings.Toggles['ooc'];
+		v29 = EpicSettings.Toggles['aoe'];
+		v30 = EpicSettings.Toggles['cds'];
+		if (v54.Stomp:IsAvailable() or ((17 + 3400) < (3345 - (721 + 90)))) then
+			v11.SplashEnemies.ChangeFriendTargetsTracking("Mine Only");
+		else
+			v11.SplashEnemies.ChangeFriendTargetsTracking("All");
+		end
+		local v113 = (v54.BloodBolt:IsPetKnown() and v21.FindBySpellID(v54.BloodBolt:ID()) and v54.BloodBolt) or (v54.Bite:IsPetKnown() and v21.FindBySpellID(v54.Bite:ID()) and v54.Bite) or (v54.Claw:IsPetKnown() and v21.FindBySpellID(v54.Claw:ID()) and v54.Claw) or (v54.Smack:IsPetKnown() and v21.FindBySpellID(v54.Smack:ID()) and v54.Smack) or nil;
+		local v114 = (v54.Growl:IsPetKnown() and v21.FindBySpellID(v54.Growl:ID()) and v54.Growl) or nil;
+		if (v29 or ((31 + 2691) <= (532 - 368))) then
+			local v119 = 470 - (224 + 246);
 			while true do
-				if (((1141 + 313) <= (2720 - (73 + 156))) and (v124 == (1 + 0))) then
-					v125 = v51.InterruptWithStun(v53.Intimidation, 851 - (721 + 90));
-					if (v125 or ((47 + 4110) <= (9100 - 6297))) then
-						return v125;
+				if ((v119 == (0 - 0)) or ((4433 - 2025) < (383 + 1726))) then
+					v67 = v14:GetEnemiesInRange(1 + 39);
+					v68 = (v113 and v14:GetEnemiesInSpellActionRange(v113)) or v15:GetEnemiesInSplashRange(6 + 2);
+					v119 = 1 - 0;
+				end
+				if (((3 - 2) == v119) or ((546 - (203 + 310)) == (3448 - (1238 + 755)))) then
+					v69 = (v113 and #v68) or v15:GetEnemiesInSplashRangeCount(1 + 7);
+					break;
+				end
+			end
+		else
+			local v120 = 1534 - (709 + 825);
+			while true do
+				if ((v120 == (1 - 0)) or ((644 - 201) >= (4879 - (196 + 668)))) then
+					v69 = 0 - 0;
+					break;
+				end
+				if (((7005 - 3623) > (999 - (171 + 662))) and (v120 == (93 - (4 + 89)))) then
+					v67 = {};
+					v68 = v15 or {};
+					v120 = 3 - 2;
+				end
+			end
+		end
+		v70 = v15:IsInRange(15 + 25);
+		v71 = v15:IsInRange(131 - 101);
+		v72 = (v114 and v15:IsSpellInActionRange(v114)) or v15:IsInRange(12 + 18);
+		v60 = v14:GCD() + (1486.15 - (35 + 1451));
+		if (v52.TargetIsValid() or v14:AffectingCombat() or ((1733 - (28 + 1425)) == (5052 - (941 + 1052)))) then
+			local v121 = 0 + 0;
+			while true do
+				if (((3395 - (822 + 692)) > (1845 - 552)) and (v121 == (1 + 0))) then
+					if (((2654 - (45 + 252)) == (2333 + 24)) and (v62 == (3824 + 7287))) then
+						v62 = v11.FightRemains(v67, false);
 					end
 					break;
 				end
-				if (((5323 - (224 + 246)) >= (4830 - 1848)) and (v124 == (0 - 0))) then
-					v125 = v51.Interrupt(v53.CounterShot, 8 + 32, true);
-					if (((99 + 4035) > (2466 + 891)) and v125) then
-						return v125;
-					end
-					v124 = 1 - 0;
+				if (((299 - 176) == (556 - (114 + 319))) and (v121 == (0 - 0))) then
+					v61 = v11.BossFightRemains();
+					v62 = v61;
+					v121 = 1 - 0;
 				end
+			end
+		end
+		if ((v54.Exhilaration:IsCastable() and v48 and (v14:HealthPercentage() <= v49)) or ((674 + 382) >= (5052 - 1660))) then
+			if (v26(v54.Exhilaration) or ((2264 - 1183) < (3038 - (556 + 1407)))) then
+				return "Exhilaration";
+			end
+		end
+		if (((v14:HealthPercentage() <= v38) and v37 and v56.Healthstone:IsReady()) or ((2255 - (741 + 465)) >= (4897 - (170 + 295)))) then
+			if (v27(v58.Healthstone, nil, nil, true) or ((2513 + 2255) <= (778 + 68))) then
+				return "healthstone defensive 3";
+			end
+		end
+		if ((v34 and (v14:HealthPercentage() <= v36)) or ((8267 - 4909) <= (1178 + 242))) then
+			if ((v35 == "Refreshing Healing Potion") or ((2398 + 1341) <= (1702 + 1303))) then
+				if (v56.RefreshingHealingPotion:IsReady() or ((2889 - (957 + 273)) >= (571 + 1563))) then
+					if (v27(v58.RefreshingHealingPotion) or ((1306 + 1954) < (8973 - 6618))) then
+						return "refreshing healing potion defensive 4";
+					end
+				end
+			end
+			if ((v35 == "Dreamwalker's Healing Potion") or ((1762 - 1093) == (12899 - 8676))) then
+				if (v56.DreamwalkersHealingPotion:IsReady() or ((8378 - 6686) < (2368 - (389 + 1391)))) then
+					if (v27(v58.RefreshingHealingPotion) or ((3010 + 1787) < (381 + 3270))) then
+						return "dreamwalkers healing potion defensive";
+					end
+				end
+			end
+		end
+		if (not (v14:IsMounted() or v14:IsInVehicle()) or ((9509 - 5332) > (5801 - (783 + 168)))) then
+			local v122 = 0 - 0;
+			while true do
+				if ((v122 == (1 + 0)) or ((711 - (309 + 2)) > (3411 - 2300))) then
+					if (((4263 - (1090 + 122)) > (326 + 679)) and v54.MendPet:IsCastable() and v46 and (v18:HealthPercentage() < v47)) then
+						if (((12402 - 8709) <= (2999 + 1383)) and v27(v54.MendPet)) then
+							return "Mend Pet High Priority";
+						end
+					end
+					break;
+				end
+				if ((v122 == (1118 - (628 + 490))) or ((589 + 2693) > (10151 - 6051))) then
+					if ((v54.SummonPet:IsCastable() and v42) or ((16360 - 12780) < (3618 - (431 + 343)))) then
+						if (((179 - 90) < (12989 - 8499)) and v27(v55[v43])) then
+							return "Summon Pet";
+						end
+					end
+					if ((v54.RevivePet:IsCastable() and v45 and v18:IsDeadOrGhost()) or ((3937 + 1046) < (232 + 1576))) then
+						if (((5524 - (556 + 1139)) > (3784 - (6 + 9))) and v27(v54.RevivePet)) then
+							return "Revive Pet";
+						end
+					end
+					v122 = 1 + 0;
+				end
+			end
+		end
+		if (((761 + 724) <= (3073 - (28 + 141))) and v52.TargetIsValid()) then
+			if (((1654 + 2615) == (5268 - 999)) and not v14:AffectingCombat() and not v28) then
+				local v134 = v85();
+				if (((275 + 112) <= (4099 - (486 + 831))) and v134) then
+					return v134;
+				end
+			end
+			if ((not v14:IsCasting() and not v14:IsChanneling()) or ((4941 - 3042) <= (3228 - 2311))) then
+				local v135 = v52.Interrupt(v54.CounterShot, 8 + 32, true);
+				if (v135 or ((13634 - 9322) <= (2139 - (668 + 595)))) then
+					return v135;
+				end
+				v135 = v52.Interrupt(v54.CounterShot, 36 + 4, true, v17, v58.CounterShotMouseover);
+				if (((451 + 1781) <= (7079 - 4483)) and v135) then
+					return v135;
+				end
+				v135 = v52.InterruptWithStun(v54.Intimidation, 330 - (23 + 267), true);
+				if (((4039 - (1129 + 815)) < (4073 - (371 + 16))) and v135) then
+					return v135;
+				end
+				v135 = v52.InterruptWithStun(v54.Intimidation, 1790 - (1326 + 424), true, v17, v58.IntimidationMouseover);
+				if (v135 or ((3020 - 1425) >= (16349 - 11875))) then
+					return v135;
+				end
+			end
+			local v123 = v52.HandleDPSPotion();
+			if (v123 or ((4737 - (88 + 30)) < (3653 - (720 + 51)))) then
+				return v123;
+			end
+			if (v30 or ((653 - 359) >= (6607 - (421 + 1355)))) then
+				local v136 = 0 - 0;
+				local v137;
+				while true do
+					if (((997 + 1032) <= (4167 - (286 + 797))) and ((0 - 0) == v136)) then
+						v137 = v86();
+						if (v137 or ((3373 - 1336) == (2859 - (397 + 42)))) then
+							return v137;
+						end
+						break;
+					end
+				end
+			end
+			local v124 = v87();
+			if (((1393 + 3065) > (4704 - (24 + 776))) and v124) then
+				return v124;
+			end
+			if (((671 - 235) >= (908 - (222 + 563))) and ((v69 > (3 - 1)) or (v54.BeastCleave:IsAvailable() and (v69 > (1 + 0))))) then
+				local v138 = v88();
+				if (((690 - (23 + 167)) < (3614 - (690 + 1108))) and v138) then
+					return v138;
+				end
+			end
+			if (((1290 + 2284) == (2948 + 626)) and ((v69 < (850 - (40 + 808))) or (not v54.BeastCleave:IsAvailable() and (v69 < (1 + 2))))) then
+				local v139 = v89();
+				if (((845 - 624) < (373 + 17)) and v139) then
+					return v139;
+				end
+			end
+			if ((not (v14:IsMounted() or v14:IsInVehicle()) and not v18:IsDeadOrGhost() and v54.MendPet:IsCastable() and (v18:HealthPercentage() < v47) and v46) or ((1171 + 1042) <= (780 + 641))) then
+				if (((3629 - (47 + 524)) < (3154 + 1706)) and v27(v54.MendPet)) then
+					return "Mend Pet Low Priority (w/ Target)";
+				end
+			end
+		end
+		if ((not (v14:IsMounted() or v14:IsInVehicle()) and not v18:IsDeadOrGhost() and v54.MendPet:IsCastable() and (v18:HealthPercentage() < v47) and v46) or ((3542 - 2246) >= (6647 - 2201))) then
+			if (v27(v54.MendPet) or ((3176 - 1783) > (6215 - (1165 + 561)))) then
+				return "Mend Pet Low Priority (w/o Target)";
 			end
 		end
 	end
 	local function v92()
-		local v119 = 0 - 0;
-		local v120;
-		local v121;
+		local v115 = 0 + 0;
+		local v116;
 		while true do
-			if ((v119 == (513 - (203 + 310))) or ((5410 - (1238 + 755)) < (178 + 2356))) then
-				v50();
-				v27 = EpicSettings.Toggles['ooc'];
-				v28 = EpicSettings.Toggles['aoe'];
-				v119 = 1535 - (709 + 825);
+			if ((v115 == (0 - 0)) or ((1688 + 2736) < (506 - (341 + 138)))) then
+				v11.Print("Beast Mastery by Epic. Supported by Gojira");
+				v116 = (v54.Growl:IsPetKnown() and v21.FindBySpellID(v54.Growl:ID()) and v54.Growl) or nil;
+				v115 = 1 + 0;
 			end
-			if ((v119 == (4 - 1)) or ((3964 - 1242) <= (1028 - (196 + 668)))) then
-				v72 = v14:IsInRange(118 - 88);
-				v73 = (v121 and v14:IsSpellInActionRange(v121)) or v14:IsInRange(62 - 32);
-				v59 = v13:GCD() + (833.15 - (171 + 662));
-				v119 = 97 - (4 + 89);
-			end
-			if ((v119 == (6 - 4)) or ((877 + 1531) < (9263 - 7154))) then
-				v121 = (v53.Growl:IsPetKnown() and v20.FindBySpellID(v53.Growl:ID()) and v53.Growl) or nil;
-				if (v28 or ((13 + 20) == (2941 - (35 + 1451)))) then
-					local v129 = 1453 - (28 + 1425);
-					while true do
-						if ((v129 == (1994 - (941 + 1052))) or ((425 + 18) >= (5529 - (822 + 692)))) then
-							v70 = (v120 and #v69) or v14:GetEnemiesInSplashRangeCount(11 - 3);
-							break;
-						end
-						if (((1593 + 1789) > (463 - (45 + 252))) and (v129 == (0 + 0))) then
-							v68 = v13:GetEnemiesInRange(14 + 26);
-							v69 = (v120 and v13:GetEnemiesInSpellActionRange(v120)) or v14:GetEnemiesInSplashRange(19 - 11);
-							v129 = 434 - (114 + 319);
-						end
-					end
-				else
-					local v130 = 0 - 0;
-					while true do
-						if ((v130 == (1 - 0)) or ((179 + 101) == (4556 - 1497))) then
-							v70 = 0 - 0;
-							break;
-						end
-						if (((3844 - (556 + 1407)) > (2499 - (741 + 465))) and (v130 == (465 - (170 + 295)))) then
-							v68 = {};
-							v69 = v14 or {};
-							v130 = 1 + 0;
-						end
-					end
-				end
-				v71 = v14:IsInRange(37 + 3);
-				v119 = 7 - 4;
-			end
-			if (((1954 + 403) == (1512 + 845)) and (v119 == (3 + 1))) then
-				if (((1353 - (957 + 273)) == (33 + 90)) and (v51.TargetIsValid() or v13:AffectingCombat())) then
-					v60 = v10.BossFightRemains();
-					v61 = v60;
-					if ((v61 == (4448 + 6663)) or ((4023 - 2967) >= (8938 - 5546))) then
-						v61 = v10.FightRemains(v68, false);
-					end
-				end
-				if ((v53.Exhilaration:IsCastable() and v47 and (v13:HealthPercentage() <= v48)) or ((3301 - 2220) < (5323 - 4248))) then
-					if (v25(v53.Exhilaration) or ((2829 - (389 + 1391)) >= (2781 + 1651))) then
-						return "Exhilaration";
-					end
-				end
-				if (((v13:HealthPercentage() <= v37) and v36 and v55.Healthstone:IsReady()) or ((497 + 4271) <= (1925 - 1079))) then
-					if (v26(v57.Healthstone, nil, nil, true) or ((4309 - (783 + 168)) <= (4765 - 3345))) then
-						return "healthstone defensive 3";
-					end
-				end
-				v119 = 5 + 0;
-			end
-			if ((v119 == (312 - (309 + 2))) or ((11481 - 7742) <= (4217 - (1090 + 122)))) then
-				v29 = EpicSettings.Toggles['cds'];
-				if (v53.Stomp:IsAvailable() or ((538 + 1121) >= (7166 - 5032))) then
-					v10.SplashEnemies.ChangeFriendTargetsTracking("Mine Only");
-				else
-					v10.SplashEnemies.ChangeFriendTargetsTracking("All");
-				end
-				v120 = (v53.BloodBolt:IsPetKnown() and v20.FindBySpellID(v53.BloodBolt:ID()) and v53.BloodBolt) or (v53.Bite:IsPetKnown() and v20.FindBySpellID(v53.Bite:ID()) and v53.Bite) or (v53.Claw:IsPetKnown() and v20.FindBySpellID(v53.Claw:ID()) and v53.Claw) or (v53.Smack:IsPetKnown() and v20.FindBySpellID(v53.Smack:ID()) and v53.Smack) or nil;
-				v119 = 2 + 0;
-			end
-			if ((v119 == (1123 - (628 + 490))) or ((585 + 2675) < (5830 - 3475))) then
-				if ((v33 and (v13:HealthPercentage() <= v35)) or ((3057 - 2388) == (4997 - (431 + 343)))) then
-					if ((v34 == "Refreshing Healing Potion") or ((3416 - 1724) < (1700 - 1112))) then
-						if (v55.RefreshingHealingPotion:IsReady() or ((3790 + 1007) < (467 + 3184))) then
-							if (v26(v57.RefreshingHealingPotion) or ((5872 - (556 + 1139)) > (4865 - (6 + 9)))) then
-								return "refreshing healing potion defensive 4";
-							end
-						end
-					end
-					if ((v34 == "Dreamwalker's Healing Potion") or ((74 + 326) > (570 + 541))) then
-						if (((3220 - (28 + 141)) > (390 + 615)) and v55.DreamwalkersHealingPotion:IsReady()) then
-							if (((4557 - 864) <= (3104 + 1278)) and v26(v57.RefreshingHealingPotion)) then
-								return "dreamwalkers healing potion defensive";
-							end
-						end
-					end
-				end
-				if (not (v13:IsMounted() or v13:IsInVehicle()) or ((4599 - (486 + 831)) > (10669 - 6569))) then
-					local v131 = 0 - 0;
-					while true do
-						if ((v131 == (1 + 0)) or ((11319 - 7739) < (4107 - (668 + 595)))) then
-							if (((81 + 8) < (906 + 3584)) and v53.MendPet:IsCastable() and v45 and (v17:HealthPercentage() < v46)) then
-								if (v26(v53.MendPet) or ((13589 - 8606) < (2098 - (23 + 267)))) then
-									return "Mend Pet High Priority";
-								end
-							end
-							break;
-						end
-						if (((5773 - (1129 + 815)) > (4156 - (371 + 16))) and (v131 == (1750 - (1326 + 424)))) then
-							if (((2812 - 1327) <= (10611 - 7707)) and v53.SummonPet:IsCastable() and v41) then
-								if (((4387 - (88 + 30)) == (5040 - (720 + 51))) and v26(v54[v42])) then
-									return "Summon Pet";
-								end
-							end
-							if (((860 - 473) <= (4558 - (421 + 1355))) and v53.RevivePet:IsCastable() and v44 and v17:IsDeadOrGhost()) then
-								if (v26(v53.RevivePet) or ((3132 - 1233) <= (451 + 466))) then
-									return "Revive Pet";
-								end
-							end
-							v131 = 1084 - (286 + 797);
-						end
-					end
-				end
-				if (v51.TargetIsValid() or ((15763 - 11451) <= (1450 - 574))) then
-					if (((2671 - (397 + 42)) <= (811 + 1785)) and not v13:AffectingCombat() and not v27) then
-						local v134 = 800 - (24 + 776);
-						local v135;
-						while true do
-							if (((3227 - 1132) < (4471 - (222 + 563))) and ((0 - 0) == v134)) then
-								v135 = v86();
-								if (v135 or ((1149 + 446) >= (4664 - (23 + 167)))) then
-									return v135;
-								end
-								break;
-							end
-						end
-					end
-					if ((not v13:IsCasting() and not v13:IsChanneling()) or ((6417 - (690 + 1108)) < (1040 + 1842))) then
-						local v136 = 0 + 0;
-						local v137;
-						while true do
-							if ((v136 == (850 - (40 + 808))) or ((49 + 245) >= (18473 - 13642))) then
-								v137 = v51.InterruptWithStun(v53.Intimidation, 39 + 1, true);
-								if (((1074 + 955) <= (1692 + 1392)) and v137) then
-									return v137;
-								end
-								v136 = 574 - (47 + 524);
-							end
-							if ((v136 == (0 + 0)) or ((5568 - 3531) == (3618 - 1198))) then
-								v137 = v51.Interrupt(v53.CounterShot, 91 - 51, true);
-								if (((6184 - (1165 + 561)) > (116 + 3788)) and v137) then
-									return v137;
-								end
-								v136 = 3 - 2;
-							end
-							if (((167 + 269) >= (602 - (341 + 138))) and (v136 == (1 + 0))) then
-								v137 = v51.Interrupt(v53.CounterShot, 82 - 42, true, v16, v57.CounterShotMouseover);
-								if (((826 - (89 + 237)) < (5842 - 4026)) and v137) then
-									return v137;
-								end
-								v136 = 3 - 1;
-							end
-							if (((4455 - (581 + 300)) == (4794 - (855 + 365))) and (v136 == (6 - 3))) then
-								v137 = v51.InterruptWithStun(v53.Intimidation, 14 + 26, true, v16, v57.IntimidationMouseover);
-								if (((1456 - (1030 + 205)) < (367 + 23)) and v137) then
-									return v137;
-								end
-								break;
-							end
-						end
-					end
-					local v132 = v51.HandleDPSPotion();
-					if (v132 or ((2059 + 154) <= (1707 - (156 + 130)))) then
-						return v132;
-					end
-					if (((6948 - 3890) < (8191 - 3331)) and v29) then
-						local v138 = v87();
-						if (v138 or ((2654 - 1358) >= (1172 + 3274))) then
-							return v138;
-						end
-					end
-					local v133 = v88();
-					if (v133 or ((813 + 580) > (4558 - (10 + 59)))) then
-						return v133;
-					end
-					if ((v70 > (1 + 1)) or (v53.BeastCleave:IsAvailable() and (v70 > (4 - 3))) or ((5587 - (671 + 492)) < (22 + 5))) then
-						local v139 = 1215 - (369 + 846);
-						local v140;
-						while true do
-							if ((v139 == (0 + 0)) or ((1705 + 292) > (5760 - (1036 + 909)))) then
-								v140 = v89();
-								if (((2755 + 710) > (3211 - 1298)) and v140) then
-									return v140;
-								end
-								break;
-							end
-						end
-					end
-					if (((936 - (11 + 192)) < (920 + 899)) and ((v70 < (177 - (135 + 40))) or (not v53.BeastCleave:IsAvailable() and (v70 < (6 - 3))))) then
-						local v141 = 0 + 0;
-						local v142;
-						while true do
-							if ((v141 == (0 - 0)) or ((6588 - 2193) == (4931 - (50 + 126)))) then
-								v142 = v90();
-								if (v142 or ((10561 - 6768) < (525 + 1844))) then
-									return v142;
-								end
-								break;
-							end
-						end
-					end
-					if ((not (v13:IsMounted() or v13:IsInVehicle()) and not v17:IsDeadOrGhost() and v53.MendPet:IsCastable() and (v17:HealthPercentage() < v46) and v45) or ((5497 - (1233 + 180)) == (1234 - (522 + 447)))) then
-						if (((5779 - (107 + 1314)) == (2023 + 2335)) and v26(v53.MendPet)) then
-							return "Mend Pet Low Priority (w/ Target)";
-						end
-					end
-				end
-				v119 = 18 - 12;
-			end
-			if ((v119 == (3 + 3)) or ((6231 - 3093) < (3928 - 2935))) then
-				if (((5240 - (716 + 1194)) > (40 + 2283)) and not (v13:IsMounted() or v13:IsInVehicle()) and not v17:IsDeadOrGhost() and v53.MendPet:IsCastable() and (v17:HealthPercentage() < v46) and v45) then
-					if (v26(v53.MendPet) or ((389 + 3237) == (4492 - (74 + 429)))) then
-						return "Mend Pet Low Priority (w/o Target)";
-					end
+			if ((v115 == (1 - 0)) or ((2323 - (89 + 237)) > (12272 - 8457))) then
+				if (((7294 - 3829) > (2794 - (581 + 300))) and not v116) then
+					v11.Print("|cffffff00Info|r: Add pet abilities to your action bars to improve range checks.");
 				end
 				break;
 			end
 		end
 	end
-	local function v93()
-		v10.Print("Beast Mastery by Epic. Supported by Gojira");
-		local v122 = (v53.Growl:IsPetKnown() and v20.FindBySpellID(v53.Growl:ID()) and v53.Growl) or nil;
-		if (not v122 or ((1766 - 850) == (1324 + 1347))) then
-			v10.Print("|cffffff00Info|r: Add pet abilities to your action bars to improve range checks.");
-		end
-	end
-	v10.SetAPL(579 - 326, v92, v93);
+	v11.SetAPL(1473 - (855 + 365), v91, v92);
 end;
 return v1["Epix_Hunter_BeastMastery.lua"](...);
 
